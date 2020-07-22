@@ -1,0 +1,261 @@
+html * {
+	outline: 0 !important;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+.navbar-custom {
+	font-family: 'Raleway', sans-serif;
+	background: #152d48 !important;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar-wrapper .navbar-custom {
+	max-width: 1200px;
+	margin: 0 auto;
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+
+
+@media (max-width: 1199px) {
+	.navbar-wrapper .navbar-custom {
+		max-width: 960px;
+	}
+}
+
+@media (max-width: 991px) {
+	.navbar-wrapper .navbar-custom {
+		max-width: 720px;
+	}
+}
+
+@media (max-width: 767px) {
+	.navbar-wrapper .navbar-custom {
+		position: fixed;
+		top: 0;
+		z-index: 3000;
+		box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+		-moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+		-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+		width: 100%;
+		max-width: 100% !important;
+		transition: auto !important;
+	}
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	z-index: 3000;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+	width: 100%;
+	max-width: 100% !important;
+	-webkit-animation: slide-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) alternate-reverse both;
+	animation: slide-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) alternate-reverse both;
+}
+
+@-webkit-keyframes slide-top {
+	0% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	100% {
+		-webkit-transform: translateY(-100px);
+		transform: translateY(-100px);
+	}
+}
+
+@keyframes slide-top {
+	0% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	100% {
+		-webkit-transform: translateY(-100px);
+		transform: translateY(-100px);
+	}
+}
+
+
+.navbar-toggler-custom {
+	font-size: .7rem !important;
+}
+
+.navbar-brand img {
+	max-height: 30px;
+	padding-right: 15px;
+}
+
+#side-menu {
+	margin-top: 55px !important;
+}
+
+.background-code {
+	background-image: url(../res/background-carousel.png);
+	background-size: contain;
+	background-position: center;
+}
+
+.background-page {
+	background-image: url(../res/background-page.png);
+	background-size: contain;
+	background-position: center;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+	background: #cccccc !important;
+}
+
+.owl-theme .owl-dots .owl-dot:hover span {
+	background: #3a82db !important;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+	background: #2f629c !important;
+}
+
+.large-image {
+	width: 450px;
+}
+
+@media only screen and (max-width: 991px) {
+	.large-image {
+		width: 200px !important;
+	}
+}
+
+.description-text {
+	font-size: 1rem !important;
+}
+
+@media (max-width: 991px) {
+	#navbrand {
+		font-size: .9rem;
+	}
+}
+
+@media (max-width: 306px) {
+	#navbrand {
+		font-size: .8rem;
+	}
+}
+
+@media (max-width: 281px) {
+	#navbrand {
+		font-size: .6rem;
+	}
+}
+
+.card-text-custom {
+	font-family: 'Raleway', sans-serif;
+}
+
+.carousel-caption-custom {
+	position: absolute;
+	right: 15%;
+	left: 15%;
+	z-index: 10;
+	padding-bottom: 20px;
+	color: #fff;
+	text-align: center;
+	bottom: -35px !important;
+}
+
+
+@media only screen and (max-width: 767px) {
+	#news-title {
+		font-size: 1rem;
+	}
+
+	#news-p-lead {
+		font-size: .9rem;
+	}
+
+	#news-p {
+		font-size: .8rem;
+	}
+}
+
+.footer {
+	font-size: .8rem;
+}
+
+.cards-custom {
+	box-shadow: 5px 4px 2px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.cards-custom:hover {
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* betternavbarcss */
+
+#side-menu, .side-menu-overlay {
+	position: fixed;
+	top: 0;
+	height: 100%;
+	display: none
+}
+
+body.overflow-hidden {
+	overflow: hidden
+}
+
+#side-menu {
+	width: 300px;
+	right: -300px;
+	overflow-y: auto;
+	z-index: 1035;
+	background: #fff;
+	padding: 20px 30px;
+	color: #333;
+	transition: .4s
+}
+
+body.side-menu-visible #side-menu {
+	transform: translateX(-300px)
+}
+
+#side-menu .contents {
+	margin-top: 15px
+}
+
+#side-menu .nav-link {
+	color: #333;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 12px 0
+}
+
+#side-menu .nav-link:hover {
+	opacity: .8
+}
+
+#side-menu .close {
+	font-size: 36px;
+	font-weight: 400
+}
+
+.side-menu-overlay {
+	left: 0;
+	min-width: 100%;
+	background: rgba(0, 0, 0, .4);
+	z-index: 100
+}
+
+#side-menu.side-menu-left {
+	right: auto;
+	left: -300px
+}
+
+body.side-menu-visible #side-menu.side-menu-left {
+	transform: translateX(300px)
+}
