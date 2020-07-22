@@ -4,11 +4,12 @@ html * {
 
 body {
 	font-family: 'Raleway', sans-serif;
+	background: #3c3c3c;
 }
 
 .navbar-custom {
 	font-family: 'Raleway', sans-serif;
-	background: #152d48 !important;
+	background: #1f1f1f !important;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -98,13 +99,13 @@ body {
 }
 
 .background-code {
-	background-image: url(../res/background-carousel.png);
+	background-image: url(/res/background-carousel.png);
 	background-size: contain;
 	background-position: center;
 }
 
 .background-page {
-	background-image: url(../res/background-page.png);
+	background-image: url(/res/background-carousel.png);
 	background-size: contain;
 	background-position: center;
 }
