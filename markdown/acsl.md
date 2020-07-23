@@ -21,18 +21,18 @@
 
 Please click on the following links below to learn about the short answer subtopics in more detail:
   
-[Assembly Language Programming](#assemblylanguageprogramming)
-[Bit-String Flicking](#bitstringflicking)
-[Boolean Algebra](#booleanalgebra)
-[Computer Number Systems](#computernumbersystems)
-[Data Structures](#datastructures)
-[Digital Electronics](#digitalelectronics)
-[FSAs and Regular Expressions](#fsasandregularexpressions)
-[Graph Theory](#graphtheory)
-[LISP](#lisp)
-[Pre-fix, In-fix, and Post-fix Notation](#prefixinfixandpostfixnotation)
-[Recursive Functions](#recursivefunctions)
-[What Does This Program Do?](#whatdoesthisprogramdo)
+- [Assembly Language Programming](#assemblylanguageprogramming)
+- [Bit-String Flicking](#bitstringflicking)
+- [Boolean Algebra](#booleanalgebra)
+- [Computer Number Systems](#computernumbersystems)
+- [Data Structures](#datastructures)
+- [Digital Electronics](#digitalelectronics)
+- [FSAs and Regular Expressions](#fsasandregularexpressions)
+- [Graph Theory](#graphtheory)
+- [LISP](#lisp)
+- [Pre-fix, In-fix, and Post-fix Notation](#prefixinfixandpostfixnotation)
+- [Recursive Functions](#recursivefunctions)
+- [What Does This Program Do?](#whatdoesthisprogramdo)
 
 <br>
 
