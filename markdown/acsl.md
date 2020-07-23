@@ -5,11 +5,11 @@
 ## Contents
 - [Introduction](#introduction)
   - [Basics](#basics)
-  - [How do Contests Typically Go?](#howdoconteststypicallygo?)
-- [Short Answer](#shortanswer)
+  - [How do Contests Typically Go?](#how-do-contests-typically-go)
+- [Short Answer](#short-answer)
 - [Programming](#programming)
-  - [What to Keep In Mind](#whattokeepinmind)
-  - [Sample Problems/Solutions](#sampleproblemssolutions)
+  - [What to Keep In Mind](#what-to-keep-in-mind)
+  - [Sample Problems/Solutions](#sample-problemssolutions)
   
 # Introduction
 
