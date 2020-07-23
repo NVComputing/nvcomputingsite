@@ -21,7 +21,7 @@
 
 Please click on the following links below to learn about the short answer subtopics in more detail:
   
-- [Assembly Language Programming](#assemblylanguageprogramming)
+- [Assembly Language Programming](https://github.com/khong1127/nvcomputingsite/blob/patch-1/markdown/acslshortanswer/assemblylanguage)
 - [Bit-String Flicking](#bitstringflicking)
 - [Boolean Algebra](#booleanalgebra)
 - [Computer Number Systems](#computernumbersystems)
