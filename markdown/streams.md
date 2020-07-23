@@ -55,7 +55,7 @@ There are 3 operations you do on a stream:
 First, let's create a stream. There are a couple ways you can do this.
 
 First, let's create an array and an arraylist, both containing data:
-```
+```java
 ArrayList<String> list = new ArrayList<>();
 list.add("Foo");
 list.add("Bar");
@@ -66,12 +66,12 @@ String[] list2 = new String[]{"Foo", "Bar", "Foobar"};
 
 To get a stream from an ArrayList (or anything that's a Collection, like a Set, List, Map, etc.), just call
 the .stream() method on it.
-```
+```java
 Stream<String> stream = list.stream();
 ```
 		
 To get a stream from an array, call the Arrays.stream() method on it.
-```
+```java
 Stream<String> stream2 = Arrays.stream(list2);
 ```
 		
@@ -89,7 +89,7 @@ They always can be called *on* a stream, and always *return* a stream.
 The most common intermediate operations used in streams are `filter()` and `map()`.
 
 Here's an example of how to use `filter()`:
-```
+```java
 stream.filter(str -> str.length() == 3)
 ```
 *If you don't recognize what that arrow is, go read the document on anonymous functions (a.k.a lambdas).*
@@ -107,7 +107,7 @@ this filter command will filter the stream into only strings with length 3, mean
 Now let's modify stream 2 (currently also containing "Foo", "Bar", and "Foobar"), but this time with a `map()` operation.
 
 Here's an example of how to use `map()`:
-```
+```java
 stream2.map(str -> str.toUpperCase())
 ```
 `map()` accepts 1 argument, an anonymous function. This anonymous function should accept 1 value (for each
@@ -129,7 +129,7 @@ doing a final operation with it. There are a few commonly used terminal operatio
 the most common is `collect()`.
 
 Here's an example of how to use `collect()`:
-```
+```java
 ArrayList<String> arr = stream.collect(Collectors.toCollection(ArrayList::new));
 ```
 (Note the method reference for new arraylist.)
@@ -178,7 +178,7 @@ First, we know that the `.split(string)` method gives us an array of Strings spl
 `"1 23 45 678 91 12".split(" ")` = ["1", "23", "45", "678", "91", "12"]).
 
 With a traditional `for` loop, our code would look something like this:
-```
+```java
 String s = "1 23 45 678 91 12";
 
 String[] arr = s.split(" ");
@@ -195,21 +195,21 @@ First, we need to stream the array of strings.
 
 We can do that like so:
 
-```
+```java
 String s = "1 23 45 678 91 12";
 
 Arrays.stream(s.split(" ")) // gives us a Stream<String>
 ```
 
 Next, we can call a method on each element of the stream to transform it (this is the `map()` function's purpose.)
-```
+```java
 String s = "1 23 45 678 91 12";
 
 Arrays.stream(s.split(" ")).map(Integer::parseInt) // now it's a Stream<Integer>
 ```
 
 Then, finally, we can collect our final list of integers that have been parsed for us.
-```
+```java
 String s = "1 23 45 678 91 12";
 
 ArrayList<Integer> nums = Arrays.stream(s.split(" "))
