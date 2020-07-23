@@ -4,9 +4,9 @@
 
 ## Contents
 - [Introduction](#introduction)
-- [Instruction Formatting](#instructionformatting)
-- [List of OPCODEs](#listofopcodes)
-- [Sample Problems](#sampleproblems)
+- [Instruction Formatting](#instruction-formatting)
+- [List of OPCODEs](#list-of-opcodes)
+- [Sample Problems](#sample-problems)
 
 <br>
 
