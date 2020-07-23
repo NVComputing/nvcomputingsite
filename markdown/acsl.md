@@ -60,3 +60,7 @@
 # Programming
 
 <br>
+
+## What to Keep In Mind
+
+## Sample Problems/Solutions
