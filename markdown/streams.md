@@ -218,9 +218,11 @@ ArrayList<Integer> nums = Arrays.stream(s.split(" "))
 ```
 This code is exactly equivalent to the above traditional for loop, except it looks a lot cleaner.
 
+---
 And now you know the basics of how to use the Streams API!
 
 There are a few finer details I've glossed over here, like how streams of primitives work (they require a bit more caution. If you're
 interested, check out the IntStream class and similar classes, and the mapToInt() and toArray() functions. Or you can always just ask me in person.)
 
-*Authors: Raymond Zhao*
+---
+*Author: Raymond Zhao*
