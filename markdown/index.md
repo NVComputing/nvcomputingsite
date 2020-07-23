@@ -14,7 +14,7 @@ This page contains general information and useful links, if that's what you're l
 Otherwise, click one of the above links you're interested in to get started!
 
 # Useful Links
-### [This website's GitHub Repository](https://github.com/NVHSComputing/nvcomputingsite)
+### [This website's GitHub Repository](https://github.com/NVComputing/nvcomputingsite)
 ### [Our Google Drive](https://drive.google.com/drive/folders/1hC7s6k6MglSbo3qq9PYyDR-_nRpXltbC)
 
 # General Information
