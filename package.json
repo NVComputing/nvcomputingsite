@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antonbarchukov/nvcomputing.git"
+    "url": "git+https://github.com/NVHSComputing/nvcomputingsite.git"
   },
   "author": "Stinggyray",
   "license": "ISC",
@@ -20,5 +20,9 @@
     "express": "^4.17.1",
     "hbs": "^4.1.1",
     "showdown": "^1.9.1"
+  },
+  "engines": {
+    "node": "14.5.0",
+    "npm": "6.14.5"
   }
 }
