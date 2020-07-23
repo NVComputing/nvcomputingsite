@@ -10,8 +10,8 @@ module.exports.set = (app) => {
 			if (err) throw err;
 			let renderedMarkdown = converter.makeHtml(data);
 			res.render('resources', {resource: renderedMarkdown})
-		})
-	})
+		});
+	});
 
 	app.get('/resources/:resourceName', (req, res) => {
 		let resourceName = req.params.resourceName;
@@ -24,6 +24,20 @@ module.exports.set = (app) => {
 			} else {
 				res.render('resources', { resource: converter.makeHtml(data) })
 			}
-		})
-	})
+		});
+	});
+
+	app.get('/resources/acsl/:resourceName', (req, res) => {
+		let resourceName = req.params.resourceName;
+
+		fs.readFile(path.join(__dirname, `../markdown/acsl/${resourceName}.md`), 'utf-8', function(err, data) {
+			if (err) {
+				fs.readFile(path.join(__dirname, `../markdown/error.md`), 'utf-8', function(err, errorMd) {
+					res.render('resources', { resource: converter.makeHtml(errorMd) })
+				});
+			} else {
+				res.render('resources', { resource: converter.makeHtml(data) })
+			}
+		});
+	});
 }
