@@ -7,7 +7,6 @@ let forceSSL = require('heroku-ssl-redirect');
 
 let routes = require('./routes');
 
-/*
 app.use(function forceLiveDomain(req, res, next) {
 	// Don't allow user to hit Heroku
 	let host = req.hostname;
@@ -16,7 +15,7 @@ app.use(function forceLiveDomain(req, res, next) {
 	}
 	next();
 });
- */
+
 app.use(forceSSL());
 
 app.set('port', process.env.PORT || 8080);
