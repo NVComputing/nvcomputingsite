@@ -10,7 +10,18 @@ This page contains general information, if that's what you're looking for.
 Otherwise, click one of the above links you're interested in to get started!
 
 # Progress
+## Completed Pages
+StreamAPI
 
+## In Progress
+USACO
+Input/Output
+
+## Todo
+ACSL (should have many subpages about ACSL topics)
+General Information
+General Tips and Tricks
+Lambdas and Functional Programming
 
 # General Information
 
