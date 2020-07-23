@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nvcompauting.com/Sitemap.txt
+Sitemap: https://nvcomputing.com/Sitemap.txt
