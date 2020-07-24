@@ -37,20 +37,21 @@ The LABEL field is optional; when paired with the DC command, it serves as a way
 Here are the general operations:
 
 | OPCODE | Description | Example |
-| LOAD | -- | -- |
-| STORE | -- | -- |
-| ADD | -- | -- |
-| SUB | -- | -- |
-| MULT | -- | -- |
-| DIV | -- | -- |
-| BG | -- | -- |
-| BE | -- | -- |
-| BL | -- | -- |
-| BU | -- | -- |
-| READ | -- | -- |
-| PRINT | -- | -- |
-| DC | -- | -- |
-| END | -- | -- |
+| -- | -- | -- |
+| LOAD | asdf | asdf |
+| STORE | asdf | asdf |
+| ADD | asdf | asdf |
+| SUB | asdf | asdf |
+| MULT | asdf | asdf |
+| DIV | asdf | asdf |
+| BG | asdf | asdf |
+| BE | asdf | asdf |
+| BL | asdf | asdf |
+| BU | asdf | asdf |
+| READ | asdf | asdf |
+| PRINT | asdf | asdf |
+| DC | asdf | asdf |
+| END | asdf | asdf |
 
 - **LOAD (^)** :
 - **STORE** :
