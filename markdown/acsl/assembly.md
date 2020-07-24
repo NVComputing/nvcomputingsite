@@ -38,7 +38,7 @@ Here are the general operations:
 
 | OPCODE | Description |
 | -- | -- |
-| LOAD (^) | The value of LOC is stored into the ACC. So, if LOC is a variable, Q, with a value of 3, then ACC will then store the value 3. |
+| LOAD (^) | The value of LOC is stored into the ACC. So, if LOC is a variable, Q, with a value of 3, then ACC will store the value 3. |
 | STORE | The opposite of LOAD, the value of ACC is stored into LOC. |
 | ADD (^) | The value of LOC is added to ACC. The sum becomes the new value of ACC. So, if LOC is =4 and ACC's value is 2, then ACC's new value will be 6. |
 | SUB (^) | The value of LOC is subtracted from ACC. The difference becomes the new value of ACC. |
