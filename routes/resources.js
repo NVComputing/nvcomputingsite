@@ -4,6 +4,8 @@ let showdown = require('showdown');
 let converter = new showdown.Converter();
 let path = require('path');
 
+converter.setOption('tables', true);
+
 module.exports.set = (app) => {
 	app.get('/resources', (req, res) => {
 		fs.readFile(path.join(__dirname, '../markdown/index.md'), 'utf-8', function(err, data) {
