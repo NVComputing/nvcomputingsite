@@ -59,10 +59,6 @@ Here are the general operations:
 
 As you solve these problems, it can be very easy to lose track of everything! So, it may be wise to create a table that can keep track of the values of ACC and any other variables that may have been defined in the program.
 
-// TODO
-
-// Can take Problem 1 from ACSL wiki page
-
 ## 1. After the following program is executed, what value is in location TEMP? (This is from the ACSL Wiki.)
 
 | LABEL | OPCODE | LOC |
