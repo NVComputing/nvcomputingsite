@@ -20,7 +20,7 @@ instead of numbers. The advantages of knowing how assembly languages work includ
 
 # How It Works
 
-Just like programming today, execution starts from the first line down until the END instruction; exceptions are branch instructions (see List of OPCODEs), which loop back to an earlier part of the program if conditions are met. There exists the ACC, or "accumulator", which is essentially a special variable with an initial value of 0.
+Just like programming today, execution starts from the first line down until the END instruction; exceptions are branch instructions (see List of OPCODEs), which loop back to an earlier part of the program if conditions are met. There exists the ACC, or "accumulator", which is essentially a special variable with an initial value of zero.
 
 One line of an assembly language program is formatted as follows:
 
@@ -36,39 +36,26 @@ The LABEL field is optional; when paired with the DC command, it serves as a way
 
 Here are the general operations:
 
-| OPCODE | Description | Example |
-| -- | -- | -- |
-| LOAD | asdf | asdf |
-| STORE | asdf | asdf |
-| ADD | asdf | asdf |
-| SUB | asdf | asdf |
-| MULT | asdf | asdf |
-| DIV | asdf | asdf |
-| BG | asdf | asdf |
-| BE | asdf | asdf |
-| BL | asdf | asdf |
-| BU | asdf | asdf |
-| READ | asdf | asdf |
-| PRINT | asdf | asdf |
-| DC | asdf | asdf |
-| END | asdf | asdf |
-
-- **LOAD (^)** :
-- **STORE** :
-- **ADD (^)** :
-- **SUB (^)** :
-- **MULT (^)** :
-- **DIV (^)** :
-- **BG** :
-- **BE** :
-- **BL** :
-- **BU** :
-- **READ** :
-- **PRINT** :
-- **DC** :
-- **END** :
+| OPCODE | Description |
+| -- | -- |
+| LOAD (^) | The value of LOC is stored into the ACC. So, if LOC is a variable, Q, with a value of 3, then ACC will then store the value 3. |
+| STORE | The opposite of LOAD, the value of ACC is stored into LOC. |
+| ADD (^) | The value of LOC is added to ACC. The sum becomes the new value of ACC. So, if LOC is =4 and ACC's value is 2, then ACC's new value will be 6. |
+| SUB (^) | The value of LOC is subtracted from ACC. The difference becomes the new value of ACC. |
+| MULT (^) | The value of LOC is multiplied by ACC's value. The product becomes the new value of ACC. |
+| DIV (^) | ACC's value is divided by the value of LOC. The quotient becomes the new value of ACC; decimals are rounded down to integers. |
+| BG | This branch instruction will return to the instruction labeled with LOC if ACC's value is greater than 0 (hence B**G** for "greater"). So, if ACC's value is 3, and LOC is *TOP*, then the program will move back to the instruction labeled as *TOP*.|
+| BE | This branch instruction will return to the instruction labeled with LOC if ACC's value is equal to 0 (hence B**E** for "equal"). |
+| BL | This branch instruction will return to the instruction labeled with LOC if ACC's value is less than 0 (hence B**L** for "less"). |
+| BU | This branch instruction will return to the instruction labeled with LOC regardless of what ACC's value is (hence B**U** for "unconditional"). |
+| READ | This essentially serves as a way to read user input into LOC. So, writing "    \ READ \ X " will read for an input and store it into X. |
+| PRINT | This is exactly as it sounds; it prints the value of LOC. |
+| DC | This is a way to declare a variable. The LABEL field is mandatory, as it is where the name of your variable will go. The ACC is not changed in any way. So, writing " VAR \ DC \ 2 " would give me a variable, VAR, with the value of 2. |
+| END | This signals the end of your program. The LOC field must be kept empty. |
 
 <br>
 
 # Sample Problems
+
+// TODO
 
