@@ -17,6 +17,7 @@ app.use(function forceLiveDomain(req, res, next) {
 });
 
 app.use(function wwwRedirect(req, res, next) {
+	// Don't allow user to hit www version of site
 	if (req.headers.host.slice(0, 4) === 'www.') {
 		let newHost = req.headers.host.slice(4);
 		return res.redirect(301, req.protocol + '://' + newHost + req.originalUrl);

@@ -7,7 +7,7 @@
 - [Short Answer](#short-answer)
 - [Programming](#programming)
   - [What to Keep In Mind](#whattokeepinmind)
-  - [Sample Problems/Solutions](#sample-problemssolutions)
+  - [Sample Problems/Solutions](#sampleproblemssolutions)
   
 # Introduction
 
@@ -17,6 +17,7 @@ There are 5 different levels of difficulty, although this team will focus on the
 ## Basics
 
 ACSL is a contest that focuses on around a dozen different concepts of computer science. 
+While many of these concepts are more abstract in nature, ACSL also provides concrete programming problems.
 
 ## Contest Format
 
@@ -48,13 +49,12 @@ Please click on any of the following links below to learn about the short answer
 
 # Programming
 
-<br>
+ACSL's programming questions are often very brute-forcey and vaguely defined in nature. Here are some tips
+to answering them.
 
 ## What to Keep In Mind
 
-It's always good to write your code in chunks (specifically as functions/methods, if applicable), as it is easy to lose track of what does what otherwise! It also makes testing easier, as it is harder to find an error in a large block of code than in a smaller block of code. 
-
-Also, just because you are able to solve a problem does not necessarily mean that it's the best answer! Consider the efficiency of your program. Think of time complexity (i.e, the time it takes your algorithm to run) and space complexity (i.e, the amount of space that your algorithm needs to run). 
+- Don't forget the [general tips](/resources/tips) that apply to all code you write. Also, make sure your code [is efficient](/resources/efficiency).
 
 ## Sample Problems/Solutions
 
