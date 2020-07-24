@@ -57,5 +57,10 @@ Here are the general operations:
 
 # Sample Problems
 
+As you solve these problems, it can be very easy to lose track of everything! So, it may be wise to create a table that can keep track of the values of ACC and any other variables that may have been defined in the program.
+
 // TODO
+// Can take Problem 1 from ACSL wiki page
+// Write program that reads a number and then multiplies 4 by that number of times... will need to create "loop" with branch conditions. After loop ends, should move on and use PRINT (just to help ppl see even more OPCODEs), then END program --> people should the final output (similar to Problem 2 from ACSL but with tweaks?)
+// 3rd sample problem that takes a number and adds together its digits????? will need to do it the hard way because % operator doesnt exist 
 
