@@ -63,6 +63,43 @@ As you solve these problems, it can be very easy to lose track of everything! So
 
 // Can take Problem 1 from ACSL wiki page
 
+1. After the following program is executed, what value is in location TEMP? (This is from the ACSL Wiki.)
+
+| LABEL | OPCODE | LOC |
+| -- | -- | -- |
+| TEMP | DC | 0 |
+| A | DC | 8 |
+| B | DC | -2 |
+| C | DC | 3 |
+| | LOAD | B |
+| | MULT | C |
+| | ADD | A |
+| | DIV | B |
+| | SUB | A |
+| | STORE | TEMP |
+| | END | |
+
+This program defines 4 variables: TEMP, A, B, and C. The value of B (-2) is loaded into the ACC. The value of ACC is multiplied by C, or 3; so, the new value of ACC becomes -6. Then, ACC holds a value of 2 (-6 + 8), -1 (2 / -2), and then -9 (-1 - 8). This value is then stored into TEMP; thus, TEMP has a value of -9.
+
+2. What is printed in this program?
+
+| LABEL | OPCODE | LOC |
+| | READ | Q |
+| H | DC | 2 | 
+| W | DC | 2 |
+| | LOAD | Q |
+| TOP | SUB | =1 |
+| | BE | DONE |
+| | STORE | Q |
+| | LOAD | W |
+| | MULT | H |
+| | STORE | W |
+| | LOAD | Q |
+| | BU | TOP |
+| DONE | END | |
+
+
+
 // Write program that reads a number and then multiplies 4 by that number of times... will need to create "loop" with branch conditions. After loop ends, should move on and use PRINT (just to help ppl see even more OPCODEs), then END program --> people should the final output (similar to Problem 2 from ACSL but with tweaks?)
 
 // 3rd sample problem that takes a number and adds together its digits????? will need to do it the hard way because % operator doesnt exist 
