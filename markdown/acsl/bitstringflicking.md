@@ -6,6 +6,8 @@
   - [Bitwise Operators](#bitwiseoperators)
   - [Shift Operators](#shiftoperators)
 - [Sample Problems](#sampleproblems)
+  - [Evaluations](#evaluations)
+  - [Finding Possible Bitstrings](#findingpossiblebitstrings)
 
 <br>
 
@@ -22,6 +24,8 @@ Understanding how bit strings work is very helpful in systems programming, assem
 # Operators
 
 <br>
+
+The order of precedence for the operators goes as follows: NOT, SHIFT and CIRC, AND, XOR, and then OR. Continue reading this section for more information on what each of these operators does.
 
 ## Bitwise Operators
 
@@ -55,4 +59,79 @@ So, while SHIFTs may cause there to be different bits, CIRCs only change the ord
 
 <br>
 
-mix of evaluate expression and find 5-digit possible value questions --> 2-4 questions
+Note that there are multiple parentheses in each of the given problems. Just like in regular math, this is the highest priority on the order of precedence scale.
+
+## Evaluations
+
+This requires knowing all of the bit string operators and how they work. Refer to the Operators section if needed. 
+
+### 1. ((RS–1 (NOT (LC–1 10110))) OR (NOT (LC–1 (RS–1 01001)))) . (This is from North Hollywood ACSL.)
+
+The following solution is broken down into smaller steps to help improve understanding:
+
+Step 0: ((RS–1 (NOT (LC–1 10110))) OR (NOT (LC–1 (RS–1 01001))))
+
+Step 1: ((RS–1 (NOT 01101)) OR (NOT (LC–1 (RS–1 01001))))
+
+Step 2: ((RS–1 10010) OR (NOT (LC–1 (RS–1 01001))))
+
+Step 3: (01001 OR (NOT (LC–1 (RS–1 01001))))
+
+Step 4: (01001 OR (NOT (LC–1 00100)))
+
+Step 5: (01001 OR (NOT 01000))
+
+Step 6: (01001 OR 10111)
+
+Step 7: **11111**
+
+### 2. ((RC-14 (LC-23 01101)) | (LS-1 10011) & (RS-2 10111)) . (This is from the ACSL Wiki.)
+
+Note that the CIRC operation involve circulating by multiple positions beyond one cycle. However, if you think about it, `LC-5 01101` is just `01101`, since one full cycle would have been done. So, accounting for these full cycles, `LC-23 01101` would go through 4 full cycles (since 23 // 5 = 4); thus, it is equivalent to `LC-3 01101`.
+
+A similar idea applies to `RC-14`. `RC-5` on a 5-bit bit string would just be 1 full cycle that doesn't have any impact on the bit string. So, `RC-14` would go through 2 full cycles (since 14 // 5 = 2); so, it is equal to `RC-4` (for a 5-bit bit string, at least).
+
+Knowing this, we can now reduce our problem to simpler terms and then solve.
+
+Step 0: ((RC-14 (LC-23 01101)) | (LS-1 10011) & (RS-2 10111))
+
+Step 1: ((RC-4 (LC-3 01101)) | (LS-1 10011) & (RS-2 10111))
+
+Step 2: ((RC-4 01011) | (LS-1 10011) & (RS-2 10111))
+
+Step 3: (10110 | (LS-1 10011) & (RS-2 10111))
+
+Step 4: (10110 | 00110 & (RS-2 10111))
+
+Step 5: (10110 | 00110 & 00101)
+
+Step 6: (10110 | 00100)
+
+Step 7: **10110**
+
+## Finding Possible Bitstrings
+
+Solving these types of problems take on a different method of solving as you are given an equation but not one of the bitstrings, which you then need to solve for. To depict this mystery bitstring, we typically use letters. So, if we had a mystery bitstring that is 5 bits long, then you could display that as `abcde`.
+
+Working with letters for the first time can take a bit of adjusting, since letters are in no way similar to `0` and `1`. So, please refer to the following table below to understand how calculations work out:
+
+| Operation | Result | Explanation |
+| --- | --- | --- |
+| ~ a | A | This is just our way of differentiating between `0` and `1` but in letter form. Note that `a` does not necessarily equal `0`; `A` is simply a placeholder to say that we have negated the value. |
+| ~ A | a | Similarly, negating the negated version of `a` would return `a`.|
+| a ⊕ 0 | a | If `a` was a 1, then the resultant value would be `1`. If `a` was a 0, then the resultant value would also be `0`. So, overall, the result is `a`. |
+| a ⊕ 1 | A | If `a` was a 1, then the resultant value would be `0`. If `a` was a 1, then the resultant value would be `0`. Note how the end result is the opposite value of `a`; so, we mark the end result as `A`. |
+| a & 0 | 0 | Regardless of what `a` is, this would always return `0` because one of the operands is already 0. |
+| a & 1 | a | If `a` was a 1, then the resultant value would be `1`. If `a` was a 0, then the resultant value would also be `0`. So, overall the result is `a`. |
+| a \| 0 | a | Since one of the operands is already 0, then whether this operation returns a 0 or 1 all depends on `a`. If `a` is a 1, then the value also becomes `1`; the same applies for if `a` is a 0. So, overall, the result is `a`. |
+| a \| 1 | 1 | Regardless of what `a` is, this would always return `1` because one of the operands is already 1, thus meeting the condition of the \| operator. |
+
+Now, using this table, please try the following problems:
+
+### 3. List all possible values of x (5 bits long) that solve the following equation: (LS-1 (10110 XOR (RC-3 x) AND 11011)) = 01100 . (This is from the ACSL Wiki).
+
+Let's first mark `x` as `abcde`. Now, we can carry on:
+
+
+
+### 4. 
