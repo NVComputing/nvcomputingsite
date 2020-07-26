@@ -13,9 +13,9 @@
   "author": "Stinggyray",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/antonbarchukov/nvcomputing/issues"
+    "url": "https://github.com/NVComputing/nvcomputingsite/issues"
   },
-  "homepage": "https://github.com/antonbarchukov/nvcomputing#readme",
+  "homepage": "https://github.com/NVComputing/nvcomputingsite#readme",
   "dependencies": {
     "express": "^4.17.1",
     "hbs": "^4.1.1",
