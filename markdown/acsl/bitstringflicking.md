@@ -87,9 +87,9 @@ Step 7: **11111**
 
 ### 2. ((RC-14 (LC-23 01101)) | (LS-1 10011) & (RS-2 10111)) . (This is from the ACSL Wiki.)
 
-Note that the CIRC operation involve circulating by multiple positions beyond one cycle. However, if you think about it, `LC-5 01101` is just `01101`, since one full cycle would have been done. So, accounting for these full cycles, `LC-23 01101` would go through 4 full cycles (since 23 // 5 = 4); thus, it is equivalent to `LC-3 01101`.
+Note that the CIRC operation involve circulating by multiple positions beyond one cycle. However, if you think about it, `LC-5 01101` is just `01101`, since one full cycle would have been done. So, accounting for these full cycles, `LC-23 01101` would go through 4 full cycles (since `23 // 5 = 4`); thus, it is equivalent to `LC-3 01101`.
 
-A similar idea applies to `RC-14`. `RC-5` on a 5-bit bit string would just be 1 full cycle that doesn't have any impact on the bit string. So, `RC-14` would go through 2 full cycles (since 14 // 5 = 2); so, it is equal to `RC-4` (for a 5-bit bit string, at least).
+A similar idea applies to `RC-14`. `RC-5` on a 5-bit bit string would just be 1 full cycle that doesn't have any impact on the bit string. So, `RC-14` would go through 2 full cycles (since `14 // 5 = 2`); so, it is equal to `RC-4` (for a 5-bit bit string, at least).
 
 Knowing this, we can now reduce our problem to simpler terms and then solve.
 
