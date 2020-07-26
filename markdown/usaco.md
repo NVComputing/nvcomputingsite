@@ -14,9 +14,9 @@ USACO is a multi-level online programming competition primarily focused on algor
 
 **_For full rules, check the [USACO website’s rules page.](http://usaco.org/index.php?page=instructions)_**
 
-USACO is a programming competition that occurs **4 times** during the year that are made to make you hate cows and farmers with an intense passion.
+USACO is a programming competition that occurs **4 times** during the year.
 
-_(These dates are from last year, and are a rough estimate; they are not necessarily accurate for the 2020-2021 season.)_
+(These dates are from last year, and are a rough estimate; they are not necessarily accurate for the 2020-2021 season.)_
 
 *   Dec 13-16: First Contest
 *   Jan 17-20: Second Contest
@@ -31,7 +31,8 @@ You have a **4-day** window to begin the contest.
 Pick a time that works for you, anytime during that 4-day window.
 
 No outside help is allowed (you may not collaborate on this contest).
-Once the contest begins, you have **4 hours** to view and solve **3 separate programming problems.**
+Once the contest begins, you have **4 hours** to view and solve **3 separate programming problems**
+(usually about Farmer John and his cows).
 
 These problems have varying difficulty depending on your level in USACO (scroll down to read more about levels).
 All 3 problems are worth 333.333 points for a **total of 1000 points.** For each problem, the points are allocated evenly among every test case. If there are are 10 test cases for problem 1, 11 for problem 2, and 12 test cases for problem 3, each test case in problem 1 would  be worth 33.33 points, each test case in problem 2 will be worth 30 points, and each test case in problem three will be worth 27.77 points)
@@ -196,7 +197,8 @@ Time Complexity: You typically want your code to run at a pace of O(nlog(n)) or 
 Many of the problems require combining 2 to 3 different algorithms such as combining a max algorithm with calculation asked by the problem, so a good way to organize code is to have a new static method perform each algorithm. This way, everytime you find a logic error in your code, you can just edit it there. For the first example problem above, this would mean having a method perform the max algorithm search and calling it once for each of the two traversals.
 
 ## Common Techniques to Optimize Code
-Greedy Algorithm
+
+### Greedy Algorithm
 *   This is a very common algorithm in USACO as it is used to not make questions too repetitive.
 *   A greedy algorithm breaks a problem into parts and finds the most efficient solution to each part and then combines them together.
 *   Prefix Sum
@@ -204,8 +206,8 @@ Greedy Algorithm
 *   Prefix sums replace every index with the sum of all the prefix indexes and runs O(n) to create a prefix sum for both time and space complexity.
 *   This is typically used to find sum of the values between two indices. Given indices A and B, this would normally take O(B-A), but with a prefix sum array, it can be done in O(1).
 
-Tree traversal
-*   These are just techniques to traverse a tree
+### Tree Traversal
+
 *   Depth-First-Search
     *   This technique is typically done with recursion and goes through each branch individually.
 *   Breadth-First-Search

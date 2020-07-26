@@ -1,5 +1,45 @@
 <!-- Made by Raymond Zhao, with the navbar from Anton Barchukov -->
 <!doctype html>
+<style>
+	#join-us {
+
+	}
+	#about {
+
+	}
+	#join-info {
+		border-top: 1px solid white;
+		padding-top: 15px;
+	}
+	pre {
+		font-size: 70% !important;
+	}
+
+	@media (min-width: 768px) {
+		#about {
+			padding-right: 20px;
+		}
+		#join-info {
+			border-top: 0;
+			border-left: 1px solid white;
+			padding-left: 20px;
+			padding-top: 0;
+		}
+		pre {
+			font-size: 87.5% !important;
+		}
+	}
+
+	pre {
+		margin-bottom: 0 !important;
+		background: #2b2b2b;
+		padding: 10px;
+	}
+	h1 {
+		margin-bottom: 1rem !important;
+	}
+</style>
+
 <html lang="en">
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -25,12 +65,15 @@
 	<meta property="og:image" content="/res/android-chrome-512x512.png">
 
 	<!-- CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/darcula.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="/css/main.css">
 
 	<!-- Libraries -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap" rel="stylesheet">
@@ -78,21 +121,44 @@
 	<div class="container py-5">
 		<div class="row h-100 align-items-center py-5">
 			<div class="col-lg-6 text-white">
-				<h1>NVHS Computing Team</h1>
-				<p class="lead text-white mb-0">Main Building D200 | Thursdays 2:35-3:30</p>
+				<h1><b>NVHS Computing Team</b></h1>
+				<p class="lead text-white mb-0">Main Building D200 | Thursdays 2:30-3:30</p>
 			</div>
 			<div class="col-lg-6 d-none d-lg-block"><img src="/res/nvabout.png" alt="nvclublogo" class="img-fluid rounded"></div>
 		</div>
 	</div>
 </div>
 
-<div class="container py-5">
-	<div class="row py-5">
-		<div class="col-lg text-white">
-			<h1>Work in Progress</h1>
-			<h2>Please stand by! This page is still being constructed</h2>
+<div id="join-us">
+	<div class="container">
+		<div class="row py-5">
+			<div class="col-lg text-white">
+				<div class="rounded shadow-sm cards-custom">
+					{{{titleCode}}}
+				</div>
+			</div>
 		</div>
 	</div>
+</div>
+<div id="aboutcontainer">
+	<div class="container">
+		<div class="row py-4">
+			<div class="col-md-8 text-white" id="about">
+				<h1>What is Computing Team?</h1>
+				<p>At Computing Team, we do a variety of activities, mostly revolving around programming
+					and related computer science topics.</p>
+				<p>We compete in the American Computer Science League (ACSL)</p>
+			</div>
+			<div class="col-md-4 text-white" id="join-info">
+				<h1>Club Info</h1>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+	<div class="text-center text-white">&copy;2020 Copyright: <a href="https://www.nvcomputing.com"> NVComputing.com</a></div>
 </div>
 </body>
 
