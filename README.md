@@ -69,6 +69,16 @@ baz
 ```
 ````
 
+For math expressions, the syntax is as follows:
+
+First, put your code in an inline code block.
+```markdown
+`$your inline math expression$`
+`$$your block math expression$$`
+```
+
+One dollar sign means inline LaTeX block; two means separate LaTeX block.
+
 Feel free to add attribution at the bottom of any pages you create, in the form of a text snippet like this:
 
 `*Author: Raymond Zhao*`
