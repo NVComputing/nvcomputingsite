@@ -15,24 +15,13 @@ module.exports.set = (app) => {
 		});
 	});
 
-	app.get('/resources/:resourceName', (req, res) => {
+	app.get('/resources/:resourceName*', (req, res) => {
 		let resourceName = req.params.resourceName;
+		let subPath = req.params['0'];
 
-		fs.readFile(path.join(__dirname, `../markdown/${resourceName}.md`), 'utf-8', function(err, data) {
-			if (err) {
-				fs.readFile(path.join(__dirname, `../markdown/error.md`), 'utf-8', function(err, errorMd) {
-					res.render('resources', { resource: converter.makeHtml(errorMd) })
-				});
-			} else {
-				res.render('resources', { resource: converter.makeHtml(data) })
-			}
-		});
-	});
+		let filepath = path.join(__dirname, `../markdown/${resourceName}${subPath}.md`);
 
-	app.get('/resources/acsl/:resourceName', (req, res) => {
-		let resourceName = req.params.resourceName;
-
-		fs.readFile(path.join(__dirname, `../markdown/acsl/${resourceName}.md`), 'utf-8', function(err, data) {
+		fs.readFile(filepath, 'utf-8', function(err, data) {
 			if (err) {
 				fs.readFile(path.join(__dirname, `../markdown/error.md`), 'utf-8', function(err, errorMd) {
 					res.render('resources', { resource: converter.makeHtml(errorMd) })
