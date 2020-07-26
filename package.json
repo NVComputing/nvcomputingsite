@@ -19,8 +19,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "hbs": "^4.1.1",
-    "showdown": "^1.9.1",
-    "heroku-ssl-redirect": "0.0.4"
+    "heroku-ssl-redirect": "0.0.4",
+    "showdown": "^1.9.1"
   },
   "engines": {
     "node": "14.5.0",
