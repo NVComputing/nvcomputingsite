@@ -31,7 +31,7 @@ The order of precedence for the operators goes as follows: NOT, SHIFT and CIRC, 
 
 All of these operators (except *not*) are binary operators, meaning that they must take in two operands, which must be the same length. In the case that they are of different lengths, then zeros will be added to the left of the shorter operand until it is the same length as the other operand. So, for example, if we had the operands `101111` and `101`, 3 zeros would need to be added to *101* to make it `000101`.
 
-Since *not* is a unary operator, this condition does not apply.
+Since *not* is a unary operator (meaning that it only takes in one operand), this condition does not apply.
 
 | Operator | Symbol | Description | Example |
 | --- | --- | --- | --- |
@@ -69,21 +69,14 @@ This requires knowing all of the bit string operators and how they work. Refer t
 
 The following solution is broken down into smaller steps to help improve understanding:
 
-Step 0: ((RS–1 (NOT (LC–1 10110))) OR (NOT (LC–1 (RS–1 01001))))
-
-Step 1: ((RS–1 (NOT 01101)) OR (NOT (LC–1 (RS–1 01001))))
-
-Step 2: ((RS–1 10010) OR (NOT (LC–1 (RS–1 01001))))
-
-Step 3: (01001 OR (NOT (LC–1 (RS–1 01001))))
-
-Step 4: (01001 OR (NOT (LC–1 00100)))
-
-Step 5: (01001 OR (NOT 01000))
-
-Step 6: (01001 OR 10111)
-
-Step 7: **11111**
+0. ((RS–1 (NOT (LC–1 10110))) OR (NOT (LC–1 (RS–1 01001))))
+1. ((RS–1 (NOT 01101)) OR (NOT (LC–1 (RS–1 01001))))
+2. ((RS–1 10010) OR (NOT (LC–1 (RS–1 01001))))
+3. (01001 OR (NOT (LC–1 (RS–1 01001))))
+4. (01001 OR (NOT (LC–1 00100)))
+5. (01001 OR (NOT 01000))
+6. (01001 OR 10111)
+7. **11111**
 
 ### 2. ((RC-14 (LC-23 01101)) | (LS-1 10011) & (RS-2 10111)) . (This is from the ACSL Wiki.)
 
@@ -93,21 +86,21 @@ A similar idea applies to `RC-14`. `RC-5` on a 5-bit bit string would just be 1 
 
 Knowing this, we can now reduce our problem to simpler terms and then solve.
 
-Step 0: ((RC-14 (LC-23 01101)) | (LS-1 10011) & (RS-2 10111))
+0. ((RC-14 (LC-23 01101)) | (LS-1 10011) & (RS-2 10111))
 
-Step 1: ((RC-4 (LC-3 01101)) | (LS-1 10011) & (RS-2 10111))
+1. ((RC-4 (LC-3 01101)) | (LS-1 10011) & (RS-2 10111))
 
-Step 2: ((RC-4 01011) | (LS-1 10011) & (RS-2 10111))
+2. ((RC-4 01011) | (LS-1 10011) & (RS-2 10111))
 
-Step 3: (10110 | (LS-1 10011) & (RS-2 10111))
+3. (10110 | (LS-1 10011) & (RS-2 10111))
 
-Step 4: (10110 | 00110 & (RS-2 10111))
+4. (10110 | 00110 & (RS-2 10111))
 
-Step 5: (10110 | 00110 & 00101)
+5. (10110 | 00110 & 00101)
 
-Step 6: (10110 | 00100)
+6. (10110 | 00100)
 
-Step 7: **10110**
+7. **10110**
 
 ## Finding Possible Bitstrings
 
@@ -132,33 +125,26 @@ Now, using this table, please try the following problems:
 
 Let's first mark `x` as `abcde`. Now, we can carry on:
 
-Step 0: (LS-1 (10110 XOR (RC-3 abcde) AND 11011)) = 01100
-
-Step 1: (LS-1 (10110 XOR cdeab AND 11011)) = 01100
-
-Step 2: (LS-1 (10110 XOR cd0ab)) = 01100
-
-Step 3: (LS-1 Cd1Ab) = 01100
-
-Step 4: d1Ab0 = 01100
+0. (LS-1 (10110 XOR (RC-3 abcde) AND 11011)) = 01100
+1. (LS-1 (10110 XOR cdeab AND 11011)) = 01100
+2. (LS-1 (10110 XOR cd0ab)) = 01100
+3. (LS-1 Cd1Ab) = 01100
+4. d1Ab0 = 01100
 
 At this point, you can now solve for a few variables. `d` correlates with `0`. `1` correlates with `1`; notice that while variables are not involved, this is a good way to ensure that you correctly evaluated the bit string. `A` is equal to 1; so, `a` is equal to `0`. `b` is equal to `0`, and the final `0` correlates with 0.
 
 So, altogether, `a` = 0, `b` = 0, and `d` = 0. We don't know about `c` or `e`, but their values don't actually matter. This is because regardless of what they are, the equation will always be reduced to what we have in Step 4. 
 
-Thus, our answer is `x` = `00*0*`, with the `*` standing for any value (`0` or `1`). During the ACSl contest, you should write these solutions out manually (unless noted otherwise) as: `00000`, `00100`, `00001`, and `00101`.
+Thus, our answer is `x` = `00*0*`, with the `*` standing for any value (`0` or `1`). During the ACSL contest, you should write these solutions out manually (unless noted otherwise) as: `00000`, `00100`, `00001`, and `00101`.
 
 ### 4. List all possible values of x (5 bits long) that solve the following equation: (LSHIFT-2 (RCIRC-3 (NOT x))) = 10100 . (This is from someone else's Quizlet.)
 
-Again, `x` will be marked as `abcde`. 
+Again, we will mark `x` as `abcde`. 
 
-Step 0: (LSHIFT-2 (RCIRC-3 (NOT abcde))) = 10100
-
-Step 1: (LSHIFT-2 (RCIRC-3 ABCDE)) = 10100
-
-Step 2: (LSHIFT-2 CDEAB) = 10100
-
-Step 3: EAB00 = 10100.
+0. (LSHIFT-2 (RCIRC-3 (NOT abcde))) = 10100
+1. (LSHIFT-2 (RCIRC-3 ABCDE)) = 10100
+2. (LSHIFT-2 CDEAB) = 10100
+3. EAB00 = 10100.
 
 Now, the chances that we calculated this correctly are fairly high since the last two bit pairs match correctly (`0` and `0`). So, `E` = 1, `A` = 0, and `B` = 1.
 
