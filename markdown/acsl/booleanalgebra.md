@@ -15,3 +15,4 @@
   - [Absorptive Law](#absorptivelaw)
   - [DeMorgan's Law](#demorganslaw)
   - [XOR and XNOR](#xorandxnor)
+- [Sample Problems](#sampleproblems)
