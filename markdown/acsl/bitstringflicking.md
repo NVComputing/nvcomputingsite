@@ -132,6 +132,39 @@ Now, using this table, please try the following problems:
 
 Let's first mark `x` as `abcde`. Now, we can carry on:
 
+Step 0: (LS-1 (10110 XOR (RC-3 abcde) AND 11011)) = 01100
 
+Step 1: (LS-1 (10110 XOR cdeab AND 11011)) = 01100
 
-### 4. 
+Step 2: (LS-1 (10110 XOR cd0ab)) = 01100
+
+Step 3: (LS-1 Cd1Ab) = 01100
+
+Step 4: d1Ab0 = 01100
+
+At this point, you can now solve for a few variables. `d` correlates with `0`. `1` correlates with `1`; notice that while variables are not involved, this is a good way to ensure that you correctly evaluated the bit string. `A` is equal to 1; so, `a` is equal to `0`. `b` is equal to `0`, and the final `0` correlates with 0.
+
+So, altogether, `a` = 0, `b` = 0, and `d` = 0. We don't know about `c` or `e`, but their values don't actually matter. This is because regardless of what they are, the equation will always be reduced to what we have in Step 4. 
+
+Thus, our answer is `x` = `00*0*`, with the `*` standing for any value (`0` or `1`). During the ACSl contest, you should write these solutions out manually (unless noted otherwise) as: `00000`, `00100`, `00001`, and `00101`.
+
+### 4. List all possible values of x (5 bits long) that solve the following equation: (LSHIFT-2 (RCIRC-3 (NOT x))) = 10100 . (This is from someone else's Quizlet.)
+
+Again, `x` will be marked as `abcde`. 
+
+Step 0: (LSHIFT-2 (RCIRC-3 (NOT abcde))) = 10100
+
+Step 1: (LSHIFT-2 (RCIRC-3 ABCDE)) = 10100
+
+Step 2: (LSHIFT-2 CDEAB) = 10100
+
+Step 3: EAB00 = 10100.
+
+Now, the chances that we calculated this correctly are fairly high since the last two bit pairs match correctly (`0` and `0`). So, `E` = 1, `A` = 0, and `B` = 1.
+
+This translates to `e` = 0, `a` = 1, and `b` = 0. The values of `c` and `d` don't matter and thus can either be `0` or `1`.
+
+So, our answer is `x` = `10**0` with the `*` standing for any value (`0` or `1`). Fully written out, this would be: `10000`, `10100`, `10010`, and `10110`.
+
+---
+*Author: Kelly Hong*
