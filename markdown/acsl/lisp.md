@@ -6,12 +6,12 @@
 - [Basic Functions](#basicfunctions)
   - [Initializing Variables](#initializingvariables)
   - [Evaluations](#evaluations)
-- [List Functions]
+- [List Functions](#listfunctions)
   - [CAR and CDR](#carandcdr)
   - [CONS and REVERSE](#consandreverse)
-- [Arithmetic Functions]
-- [Defining Your Own Functions]
-- [Sample Problems]
+- [Arithmetic Functions](#arithmeticfunctions)
+- [Defining Your Own Functions](#definingyourownfunctions)
+- [Sample Problems](#sampleproblems)
 
 <br>
 
