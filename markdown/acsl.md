@@ -55,6 +55,18 @@ to answering them.
 ## What to Keep In Mind
 
 - Don't forget the [general tips](/resources/tips) that apply to all code you write. Also, make sure your code [is efficient](/resources/efficiency).
+- MAKE SURE to include a header at the top of your submitted code. The header should look like this:
+```java
+/*
+ * Name: Raymond Zhao
+ * School: Neuqua Valley High School
+ * Division: Senior
+ * Grade: 12
+ * Problem: Some Arbitrary Proprietary Board Game ACSL Randomly Decided To Come Up With
+ */
+```
+- Oftentimes, ACSL's problems (more often in programming than short answer) are vague and confusing. Sometimes, you might find yourself
+needing to deduce the exact function of the program from the sample test cases. In this case, just try to figure the problem out.
 
 ## Sample Problems/Solutions
 
