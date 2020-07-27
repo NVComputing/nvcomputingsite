@@ -1,16 +1,15 @@
 let tz = require('timezone/loaded');
 
-let timestr = '%A, %B %m, %I:%M %p';
+let timeStr = '%A, %B %m, %I:%M %p';
+let schedule = require('../upcomingevents.json');
 
 module.exports.set = (app) => {
 	app.get('/schedule', (req, res) => {
-		let schedule = require('../upcomingevents.json');
-
 		let data = schedule.upcomingEvents.sort(function (a, b) {
 			return a.time - b.time;
 		}).map((o) => {
 			let obj = JSON.parse(JSON.stringify(o));
-			obj.time = tz(obj.time * 1000, timestr, 'en_EN', 'America/Chicago');
+			obj.time = tz(obj.time * 1000, timeStr, 'en_EN', 'America/Chicago');
 			return obj;
 		});
 
@@ -18,7 +17,7 @@ module.exports.set = (app) => {
 			return a.time - b.time;
 		}).map((o) => {
 			let obj = JSON.parse(JSON.stringify(o));
-			obj.time = tz(obj.time * 1000, timestr, 'en_EN', 'America/Chicago');
+			obj.time = tz(obj.time * 1000, timeStr, 'en_EN', 'America/Chicago');
 			return obj;
 		});
 
