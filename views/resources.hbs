@@ -84,24 +84,7 @@
 	<link rel="stylesheet" href="/css/main.css">
 
 	<!-- Libraries -->
-	<script>
-		window.onload = (function() {
-			let codes = document.getElementsByTagName('code');
-			for (let i = 0; i < codes.length; i++) {
-				let code = codes[i];
-				if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0 && /^\$+[^$]*\$+$/.test(code.textContent)) {
-					console.log(code);
-					code.outerHTML = code.innerHTML;
-					i--;
-				}
-			}
 
-			let script = document.createElement("script");
-			script.type = "text/javascript";
-			script.src  = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js";
-			document.getElementsByTagName("head")[0].appendChild(script);
-		});
-	</script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -111,11 +94,41 @@
 	<!-- MathJax (and configuration) -->
 	<script>
 		MathJax = {
+			options: {
+				skipHtmlTags: { '[-]': ['code'] },
+			},
 			tex: {
-				inlineMath: [['$', '$']]
-			}
+				inlineMath: { '[+]': [['$', '$']] },
+			},
+			startup: {
+				pageReady: function() {
+					let codes = document.getElementsByTagName('code');
+					for (let i = 0; i < codes.length; i++) {
+						let code = codes[i];
+
+						if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+							let text = code.textContent.trim();
+
+							let inputs = MathJax.startup.getInputJax();
+
+							for (let j = 0; j < inputs.length; j++) {
+								if (inputs[j].processStrings) {
+									let matches = inputs[j].findMath([text]);
+									if (matches.length === 1 && matches[0].start.n === 0 && matches[0].end.n === text.length) {
+										MathJax.typeset([code]);
+										code.outerHTML = code.innerHTML;
+										i--;
+										break;
+									}
+								}
+							}
+						}
+					}
+				},
+			},
 		};
 	</script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap" rel="stylesheet">
