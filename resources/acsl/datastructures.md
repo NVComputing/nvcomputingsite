@@ -54,13 +54,21 @@ The PUSH operation works the same as it would with stacks. However, with POP, in
 
 ## Terminology
 
-![Tree Example](https://miro.medium.com/proxy/1*4M5MU3CqJYGNExEi5Ttuew.png)
+Trees consist of elements called *nodes* that are connected by *edges*. The *root* is the top node in the tree. *Parent* nodes are nodes that have other nodes, *children* nodes, stemming from them. *Leaves* are the nodes that do not have any other children nodes stemming from them. Nodes that have the same immediate parent are *siblings*.
+
+So, in the following table below, 7 is the root. 7, 2, and 9 are all parent nodes. 2, 9, 1, 5, and 14 are all children nodes; notice that parent nodes can also be children nodes of other nodes. 1, 5, and 14 are leaves. 1 and 5 are siblings.
+
+<img src="https://miro.medium.com/proxy/1*4M5MU3CqJYGNExEi5Ttuew.png" width="150" height="100" />
 
 ## Binary Search Trees
 
-Binary search trees are one way to store items in a particular order. They can efficiently insert, delete, and look for items within the tree.
+Binary search trees are one way to store items in a particular order. They can efficiently insert, delete, and look for items within the tree. 
+
+Each node can have a total of two children. The left child must be less than or equal in value, whereas the right child must be greater in value. With numbers, this is easy enough; as for alphabet letters, they are considered to be "less than" another letter if they come earlier in the alphabet. So, for example, A < E.
 
 ### Inserting Nodes
+
+Inserting a node requires knowing its position relative to existing nodes. 
 
 ### Deleting Nodes
 
