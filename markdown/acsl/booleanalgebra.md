@@ -119,7 +119,7 @@ The expressions below are reduced by "absorbing" like terms.
 | Identity | Description |
 | --- | --- |
 | x + xy = x | Based on the distributive law, `x + xy` can also be written as `x • (1 + y)`, which then simplifies to `x • 1`. Based on the identity law, this would evaluate to `x`. |
-| 
+
 
 ## DeMorgan's Law
 
