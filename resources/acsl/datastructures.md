@@ -137,13 +137,22 @@ While these two trees display the same elements, they are drastically different 
 
 There is some leeway given to balanced trees; as long as the left and right branches of any particular node differ in the number of layers by no more than 1, then the tree is still considered balanced. See the image below:
 
-<img src="https://opendsa-server.cs.vt.edu/ODSA/Books/Everything/html/_images/BSTBal.png" width="150" height="150" />
+<img src="https://user-images.githubusercontent.com/60682642/88582873-01203500-d015-11ea-9418-1cceaa357410.png" width="200" height="200" />
 
-Both *a)* and *b)* are balanced trees. In *a)*, 7 is slightly unbalanced because it has no right node to balance out the left node. However, since this difference is only by 1 node, then the tree is still considered balanced.
+Although the tree leans more to the left subbranch, which has 4 elements compared to 2 in the right subbranch, this is still considered balanced as they only differ in 1 node layer overall. 
 
 ### Full vs Complete Trees
 
-A *Full tree*, or *strictly binary tree*, is drawn in a way such that each node (except the leaves) has 2 nodes; they are not necessarily balanced. *Complete trees* 
+A *Full tree*, or *strictly binary tree*, is drawn in a way such that each node (except the leaves) has 2 nodes; they are not necessarily balanced. For *complete trees*, each level besides the last level must be filled. For the last level, while it does not need to be completely filled, any nodes in that level are all located on the left side.
+
+See the table below to understand the differences between the two in more detail:
+
+| Tree <img width=300/> | Description <img width=150/> | Tree <img width=300/> | Description <img width=150/> |
+| --- | --- | --- | --- |
+| 
+
+
+<img src="" width="150" height="150" />
 
 <br>
 
