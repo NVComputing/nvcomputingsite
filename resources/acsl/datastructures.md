@@ -149,14 +149,16 @@ See the table below to understand the differences between the two in more detail
 
 | Tree <img width=300/> | Description <img width=150/> | Tree <img width=300/> | Description <img width=150/> |
 | --- | --- | --- | --- |
-| 
-
-
-<img src="" width="150" height="150" />
+| <img src="https://user-images.githubusercontent.com/60682642/88583851-6c1e3b80-d016-11ea-8108-4d2bcb340261.png" width="150" height="150" /> | It is not complete because the last level's nodes are not all left-oriented. It is not full either because there is 1 node with only 1 child. | <img src="https://user-images.githubusercontent.com/60682642/88583895-76d8d080-d016-11ea-83e7-7dc6ac7a02a8.png" width="150" height="150" /> | It is complete because every level other than the last level is filled; the node in the last level is also oriented on the left. It is not full, however, because nodes cannot have only 1 child. |
+| <img src="https://user-images.githubusercontent.com/60682642/88583907-7cceb180-d016-11ea-9239-cebf219d486e.png" width="150" height="150" /> | It is full because each node indeed has 2 children besides the leaves. It is not complete because the nodes on the last level are not fully left-oriented. | <img src="https://user-images.githubusercontent.com/60682642/88583914-822bfc00-d016-11ea-8990-31fc7938327b.png" width="150" height="150" /> | Each node has 2 children except for the leaves, so it is full. Each level is filled except for the last level, whose nodes are left-justified, thus making the tree complete. |
 
 <br>
 
 # Path Lengths
+
+Before moving further into priority queues, let's talk briefly about path lengths. In earlier sections, I addressed "layers"/"levels" of the tree; these can also be referred to as "depths". The root has a depth of 0; the next layer has a depth of "1", and this continues to increment for subsequent, deeper layers.
+
+*Internal path length* (IPL) is the sum of the depths of all nodes in the tree. *External path length* is the sum of the depths of the nodes that can be added to the tree's current leaves. 
 
 <br>
 
