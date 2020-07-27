@@ -158,17 +158,31 @@ See the table below to understand the differences between the two in more detail
 
 Before moving further into priority queues, let's talk briefly about path lengths. In earlier sections, I addressed "layers"/"levels" of the tree; these can also be referred to as "depths". The root has a depth of 0; the next layer has a depth of "1", and this continues to increment for subsequent, deeper layers.
 
-*Internal path length* (IPL) is the sum of the depths of all nodes in the tree. *External path length* is the sum of the depths of the nodes that can be added to the tree's current leaves. 
+*Internal path length* (IPL) is the sum of the depths of all nodes in the tree. *External path length* (EPL) is the sum of the depths of the nodes that can be added to the tree's current leaves. An easier way to calculate the EPL is with this formula: `EPL = IPL + 2n`, where `n` represents the number of nodes in the tree.
+
+| IPL <img width=250/> | EPL <img width=250/> |
+| --- | --- |
+| <img src="https://user-images.githubusercontent.com/60682642/88585115-472ac800-d018-11ea-98a7-087bd11a03e8.png" width="150" height="150" /> | <img src="https://user-images.githubusercontent.com/60682642/88585034-2e221700-d018-11ea-9c07-061747091825.png" width="150" height="150" /> |
+| There are 5 nodes here. Node 1 has a depth of 0 since it's the root. Nodes 2 and 3 have a depth of 1 each. Nodes 4 and 5 have a depth of 2 each. So, the IPL = `0 + 2(1) + 2(2) = 6`. | The squares represent the nodes that can be added to the tree. Two are of depth 2 while the other four are of depth 3. So, the EPL = `2(2) + 4(3) = 16`. We could also solve this with the formula. Since the IPL is 6, and there are 5 nodes, the EPL = `6 + 2(5) = 16`. |
 
 <br>
 
 # Priority Queues
 
-Priority queues are similar to binary search trees. However, with deleting and finding items, they are limited to the first item/element. While they are more limited, that does not mean they are necessarily worse than binary search trees; in some situations, deleting and finding other items may not be very important and thus can be ignored.
-
 <br>
 
+Priority queues are similar to binary search trees. However, with deleting and finding items, they are limited to the first item/element. Their name comes from this particular feature; they prioritize the first element. While they are more limited, that does not mean they are necessarily worse than binary search trees; in some situations, deleting and finding other items may not be very important and thus can be ignored.
+
 ## Inserting Nodes
+
+Priority queues are typically implemented using a *heap* data structure. When using a *min-heap*, the parent is always less than or equal to its children nodes; the root is the smallest element in the tree. Conversely, a *max-heap* is where the parent is greater than or equal to its children nodes, and the root is the largest element in the tree.
+
+As you add nodes, the tree is filled in from left to right, top to bottom; a level must be completely filled before moving onto the next one. When you add the node, you need to compare it with its parent. For min-heaps, if the new node is less than the parent, then you should switch the two and continue moving up the heap until the formation is valid. A similar idea applies to max-heaps except that it's for when the new node is greater than the parent. By doing so, all of the smallest elements (or largest for max-heap) would be at the top of the tree.
+
+Take this table as an example on how to implement *AMERICAN* with a min-heap:
+
+
+
 
 ## Deleting Nodes
 
