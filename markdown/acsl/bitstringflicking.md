@@ -35,7 +35,7 @@ Since *not* is a unary operator (meaning that it only takes in one operand), thi
 
 | Operator | Symbol | Description | Example |
 | --- | --- | --- | --- |
-| not | ~ or ¬ | Logical negation is performed on each bit in the bit strings. 0s turn into 1s, and vice versa. | `~10110` would become `01001`. |
+| not | `~`, `$\neg$`, or `$\overline{\rm A}$` | Logical negation is performed on each bit in the bit strings. 0s turn into 1s, and vice versa. | `~10110` would become `01001`. |
 | and | & | A comparison is made between a bit and its corresponding bit (based on position) in the other bit string. If both bits are 1s, then the resultant bit will be a 1; otherwise, it will be 0. This is done for each bit in the bit strings.| `10001 and 01101` would return `00001`. |
 | or | \| | Similar to *and*, bits are compared with the bits in the other bit string. If at least one bit is a 1, then the resultant bit will be a 1. This is done for each bit in the bit strings.| `101011 or 011001` would return `111011`. |
 | xor | ⊕ | Again, this involves bit comparison. If one bit has a value of 0 while the other has a value of 1, then the resultant bit is 1 (so basically, if the bits have different values). This is done for each bit in the bit strings. | `101011 xor 011001` would return `110010`.|
@@ -112,10 +112,10 @@ Working with letters for the first time can take a bit of adjusting, since lette
 | --- | --- | --- |
 | ~ a | A | This is just our way of differentiating between `0` and `1` but in letter form. Note that `a` does not necessarily equal `0`; `A` is simply a placeholder to say that we have negated the value. |
 | ~ A | a | Similarly, negating the negated version of `a` would return `a`.|
-| a ⊕ 0 | a | If `a` was a 1, then the resultant value would be `1`. If `a` was a 0, then the resultant value would also be `0`. So, overall, the result is `a`. |
-| a ⊕ 1 | A | If `a` was a 1, then the resultant value would be `0`. If `a` was a 1, then the resultant value would be `0`. Note how the end result is the opposite value of `a`; so, we mark the end result as `A`. |
-| a & 0 | 0 | Regardless of what `a` is, this would always return `0` because one of the operands is already 0. |
-| a & 1 | a | If `a` was a 1, then the resultant value would be `1`. If `a` was a 0, then the resultant value would also be `0`. So, overall the result is `a`. |
+| `$a \oplus 0$` | a | If `a` was a 1, then the resultant value would be `1`. If `a` was a 0, then the resultant value would also be `0`. So, overall, the result is `a`. |
+| `$a \oplus 1$` | A | If `a` was a 1, then the resultant value would be `0`. If `a` was a 1, then the resultant value would be `0`. Note how the end result is the opposite value of `a`; so, we mark the end result as `A`. |
+| `$a & 0$` | 0 | Regardless of what `a` is, this would always return `0` because one of the operands is already 0. |
+| `$a & 1$` | a | If `a` was a 1, then the resultant value would be `1`. If `a` was a 0, then the resultant value would also be `0`. So, overall the result is `a`. |
 | a \| 0 | a | Since one of the operands is already 0, then whether this operation returns a 0 or 1 all depends on `a`. If `a` is a 1, then the value also becomes `1`; the same applies for if `a` is a 0. So, overall, the result is `a`. |
 | a \| 1 | 1 | Regardless of what `a` is, this would always return `1` because one of the operands is already 1, thus meeting the condition of the \| operator. |
 
