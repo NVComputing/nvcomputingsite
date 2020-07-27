@@ -68,7 +68,12 @@ Each node can have a total of two children. The left child must be less than or 
 
 ### Inserting Nodes
 
-Inserting a node requires knowing its position relative to existing nodes. 
+Inserting a node requires knowing its position relative to existing nodes. Here's an example:
+
+| AMERICAN | | | |
+| --- | --- | --- | --- |
+| <img src="https://user-images.githubusercontent.com/60682642/88571933-0032d780-d004-11ea-80ec-62f278e342a1.png" width="75" height="75" /> | <img src="https://user-images.githubusercontent.com/60682642/88572119-45efa000-d004-11ea-86af-db2e0565a8f0.png" width="75" height="75" /> | <img src="https://user-images.githubusercontent.com/60682642/88572276-83542d80-d004-11ea-9ad9-967c9539b023.png" width="75" height="75" /> | <img src="https://user-images.githubusercontent.com/60682642/88572406-b39bcc00-d004-11ea-8954-6190a61c2d84.png" width="75" height="75" /> |
+| 
 
 ### Deleting Nodes
 
