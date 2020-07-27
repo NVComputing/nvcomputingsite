@@ -54,7 +54,7 @@ The PUSH operation works the same as it would with stacks. However, with POP, in
 
 ## Terminology
 
-![Tree Example](<img src="https://miro.medium.com/proxy/1*4M5MU3CqJYGNExEi5Ttuew.png" width="100" height="100">)
+![Tree Example](https://miro.medium.com/proxy/1*4M5MU3CqJYGNExEi5Ttuew.png)
 
 ## Binary Search Trees
 
