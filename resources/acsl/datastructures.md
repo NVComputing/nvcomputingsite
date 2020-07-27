@@ -11,7 +11,9 @@
     - [Inserting Nodes](#insertingnodes)
     - [Deleting Nodes](#deletingnodes)
     - [Searching for Nodes](#searchingfornodes)
-  - [Other Types of Trees](#othertypesoftrees)
+  - [Classifying Trees Even Further](#classifyingtreesevenfurther)
+    - [Balanced Trees](#balancedtrees)
+    - [Full vs Complete Trees](#fullvscompletetrees)
 - [Priority Queues](#priorityqueues)
   - [Inserting Nodes](#insertingnodes)
   - [Deleting Nodes](#deletingnodes)
@@ -117,19 +119,35 @@ Then, we move on to the while loop, whose conditions have both been met. In this
 
 So, by following this pseudocode, we have now successfully found our desired node.
 
-## Other Types of Trees
+## Classifying Trees Further
 
-We've thoroughly worked with the *AMERICAN* binary search tree long enough, and now let's analyze it a bit more just for good measure. If we were to compare the left and right branches of the root, we can see that the left branch has significantly less nodes to work with, thus making the tree very unbalanced. The more unbalanced a tree is, the longer it takes to search for a node. 
+We've thoroughly worked with the *AMERICAN* binary search tree long enough, and now let's analyze it a bit more just for good measure. 
+
+### Balanced Trees 
+
+If we were to compare the left and right branches of the root, we can see that the left branch has significantly less nodes to work with, thus making the tree very unbalanced. The more unbalanced a tree is, the longer it takes to search for a node. 
 
 Let's compare these two images:
 
 | Unbalanced <img width=250/> | Balanced <img width=250/> |
 | --- | --- |
-| <img src="http://www.categories.acsl.org/wiki/images/thumb/b/bf/Bst-american.svg/300px-Bst-american.svg.png" width="150" height="150" /> | <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/BinaryTree3.png" width="150" height="150" /> |
+| <img src="https://user-images.githubusercontent.com/60682642/88579998-93720a00-d010-11ea-9766-a4f50a113265.png" width="150" height="150" /> | <img src="https://user-images.githubusercontent.com/60682642/88580022-9c62db80-d010-11ea-911c-fc6290d290ff.png" width="150" height="150" /> |
 
+While these two trees display the same elements, they are drastically different because of the order the elements were put into the tree. If we wanted to search for 7 and used the pseudocode mentioned earlier in "Searching for Nodes", it would take us 7 loop cycles using the unbalanced tree to find it. On the other hand, it would only take us 3 cycles with the balanced tree because there were less "layers" to the tree to work with; that is why balanced trees are much more efficient overall.
 
+There is some leeway given to balanced trees; as long as the left and right branches of any particular node differ in the number of layers by no more than 1, then the tree is still considered balanced. See the image below:
 
+<img src="https://opendsa-server.cs.vt.edu/ODSA/Books/Everything/html/_images/BSTBal.png" width="150" height="150" />
 
+Both *a)* and *b)* are balanced trees. In *a)*, 7 is slightly unbalanced because it has no right node to balance out the left node. However, since this difference is only by 1 node, then the tree is still considered balanced.
+
+### Full vs Complete Trees
+
+A *Full tree*, or *strictly binary tree*, is drawn in a way such that each node (except the leaves) has 2 nodes; they are not necessarily balanced. *Complete trees* 
+
+<br>
+
+# Path Lengths
 
 <br>
 
@@ -142,10 +160,6 @@ Priority queues are similar to binary search trees. However, with deleting and f
 ## Inserting Nodes
 
 ## Deleting Nodes
-
-<br>
-
-# Path Lengths
 
 <br>
 
