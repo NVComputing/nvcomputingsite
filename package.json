@@ -20,7 +20,8 @@
     "express": "^4.17.1",
     "hbs": "^4.1.1",
     "heroku-ssl-redirect": "0.0.4",
-    "showdown": "^1.9.1"
+    "showdown": "^1.9.1",
+    "timezone": "^1.0.23"
   },
   "engines": {
     "node": "14.5.0",

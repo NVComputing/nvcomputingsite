@@ -1,5 +1,25 @@
 <!-- Made by Raymond Zhao, with the navbar from Anton Barchukov -->
 <!doctype html>
+<style>
+	h1 {
+		margin-top:
+		margin-bottom: 1rem !important;
+	}
+	h3 {
+		margin-top: 30px !important;
+		border-bottom: 2px solid #3c3c3c !important;
+	}
+	#event-schedule a {
+		color: #7bff !important;
+	}
+	#event-schedule p {
+		margin-bottom: 3px;
+	}
+	.spaced {
+		padding-bottom: 2rem!important;
+		padding-top: 2rem!important;
+	}
+</style>
 <html lang="en">
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -18,10 +38,10 @@
 
 	<!-- Open Graph Protocol metadata -->
 	<meta property="og:site_name" content="NVHS Computing Team">
-	<meta property="og:description" content="The contact information for NVHS Computing Team. Meeting times, how to talk with us, and more.">
+	<meta property="og:description" content="The schedule for NVHS Computing Team. Deadlines, event dates, and more.">
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://nvcomputing.com/contact">
-	<meta property="og:title" content="Contact | NVComputing">
+	<meta property="og:url" content="https://nvcomputing.com/schedule">
+	<meta property="og:title" content="Schedule | NVComputing">
 	<meta property="og:image" content="/res/android-chrome-512x512.png">
 
 	<!-- CSS -->
@@ -66,7 +86,7 @@
 							<a class="nav-link" href="/practice" id="practiceref">Practice</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" href="/upcoming" id="upcomingref">Upcoming</a>
+							<a class="nav-link active" href="/schedule" id="scheduleref">Schedule</a>
 						</li>
 					</ul>
 				</div>
@@ -76,21 +96,71 @@
 	<div class="container py-5">
 		<div class="row h-100 align-items-center py-5">
 			<div class="col-lg-6 text-white">
-				<h1><b>NVHS Computing Team Contact Information</b></h1>
-				<p class="lead text-white mb-0">How to talk with us, information about meeting times, and more.</p>
+				<h1><b>NVHS Computing Team Schedule</b></h1>
+				<p class="lead text-white mb-0">Deadlines, event dates, and more. All times are Chicago timezone.</p>
 			</div>
 			<div class="col-lg-6 d-none d-lg-block"><img src="/res/nvabout.png" alt="nvclublogo" class="img-fluid rounded"></div>
 		</div>
 	</div>
 </div>
 
-<div class="container py-5">
-	<div class="row py-5">
-		<div class="col-lg text-white">
-			<h1>Work in Progress</h1>
-			<h2>Please stand by! This page is still being constructed</h2>
+<div id="event-schedule">
+	<div style="background: #2b2b2b;">
+		<div class="container spaced text-white">
+			<h1>Event Schedule</h1>
+			{{#if upcomingEvents}}
+				{{#each upcomingEvents}}
+					{{#if this.link}}
+						<h3><a href="{{this.link}}">{{this.name}}</a></h3>
+					{{else}}
+						<h3>{{this.name}}</h3>
+					{{/if}}
+					<p>{{this.desc}}</p>
+					<p><b>Date:</b> {{this.time}}</p>
+					{{#if tentative}}
+						<p style="color: #e83e8c">Note: This date is tentative and may change in the future.</p>
+					{{/if}}
+				{{/each}}
+			{{else}}
+				<h3>Looks like there aren't any events currently scheduled.</h3>
+			{{/if}}
+		</div>
+		<div style="width: 85%; background: #2b2b2b; margin-left: auto; margin-right: auto;">
+			<hr style="border-top: 5px solid #4d4d4d; margin-top: 0; margin-bottom: 0;">
 		</div>
 	</div>
+
+	<div style="background: #2b2b2b;">
+		<div class="container spaced text-white">
+		<h1>Deadlines</h1>
+		{{#if deadlines}}
+			{{#each deadlines}}
+				<h3>{{this.name}}</h3>
+				<p>{{this.desc}}</p>
+				<h4><b>Date:</b> {{this.time}}</h4>
+				{{#if hard}}
+					<p style="color: #e83e8c">Note: This is a hard deadline. Please finish on time.</p>
+				{{else}}
+					<p style="color: #e83e8c">Note: This is a soft deadline. Try to get it done as soon as possible, but it's a bit more flexible.</p>
+				{{/if}}
+			{{/each}}
+		{{else}}
+			<h3>Looks like there aren't any deadlines currently scheduled.</h3>
+		{{/if}}
+		</div>
+	</div>
+	<div >
+		<div class="container spaced text-white">
+			<h1>Contact Us</h1>
+			<h4>If you have any questions about upcoming contests / anything in general, feel free to contact the captains or the sponsor.</h4>
+			<br>
+			<h4>Joseph Koos (Club Sponsor) | <a href="mailto:joe_koos@ipsd.org">joe_koos@ipsd.org</a></h4>
+			<h4>Captains | <a href="mailto:nvhscomputing@gmail.com">nvhscomputing@gmail.com</a></h4>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<div class="text-center text-white">&copy;2020 Copyright: <a href="https://nvcomputing.com"> NVComputing.com</a></div>
 </div>
 </body>
 

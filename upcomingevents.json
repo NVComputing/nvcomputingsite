@@ -1,0 +1,25 @@
+{
+  "upcomingEvents": [
+    {
+      "name": "ProCom",
+      "link": "http://procom.mystrikingly.com/",
+      "time": 1615039200,
+      "desc": "A Java programming competition in Chicago.",
+      "tentative": true
+    },
+    {
+      "name": "ACSL Contest #1",
+      "link": "https://www.aux.acsl.org",
+      "time": 1607997600,
+      "desc": "ACSL's first programming competition. Includes both short-answer and programming sections.",
+      "tentative": false
+    }
+  ],
+  "deadlines": [
+    {
+      "name": "Fill out registration form",
+      "hard": false,
+      "time": 1600372800
+    }
+  ]
+}
