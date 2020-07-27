@@ -38,7 +38,7 @@ It is also used to make more specific search expressions. For example, say you w
 | --- | --- | --- |
 | and | `xy` or `x • y` | The resulting value is only `true` (or 1) if x and y are *both* true. |
 | or | `x + y` | The resulting value is `true` as long as *either* x or y (or both) are true. |
-| not | `x̅` or `¬x` | This is a *unary* (taking in one operand) operator. The resulting value is the opposite of x; if x is true, then the result is false, and vice versa. |
+| not | `$\bar{x}$` or `¬x` | This is a *unary* (taking in one operand) operator. The resulting value is the opposite of x; if x is true, then the result is false, and vice versa. |
 | xor | `x ⊕ y` | The result is true if the values of x and y are different. This is also equal to `xy̅ + x̅y`; if `x = 0` and `y = 1`, then this expression would evaluate to `0 • 0 + 1 • 1`, or `1`. Since x and y have different values, this makes sense. Conversely, if `x = y = 0`, then this expression would evaluate to `0 • 1 + 1 • 0`, or `0`. |
 | xnor | `x ⊙ y` | This is the exact opposite of xor; the result is true if the values of x and y are the same. For this reason, `x ⊙ y` can also be written as `x̅ ̅⊙̅ ̅y̅`
 
