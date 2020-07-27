@@ -8,7 +8,7 @@ converter.setOption('tables', true);
 
 module.exports.set = (app) => {
 	app.get('/resources', (req, res) => {
-		fs.readFile(path.join(__dirname, '../markdown/index.md'), 'utf-8', function(err, data) {
+		fs.readFile(path.join(__dirname, '../resources/index.md'), 'utf-8', function(err, data) {
 			if (err) throw err;
 			let renderedMarkdown = converter.makeHtml(data);
 			res.render('resources', {resource: renderedMarkdown})
@@ -19,11 +19,11 @@ module.exports.set = (app) => {
 		let resourceName = req.params.resourceName;
 		let subPath = req.params['0'];
 
-		let filepath = path.join(__dirname, `../markdown/${resourceName}${subPath}.md`);
+		let filepath = path.join(__dirname, `../resources/${resourceName}${subPath}.md`);
 
 		fs.readFile(filepath, 'utf-8', function(err, data) {
 			if (err) {
-				fs.readFile(path.join(__dirname, `../markdown/error.md`), 'utf-8', function(err, errorMd) {
+				fs.readFile(path.join(__dirname, `../resources/error.md`), 'utf-8', function(err, errorMd) {
 					res.render('resources', { resource: converter.makeHtml(errorMd) })
 				});
 			} else {

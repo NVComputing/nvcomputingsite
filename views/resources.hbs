@@ -1,59 +1,6 @@
 <!-- Made by Raymond Zhao, with a navbar from Anton Barchukov -->
 <!doctype html>
 
-<style>
-	/* Fix any link issues (shift header links 60 px upwards to prevent navbar covering them) */
-	html {
-		scroll-behavior: smooth;
-	}
-	.resources h1::before {
-		display: block;
-		content: " ";
-		margin-top: -60px;
-		height: 60px;
-		visibility: hidden;
-		pointer-events: none;
-	}
-	.resources h2::before {
-		display: block;
-		content: " ";
-		margin-top: -60px;
-		height: 60px;
-		visibility: hidden;
-		pointer-events: none;
-	}
-	.resources h1 {
-		border-bottom: 1px solid white;
-		margin-bottom: 10px;
-		padding-bottom: 5px;
-		font-weight: bold;
-	}
-	.resources h2 {
-		border-bottom: 1px solid #2b2b2b;
-		padding-bottom: 5px;
-		margin-bottom: 10px;
-	}
-	.resources a {
-		color: #7bff !important;
-	}
-	.tableofcontents a {
-		color: #7bff !important;
-	}
-	.resources hr {
-		border-top: 1px solid #1f1f1f;
-	}
-	table, th, td {
-		border: 1px solid white;
-	}
-	table {
-		border-collapse: collapse;
-		margin-bottom: 20px;
-	}
-	th, td {
-		padding: 4px;
-	}
-</style>
-
 <html lang="en">
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -82,52 +29,17 @@
 	<link rel="stylesheet" href="/css/darcula.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/mdparser.css">
 
 	<!-- Libraries -->
-
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-core.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/autoloader/prism-autoloader.min.js"></script>
+	<script src="/js/navbar.js"></script>
 
 	<!-- MathJax (and configuration) -->
-	<script>
-		MathJax = {
-			options: {
-				skipHtmlTags: { '[-]': ['code'] },
-			},
-			tex: {
-				inlineMath: { '[+]': [['$', '$']] },
-			},
-			startup: {
-				pageReady: function() {
-					let codes = document.getElementsByTagName('code');
-					for (let i = 0; i < codes.length; i++) {
-						let code = codes[i];
-
-						if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
-							let text = code.textContent.trim();
-
-							let inputs = MathJax.startup.getInputJax();
-
-							for (let j = 0; j < inputs.length; j++) {
-								if (inputs[j].processStrings) {
-									let matches = inputs[j].findMath([text]);
-									if (matches.length === 1 && matches[0].start.n === 0 && matches[0].end.n === text.length) {
-										MathJax.typeset([code]);
-										code.outerHTML = code.innerHTML;
-										i--;
-										break;
-									}
-								}
-							}
-						}
-					}
-				},
-			},
-		};
-	</script>
+	<script src="/js/mathjax-config.js"></script>
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
 	<!-- Fonts -->
@@ -138,8 +50,6 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="/res/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/res/favicon-16x16.png">
 	<link rel="manifest" href="/res/site.webmanifest">
-
-	<script src="/js/customjs.js"></script>
 
 	<title>Resources | NVHS Computing</title>
 </head>

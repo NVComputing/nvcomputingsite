@@ -25,24 +25,30 @@
 	<meta property="og:image" content="/res/android-chrome-512x512.png">
 
 	<!-- CSS -->
+	<link rel="stylesheet" href="/css/darcula.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/mdparser.css">
 
 	<!-- Libraries -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-core.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/autoloader/prism-autoloader.min.js"></script>
+	<script src="/js/navbar.js"></script>
+
+	<!-- MathJax (and configuration) -->
+	<script src="/js/mathjax-config.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap" rel="stylesheet">
-	<script src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" data-auto-a11y="true"></script>
 
 	<!-- Favicon stuff -->
 	<link rel="apple-touch-icon" sizes="180x180" href="/res/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/res/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/res/favicon-16x16.png">
 	<link rel="manifest" href="/res/site.webmanifest">
-
-	<script src="/js/customjs.js"></script>
 
 	<title>Practice | NV Computing</title>
 </head>
@@ -86,13 +92,8 @@
 	</div>
 </div>
 
-<div class="container py-5">
-	<div class="row py-5">
-		<div class="col-lg text-white">
-			<h1>Work in Progress</h1>
-			<h2>Please stand by! This page is still being constructed</h2>
-		</div>
-	</div>
+<div class="resources container pt-5 text-white">
+	{{{resource}}}
 </div>
 </body>
 

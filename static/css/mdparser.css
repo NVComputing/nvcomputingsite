@@ -1,0 +1,49 @@
+html {
+	scroll-behavior: smooth;
+}
+.resources h1::before {
+	display: block;
+	content: " ";
+	margin-top: -60px;
+	height: 60px;
+	visibility: hidden;
+	pointer-events: none;
+}
+.resources h2::before {
+	display: block;
+	content: " ";
+	margin-top: -60px;
+	height: 60px;
+	visibility: hidden;
+	pointer-events: none;
+}
+.resources h1 {
+	border-bottom: 1px solid white;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+	font-weight: bold;
+}
+.resources h2 {
+	border-bottom: 1px solid #2b2b2b;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+.resources a {
+	color: #7bff !important;
+}
+.tableofcontents a {
+	color: #7bff !important;
+}
+.resources hr {
+	border-top: 1px solid #1f1f1f;
+}
+table, th, td {
+	border: 1px solid white;
+}
+table {
+	border-collapse: collapse;
+	margin-bottom: 20px;
+}
+th, td {
+	padding: 4px;
+}
