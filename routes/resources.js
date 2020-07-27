@@ -11,7 +11,7 @@ module.exports.set = (app) => {
 		fs.readFile(path.join(__dirname, '../resources/index.md'), 'utf-8', function(err, data) {
 			if (err) throw err;
 			let renderedMarkdown = converter.makeHtml(data);
-			res.render('resources', {resource: renderedMarkdown})
+			res.render('resources', {resource: renderedMarkdown});
 		});
 	});
 
@@ -24,10 +24,10 @@ module.exports.set = (app) => {
 		fs.readFile(filepath, 'utf-8', function(err, data) {
 			if (err) {
 				fs.readFile(path.join(__dirname, `../resources/error.md`), 'utf-8', function(err, errorMd) {
-					res.render('resources', { resource: converter.makeHtml(errorMd) })
+					res.render('resources', { resource: converter.makeHtml(errorMd) });
 				});
 			} else {
-				res.render('resources', { resource: converter.makeHtml(data) })
+				res.render('resources', { resource: converter.makeHtml(data) });
 			}
 		});
 	});

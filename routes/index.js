@@ -1,7 +1,7 @@
 let basepage = require('./basepage');
 let resources = require('./resources');
 let practice = require('./practice');
-let contact = require('./contact');
+let contact = require('./upcoming');
 
 // Load in all endpoints
 module.exports.set = (app) => {

@@ -11,7 +11,7 @@ module.exports.set = (app) => {
 		fs.readFile(path.join(__dirname, '../practice/index.md'), 'utf-8', function(err, data) {
 			if (err) throw err;
 			let renderedMarkdown = converter.makeHtml(data);
-			res.render('practice', {resource: renderedMarkdown})
+			res.render('practice', {resource: renderedMarkdown});
 		});
 	});
 
@@ -23,11 +23,11 @@ module.exports.set = (app) => {
 
 		fs.readFile(filepath, 'utf-8', function(err, data) {
 			if (err) {
-				fs.readFile(path.join(__dirname, `../practice/error.md`), 'utf-8', function(err, errorMd) {
-					res.render('practice', { resource: converter.makeHtml(errorMd) })
+				fs.readFile(path.join(__dirname, `../resources/error.md`), 'utf-8', function(err, errorMd) {
+					res.render('practice', { resource: converter.makeHtml(errorMd) });
 				});
 			} else {
-				res.render('practice', { resource: converter.makeHtml(data) })
+				res.render('practice', { resource: converter.makeHtml(data) });
 			}
 		});
 	});
