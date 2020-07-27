@@ -147,7 +147,7 @@ A *Full tree*, or *strictly binary tree*, is drawn in a way such that each node 
 
 See the table below to understand the differences between the two in more detail:
 
-| Tree <img width=500/> | Description <img width=100/> | Tree <img width=500/> | Description <img width=100/> |
+| Tree <img width=600/> | Description <img width=100/> | Tree <img width=600/> | Description <img width=100/> |
 | --- | --- | --- | --- |
 | <img src="https://user-images.githubusercontent.com/60682642/88583851-6c1e3b80-d016-11ea-8108-4d2bcb340261.png" width="150" height="150" /> | It is not complete because the last level's nodes are not all left-oriented. It is not full either because there is 1 node with only 1 child. | <img src="https://user-images.githubusercontent.com/60682642/88583895-76d8d080-d016-11ea-83e7-7dc6ac7a02a8.png" width="150" height="150" /> | It is complete because every level other than the last level is filled; the node in the last level is also oriented on the left. It is not full, however, because nodes cannot have only 1 child. |
 | <img src="https://user-images.githubusercontent.com/60682642/88583907-7cceb180-d016-11ea-9239-cebf219d486e.png" width="150" height="150" /> | It is full because each node indeed has 2 children besides the leaves. It is not complete because the nodes on the last level are not fully left-oriented. | <img src="https://user-images.githubusercontent.com/60682642/88583914-822bfc00-d016-11ea-8990-31fc7938327b.png" width="150" height="150" /> | Each node has 2 children except for the leaves, so it is full. Each level is filled except for the last level, whose nodes are left-justified, thus making the tree complete. |
@@ -181,13 +181,44 @@ As you add nodes, the tree is filled in from left to right, top to bottom; a lev
 
 Take this table as an example on how to implement *AMERICAN* with a min-heap:
 
-
-
+| Step <img width=400/> | Description <img width=125/> | Step <img width=400/>| Description <img width=125/>|
+| --- | --- | --- | --- |
+| 1. <img src="https://user-images.githubusercontent.com/60682642/88590984-3fbbec80-d021-11ea-891f-6ca515f26e9d.png" width="75" height="75" /> | *A* is added like normal as the root of the new tree. | 5. <img src="https://user-images.githubusercontent.com/60682642/88591403-ea340f80-d021-11ea-9c87-7e3e0c6eded0.png" width="150" height="150" /> | *I* is first added as an child of *M*. However, because it is less than *M*, the two switch places. *I* is not less than *A*, so it does not move further up the heap. |
+| 2. <img src="https://user-images.githubusercontent.com/60682642/88591079-667a2300-d021-11ea-91b0-787df1441e56.png" width="150" height="150" /> | *M* is added as a child of *A* on the left end. Since *M* is larger than *A*, it stays where it is. | 6. <img src="https://user-images.githubusercontent.com/60682642/88591594-31ba9b80-d022-11ea-9b52-cce3b6188314.png" width="150" height="150" /> | *C* is added as a child of *E*. However, since it is less than *E*, the two switch places. *C* is greater than *A*, so it does not switch places with the root. |
+| 3. <img src="https://user-images.githubusercontent.com/60682642/88591135-7eea3d80-d021-11ea-9dbf-8dcbefdef609.png" width="150" height="150" /> | *E* is added into the tree. No shifting of nodes occurs since *E* is indeed larger than *A*. | 7. <img src="https://user-images.githubusercontent.com/60682642/88591782-7b0aeb00-d022-11ea-9fa9-c1d86b5e9162.png" width="150" height="150" /> | *A* (not the root) is added as a child of *C*. Since it is less than *C*, the two switch places. Although *A* has the same value as the root *A*, switching the two wouldn't make any difference. So the two *A*s can be kept as is. |
+| 4. <img src="https://user-images.githubusercontent.com/60682642/88591248-aa6d2800-d021-11ea-8654-c263398b894c.png" width="150" height="150" /> | *R* is added into the tree and starts the next row since the previous row was completely filled. No shifts occur. | 8. <img src="https://user-images.githubusercontent.com/60682642/88591897-b60d1e80-d022-11ea-923e-6dde512cebd9.png" width="150" height="150" /> | *N* is added as a child of *R* and starts the next row. Since it is less than *R*, the two switch places. *N* is greater than *I*, so it is does move further up the heap. We have now finishing constructing the tree. |
 
 ## Deleting Nodes
+
+Just as a reminder, only the root can be deleted! To do so, replace the root with the rightmost node in the last node. Then, keep switching out the root with its smaller child (or larger child, if using max-heap) until the tree is finally valid. Make sure to make adjustions to the rest of the tree if needed. 
+
+In the case that both of the root's children are smaller than the root itself, then choose the smallest child to replace the root with; of course, for max-heap, it would be that if both children are larger than the root, then the larger child should replace the root.
 
 <br>
 
 # Sample Problems
 
 <br>
+
+## 1. Stacks/Queues: Determine what the value of C would be if the operations below were performed on an initially empty stack. Analyze it as a queue afterward.
+
+```code
+PUSH(18)
+B = POP()
+PUSH(7)
+PUSH(33)
+C = POP()
+A = POP()
+```
+
+As a stack... 18 would first be added to the stack; this would then be popped out and stored in B. Afterwards, 7 and 33 (in that order) are put into the stack. Because 33 was pushed into the stack later than 7, it is also the first to be popped; so, 33 is popped and stored into C, whereas 7 is stored in A. So, our final answer is **33**.
+
+As a queue... 18 would be added first; then, this would be popped out and stored in B. Afterwards, 7 and 33 (in that order) are put into the queue. Since queues follow a "first in, first out" rule, 7 would be popped first and stored into C. 33 would consequently be stored in A. So, our final answer here would be **7**.
+
+## 2. Create a priority queue of the letters COMPUTING with a min-heap. What are the letters in the bottommost row, from left to right?
+
+## 3. Create a binary search tree with the letters NEUQUA. What are the internal path length and external path length?
+
+---
+
+Author: Kelly Hong
