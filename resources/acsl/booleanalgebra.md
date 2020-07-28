@@ -25,7 +25,7 @@
 
 <br>
 
-As many of us may know, booleans are an essential part of programming that can hold one of two values: `true` and `false`, which can be denoted as `1` and `0`. Booleans can take the form of either a variable (such as `s = true`) or an expression (like `5 < 36`, which evaluates to `true`). These are most often used in if statements (formatted as `if (boolean condition)`), another essential piece of programming that allows us to perform different functions for different conditions.
+As many of us may know, booleans are an essential part of programming that can hold one of two values: `true` and `false`, which can be denoted as `1` and `0`. Booleans can take the form of either a variable (such as `s = true`) or an expression (like `$5 \less 36$`, which evaluates to `true`). These are most often used in if statements (formatted as `if (boolean condition)`), another essential piece of programming that allows us to perform different functions for different conditions.
 
 Boolean algebra is needed for digital circuits that make up a computer's hardware. 
 
@@ -72,11 +72,11 @@ For this, I broke the expression into two smaller parts. I used `A` to symbolize
 
 | Operator | How It's Denoted | Description |
 | --- | --- | --- |
-| and | `xy` or `x • y` | The resulting value is only `true` (or 1) if x and y are *both* true. |
-| or | `x + y` | The resulting value is `true` as long as *either* x or y (or both) are true. |
-| not | `$\bar{x}$` or `¬x` | This is a *unary* (taking in one operand) operator. The resulting value is the opposite of x; if x is true, then the result is false, and vice versa. You can take the negations of either one or multiple terms. For multiple terms, they are implicitly grouped together by the overhead line. So, `$\bar{y + z}$` would be treated the same as `$\bar{(y + z)}$`. |
-| xor | `x \oplus y` | The result is true if the values of x and y are different. This is also equal to `x$\bar{y}$ + $\bar{x}$y`; if `x = 0` and `y = 1`, then this expression would evaluate to `0 • 0 + 1 • 1`, or `1`. Since x and y have different values, this makes sense. Conversely, if `x = y = 0`, then this expression would evaluate to `0 • 1 + 1 • 0`, or `0`. |
-| xnor | `x ⊙ y` | This is the exact opposite of xor; the result is true if the values of x and y are the same. For this reason, `x ⊙ y` can also be written as `$\bar{x \oplus y}$`. |
+| and | `$xy$` or `$x • y$` | The resulting value is only `true` (or 1) if x and y are *both* true. |
+| or | `$x + y$` | The resulting value is `true` as long as *either* x or y (or both) are true. |
+| not | `$\bar{x}$` or `$\neg x$` | This is a *unary* (taking in one operand) operator. The resulting value is the opposite of x; if x is true, then the result is false, and vice versa. You can take the negations of either one or multiple terms. For multiple terms, they are implicitly grouped together by the overhead line. So, `$\overline{y + z}$` would be treated the same as `$\overline{(y + z)}$`. |
+| xor | `$x \oplus y$` | The result is true if the values of x and y are different. This is also equal to `$x\bar{y} + \bar{x}y$`; if `$x = 0$` and `$y = 1$`, then this expression would evaluate to `$0 • 0 + 1 • 1$`, or `1`. Since x and y have different values, this makes sense. Conversely, if `$x = y = 0$`, then this expression would evaluate to `$0 \bullet 1 + 1 \bullet 0$`, or `0`. |
+| xnor | `$x \odot y$` | This is the exact opposite of xor; the result is true if the values of x and y are the same. For this reason, `$x \odot y$` can also be written as `$\overline{x \oplus y}$`. |
 
 For the order of precedence, it goes as follows: *not*, *and*, *xor* and *xnor*, and then *or*. 
 
@@ -86,21 +86,23 @@ For the order of precedence, it goes as follows: *not*, *and*, *xor* and *xnor*,
 
 These are all useful ways to simplify boolean expressions. An extra description in the form of a table has been made for the laws that may be more difficult to understand.
 
+Please use this time to thoroughly understand each of these laws. You shouldn't have to memorize them; they should just make sense automatically.
+
 <br>
 
 ## Commutative Law
 
 The order that you write two separate terms in does not matter. 
 
-1. `x + y = y + x`
-2. `x • y = y • x`
+1. `$x + y = y + x$`
+2. `$x • y = y • x$`
 
 ## Associative Law
 
-You can regroup terms in an expression without changing the value of the expression as long as the operators are the same. For example, `(0 + 1) + 0` is the same as `(0 + (1 + 0)`, as both would evaluate to `1`. However, `(1 + 0) • 0` is not the same as `1 + (0 • 0)`; they would return `0` and `1` respectively.
+You can regroup terms in an expression without changing the value of the expression as long as the operators are the same. For example, `$(0 + 1) + 0$` is the same as `$(0 + (1 + 0)$`, as both would evaluate to `1`. However, `$(1 + 0) \bullet 0$` is not the same as `$1 + (0 \bullet 0)$`; they would return `0` and `1` respectively.
 
-1. `(x + y) + z = x + (y + z)`
-2. `(x • y) • z = x • (y • z)`
+1. `$(x + y) + z = x + (y + z)$`
+2. `$(x \bullet y) \bullet z = x \bullet (y \bullet z)$`
 
 ## Idempotent Law
 
@@ -108,8 +110,8 @@ You can regroup terms in an expression without changing the value of the express
 
 | Identity | Description |
 | --- | --- |
-| `x + x = x` | If `x = 0`, then `0 + 0 = 0`. If `x = 1`, then `1 + 1 = 1`. Both of these equations are true; thus, the law must be valid. |
-| `x • x = x` | If `x = 0`, then `0 • 0 = 0`. If `x = 1`, then `1 • 1 = 1`. Again, these equations are both true, thus proving the law. |
+| `$x + x = x$` | If `$x = 0$`, then `$0 + 0 = 0$`. If `$x = 1$`, then `$1 + 1 = 1$`. Both of these equations are true; thus, the law must be valid. |
+| `$x \bullet x = x$` | If `$x = 0$`, then `$0 \bullet 0 = 0$`. If `$x = 1$`, then `$1 \bullet 1 = 1$`. Again, these equations are both true, thus proving the law. |
 
 ## Annihilator Law
 
@@ -117,8 +119,8 @@ Both of the identities below disregard x; hence this law is called the "annihila
 
 | Identity | Description |
 | --- | --- |
-| `x + 1 = 1` | Regardless of what *x* is, this identity will always equal 1 since the *or* operator only requires that at least one of its operands is equal to 1, which applies in this situation. |
-| `x • 0 = 0` | Since the *and* operator requires that both operands are 1, the expression `x • 0` is automatically 0 regardless of what x is. |
+| `$x + 1 = 1$` | Regardless of what *x* is, this identity will always equal 1 since the *or* operator only requires that at least one of its operands is equal to 1, which applies in this situation. |
+| `$x \bullet 0 = 0$` | Since the *and* operator requires that both operands are 1, the expression `$x \bullet 0$` is automatically 0 regardless of what x is. |
 
 ## Identity Law
 
@@ -126,8 +128,8 @@ This is so-called the "identity" law because of how the result is always the ori
 
 | Identity | Description |
 | --- | --- |
-| `x + 0 = x` | If `x` is 0, then the result is 0 since none of the operators for the *or* operation were 1. If `x` was a 1, however, then this *or* operation would also evaluate to 1. |
-| `x • 1 = x` | If `x` is 0, then the result is 0 since both operators need to be 1 for the *and* operation to be evaluated to true. Conversely, if `x` was a 1, then `1 • 1 = 1`. |
+| `$x + 0 = x$` | If `x` is 0, then the result is 0 since none of the operators for the *or* operation were 1. If `x` was a 1, however, then this *or* operation would also evaluate to 1. |
+| `$x \bullet 1 = x$` | If `x` is 0, then the result is 0 since both operators need to be 1 for the *and* operation to be evaluated to true. Conversely, if `x` was a 1, then `1 • 1 = 1`. |
 
 ## Complement Law
 
@@ -135,16 +137,16 @@ This is termed the "complement" law because it involves a term and its opposite/
 
 | Identity | Description |
 | --- | --- |
-| `x + x̅ = 1` | Since we are guaranteed to have either `1 + 0` or `0 + 1`, this expression would always evaluate to 1. |
-| `x • x̅ = 0` | Since this will be either `1 • 0` or `0 • 1`, this would never meet the conditions of the *and* operator and thus give us a 0. |
+| `$x + \bar{x} = 1$` | Since we are guaranteed to have either `$1 + 0$` or `$0 + 1$`, this expression would always evaluate to 1. |
+| `$x \bullet \bar{x} = 0$` | Since this will be either `$1 \bullet 0$` or `$0 \bullet 1$`, this would never meet the conditions of the *and* operator and thus give us a 0. |
 
 ## Distributive Law
 
 Just like regular math, the distributive law can also apply to boolean algebra.
 
-1. `x • (y + z) = xy + xz`
-2. `(x + y) • (p + q) = xp + xq + yp + yq`
-3. `(x + y)(x + z) = x + yz`
+1. `$x \bullet (y + z) = xy + xz$`
+2. `$(x + y) \bullet (p + q) = xp + xq + yp + yq$`
+3. `$(x + y)(x + z) = x + yz$`
 
 ## Absorptive Law
 
@@ -152,28 +154,28 @@ The expressions below are reduced by "absorbing" like terms.
 
 | Identity | Description |
 | --- | --- |
-| `x + xy = x` | Based on the distributive law, `x + xy` can also be written as `x • (1 + y)`, which then simplifies to `x • 1`. Based on the identity law, this would evaluate to `x`. |
-| `x + $\bar{x}$y = x + y` | If `x` was 0, then the expression would be `0 + 1 • y`, which simplifies to `0 + y` and then `y`. If `x` was 1, then the expression would be `1 + 0 • y`, which would be `1`, which is just `x`. So, to combine these two results together, we write `x + y`. |
-| `x(x + y) = x` | If `x` was 0, then this expression would become `0 • (0 + y)`, or just `0`. If `x` was 1, then the expression would be `1 • (1 + y)`, or `1`. So, we write these results as `x`. |
+| `$x + xy = x$` | Based on the distributive law, `$x + xy$` can also be written as `$x \bullet (1 + y)$`, which then simplifies to `$x \bullet 1$`. Based on the identity law, this would evaluate to `x`. |
+| `$x + \bar{x}y = x + y$` | If `x` was 0, then the expression would be `$0 + 1 \bullet y$`, which simplifies to `$0 + y$` and then `y`. If `x` was 1, then the expression would be `$1 + 0 \bullet y$`, which would be `1`, which is just `x`. So, to combine these two results together, we write `$x + y$`. |
+| `$x(x + y) = x$` | If `x` was 0, then this expression would become `$0 \bullet (0 + y)$`, or just `0`. If `x` was 1, then the expression would be `$1 \bullet (1 + y)$`, or `1`. So, we write these results as `x`. |
 
 ## DeMorgan's Law
 
 This famous law essentially states that applying negation to an entire *and* or *or* operation would change not only the operands but also the operators themselves. The negation of *and* is *or*, and vice versa.
 
-1. `$\bar{x + y} = \bar{x} • \bar{y}$`
-2. `$\bar{x • y} = \bar{x} + \bar{y}$`
+1. `$\overline{x + y} = \bar{x} \bullet \bar{y}$`
+2. `$\overline{x \bullet y} = \bar{x} + \bar{y}$`
 
 ## Double Negation
 
-If we were to negate a term and then negate that negated version, the result would simply be the original term. So, `$\bar{\bar{x}} = x$`.
+If we were to negate a term and then negate that negated version, the result would simply be the original term. So, `$\overline{\bar{x}} = x$`.
 
 ## XOR and XNOR
 
-As said previously, *xnor* is the negated version of *xor*. Overall, we can come to this conclusion: `x ⊙ y = $\bar{x ⊕ y}$ = $\bar{x} ⊕ y = x ⊕ $\bar{y}`.
+As said previously, *xnor* is the negated version of *xor*. Overall, we can come to this conclusion: `$x \odot y = \overline{x \oplus y} = \bar{x} \oplus y = x \oplus \bar{y}$`.
 
-To understand this equation, let's assume a case where `x` and `y` have the same value, 0, and then analyze each of the separate expressions in the equation above. Since the values are the same, `0 ⊙ 0 = 1`. Then, if we were to find the negated version after using the *xor* operator, we would get `$\bar{0 ⊕ 0} = \bar{0} = 1$`.
+To understand this equation, let's assume a case where `x` and `y` have the same value, 0, and then analyze each of the separate expressions in the equation above. Since the values are the same, `$0 \odot 0 = 1$`. Then, if we were to find the negated version after using the *xor* operator, we would get `$\overline{0 \oplus 0} = \bar{0} = 1$`.
 
-For the next two expressions, think about it like this. Since `x` and `y` have the same value, the only way to get a `1` after using a *xor* operation with these terms would be if we were to negate one of these terms. That way, we would have a pair of `0` and `1`, thus rendering the *xor* operation as `1` as we wanted it to. So, written out in equation terms, this proof would be: `$\bar{0} ⊕ 0 = 1 ⊕ 0 = 1` and `$0 ⊕ \bar{0} = 0 ⊕ 1 = 1`.
+For the next two expressions, think about it like this. Since `x` and `y` have the same value, the only way to get a `1` after using a *xor* operation with these terms would be if we were to negate one of these terms. That way, we would have a pair of `0` and `1`, thus rendering the *xor* operation as `1` as we wanted it to. So, written out in equation terms, this proof would be: `$\bar{0} \oplus 0 = 1 \oplus 0 = 1` and `$0 \oplus \bar{0} = 0 \oplus 1 = 1`.
 
 So, since these different expressions all evaluate to `1` for when `x` and `y` equal 0, then it is safe to say that this relationship between *xor* and *xnor* has been proven. If you're still not quite convinced, try solving for the expressions when `x` and `y` have different values.
 
@@ -187,31 +189,31 @@ It may take a while to remember all of the laws, so take your time! Also make su
 
 ## Simplify the Expression
 
-### 1. `$\bar{\bar{A}(B + C)} • B + \bar{B}$`
+### 1. `$\overline{\bar{A}(B + C)} • B + \bar{B}$`
 
-0. `$(\bar{\bar{A}} + \bar{B + C}) • B + \bar{B}$` 
-1. `$\bar{\bar{A}(B + C)} • B + \bar{B}$` - this uses DeMorgan's Law
-2. `$(A + \bar{B} * \bar{C}) • B + \bar{B}$` - this uses DeMorgan's Law and Double Negation
+0. `$\overline{\bar{A}(B + C)} \bullet B + \bar{B}$`
+1. `$(\overline{\bar{A}} + \bar{B + C}) \bullet B + \bar{B}$`  - this uses DeMorgan's Law
+2. `$A + \bar{B} \bullet \bar{C} \bullet B + \bar{B}$` - this uses DeMorgan's Law and Double Negation
+3. `$A + 0 \bullet \bar{C} + \bar{B}$` - this uses the Complement Law
+4. `$A + \bar{B}$` - this uses the Annihilator Law
 
-Note how `$B + \bar{B}$` cannot be reduced because the *and* operator comes before *or* in the order of precedence.
+### 2. `$(X(X * 1))(X + Y) + C$`
 
-### 2. `(X(X * 1))(X + Y) + C`
-
-0. `(X(X * 1))(X + Y) + C`
-1. `(XX)(X + Y) + C` - this uses the Identity Law
-2. `X(X + Y) + C` - this uses the Idempotent Law
-4. `X + C` - this uses the Absorptive Law
+0. `$(X(X * 1))(X + Y) + C$`
+1. `$(XX)(X + Y) + C$` - this uses the Identity Law
+2. `$X(X + Y) + C$` - this uses the Idempotent Law
+4. `$X + C$` - this uses the Absorptive Law
 
 ## Find the Solutions
 
 These types of problems involve one extra step after simplifying the expression, as you have to consider what values for each term within the expression would make that expression true or false.
 
-### 3. Find all ordered pairs (X, Y) that make the following expression true: `$\bar{\bar{X + XY} • Y} + X$`
+### 3. Find all ordered pairs (X, Y) that make the following expression true: `$\bar{\overline{X + XY} \bullet Y} + X$`
 
 First off, let's simplify this expression:
 
-0. `$\bar{\bar{X + XY} • Y} + X$`
-1. `$\bar{\bar{X} • Y} + X$`
+0. `$\bar{\overline{X + XY} \bullet Y} + X$`
+1. `$\bar{\bar{X} \bullet Y} + X$`
 2. `$\bar{\bar{X}} + \bar{Y} + X$`
 3. `$X + \bar{Y} + X$`
 4. `$X + X + \bar{Y}$`
@@ -231,9 +233,3 @@ So, as we can see here, the ordered pairs that would make the expression true ar
 ---
 
 Author: Kelly Hong
-
-
-
-
-
-
