@@ -121,7 +121,7 @@ So, by following this pseudocode, we have now successfully found our desired nod
 
 ## Classifying Trees Further
 
-We've thoroughly worked with the *AMERICAN* binary search tree long enough, and now let's analyze it a bit more just for good measure. 
+We've worked with the *AMERICAN* binary search tree for quite a while, and now let's analyze it a bit more just for good measure. 
 
 ### Balanced Trees 
 
@@ -171,7 +171,9 @@ Before moving further into priority queues, let's talk briefly about path length
 
 <br>
 
-Priority queues are similar to binary search trees. However, with deleting and finding items, they are limited to the first item/element. Their name comes from this particular feature; they prioritize the first element. While they are more limited, that does not mean they are necessarily worse than binary search trees; in some situations, deleting and finding other items may not be very important and thus can be ignored.
+Priority queues are similar to binary search trees. Essentially, elements that have the highest priority are served first, even if they may have been put into the queue much later. So, unlike binary search trees, inserting nodes may involve shifting other nodes to establish the priority order that we want.
+
+With deleting and finding items, they are limited to the first item/element. While they are more limited, that does not mean they are necessarily worse than binary search trees; in some situations, deleting and finding other items may not be very important and thus can be ignored.
 
 ## Inserting Nodes
 
@@ -217,6 +219,8 @@ As a queue... 18 would be added first; then, this would be popped out and stored
 
 ## 2. Create a priority queue of the letters COMPUTING with a min-heap. What are the letters in the bottommost row, from left to right?
 
+Follow the table below to see how the priority queue is constructed:
+
 | Construction <img width=250/> | <img width=250/> | <img width=250/> | <img width=250/> |
 | --- | --- | --- | --- |
 | <img src="https://user-images.githubusercontent.com/60682642/88599081-82d18c00-d030-11ea-820a-05ae219c2b55.png" width="50" height="50" /> | <img src="https://user-images.githubusercontent.com/60682642/88599116-9bda3d00-d030-11ea-9c44-ac25e8f72ef9.png" width="100" height="100" /> | <img src="https://user-images.githubusercontent.com/60682642/88599145-b01e3a00-d030-11ea-9684-9752c47f0b4e.png" width="100" height="100" /> | <img src="https://user-images.githubusercontent.com/60682642/88599183-c62bfa80-d030-11ea-9c56-638f1aecfec1.png" width="100" height="100" /> |
@@ -226,6 +230,8 @@ As a queue... 18 would be added first; then, this would be popped out and stored
 So, the bottommost letters are *P* and *O*.
 
 ## 3. Create a binary search tree with the letters NEUQUA. What are the internal path length and external path length?
+
+Follow the table below to see how the binary search tree is constructed:
 
 | Construction  <img width=250/> | <img width=250/> | <img width=250/> |
 | --- | --- | --- |
