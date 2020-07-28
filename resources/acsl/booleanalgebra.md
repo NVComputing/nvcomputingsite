@@ -74,9 +74,9 @@ For this, I broke the expression into two smaller parts. I used `A` to symbolize
 | --- | --- | --- |
 | and | `xy` or `x • y` | The resulting value is only `true` (or 1) if x and y are *both* true. |
 | or | `x + y` | The resulting value is `true` as long as *either* x or y (or both) are true. |
-| not | `$\bar{x}$` or `¬x` | This is a *unary* (taking in one operand) operator. The resulting value is the opposite of x; if x is true, then the result is false, and vice versa. You can take the negations of either one or multiple terms. For multiple terms, they are implicitly grouped together by the overhead line. So, `$\bar{y + z}$` would be treated the same as `$\bar{(y + z)}$`. |
-| xor | `x ⊕ y` | The result is true if the values of x and y are different. This is also equal to `x$\bar{y}$ + $\bar{x}$y`; if `x = 0` and `y = 1`, then this expression would evaluate to `0 • 0 + 1 • 1`, or `1`. Since x and y have different values, this makes sense. Conversely, if `x = y = 0`, then this expression would evaluate to `0 • 1 + 1 • 0`, or `0`. |
-| xnor | `x ⊙ y` | This is the exact opposite of xor; the result is true if the values of x and y are the same. For this reason, `x ⊙ y` can also be written as `$\bar{x ⊕ y}$`. |
+| not | `$\overline{\rm x}$` or `¬x` | This is a *unary* (taking in one operand) operator. The resulting value is the opposite of x; if x is true, then the result is false, and vice versa. You can take the negations of either one or multiple terms. For multiple terms, they are implicitly grouped together by the overhead line. So, `$\bar{y + z}$` would be treated the same as `$\bar{(y + z)}$`. |
+| xor | `x \oplus y` | The result is true if the values of x and y are different. This is also equal to `x$\bar{y}$ + $\bar{x}$y`; if `x = 0` and `y = 1`, then this expression would evaluate to `0 • 0 + 1 • 1`, or `1`. Since x and y have different values, this makes sense. Conversely, if `x = y = 0`, then this expression would evaluate to `0 • 1 + 1 • 0`, or `0`. |
+| xnor | `x ⊙ y` | This is the exact opposite of xor; the result is true if the values of x and y are the same. For this reason, `x ⊙ y` can also be written as `$\bar{x \oplus y}$`. |
 
 For the order of precedence, it goes as follows: *not*, *and*, *xor* and *xnor*, and then *or*. 
 
