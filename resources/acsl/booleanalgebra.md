@@ -74,8 +74,8 @@ For this, I broke the expression into two smaller parts. I used `A` to symbolize
 | --- | --- | --- |
 | and | `$xy$` or `$x • y$` | The resulting value is only `true` (or 1) if x and y are *both* true. |
 | or | `$x + y$` | The resulting value is `true` as long as *either* x or y (or both) are true. |
-| not | `$\bar{x}$` or `$\neg x$` | This is a *unary* (taking in one operand) operator. The resulting value is the opposite of x; if x is true, then the result is false, and vice versa. You can take the negations of either one or multiple terms. For multiple terms, they are implicitly grouped together by the overhead line. So, `$\overline{y + z}$` would be treated the same as `$\overline{(y + z)}$`. |
-| xor | `$x \oplus y$` | The result is true if the values of x and y are different. This is also equal to `$x\bar{y} + \bar{x}y$`; if `$x = 0$` and `$y = 1$`, then this expression would evaluate to `$0 • 0 + 1 • 1$`, or `1`. Since x and y have different values, this makes sense. Conversely, if `$x = y = 0$`, then this expression would evaluate to `$0 \bullet 1 + 1 \bullet 0$`, or `0`. |
+| not | `$\overline{x}$` or `$\neg x$` | This is a *unary* (taking in one operand) operator. The resulting value is the opposite of x; if x is true, then the result is false, and vice versa. You can take the negations of either one or multiple terms. For multiple terms, they are implicitly grouped together by the overhead line. So, `$\overline{y + z}$` would be treated the same as `$\overline{(y + z)}$`. |
+| xor | `$x \oplus y$` | The result is true if the values of x and y are different. This is also equal to `$x\overline{y} + \overline{x}y$`; if `$x = 0$` and `$y = 1$`, then this expression would evaluate to `$0 • 0 + 1 • 1$`, or `1`. Since x and y have different values, this makes sense. Conversely, if `$x = y = 0$`, then this expression would evaluate to `$0 \bullet 1 + 1 \bullet 0$`, or `0`. |
 | xnor | `$x \odot y$` | This is the exact opposite of xor; the result is true if the values of x and y are the same. For this reason, `$x \odot y$` can also be written as `$\overline{x \oplus y}$`. |
 
 For the order of precedence, it goes as follows: *not*, *and*, *xor* and *xnor*, and then *or*. 
@@ -137,8 +137,8 @@ This is termed the "complement" law because it involves a term and its opposite/
 
 | Identity | Description |
 | --- | --- |
-| `$x + \bar{x} = 1$` | Since we are guaranteed to have either `$1 + 0$` or `$0 + 1$`, this expression would always evaluate to 1. |
-| `$x \bullet \bar{x} = 0$` | Since this will be either `$1 \bullet 0$` or `$0 \bullet 1$`, this would never meet the conditions of the *and* operator and thus give us a 0. |
+| `$x + \overline{x} = 1$` | Since we are guaranteed to have either `$1 + 0$` or `$0 + 1$`, this expression would always evaluate to 1. |
+| `$x \bullet \overline{x} = 0$` | Since this will be either `$1 \bullet 0$` or `$0 \bullet 1$`, this would never meet the conditions of the *and* operator and thus give us a 0. |
 
 ## Distributive Law
 
@@ -155,27 +155,27 @@ The expressions below are reduced by "absorbing" like terms.
 | Identity | Description |
 | --- | --- |
 | `$x + xy = x$` | Based on the distributive law, `$x + xy$` can also be written as `$x \bullet (1 + y)$`, which then simplifies to `$x \bullet 1$`. Based on the identity law, this would evaluate to `x`. |
-| `$x + \bar{x}y = x + y$` | If `x` was 0, then the expression would be `$0 + 1 \bullet y$`, which simplifies to `$0 + y$` and then `y`. If `x` was 1, then the expression would be `$1 + 0 \bullet y$`, which would be `1`, which is just `x`. So, to combine these two results together, we write `$x + y$`. |
+| `$x + \overline{x}y = x + y$` | If `x` was 0, then the expression would be `$0 + 1 \bullet y$`, which simplifies to `$0 + y$` and then `y`. If `x` was 1, then the expression would be `$1 + 0 \bullet y$`, which would be `1`, which is just `x`. So, to combine these two results together, we write `$x + y$`. |
 | `$x(x + y) = x$` | If `x` was 0, then this expression would become `$0 \bullet (0 + y)$`, or just `0`. If `x` was 1, then the expression would be `$1 \bullet (1 + y)$`, or `1`. So, we write these results as `x`. |
 
 ## DeMorgan's Law
 
 This famous law essentially states that applying negation to an entire *and* or *or* operation would change not only the operands but also the operators themselves. The negation of *and* is *or*, and vice versa.
 
-1. `$\overline{x + y} = \bar{x} \bullet \bar{y}$`
-2. `$\overline{x \bullet y} = \bar{x} + \bar{y}$`
+1. `$\overline{x + y} = \overline{x} \bullet \overline{y}$`
+2. `$\overline{x \bullet y} = \overline{x} + \overline{y}$`
 
 ## Double Negation
 
-If we were to negate a term and then negate that negated version, the result would simply be the original term. So, `$\overline{\bar{x}} = x$`.
+If we were to negate a term and then negate that negated version, the result would simply be the original term. So, `$\overline{\overline{x}} = x$`.
 
 ## XOR and XNOR
 
-As said previously, *xnor* is the negated version of *xor*. Overall, we can come to this conclusion: `$x \odot y = \overline{x \oplus y} = \bar{x} \oplus y = x \oplus \bar{y}$`.
+As said previously, *xnor* is the negated version of *xor*. Overall, we can come to this conclusion: `$x \odot y = \overline{x \oplus y} = \overline{x} \oplus y = x \oplus \overline{y}$`.
 
-To understand this equation, let's assume a case where `x` and `y` have the same value, 0, and then analyze each of the separate expressions in the equation above. Since the values are the same, `$0 \odot 0 = 1$`. Then, if we were to find the negated version after using the *xor* operator, we would get `$\overline{0 \oplus 0} = \bar{0} = 1$`.
+To understand this equation, let's assume a case where `x` and `y` have the same value, 0, and then analyze each of the separate expressions in the equation above. Since the values are the same, `$0 \odot 0 = 1$`. Then, if we were to find the negated version after using the *xor* operator, we would get `$\overline{0 \oplus 0} = \overline{0} = 1$`.
 
-For the next two expressions, think about it like this. Since `x` and `y` have the same value, the only way to get a `1` after using a *xor* operation with these terms would be if we were to negate one of these terms. That way, we would have a pair of `0` and `1`, thus rendering the *xor* operation as `1` as we wanted it to. So, written out in equation terms, this proof would be: `$\bar{0} \oplus 0 = 1 \oplus 0 = 1` and `$0 \oplus \bar{0} = 0 \oplus 1 = 1`.
+For the next two expressions, think about it like this. Since `x` and `y` have the same value, the only way to get a `1` after using a *xor* operation with these terms would be if we were to negate one of these terms. That way, we would have a pair of `0` and `1`, thus rendering the *xor* operation as `1` as we wanted it to. So, written out in equation terms, this proof would be: `$\overline{0} \oplus 0 = 1 \oplus 0 = 1$` and `$0 \oplus \overline{0} = 0 \oplus 1 = 1$`.
 
 So, since these different expressions all evaluate to `1` for when `x` and `y` equal 0, then it is safe to say that this relationship between *xor* and *xnor* has been proven. If you're still not quite convinced, try solving for the expressions when `x` and `y` have different values.
 
@@ -189,13 +189,13 @@ It may take a while to remember all of the laws, so take your time! Also make su
 
 ## Simplify the Expression
 
-### 1. `$\overline{\bar{A}(B + C)} • B + \bar{B}$`
+### 1. `$\overline{\overline{A}(B + C)} • B + \overline{B}$`
 
-0. `$\overline{\bar{A}(B + C)} \bullet B + \bar{B}$`
-1. `$(\overline{\bar{A}} + \bar{B + C}) \bullet B + \bar{B}$`  - this uses DeMorgan's Law
-2. `$A + \bar{B} \bullet \bar{C} \bullet B + \bar{B}$` - this uses DeMorgan's Law and Double Negation
-3. `$A + 0 \bullet \bar{C} + \bar{B}$` - this uses the Complement Law
-4. `$A + \bar{B}$` - this uses the Annihilator Law
+0. `$\overline{\overline{A}(B + C)} \bullet B + \overline{B}$`
+1. `$(\overline{\overline{A}} + \overline{B + C}) \bullet B + \overline{B}$`  - this uses DeMorgan's Law
+2. `$A + \overline{B} \bullet \overline{C} \bullet B + \overline{B}$` - this uses DeMorgan's Law and Double Negation
+3. `$A + 0 \bullet \overline{C} + \overline{B}$` - this uses the Complement Law
+4. `$A + \overline{B}$` - this uses the Annihilator Law
 
 ### 2. `$(X(X * 1))(X + Y) + C$`
 
@@ -208,20 +208,20 @@ It may take a while to remember all of the laws, so take your time! Also make su
 
 These types of problems involve one extra step after simplifying the expression, as you have to consider what values for each term within the expression would make that expression true or false.
 
-### 3. Find all ordered pairs (X, Y) that make the following expression true: `$\bar{\overline{X + XY} \bullet Y} + X$`
+### 3. Find all ordered pairs (X, Y) that make the following expression true: `$\overline{\overline{X + XY} \bullet Y} + X$`
 
 First off, let's simplify this expression:
 
-0. `$\bar{\overline{X + XY} \bullet Y} + X$`
-1. `$\bar{\bar{X} \bullet Y} + X$`
-2. `$\bar{\bar{X}} + \bar{Y} + X$`
-3. `$X + \bar{Y} + X$`
-4. `$X + X + \bar{Y}$`
-5. `$X + \bar{Y}$`
+0. `$\overline{\overline{X + XY} \bullet Y} + X$`
+1. `$\overline{\overline{X} \bullet Y} + X$`
+2. `$\overline{\overline{X}} + \overline{Y} + X$`
+3. `$X + \overline{Y} + X$`
+4. `$X + X + \overline{Y}$`
+5. `$X + \overline{Y}$`
 
 Now, we can set this final reduced expression to 1, since the problem asks us to find ordered pairs to make the expression true. Then, using a truth table, the solutions can be easily found:
 
-| X | Y | `$X + \bar{Y}$` |
+| X | Y | `$X + \overline{Y}$` |
 | --- | --- | --- |
 | 0 | 0 | 1 |
 | 1 | 0 | 1 |

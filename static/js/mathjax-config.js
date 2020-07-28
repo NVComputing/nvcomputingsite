@@ -5,9 +5,14 @@ MathJax = {
 	tex: {
 		inlineMath: { '[+]': [['$', '$']] },
 	},
+	svg: {
+		fontCache: 'global'
+	},
 	startup: {
 		pageReady: function() {
 			let codes = document.getElementsByTagName('code');
+			let mathCodes = [];
+
 			for (let i = 0; i < codes.length; i++) {
 				let code = codes[i];
 
@@ -20,15 +25,21 @@ MathJax = {
 						if (inputs[j].processStrings) {
 							let matches = inputs[j].findMath([text]);
 							if (matches.length === 1 && matches[0].start.n === 0 && matches[0].end.n === text.length) {
-								MathJax.typeset([code]);
-								code.outerHTML = code.innerHTML;
-								i--;
+								mathCodes.push(code);
 								break;
 							}
 						}
 					}
 				}
 			}
-		},
+
+			MathJax.typesetPromise([mathCodes]);
+
+			for(let i = 0; i < mathCodes.length; i++) {
+				let code = mathCodes[i];
+				code.outerHTML = code.innerHTML;
+			}
+		}
+		,
 	},
 };

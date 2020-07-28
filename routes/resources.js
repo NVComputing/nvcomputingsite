@@ -5,6 +5,7 @@ let converter = new showdown.Converter();
 let path = require('path');
 
 converter.setOption('tables', true);
+converter.setOption('disableForced4SpacesIndentedSublists', true);
 
 module.exports.set = (app) => {
 	app.get('/resources', (req, res) => {
