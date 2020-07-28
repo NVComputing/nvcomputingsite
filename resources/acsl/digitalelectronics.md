@@ -9,6 +9,8 @@
 
 # Introduction
 
+Digital electronics is a way to visualize boolean algebra using drawn-out circuits.
+
 <br>
 
 # Definitions
