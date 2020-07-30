@@ -263,3 +263,8 @@ body.side-menu-visible #side-menu {
 body.side-menu-visible #side-menu.side-menu-left {
 	transform: translateX(300px)
 }
+
+.monospace {
+	font-family: Consolas, Monaco, 'Andale Mono', monospace;
+	display: flex;
+}

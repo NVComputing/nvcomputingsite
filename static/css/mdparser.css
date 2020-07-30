@@ -47,3 +47,10 @@ table {
 th, td {
 	padding: 4px;
 }
+mjx-stretchy-h {
+	border-top: 1px solid white;
+}
+.inline-latex {
+	color: #fff !important;
+	font-size: inherit !important;
+}

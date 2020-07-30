@@ -1,4 +1,4 @@
-# Bit String Flicking
+# Bit-String Flicking
 
 ## Contents
 - [Introduction](#introduction)
@@ -13,7 +13,8 @@
 
 # Introduction
 
-Bit strings are essentially just strings of binary digits (so, for example, `011010`) that can be manipulated in a variety of ways by operators (see Operators below). 
+Bit strings are essentially just strings of binary digits (so, for example, `011010`) that can be manipulated in a variety of ways by operators (see Operators below). They can also be represented by 
+the binary form of many data types, such as integers, strings, etc.
 
 Most high-level languages support such operations. Bit strings can be used to represent sets in the form of binary sets. If you were to have a program with 8 different options that all have the choice of "Yes" or "No", one way to store this information would be with an array of size 8. However, an easier and less space-consuming way would be to use a bit string, with each option choice taking up one bit.
 
@@ -25,41 +26,71 @@ Understanding how bit strings work is very helpful in systems programming, assem
 
 <br>
 
-The order of precedence for the operators goes as follows: NOT, SHIFT and CIRC, AND, XOR, and then OR. Continue reading this section for more information on what each of these operators does.
+The order of precedence (the order in which they are executed) for the operators goes as follows:
+- Parenthesis (highest precedence)
+- NOT
+- SHIFT and CIRC
+- AND
+- XOR
+- OR (lowest precedence)
+
+Continue reading this section for more information on what each of these operators do.
 
 ## Bitwise Operators
 
-All of these operators (except *not*) are binary operators, meaning that they must take in two operands, which must be the same length. In the case that they are of different lengths, then zeros will be added to the left of the shorter operand until it is the same length as the other operand. So, for example, if we had the operands `101111` and `101`, 3 zeros would need to be added to *101* to make it `000101`.
+All of these operators (except NOT) are binary operators,
+meaning that they must take in two operands, which must be the same length.
+If the two bit strings are different lengths,
+zeros will be added to the left of the shorter operand until it is the same length
+as the other operand. So, for example, if we had the operands `101111` and `101`,
+3 zeros would need to be added to `101` to make it `000101`.
 
 Since *not* is a unary operator (meaning that it only takes in one operand), this condition does not apply.
 
+All of these operators are also *bitwise*, meaning that they work *bit-by-bit*.
+They do an operation on every single bit of the string *individually*,
+not the whole bit string as one.
+
 | Operator | Symbol | Description | Example |
 | --- | --- | --- | --- |
-| not | `~`, `$\neg$`, or `$\overline{\rm A}$` | Logical negation is performed on each bit in the bit strings. 0s turn into 1s, and vice versa. | `~10110` would become `01001`. |
-| and | & | A comparison is made between a bit and its corresponding bit (based on position) in the other bit string. If both bits are 1s, then the resultant bit will be a 1; otherwise, it will be 0. This is done for each bit in the bit strings.| `10001 and 01101` would return `00001`. |
-| or | \| | Similar to *and*, bits are compared with the bits in the other bit string. If at least one bit is a 1, then the resultant bit will be a 1. This is done for each bit in the bit strings.| `101011 or 011001` would return `111011`. |
-| xor | ⊕ | Again, this involves bit comparison. If one bit has a value of 0 while the other has a value of 1, then the resultant bit is 1 (so basically, if the bits have different values). This is done for each bit in the bit strings. | `101011 xor 011001` would return `110010`.|
+| not | `$\sim$` or `$\neg$` | Logical negation is performed on each bit in the bit strings. 0s turn into 1s, and vice versa. | <div class="monospace"><div>`$\neg$`<br>=&nbsp;</div><div>`$10110$`<br>`$01001$`</div></div> |
+| and | & | A comparison is made between a bit and its corresponding bit (based on position) in the other bit string. If both bits are 1s, then the resultant bit will be a 1; otherwise, it will be 0. This is done for each bit in the bit strings.| <div class="monospace"><div><br>&<br>=&nbsp;</div><div>`$10001$`<br>`$01101$`<br>`$00001$`</div></div>|
+| or | \| | Similar to *and*, bits are compared with the bits in the other bit string. If at least one bit is a 1, then the resultant bit will be a 1. This is done for each bit in the bit strings. | <div class="monospace"><div><br>\|<br>=&nbsp;</div><div>`$101011$`<br>`$011001$`<br>`$111011$`</div></div> |
+| xor | `$\oplus$` | Again, this involves bit comparison. If one bit has a value of 0 while the other has a value of 1, then the resultant bit is 1 (so basically, if the bits have different values). This is done for each bit in the bit strings. | <div class="monospace"><div><br>`$\oplus$`<br>=&nbsp;</div><div>`$101011$`<br>`$011001$`<br>`$110010$`</div></div>|
+
+Note: There is a shortcut for xor specifically - you can think of it like this:
+
 
 ## Shift Operators
 
-As their name indicates, "shift" operators involve shifting bits around in a bit string. The direction in which they shift as well as how many positions they shift over by varies based on the operator. For the operators in the table below, we will include the abbreviation that we typically use for each operator. 
+As their name indicates, "shift" operators are unary operators that involve shifting bits around in a bit string. The direction in which they shift as well as how many positions they shift over by varies based on the operator. For the operators in the table below, we will include the abbreviation that we typically use for each operator. 
+
+Note that none of these operators change the length of the bit string.
 
 | Operator | Abbreviation | Description | Example |
 | --- | --- | --- | --- |
-| LSHIFT-x | LS-x | Each bit in the bit string is shifted over by *x* positions to the left. If its shift causes it to go "out of bounds", that bit will be lost; a 0 at the other end (the right) will be ended to preserve bit string length. | `LS-2 01101`: The first two bits, `01`, are lost when shifting because they go out of bounds, leaving us with `100` (temporarily). 2 zeros then take their place at the right end of the bit string, thus leaving us with `10100`.|
-| RSHIFT-x | RS-x | Each bit in the bit string is shifted over by *x* positions to the right. If its shift causes it to "go out of bounds", that bit will be lost; a 0 at the other end (the left) will be ended to preserve bit string length. | `RS-3 01101`: The first three bits on the right, `101` are lost when shifting because they go out of bounds; now we have `01` left. 3 zeros take their place at the left end of the bit string. So, our resultant bit string is `00001`. |
-| LCIRC-x | LC-x | Each bit in the bit string is shifted over by *x* positions to the left. If its shift causes it to "go out of bounds", then that bit will circulate to the other end (the right) rather than being lost. | `LC-3 01101`: The first three digits circulate over to the other end of the bit string in order. In order, the bit string goes from `01101` to `11010`, `10101`, and then finally `01011`. |
-| RCIRC-x | RC-x | Each bit in the bit string is shifted over by *x* positions to the right. If its shift causes it to "go out of bounds", then that bit will circulate to the other end (the left) rather than being lost. | `RC-2 01011`: The first two digits on the right are circulated over to the other end of the bit string. So, `01011` becomes `10101` and then `11010`. |
+| LSHIFT-x | LS-x | Each bit in the bit string is shifted over by *x* positions to the left. If its shift causes it to go out of bounds, that bit will be lost ("shifted out"); a 0 at the other end (the right) will be ended to preserve bit string length. | `LS-2 01101`: The first two bits, `01`, are shifted out, leaving us with `101`. 2 zeros are then filled at the right end of the bit string, thus leaving us with `10100`.|
+| RSHIFT-x | RS-x | Each bit in the bit string is shifted over by *x* positions to the right. If its shift causes it to go out of bounds, that bit will be lost ("shifted out"); a 0 at the other end (the left) will be ended to preserve bit string length. | `RS-3 01101`: The first three bits on the right, `101` are shifted out; now we have `01` left. 3 zeros are then filled at the left end of the bit string, thus leaving us with `00001`. |
+| LCIRC-x | LC-x | Each bit in the bit string is shifted over by *x* positions to the left. If its shift causes it to go out of bounds, then that bit will circulate to the other end (the right) rather than being lost. | `LC-3 01101`: The first three digits circulate over to the other end of the bit string in order. The resulting bit string becomes `01011`. |
+| RCIRC-x | RC-x | Each bit in the bit string is shifted over by *x* positions to the right. If its shift causes it to go out of bounds, then that bit will circulate to the other end (the left) rather than being lost. | `RC-2 01011`: The first two digits on the right are circulated over to the other end of the bit string. So, `01011` becomes `11010`. |
 
 So, while SHIFTs may cause there to be different bits, CIRCs only change the order of the existing bits.
+
+Also, because of the way these operators work, you can significantly simplify operations depending on the length of the bit string.
+
+If SHIFT has a higher shift than the length of the string, obviously the entire string is shifted out and becomes just zeros.
+
+If CIRC has a shift that is a multiple of the string length, the shift leaves the bits in their original location (no effect).
+As a result, any CIRC x operations are equal to CIRC (bit length mod x) operations. That means you can divide the CIRC x by the bit length and just use the remainder as your CIRC.
+
+For example, LCIRC-19 `10001` is just equivalent to LCIRC-4. This means that we can calculate that the resultant bit string
+is `00011` very quickly. (As a side note, you can simplify this even further: LCIRC-4 = RCIRC-1 on a bitstring with length 5, because 4 mod 5 is also -1 (and since LCIRC-x is just RCIRC-(-x))).
 
 <br>
 
 # Sample Problems
 
-<br>
-
-Note that there are multiple parentheses in each of the given problems. Just like in regular math, this is the highest priority on the order of precedence scale.
+Here are some sample problems that you can use to practice bit-string flicking. Full solutions are provided.
 
 ## Evaluations
 
@@ -104,7 +135,8 @@ Knowing this, we can now reduce our problem to simpler terms and then solve.
 
 ## Finding Possible Bitstrings
 
-Solving these types of problems take on a different method of solving as you are given an equation but not one of the bitstrings, which you then need to solve for. To depict this mystery bitstring, we typically use letters. So, if we had a mystery bitstring that is 5 bits long, then you could display that as `abcde`.
+Solving these types of problems take on a different method of solving
+, as you are given an equation but not one of the bitstrings, which you then need to solve for. To depict this mystery bitstring, we typically use letters. So, if we had a mystery bitstring that is 5 bits long, then you could display that as `abcde`.
 
 Working with letters for the first time can take a bit of adjusting, since letters are in no way similar to `0` and `1`. So, please refer to the following table below to understand how calculations work out:
 

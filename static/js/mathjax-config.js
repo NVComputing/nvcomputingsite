@@ -5,9 +5,6 @@ MathJax = {
 	tex: {
 		inlineMath: { '[+]': [['$', '$']] },
 	},
-	svg: {
-		fontCache: 'global'
-	},
 	startup: {
 		pageReady: function() {
 			let codes = document.getElementsByTagName('code');
@@ -25,6 +22,7 @@ MathJax = {
 						if (inputs[j].processStrings) {
 							let matches = inputs[j].findMath([text]);
 							if (matches.length === 1 && matches[0].start.n === 0 && matches[0].end.n === text.length) {
+								code.classList.add("inline-latex");
 								mathCodes.push(code);
 								break;
 							}
@@ -34,12 +32,6 @@ MathJax = {
 			}
 
 			MathJax.typesetPromise([mathCodes]);
-
-			for(let i = 0; i < mathCodes.length; i++) {
-				let code = mathCodes[i];
-				code.outerHTML = code.innerHTML;
-			}
 		}
-		,
 	},
 };
