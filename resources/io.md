@@ -92,8 +92,7 @@ BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
 buf.readLine(); // we don't even need the first line lol
 
 int[][] nums = buf.lines().map(s -> s.split(" "))
-               .map(arr -> Arrays.stream(arr)
-               .mapToInt(Integer::parseInt).toArray())
+               .map(arr -> Arrays.stream(arr).mapToInt(Integer::parseInt).toArray())
                .toArray(int[][]::new);
 ```
 

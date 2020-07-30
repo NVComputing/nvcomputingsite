@@ -51,7 +51,11 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/res/favicon-16x16.png">
 	<link rel="manifest" href="/res/site.webmanifest">
 
-	<title>Resources | NVHS Computing</title>
+	{{#if resourceName}}
+		<title>{{resourceName}} | NVHS Computing</title>
+	{{else}}
+		<title>Resources | NVHS Computing</title>
+	{{/if}}
 </head>
 <body>
 <div class="background-page">

@@ -60,6 +60,24 @@ not the whole bit string as one.
 
 Note: There is a shortcut for xor specifically - you can think of it like this:
 
+<div class="monospace"><div>&nbsp;&nbsp;<br><code>$\oplus$</code></div><div><code>$101011$</code><br><code>$011001$</code></div></div>
+
+For each bit, instead of comparing them individually, just look at the bits in the 2nd bit string with a `1`. *Toggle* (perform the NOT operation on) the bits corresponding to those `1`s in the first string to get your final bit string.
+
+So for this example, we're toggling <code class="text-white">1</code>`01`<code class="text-white">01</code>`1`. After flipping the red bits, we have `$110010$`, which is exactly what the answer should be.
+
+This works because of the truth table for XOR:
+
+| `$X$` | `$Y$` | `$X \oplus Y$` |
+| --- | --- | --- |
+| 0 | 0 | 0 |
+| 1 | 0 | 1 |
+| 0 | 1 | 1 |
+| 1 | 1 | 0 |
+
+We can see that the `$X \oplus Y$` bit is equal to `$X$` when `$Y$` is 0, and equal to `$\neg X$` when `$Y$` is 1.
+
+For more details on truth tables, or if you're confused about what a truth table is, check out our page on [Boolean Algebra](/resources/acsl/booleanalgebra).
 
 ## Shift Operators
 
@@ -84,7 +102,7 @@ If CIRC has a shift that is a multiple of the string length, the shift leaves th
 As a result, any CIRC x operations are equal to CIRC (bit length mod x) operations. That means you can divide the CIRC x by the bit length and just use the remainder as your CIRC.
 
 For example, LCIRC-19 `10001` is just equivalent to LCIRC-4. This means that we can calculate that the resultant bit string
-is `00011` very quickly. (As a side note, you can simplify this even further: LCIRC-4 = RCIRC-1 on a bitstring with length 5, because 4 mod 5 is also -1 (and since LCIRC-x is just RCIRC-(-x))).
+is `00011` very quickly. (As a side note, you can simplify this even further: LCIRC-4 = RCIRC-1 on a bitstring with length 5, because 4 mod 5 is also -1 (and LCIRC-x is just RCIRC-(-x))).
 
 <br>
 
@@ -142,18 +160,18 @@ Working with letters for the first time can take a bit of adjusting, since lette
 
 | Operation | Result | Explanation |
 | --- | --- | --- |
-| ~ a | A | This is just our way of differentiating between `0` and `1` but in letter form. Note that `a` does not necessarily equal `0`; `A` is simply a placeholder to say that we have negated the value. |
-| ~ A | a | Similarly, negating the negated version of `a` would return `a`.|
+| `$\neg a$` | A | This is just our way of differentiating between `0` and `1` but in letter form. Note that `a` does not necessarily equal `0`; `A` is simply a placeholder to say that we have negated the value. |
+| `$\neg A$` | a | Similarly, negating the negated version of `a` would return `a`.|
 | `$a \oplus 0$` | a | If `a` was a 1, then the resultant value would be `1`. If `a` was a 0, then the resultant value would also be `0`. So, overall, the result is `a`. |
 | `$a \oplus 1$` | A | If `a` was a 1, then the resultant value would be `0`. If `a` was a 1, then the resultant value would be `0`. Note how the end result is the opposite value of `a`; so, we mark the end result as `A`. |
-| `$a & 0$` | 0 | Regardless of what `a` is, this would always return `0` because one of the operands is already 0. |
-| `$a & 1$` | a | If `a` was a 1, then the resultant value would be `1`. If `a` was a 0, then the resultant value would also be `0`. So, overall the result is `a`. |
-| a \| 0 | a | Since one of the operands is already 0, then whether this operation returns a 0 or 1 all depends on `a`. If `a` is a 1, then the value also becomes `1`; the same applies for if `a` is a 0. So, overall, the result is `a`. |
-| a \| 1 | 1 | Regardless of what `a` is, this would always return `1` because one of the operands is already 1, thus meeting the condition of the \| operator. |
+| `$a$` & `$0$` | 0 | Regardless of what `a` is, this would always return `0` because one of the operands is already 0. |
+| `$a$` & `$1$` | a | If `a` was a 1, then the resultant value would be `1`. If `a` was a 0, then the resultant value would also be `0`. So, overall the result is `a`. |
+| `$a$` \| `$0$` | a | Since one of the operands is already 0, then whether this operation returns a 0 or 1 all depends on `a`. If `a` is a 1, then the value also becomes `1`; the same applies for if `a` is a 0. So, overall, the result is `a`. |
+| `$a$` \| `$1$` | 1 | Regardless of what `a` is, this would always return `1` because one of the operands is already 1, thus meeting the condition of the \| operator. |
 
 Now, using this table, please try the following problems:
 
-### 3. List all possible values of x (5 bits long) that solve the following equation: (LS-1 (10110 XOR (RC-3 x) AND 11011)) = 01100 . (This is from the ACSL Wiki).
+### 3. List all possible values of x (5 bits long) that solve the following equation: (LS-1 (10110 XOR (RC-3 x) AND 11011)) = 01100. (This is from the ACSL Wiki).
 
 Let's first mark `x` as `abcde`. Now, we can carry on:
 
@@ -163,9 +181,9 @@ Let's first mark `x` as `abcde`. Now, we can carry on:
 3. (LS-1 Cd1Ab) = 01100
 4. d1Ab0 = 01100
 
-At this point, you can now solve for a few variables. `d` correlates with `0`. `1` correlates with `1`; notice that while variables are not involved, this is a good way to ensure that you correctly evaluated the bit string. `A` is equal to 1; so, `a` is equal to `0`. `b` is equal to `0`, and the final `0` correlates with 0.
+At this point, you can now solve for a few variables. `d` correlates with `0`. `1` correlates with `1`; notice that while variables are not involved, this is a good way to ensure that you correctly evaluated the bit string. (Note that it is also possible to have *no* answers, so if you're 100% sure you did everything correctly but two constants don't line up, there are *no solutions.* Typically ACSL has solutions, so you probably won't need to worry about this.) `A` is equal to 1; so, `a` is equal to `0`. `b` is equal to `0`, and the final `0` correlates with 0.
 
-So, altogether, `a` = 0, `b` = 0, and `d` = 0. We don't know about `c` or `e`, but their values don't actually matter. This is because regardless of what they are, the equation will always be reduced to what we have in Step 4. 
+So, altogether, `a` = 0, `b` = 0, and `d` = 0. We don't know about `c` or `e`, but their values don't actually matter. This is because regardless of what they are, the equation will always be reduced to what we have in Step 4 (the variables are annihilated somewhere along the line). 
 
 Thus, our answer is `x` = `00*0*`, with the `*` standing for any value (`0` or `1`). During the ACSL contest, you should write these solutions out manually (unless noted otherwise) as: `00000`, `00100`, `00001`, and `00101`.
 
@@ -185,4 +203,4 @@ This translates to `e` = 0, `a` = 1, and `b` = 0. The values of `c` and `d` don'
 So, our answer is `x` = `10**0` with the `*` standing for any value (`0` or `1`). Fully written out, this would be: `10000`, `10100`, `10010`, and `10110`.
 
 ---
-*Author: Kelly Hong*
+*Authors: Kelly Hong, Raymond Zhao*

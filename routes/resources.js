@@ -28,7 +28,8 @@ module.exports.set = (app) => {
 					res.render('resources', { resource: converter.makeHtml(errorMd) });
 				});
 			} else {
-				res.render('resources', { resource: converter.makeHtml(data) });
+				let title = data.match(/#\s*(.*?)\s*\n/);
+				res.render('resources', { resource: converter.makeHtml(data), resourceName: title[1] });
 			}
 		});
 	});

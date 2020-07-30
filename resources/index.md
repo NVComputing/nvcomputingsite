@@ -17,7 +17,7 @@ Otherwise, click one of the above links you're interested in to get started!
 
 # Useful Links
 ### [This website's GitHub Repository](https://github.com/NVComputing/nvcomputingsite)
-### [Our Google Drive](https://drive.google.com/drive/folders/1hC7s6k6MglSbo3qq9PYyDR-_nRpXltbC)
+### [Our Google Drive](https://drive.google.com/drive/u/7/folders/1-9GMKiUQ73BadhtPJca8GAPqXCEi0lAl)
 
 <br>
 
