@@ -19,6 +19,9 @@
 		padding-bottom: 2rem!important;
 		padding-top: 2rem!important;
 	}
+	.date-text {
+		color: #ffff55 !important;
+	}
 </style>
 <html lang="en">
 <head>
@@ -107,22 +110,20 @@
 <div id="event-schedule">
 	<div style="background: #2b2b2b;">
 		<div class="container spaced text-white">
-			<h1>Event Schedule</h1>
-			{{#if upcomingEvents}}
-				{{#each upcomingEvents}}
-					{{#if this.link}}
-						<h3><a href="{{this.link}}">{{this.name}}</a></h3>
-					{{else}}
-						<h3>{{this.name}}</h3>
-					{{/if}}
+			<h1>Deadlines</h1>
+			{{#if deadlines}}
+				{{#each deadlines}}
+					<h3>{{this.name}}</h3>
 					<p>{{this.desc}}</p>
-					<p><b>Date:</b> {{this.time}}</p>
-					{{#if tentative}}
-						<p style="color: #e83e8c">Note: This date is tentative and may change in the future.</p>
+					<h4><b>Date:</b> {{this.time}}</h4>
+					{{#if hard}}
+						<p style="color: #e83e8c">Note: This is a hard deadline. Please finish on time.</p>
+					{{else}}
+						<p style="color: #32cd32">Note: This is a soft deadline. Try to get it done as soon as possible, but it's a bit more flexible.</p>
 					{{/if}}
 				{{/each}}
 			{{else}}
-				<h3>Looks like there aren't any events currently scheduled.</h3>
+				<h3>Looks like there aren't any deadlines currently scheduled.</h3>
 			{{/if}}
 		</div>
 		<div style="width: 85%; background: #2b2b2b; margin-left: auto; margin-right: auto;">
@@ -132,23 +133,28 @@
 
 	<div style="background: #2b2b2b;">
 		<div class="container spaced text-white">
-		<h1>Deadlines</h1>
-		{{#if deadlines}}
-			{{#each deadlines}}
-				<h3>{{this.name}}</h3>
-				<p>{{this.desc}}</p>
-				<h4><b>Date:</b> {{this.time}}</h4>
-				{{#if hard}}
-					<p style="color: #e83e8c">Note: This is a hard deadline. Please finish on time.</p>
-				{{else}}
-					<p style="color: #e83e8c">Note: This is a soft deadline. Try to get it done as soon as possible, but it's a bit more flexible.</p>
-				{{/if}}
-			{{/each}}
-		{{else}}
-			<h3>Looks like there aren't any deadlines currently scheduled.</h3>
-		{{/if}}
+			<h1>Event Schedule</h1>
+			<p><i>Check back regularly; new events are often added to this page.</i></p>
+			{{#if upcomingEvents}}
+				{{#each upcomingEvents}}
+					{{#if this.link}}
+						<h3><a href="{{this.link}}">{{this.name}}</a></h3>
+					{{else}}
+						<h3>{{this.name}}</h3>
+					{{/if}}
+					<p>{{{this.desc}}}</p>
+					<p class="date-text"><b>Date:</b> {{this.time}}</p>
+					{{#if tentative}}
+						<p style="color: #32cd32">Note: This date is tentative and may change in the future.</p>
+					{{/if}}
+				{{/each}}
+			{{else}}
+				<h3>Looks like there aren't any events currently scheduled.</h3>
+			{{/if}}
 		</div>
 	</div>
+
+
 	<div >
 		<div class="container spaced text-white">
 			<h1>Contact Us</h1>

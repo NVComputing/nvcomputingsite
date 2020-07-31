@@ -1,6 +1,6 @@
 let tz = require('timezone/loaded');
 
-let timeStr = '%A, %B %m, %I:%M %p';
+let timeStr = '%A, %B %d, %Y - %I:%M %p';
 let schedule = require('../upcomingevents.json');
 
 module.exports.set = (app) => {
