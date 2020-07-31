@@ -42,6 +42,7 @@ table, th, td {
 }
 table {
 	border-collapse: collapse;
+	overflow-x: scroll;
 	margin-bottom: 20px;
 }
 th, td {
@@ -53,4 +54,7 @@ mjx-stretchy-h {
 .inline-latex {
 	color: #fff !important;
 	font-size: inherit !important;
+}
+.table-wrapper {
+	overflow-x: scroll;
 }
