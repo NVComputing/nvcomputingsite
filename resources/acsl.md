@@ -4,7 +4,7 @@
 - [Introduction](#introduction)
   - [Basics](#basics)
   - [Contest Format](#contestformat)
-- [Short Answer](#short-answer)
+- [Short Answer](#shortanswer)
   - [Assembly Language Programming](/resources/acsl/assembly)
   - [Bit-String Flicking](/resources/acsl/bitstringflicking)
   - [Boolean Algebra](/resources/acsl/booleanalgebra)
