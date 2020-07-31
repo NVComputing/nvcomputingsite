@@ -71,7 +71,7 @@ Trees consist of elements called *nodes* that are connected by *edges*. The *roo
 
 So, in the following table below, 7 is the root. 7, 2, and 9 are all parent nodes. 2, 9, 1, 5, and 14 are all children nodes; notice that parent nodes can also be children nodes of other nodes. 1, 5, and 14 are leaves. 1 and 5 are siblings.
 
-<img src="/res/acsl/datastructures/treeterms.png" width="150" height="100" />
+<img src="/res/acsl/datastructures/treeterms.png" width="200" height="150" />
 
 ## Binary Search Trees
 
@@ -83,12 +83,12 @@ Each node can have a total of two children. The left child must be less than or 
 
 Inserting a node requires knowing its position relative to existing nodes. Here's an example with the word *AMERICAN*:
 
-| Step <img width=400/> | Description <img width=125/> | Step <img width=400/>| Description <img width=125/>|
+| Step <img width=150/> | Description <img width=175/> | Step <img width=175/>| Description <img width=175/>|
 | --- | --- | --- | --- |
-| 1. <img src="https://user-images.githubusercontent.com/60682642/88571933-0032d780-d004-11ea-80ec-62f278e342a1.png" width="75" height="75" /> | *AMERICAN* starts with an *A*; thus, it is natural to make the tree's root an *A*. | 5. <img src="https://user-images.githubusercontent.com/60682642/88572623-11301880-d005-11ea-9df9-2f47d33f1063.png" width="150" height="150" /> | *I* belongs on the right of *A*. It belongs to the left of *M* as well. *I* comes later in the alphabet than *E*, so *I* is placed to the right of *E*. |
-| 2. <img src="https://user-images.githubusercontent.com/60682642/88572119-45efa000-d004-11ea-86af-db2e0565a8f0.png" width="100" height="100" /> | *M* is placed to the right of *A* because it comes later in the alphabet. | 6. <img src="https://user-images.githubusercontent.com/60682642/88572671-273dd900-d005-11ea-9c90-3b34257eb567.png" width="150" height="150" /> | *C* belongs on the right of *A* and to the left of *M*. Since *C* comes before *E*, it is placed to the left. |
-| 3. <img src="https://user-images.githubusercontent.com/60682642/88572276-83542d80-d004-11ea-9ad9-967c9539b023.png" width="100" height="100" /> | *E* belongs on the right of *A*; however, because it comes before *M* in the alphabet, it is placed to the left of *M*. | 7. <img src="https://user-images.githubusercontent.com/60682642/88572723-450b3e00-d005-11ea-9333-66b9cdbb92d7.png" width="150" height="150" /> | *A* (the second one) is equal to the root *A*. So, it is placed to the left of the root. |
-| 4. <img src="https://user-images.githubusercontent.com/60682642/88572406-b39bcc00-d004-11ea-8954-6190a61c2d84.png" width="100" height="100" /> | *R* belongs on the right of *A*. Since it also comes after *M*, it is placed to the right of *M*. | 8. <img src="http://www.categories.acsl.org/wiki/images/thumb/b/bf/Bst-american.svg/300px-Bst-american.svg.png" width="150" height="150" /> | *N* comes after *A* and *M*, so it belongs on the right of those. However, it is placed to the left of *R*, which comes even later. |
+| 1. <img src="/res/acsl/datastructures/insert1.png" width="75" height="100" /> | *AMERICAN* starts with an *A*; thus, it is natural to make the tree's root an *A*. | 5. <img src="/res/acsl/datastructures/insert5.png" width="150" height="150" /> | *I* belongs on the right of *A*. It belongs to the left of *M* as well. *I* comes later in the alphabet than *E*, so *I* is placed to the right of *E*. |
+| 2. <img src="/res/acsl/datastructures/insert2.png" width="125" height="100" /> | *M* is placed to the right of *A* because it comes later in the alphabet. | 6. <img src="/res/acsl/datastructures/insert6.png" width="150" height="150" /> | *C* belongs on the right of *A* and to the left of *M*. Since *C* comes before *E*, it is placed to the left. |
+| 3. <img src="/res/acsl/datastructures/insert3.png" width="125" height="150" /> | *E* belongs on the right of *A*; however, because it comes before *M* in the alphabet, it is placed to the left of *M*. | 7. <img src="/res/acsl/datastructures/insert7.png" width="150" height="150" /> | *A* (the second one) is equal to the root *A*. So, it is placed to the left of the root. |
+| 4. <img src="/res/acsl/datastructures/insert4.png" width="125" height="150" /> | *R* belongs on the right of *A*. Since it also comes after *M*, it is placed to the right of *M*. | 8. <img src="/res/acsl/datastructures/insert8.png" width="150" height="150" /> | *N* comes after *A* and *M*, so it belongs on the right of those. However, it is placed to the left of *R*, which comes even later. |
 
 Note that if you were to switch out the positions of the letters in *AMERICAN* to become something like *MCEAANIR*, the tree would look very different.
 
@@ -96,11 +96,11 @@ Note that if you were to switch out the positions of the letters in *AMERICAN* t
 
 In the case that a node needs to be deleted, this generally involves some minor shifting. Less, equal, and greater relationships between nodes still have to be considered for proper placement.
 
-| Original <img width=300/> | Deletion <img width=300/> | Description <img width=150/> |
+| Original <img width=175/> | Deletion <img width=175/> | Description <img width=150/> |
 | --- | --- | --- |
-| | <img src="http://www.categories.acsl.org/wiki/images/thumb/8/8a/Bst-american-del-i.svg/300px-Bst-american-del-i.svg.png" width="150" height="150" /> | *I* has been removed. Since it had *no* children, no shifts needed to be made.
-| <img src="http://www.categories.acsl.org/wiki/images/thumb/b/bf/Bst-american.svg/300px-Bst-american.svg.png" width="150" height="150" /> | <img src="http://www.categories.acsl.org/wiki/images/thumb/3/39/Bst-american-del-r.svg/300px-Bst-american-del-r.svg.png" width="150" height="150" /> | *R* has been removed. Since it had *1* child, that child was moved up to be on the right of *M*. Since *N* comes after *M*, this shift is valid. |
-| | <img src="http://www.categories.acsl.org/wiki/images/thumb/3/3c/Bst-american-del-m.svg/300px-Bst-american-del-m.svg.png" width="150" height="150" /> | *M* has been removed. So, the left branch of *M* is moved up to take *M*'s place. *M*'s right branch is placed to the right of that branch. |            
+| | <img src="/res/acsl/datastructures/delete0.png" width="150" height="150" /> | *I* has been removed. Since it had *no* children, no shifts needed to be made.
+| <img src="/res/acsl/datastructures/insert8.png" width="150" height="150" /> | <img src="/res/acsl/datastructures/delete1.png" width="150" height="150" /> | *R* has been removed. Since it had *1* child, that child was moved up to be on the right of *M*. Since *N* comes after *M*, this shift is valid. |
+| | <img src="/res/acsl/datastructures/delete2.png" width="150" height="150" /> | *M* has been removed. So, the left branch of *M* is moved up to take *M*'s place. *M*'s right branch is placed to the right of that branch. |            
 
 ### Searching for Nodes
 
@@ -122,7 +122,7 @@ end while
 
 So, searching first starts at the root of the tree and works its way down, moving either left or right based on what character you are searching for and where it is positioned within the tree. As an example, I will once again use the *AMERICAN* tree and attempt to find *E*.
 
-<img src="http://www.categories.acsl.org/wiki/images/thumb/b/bf/Bst-american.svg/300px-Bst-american.svg.png" width="150" height="150" />
+<img src="/res/acsl/datastructures/insert8.png" width="150" height="150" />
 
 First, *p* is set to the root, *A*. *x* holds the value we are trying to find, *E*. 
 
@@ -140,15 +140,15 @@ If we were to compare the left and right branches of the root, we can see that t
 
 Let's compare these two images:
 
-| Unbalanced <img width=250/> | Balanced <img width=250/> |
+| Unbalanced <img width=175/> | Balanced <img width=175/> |
 | --- | --- |
-| <img src="https://user-images.githubusercontent.com/60682642/88579998-93720a00-d010-11ea-9766-a4f50a113265.png" width="150" height="150" /> | <img src="https://user-images.githubusercontent.com/60682642/88580022-9c62db80-d010-11ea-911c-fc6290d290ff.png" width="150" height="150" /> |
+| <img src="/res/acsl/datastructures/unbalanced.png" width="200" height="200" /> | <img src="/res/acsl/datastructures/balanced.png" width="150" height="150" /> |
 
 While these two trees display the same elements, they are drastically different because of the order the elements were put into the tree. If we wanted to search for 7 and used the pseudocode mentioned earlier in "Searching for Nodes", it would take us 7 loop cycles using the unbalanced tree to find it. On the other hand, it would only take us 3 cycles with the balanced tree because there were less "layers" to the tree to work with; that is why balanced trees are much more efficient overall.
 
 There is some leeway given to balanced trees; as long as the left and right branches of any particular node differ in the number of layers by no more than 1, then the tree is still considered balanced. See the image below:
 
-<img src="https://user-images.githubusercontent.com/60682642/88582873-01203500-d015-11ea-9418-1cceaa357410.png" width="200" height="200" />
+<img src="/res/acsl/datastructures/balancedleeway.png" width="250" height="250" />
 
 Although the tree leans more to the left subbranch, which has 4 elements compared to 2 in the right subbranch, this is still considered balanced as they only differ in 1 node layer overall. 
 
@@ -158,10 +158,10 @@ A *Full tree*, or *strictly binary tree*, is drawn in a way such that each node 
 
 See the table below to understand the differences between the two in more detail:
 
-| Tree <img width=600/> | Description <img width=100/> | Tree <img width=600/> | Description <img width=100/> |
+| Tree <img width=200/> | Description <img width=175/>| Tree <img width=200/> | Description <img width=175/>|
 | --- | --- | --- | --- |
-| <img src="https://user-images.githubusercontent.com/60682642/88583851-6c1e3b80-d016-11ea-8108-4d2bcb340261.png" width="150" height="150" /> | It is not complete because the last level's nodes are not all left-oriented. It is not full either because there is 1 node with only 1 child. | <img src="https://user-images.githubusercontent.com/60682642/88583895-76d8d080-d016-11ea-83e7-7dc6ac7a02a8.png" width="150" height="150" /> | It is complete because every level other than the last level is filled; the node in the last level is also oriented on the left. It is not full, however, because nodes cannot have only 1 child. |
-| <img src="https://user-images.githubusercontent.com/60682642/88583907-7cceb180-d016-11ea-9239-cebf219d486e.png" width="150" height="150" /> | It is full because each node indeed has 2 children besides the leaves. It is not complete because the nodes on the last level are not fully left-oriented. | <img src="https://user-images.githubusercontent.com/60682642/88583914-822bfc00-d016-11ea-8990-31fc7938327b.png" width="150" height="150" /> | Each node has 2 children except for the leaves, so it is full. Each level is filled except for the last level, whose nodes are left-justified, thus making the tree complete. |
+| <img src="/res/acsl/datastructures/nocompnofull.png" width="150" height="150" /> | It is not complete because the last level's nodes are not all left-oriented. It is not full either because there is 1 node with only 1 child. | <img src="/res/acsl/datastructures/compnofull.png" width="150" height="150" /> | It is complete because every level other than the last level is filled; the node in the last level is also oriented on the left. It is not full, however, because nodes cannot have only 1 child. |
+| <img src="/res/acsl/datastructures/fullnocomp.png" width="150" height="150" /> | It is full because each node indeed has 2 children besides the leaves. It is not complete because the nodes on the last level are not fully left-oriented. | <img src="/res/acsl/datastructures/compfull.png" width="150" height="150" /> | Each node has 2 children except for the leaves, so it is full. Each level is filled except for the last level, whose nodes are left-justified, thus making the tree complete. |
 
 <br>
 
@@ -171,9 +171,9 @@ Before moving further into priority queues, let's talk briefly about path length
 
 *Internal path length* (IPL) is the sum of the depths of all nodes in the tree. *External path length* (EPL) is the sum of the depths of the nodes that can be added to the tree's current leaves. An easier way to calculate the EPL is with this formula: `EPL = IPL + 2n`, where `n` represents the number of nodes in the tree.
 
-| IPL <img width=250/> | EPL <img width=250/> |
+| IPL <img width=450/> | EPL |
 | --- | --- |
-| <img src="https://user-images.githubusercontent.com/60682642/88585115-472ac800-d018-11ea-98a7-087bd11a03e8.png" width="150" height="150" /> | <img src="https://user-images.githubusercontent.com/60682642/88585034-2e221700-d018-11ea-9c07-061747091825.png" width="150" height="150" /> |
+| <img src="/res/acsl/datastructures/ipl.png" width="150" height="150" /> | <img src="/res/acsl/datastructures/epl.png" width="150" height="150" /> |
 | There are 5 nodes here. Node 1 has a depth of 0 since it's the root. Nodes 2 and 3 have a depth of 1 each. Nodes 4 and 5 have a depth of 2 each. So, the IPL = `0 + 2(1) + 2(2) = 6`. | The squares represent the nodes that can be added to the tree. Two are of depth 2 while the other four are of depth 3. So, the EPL = `2(2) + 4(3) = 16`. We could also solve this with the formula. Since the IPL is 6, and there are 5 nodes, the EPL = `6 + 2(5) = 16`. |
 
 <br>
@@ -192,12 +192,12 @@ As you add nodes, the tree is filled in from left to right, top to bottom; a lev
 
 Take this table as an example on how to implement *AMERICAN* with a min-heap:
 
-| Step <img width=400/> | Description <img width=125/> | Step <img width=400/>| Description <img width=125/>|
+| Step <img width=200/> | Description <img width=175/> | Step <img width=200/>| Description <img width=175/>|
 | --- | --- | --- | --- |
-| 1. <img src="https://user-images.githubusercontent.com/60682642/88590984-3fbbec80-d021-11ea-891f-6ca515f26e9d.png" width="75" height="75" /> | *A* is added like normal as the root of the new tree. | 5. <img src="https://user-images.githubusercontent.com/60682642/88591403-ea340f80-d021-11ea-9c87-7e3e0c6eded0.png" width="150" height="150" /> | *I* is first added as an child of *M*. However, because it is less than *M*, the two switch places. *I* is not less than *A*, so it does not move further up the heap. |
-| 2. <img src="https://user-images.githubusercontent.com/60682642/88591079-667a2300-d021-11ea-91b0-787df1441e56.png" width="150" height="150" /> | *M* is added as a child of *A* on the left end. Since *M* is larger than *A*, it stays where it is. | 6. <img src="https://user-images.githubusercontent.com/60682642/88591594-31ba9b80-d022-11ea-9b52-cce3b6188314.png" width="150" height="150" /> | *C* is added as a child of *E*. However, since it is less than *E*, the two switch places. *C* is greater than *A*, so it does not switch places with the root. |
-| 3. <img src="https://user-images.githubusercontent.com/60682642/88591135-7eea3d80-d021-11ea-9dbf-8dcbefdef609.png" width="150" height="150" /> | *E* is added into the tree. No shifting of nodes occurs since *E* is indeed larger than *A*. | 7. <img src="https://user-images.githubusercontent.com/60682642/88591782-7b0aeb00-d022-11ea-9fa9-c1d86b5e9162.png" width="150" height="150" /> | *A* (not the root) is added as a child of *C*. Since it is less than *C*, the two switch places. Although *A* has the same value as the root *A*, switching the two wouldn't make any difference. So the two *A*s can be kept as is. |
-| 4. <img src="https://user-images.githubusercontent.com/60682642/88591248-aa6d2800-d021-11ea-8654-c263398b894c.png" width="150" height="150" /> | *R* is added into the tree and starts the next row since the previous row was completely filled. No shifts occur. | 8. <img src="https://user-images.githubusercontent.com/60682642/88591897-b60d1e80-d022-11ea-923e-6dde512cebd9.png" width="150" height="150" /> | *N* is added as a child of *R* and starts the next row. Since it is less than *R*, the two switch places. *N* is greater than *I*, it does not move further up the heap. We have now finishing constructing the tree. |
+| 1. <img src="/res/acsl/datastructures/pqinsert1.png" width="50" height="75" /> | *A* is added like normal as the root of the new tree. | 5. <img src="/res/acsl/datastructures/pqinsert5.png" width="150" height="150" /> | *I* is first added as an child of *M*. However, because it is less than *M*, the two switch places. *I* is not less than *A*, so it does not move further up the heap. |
+| 2. <img src="/res/acsl/datastructures/pqinsert2.png" width="125" height="125" /> | *M* is added as a child of *A* on the left end. Since *M* is larger than *A*, it stays where it is. | 6. <img src="/res/acsl/datastructures/pqinsert6.png" width="150" height="150" /> | *C* is added as a child of *E*. However, since it is less than *E*, the two switch places. *C* is greater than *A*, so it does not switch places with the root. |
+| 3. <img src="/res/acsl/datastructures/pqinsert3.png" width="175" height="125" /> | *E* is added into the tree. No shifting of nodes occurs since *E* is indeed larger than *A*. | 7. <img src="/res/acsl/datastructures/pqinsert7.png" width="175" height="150" /> | *A* (not the root) is added as a child of *C*. Since it is less than *C*, the two switch places. Although *A* has the same value as the root *A*, switching the two wouldn't make any difference. So the two *A*s can be kept as is. |
+| 4. <img src="/res/acsl/datastructures/pqinsert4.png" width="175" height="150" /> | *R* is added into the tree and starts the next row since the previous row was completely filled. No shifts occur. | 8. <img src="/res/acsl/datastructures/pqinsert8.png" width="175" height="175" /> | *N* is added as a child of *R* and starts the next row. Since it is less than *R*, the two switch places. *N* is greater than *I*, it does not move further up the heap. We have now finishing constructing the tree. |
 
 ## Deleting Nodes
 
@@ -228,11 +228,11 @@ As a queue... 18 would be added first; then, this would be popped out and stored
 
 Follow the table below to see how the priority queue is constructed:
 
-| Construction <img width=250/> | <img width=250/> | <img width=250/> | <img width=250/> |
+| Construction <img width=100/> | <img width=200/> | <img width=200/> | <img width=200/> |
 | --- | --- | --- | --- |
-| <img src="https://user-images.githubusercontent.com/60682642/88599081-82d18c00-d030-11ea-820a-05ae219c2b55.png" width="50" height="50" /> | <img src="https://user-images.githubusercontent.com/60682642/88599116-9bda3d00-d030-11ea-9c44-ac25e8f72ef9.png" width="100" height="100" /> | <img src="https://user-images.githubusercontent.com/60682642/88599145-b01e3a00-d030-11ea-9684-9752c47f0b4e.png" width="100" height="100" /> | <img src="https://user-images.githubusercontent.com/60682642/88599183-c62bfa80-d030-11ea-9c56-638f1aecfec1.png" width="100" height="100" /> |
-| <img src="https://user-images.githubusercontent.com/60682642/88599219-e2c83280-d030-11ea-8ba0-4758835bcb8c.png" width="150" height="150" /> | <img src="https://user-images.githubusercontent.com/60682642/88600703-8c5cf300-d034-11ea-96d4-a210959fae0e.png" width="150" height="150" /> | <img src="https://user-images.githubusercontent.com/60682642/88599371-36d31700-d031-11ea-9f10-51e8acb9c37b.png" width="150" height="150" /> | <img src="https://user-images.githubusercontent.com/60682642/88599446-64b85b80-d031-11ea-8736-827a59e5cddd.png" width="150" height="150" /> |
-| <img src="https://user-images.githubusercontent.com/60682642/88599524-95989080-d031-11ea-8f4d-0500a6ad0189.png" width="150" height="150" /> | | | |
+| <img src="/res/acsl/datastructures/computing1.png" width="75" height="75" /> | <img src="/res/acsl/datastructures/computing2.png" width="125" height="125" /> | <img src="/res/acsl/datastructures/computing3.png" width="125" height="125" /> | <img src="/res/acsl/datastructures/computing4.png" width="150" height="150" /> |
+| <img src="/res/acsl/datastructures/computing5.png" width="150" height="150" /> | <img src="/res/acsl/datastructures/computing6.png" width="150" height="150" /> | <img src="/res/acsl/datastructures/computing7.png" width="150" height="150" /> | <img src="/res/acsl/datastructures/computing8.png" width="175" height="175" /> |
+| <img src="/res/acsl/datastructures/computing9.png" width="175" height="175" /> | | | |
 
 So, the bottommost letters are *P* and *O*.
 
@@ -240,10 +240,10 @@ So, the bottommost letters are *P* and *O*.
 
 Follow the table below to see how the binary search tree is constructed:
 
-| Construction  <img width=250/> | <img width=250/> | <img width=250/> |
+| Construction  <img width=100/> | <img width=200/> | <img width=200/> |
 | --- | --- | --- |
-| <img src="https://user-images.githubusercontent.com/60682642/88599611-d1cbf100-d031-11ea-81ee-7733dc41770a.png" width="50" height="50" /> | <img src="https://user-images.githubusercontent.com/60682642/88599633-dbedef80-d031-11ea-8e93-71df7e0ca794.png" width="100" height="100" /> | <img src="https://user-images.githubusercontent.com/60682642/88599662-e9a37500-d031-11ea-8bd1-dec4c16990b1.png" width="100" height="100" /> |
-| <img src="https://user-images.githubusercontent.com/60682642/88599696-02ac2600-d032-11ea-8033-f1b31806d87b.png" width="150" height="150" /> | <img src="https://user-images.githubusercontent.com/60682642/88599751-20798b00-d032-11ea-9392-dd9efc29918d.png" width="150" height="150" /> | <img src="https://user-images.githubusercontent.com/60682642/88599761-2b342000-d032-11ea-9665-d4962aacb079.png" width="150" height="150" /> |
+| <img src="/res/acsl/datastructures/neuqua1.png" width="75" height="75" /> | <img src="/res/acsl/datastructures/neuqua2.png" width="125" height="125" /> | <img src="/res/acsl/datastructures/neuqua3.png" width="125" height="125" /> |
+| <img src="/res/acsl/datastructures/neuqua4.png" width="150" height="175" /> | <img src="/res/acsl/datastructures/neuqua5.png" width="150" height="175" /> | <img src="/res/acsl/datastructures/neuqua6.png" width="150" height="175" /> |
 
 The internal path length would be `0 + 2(1) + 2(2) + 3 = 9`. The external path length would be `9 + 2(6) = 21`.
 
