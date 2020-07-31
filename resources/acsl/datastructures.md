@@ -24,9 +24,13 @@
 
 # Introduction
 
-Data structures make up an integral part of efficient algorithms. When you have a large amount of data to work with, data structures help you keep organized and manage everything properly.
+Data structures make up an integral part of efficient algorithms. When you have 
+a large amount of data to work with, data structures help you keep organized and 
+manage everything properly.
 
-ACSL specifically focuses on stacks, queues, binary search trees, and priority queues. The general idea behind each is covered but not the actual details regarding how to implement them in programs.
+ACSL specifically focuses on stacks, queues, binary search trees, and priority 
+queues. The general idea behind each is covered but not the actual details 
+regarding how to implement them in programs.
 
 <br>
 
@@ -36,9 +40,16 @@ ACSL specifically focuses on stacks, queues, binary search trees, and priority q
 
 ## Stacks
 
-Stacks are generally used to save information to be processed later on. This applies to recursion (when a function calls on itself); the inner function call comes after the actual function call but is processed first. 
+Stacks are generally used to save information to be processed later on. This applies 
+to recursion (when a function calls on itself); the inner function call comes after 
+the actual function call but is processed first. 
 
-Stacks work in a "last in, first out" (LIFO) order. They support two operations, PUSH and POP. PUSH takes in a key, which is essentially a parameter, to insert at the top of the stack. So, `PUSH("A")` would add the key "A" to the top of the stack. POP is a bit different, as it is written as `X = POP()`. What this does is that it removes the top element in the stack and stores it in variable X. So, if there was a stack with its top element being "E", then writing `H = POP()` would store "E" in H. 
+Stacks work in a "last in, first out" (LIFO) order. They support two operations, PUSH 
+and POP. PUSH takes in a key, which is essentially a parameter, to insert at the top of
+the stack. So, `PUSH("A")` would add the key "A" to the top of the stack. POP is a bit 
+different, as it is written as `X = POP()`. What this does is that it removes the top 
+element in the stack and stores it in variable X. So, if there was a stack with its 
+top element being "E", then writing `H = POP()` would store "E" in H. 
 
 In the case that the POP operation is called on an empty stack, then the variable is given the special value NIL, which means "nonexistent".
 
@@ -60,7 +71,7 @@ Trees consist of elements called *nodes* that are connected by *edges*. The *roo
 
 So, in the following table below, 7 is the root. 7, 2, and 9 are all parent nodes. 2, 9, 1, 5, and 14 are all children nodes; notice that parent nodes can also be children nodes of other nodes. 1, 5, and 14 are leaves. 1 and 5 are siblings.
 
-<img src="https://miro.medium.com/proxy/1*4M5MU3CqJYGNExEi5Ttuew.png" width="150" height="100" />
+<img src="/res/acsl/datastructures/treeterms.png" width="150" height="100" />
 
 ## Binary Search Trees
 
@@ -169,8 +180,6 @@ Before moving further into priority queues, let's talk briefly about path length
 
 # Priority Queues
 
-<br>
-
 Priority queues are similar to binary search trees. Essentially, elements that have the highest priority are served first, even if they may have been put into the queue much later. So, unlike binary search trees, inserting nodes may involve shifting other nodes to establish the priority order that we want.
 
 With deleting and finding items, they are limited to the first item/element. While they are more limited, that does not mean they are necessarily worse than binary search trees; in some situations, deleting and finding other items may not be very important and thus can be ignored.
@@ -199,8 +208,6 @@ In the case that both of the root's children are smaller than the root itself, t
 <br>
 
 # Sample Problems
-
-<br>
 
 ## 1. Stacks/Queues: Determine what the value of C would be if the operations below were performed on an initially empty stack. Analyze it as a queue afterward.
 

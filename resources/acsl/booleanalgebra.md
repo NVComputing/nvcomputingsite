@@ -23,8 +23,6 @@
 
 # Introduction 
 
-<br>
-
 As many of us may know, booleans are an essential part of programming that can hold one of two values: `true` and `false`, which can be denoted as `1` and `0`. Booleans can take the form of either a variable (such as `s = true`) or an expression (like `$5 \less 36$`, which evaluates to `true`). These are most often used in if statements (formatted as `if (boolean condition)`), another essential piece of programming that allows us to perform different functions for different conditions.
 
 Boolean algebra is needed for digital circuits that make up a computer's hardware. 
@@ -182,8 +180,6 @@ So, since these different expressions all evaluate to `1` for when `x` and `y` e
 <br>
 
 # Sample Problems
-
-<br>
 
 It may take a while to remember all of the laws, so take your time! Also make sure to keep order of precedence in mind.
 
