@@ -36,8 +36,6 @@ regarding how to implement them in programs.
 
 # Stacks and Queues
 
-<br>
-
 ## Stacks
 
 Stacks are generally used to save information to be processed later on. This applies 
@@ -62,8 +60,6 @@ The PUSH operation works the same as it would with stacks. However, with POP, in
 <br>
 
 # Trees
-
-<br>
 
 ## Terminology
 
