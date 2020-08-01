@@ -24,7 +24,7 @@ Understanding how bit strings work is very helpful in systems programming, assem
 
 # Operators
 
-The order of precedence/operation (the order in which they are executed) for the operators goes as follows:
+The order of precedence (the order in which they are executed) for the operators goes as follows:
 - Parenthesis (highest precedence)
 - NOT
 - SHIFT and CIRC
