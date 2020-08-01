@@ -56,5 +56,5 @@ mjx-stretchy-h {
 	font-size: inherit !important;
 }
 .table-wrapper {
-	overflow-x: scroll;
+	overflow-x: auto;
 }
