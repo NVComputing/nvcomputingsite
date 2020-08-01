@@ -15,8 +15,17 @@ large block of code than in a smaller block of code.
 necessarily mean that you have the best answer! Consider the efficiency of your program.
 Think of time and space efficiency (read [this page](/resources/efficiency) for more details).
 
+- Always keep your eye out for where you can use data structures. Sometimes a problem will explicity state that a data structures are used, and sometimes you will have to infer it.
+
+- Basic dynamic programming can help avoid useless recursion. You may have learned the basics of this when finding fibonacci numbers, and would have to use this during a floodfill algorithm.
+
+- Methods can help avoid repeating code and make your code neater. This can be really important when time is of the essence to finish a contest.
+
+- Greedy Algorithms are incredibly useful at the lower level and should always be searched for. A greedy algorithm essentially reduces a problem into a couple of simpler problems and finds the solution to each of these problems.
 
 
 <br>
 
 # Java
+
+- A few of you may have recognized that eclipse has a debugger. This is incredibly useful and I use it frequently. You are able to run through each line of your code and check the values of each variable at the time. It is incredibly convenient when trouble shooting a testcase that gives an incorrect response.
