@@ -48,7 +48,11 @@ Here's an example:
 
 So, let's break down how exactly this truth table was drawn:
 
-First, a column was made for each of the variable terms. Under these columns, I listed out all possible combinations of values for X and Y. X and Y can both either be 0 or 1; together, they could form the pairs: `(0, 0)`, `(1, 0)`, `(0, 1)`, and `(1, 1)`. Each of these pairs should make up one row in the table.
+First, a column was made for each of the variable terms. Under these columns, 
+I listed out all possible combinations of values for X and Y. X and Y can both either 
+be 0 or 1; together, they could form the pairs: `(0, 0)`, `(1, 0)`, `(0, 1)`, and `(1, 1)`. 
+Each of these pairs should make up one row in the table. To know how many combinations a
+certain number of variables can make, use `$2^n$` (n being the number of variables).
 
 Then, a column was made for the actual expression itself. In this column, I wrote out all of the resultant values for each row. So, for example, in the first row (excluding the header labels), the values for X and Y were both 0. `X and Y` would thus be `0 and 0`, which simplifies down to `0`. Because of this, I put down a `0` for that row. I then did the same for the other rows.
 
