@@ -37,7 +37,7 @@ In order to start setting up your development environment, you first need a bit 
 
 Install these:
 - [Git](https://git-scm.com)
-- [Node.js Latest Version (NOT LTS)](https://nodejs.org) - should be v14.6.0 or similar
+- [Node.js Latest Version (NOT LTS)](https://nodejs.org) - should be v14.7.0 or similar
 
 Setup might be a bit complicated. Here are some tips for the installers:
 - Git
@@ -51,7 +51,7 @@ Setup might be a bit complicated. Here are some tips for the installers:
   - Use Git Credential Manager (Not Git Credential Manager Core)
   - Enable file system caching
   - Don't enable anything else experimental.
-  - Click install and you sohuld be good to go.
+  - Click install and you should be good to go.
 
 - Node.js
   - MAKE SURE the Add to PATH section is enabled. YOU WILL NOT BE ABLE TO DO THE LATER SETUP IF IT IS NOT ENABLED.
