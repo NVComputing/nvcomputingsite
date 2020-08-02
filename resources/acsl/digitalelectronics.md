@@ -29,7 +29,7 @@ Digital electronics is a way to visualize boolean algebra using drawn-out circui
 <tr>
 <th><b>BUFFER</b>
 </th>
-<td> <a href="categories.acsl.org/wiki/index.php?title=File:Buffer-gate-en.svg" class="image"><img alt="Buffer-gate-en.svg" src="categories.acsl.org/wiki/images/thumb/a/a6/Buffer-gate-en.svg/128px-Buffer-gate-en.svg.png" width="128" height="46" srcset="categories.acsl.org/wiki/images/thumb/a/a6/Buffer-gate-en.svg/192px-Buffer-gate-en.svg.png 1.5x, categories.acsl.org/wiki/images/thumb/a/a6/Buffer-gate-en.svg/256px-Buffer-gate-en.svg.png 2x" /></a>
+<td> <a href="https://www.categories.acsl.org/wiki/images/a/a6/Buffer-gate-en.svg" class="image"><img alt="Buffer-gate-en.svg" src="https://www.categories.acsl.org/wiki/images/a/a6/Buffer-gate-en.svg" width="128" height="46" srcset="www.categories.acsl.org/wiki/images/thumb/a/a6/Buffer-gate-en.svg/192px-Buffer-gate-en.svg.png 1.5x, www.categories.acsl.org/wiki/images/thumb/a/a6/Buffer-gate-en.svg/256px-Buffer-gate-en.svg.png 2x" /></a>
 </td>
 <td> X = A
 </td>
