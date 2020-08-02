@@ -9,323 +9,91 @@
 
 # Introduction
 
-Digital electronics is a way to visualize boolean algebra using drawn-out circuits. The same laws of boolean algebra apply and truth tables are still very useful when analyzin them.
+Digital electronics is a way to visualize boolean algebra using drawn-out circuits (also
+known as logic gates). Be sure to make sure you understand all of the boolean operations;
+check out the [Boolean Algebra](/resources/acsl/booleanalgebra) page if needed.
+
+Do note that there may be multiple ways to display the same boolean expression.
 
 <br>
 
 # Definitions
 
-<table class="wikitable" style="text-align: left">
+Please refer to the table below. Operators that were not mentioned on the Boolean
+Algebra page will come with an extra explanation.
 
-<tr>
-<th><b>NAME</b>
-</th>
-<th><b>GRAPHICAL SYMBOL</b>
-</th>
-<th><b>ALGEBRAIC EXPRESSION</b>
-</th>
-<th><b>TRUTH TABLE</b>
-</th></tr>
-<tr>
-<th><b>BUFFER</b>
-</th>
-<td> <a href="https://www.categories.acsl.org/wiki/images/a/a6/Buffer-gate-en.svg" class="image"><img alt="Buffer-gate-en.svg" src="https://www.categories.acsl.org/wiki/images/a/a6/Buffer-gate-en.svg" width="128" height="46" srcset="www.categories.acsl.org/wiki/images/thumb/a/a6/Buffer-gate-en.svg/192px-Buffer-gate-en.svg.png 1.5x, www.categories.acsl.org/wiki/images/thumb/a/a6/Buffer-gate-en.svg/256px-Buffer-gate-en.svg.png 2x" /></a>
-</td>
-<td> X = A
-</td>
-<td>
-<table class="wikitable" style="text-align: center">
+| Name | Logic Gate | Algebraic Expression | Extra Notes |
+| --- | --- | --- | --- |
+| BUFFER | <img src="/res/acsl/digitalelectronics/buffer.png" width="200" height="50" /> | `$X = A$` | This logic gate doesn't really do much. The output is the input. |
+| NOT | <img src="/res/acsl/digitalelectronics/not.png" width="200" height="75" /> | `$X = \overline{A} = \neg A$` | |
+| AND | <img src="/res/acsl/digitalelectronics/and.png" width="200" height="75" /> | `$X = AB = A \bullet B$` | |
+| NAND | <img src="/res/acsl/digitalelectronics/nand.png" width="200" height="75" /> | `$X = \overline{AB} = \overline{A \bullet B}$` | This is the opposite of the *and* operator. Whatever is evaluated as true for the *and* operator becomes false, and vice versa. |
+| OR | <img src="/res/acsl/digitalelectronics/or.png" width="200" height="75" /> | `$X = A + B$` | |
+| NOR | <img src="/res/acsl/digitalelectronics/nor.png" width="200" height="75" /> | `$X = \overline{A + B}$` | This is the opposite of the *or* operator. Whatever is evaluated as true for the *or* operator becomes false, and vice versa. | 
+| XOR | <img src="/res/acsl/digitalelectronics/xor.png" width="200" height="75" /> | `$X = A \oplus B$` | | 
+| XNOR | <img src="/res/acsl/digitalelectronics/xnor.png" width="200" height="75" /> | `$X = \overline{A \oplus B} = A \odot B$` | |
 
-<tr>
-<td style="background-color: #cceeff; font-size: x-small">INPUT
-</td>
-<td style="background-color: #cceeff; font-size: x-small">OUTPUT
-</td></tr>
-<tr>
-<td> 0 </td>
-<td> 0
-</td></tr>
-<tr>
-<td> 1 </td>
-<td> 1
-</td></tr></table>
-</td></tr>
-<tr>
-<th><b>NOT</b>
-</th>
-<td> <a href="categories.acsl.org/wiki/index.php?title=File:Not-gate-en.svg" class="image"><img alt="Not-gate-en.svg" src="https://www.categories.acsl.org/wiki/images/9/9f/Not-gate-en.svg" width="128" height="46" srcset="categories.acsl.org/wiki/images/thumb/9/9f/Not-gate-en.svg/192px-Not-gate-en.svg.png 1.5x, categories.acsl.org/wiki/images/thumb/9/9f/Not-gate-en.svg/256px-Not-gate-en.svg.png 2x" /></a>
-</td>
-<td> X = <span style='opacity:0.5'>[math]\overline{A}[/math]</span> or  <span style='opacity:0.5'>[math]\neg A[/math]</span>
-</td>
-<td>
-<table class="wikitable" style="text-align: center">
+Notice how adding the little extra circle causes the logic gate to become negated. So, for example, OR becomes NOR after
+adding the little circle is added to the OR logic gate.
 
-<tr>
-<td style="background-color: #cceeff; font-size: x-small">INPUT
-</td>
-<td style="background-color: #cceeff; font-size: x-small">OUTPUT
-</td></tr>
-<tr>
-<th> A </th>
-<th> X
-</th></tr>
-<tr>
-<td> 0 </td>
-<td> 1
-</td></tr>
-<tr>
-<td> 1 </td>
-<td> 0
-</td></tr></table>
-</td></tr>
-<tr>
-<th><b>AND</b>
-</th>
-<td><a href="categories.acsl.org/wiki/index.php?title=File:And-gate.png" class="image"><img alt="And-gate.png" src="https://www.categories.acsl.org/wiki/images/d/d8/And-gate.png" width="128" height="46" srcset="categories.acsl.org/wiki/images/thumb/d/d8/And-gate.png/192px-And-gate.png 1.5x, categories.acsl.org/wiki/images/thumb/d/d8/And-gate.png/256px-And-gate.png 2x" /></a>
-</td>
-<td> X = <span style='opacity:0.5'>[math]AB[/math]</span> or <span style='opacity:0.5'>[math]A \cdot B[/math]</span>
-</td>
-<td>
-<table class="wikitable" style="text-align: center">
+Now, when it comes to reading the overall circuit, the most important thing is to keep track of what comes first.
+Reference the lines to know the order that the logic gates should be evaluated in; look from left to right.
 
-<tr>
-<td colspan="2" style="background-color: #cceeff; font-size: x-small">INPUT
-</td>
-<td colspan="1" style="background-color: #cceeff; font-size: x-small">OUTPUT
-</td></tr>
-<tr>
-<th> A </th>
-<th> B </th>
-<th>  X
-</th></tr>
-<tr>
-<td> 0 </td>
-<td> 0 </td>
-<td> 0
-</td></tr>
-<tr>
-<td> 0 </td>
-<td> 1 </td>
-<td> 0
-</td></tr>
-<tr>
-<td> 1 </td>
-<td> 0 </td>
-<td> 0
-</td></tr>
-<tr>
-<td> 1 </td>
-<td> 1 </td>
-<td> 1
-</td></tr></table>
-</td></tr>
-<tr>
-<th><b>NAND</b>
-</th>
-<td> <a href="categories.acsl.org/wiki/index.php?title=File:Nand-gate-en.svg" class="image"><img alt="Nand-gate-en.svg" src="https://www.categories.acsl.org/wiki/index.php?title=File:Nand-gate-en.svg" width="128" height="46" srcset="categories.acsl.org/wiki/images/thumb/5/58/Nand-gate-en.svg/192px-Nand-gate-en.svg.png 1.5x, categories.acsl.org/wiki/images/thumb/5/58/Nand-gate-en.svg/256px-Nand-gate-en.svg.png 2x" /></a>
-</td>
-<td> X = <span style='opacity:0.5'>[math]\overline{AB}[/math]</span> or <span style='opacity:0.5'>[math]\overline{A\cdot B}[/math]</span>
-</td>
-<td>
-<table class="wikitable" style="text-align: center">
-
-<tr>
-<td colspan="2" style="background-color: #cceeff; font-size: x-small">INPUT
-</td>
-<td style="background-color: #cceeff; font-size: x-small">OUTPUT
-</td></tr>
-<tr>
-<th> A </th>
-<th> B </th>
-<th> X
-</th></tr>
-<tr>
-<td> 0 </td>
-<td> 0 </td>
-<td> 1
-</td></tr>
-<tr>
-<td> 0 </td>
-<td> 1 </td>
-<td> 1
-</td></tr>
-<tr>
-<td> 1 </td>
-<td> 0 </td>
-<td> 1
-</td></tr>
-<tr>
-<td> 1 </td>
-<td> 1 </td>
-<td> 0
-</td></tr></table>
-</td></tr>
-<tr>
-<th><b>OR</b>
-</th>
-<td> <a href="categories.acsl.org/wiki/index.php?title=File:Or-gate-en.svg" class="image"><img alt="Or-gate-en.svg" src="https://www.categories.acsl.org/wiki/images/4/4c/Or-gate-en.svg" width="128" height="46" srcset="categories.acsl.org/wiki/images/thumb/4/4c/Or-gate-en.svg/192px-Or-gate-en.svg.png 1.5x, categories.acsl.org/wiki/images/thumb/4/4c/Or-gate-en.svg/256px-Or-gate-en.svg.png 2x" /></a>
-</td>
-<td> X = <span style='opacity:0.5'>[math]A+B[/math]</span>
-</td>
-<td>
-<table class="wikitable" style="text-align: center">
-
-<tr>
-<td colspan="2" style="background-color: #cceeff; font-size: x-small">INPUT
-</td>
-<td style="background-color: #cceeff; font-size: x-small">OUTPUT
-</td></tr>
-<tr>
-<th> A </th>
-<th> B </th>
-<th> X
-</th></tr>
-<tr>
-<td> 0 </td>
-<td> 0 </td>
-<td> 0
-</td></tr>
-<tr>
-<td> 0 </td>
-<td> 1 </td>
-<td> 1
-</td></tr>
-<tr>
-<td> 1 </td>
-<td> 0 </td>
-<td> 1
-</td></tr>
-<tr>
-<td> 1 </td>
-<td> 1 </td>
-<td> 1
-</td></tr></table>
-</td></tr>
-<tr>
-<th><b>NOR</b>
-</th>
-<td> <a href="categories.acsl.org/wiki/index.php?title=File:Nor-gate-en.svg" class="image"><img alt="Nor-gate-en.svg" src="https://www.categories.acsl.org/wiki/images/9/94/Nor-gate-en.svg" width="128" height="46" srcset="categories.acsl.org/wiki/images/thumb/9/94/Nor-gate-en.svg/192px-Nor-gate-en.svg.png 1.5x, categories.acsl.org/wiki/images/thumb/9/94/Nor-gate-en.svg/256px-Nor-gate-en.svg.png 2x" /></a>
-</td>
-<td> X = <span style='opacity:0.5'>[math]\overline{A+B}[/math]</span>
-</td>
-<td>
-<table class="wikitable" style="text-align: center">
-
-<tr>
-<td colspan="2" style="background-color: #cceeff; font-size: x-small">INPUT
-</td>
-<td style="background-color: #cceeff; font-size: x-small">OUTPUT
-</td></tr>
-<tr>
-<th> A </th>
-<th> B </th>
-<th> X
-</th></tr>
-<tr>
-<td> 0 </td>
-<td> 0 </td>
-<td> 1
-</td></tr>
-<tr>
-<td> 0 </td>
-<td> 1 </td>
-<td> 0
-</td></tr>
-<tr>
-<td> 1 </td>
-<td> 0 </td>
-<td> 0
-</td></tr>
-<tr>
-<td> 1 </td>
-<td> 1 </td>
-<td> 0
-</td></tr></table>
-</td></tr>
-<tr>
-<th><b>XOR</b>
-</th>
-<td><a href="categories.acsl.org/wiki/index.php?title=File:Xor-gate-en.svg" class="image"><img alt="Xor-gate-en.svg" src="https://www.categories.acsl.org/wiki/images/6/6d/Xor-gate-en.svg" width="128" height="46" srcset="categories.acsl.org/wiki/images/thumb/6/6d/Xor-gate-en.svg/192px-Xor-gate-en.svg.png 1.5x, categories.acsl.org/wiki/images/thumb/6/6d/Xor-gate-en.svg/256px-Xor-gate-en.svg.png 2x" /></a>
-</td>
-<td> X = <span style='opacity:0.5'>[math]A \oplus B[/math]</span>
-</td>
-<td>
-<table class="wikitable" style="text-align: center">
-
-<tr>
-<td colspan="2" style="background-color: #cceeff; font-size: x-small">INPUT
-</td>
-<td style="background-color: #cceeff; font-size: x-small">OUTPUT
-</td></tr>
-<tr>
-<th> A </th>
-<th> B </th>
-<th> X
-</th></tr>
-<tr>
-<td> 0 </td>
-<td> 0 </td>
-<td> 0
-</td></tr>
-<tr>
-<td> 0 </td>
-<td> 1 </td>
-<td> 1
-</td></tr>
-<tr>
-<td> 1 </td>
-<td> 0 </td>
-<td> 1
-</td></tr>
-<tr>
-<td> 1 </td>
-<td> 1 </td>
-<td> 0
-</td></tr></table>
-</td></tr>
-<tr>
-<th><b>XNOR</b>
-</th>
-<td> <a href="categories.acsl.org/wiki/index.php?title=File:Xnor-gate-en.svg" class="image"><img alt="Xnor-gate-en.svg" src="categories.acsl.org/wiki/images/thumb/3/35/Xnor-gate-en.svg/128px-Xnor-gate-en.svg.png" width="128" height="46" srcset="categories.acsl.org/wiki/images/thumb/3/35/Xnor-gate-en.svg/192px-Xnor-gate-en.svg.png 1.5x, categories.acsl.org/wiki/images/thumb/3/35/Xnor-gate-en.svg/256px-Xnor-gate-en.svg.png 2x" /></a>
-</td>
-<td> X = <span style='opacity:0.5'>[math]\overline{A \oplus B} \text{ or } A \odot B[/math]</span>
-</td>
-<td>
-<table class="wikitable" style="text-align: center">
-
-<tr>
-<td colspan="2" style="background-color: #cceeff; font-size: x-small">INPUT
-</td>
-<td style="background-color: #cceeff; font-size: x-small">OUTPUT
-</td></tr>
-<tr>
-<th> A </th>
-<th> B </th>
-<th> X
-</th></tr>
-<tr>
-<td> 0 </td>
-<td> 0 </td>
-<td> 1
-</td></tr>
-<tr>
-<td> 0 </td>
-<td> 1 </td>
-<td> 0
-</td></tr>
-<tr>
-<td> 1 </td>
-<td> 0 </td>
-<td> 0
-</td></tr>
-<tr>
-<td> 1 </td>
-<td> 1 </td>
-<td> 1
-</td></tr></table>
-</td></tr></table>
 <br>
 
 # Sample Problems 
 
-<br>
+## 1. Write out the following circuit as a boolean expression. Then, simplify.
+<img src="/res/acsl/digitalelectronics/prob1.png" width="300" height="200" />
+
+The following solution below breaks down the construction of the boolean expression into smaller steps. This process
+may not necessarily be the same one that you may have taken, but it is just one possible way to think about it.
+
+1. `$\overline{A}$`
+2. `$A + \overline{A}$`
+3. `$A \bullet (A + \overline{A})$`
+4. `$A \bullet (A + \overline{A}) , AY$` -> A comma was used to separate two chunks of the expression that have not been merged yet.
+5. `$(A \bullet (A + \overline{A})) + AY$` -> The two chunks have now been merged.
+6. `$(A \bullet (A + \overline{A})) + AY , (Y + Y)$`
+7. `$((A \bullet (A + \overline{A})) + AY) \bullet (Y + Y)$`
+
+Now, this expression has to be simplified; knowing the laws from the [Boolean Algebra](/resources/acsl/booleanalgebra) page
+is essential.
+
+0. `$((A \bullet (A + \overline{A})) + AY) \bullet (Y + Y)$`
+1. `$((A \bullet 1) + AY) \bullet (Y + Y)$`
+2. `$(A + AY) \bullet (Y + Y)$`
+3. `$A \bullet (Y + Y)$`
+4. `$A \bullet Y$`
+
+Thus, our final answer is: `$AY$`.
+
+## 2. How many ordered 3-tuples (A, B, C) make the following circuit TRUE?
+<img src="/res/acsl/digitalelectronics/prob2.png" width="300" height="200" />
+
+This circuit will first be written as a boolean expression for better ease of solving.
+
+1. `$\overline{BC}$`
+2. `$A + \overline{BC}$`
+3. `$(A + \overline{BC}) \oplus C$`
+4. `$A \bullet ((A + \overline{BC}) \oplus C)$`
+
+Broken up, this would become `$A \bullet ((A + \overline{B} + \overline{C}) \oplus C)$`. Now, a truth table can
+be made to get the solution.
+
+| A | B | C | `$A + \overline{B} + \overline{C}$` | `$q \oplus C$` | `$A \bullet r$` |
+| --- | --- | --- | --- | --- | --- |
+| | | | q | r | |
+| 0 | 0 | 0 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 1 | 1 | 1 |
+| 0 | 1 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 1 | 1 | 1 |
+| 1 | 0 | 1 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 0 | 1 | 0 |
+| 1 | 1 | 1 | 1 | 0 | 0 |
+
+So, there are 2 ordered 3-tuples that make the circuit true: `(1, 0, 0)` and `(1, 1, 0)`.
+
+---
+Author: Kelly Hong
