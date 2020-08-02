@@ -9,7 +9,7 @@
 
 # Introduction
 
-Digital electronics is a way to visualize boolean algebra using drawn-out circuits.
+Digital electronics is a way to visualize boolean algebra using drawn-out circuits. The same laws of boolean algebra apply and truth tables are still very useful when analyzin them.
 
 <br>
 
