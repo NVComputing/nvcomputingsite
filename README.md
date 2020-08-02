@@ -59,21 +59,23 @@ Setup might be a bit complicated. Here are some tips for the installers:
 You should also have a bit of Git knowledge. If you don't know how to use Git, read this glossary:
 #### Git Terminology
 **Git**
+
 _A version control system (like a distributed Google Drive)._
+
 _Has a ton of terminology associated with it. (Read them in order)_
 
-**Repository** - What houses the entire project (in a folder) - it's what Git tracks.
-**GitHub** - A popular hosting site for remote repositories. I hope you know it by now...
-**Remote** - A version of the repository NOT on your local device, but in some other arbitrary location (i.e. a company server or GitHub). Your typical remote's name will be "origin".
-**Push** - The act of sending your code from your local device to the remote repository. THIS WILL ONLY WORK IF YOUR LOCAL CODE IS UP TO DATE WITH THE REMOTE (unless you use --force... don't use --force by the way.)
-**Pull** - This will sync your local repository with the remote repository (this combines a *fetch* and a *merge* - you can look into those if you would like), aka sending the remote repository's code to your local device. THIS DOES NOT OVERWRITE YOUR LOCAL CHANGES - it will neatly MERGE your code and the updated code from the repository, creating conflicts where necessary.
-**Commit** - The thing you send/receive when you push and pull. Think of it as little packages that you must wrap your changes in before sending them. Also a verb, which means to create a commit.
-**Conflict** - This is where an automatic merge cannot be done, and you must resolve the conflict by going into the file (it will indicate where the conflict is), changing it to the exact version you want, then committing and pushing.
-**Tracked / Untracked** - This is a term that describes the files. If a file is TRACKED, that means that Git is keeping track of the changes. If it is UNSTAGED, git acts as though that file doesn't exist. You can start tracking a file using git add.
-**Staged / Unstaged** - This is a term that describes the changes. If changes are staged, then they are ready to commit - unstaged changes are not committed. You should stage whatever changes you want to prior to committing, then commit.
-**Branch** - This is a term that describes different versions of the repository. Work is typically done in the *master* branch. If you wanted to do work on one feature while also doing work on another feature, you would make two new branches based off of master.
-**Pull Request** - You create a pull request when you want to merge two branches together. Any conflicts will have to be manually resolved in an extraordinarily messy fashion, so try to avoid those.
-**Fork** - Create a copy of someone else's repository. For example, if you wanted to contribute to an open source project (but of course, only have read access), you could FORK their repository, open a pull request comparing your base branch to their branch, and then if they accept it your code is now in the open source repository.
+- **Repository** - What houses the entire project (in a folder) - it's what Git tracks.
+- **GitHub** - A popular hosting site for remote repositories. I hope you know it by now...
+- **Remote** - A version of the repository NOT on your local device, but in some other arbitrary location (i.e. a company server or GitHub). Your typical remote's name will be "origin".
+- **Push** - The act of sending your code from your local device to the remote repository. THIS WILL ONLY WORK IF YOUR LOCAL CODE IS UP TO DATE WITH THE REMOTE (unless you use --force... don't use --force by the way.)
+- **Pull** - This will sync your local repository with the remote repository (this combines a *fetch* and a *merge* - you can look into those if you would like), aka sending the remote repository's code to your local device. THIS DOES NOT OVERWRITE YOUR LOCAL CHANGES - it will neatly MERGE your code and the updated code from the repository, creating conflicts where necessary.
+- **Commit** - The thing you send/receive when you push and pull. Think of it as little packages that you must wrap your changes in before sending them. Also a verb, which means to create a commit.
+- **Conflict** - This is where an automatic merge cannot be done, and you must resolve the conflict by going into the file (it will indicate where the conflict is), changing it to the exact version you want, then committing and pushing.
+- **Tracked / Untracked** - This is a term that describes the files. If a file is TRACKED, that means that Git is keeping track of the changes. If it is UNSTAGED, git acts as though that file doesn't exist. You can start tracking a file using git add.
+- **Staged / Unstaged** - This is a term that describes the changes. If changes are staged, then they are ready to commit - unstaged changes are not committed. You should stage whatever changes you want to prior to committing, then commit.
+- **Branch** - This is a term that describes different versions of the repository. Work is typically done in the *master* branch. If you wanted to do work on one feature while also doing work on another feature, you would make two new branches based off of master.
+- **Pull Request** - You create a pull request when you want to merge two branches together. Any conflicts will have to be manually resolved in an extraordinarily messy fashion, so try to avoid those.
+- **Fork** - Create a copy of someone else's repository. For example, if you wanted to contribute to an open source project (but of course, only have read access), you could FORK their repository, open a pull request comparing your base branch to their branch, and then if they accept it your code is now in the open source repository.
 
 Whew, that was a lot of prerequisite knowledge. Let's continue with the setup.
 
