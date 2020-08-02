@@ -227,4 +227,63 @@ conclusions can be made for the rest of the numbers.
 
 # Sample Problems
 
+## 1. How many different cycles are contained in the directed graph visualized below:
 
+<img src="/res/acsl/graphtheory/prob1.png" width="250"/>
+
+One cycle is *ADA*, or *DAD*. Another is *ABCA*, which is also *BCAB* or *CABC*. The last cycle is *ECE*, or *CEC*.
+So, in total, there are 3 different cycles in the graph.
+
+## 2. Using the adjacency matrix below, draw the directed graph.
+
+| `M` | A | B | C | D | E |
+| --- | --- | --- | --- | --- | --- |
+| A | 1 | 0 | 1 | 1 | 0 |
+| B | 0 | 1 | 0 | 1 | 1 |
+| C | 0 | 0 | 0 | 1 | 0 |
+| D | 0 | 1 | 1 | 0 | 1 |
+| E | 1 | 0 | 1 | 1 | 1 |
+
+The drawn graph below is only one way to depict this matrix.
+
+| Step | Graph <img width="300"/> | Step | Graph <img width="300"/>|
+| --- | --- | --- | --- |
+| 1. Draw in A's edges | <img src="/res/acsl/graphtheory/prob2-1.png" width="275"/> | 4. Add D's edges | <img src="/res/acsl/graphtheory/prob2-4.png" width="275"/> |
+| 2. Add B's edges | <img src="/res/acsl/graphtheory/prob2-2.png" width="275"/> | 5. Add E's edges | <img src="/res/acsl/graphtheory/prob2-5.png" width="275"/> |
+| 3. Add C's edges | <img src="/res/acsl/graphtheory/prob2-3.png" width="275"/> | |
+
+## 3. In the following directed graph, find the total number of different paths from vertex B to vertex D of length 3.
+<img src="/res/acsl/graphtheory/prob3.png" width="250"/>
+
+First, let's start with writing the graph as a regular matrix:
+
+| `$M$` | A | B | C | D |
+| --- | --- | --- | --- | --- |
+| A | 0 | 1 | 0 | 1 |
+| B | 1 | 0 | 0 | 1 |
+| C | 0 | 1 | 0 | 1 |
+| D | 0 | 0 | 1 | 1 |
+
+Then, we can multiply this by itself to first get `$M^2$`.
+
+| `$M^2$` | A | B | C | D |
+| --- | --- | --- | --- | --- |
+| A | 1 | 0 | 1 | 2 |
+| B | 0 | 1 | 1 | 2 |
+| C | 1 | 0 | 1 | 2 |
+| D | 0 | 1 | 1 | 2 |
+
+Finally, we can multiply `$M^2$` by `$M$` to get `$M^3$`.
+
+| `$M^3$` | A | B | C | D |
+| --- | --- | --- | --- | --- |
+| A | 0 | 2 | 2 | 4 |
+| B | 1 | 1 | 2 | **4** |
+| C | 0 | 2 | 2 | 4 |
+| D | 1 | 1 | 2 | 4 |
+
+So, there are 4 total paths of length 3 from B to D. If we were to manually solve this with a matrix, we would
+come to the same conclusion. The paths are: *BADD*, *BDDD*, *BABD*, and *BDCD*.
+
+---
+Author: Kelly Hong
