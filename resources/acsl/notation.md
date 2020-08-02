@@ -14,6 +14,9 @@
 
 ## Order of Precedence
 
+Prefix notation places each operator before its operands, and postfix places each operator
+after its operands.
+
 <br>
 
 # The Types of Notations
