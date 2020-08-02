@@ -30,7 +30,7 @@ This is fine for simple edits - **HOWEVER: If you are doing anything more compli
 
 This is a very involved process, so bear with me.
 
-First, install your IDE of choice. I recommend WebStorm (free with the [GitHub Student Pack](https://education.github.com/pack).
+First, install your IDE of choice. I recommend WebStorm (free with the [GitHub Student Pack](https://education.github.com/pack).)
 
 ### Prerequisites
 In order to start setting up your development environment, you first need a bit of knowledge and a few other programs installed.
