@@ -23,15 +23,13 @@
 
 # Introduction 
 
-<br>
+As many of us may know, booleans are an essential part of programming that can hold one of two values: `true` and `false`, which can be denoted as `1` and `0`. Booleans can take the form of either a variable (such as `s = true`) or an expression (like `$5 < 36$`, which evaluates to `true`). These are most often used in if statements (formatted as `if (boolean condition)`), another essential piece of programming that allows us to perform different functions for different conditions.
 
-As many of us may know, booleans are an essential part of programming that can hold one of two values: `true` and `false`, which can be denoted as `1` and `0`. Booleans can take the form of either a variable (such as `s = true`) or an expression (like `$5 \less 36$`, which evaluates to `true`). These are most often used in if statements (formatted as `if (boolean condition)`), another essential piece of programming that allows us to perform different functions for different conditions.
+Boolean algebra is needed for digital circuits that make up a computer's hardware. This is very useful if you're looking to understand how a computer works, given that computers talk entirely in `1`s and `0`s.
 
-Boolean algebra is needed for digital circuits that make up a computer's hardware. 
+There are booleans everywhere in everyday life - from power switches to advanced searching, 
 
-It is also used to make more specific search expressions. For example, say you were looking for a part-time job that could be anything except being a tutor. So, to narrow your search results, you could write `Part-time job NOT tutor`.
-
-*Fun Fact*: the power button we see almost everywhere is actually a 0 and a 1 on top, since booleans are just that significant!
+Actually, what if everything in the universe is just a boolean? Wouldn't be that surprising.
 
 <br>
 
@@ -50,7 +48,11 @@ Here's an example:
 
 So, let's break down how exactly this truth table was drawn:
 
-First, a column was made for each of the variable terms. Under these columns, I listed out all possible combinations of values for X and Y. X and Y can both either be 0 or 1; together, they could form the pairs: `(0, 0)`, `(1, 0)`, `(0, 1)`, and `(1, 1)`. Each of these pairs should make up one row in the table.
+First, a column was made for each of the variable terms. Under these columns, 
+I listed out all possible combinations of values for X and Y. X and Y can both either 
+be 0 or 1; together, they could form the pairs: `(0, 0)`, `(1, 0)`, `(0, 1)`, and `(1, 1)`. 
+Each of these pairs should make up one row in the table. To know how many combinations a
+certain number of variables can make, use `$2^n$` (n being the number of variables).
 
 Then, a column was made for the actual expression itself. In this column, I wrote out all of the resultant values for each row. So, for example, in the first row (excluding the header labels), the values for X and Y were both 0. `X and Y` would thus be `0 and 0`, which simplifies down to `0`. Because of this, I put down a `0` for that row. I then did the same for the other rows.
 
@@ -58,7 +60,7 @@ And that's it! One thing to note is that when you get to longer expressions, it 
 
 | | | A | |
 | --- | --- | --- | --- |
-| X | Y | X and Y | A or X |
+| `$X$` | `$Y$` | `$X$` & `$Y$` | `$A$` \| `$X$` |
 | 0 | 0 | 0 | 0 |
 | 1 | 0 | 0 | 1 |
 | 0 | 1 | 0 | 0 |
@@ -78,7 +80,14 @@ For this, I broke the expression into two smaller parts. I used `A` to symbolize
 | xor | `$x \oplus y$` | The result is true if the values of x and y are different. This is also equal to `$x\overline{y} + \overline{x}y$`; if `$x = 0$` and `$y = 1$`, then this expression would evaluate to `$0 • 0 + 1 • 1$`, or `1`. Since x and y have different values, this makes sense. Conversely, if `$x = y = 0$`, then this expression would evaluate to `$0 \bullet 1 + 1 \bullet 0$`, or `0`. |
 | xnor | `$x \odot y$` | This is the exact opposite of xor; the result is true if the values of x and y are the same. For this reason, `$x \odot y$` can also be written as `$\overline{x \oplus y}$`. |
 
-For the order of precedence, it goes as follows: *not*, *and*, *xor* and *xnor*, and then *or*. 
+For the order of precedence, it goes as follows: 
+- not (highest precedence)
+- and
+- xor and xnor
+- or (lowest precedence)
+
+Note that there are two more logic operators (NAND and NOR) that will show up in [Digital Electronics](/resources/acsl/digitalelectronics), which will just be represented here as
+"NOT AND" `$\overline{AB}$` and "NOT OR" `$\overline{A + B}$`. 
 
 <br>
 
@@ -95,7 +104,7 @@ Please use this time to thoroughly understand each of these laws. You shouldn't 
 The order that you write two separate terms in does not matter. 
 
 1. `$x + y = y + x$`
-2. `$x • y = y • x$`
+2. `$x \bullet y = y \bullet x$`
 
 ## Associative Law
 
@@ -183,13 +192,11 @@ So, since these different expressions all evaluate to `1` for when `x` and `y` e
 
 # Sample Problems
 
-<br>
-
 It may take a while to remember all of the laws, so take your time! Also make sure to keep order of precedence in mind.
 
 ## Simplify the Expression
 
-### 1. `$\overline{\overline{A}(B + C)} • B + \overline{B}$`
+### Problem 1: `$$\overline{\overline{A}(B + C)} • B + \overline{B}$$`
 
 0. `$\overline{\overline{A}(B + C)} \bullet B + \overline{B}$`
 1. `$(\overline{\overline{A}} + \overline{B + C}) \bullet B + \overline{B}$`  - this uses DeMorgan's Law
@@ -197,9 +204,9 @@ It may take a while to remember all of the laws, so take your time! Also make su
 3. `$A + 0 \bullet \overline{C} + \overline{B}$` - this uses the Complement Law
 4. `$A + \overline{B}$` - this uses the Annihilator Law
 
-### 2. `$(X(X * 1))(X + Y) + C$`
+### Problem 2: `$$(X(X \bullet 1))(X + Y) + C$$`
 
-0. `$(X(X * 1))(X + Y) + C$`
+0. `$(X(X \bullet 1))(X + Y) + C$`
 1. `$(XX)(X + Y) + C$` - this uses the Identity Law
 2. `$X(X + Y) + C$` - this uses the Idempotent Law
 4. `$X + C$` - this uses the Absorptive Law

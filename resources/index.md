@@ -21,5 +21,19 @@ Otherwise, click one of the above links you're interested in to get started!
 
 <br>
 
+# Page Progress Tracker
+
+If you would like to contribute, either work on a unstarted page or finish a started page. Pages that need checking will be
+checked by the captains.
+
+| Unstarted | Started | Needs Checking | Finished |
+| --- | --- | --- | --- |
+| <ul><li>LISP</li><li>Prefix/Infix/Postfix Notation</li><li>Computer Number Systems</li><li>Recursive Functions</li><li>FSAs and Regular Expressions</li><li>What Does This Program Do?</li><li>Lambdas and Functional Programming</li></ul> | <ul><li>Input / Output</li><li>Efficient Code</li><li>Tips</li><li>Graph Theory</li><li>USACO</li><li>Resources Homepage</li></ul> | <ul><li>Assembly</li><li>Bit-String Flicking</li><li>Boolean Algebra</li><li>Data Structures</li><li>Digital Electronics</li><li>Streams API</li></ul> | <ul><li>ACSL Homepage</li></ul> |
+
+You can also suggest a new page to the captains. We'll consider adding it.
+
+<br>
+
 # General Information
 
+Soon (tm)

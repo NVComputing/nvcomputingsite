@@ -24,8 +24,6 @@ Understanding how bit strings work is very helpful in systems programming, assem
 
 # Operators
 
-<br>
-
 The order of precedence (the order in which they are executed) for the operators goes as follows:
 - Parenthesis (highest precedence)
 - NOT
@@ -85,7 +83,7 @@ As their name indicates, "shift" operators are unary operators that involve shif
 
 Note that none of these operators change the length of the bit string.
 
-| Operator | Abbreviation | Description | Example |
+| Operator | Abbrev. | Description | Example |
 | --- | --- | --- | --- |
 | LSHIFT-x | LS-x | Each bit in the bit string is shifted over by *x* positions to the left. If its shift causes it to go out of bounds, that bit will be lost ("shifted out"); a 0 at the other end (the right) will be ended to preserve bit string length. | `LS-2 01101`: The first two bits, `01`, are shifted out, leaving us with `101`. 2 zeros are then filled at the right end of the bit string, thus leaving us with `10100`.|
 | RSHIFT-x | RS-x | Each bit in the bit string is shifted over by *x* positions to the right. If its shift causes it to go out of bounds, that bit will be lost ("shifted out"); a 0 at the other end (the left) will be ended to preserve bit string length. | `RS-3 01101`: The first three bits on the right, `101` are shifted out; now we have `01` left. 3 zeros are then filled at the left end of the bit string, thus leaving us with `00001`. |
@@ -153,10 +151,12 @@ Knowing this, we can now reduce our problem to simpler terms and then solve.
 
 ## Finding Possible Bitstrings
 
-Solving these types of problems take on a different method of solving
-, as you are given an equation but not one of the bitstrings, which you then need to solve for. To depict this mystery bitstring, we typically use letters. So, if we had a mystery bitstring that is 5 bits long, then you could display that as `abcde`.
+Solving these types of problems take on a different method of solving,
+as you are given an equation but not one of the bitstrings, which you then need to solve for. To depict this mystery bitstring, we typically use letters. So, if we had a mystery bitstring that is 5 bits long, then you could display that as `abcde`.
 
 Working with letters for the first time can take a bit of adjusting, since letters are in no way similar to `0` and `1`. So, please refer to the following table below to understand how calculations work out:
+
+Many of these concepts are ripped straight from the [Boolean Algebra](/resources/acsl/booleanalgebra) page. If you understand those concepts, you understand this.
 
 | Operation | Result | Explanation |
 | --- | --- | --- |
@@ -164,10 +164,10 @@ Working with letters for the first time can take a bit of adjusting, since lette
 | `$\neg A$` | a | Similarly, negating the negated version of `a` would return `a`.|
 | `$a \oplus 0$` | a | If `a` was a 1, then the resultant value would be `1`. If `a` was a 0, then the resultant value would also be `0`. So, overall, the result is `a`. |
 | `$a \oplus 1$` | A | If `a` was a 1, then the resultant value would be `0`. If `a` was a 1, then the resultant value would be `0`. Note how the end result is the opposite value of `a`; so, we mark the end result as `A`. |
-| `$a$` & `$0$` | 0 | Regardless of what `a` is, this would always return `0` because one of the operands is already 0. |
-| `$a$` & `$1$` | a | If `a` was a 1, then the resultant value would be `1`. If `a` was a 0, then the resultant value would also be `0`. So, overall the result is `a`. |
-| `$a$` \| `$0$` | a | Since one of the operands is already 0, then whether this operation returns a 0 or 1 all depends on `a`. If `a` is a 1, then the value also becomes `1`; the same applies for if `a` is a 0. So, overall, the result is `a`. |
-| `$a$` \| `$1$` | 1 | Regardless of what `a` is, this would always return `1` because one of the operands is already 1, thus meeting the condition of the \| operator. |
+| `$a$` & `$0$` | 0 | Regardless of what `a` is, this would always return `0` because one of the operands is already 0. (See [Annihilator Law](/resources/acsl/booleanalgebra#annihilatorlaw)) |
+| `$a$` & `$1$` | a | If `a` was a 1, then the resultant value would be `1`. If `a` was a 0, then the resultant value would also be `0`. So, overall the result is `a`. (See [Identity Law](/resources/acsl/booleanalgebra#identitylaw)) |
+| `$a$` \| `$0$` | a | Since one of the operands is already 0, then whether this operation returns a 0 or 1 all depends on `a`. If `a` is a 1, then the value also becomes `1`; the same applies for if `a` is a 0. So, overall, the result is `a`. (See [Identity Law](/resources/acsl/booleanalgebra#identitylaw)) |
+| `$a$` \| `$1$` | 1 | Regardless of what `a` is, this would always return `1` because one of the operands is already 1, thus meeting the condition of the \| operator. (See [Annihilator Law](/resources/acsl/booleanalgebra#annihilatorlaw)) |
 
 Now, using this table, please try the following problems:
 
@@ -187,7 +187,7 @@ So, altogether, `a` = 0, `b` = 0, and `d` = 0. We don't know about `c` or `e`, b
 
 Thus, our answer is `x` = `00*0*`, with the `*` standing for any value (`0` or `1`). During the ACSL contest, you should write these solutions out manually (unless noted otherwise) as: `00000`, `00100`, `00001`, and `00101`.
 
-### 4. List all possible values of x (5 bits long) that solve the following equation: (LSHIFT-2 (RCIRC-3 (NOT x))) = 10100 . (This is from someone else's Quizlet.)
+### 4. List all possible values of x (5 bits long) that solve the following equation: (LSHIFT-2 (RCIRC-3 (NOT x))) = 10100. (This is from someone else's Quizlet.)
 
 Again, we will mark `x` as `abcde`. 
 
