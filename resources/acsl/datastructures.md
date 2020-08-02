@@ -141,7 +141,7 @@ Let's compare these two images:
 
 | Unbalanced  | Balanced  |
 | --- | --- |
-| <img src="/res/acsl/datastructures/unbalanced.png" width="200"> | <img src="/res/acsl/datastructures/balanced.png" width="150"> |
+| <img src="/res/acsl/datastructures/unbalanced.png" width="200" height="150"/>| <img src="/res/acsl/datastructures/balanced.png" width="150"/> |
 
 While these two trees display the same elements, they are drastically different because of the order the elements were put into the tree. If we wanted to search for 7 and used the pseudocode mentioned earlier in "Searching for Nodes", it would take us 7 loop cycles using the unbalanced tree to find it. On the other hand, it would only take us 3 cycles with the balanced tree because there were less "layers" to the tree to work with; that is why balanced trees are much more efficient overall.
 
