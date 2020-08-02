@@ -24,8 +24,11 @@ Think of time and space efficiency (read [this page](/resources/efficiency) for 
 - Greedy Algorithms are incredibly useful at the lower level and should always be searched for. A greedy algorithm essentially reduces a problem into a couple of simpler problems and finds the solution to each of these problems.
 
 
+
 <br>
 
 # Java
 
 - A few of you may have recognized that eclipse has a debugger. This is incredibly useful and I use it frequently. You are able to run through each line of your code and check the values of each variable at the time. It is incredibly convenient when trouble shooting a testcase that gives an incorrect response.
+
+- Don't use ArrayLists unless absolutely necessary. ArrayLists have methods that run in slower time than expected. For example, the remove method and the add by index method both run in O(n) time.
