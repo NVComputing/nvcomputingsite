@@ -21,7 +21,8 @@ Think of time and space efficiency (read [this page](/resources/efficiency) for 
 
 - Methods can help avoid repeating code and make your code neater. This can be really important when time is of the essence to finish a contest.
 
-- Greedy Algorithms are incredibly useful at the lower level and should always be searched for. A greedy algorithm essentially reduces a problem into a couple of simpler problems and finds the solution to each of these problems.
+- Greedy Algorithms are incredibly useful at the lower level and should always be searched for. A greedy algorithm essentially reduces a problem into a couple of simpler problems and finds the solution to each of these problems. This would be useful in problems where an individual has to find if there is a subset from 0 to k that has a sum of n. You would solve this by combining a prefix sum and sorting the array, which allows you to binary search for each value. 
+    - This is an example of a greedy algorithm that combines three efficient algorithms.
 
 
 
