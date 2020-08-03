@@ -246,7 +246,7 @@ So, in total, there are 3 different cycles in the graph.
 
 The drawn graph below is only one way to depict this matrix.
 
-| Step | Graph <img width="300"/> | Step | Graph <img width="300"/>|
+| Step | Graph | Step | Graph |
 | --- | --- | --- | --- |
 | 1. Draw in A's edges | <img src="/res/acsl/graphtheory/prob2-1.png" width="275"/> | 4. Add D's edges | <img src="/res/acsl/graphtheory/prob2-4.png" width="275"/> |
 | 2. Add B's edges | <img src="/res/acsl/graphtheory/prob2-2.png" width="275"/> | 5. Add E's edges | <img src="/res/acsl/graphtheory/prob2-5.png" width="275"/> |
