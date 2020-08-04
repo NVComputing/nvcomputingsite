@@ -27,10 +27,11 @@ after its operands.
 
 <br>
 
-## Binary Trees
 
-<br>
 
 # Sample Problems
+
+Convert `$X=(A\times B−C/D)^E$` &nbsp;to prefix
+
 
 <br>
