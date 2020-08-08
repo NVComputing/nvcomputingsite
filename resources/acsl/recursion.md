@@ -37,7 +37,7 @@ want your function to call on itself forever, after all! So, what you would need
 least one *base case*. For a *base case*, the function is not called on again; instead, a set
 value is returned. Here's an example (from online):
 
-```code
+```java
 int pow_recursion(int x, int y) {
     if (y < 0) {
         return -1;
@@ -63,9 +63,9 @@ references itself multiple times; an example is the Fibonacci sequence reference
 section.
 
 *Infinite recursion* is a recursive function that never stops because it keeps on calling itself.
-A program with infinite recursion would eventually crush due to an *out of memory* error
+A program with infinite recursion would eventually crash with a *stack overflow* error
 message. Why this occurs may be a bit difficult to explain now, but we will come back to it in the
-`Ways of Evaluating Recursive Calls` section on this page.
+`Ways of Evaluating Recursive Calls` section.
 
 <br>
 
@@ -86,11 +86,13 @@ So, overall, the list is 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, etc.
 Now, how would be written as a function? First, we can establish that the base cases would be
 `$f(0) = 0$` and `$f(1) = 1$`. As a mathematical function, we can write:
 
-<img src="/res/acsl/recursion/fibonacci.png" width="400"/>
+### `$\begin{equation*}f(n) = \begin{cases}n &\text{if $n \leq 1$}\\f(n-1)+f(n-2) &\text{if $n > 1$}\end{cases}\end{equation*}$`
+
+<br>
 
 If this was implemented as a programming function, it would be:
 
-```code
+```java
 public static int fibonacci(int x) {
     if(x <= 1) {
         return x;
@@ -101,7 +103,7 @@ public static int fibonacci(int x) {
 
 Here's the Python version of the function if you'd like:
 
-```code
+```python
 def fibonacci(x):
     if x <= 1:
         return x
@@ -116,18 +118,21 @@ numbers.
 
 So, as a mathematical function, this can be written as:
 
-<img src="/res/acsl/recursion/factorial.png" width="400"/>
+### `$\begin{equation*}f(n) = \begin{cases}n &\text{if $n = 0$}\\n \bullet f(n-1) &\text{if $n > 0$}\end{cases}\end{equation*}$`
+
+<br>
 
 Then, here are the Java and Python implementations of this function:
 
-```code
+```java
 public static int factorial(int x) {
     if(x == 0) {
         return 1;
     }
     return x * factorial(x - 1);
 }
-
+```
+```python
 def factorial(x):
     if x == 0:
         return 1
@@ -143,13 +148,16 @@ writing down equations. You can decide on which one
 you prefer the most. You can also develop your own methods if you
 would like.
 
+(Approaches are most likely going to depend on the problem - i.e. you wouldn't use a tree if
+the function only recurred once per method call (i.e. single recursion), because then your tree would just be a downwards line.)
+
 ## Stacks
 
 This method is good for handling single recursion in the form of programming functions.
 
 Here's an example:
 
-```code
+```java
 public void mystery4(int nNum) {
     if(nNum <= 0) {
         return;
@@ -162,6 +170,7 @@ public void mystery4(int nNum) {
         System.out.print("+");
     }
     System.out.println();
+}
 ```
 
 Let's say we needed to evaluate what `mystery4(4)` would print. We can use a stack to model
@@ -184,27 +193,28 @@ Now that the base case is reached, the real calculating can now begin.
 
 So, ultimately, our final display from the call `mystery4(4)` gets us:
 
-```consoleoutput
+```text
 -+
 --++
 ---+++
 ----++++
 ```
 
-We can also use stacks to cover why you get an "out of memory" error for infinite recursion.
+We can also use stacks to cover why you get a "stack overflow" error for infinite recursion.
 In the previous problem, we were able to stop stacking after we reached the base case and then
 work down the stack until there were no elements left.
 
-However, in a program with infinite recursion, the computer would keep stacking and stacking
-until eventually there is not enough memory to add another element to the stack; hence, that is 
-why the "out of memory" error comes up.
+However, in a program with infinite recursion, the computer would keep stacking and stacking method
+calls on the stack until eventually the call stack exceeds the stack bound
+(typically defined by the program upon startup),
+and the stack literally overflows.
 
 ## Trees
 
 This method is handy for dealing with multiple recursion. The Fibonacci sequence is a good 
-example. Let's refer back to this picture:
+example. Let's refer back to this equation:
 
-<img src="/res/acsl/recursion/fibonacci.png" width="400"/>
+### `$\begin{equation*}f(n) = \begin{cases}n &\text{if $n \leq 1$}\\f(n-1)+f(n-2) &\text{if $n > 1$}\end{cases}\end{equation*}$`
 
 Now, let's say we need to determine `fibonacci(5)`. Here's how we could break down the
 calculations.
@@ -216,7 +226,7 @@ calculations.
 
 Eventually, we would end up with this tree:
 
-<img src="/res/acsl/recursion/tree3.png" width="500"/>
+![](/res/acsl/recursion/tree3.png)
 
 Notice how the ends of the tree all meet the base case; that is how you will know for sure that
 your tree has been fully constructed.
@@ -230,7 +240,7 @@ Now, you just need to work your way up for calculations. Here's how it would loo
 
 Once you finish your calculations, you will end up with this:
 
-<img src="/res/acsl/recursion/tree6.png" width="500"/>
+![](/res/acsl/recursion/tree6.png)
 
 So, `$fibonacci(5) = 5$`.
 
@@ -240,29 +250,25 @@ This method is good for handling mathematical functions.
 
 Sample Problem 1 on the ACSL Wiki page is a good example:
 
-<img src="/res/acsl/recursion/equation.png" width="500"/>
+### `$\begin{equation*}g(x) = \begin{cases}g(x-3) + 1 &\text{if $x > 0$}\\3x &\text{if $x \leq 0$}\end{cases}\end{equation*}$`
 
 If we were to find the value of `g(11)`, then we can write a series of equations.
 
-```equations
-g(11) = g(8) + 1
-g(8) = g(5) + 1
-g(5) = g(2) + 1
-g(2) = g(-1) + 1
+`$g(11) = g(11-3) + 1 = g(8) + 1$`<br>
+`$g(8) = g(8-3) + 1 = g(5) + 1$`<br>
+`$g(5) = g(5-3) + 1 = g(2) + 1$`<br>
+`$g(2) = g(2-3) + 1 = g(-1) + 1$`
 
-g(-1) = 3 * -1 = -3
-```
+`$g(-1) = 3 \bullet -1 = -3$`
 
 Now that we have reached the base condition, we can work back up the equations:
 
-```equations
-g(11) = g(8) + 1 = 0 + 1 = 1
-g(8) = g(5) + 1 = -1 + 1 = 0
-g(5) = g(2) + 1 = -2 + 1 = -1
-g(2) = g(-1) + 1 = -3 + 1 = -2
+`$g(11) = g(8) + 1 = 0 + 1 = 1$`<br>
+`$g(8) = g(5) + 1 = -1 + 1 = 0$`<br>
+`$g(5) = g(2) + 1 = -2 + 1 = -1$`<br>
+`$g(2) = g(-1) + 1 = -3 + 1 = -2$`
 
-g(-1) = 3 * -1 = -3
-```
+`$g(-1) = 3 \bullet -1 = -3$`
 
 So `$g(11) = 1$`.
 
@@ -272,7 +278,7 @@ So `$g(11) = 1$`.
 
 ## 1. With the function below, determine the value of `mystery(4)`.
 
-```code
+```java
 public static int mystery(int num) {
     if(num <= 0) {
         return num;
@@ -285,43 +291,41 @@ public static int mystery(int num) {
 For this problem, I used the tree method. See how I set up the tree and determined the values
 along the way:
 
-<img src="/res/acsl/recursion/prob1.png" width="500"/>
+![](/res/acsl/recursion/prob1.png)
 
 So, our final answer is `-5`.
 
 ## 2. With the mathematical function below, determine the value of `f(6)`.
 
-<img src="/res/acsl/recursion/prob2.png" width="500"/>
+### `$\begin{equation*}f(x) = \begin{cases}f(x-15) &\text{if $x > 8$}\\f(f(x+7)-f(x+11)) &\text{if $3 \leq x \leq 8$}\\4x^2 &\text{if $x < 3$}\end{cases}\end{equation*}$`
 
 For this question, we will write equations to get our answer.
 
-```equations
-f(6) = f( f(13) - f(17) )
+`$f(6) = f(f(13)-f(17))$`
 
-f(13) = f(-2)
-f(17) = f(2)
+`$f(13) = f(-2)$`<br>
+`$f(17) = f(2)$`
 
-f(-2) = 4 * (-2)^2 = 16
-f(2) = 4 * 2^2 = 16
-```
+`$f(-2) = 4 \bullet (-2)^2 = 16$`<br>
+`$f(2) = 4 \bullet 2^2 = 16$`
 
-Hence, `$f(13) = f(17) = 16$`. `$f(6) = f(16 - 16) = f(0)$`. 
+Hence, `$f(13) = f(17) = 16$`.
+
+`$f(6) = f(16 - 16) = f(0)$`. 
 
 `$f(0) = 4 * 0^2 = 0$`. So, our final answer is `0`.
 
 ## 3. Find the value of `f(17, 6)` with the following mathematical function.
 
-<img src="/res/acsl/recursion/prob3.png" width="500"/>
+### `$\begin{equation*}f(x,y) = \begin{cases}f(x-y, y-1) + 2 &\text{if $x > y$}\\x + y &\text{if $x \leq y$}\end{cases}\end{equation*}$`
 
 We will also write equations to get our answer for this question.
 
-```equations
-f(17, 6) = f(11, 5) + 2
-f(11, 5) = f(6, 4) + 2
-f(6, 4) = f(2, 3) + 2
+`$f(17, 6) = f(17 - 6, 6 - 1)+2 = f(11, 5) + 2$`<br>
+`$f(11, 5) = f(11 - 5, 5 - 1)+2 = f(6, 4) + 2$`<br>
+`$f(6, 4) = f(6 - 4, 4 - 1)+2 = f(2, 3) + 2$`
 
-f(2, 3) = 2 + 3 = 5
-```
+`$f(2, 3) = 2 + 3 = 5$`
 
 So, `$f(6, 4) = 5 + 2 = 7$`, `$f(11, 5) = 7 + 2 = 9$`, and `$f(17, 6) = 9 + 2 = 11$`. So, our
 answer is `11`.
@@ -359,4 +363,4 @@ So, we have `$(1 * 8^2) + (3 * 4^2) +
 (9 * 2^2) + (27 * 1^2) = 64 + 48 + 36 + 27 = 175$` square feet.
 
 ---
-Author: Kelly Hong
+Author: Kelly Hong, Raymond Zhao
