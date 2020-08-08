@@ -19,7 +19,6 @@
   - [What Does This Program Do?](/resources/acsl/wdtpd)
 - [Programming](#programming)
   - [What to Keep In Mind](#whattokeepinmind)
-  - [Sample Problems/Solutions](#sampleproblemssolutions)
   
 # Introduction
 
@@ -64,6 +63,10 @@ Please click on any of the following links below to learn about the short answer
 ACSL's programming questions are often very brute-forcey and vaguely defined in nature. Here are some tips
 to answering them.
 
+If you have trouble with programming in general, don't worry! Each week, we will provide a
+programming question so that you can improve your skills. We will also hold CodeForces "contests"
+within our team.
+
 ## What to Keep In Mind
 
 - Don't forget the [general tips](/resources/tips) that apply to all code you write. Also, make sure your code [is efficient](/resources/efficiency).
@@ -80,6 +83,4 @@ to answering them.
 - Oftentimes, ACSL's problems (more often in programming than short answer) are vague and confusing. Sometimes, you might find yourself
 needing to deduce the exact function of the program from the sample test cases. In this case, just try to figure the problem out.
 
-## Sample Problems/Solutions
 
-//TODO
