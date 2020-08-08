@@ -349,7 +349,7 @@ IKEA furniture or a LEGO set.
 | --- | --- |
 | 1. <img src="/res/acsl/recursion/prob4-1.png" width="250"/> | We first execute the algorithm on our original 16-foot square. We skip Step 2 because the condition doesn't apply. We then execute Steps 3-4. |
 | 2. <img src="/res/acsl/recursion/prob4-2.png" width="300"/> | We will now execute Step 5 from our algorithm pass above. Again, Step 2 would be skipped here. So, we split each of these squares into 4 and paint one of the small squares. |
-| 3. <img src="/res/acsl/recursion/prob4-3.png" width="250"/> | We continue the recursive process. Step 2 does not apply, so we divide and paint. |
+| 3. <img src="/res/acsl/recursion/prob4-3.png" width="400"/> | We continue the recursive process. Step 2 does not apply, so we divide and paint. |
 | 4. <img src="/res/acsl/recursion/prob4-4.png" width="500"/> | Again, we go through another recursive pass. Divide and paint. |
 
 When we apply the function again to the 81 small, unpainted squares, these squares will have
