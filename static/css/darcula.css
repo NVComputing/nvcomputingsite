@@ -157,3 +157,31 @@ code.language-css .token.selector > .token.pseudo-class,
 code.language-css .token.selector > .token.pseudo-element {
 	color: #ffc66d;
 }
+
+/* Regex */
+code.language-regex {
+	color: #6a8759;
+}
+.token.quantifier {
+	color: #6897bb;
+}
+
+.token.escape,
+.token.special-escape,
+.token.anchor {
+	color: #cc7832;
+}
+
+.token.charclass,
+.token.charset-punctuation,
+.token.group,
+.token.backreference,
+.token.alternation {
+	color: #ffc66d;
+}
+
+.token.charset,
+.token.regex-delimiter,
+.token.regex-flags {
+	/* nothing */
+}

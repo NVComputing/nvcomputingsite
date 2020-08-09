@@ -16,7 +16,15 @@ A *Finite State Automaton* (or just FSA) is a mathematical model of computation.
 expression (or RegEx for short) is the algebraic representation of an FSA.
 
 Regular expressions are helpful when it comes to checking for certain patterns. With patterns, 
-you can do many things such as specify your search criteria for something.
+you can do many things such as complex replacing (way more powerful than Ctrl+F), extremely simple input validation, finding
+specific patterns amongst extremely large amounts of data very quickly, and data extraction / parsing.
+You can also write cool, unintelligible expressions like
+```regex
+^(?:\s*(?:=.*?=|<.*?>|\[.*?]|\(.*?\)|\{.*?})\s*)*
+(?:[^\[|\](){}<>]*\s*\|\s*)?([^\[|\](){}<>]*)
+(?:\s*(?:=.*?=|<.*?>|\[.*?]|\(.*?\)|\{.*?})\s*)*$`
+```
+that are actually useful.
 
 In ACSL, FSAs will be limited to parsing Strings.
 
