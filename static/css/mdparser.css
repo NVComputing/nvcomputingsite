@@ -54,6 +54,7 @@ mjx-stretchy-h {
 .inline-latex {
 	color: #fff !important;
 	font-size: inherit !important;
+	background: none !important;
 }
 .table-wrapper {
 	overflow-x: auto;

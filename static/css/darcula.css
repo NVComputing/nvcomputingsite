@@ -1,11 +1,13 @@
 /**
  * Darcula theme
+ * Regex coloring added by Raymond Zhao (Darcula Prism.js Regex CSS)
  *
  * Adapted from a theme based on:
  * IntelliJ Darcula Theme (https://github.com/bulenkov/Darcula)
  *
  * @author Alexandre Paradis <service.paradis@gmail.com>
- * @version 1.0
+ * @author Raymond Zhao <stinggyray@gmail.com>
+ * @version 1.1
  */
 
 code[class*="language-"],
@@ -57,6 +59,13 @@ pre[class*="language-"] {
 :not(pre) > code[class*="language-"] {
 	padding: .1em;
 	border-radius: .3em;
+}
+
+/* Handle markdown code blocks too */
+:not(pre) > code {
+	padding: .1em;
+	border-radius: .3em;
+	background: #2b2b2b;
 }
 
 .token.comment,
@@ -168,15 +177,17 @@ code.language-regex {
 
 .token.escape,
 .token.special-escape,
-.token.anchor {
+.token.anchor,
+.token.alternation,
+.token.charset-negation,
+.token.range-punctuation {
 	color: #cc7832;
 }
 
 .token.charclass,
 .token.charset-punctuation,
 .token.group,
-.token.backreference,
-.token.alternation {
+.token.backreference {
 	color: #ffc66d;
 }
 
