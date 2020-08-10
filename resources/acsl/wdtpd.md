@@ -122,24 +122,21 @@ A plus sign is still used to concatenate strings.
 
 # Sample Problems
 
-The lines in each code were labeled for explaining purposes. In a real ACSL problem, they may
-not actually be there.
-
 ## 1. What is the value of B that is printed if the input values are 50 and 10 respectively?
 
 ```code
-1       input H, R
-2       B = 0
-3       if H>48 then
-4           B = B + (H-48) * 2 * R
-5           H = 48
-6       end if
-7       if H>40 then
-8       B = B + (H-40) * (3/2) * R
-9       H = 40
-10      end if
-11      B = B + H * R
-12      output B
+input H, R
+B = 0
+if H>48 then
+    B = B + (H-48) * 2 * R
+    H = 48
+end if
+if H>40 then
+    B = B + (H-40) * (3/2) * R
+    H = 40
+end if
+B = B + H * R
+output B
 ```
 
 First, *B* is initialized to 0 on line 2. The if statement on line 3 would apply since `$50>48$`,
@@ -153,14 +150,14 @@ Finally, on line 11, `$B = 160 + 40 * 10 = 160 + 400 = 560$`. So, our final answ
 ## 2. What is the final value of NUM after the following program is executed?
 
 ```code
-1   A = "BANANAS"
-2   NUM = 0: T = ""
-3   for J = len(A) - 1 to 0 step -1
-4       T = T + A[J]
-5   next
-6   for J = 0 to len(A) - 1
-7       if A[J} == T[J] then NUM = NUM + 1
-8   next
+A = "BANANAS"
+NUM = 0: T = ""
+for J = len(A) - 1 to 0 step -1
+    T = T + A[J]
+next
+for J = 0 to len(A) - 1
+    if A[J} == T[J] then NUM = NUM + 1
+next
 ```
 
 This code first initializes three variables: *A*, *NUM*, and *T*. The first for loop traverses
@@ -177,18 +174,18 @@ Our final answer is **5**.
 ## 3. What is the final value of C[4] after the program below is executed?
 
 ```code
-1   A(1) = 12: A(2) = 41: A(3) = 52
-2   A(4) = 57: A(5) = 77: A(6) = -100
-3   B(1) = 17: B(2) = 34: B(3) = 81
-4   j = 1: k = 1: n = 1
-5   WHILE A(j) > 0
-6       WHILE B(k) <= A(j)
-7           C(n) = B(k)
-8           n = n + 1
-9           k = k + 1
-10      END WHILE
-11      C(n) = A(j): n = n + 1: j = j + 1
-12  END WHILE
+A(1) = 12: A(2) = 41: A(3) = 52
+A(4) = 57: A(5) = 77: A(6) = -100
+B(1) = 17: B(2) = 34: B(3) = 81
+j = 1: k = 1: n = 1
+WHILE A(j) > 0
+    WHILE B(k) <= A(j)
+        C(n) = B(k)
+        n = n + 1
+        k = k + 1
+    END WHILE
+    C(n) = A(j): n = n + 1: j = j + 1
+END WHILE
 ```
 
 For this program, it may be hard to verbally track all of the variables' values. So, a table
@@ -218,10 +215,6 @@ While we could have stopped evaluating the rest of the program after we got `C[4
 decided to show you how the entire program would run.
 
 So, based on our table, `$C[4] = 41$`.
-
-
-
-
 
 ---
 Author: Kelly Hong
