@@ -117,15 +117,20 @@ tokens with special meanings that aren't *match literally just what this token s
 Also, we'll go over the actual syntax in programming languages further down
 (this is just ACSL's syntax for programming competitions - however, do note that actual regex has all the below syntax in it too.)
 
+### Tokens
+
 | Symbol | Meaning | Example | Matches | Doesn't Match |
 | --- | --- | --- | --- | --- |
-| <code class="regex language-regex">|</code> or `$\cup$` | "Or". This separates alternatives. | <code class="regex language-regex">a|b</code> | a, b | c |
+| <code class="regex language-regex">.</code> | A wildcard; it can represent any character. | <code class="regex language-regex">a.b</code> | `acb`, `a7b`, `a‽b` (etc) | `ab`, `accb` |
+| <code class="regex language-regex">[ ]</code> | It matches a single character within the brackets. A range can be specified with a dash. | <code class="regex language-regex">[abc]</code> or <code class="regex language-regex">[a-c]</code> | `a`, `b`, `c` | `abc`, `d` |
+| <code class="regex language-regex">[^ ]</code> | It matches a single character **not** within the brackets. A range can be specified with a dash. | <code class="regex language-regex">[^abc]</code> or <code class="regex language-regex">[^a-c]</code> | `f`, `h`, `z`, `2` (etc) | `a`, `b`, `c`, `fz` |
+
+### Quantifiers
+
+| <code class="regex language-regex">|</code> or `$\cup$` | "Or". This separates alternatives. | <code class="regex language-regex">a|bc</code> | ac, bc | abc, c |
 | <code class="regex language-regex">*</code> | 0 or more times of the preceding element. | <code class="regex language-regex">a*</code> | a, aa, aaaaaa (etc) | 
 | <code class="regex language-regex">?</code> | Either 0 or 1 time of the preceding element only. | <code class="regex language-regex">colou?r</code> | color, colour |
 | <code class="regex language-regex">+</code> | 1 or more times of the preceding element. Not to be confused with <code class="regex language-regex">*</code>. | <code class="regex language-regex">a+h</code> | ah, aaah, aaaaaah (etc) |
-| <code class="regex language-regex">.</code> | A wildcard; it can represent any character. | <code class="regex language-regex">a.b</code> | acb, a7b, a‽b (etc)  |
-| <code class="regex language-regex">[ ]</code> | It matches a single character within the brackets. A range can be specified with a dash. | <code class="regex language-regex">[abc]</code> or <code class="regex language-regex">[a-c]</code> | a, b, c |
-| <code class="regex language-regex">[^ ]</code> | It matches a single character **not** within the brackets. A range can be specified with a dash. | <code class="regex language-regex">[^abc]</code> or <code class="regex language-regex">[^a-c]</code> | f, h, z, 2 (etc) |
 | <code class="regex language-regex">( )</code> | This is used to define a sub-expression. The contents cannot be separated. As said before, these take the highest priority. | <code class="regex language-regex">(ab)*</code> | ab, ababab (etc) |
 
 ## Identities

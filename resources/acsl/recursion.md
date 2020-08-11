@@ -360,7 +360,8 @@ square. In Step 2, we had three 4 x 4 squares. In Step 3, we had nine 2 x 2 squa
 4, we had twenty-seven 1 x 1 squares.
 
 So, we have `$(1 * 8^2) + (3 * 4^2) +
-(9 * 2^2) + (27 * 1^2) = 64 + 48 + 36 + 27 = 175$` square feet.
+(9 * 2^2) + (27 * 1^2)$`<br>
+ `$= 64 + 48 + 36 + 27 = 175$` square feet.
 
 ---
 Author: Kelly Hong, Raymond Zhao
