@@ -110,8 +110,8 @@ To pass, you must be able to:
 ## Silver
 Silver is substantially harder than Bronze to get past.
 
-Brute force is **no longer sufficient for many of the later test cases.** It should be used only if you are unable to come up with a more efficient algorithm.
-Brute force will usually only get you past the first few test cases.
+Brute force **does not work many of the later test cases.** It should be used only if you are unable to come up with a more efficient algorithm, so you can at least get some points for the problem.
+
 
 To pass, you must know:
 *   Trees and basic graphs. (TREES ALMOST ALWAYS SHOW UP ON AT LEAST ONE PROBLEM IN SILVER!).
@@ -154,7 +154,7 @@ As a side note, because of the strict performance / time limits in USACO, you **
 
 See the input/output document for language-specific details on inputting / outputting. (It has information about BufferedReader and Scanner.)
 
-# Efficient Code
+# Efficiency
 
 When coding at a higher level, there are typically two different types of solutions. There are the efficient solutions and the naive solutions. Efficient solutions are typically better at managing time complexity, but it can also be better at managing space complexity. Naive solutions typically use either brute force or require far more computation to come up with a solution. 
 
@@ -163,7 +163,7 @@ This can work for earlier test cases in USACO, but as the values and parameters 
 A very important tool to measure your code’s efficiency is known as **Big O Notation. **Big O is denoted with the syntax “O(some expression involving n)”. It is a way to determine how many operations your code requires to run.
 
 
-An example of naive versus efficient code can be seen here.
+Some examples of naive versus efficient code can be seen here.
 
 ## Problem
 Given an array of n integers, find the subarray of size 2 with the largest sum. (members of subarrays do not have to be adjacent).
@@ -189,10 +189,10 @@ Given a sorted array of integers R, return the index of integer K in the array o
 Do a linear search through the array, which runs in O(n). This is something that you are probably familiar with and seems fairly efficient, but is impractical as n gets larger.
 
 ### Efficient Solution
-Do a binary search through the array, which runs in O(log(n)). Those of you who took AP CSA probably learned this later in the year, and it runs much faster as time goes on.
+Do a binary search through the array, which runs in O(log(n)). Those of you who took AP CSA probably learned this later in the year. This is very efficient, and runs quickly no matter how large n is.
 
-Time Complexity: You typically want your code to run at a pace of O(nlog(n)) or better after passing bronze.
-- Placeholder
+- Time Complexity: You typically want your code to run at a pace of O(nlog(n)) or better after passing bronze.
+
 
 Many of the problems require combining 2 to 3 different algorithms such as combining a max algorithm with calculation asked by the problem, so a good way to organize code is to have a new static method perform each algorithm. This way, everytime you find a logic error in your code, you can just edit it there. For the first example problem above, this would mean having a method perform the max algorithm search and calling it once for each of the two traversals.
 
