@@ -24,14 +24,14 @@ Algebra page will come with an extra explanation.
 
 | Name | Logic Gate | Algebraic Expression | Extra Notes |
 | --- | --- | --- | --- |
-| BUFFER | <img src="/res/acsl/digitalelectronics/buffer.png" width="200" height="50" /> | `$X = A$` | This logic gate doesn't really do much. The output is the input. |
-| NOT | <img src="/res/acsl/digitalelectronics/not.png" width="200" height="75" /> | `$X = \overline{A} = \neg A$` | |
-| AND | <img src="/res/acsl/digitalelectronics/and.png" width="200" height="75" /> | `$X = AB = A \bullet B$` | |
-| NAND | <img src="/res/acsl/digitalelectronics/nand.png" width="200" height="75" /> | `$X = \overline{AB} = \overline{A \bullet B}$` | This is the opposite of the *and* operator. Whatever is evaluated as true for the *and* operator becomes false, and vice versa. |
-| OR | <img src="/res/acsl/digitalelectronics/or.png" width="200" height="75" /> | `$X = A + B$` | |
-| NOR | <img src="/res/acsl/digitalelectronics/nor.png" width="200" height="75" /> | `$X = \overline{A + B}$` | This is the opposite of the *or* operator. Whatever is evaluated as true for the *or* operator becomes false, and vice versa. | 
-| XOR | <img src="/res/acsl/digitalelectronics/xor.png" width="200" height="75" /> | `$X = A \oplus B$` | | 
-| XNOR | <img src="/res/acsl/digitalelectronics/xnor.png" width="200" height="75" /> | `$X = \overline{A \oplus B} = A \odot B$` | |
+| BUFFER | <img src="/res/acsl/digitalelectronics/buffer.png" style="width: 200px;" height="50" /> | `$X = A$` | This logic gate doesn't really do much. The output is the input. |
+| NOT | <img src="/res/acsl/digitalelectronics/not.png" style="width: 200px;" height="75" /> | `$X = \overline{A} = \neg A$` | |
+| AND | <img src="/res/acsl/digitalelectronics/and.png" style="width: 200px;" height="75" /> | `$X = AB = A \bullet B$` | |
+| NAND | <img src="/res/acsl/digitalelectronics/nand.png" style="width: 200px;" height="75" /> | `$X = \overline{AB} = \overline{A \bullet B}$` | This is the opposite of the *and* operator. Whatever is evaluated as true for the *and* operator becomes false, and vice versa. |
+| OR | <img src="/res/acsl/digitalelectronics/or.png" style="width: 200px;" height="75" /> | `$X = A + B$` | |
+| NOR | <img src="/res/acsl/digitalelectronics/nor.png" style="width: 200px;" height="75" /> | `$X = \overline{A + B}$` | This is the opposite of the *or* operator. Whatever is evaluated as true for the *or* operator becomes false, and vice versa. | 
+| XOR | <img src="/res/acsl/digitalelectronics/xor.png" style="width: 200px;" height="75" /> | `$X = A \oplus B$` | | 
+| XNOR | <img src="/res/acsl/digitalelectronics/xnor.png" style="width: 200px;" height="75" /> | `$X = \overline{A \oplus B} = A \odot B$` | |
 
 Notice how adding the little extra circle causes the logic gate to become negated. So, for example, OR becomes NOR after
 adding the little circle is added to the OR logic gate.
@@ -44,7 +44,7 @@ Reference the lines to know the order that the logic gates should be evaluated i
 # Sample Problems 
 
 ## 1. Write out the following circuit as a boolean expression. Then, simplify.
-<img src="/res/acsl/digitalelectronics/prob1.png" width="300" height="200" />
+<img src="/res/acsl/digitalelectronics/prob1.png" style="width: 300px;" height="200" />
 
 The following solution below breaks down the construction of the boolean expression into smaller steps. This process
 may not necessarily be the same one that you may have taken, but it is just one possible way to think about it.
@@ -69,7 +69,7 @@ is essential.
 Thus, our final answer is: `$AY$`.
 
 ## 2. How many ordered 3-tuples (A, B, C) make the following circuit TRUE?
-<img src="/res/acsl/digitalelectronics/prob2.png" width="300" height="200" />
+<img src="/res/acsl/digitalelectronics/prob2.png" style="width: 300px;" height="200" />
 
 This circuit will first be written as a boolean expression for better ease of solving.
 

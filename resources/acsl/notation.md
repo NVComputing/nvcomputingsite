@@ -138,9 +138,9 @@ Follow the table below to see the process.
 
 | Construction | |
 | --- | --- |
-| 1. <img src="/res/acsl/notation/sample1.png" width="150"/> | 4. <img src="/res/acsl/notation/sample4.png" height="200"/>|
-| 2. <img src="/res/acsl/notation/sample2.png" width="300"/> | 5. <img src="/res/acsl/notation/sample5.png" height="200"/>|
-| 3. <img src="/res/acsl/notation/sample3.png" width="300"/> | |
+| 1. <img src="/res/acsl/notation/sample1.png" style="width: 150px;"/> | 4. <img src="/res/acsl/notation/sample4.png" height="200"/>|
+| 2. <img src="/res/acsl/notation/sample2.png" style="width: 300px;"/> | 5. <img src="/res/acsl/notation/sample5.png" height="200"/>|
+| 3. <img src="/res/acsl/notation/sample3.png" style="width: 300px;"/> | |
 
 Now, with this completed tree, we can convert to any notation we want. The order to
 write the expression is already drawn out; first, work with the operation in the
@@ -195,8 +195,8 @@ methods have been provided.
 
 | Construction | | |
 | --- | --- | --- |
-| 1. <img src="/res/acsl/notation/prob2-1.png" width="150"/> | 2. <img src="/res/acsl/notation/prob2-2.png" width="150"/> | 3. <img src="/res/acsl/notation/prob2-3.png" width="300"/> |
-| 4. <img src="/res/acsl/notation/prob2-4.png" width="300"/> | 5. <img src="/res/acsl/notation/prob2-5.png" width="300"/> | 6. <img src="/res/acsl/notation/prob2-6.png" width="300"/> |
+| 1. <img src="/res/acsl/notation/prob2-1.png" style="width: 150px;"/> | 2. <img src="/res/acsl/notation/prob2-2.png" style="width: 150px;"/> | 3. <img src="/res/acsl/notation/prob2-3.png" style="width: 300px;"/> |
+| 4. <img src="/res/acsl/notation/prob2-4.png" style="width: 300px;"/> | 5. <img src="/res/acsl/notation/prob2-5.png" style="width: 300px;"/> | 6. <img src="/res/acsl/notation/prob2-6.png" style="width: 300px;"/> |
 
 Notice that in a few of the steps, I chose to work on subbranches of the final tree
 before putting them altogether.
@@ -237,8 +237,8 @@ We would first construct the tree like so:
 
 | Construction | |
 | --- | --- |
-| 1. <img src="/res/acsl/notation/prob3-1.png" width="150"/> | 2. <img src="/res/acsl/notation/prob3-2.png" width="150"/> |
-| 3. <img src="/res/acsl/notation/prob3-3.png" width="150"/> | 4. <img src="/res/acsl/notation/prob3-4.png" width="150"/> |
+| 1. <img src="/res/acsl/notation/prob3-1.png" style="width: 150px;"/> | 2. <img src="/res/acsl/notation/prob3-2.png" style="width: 150px;"/> |
+| 3. <img src="/res/acsl/notation/prob3-3.png" style="width: 150px;"/> | 4. <img src="/res/acsl/notation/prob3-4.png" style="width: 150px;"/> |
 
 Then, we can analyze this tree from bottom to top, left to right to get our pre-fix
 expression:
