@@ -1,6 +1,6 @@
 # Solutions to Past Programming Problems
 ## Available Problems
-- [Example](#Example)
+- [Example <font color=#935000>(<i>Difficulty</i>)</font>](#Example)
 ##Example
 
 Link: [Problem](codeforces.com)
