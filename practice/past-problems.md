@@ -1,7 +1,8 @@
 # Solutions to Past Programming Problems
 ## Available Problems
 - [Example (<span color=#935000>*Difficulty*</span> )](#Example)
-##Example
+
+## Example
 
 Link: [Problem](codeforces.com)
 
