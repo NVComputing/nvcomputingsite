@@ -75,6 +75,7 @@ For best success in this category, it would be wise to know the following things
 <br>
 
 # Converting between Bases
+
 Converting from one base to another is very common and particularly important in
 representing long binary numbers as shorter octal or hex numbers. Decimal will also
 be referenced since it is the most common and easiest base for people to understand.
