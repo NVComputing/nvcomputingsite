@@ -66,6 +66,7 @@ pre[class*="language-"] {
 	padding: .1em;
 	border-radius: .3em;
 	background: #2b2b2b;
+	white-space: nowrap;
 }
 
 .token.comment,
