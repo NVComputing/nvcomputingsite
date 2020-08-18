@@ -1,10 +1,11 @@
 # Practice
 
-## Coming Soon (tm)
+[Solutions to Past Programming Problems](/practice/past-problems)
+##This Week's Homework
 
-This is where we will post all of our practice worksheets, which will be given on a weekly basis.
+Google form: <span style="color: #935000">*Currently Unavailable*</span>
 
-Answers (with provided solutions) will be posted here after the practice is due.
+Programming Question Link: <span style="color: #935000">*Currently Unavailable*</span>
 
 ## Do your practice!
 
