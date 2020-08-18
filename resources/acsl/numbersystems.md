@@ -204,9 +204,9 @@ Here's an example (this will be in base 16):
 
 | Step | Explanation | Step | <div style="width:300px;">Explanation</div> |
 | --- | --- | --- | --- |
-| <img src="/res/acsl/numsystems/add1.png" width="150"/> | This is just the start of our problem. No arithmetic yet. | <img src="/res/acsl/numsystems/add4.png" width="150"/> | `$1+A+2 = 13$`, or `D`. We do not go out of the range, so we just write `D` at the bottom. |
-| <img src="/res/acsl/numsystems/add2.png" width="150"/> | `$6+5=11$`, or `B`. Since `B` is within the range of [0, F], `B` will be written at the bottom with no numbers to carry. | <img src="/res/acsl/numsystems/add5.png" width="150"/> | `$2+9=11$`, or `B`. We are within the range, so `B` is simply written at the bottom.|
-| <img src="/res/acsl/numsystems/add3.png" width="150"/> | `$C+B=12+11=23$`. `23` is beyond our range, so we would divide it by 16 to get `1 R7`. The `1` is carried while the `7` becomes the new digit. | | |
+| <img src="/res/acsl/numsystems/add1.png" style="width: 150px;"/> | This is just the start of our problem. No arithmetic yet. | <img src="/res/acsl/numsystems/add4.png" style="width: 150px;"/> | `$1+A+2 = 13$`, or `D`. We do not go out of the range, so we just write `D` at the bottom. |
+| <img src="/res/acsl/numsystems/add2.png" style="width: 150px;"/> | `$6+5=11$`, or `B`. Since `B` is within the range of [0, F], `B` will be written at the bottom with no numbers to carry. | <img src="/res/acsl/numsystems/add5.png" style="width: 150px;"/> | `$2+9=11$`, or `B`. We are within the range, so `B` is simply written at the bottom.|
+| <img src="/res/acsl/numsystems/add3.png" style="width: 150px;"/> | `$C+B=12+11=23$`. `23` is beyond our range, so we would divide it by 16 to get `1 R7`. The `1` is carried while the `7` becomes the new digit. | | |
 
 ## Subtraction
 
@@ -218,9 +218,9 @@ Here's an example (this will also be in base 16):
 
 | Step | Explanation | Step | <div style="width:250px;">Explanation</div> |
 | --- | --- | --- | --- |
-| <img src="/res/acsl/numsystems/sub1.png" width="200"/> | This is just the start of our problem. No arithmetic yet. | <img src="/res/acsl/numsystems/sub4.png" width="200"/> | We will need to borrow because `$9-C$` is not valid. The `4` becomes a `3`, and the `9` becomes `$9+16=25$`. `$25-C=25-12=13=D$`. |
-| <img src="/res/acsl/numsystems/sub2.png" width="200"/> | `$7-B$` would get us a negative number, so we need to borrow. `3` becomes a `2`, and `7` becomes `$7+16=23$`. `$23-B=23-11=12=C$`. | <img src="/res/acsl/numsystems/sub5.png" width="200"/> | `$3-2=1$`. No borrowing is needed.|
-| <img src="/res/acsl/numsystems/sub3.png" width="200"/> | `$2-4$` would get us a negative number, so we need to borrow. `A` becomes a `9`, and `2` becomes `$2+16=18$`. `$18-4=14=E$`. | | |
+| <img src="/res/acsl/numsystems/sub1.png" style="width: 200px;"/> | This is just the start of our problem. No arithmetic yet. | <img src="/res/acsl/numsystems/sub4.png" style="width: 200px;"/> | We will need to borrow because `$9-C$` is not valid. The `4` becomes a `3`, and the `9` becomes `$9+16=25$`. `$25-C=25-12=13=D$`. |
+| <img src="/res/acsl/numsystems/sub2.png" style="width: 200px;"/> | `$7-B$` would get us a negative number, so we need to borrow. `3` becomes a `2`, and `7` becomes `$7+16=23$`. `$23-B=23-11=12=C$`. | <img src="/res/acsl/numsystems/sub5.png" style="width: 200px;"/> | `$3-2=1$`. No borrowing is needed.|
+| <img src="/res/acsl/numsystems/sub3.png" style="width: 200px;"/> | `$2-4$` would get us a negative number, so we need to borrow. `A` becomes a `9`, and `2` becomes `$2+16=18$`. `$18-4=14=E$`. | | |
 
 ## Multiplication
 
@@ -232,12 +232,12 @@ Here's an example (again, this will be in base 16):
 
 | Step | Explanation | Step | <div style="width:250px;">Explanation</div> |
 | --- | --- | --- | --- |
-| <img src="/res/acsl/numsystems/mult1.png" width="175"/> | This is the start of our operation. | <img src="/res/acsl/numsystems/mult7.png" width="175"/> | We now continue to do multiplication with the second digit of `DE`. A zero is automatically placed first just like in normal multiplication. Then, `$D*F=13*15=195$`. `$195/16=12 \; R \, 3$`. `C` is used in place of `12`. |
-| <img src="/res/acsl/numsystems/mult2.png" width="175"/> | `$F*E=15*14=210$`. `$210/16=13 \; R \, 2$`. The `13`, or `D`, is carried. The `2` is put at the bottom. | <img src="/res/acsl/numsystems/mult8.png" width="175"/> | `$(D*4)+C=(13*4)+12=64$`. `$64/16=4 \; R \, 0$`. |
-| <img src="/res/acsl/numsystems/mult3.png" width="175"/> | `$(4*E)+D=(4*14)+13=69$`. `$69/16=4 \; R \, 5$`. The `4` is carried, and the `5` is put at the bottom. | <img src="/res/acsl/numsystems/mult9.png" width="175"/> | `$(D*3)+4=(13*3)+4=43$`. `$56/16=2 \; R \, 11$`. `B` replaces `11`. |
-| <img src="/res/acsl/numsystems/mult4.png" width="175"/> | `$(3*E)+4=(3*14)+4=46$`. `$46/16=2 \; R \, 14$` (or `E` for `14`). | <img src="/res/acsl/numsystems/mult10.png" width="175"/> | `$(B*D)+2=(11*13)+2=145$`. `$145/16=9 \; R \, 1$`.|
-| <img src="/res/acsl/numsystems/mult5.png" width="175"/> | `$(B*E)+2=(11*14)+2=156$`. `$156/16=9 \; R \, 12$` (or `C` for `12`). | <img src="/res/acsl/numsystems/mult11.png" width="250"/> | There are no calculations to do for the extra carried 9, so it is automatically moved to the bottom. |
-| <img src="/res/acsl/numsystems/mult6.png" width="175"/> | There are no calculations to do for the extra carried 9, so it is automatically moved to the bottom. | <img src="/res/acsl/numsystems/mult12.png" width="250"/> | The results are finally added together to get **9B7E82**. |
+| <img src="/res/acsl/numsystems/mult1.png" style="width: 175px;"/> | This is the start of our operation. | <img src="/res/acsl/numsystems/mult7.png" style="width: 175px;"/> | We now continue to do multiplication with the second digit of `DE`. A zero is automatically placed first just like in normal multiplication. Then, `$D*F=13*15=195$`. `$195/16=12 \; R \, 3$`. `C` is used in place of `12`. |
+| <img src="/res/acsl/numsystems/mult2.png" style="width: 175px;"/> | `$F*E=15*14=210$`. `$210/16=13 \; R \, 2$`. The `13`, or `D`, is carried. The `2` is put at the bottom. | <img src="/res/acsl/numsystems/mult8.png" style="width: 175px;"/> | `$(D*4)+C=(13*4)+12=64$`. `$64/16=4 \; R \, 0$`. |
+| <img src="/res/acsl/numsystems/mult3.png" style="width: 175px;"/> | `$(4*E)+D=(4*14)+13=69$`. `$69/16=4 \; R \, 5$`. The `4` is carried, and the `5` is put at the bottom. | <img src="/res/acsl/numsystems/mult9.png" style="width: 175px;"/> | `$(D*3)+4=(13*3)+4=43$`. `$56/16=2 \; R \, 11$`. `B` replaces `11`. |
+| <img src="/res/acsl/numsystems/mult4.png" style="width: 175px;"/> | `$(3*E)+4=(3*14)+4=46$`. `$46/16=2 \; R \, 14$` (or `E` for `14`). | <img src="/res/acsl/numsystems/mult10.png" style="width: 175px;"/> | `$(B*D)+2=(11*13)+2=145$`. `$145/16=9 \; R \, 1$`.|
+| <img src="/res/acsl/numsystems/mult5.png" style="width: 175px;"/> | `$(B*E)+2=(11*14)+2=156$`. `$156/16=9 \; R \, 12$` (or `C` for `12`). | <img src="/res/acsl/numsystems/mult11.png" style="width: 250px;"/> | There are no calculations to do for the extra carried 9, so it is automatically moved to the bottom. |
+| <img src="/res/acsl/numsystems/mult6.png" style="width: 175px;"/> | There are no calculations to do for the extra carried 9, so it is automatically moved to the bottom. | <img src="/res/acsl/numsystems/mult12.png" style="width: 250px;"/> | The results are finally added together to get **9B7E82**. |
 
 ## Division
 
@@ -252,8 +252,8 @@ Now, we can start. Refer to the table below.
 
 | Step | Explanation | Step | <div style="width:300px;">Explanation</div> |
 | --- | --- | --- | --- |
-| <img src="/res/acsl/numsystems/div1.png" width="175"/> | This is the start of our problem. | <img src="/res/acsl/numsystems/div3.png" width="175"/> | `$2_4$` belongs in `$11_4$` two times since `$2_4 * 2_4 = 10_4$`. `10` is subtracted from `11` to get `1`, and the `2` is carried down. |
-| <img src="/res/acsl/numsystems/div2.png" width="175"/> | `$2_4$` belongs in `$3_4$` one time. `1` is put at the top, we do the needed subtraction, and `1` is carried down. We are now left with `11` at the bottom.| <img src="/res/acsl/numsystems/div4.png" width="175"/> | `$2_4$` belongs in `$12_4$` three times. `3` is put at the top, `12` is subtracted from `12` (since $2_4 * 3_4 = 12$), and we are left with a remainder of `0`. |
+| <img src="/res/acsl/numsystems/div1.png" style="width: 175px;"/> | This is the start of our problem. | <img src="/res/acsl/numsystems/div3.png" style="width: 175px;"/> | `$2_4$` belongs in `$11_4$` two times since `$2_4 * 2_4 = 10_4$`. `10` is subtracted from `11` to get `1`, and the `2` is carried down. |
+| <img src="/res/acsl/numsystems/div2.png" style="width: 175px;"/> | `$2_4$` belongs in `$3_4$` one time. `1` is put at the top, we do the needed subtraction, and `1` is carried down. We are now left with `11` at the bottom.| <img src="/res/acsl/numsystems/div4.png" style="width: 175px;"/> | `$2_4$` belongs in `$12_4$` three times. `3` is put at the top, `12` is subtracted from `12` (since $2_4 * 3_4 = 12$), and we are left with a remainder of `0`. |
 
 <br>
 
@@ -275,8 +275,8 @@ Follow the table below:
 
 | Steps | |
 | --- | --- |
-| <img src="/res/acsl/numsystems/prob2-1.png" width="250"/> | <img src="/res/acsl/numsystems/prob2-2.png" width="250"/> |
-| <img src="/res/acsl/numsystems/prob2-3.png" width="250"/> | <img src="/res/acsl/numsystems/prob2-4.png" width="250"/> |
+| <img src="/res/acsl/numsystems/prob2-1.png" style="width: 250px;"/> | <img src="/res/acsl/numsystems/prob2-2.png" style="width: 250px;"/> |
+| <img src="/res/acsl/numsystems/prob2-3.png" style="width: 250px;"/> | <img src="/res/acsl/numsystems/prob2-4.png" style="width: 250px;"/> |
 
 ## 3. Evaluate the following expression: `$7176_8 * 6_8$`.
 
@@ -284,8 +284,8 @@ Follow the table below:
 
 | Steps | | |
 | --- | --- | --- |
-| <img src="/res/acsl/numsystems/prob3-1.png" width="250"/> | <img src="/res/acsl/numsystems/prob3-2.png" width="250"/> | <img src="/res/acsl/numsystems/prob3-3.png" width="250"/> |
-| <img src="/res/acsl/numsystems/prob3-4.png" width="250"/> | <img src="/res/acsl/numsystems/prob3-5.png" width="250"/> | |
+| <img src="/res/acsl/numsystems/prob3-1.png" style="width: 250px;"/> | <img src="/res/acsl/numsystems/prob3-2.png" style="width: 250px;"/> | <img src="/res/acsl/numsystems/prob3-3.png" style="width: 250px;"/> |
+| <img src="/res/acsl/numsystems/prob3-4.png" style="width: 250px;"/> | <img src="/res/acsl/numsystems/prob3-5.png" style="width: 250px;"/> | |
 
 ## 4. Solve for `x` in the following equation: `$275_x=360_7$`.
 
