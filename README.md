@@ -9,8 +9,6 @@ Please contribute to the resources folder!
 - Kelly Hong - Heavy Contributor to Resources
 - Kenneth Zhao - Heavy Contributor to Resources
 - Anton Barchukov - Navbar from old website
-- Kenneth Zhao - Contributor to Resources
-- Kelly Hong - Contributor to Resources
 - Nihal Shivannagari - Contributor to Resources
 - Nishikar Paruchuri - Contributor to Resources
 
