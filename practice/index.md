@@ -13,14 +13,14 @@ We will be keeping track of who does and who doesn't do their practice. This wil
 for who to bring to programming competitions and who to put on the senior team for ACSL, as students who
 do their work are most likely much more motivated and prepared for these events.
 
-##Contents
+## Contents
 
 Practice will usually consist of a few (*probably* around 5-6) short-answer problems relating to our short-answer topic.
 We will also add some more optional problems (probably without solutions, just answers) that you can do if you feel like it.
 
 We will also include a brief programming problem. These will not be too difficult, and will not take that long.
 
-##Submission
+## Submission
 
 Submission will be through a Google form. The link will be provided on the problems page.
 You will also submit your programming problem as a file through the Google form.
