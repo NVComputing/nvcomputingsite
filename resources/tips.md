@@ -17,7 +17,7 @@ Think of time and space efficiency (read [this page](/resources/efficiency) for 
 
 - Always keep your eye out for where you can use data structures. Sometimes a problem will explicity state that a data structure needs to be used, and sometimes you will have to infer it.
 
-- Dynamic programming can help avoid unnecessary repitition, typically recursion. You may have learned the basics of this when finding fibonacci numbers, and would have to use this during a floodfill algorithm. Dynamic programming is any change to an algorithm that avoids running repetitive code. In the fibonacci series, this would be adding up the first n numbers, which runs is O(n), versus calling a recusive method which adds up the n-1th number and the n-2th number, which runs is O(`$\p^{n}$`) where `$\phi$` is the golden ratio.
+- Dynamic programming can help avoid unnecessary repitition, typically recursion. You may have learned the basics of this when finding fibonacci numbers, and would have to use this during a floodfill algorithm. Dynamic programming is any change to an algorithm that avoids running repetitive code. In the fibonacci series, this would be adding up the first n numbers, which runs is O(n), versus calling a recusive method which adds up the n-1th number and the n-2th number, which runs is O(`$phi^n$`) where `$phi$` is the golden ratio.
 
 - Methods can help avoid repeating code, make your code neater, and are easier to debug. These things can be really important when time is of the essence to finish a contest.
 
