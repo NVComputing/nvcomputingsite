@@ -1,11 +1,11 @@
 # Solutions to Past Programming Problems
 ## Available Problems
-- [Example <font color=#935000>(<i>Difficulty</i>)</font>](#Example)
+- [Example (<span color=#935000>*Difficulty*</span> )](#Example)
 ##Example
 
 Link: [Problem](codeforces.com)
 
-Solution (in <font color=#935000><i>language used </i></font>):
+Solution (in <span color=#935000>*language used*</span>):
 ```java
 //The example is in Java for simplicity.
 import java.util.*;
@@ -20,9 +20,9 @@ public class Solution
 ```
 What this code does:
 
-<font color=#935000><i>This will try to explain the solution in plain English.</i></font>
+<span color=#935000>*This will try to explain the solution in plain English.*</span>
 
 Efficiency:
-<font color=#935000><i>This will be written in big O notation. More information about big O notation can be found [here](/resources/efficiency).</i></font>
+<span color=#935000>*This will be written in big O notation. More information about big O notation can be found [here](/resources/efficiency).*</span>
 
   
