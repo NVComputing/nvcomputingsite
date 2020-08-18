@@ -5,7 +5,7 @@
 
 Link: [Problem](codeforces.com)
 
-Solution (in <font color=#935000><i>language used</i></font>):
+Solution (in <font color=#935000><i>language used </i></font>):
 ```java
 //The example is in Java for simplicity.
 import java.util.*;
@@ -13,6 +13,7 @@ public class Solution
 {
     public static void main(String args[])
     {
+        Scanner sc=new Scanner(System.in);
         System.out.println(sc.nextInt());
     }
 }
