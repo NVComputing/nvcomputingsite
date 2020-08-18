@@ -9,8 +9,8 @@ Please contribute to the resources folder!
 - Anton Barchukov - Navbar from old website
 - Kenneth Zhao - Contributor to Resources
 - Kelly Hong - Contributor to Resources
-- Nihal Shivannagari - Contributor to Resources
-- Nishikar Paruchuri - Contributor to Resources
+- Nihal Shivannagari - Overweight Contributor to Resources
+- Nishikar Paruchuri - Underappreciated Contributor to Resources
 
 # Guide to Contributing to Resources
 To contribute to resources, simply add your Markdown (`.md`) files to the `markdown` folder. 
