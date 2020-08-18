@@ -23,6 +23,6 @@ What this code does:
 <font color=#935000><i>This will try to explain the solution in plain English.</i></font>
 
 Efficiency:
-<font color=#935000><i>This will be written in big O notation.</i></font>
+<font color=#935000><i>This will be written in big O notation. More information about big O notation can be found [here](/resources/efficiency).</i></font>
 
   
