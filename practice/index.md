@@ -3,9 +3,9 @@
 [Solutions to Past Programming Problems](/practice/past-problems)
 ##This Week's Homework
 
-Google form: <font color=#935000><i>Currently Unavailable</i></font>
+Google form: <span style="color: #935000">*Currently Unavailable*</span>
 
-Programming Question Link: <font color=#935000><i>Currently Unavailable</i></font>
+Programming Question Link: <span style="color: #935000">*Currently Unavailable*</span>
 
 ## Do your practice!
 
