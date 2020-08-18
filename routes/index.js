@@ -9,4 +9,6 @@ module.exports.set = (app) => {
 	resources.set(app);
 	practice.set(app);
 	contact.set(app);
+
+	console.log("Router endpoints registered.");
 }

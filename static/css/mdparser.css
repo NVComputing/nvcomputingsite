@@ -54,7 +54,18 @@ mjx-stretchy-h {
 .inline-latex {
 	color: #fff !important;
 	font-size: inherit !important;
+	background: none !important;
 }
 .table-wrapper {
 	overflow-x: auto;
+}
+
+img {
+	max-width: 80vw;
+}
+
+@media (max-width: 768px) {
+	h3 > .inline-latex {
+		font-size: 3.5vw !important;
+	}
 }
