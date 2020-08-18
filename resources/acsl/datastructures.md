@@ -24,13 +24,13 @@
 
 # Introduction
 
-Data structures are an integral part of efficient algorithms. When you have 
-a large amount of data to work with, data structures help you keep organized and 
+Data structures are an integral part of efficient algorithms. When you have
+a large amount of data to work with, data structures help you keep organized and
 manage everything properly; knowing the right data structure to use will ensure you don't waste resources
 when running your program.
 
-ACSL specifically focuses on stacks, queues, binary search trees, and priority 
-queues. The general idea behind each is covered but not the actual details 
+ACSL specifically focuses on stacks, queues, binary search trees, and priority
+queues. The general idea behind each is covered but not the actual details
 regarding how to implement them in programs.
 
 For programming, there is a much more useful section on data structures (TODO).
@@ -41,16 +41,16 @@ For programming, there is a much more useful section on data structures (TODO).
 
 ## Stacks
 
-Stacks are generally used to save information to be processed later on. This applies 
-to recursion (when a function calls on itself); the inner function call comes after 
-the actual function call but is processed first. 
+Stacks are generally used to save information to be processed later on. This applies
+to recursion (when a function calls on itself); the inner function call comes after
+the actual function call but is processed first.
 
-Stacks work in a "last in, first out" (LIFO) order. They support two operations, PUSH 
+Stacks work in a "last in, first out" (LIFO) order. They support two operations, PUSH
 and POP. PUSH takes in a key, which is essentially a parameter, to insert at the top of
-the stack. So, `PUSH("A")` would add the key "A" to the top of the stack. POP is a bit 
-different, as it is written as `X = POP()`. What this does is that it removes the top 
-element in the stack and stores it in variable X. So, if there was a stack with its 
-top element being "E", then writing `H = POP()` would store "E" in H. 
+the stack. So, `PUSH("A")` would add the key "A" to the top of the stack. POP is a bit
+different, as it is written as `X = POP()`. What this does is that it removes the top
+element in the stack and stores it in variable X. So, if there was a stack with its
+top element being "E", then writing `H = POP()` would store "E" in H.
 
 In the case that the POP operation is called on an empty stack, then the variable is given the special value NIL, which means "nonexistent".
 
@@ -74,7 +74,7 @@ So, in the following table below, 7 is the root. 7, 2, and 9 are all parent node
 
 ## Binary Search Trees
 
-Binary search trees are one way to store items in a particular order. They can efficiently insert, delete, and look for items within the tree. 
+Binary search trees are one way to store items in a particular order. They can efficiently insert, delete, and look for items within the tree.
 
 Each node can have a total of two children. The left child must be less than or equal in value, whereas the right child must be greater in value. With numbers, this is easy enough; as for alphabet letters, they are considered to be "less than" another letter if they come earlier in the alphabet. So, for example, A < E.
 
@@ -99,7 +99,7 @@ In the case that a node needs to be deleted, this generally involves some minor 
 | --- | --- | --- |
 | | <img src="/res/acsl/datastructures/delete0.png" style="width: 150px;"> | *I* has been removed. Since it had *no* children, no shifts needed to be made.
 | <img src="/res/acsl/datastructures/insert8.png" style="width: 150px;"> | <img src="/res/acsl/datastructures/delete1.png" style="width: 150px;"> | *R* has been removed. Since it had *1* child, that child was moved up to be on the right of *M*. Since *N* comes after *M*, this shift is valid. |
-| | <img src="/res/acsl/datastructures/delete2.png" style="width: 150px;"> | *M* has been removed. So, the left branch of *M* is moved up to take *M*'s place. *M*'s right branch is placed to the right of that branch. |            
+| | <img src="/res/acsl/datastructures/delete2.png" style="width: 150px;"> | *M* has been removed. So, the left branch of *M* is moved up to take *M*'s place. *M*'s right branch is placed to the right of that branch. |
 
 ### Searching for Nodes
 
@@ -123,19 +123,19 @@ So, searching first starts at the root of the tree and works its way down, movin
 
 <img src="/res/acsl/datastructures/insert8.png" alt="insert" height="150">
 
-First, *p* is set to the root, *A*. *x* holds the value we are trying to find, *E*. 
+First, *p* is set to the root, *A*. *x* holds the value we are trying to find, *E*.
 
-Then, we move on to the while loop, whose conditions have both been met. In this loop, since *E* > *p*'s key, *p* is then set to equal *M*. The cycle then ends, and we start the loop anew. This time, *E* < *p*'s key, so *p* is now set to equal *E*. Note that the while loop does not stop here! Instead, it would traverse through the loop once again and then execute the "else" statement to make *found = TRUE*. 
+Then, we move on to the while loop, whose conditions have both been met. In this loop, since *E* > *p*'s key, *p* is then set to equal *M*. The cycle then ends, and we start the loop anew. This time, *E* < *p*'s key, so *p* is now set to equal *E*. Note that the while loop does not stop here! Instead, it would traverse through the loop once again and then execute the "else" statement to make *found = TRUE*.
 
 So, by following this pseudocode, we have now successfully found our desired node.
 
 ## Classifying Trees Further
 
-We've worked with the *AMERICAN* binary search tree for quite a while, and now let's analyze it a bit more just for good measure. 
+We've worked with the *AMERICAN* binary search tree for quite a while, and now let's analyze it a bit more just for good measure.
 
-### Balanced Trees 
+### Balanced Trees
 
-If we were to compare the left and right branches of the root, we can see that the left branch has significantly less nodes to work with, thus making the tree very unbalanced. The more unbalanced a tree is, the longer it takes to search for a node. 
+If we were to compare the left and right branches of the root, we can see that the left branch has significantly less nodes to work with, thus making the tree very unbalanced. The more unbalanced a tree is, the longer it takes to search for a node.
 
 Let's compare these two images:
 
@@ -149,7 +149,7 @@ There is some leeway given to balanced trees; as long as the left and right bran
 
 <img src="/res/acsl/datastructures/balancedleeway.png" style="width: 250px;" alt="balanced leeway"/>
 
-Although the tree leans more to the left subbranch, which has 4 elements compared to 2 in the right subbranch, this is still considered balanced as they only differ in 1 node layer overall. 
+Although the tree leans more to the left subbranch, which has 4 elements compared to 2 in the right subbranch, this is still considered balanced as they only differ in 1 node layer overall.
 
 ### Full vs Complete Trees
 
@@ -200,7 +200,7 @@ Take this table as an example on how to implement *AMERICAN* with a min-heap:
 
 ## Deleting Nodes
 
-Just as a reminder, only the root can be deleted! To do so, replace the root with the rightmost node in the last node. Then, keep switching out the root with its smaller child (or larger child, if using max-heap) until the tree is finally valid. Make sure to make adjustions to the rest of the tree if needed. 
+Just as a reminder, only the root can be deleted! To do so, replace the root with the rightmost node in the last node. Then, keep switching out the root with its smaller child (or larger child, if using max-heap) until the tree is finally valid. Make sure to make adjustions to the rest of the tree if needed.
 
 In the case that both of the root's children are smaller than the root itself, then choose the smallest child to replace the root with; of course, for max-heap, it would be that if both children are larger than the root, then the larger child should replace the root.
 

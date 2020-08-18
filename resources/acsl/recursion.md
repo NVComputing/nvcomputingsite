@@ -52,7 +52,7 @@ int pow_recursion(int x, int y) {
 Here, The two if conditions both represent a base case; when `y` is a certain value, then the
 function will no longer continue to call on itself and will instead return a constant value.
 
-Now, let's discuss a few "types" of recursion. 
+Now, let's discuss a few "types" of recursion.
 
 *Indirection recursion* is when function A calls
 on another function, function B, which eventually calls on function A again.
@@ -79,7 +79,7 @@ The Fibonacci sequence is a famous sequence that goes like so:
 
 The first two numbers in the sequence are 0 and 1 respectively. After that, every number is the
 sum of the preceding two numbers. So, the third number would be `$0+1=1$`. The fourth number
-would be `$1+1=2$`. 
+would be `$1+1=2$`.
 
 So, overall, the list is 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, etc.
 
@@ -211,7 +211,7 @@ and the stack literally overflows.
 
 ## Trees
 
-This method is handy for dealing with multiple recursion. The Fibonacci sequence is a good 
+This method is handy for dealing with multiple recursion. The Fibonacci sequence is a good
 example. Let's refer back to this equation:
 
 ### `$\begin{equation*}f(n) = \begin{cases}n &\text{if $n \leq 1$}\\f(n-1)+f(n-2) &\text{if $n > 1$}\end{cases}\end{equation*}$`
@@ -311,7 +311,7 @@ For this question, we will write equations to get our answer.
 
 Hence, `$f(13) = f(17) = 16$`.
 
-`$f(6) = f(16 - 16) = f(0)$`. 
+`$f(6) = f(16 - 16) = f(0)$`.
 
 `$f(0) = 4 * 0^2 = 0$`. So, our final answer is `0`.
 
@@ -332,16 +332,16 @@ answer is `11`.
 
 ## 4. If the following algorithm is applied to a square with a side of 16 feet, how many square feet will be painted? (This is from the ACSL Wiki):
 
-1. Given a square. 
-2. If the length of a side is less than 2 feet, then stop. 
-3. Divide the square into 4 equal size squares (i.e., draw a “plus” sign inside the square). 
-4. Paint one of these 4 small squares. 
+1. Given a square.
+2. If the length of a side is less than 2 feet, then stop.
+3. Divide the square into 4 equal size squares (i.e., draw a “plus” sign inside the square).
+4. Paint one of these 4 small squares.
 5. Repeat this procedure (start at step 1) for each of the 3 unpainted squares.
 
 This problem gives you a glance at a pseudocode, non-mathematical or programming-related
 recursive algorithm.
 
-Don't bother writing out a mathematical or programming function (unless you 
+Don't bother writing out a mathematical or programming function (unless you
 really want to). Instead, just follow the steps like you would if you were trying to build
 IKEA furniture or a LEGO set.
 

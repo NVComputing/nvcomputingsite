@@ -6,7 +6,7 @@
 - [Why use streams?](#whyusestreams)
 - [When shouldn't you use streams?](#whenshouldntyouusestreams)
 - [How to use streams](#howtousestreams)
-    1. [Stream Creation](#operation1streamcreation) 
+    1. [Stream Creation](#operation1streamcreation)
     2. [Intermediate Operations](#operation2intermediateoperations)
     3. [Terminal Operations](#operation3terminaloperations)
 - [Putting it all together](#puttingitalltogether)
@@ -69,12 +69,12 @@ the .stream() method on it.
 ```java
 Stream<String> stream = list.stream();
 ```
-		
+
 To get a stream from an array, call the Arrays.stream() method on it.
 ```java
 Stream<String> stream2 = Arrays.stream(list2);
 ```
-		
+
 At this point in time, these two streams (stream1 and stream2) are basically identical. Let's move on to step 2.
 
 <br>
@@ -116,7 +116,7 @@ with the result of the method called ON the array.
 
 (Note that this can be shortened to `stream2.map(String::toUpperCase)`. Read the part about method references
 in anonymous functions.)
- 
+
 This example specifically calls the toUpperCase method on every string.
 After this, the contents of stream2 become "FOO", "BAR", and "FOOBAR".
 

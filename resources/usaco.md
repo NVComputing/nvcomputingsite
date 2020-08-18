@@ -130,7 +130,7 @@ To pass, you must know:
 *   Shortest Path Algorithms
 *   Occasional use of Number Theory
 ## Platinum
-This level is ridiculously difficult: if you score a perfect score in this during the US Open, you are essentially guaranteed a position in the 4 person US national team which competes in IOI (this is much more prestigious than ACSL and is practically a ticket to any college you want). 
+This level is ridiculously difficult: if you score a perfect score in this during the US Open, you are essentially guaranteed a position in the 4 person US national team which competes in IOI (this is much more prestigious than ACSL and is practically a ticket to any college you want).
 It is the computing equivalent of making USAMO.
 To be successful in this level, you need to:
     *   Have a sophisticated understanding of how computing functions
@@ -156,7 +156,7 @@ See the input/output document for language-specific details on inputting / outpu
 
 # Efficiency
 
-When coding at a higher level, there are typically two different types of solutions. There are the efficient solutions and the naive solutions. Efficient solutions are typically better at managing time complexity, but it can also be better at managing space complexity. Naive solutions typically use either brute force or require far more computation to come up with a solution. 
+When coding at a higher level, there are typically two different types of solutions. There are the efficient solutions and the naive solutions. Efficient solutions are typically better at managing time complexity, but it can also be better at managing space complexity. Naive solutions typically use either brute force or require far more computation to come up with a solution.
 
 This can work for earlier test cases in USACO, but as the values and parameters get larger, they take longer and longer to run.
 

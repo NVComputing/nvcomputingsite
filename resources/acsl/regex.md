@@ -18,7 +18,7 @@ expression (or RegEx for short) is the algebraic representation of an FSA.
 
 In less abstract terms, a regular expression is a *description for a pattern of text*.
 
-Regular expressions are helpful when it comes to checking for certain patterns. With patterns, 
+Regular expressions are helpful when it comes to checking for certain patterns. With patterns,
 you can do many things such as complex replacing (way more powerful than Ctrl+F), extremely simple input validation, finding
 specific patterns amongst extremely large amounts of data very quickly, and data extraction / parsing.
 You can also write cool, unintelligible expressions like
@@ -35,8 +35,8 @@ In ACSL, FSAs will be limited to parsing strings.
 
 # Understanding FSAs
 
-In a FSA, there are *states*, which are marked as circles. Only one of these states can be 
-*active*. All that really means is that the state you are currently at is "in use", and thus 
+In a FSA, there are *states*, which are marked as circles. Only one of these states can be
+*active*. All that really means is that the state you are currently at is "in use", and thus
 active.
 
 The *initial state* has an arrow pointing toward it from nowhere (i.e. this arrow does not come from any other
@@ -57,7 +57,7 @@ itself.
 To go from state A to state B, the FSA must "see" the letter *x* in the input String. Then,
 when it gets to state B, there are two options. If the FSA sees an *x*, then *B* will stay as
 the active state; if it sees a *y*, then the FSA will move to *C*, which becomes the new active
-state. Any additional *y*(s) will keep *C* as the active state. 
+state. Any additional *y*(s) will keep *C* as the active state.
 
 Once the string has been completely processed, it will be deemed as **accepted** by the FSA
 as long as the FSA is at the final state.
@@ -77,11 +77,11 @@ are a few things to keep in mind:
     * `$ab$` - This is just *a* followed by *b*; it does not mean *and* like it would in boolean algebra. The proper term for this would be **concatenation**.
     * `$a\cup b$` or `$a\,|\,b$` - This stands for *a or b*. The proper term for this is *union*. (In almost every programming language or sensible implementation of regex, the pipe symbol `|` is used.)
     * `$a*$` - This is *a* repeated 0 or more times. This is known as *closure*, or the *Kleene star* (named after Stephen Cole Kleene, the computer scientist who invented regular expressions and helped establish recursion theory).
-    
+
 As always, order of precedence still exists. It goes: Kleene star, concatenation, and then union.
 
 Parentheses still hold the highest priority. For example, <code class="regex language-regex">dca*b</code> would produce strings like
-`dcb`, `dcab`, `dcaaaab`, and so on. On the other hand, <code class="regex language-regex">d(ca)*b</code> would produce `db`, `dcab`, 
+`dcb`, `dcab`, `dcaaaab`, and so on. On the other hand, <code class="regex language-regex">d(ca)*b</code> would produce `db`, `dcab`,
 `dcacacab`, etc.
 
 <br>
@@ -218,14 +218,14 @@ We'll check every individual location to see if it's a number or a dash.
 ```java
 public static boolean isPhoneNumber(String str) {
     String numbers = "1234567890";
-    
+
     if(str.length() != 12) {
         return false;
     }
     if (!str.substring(3, 4).equals("-") || !str.substring(7, 8).equals("-")) {
         return false;
     }
-    
+
     for(int i = 0; i < 3; i++) {
         if(!numbers.contains(str.substring(i, i + 1))) {
             return false;
@@ -326,7 +326,7 @@ backslash in Java regex requires `\\\\`.)
 First off, one choice that we can eliminate immediately is #5 because null strings `λ` are valid matches;
 the other 4 choices don't accept `λ` as a match.
 
-Also, notice that #2 will always display an `a` at the end regardless of the OR in the 
+Also, notice that #2 will always display an `a` at the end regardless of the OR in the
 parentheses. The other 3 choices don't have to display an `a` at the end (they can, but they don't *have* to).
 So, we can eliminate #2.
 
@@ -335,7 +335,7 @@ However, their third OR alternative differs; #3 has `$a\,a\,b\,a$` whereas #4 ha
 `$a\,a\,b*a$`. So, #3 and #4 must not be equivalent.
 
 So, the question now is, are #1 and #3 identical? Or is it #1 and #4? What we can do is list out
-what strings #1 can display. 
+what strings #1 can display.
 
 Here are the possible strings for #1 (we'll use a table to separate each subexpression).
 | 1 | 2 | 3 | Final Result |
@@ -395,7 +395,7 @@ Here is a brief description of how you might do this intuitively:
 | `ababbaab` | `ab` literally, `b` must be 0 times, don't match optional `a` (to avoid failing next part), `a` literally, last part can't match remaining `bbaab` |
 | `ababa` | `ab` literally, `b` must be 0 times, don't match optional `a` (to avoid failing next part), `a` literally, last part can't match remaining `ba` |
 | `aaabb` | can't match `ab` literally |
-| `abbbbab` | `ab` literally, `b` 3 times, don't match optional `a` (to avoid failing next part), `a` literally, last part matches remaining `b`  | 
+| `abbbbab` | `ab` literally, `b` 3 times, don't match optional `a` (to avoid failing next part), `a` literally, last part matches remaining `b`  |
 | `abbaababbaa` | `ab` literally, `b` 1 time, match optional `a`, `a` literally, last part can't match remaining `babbaa` |
 
 ## 3. Determine what strings would be accepted by the following FSA. Make your answer general. (So basically, give us a regular expression.)
@@ -422,15 +422,15 @@ So, we would have <code class="regex language-regex">10*11((01*)|0*)10*0</code> 
 5. None of the above
 
 For this problem, it would be easier to analyze the FSA rather than looking at the strings
-one by one. In this FSA, there are two unions that we would have to keep in mind. 
+one by one. In this FSA, there are two unions that we would have to keep in mind.
 
 Regardless of what "path" is taken, *a* would always start the string. Now, we have a union; we
-can analyze the two subpaths separately. The upper path would produce either <code class="regex language-regex">ba*abaa</code> or 
-<code class="regex language-regex">ba*aaba</code>; we can write this as <code class="regex language-regex">ba*a(ab|ba)a</code>. 
+can analyze the two subpaths separately. The upper path would produce either <code class="regex language-regex">ba*abaa</code> or
+<code class="regex language-regex">ba*aaba</code>; we can write this as <code class="regex language-regex">ba*a(ab|ba)a</code>.
 
 The lower path would produce <code class="regex language-regex">aba*ab</code>.
 
-Now, we can put these together to get our overall regex of <code class="regex language-regex">a((ba*a(ab|ba)a)|(aba*ab))</code>. 
+Now, we can put these together to get our overall regex of <code class="regex language-regex">a((ba*a(ab|ba)a)|(aba*ab))</code>.
 Note how many parentheses were used to clarify what the different union alternatives are. This
 regex matches what is written for #3; hence, #3 is our answer.
 

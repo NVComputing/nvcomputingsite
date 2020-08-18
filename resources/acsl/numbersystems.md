@@ -33,7 +33,7 @@ Just as a summary, binary is base 2, octal is base 8, decimal is base 10, and he
 base 16.
 
 All of these bases have a range that their digits work in. For example, for decimal
-base numbers, the digits range from `0` to `9`; having a digit of `10` would not make 
+base numbers, the digits range from `0` to `9`; having a digit of `10` would not make
 much sense.
 
 Binary digits has a range of `[0, 1]`, octal with a range of `[0, 7]`, decimal with
@@ -45,8 +45,8 @@ With these ranges, notice that the upper bound is one less than the base; so, wi
 which is base 2, the upper bound is `$2 - 1 = 0$`. Also notice that all of them have a
 lower bound of 0.
 
-Moving on, a group of 3 bits make up a single octal digit; this is because `$111_2 = 
-((1*2^2)+(1*2^1)+(1*2^0))_{10} = (4 + 2 + 1)_{10} = 7_{10}$`, which is the upper bound for the 
+Moving on, a group of 3 bits make up a single octal digit; this is because `$111_2 =
+((1*2^2)+(1*2^1)+(1*2^0))_{10} = (4 + 2 + 1)_{10} = 7_{10}$`, which is the upper bound for the
 octal base. Similarly, a group of 4 bits make up a single hex digit; this is because
 `$1111_2 = ((1*2^3)+(1*2^2)+(1*2^1)+(1*2^0))_{10} = (8 + 4 + 2 + 1)_{10} = 15_{10}$`, which
 is the upper bound for the hex base.
@@ -55,10 +55,10 @@ How bases essentially work is like this:
 
 Say we have the number `$167_{10}$`. We refer to `7` as the ones digits, `6` as the tens
 digit, and `1` as the hundreds digit. In fact, `$167_10$` can be written as
-`$((1*100)+(6*10)+(7*1))_{10}$`, or `$((1*10^2)+(6*10^1)+(7*10^0)_{10})$`. 
+`$((1*100)+(6*10)+(7*1))_{10}$`, or `$((1*10^2)+(6*10^1)+(7*10^0)_{10})$`.
 
 A similar idea applies to other bases. Let's say we have `$01101_2$`. However,
-instead of multiplying each digit by 10 to a certain power, we would multiply it by 
+instead of multiplying each digit by 10 to a certain power, we would multiply it by
 2 to a certain power since that's the base we're working with instead. So, `$01101_2$`
 is technically `$(0*2^4)+(1*2^3)+(1*2^2)+(0*2^1)+(1*2^0) = 0+8+4+0+1 = 13$`, although
 the `13` would be in base 10. While this evaluation used powers of 2, the overall
@@ -90,14 +90,14 @@ number to base 10. Here are step-by-step instructions:
 1. Look at what base you are currently in.
 2. Starting with the rightmost digit, multiply that digit by `$(base)^0$`.
 3. Move left one digit (if there is another digit) and multiply that digit by `$(base)^1$`.
-4. Work in a similar pattern to Step 3. However, `$(base)^1$` should "increment" to `$(base)^2$`, then `$(base)^3$`, etc. 
+4. Work in a similar pattern to Step 3. However, `$(base)^1$` should "increment" to `$(base)^2$`, then `$(base)^3$`, etc.
 5. Add up all of the products to get your desired decimal number.
 
 To convert from base 10 to a different base, there is a different process involved. I will convert
 the number `$12_{10}$` to binary as an example.
 
 First off, I will consider what the biggest power of 2 that can fit into `12` would be. `$2^3$`
-is `8`, which fits. `$2^4$` is `16`, which is too big; so, we will stick with `$2^3$`. I will 
+is `8`, which fits. `$2^4$` is `16`, which is too big; so, we will stick with `$2^3$`. I will
 then draw a few slots, which I will later fill in:
 
 Number: ___ ___ ___ ___
@@ -121,7 +121,7 @@ about. Remember the fact that 3 bits represent an octal digit, and 4 bits repres
 
 To convert from binary to octal, make groups of 3 from right to left; if there are not enough
 bits, then just add zeros on the left. Afterwards, evaluate each of those 3-bit groups in base 10.
-These new numbers will be the digits of your octal number. 
+These new numbers will be the digits of your octal number.
 
 Let's use an example, `$1111011_2$`, to prove this. So, we would make the groups `001`, `111`,
 and `011` first. These would evaluate to `1`, `7`, and `3`. So, our octal number is `$173_8$`.
@@ -139,7 +139,7 @@ which again, represent 10-15.
 These are not frequently tested, but we will cover them here just in case.
 
 To convert a fraction to base 10, it is relatively easy. When we look at decimal numbers like
-`256.3`, we would describe the `3` as the tenths place. This can also be conveyed as 
+`256.3`, we would describe the `3` as the tenths place. This can also be conveyed as
 `$3*10^{-1}$`. We will use this knowledge in our conversions.
 
 First off, you will want to convert the fraction into a decimal for better viewing. With normal
@@ -157,7 +157,7 @@ multiply this number by 2 (to be more general, the base that it's currently in);
 `1.75`. However, instead of writing down `1.75`, we will want to write down the result of
 `$1.75 % 2$`, which is still `1.75` (in this case). We will now multiply this number by 2 again
 to get `3.5`. We will want to write down `$3.5 % 2$`, which is `1.5`. This process continues
-until we get a remainder of 0. 
+until we get a remainder of 0.
 
 For this sample problem, here's a summary of the steps we took:
 
@@ -180,12 +180,12 @@ If we were to generalize this entire process, we would have the following instru
 In the case that you have a mixed fraction, such as `19 4/5`, you would want to convert the whole
 and fraction part separately. Then, add together their results to get your final converted number.
 
-<br> 
+<br>
 
 # Arithmetic for Numbers in Other Bases
 
 Arithmetic in other bases is similar to what we would do with numbers in the decimal base.
-However, we have to keep in mind the different ranges that different bases work in. Also, 
+However, we have to keep in mind the different ranges that different bases work in. Also,
 arithmetic should be done between numbers in the same base; if they are not, then be sure to
 make any needed base conversions before doing the arithmetic.
 
@@ -210,7 +210,7 @@ Here's an example (this will be in base 16):
 
 ## Subtraction
 
-Subtraction is very similar to decimal subtraction. However, when you need to borrow from the 
+Subtraction is very similar to decimal subtraction. However, when you need to borrow from the
 next digit, you would add the base number and not 10. The next digit would still decrement by
 1 though.
 
@@ -225,7 +225,7 @@ Here's an example (this will also be in base 16):
 ## Multiplication
 
 Multiplication is done in a similar manner to addition. First, you multiply as normal. If the
-product is outside of the base's range, then divide the number by the base. The quotient is 
+product is outside of the base's range, then divide the number by the base. The quotient is
 carried while the remainder becomes the new digit.
 
 Here's an example (again, this will be in base 16):
@@ -246,7 +246,7 @@ With division, the process of finding how many times the divisor fits into the d
 I will jump right into an example, as it is easier to demonstrate while explaining for division in particular. We will
 do the operation, `$312_4 / 2_4$`. First off, we must remember what range of numbers we can work with: [0, 3]. What
 would also be useful is to list out the results of `$2_4 \bullet 1_4$`, `$2_4 \bullet 2_4$`, and `$2_4 \bullet 3_4$`
-(which are `$2_4$`, `$10_4$`, and `$12_4$` respectively). 
+(which are `$2_4$`, `$10_4$`, and `$12_4$` respectively).
 
 Now, we can start. Refer to the table below.
 

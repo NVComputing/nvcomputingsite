@@ -1,6 +1,6 @@
 # Graph Theory
 
-## Contents 
+## Contents
 - [Introduction](#introduction)
 - [Terminology](#terminology)
 - [Classifying Graphs](#classifyinggraphs)
@@ -18,7 +18,7 @@
 
 # Introduction
 
-In real life, connections can be made in numerous situations such as subway routes connecting one city to another. 
+In real life, connections can be made in numerous situations such as subway routes connecting one city to another.
 Graphs can be used to model these connections.
 
 <br>
@@ -39,11 +39,11 @@ So, rather than defining the graph above by giving its visual, it would be bette
 is {A, B, C, D, E, F, G}, and its set of edges is {AB, AD, BD, CF, FG, GH, GE, HE}.
 
 A *path* in a graph is a list of successive vertices connected by edges in a graph. The vertices should be listed
-in the order that they are traveled in to make the path. For example, FGHE and FGE are both valid paths for going 
+in the order that they are traveled in to make the path. For example, FGHE and FGE are both valid paths for going
 from vertex F to vertex E in the above graph.
 
-A *simple path* is a path with no vertex repeated. FGHE is an example of a simple path. The opposite of a simple path 
-would be a *cycle*, a path where the first and last vertex are the same (essentially a path that points back to 
+A *simple path* is a path with no vertex repeated. FGHE is an example of a simple path. The opposite of a simple path
+would be a *cycle*, a path where the first and last vertex are the same (essentially a path that points back to
 itself). ABDA is an example of a cycle. The same cycle can be depicted in multiple ways; for example, BDAB is the same
 as ABDA except that it starts on a different vertex.
 
@@ -118,22 +118,22 @@ To start off, our template matrix would look like so:
 
 | | A | B | C |
 | --- | --- | --- | --- |
-| A | | | | 
-| B | | | | 
+| A | | | |
+| B | | | |
 | C | | | |
 
 Note that the letters are simply written as a reference; they are not part of the actual matrix.
 
 Then, we fill out our matrix with 0s and 1s, with 1 standing for if an edge between two specific vertices, from
-the vertex in the column to the vertex in the row, exists. So, for example, in the top right empty box, this would 
+the vertex in the column to the vertex in the row, exists. So, for example, in the top right empty box, this would
 be filled out with a 1 because there is indeed an edge that goes from A to C.
 
 So, the rest of the matrix will be filled out as follows:
 
 | | A | B | C |
 | --- | --- | --- | --- |
-| A | 1 | 0 | 1 | 
-| B | 0 | 1 | 1 | 
+| A | 1 | 0 | 1 |
+| B | 0 | 1 | 1 |
 | C | 1 | 0 | 0 |
 
 <br>
@@ -141,7 +141,7 @@ So, the rest of the matrix will be filled out as follows:
 ## Powers of a Matrix
 
 Before moving to adjacency matrices, it is crucial that you know how to find the power of a matrix, which is just
-multiplying a matrix by itself a certain number of times. If you already know how to do so, please feel free to 
+multiplying a matrix by itself a certain number of times. If you already know how to do so, please feel free to
 skip to the next section.
 
 Let's say that we have two matrices, A and B. A is a 2 x 3 matrix, whereas 3 x 2 matrix. If we were to multiply these
@@ -152,7 +152,7 @@ must match the number of rows in the second matrix for matrix multiplication to 
 Now, for actually multiplying matrices, you will need to use the *dot product*. Let's specify matrices A and B a bit
 further:
 
-| A | | |                      
+| A | | |
 | --- | --- | --- |
 | 1 | 2 | 3 |
 | 4 | 5 | 6 |
@@ -165,9 +165,9 @@ further:
 
 To start off, we will work with the first row of the first matrix and the first column of the second matrix. *1* is
 multiplied by *6*, *2* is multiplied by *5*, and *3* is multiplied by *4*; notice how we worked from left to right for
-the row and top to bottom for the column. 
+the row and top to bottom for the column.
 
-Then, the sum of these products are added together; this sum then becomes the first element of the first row of 
+Then, the sum of these products are added together; this sum then becomes the first element of the first row of
 the resultant matrix. You would then move to multiplying the first row of the first matrix with the **second** column
 of the second matrix in the same manner; this would get you the second element of the first row of the resultant
 matrix.
@@ -188,7 +188,7 @@ This would then ultimately simplify to:
 
 ## Setting Up an Adjacency Matrix
 
-Now, with matrix multiplication, you can now set up adjacency matrices! This is how it works. Let's say we have the 
+Now, with matrix multiplication, you can now set up adjacency matrices! This is how it works. Let's say we have the
 matrix M and would like to know how many paths of length 2 between two specific vertices. So, we would calculate
  `$M^2$`, or `$M \bullet M$`. Our new numbers would get us our answer.
 
@@ -200,8 +200,8 @@ As we calculated before, the matrix would be:
 
 | `M` | A | B | C |
 | --- | --- | --- | --- |
-| A | 1 | 0 | 1 | 
-| B | 0 | 1 | 1 | 
+| A | 1 | 0 | 1 |
+| B | 0 | 1 | 1 |
 | C | 1 | 0 | 0 |
 
 Then, we would have to multiply this by itself once to get `$M^2$`.

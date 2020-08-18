@@ -29,8 +29,8 @@ Algebra page will come with an extra explanation.
 | AND | <img src="/res/acsl/digitalelectronics/and.png" style="width: 200px;" height="75" /> | `$X = AB = A \bullet B$` | |
 | NAND | <img src="/res/acsl/digitalelectronics/nand.png" style="width: 200px;" height="75" /> | `$X = \overline{AB} = \overline{A \bullet B}$` | This is the opposite of the *and* operator. Whatever is evaluated as true for the *and* operator becomes false, and vice versa. |
 | OR | <img src="/res/acsl/digitalelectronics/or.png" style="width: 200px;" height="75" /> | `$X = A + B$` | |
-| NOR | <img src="/res/acsl/digitalelectronics/nor.png" style="width: 200px;" height="75" /> | `$X = \overline{A + B}$` | This is the opposite of the *or* operator. Whatever is evaluated as true for the *or* operator becomes false, and vice versa. | 
-| XOR | <img src="/res/acsl/digitalelectronics/xor.png" style="width: 200px;" height="75" /> | `$X = A \oplus B$` | | 
+| NOR | <img src="/res/acsl/digitalelectronics/nor.png" style="width: 200px;" height="75" /> | `$X = \overline{A + B}$` | This is the opposite of the *or* operator. Whatever is evaluated as true for the *or* operator becomes false, and vice versa. |
+| XOR | <img src="/res/acsl/digitalelectronics/xor.png" style="width: 200px;" height="75" /> | `$X = A \oplus B$` | |
 | XNOR | <img src="/res/acsl/digitalelectronics/xnor.png" style="width: 200px;" height="75" /> | `$X = \overline{A \oplus B} = A \odot B$` | |
 
 Notice how adding the little extra circle causes the logic gate to become negated. So, for example, OR becomes NOR after
@@ -41,7 +41,7 @@ Reference the lines to know the order that the logic gates should be evaluated i
 
 <br>
 
-# Sample Problems 
+# Sample Problems
 
 ## 1. Write out the following circuit as a boolean expression. Then, simplify.
 <img src="/res/acsl/digitalelectronics/prob1.png" style="width: 300px;" height="200" />
