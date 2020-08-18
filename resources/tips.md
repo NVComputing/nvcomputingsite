@@ -15,7 +15,7 @@ large block of code than in a smaller block of code.
 necessarily mean that you have the best answer! Consider the efficiency of your program.
 Think of time and space efficiency (read [this page](/resources/efficiency) for more details).
 
-- Always keep your eye out for where you can use data structures. Sometimes a problem will explicity state that a data structures are used, and sometimes you will have to infer it.
+- Always keep your eye out for where you can use data structures. Sometimes a problem will explicity state that a data structure needs to be used, and sometimes you will have to infer it.
 
 - Basic dynamic programming can help avoid useless recursion. You may have learned the basics of this when finding fibonacci numbers, and would have to use this during a floodfill algorithm.
 
