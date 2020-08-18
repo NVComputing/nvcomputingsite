@@ -9,7 +9,7 @@ Please contribute to the resources folder!
 - Kelly Hong - Heavy Contributor to Resources
 - Kenneth Zhao - Heavy Contributor to Resources
 - Anton Barchukov - Navbar from old website
-- Nihal Shivannagari - Contributor to Resources
+- Nihal Shivannagari - Overweight Contributor to Resources
 - Nishikar Paruchuri - Contributor to Resources
 
 # Guide to Contributing to Resources
