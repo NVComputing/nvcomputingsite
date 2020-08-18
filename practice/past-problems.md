@@ -1,6 +1,6 @@
 # Solutions to Past Programming Problems
 ## Available Problems
-- [Example (<span style="color: #935000">Difficulty</span> )](#Example)
+- [Example (<span style="color: #935000">Difficulty</span>)](#Example)
 
 ## Example
 
