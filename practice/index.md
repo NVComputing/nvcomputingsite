@@ -1,16 +1,11 @@
 # Practice
 
 [Solutions to Past Programming Problems](/practice/past-problems)
-#This Week's Homework
+##This Week's Homework
 
-Google form:
+Google form: <font color=#935000><i>Currently Unavailable</i></font>
 
-Programming Question Link:
-## Coming Soon (tm)
-
-This is where we will post all of our practice worksheets, which will be given on a weekly basis.
-
-Answers (with provided solutions) will be posted here after the practice is due.
+Programming Question Link: <font color=#935000><i>Currently Unavailable</i></font>
 
 ## Instructions
 

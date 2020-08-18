@@ -1,11 +1,11 @@
 # Solutions to Past Programming Problems
 ## Available Problems
 - [Example](#Example)
-#Example
+##Example
 
 Link: [Problem](codeforces.com)
 
-Solution (in <i>language used</i>):
+Solution (in <font color=#935000><i>language used</i></font>):
 ```java
 //The example is in Java for simplicity.
 import java.util.*;
@@ -19,9 +19,9 @@ public class Solution
 ```
 What this code does:
 
-<i>This will try to explain the solution in plain English.</i>
+<font color=#935000><i>This will try to explain the solution in plain English.</i></font>
 
 Efficiency:
-<i>This will be written in big O notation.</i> Like this: <b>O(n)</b>
+<font color=#935000><i>This will be written in big O notation.</i></font>
 
   
