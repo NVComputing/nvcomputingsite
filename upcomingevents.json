@@ -104,6 +104,55 @@
       "time": 1605409200,
       "desc": "Google's Kick Start competition. You have 3 hours to do a number of problems. The problems are typically relatively difficult.<br>You must be 16 to participate.",
       "tentative": false
+    },
+    {
+      "name": "Hewlett Packard Codewars",
+      "link": "http://hpcodewars.org//",
+      "time": 1620421200,
+      "desc": "Hewlett Packard's Codewars competition is aimed at high school level students and is hosted by schools. The contest takes place during a time period of about a week and contains about 20 difficult questions.",
+      "tentative": true
+    },
+    {
+      "name": "Google Code Jam Qualification Round",
+      "link": "https://codingcompetitions.withgoogle.com/codejam/about",
+      "time": 1617512400,
+      "desc": "Google's Code Jam competition. You will be given 27 hours to earn 30 out of a potential 100 points.<br>You must be 16 to participate.",
+      "tentative": true
+    },
+    {
+      "name": "Google Code Jam Round 1A",
+      "link": "https://codingcompetitions.withgoogle.com/codejam/about",
+      "time": 1618124400,
+      "desc": "Google's Code Jam competition. You must place within the top 1500 to move on to Round 2.<br>You must be 16 to participate.",
+      "tentative": true
+    },
+    {
+      "name": "Google Code Jam Round 1B",
+      "link": "https://codingcompetitions.withgoogle.com/codejam/about",
+      "time": 1618878600,
+      "desc": "Google's Code Jam competition. You must place within the top 1500 to move on to Round 2.<br>You must be 16 to participate.",
+      "tentative": true
+    },
+    {
+      "name": "Google Code Jam Round 1C",
+      "link": "https://codingcompetitions.withgoogle.com/codejam/about",
+      "time": 1619976600,
+      "desc": "Google's Code Jam competition. You must place within the top 1500 to move on to Round 2.<br>You must be 16 to participate.",
+      "tentative": true
+    },
+    {
+      "name": "CS@Mines High School Programming Competition",
+      "link": "https://tech.mines.edu/hspc/",
+      "time": 1619976600,
+      "desc": "This is modeled off the prestigious ACM ICPC and has the same formatting. Students compete in teams of 3.",
+      "tentative": true
+    },
+    {
+      "name": "Virginia Tech High School Competition",
+      "link": "https://vthscontest.cs.cloud.vt.edu/",
+      "time": 1619976600,
+      "desc": "This is a high school level competition organized in the format of the ACM ICPC competition.",
+      "tentative": true
     }
   ],
   "deadlines": [
