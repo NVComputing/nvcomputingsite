@@ -1,51 +1,25 @@
 <!-- Made by Raymond Zhao, with the navbar from Anton Barchukov -->
 <!doctype html>
 <html lang="en">
+
 <head>
-{{> head }}
+	{{> head }}
 </head>
+
 <body>
-<div class="background-page">
-	<div class="navbar-wrapper pt-3">
-		<nav class="navbar navbar-expand-lg navbar-expand-md navbar-dark bg-dark top-navbar navbar-custom" id="navbar">
-			<div class="container">
-				<a href="/" class="navbar-brand d-block d-sm-none" id="navimgref-sm"><img src="/res/nvct-logo.svg" alt="Neuqua Logo" id="navimg" class="img-fluid"></a>
-				<a href="/" class="navbar-brand d-none d-sm-block" id="navimgref-lg"><img src="/res/nvct-logo-h.svg" alt="Neuqua Logo" id="navimg" class="img-fluid"></a>
-				<button class="navbar-toggler navbar-toggler-custom" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-					<ul class="navbar-nav pull-right">
-						<li class="nav-item">
-							<a class="nav-link" href="/">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/resources">Resources</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/practice">Practice</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link active" href="/schedule">Schedule</a>
-						</li>
-					</ul>
+	<div class="background-page">
+		<div class="navbar-wrapper pt-3"> {{> navbar }} </div>
+		<div class="container py-5">
+			<div class="row h-100 align-items-center py-5">
+				<div class="col-lg-6 text-white">
+					<h1 class="font-weight-bold">NVHS Computing Team</h1>
+					<h2 class="font-weight-light">Schedule</h2>
+					<p class="font-weight-thin lead text-white mb-0">Deadlines, Event Dates, and More.</p>
 				</div>
+				<div class="col-lg-6 d-none d-lg-block"><img src="/res/nvabout.png" alt="nvclublogo" class="img-fluid rounded"></div>
 			</div>
-		</nav>
-	</div>
-	<div class="container py-5">
-		<div class="row h-100 align-items-center py-5">
-			<div class="col-lg-6 text-white">
-				<h1 class="font-weight-bold">NVHS Computing Team</h1>
-				<h2 class="font-weight-light">Schedule</h2>
-				<p class="font-weight-thin lead text-white mb-0">Deadlines, Event Dates, and More.</p>
-			</div>
-			<div class="col-lg-6 d-none d-lg-block"><img src="/res/nvabout.png" alt="nvclublogo" class="img-fluid rounded"></div>
 		</div>
 	</div>
-</div>
-
-<div id="event-schedule">
 	<div class="container text-white my-4">
 		<h1>Deadlines</h1>
 		{{#if deadlines}}
@@ -67,7 +41,6 @@
 			<h3>Looks like there aren't any deadlines currently scheduled.</h3>
 		{{/if}}
 	</div>
-
 	<div class="container text-white pb-4">
 		<h1>Event Schedule</h1>
 		<div class="pb-4"><i>Check back regularly; new events are often added to this page.</i></div>
@@ -88,10 +61,8 @@
 			<h3>Looks like there aren't any events currently scheduled.</h3>
 		{{/if}}
 	</div>
-</div>
-<div class="footer">
-	<div class="text-center text-white">&copy;2020 Copyright: <a href="https://nvcomputing.com"> NVComputing.com</a></div>
-</div>
 </body>
+
+{{> footer }}
 
 </html>

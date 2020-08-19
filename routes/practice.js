@@ -13,7 +13,8 @@ module.exports.set = (app) => {
 			let renderedMarkdown = converter.makeHtml(data);
 			res.render('practice', {
 				resource: renderedMarkdown,
-				title: "Practice | Neuqua Valley Computing Team"
+				title: "Practice | Neuqua Valley Computing Team",
+				practicePage: true
 			});
 		});
 	});
@@ -33,7 +34,8 @@ module.exports.set = (app) => {
 				let title = data.match(/#\s*(.*?)\s*\n/);
 				res.render('practice', {
 					resource: converter.makeHtml(data),
-					title: title[1] + " | Neuqua Valley Computing Team"
+					title: title[1] + " | Neuqua Valley Computing Team",
+					practicePage: true
 				});
 			}
 		});

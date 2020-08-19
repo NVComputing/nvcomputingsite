@@ -1,4 +1,5 @@
 let showdown = require('showdown');
+let path = require('path');
 
 let code =
 `\`\`\`java
@@ -31,6 +32,7 @@ module.exports.set = (app) => {
 	app.get('/', (req, res) => {
 		res.render('index', {
 			title: 'Neuqua Valley Computing Team',
+			homePage: true,
 			titleCode: convertedCode
 		});
 	})
