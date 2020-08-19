@@ -128,7 +128,7 @@ a tedious extra step to take.
 Binary trees are a way to represent an expression more visually. For example, if I
 were to represent `$3+6$` as a tree, I would draw:
 
-<img src="/res/acsl/notation/operation.png" height="150"/>
+<img src="/res/acsl/notation/operation.png" class="img-fluid" />
 
 Note how the operator lies in the middle of the two operands and acts as a stem, or
 root. This applies to even pre-fix and post-fix expressions.
@@ -138,9 +138,9 @@ Follow the table below to see the process.
 
 | Construction | |
 | --- | --- |
-| 1. <img src="/res/acsl/notation/sample1.png" style="width: 150px;"/> | 4. <img src="/res/acsl/notation/sample4.png" height="200"/>|
-| 2. <img src="/res/acsl/notation/sample2.png" style="width: 300px;"/> | 5. <img src="/res/acsl/notation/sample5.png" height="200"/>|
-| 3. <img src="/res/acsl/notation/sample3.png" style="width: 300px;"/> | |
+| 1. <img src="/res/acsl/notation/sample1.png" class="img-fluid" /> | 4. <img src="/res/acsl/notation/sample4.png" class="img-fluid" />|
+| 2. <img src="/res/acsl/notation/sample2.png" class="img-fluid" /> | 5. <img src="/res/acsl/notation/sample5.png" class="img-fluid" />|
+| 3. <img src="/res/acsl/notation/sample3.png" class="img-fluid" /> | |
 
 Now, with this completed tree, we can convert to any notation we want. The order to
 write the expression is already drawn out; first, work with the operation in the
@@ -152,7 +152,7 @@ is continued until you get to the uppermost (or final) operation.
 The only difference between the notations is where you place the operators. In the
 binary tree, you may see:
 
-<img src="/res/acsl/notation/operation.png" height="150"/>
+<img src="/res/acsl/notation/operation.png" class="img-fluid" />
 
 However, since this is written in in-fix terms, you would have to remember to put
 the operator before or after the operands if you're converting to pre-fix or post-fix.
@@ -195,8 +195,8 @@ methods have been provided.
 
 | Construction | | |
 | --- | --- | --- |
-| 1. <img src="/res/acsl/notation/prob2-1.png" style="width: 150px;"/> | 2. <img src="/res/acsl/notation/prob2-2.png" style="width: 150px;"/> | 3. <img src="/res/acsl/notation/prob2-3.png" style="width: 300px;"/> |
-| 4. <img src="/res/acsl/notation/prob2-4.png" style="width: 300px;"/> | 5. <img src="/res/acsl/notation/prob2-5.png" style="width: 300px;"/> | 6. <img src="/res/acsl/notation/prob2-6.png" style="width: 300px;"/> |
+| 1. <img src="/res/acsl/notation/prob2-1.png" class="img-fluid" /> | 2. <img src="/res/acsl/notation/prob2-2.png" class="img-fluid" /> | 3. <img src="/res/acsl/notation/prob2-3.png" class="img-fluid" /> |
+| 4. <img src="/res/acsl/notation/prob2-4.png" class="img-fluid" /> | 5. <img src="/res/acsl/notation/prob2-5.png" class="img-fluid" /> | 6. <img src="/res/acsl/notation/prob2-6.png" class="img-fluid" /> |
 
 Notice that in a few of the steps, I chose to work on subbranches of the final tree
 before putting them altogether.
@@ -237,8 +237,8 @@ We would first construct the tree like so:
 
 | Construction | |
 | --- | --- |
-| 1. <img src="/res/acsl/notation/prob3-1.png" style="width: 150px;"/> | 2. <img src="/res/acsl/notation/prob3-2.png" style="width: 150px;"/> |
-| 3. <img src="/res/acsl/notation/prob3-3.png" style="width: 150px;"/> | 4. <img src="/res/acsl/notation/prob3-4.png" style="width: 150px;"/> |
+| 1. <img src="/res/acsl/notation/prob3-1.png" class="img-fluid" /> | 2. <img src="/res/acsl/notation/prob3-2.png" class="img-fluid" /> |
+| 3. <img src="/res/acsl/notation/prob3-3.png" class="img-fluid" /> | 4. <img src="/res/acsl/notation/prob3-4.png" class="img-fluid" /> |
 
 Then, we can analyze this tree from bottom to top, left to right to get our pre-fix
 expression:

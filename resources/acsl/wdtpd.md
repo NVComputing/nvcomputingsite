@@ -192,7 +192,7 @@ For this program, it may be hard to verbally track all of the variables' values.
 will be used instead. One note is that line 11 was broken up into 2 different steps in the table,
 one step being `C(n) = A(j)` and the other being the variable updates.
 
-| Line(s) | <div style="width:50px;">j</div> | <div style="width:50px;">k</div> | <div style="width:50px;">n</div> | <div style="width:50px;">A(j)</div> | <div style="width:50px;">B(k)</div> | <div style="width:50px;">C(n)</div> |
+| Line(s) | j | k | n | A(j) | B(k) | C(n) |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1-4 | 1 | 1 | 1 | 12 | 17 | -- |
 | 11 | 1 | 1 | 1 | 12 | 17 | 12 |

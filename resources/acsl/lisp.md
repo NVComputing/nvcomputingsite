@@ -61,7 +61,7 @@ up as `(SET '*atomName* *value*)`. `SETQ` is very similar except the `'` mark be
 
 See the table below:
 
-| <div style="width:150px;">Statement</div> | <div style="width:80px;">Value</div> | Comment |
+| Statement | Value | Comment |
 | --- | --- | --- |
 | (SET 'a (MULT 2 3)) | 6 | There is no `'` before `(MULT 2 3)`; so, `(MULT 2 3)` is evaluated to be `6`, which is then stored into the atom `'a`. |
 | (SET 'a '(MULT 2 3)) | (MULT 2 3) | This time, there is a `'` before `(MULT 2 3)`, meaning that `(MULT 2 3)` is its own atom and should not be evaluated. So, `'a` is initialized with `(MULT 2 3)`. |
@@ -80,7 +80,7 @@ returns either `true` or `NIL` for false.
 
 See the following examples.
 
-| Statement | <div style="width:100px;">Value</div> | Comment |
+| Statement | Value | Comment |
 | --- | --- | --- |
 | (SETQ p '(ADD 1 2 3 4)) | (ADD 1 2 3 4) | This simply sets the atom `'p` to be equal to `'(ADD 1 2 3 4)`. |
 | (ATOM 'p) | true | The `'` mark before `p` attests to the fact that it is indeed an atom. Hence, this function returns true. |
@@ -132,7 +132,7 @@ is not changed.
 
 Refer to the table below for examples:
 
-| <div style="width:150px;">Statement</div> | <div style="width:80px;">Value</div> | Comment |
+| Statement | Value | Comment |
 | --- | --- | --- |
 | (CONS 'red '(white blue)) | (red white blue) | The atom `'red` is inserted into the start of the list to get a new list, `(red white blue)`. |
 | (SETQ z (CONS '(red white blue) (CDR '(This is a list)))) | ((red white blue) is a list) | The `CDR` function call should be handled first; `This` is removed from the argument list to get `(is a list)`. Then, `'(red white blue)` is to be inserted into this list. The elements are inserted into the list as an inner list; they do not become part of the larger list. So, the new list becomes `((red white blue) is a list)`. `'z` is then finally initialized with this list. |

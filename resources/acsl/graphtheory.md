@@ -33,7 +33,7 @@ there are numerous ways to visually display the same graph; see the example belo
 
 | Version 1 | Version 2 |
 | --- | --- |
-| <img src="/res/acsl/graphtheory/visual1.png" style="width: 250px;"/> | <img src="/res/acsl/graphtheory/visual2.png" style="width: 250px;"/> |
+| <img src="/res/acsl/graphtheory/visual1.png" class="img-fluid" /> | <img src="/res/acsl/graphtheory/visual2.png" class="img-fluid" /> |
 
 So, rather than defining the graph above by giving its visual, it would be better to state that its set of vertices
 is {A, B, C, D, E, F, G}, and its set of edges is {AB, AD, BD, CF, FG, GH, GE, HE}.
@@ -64,7 +64,7 @@ taken to get from one vertex to another.
 
 | Sparse | Dense | Complete |
 | --- | --- | --- |
-| <img src="/res/acsl/graphtheory/sparse.png" style="width: 250px;"/> | <img src="/res/acsl/graphtheory/dense.png" style="width: 250px;"/> | <img src="/res/acsl/graphtheory/complete.png" style="width: 250px;"/> |
+| <img src="/res/acsl/graphtheory/sparse.png" class="img-fluid" /> | <img src="/res/acsl/graphtheory/dense.png" class="img-fluid" /> | <img src="/res/acsl/graphtheory/complete.png" class="img-fluid" /> |
 
 ## Directed Paths
 
@@ -72,7 +72,7 @@ taken to get from one vertex to another.
 the same as an edge from *Y* to *X*. For edges with arrows on both ends, this would mean that the edge goes both ways.
 A directed graph with no cycles can be referred to as a *dag*, which stands for "directed acyclic graph".
 
-<img src="/res/acsl/graphtheory/directed.png" style="width: 250px;"/>
+<img src="/res/acsl/graphtheory/directed.png" class="img-fluid" />
 
 *Undirected graphs* are graphs where all edges can go both ways. So, they are essentially graphs where the edges
 all have dual arrows on both ends.
@@ -85,7 +85,7 @@ positive integers. They can be either directed or undirected.
 In applications, these can represent the length of a route between two cities or perhaps the cost of a plane ticket
 between two countries.
 
-<img src="/res/acsl/graphtheory/weighted.png" style="width: 250px;"/>
+<img src="/res/acsl/graphtheory/weighted.png" class="img-fluid" />
 
 ## Trees
 
@@ -99,7 +99,7 @@ A group of disconnected trees is called a *forest*.
 
 | Weighted Graph | Spanning Tree | Minimum Spanning Tree |
 | --- | --- | --- |
-| <img src="/res/acsl/graphtheory/normalweighted.png" style="width: 250px;"/> | <img src="/res/acsl/graphtheory/spanning.png" style="width: 250px;"/> <br> Cost `$= 4 + 5 + 2 = 11$` | <img src="/res/acsl/graphtheory/minspan.png" style="width: 250px;"/> <br> Cost `$= 4 + 1 + 2 = 7$` |
+| <img src="/res/acsl/graphtheory/normalweighted.png" class="img-fluid" /> | <img src="/res/acsl/graphtheory/spanning.png" class="img-fluid" /> <br> Cost `$= 4 + 5 + 2 = 11$` | <img src="/res/acsl/graphtheory/minspan.png" class="img-fluid" /> <br> Cost `$= 4 + 1 + 2 = 7$` |
 
 <br>
 
@@ -112,7 +112,7 @@ They are specifically useful for knowing how many paths of a certain length exis
 
 Let's create an example. Let's say that we had this graph:
 
-<img src="/res/acsl/graphtheory/exmatrix.png" style="width: 250px;"/>
+<img src="/res/acsl/graphtheory/exmatrix.png" class="img-fluid" />
 
 To start off, our template matrix would look like so:
 
@@ -194,7 +194,7 @@ matrix M and would like to know how many paths of length 2 between two specific 
 
 Let's use the following graph once more:
 
-<img src="/res/acsl/graphtheory/exmatrix.png" style="width: 250px;"/>
+<img src="/res/acsl/graphtheory/exmatrix.png" class="img-fluid" />
 
 As we calculated before, the matrix would be:
 
@@ -229,7 +229,7 @@ conclusions can be made for the rest of the numbers.
 
 ## 1. How many different cycles are contained in the directed graph visualized below:
 
-<img src="/res/acsl/graphtheory/prob1.png" style="width: 250px;"/>
+<img src="/res/acsl/graphtheory/prob1.png" class="img-fluid" />
 
 One cycle is *ADA*, or *DAD*. Another is *ABCA*, which is also *BCAB* or *CABC*. The last cycle is *ECE*, or *CEC*.
 So, in total, there are 3 different cycles in the graph.
@@ -248,12 +248,12 @@ The drawn graph below is only one way to depict this matrix.
 
 | Step | Graph | Step | Graph |
 | --- | --- | --- | --- |
-| 1. Draw in A's edges | <img src="/res/acsl/graphtheory/prob2-1.png" style="width: 275px;"/> | 4. Add D's edges | <img src="/res/acsl/graphtheory/prob2-4.png" style="width: 275px;"/> |
-| 2. Add B's edges | <img src="/res/acsl/graphtheory/prob2-2.png" style="width: 275px;"/> | 5. Add E's edges | <img src="/res/acsl/graphtheory/prob2-5.png" style="width: 275px;"/> |
-| 3. Add C's edges | <img src="/res/acsl/graphtheory/prob2-3.png" style="width: 275px;"/> | |
+| 1. Draw in A's edges | <img src="/res/acsl/graphtheory/prob2-1.png" class="img-fluid" /> | 4. Add D's edges | <img src="/res/acsl/graphtheory/prob2-4.png" class="img-fluid" /> |
+| 2. Add B's edges | <img src="/res/acsl/graphtheory/prob2-2.png" class="img-fluid" /> | 5. Add E's edges | <img src="/res/acsl/graphtheory/prob2-5.png" class="img-fluid" /> |
+| 3. Add C's edges | <img src="/res/acsl/graphtheory/prob2-3.png" class="img-fluid" /> | |
 
 ## 3. In the following directed graph, find the total number of different paths from vertex B to vertex D of length 3.
-<img src="/res/acsl/graphtheory/prob3.png" style="width: 250px;"/>
+<img src="/res/acsl/graphtheory/prob3.png" class="img-fluid" />
 
 First, let's start with writing the graph as a regular matrix:
 

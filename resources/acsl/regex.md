@@ -400,7 +400,7 @@ Here is a brief description of how you might do this intuitively:
 
 ## 3. Determine what strings would be accepted by the following FSA. Make your answer general. (So basically, give us a regular expression.)
 
-<img src="/res/acsl/regex/prob3.png" style="width: 600px;"/>
+<img src="/res/acsl/regex/prob3.png" class="img-fluid" />
 
 The fork in the FSA represents a union. If we were to take the upper "path", we would have a
 string of <code class="regex language-regex">10*1101*10*0</code>. If we took the lower path, we'd have <code class="regex language-regex">10*110*10*0</code>.
@@ -413,7 +413,7 @@ So, we would have <code class="regex language-regex">10*11((01*)|0*)10*0</code> 
 
 ## 4. Which of the given strings would be accepted by the following FSA?
 
-<img src="/res/acsl/regex/prob4.png" style="width: 600px;"/>
+<img src="/res/acsl/regex/prob4.png" class="img-fluid" />
 
 1. <code class="regex language-regex">a(ba*aba|aba)|(aba*b)</code>
 2. <code class="regex language-regex">a(ba*a(ba|ab)a)|aba*ab</code>

@@ -1,9 +1,10 @@
 html * {
 	outline: 0 !important;
+	scroll-behavior: smooth;
 }
 
 body {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Raleway', sans-serif !important;
 	background: #3c3c3c;
 }
 
@@ -15,8 +16,11 @@ a {
 	color: #7bff;
 }
 
+.font-weight-thin {
+	font-weight: 200;
+}
+
 .navbar-custom {
-	font-family: 'Raleway', sans-serif;
 	background: #0c1a2b !important;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
@@ -216,7 +220,6 @@ body.side-menu-visible #side-menu.side-menu-left {
 }
 
 .monospace {
-	font-family: Consolas, Monaco, 'Andale Mono', monospace;
 	display: flex;
 }
 

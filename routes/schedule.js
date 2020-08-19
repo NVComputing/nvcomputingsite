@@ -21,6 +21,10 @@ module.exports.set = (app) => {
 			return obj;
 		});
 
-		res.render('schedule', { upcomingEvents: data, deadlines: data2 });
+		res.render('schedule', {
+			upcomingEvents: data,
+			deadlines: data2,
+			title: "Upcoming Events | Neuqua Valley Computing Team"
+		});
 	})
 }
