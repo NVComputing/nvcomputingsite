@@ -9,33 +9,12 @@ table {
 	width: 100%;
 }
 
-th, td {
-	padding: 0.175rem;
+th {
 	text-align: center;
 }
 
-@media (min-width: 576px) {
-	th, td {
-		padding: 0.2rem;
-	}
-}
-
-@media (min-width: 768px) {
-	th, td {
-		padding: 0.5rem;
-	}
- }
-
-@media (min-width: 992px) {
-	th, td {
-		padding: 0.7rem;
-	}
- }
-
-@media (min-width: 1200px) {
-	th, td {
-		padding: 1rem;
-	}
+th, td {
+	padding: 0.4rem;
 }
 
 mjx-stretchy-h {
@@ -62,8 +41,8 @@ mjx-stretchy-h {
 
 .resources h1 {
 	border-bottom: 1px solid white;
-	margin-bottom: 2rem;
-	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	padding-bottom: 0.5rem;
 	font-weight: bold;
 }
 
@@ -79,8 +58,8 @@ mjx-stretchy-h {
 
 .inline-latex {
 	color: #fff !important;
-	font-size: clamp(1rem, 2.5vw, 2rem) !important;
 	background: none !important;
+	font-size: inherit !important;
 }
 
 .table-wrapper {

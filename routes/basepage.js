@@ -33,6 +33,9 @@ module.exports.set = (app) => {
 		res.render('index', {
 			title: 'Neuqua Valley Computing Team',
 			homePage: true,
+
+			prism: true,
+
 			titleCode: convertedCode
 		});
 	})
