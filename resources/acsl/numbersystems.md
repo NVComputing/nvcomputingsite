@@ -33,7 +33,7 @@ Just as a summary, binary is base 2, octal is base 8, decimal is base 10, and he
 base 16.
 
 All of these bases have a range that their digits work in. For example, for decimal
-base numbers, the digits range from `0` to `9`; having a digit of `10` would not make 
+base numbers, the digits range from `0` to `9`; having a digit of `10` would not make
 much sense.
 
 Binary digits has a range of `[0, 1]`, octal with a range of `[0, 7]`, decimal with
@@ -45,8 +45,8 @@ With these ranges, notice that the upper bound is one less than the base; so, wi
 which is base 2, the upper bound is `$2 - 1 = 0$`. Also notice that all of them have a
 lower bound of 0.
 
-Moving on, a group of 3 bits make up a single octal digit; this is because `$111_2 = 
-((1*2^2)+(1*2^1)+(1*2^0))_{10} = (4 + 2 + 1)_{10} = 7_{10}$`, which is the upper bound for the 
+Moving on, a group of 3 bits make up a single octal digit; this is because `$111_2 =
+((1*2^2)+(1*2^1)+(1*2^0))_{10} = (4 + 2 + 1)_{10} = 7_{10}$`, which is the upper bound for the
 octal base. Similarly, a group of 4 bits make up a single hex digit; this is because
 `$1111_2 = ((1*2^3)+(1*2^2)+(1*2^1)+(1*2^0))_{10} = (8 + 4 + 2 + 1)_{10} = 15_{10}$`, which
 is the upper bound for the hex base.
@@ -55,10 +55,10 @@ How bases essentially work is like this:
 
 Say we have the number `$167_{10}$`. We refer to `7` as the ones digits, `6` as the tens
 digit, and `1` as the hundreds digit. In fact, `$167_10$` can be written as
-`$((1*100)+(6*10)+(7*1))_{10}$`, or `$((1*10^2)+(6*10^1)+(7*10^0)_{10})$`. 
+`$((1*100)+(6*10)+(7*1))_{10}$`, or `$((1*10^2)+(6*10^1)+(7*10^0)_{10})$`.
 
 A similar idea applies to other bases. Let's say we have `$01101_2$`. However,
-instead of multiplying each digit by 10 to a certain power, we would multiply it by 
+instead of multiplying each digit by 10 to a certain power, we would multiply it by
 2 to a certain power since that's the base we're working with instead. So, `$01101_2$`
 is technically `$(0*2^4)+(1*2^3)+(1*2^2)+(0*2^1)+(1*2^0) = 0+8+4+0+1 = 13$`, although
 the `13` would be in base 10. While this evaluation used powers of 2, the overall
@@ -90,14 +90,14 @@ number to base 10. Here are step-by-step instructions:
 1. Look at what base you are currently in.
 2. Starting with the rightmost digit, multiply that digit by `$(base)^0$`.
 3. Move left one digit (if there is another digit) and multiply that digit by `$(base)^1$`.
-4. Work in a similar pattern to Step 3. However, `$(base)^1$` should "increment" to `$(base)^2$`, then `$(base)^3$`, etc. 
+4. Work in a similar pattern to Step 3. However, `$(base)^1$` should "increment" to `$(base)^2$`, then `$(base)^3$`, etc.
 5. Add up all of the products to get your desired decimal number.
 
 To convert from base 10 to a different base, there is a different process involved. I will convert
 the number `$12_{10}$` to binary as an example.
 
 First off, I will consider what the biggest power of 2 that can fit into `12` would be. `$2^3$`
-is `8`, which fits. `$2^4$` is `16`, which is too big; so, we will stick with `$2^3$`. I will 
+is `8`, which fits. `$2^4$` is `16`, which is too big; so, we will stick with `$2^3$`. I will
 then draw a few slots, which I will later fill in:
 
 Number: ___ ___ ___ ___
@@ -121,7 +121,7 @@ about. Remember the fact that 3 bits represent an octal digit, and 4 bits repres
 
 To convert from binary to octal, make groups of 3 from right to left; if there are not enough
 bits, then just add zeros on the left. Afterwards, evaluate each of those 3-bit groups in base 10.
-These new numbers will be the digits of your octal number. 
+These new numbers will be the digits of your octal number.
 
 Let's use an example, `$1111011_2$`, to prove this. So, we would make the groups `001`, `111`,
 and `011` first. These would evaluate to `1`, `7`, and `3`. So, our octal number is `$173_8$`.
@@ -139,7 +139,7 @@ which again, represent 10-15.
 These are not frequently tested, but we will cover them here just in case.
 
 To convert a fraction to base 10, it is relatively easy. When we look at decimal numbers like
-`256.3`, we would describe the `3` as the tenths place. This can also be conveyed as 
+`256.3`, we would describe the `3` as the tenths place. This can also be conveyed as
 `$3*10^{-1}$`. We will use this knowledge in our conversions.
 
 First off, you will want to convert the fraction into a decimal for better viewing. With normal
@@ -157,7 +157,7 @@ multiply this number by 2 (to be more general, the base that it's currently in);
 `1.75`. However, instead of writing down `1.75`, we will want to write down the result of
 `$1.75 % 2$`, which is still `1.75` (in this case). We will now multiply this number by 2 again
 to get `3.5`. We will want to write down `$3.5 % 2$`, which is `1.5`. This process continues
-until we get a remainder of 0. 
+until we get a remainder of 0.
 
 For this sample problem, here's a summary of the steps we took:
 
@@ -180,12 +180,12 @@ If we were to generalize this entire process, we would have the following instru
 In the case that you have a mixed fraction, such as `19 4/5`, you would want to convert the whole
 and fraction part separately. Then, add together their results to get your final converted number.
 
-<br> 
+<br>
 
 # Arithmetic for Numbers in Other Bases
 
 Arithmetic in other bases is similar to what we would do with numbers in the decimal base.
-However, we have to keep in mind the different ranges that different bases work in. Also, 
+However, we have to keep in mind the different ranges that different bases work in. Also,
 arithmetic should be done between numbers in the same base; if they are not, then be sure to
 make any needed base conversions before doing the arithmetic.
 
@@ -202,42 +202,42 @@ Addition would go as follows:
 
 Here's an example (this will be in base 16):
 
-| Step | Explanation | Step | <div style="width:300px;">Explanation</div> |
+| Step | Explanation | Step | Explanation |
 | --- | --- | --- | --- |
-| <img src="/res/acsl/numsystems/add1.png" style="width: 150px;"/> | This is just the start of our problem. No arithmetic yet. | <img src="/res/acsl/numsystems/add4.png" style="width: 150px;"/> | `$1+A+2 = 13$`, or `D`. We do not go out of the range, so we just write `D` at the bottom. |
-| <img src="/res/acsl/numsystems/add2.png" style="width: 150px;"/> | `$6+5=11$`, or `B`. Since `B` is within the range of [0, F], `B` will be written at the bottom with no numbers to carry. | <img src="/res/acsl/numsystems/add5.png" style="width: 150px;"/> | `$2+9=11$`, or `B`. We are within the range, so `B` is simply written at the bottom.|
-| <img src="/res/acsl/numsystems/add3.png" style="width: 150px;"/> | `$C+B=12+11=23$`. `23` is beyond our range, so we would divide it by 16 to get `1 R7`. The `1` is carried while the `7` becomes the new digit. | | |
+| <img src="/res/acsl/numsystems/add1.png" class="img-fluid" /> | This is just the start of our problem. No arithmetic yet. | <img src="/res/acsl/numsystems/add4.png" class="img-fluid" /> | `$1+A+2 = 13$`, or `D`. We do not go out of the range, so we just write `D` at the bottom. |
+| <img src="/res/acsl/numsystems/add2.png" class="img-fluid" /> | `$6+5=11$`, or `B`. Since `B` is within the range of [0, F], `B` will be written at the bottom with no numbers to carry. | <img src="/res/acsl/numsystems/add5.png" class="img-fluid" /> | `$2+9=11$`, or `B`. We are within the range, so `B` is simply written at the bottom.|
+| <img src="/res/acsl/numsystems/add3.png" class="img-fluid" /> | `$C+B=12+11=23$`. `23` is beyond our range, so we would divide it by 16 to get `1 R7`. The `1` is carried while the `7` becomes the new digit. | | |
 
 ## Subtraction
 
-Subtraction is very similar to decimal subtraction. However, when you need to borrow from the 
+Subtraction is very similar to decimal subtraction. However, when you need to borrow from the
 next digit, you would add the base number and not 10. The next digit would still decrement by
 1 though.
 
 Here's an example (this will also be in base 16):
 
-| Step | Explanation | Step | <div style="width:250px;">Explanation</div> |
+| Step | Explanation | Step | Explanation |
 | --- | --- | --- | --- |
-| <img src="/res/acsl/numsystems/sub1.png" style="width: 200px;"/> | This is just the start of our problem. No arithmetic yet. | <img src="/res/acsl/numsystems/sub4.png" style="width: 200px;"/> | We will need to borrow because `$9-C$` is not valid. The `4` becomes a `3`, and the `9` becomes `$9+16=25$`. `$25-C=25-12=13=D$`. |
-| <img src="/res/acsl/numsystems/sub2.png" style="width: 200px;"/> | `$7-B$` would get us a negative number, so we need to borrow. `3` becomes a `2`, and `7` becomes `$7+16=23$`. `$23-B=23-11=12=C$`. | <img src="/res/acsl/numsystems/sub5.png" style="width: 200px;"/> | `$3-2=1$`. No borrowing is needed.|
-| <img src="/res/acsl/numsystems/sub3.png" style="width: 200px;"/> | `$2-4$` would get us a negative number, so we need to borrow. `A` becomes a `9`, and `2` becomes `$2+16=18$`. `$18-4=14=E$`. | | |
+| <img src="/res/acsl/numsystems/sub1.png" class="img-fluid" /> | This is just the start of our problem. No arithmetic yet. | <img src="/res/acsl/numsystems/sub4.png" class="img-fluid" /> | We will need to borrow because `$9-C$` is not valid. The `4` becomes a `3`, and the `9` becomes `$9+16=25$`. `$25-C=25-12=13=D$`. |
+| <img src="/res/acsl/numsystems/sub2.png" class="img-fluid" /> | `$7-B$` would get us a negative number, so we need to borrow. `3` becomes a `2`, and `7` becomes `$7+16=23$`. `$23-B=23-11=12=C$`. | <img src="/res/acsl/numsystems/sub5.png" class="img-fluid" /> | `$3-2=1$`. No borrowing is needed.|
+| <img src="/res/acsl/numsystems/sub3.png" class="img-fluid" /> | `$2-4$` would get us a negative number, so we need to borrow. `A` becomes a `9`, and `2` becomes `$2+16=18$`. `$18-4=14=E$`. | | |
 
 ## Multiplication
 
 Multiplication is done in a similar manner to addition. First, you multiply as normal. If the
-product is outside of the base's range, then divide the number by the base. The quotient is 
+product is outside of the base's range, then divide the number by the base. The quotient is
 carried while the remainder becomes the new digit.
 
 Here's an example (again, this will be in base 16):
 
-| Step | Explanation | Step | <div style="width:250px;">Explanation</div> |
+| Step | Explanation | Step | Explanation |
 | --- | --- | --- | --- |
-| <img src="/res/acsl/numsystems/mult1.png" style="width: 175px;"/> | This is the start of our operation. | <img src="/res/acsl/numsystems/mult7.png" style="width: 175px;"/> | We now continue to do multiplication with the second digit of `DE`. A zero is automatically placed first just like in normal multiplication. Then, `$D*F=13*15=195$`. `$195/16=12 \; R \, 3$`. `C` is used in place of `12`. |
-| <img src="/res/acsl/numsystems/mult2.png" style="width: 175px;"/> | `$F*E=15*14=210$`. `$210/16=13 \; R \, 2$`. The `13`, or `D`, is carried. The `2` is put at the bottom. | <img src="/res/acsl/numsystems/mult8.png" style="width: 175px;"/> | `$(D*4)+C=(13*4)+12=64$`. `$64/16=4 \; R \, 0$`. |
-| <img src="/res/acsl/numsystems/mult3.png" style="width: 175px;"/> | `$(4*E)+D=(4*14)+13=69$`. `$69/16=4 \; R \, 5$`. The `4` is carried, and the `5` is put at the bottom. | <img src="/res/acsl/numsystems/mult9.png" style="width: 175px;"/> | `$(D*3)+4=(13*3)+4=43$`. `$56/16=2 \; R \, 11$`. `B` replaces `11`. |
-| <img src="/res/acsl/numsystems/mult4.png" style="width: 175px;"/> | `$(3*E)+4=(3*14)+4=46$`. `$46/16=2 \; R \, 14$` (or `E` for `14`). | <img src="/res/acsl/numsystems/mult10.png" style="width: 175px;"/> | `$(B*D)+2=(11*13)+2=145$`. `$145/16=9 \; R \, 1$`.|
-| <img src="/res/acsl/numsystems/mult5.png" style="width: 175px;"/> | `$(B*E)+2=(11*14)+2=156$`. `$156/16=9 \; R \, 12$` (or `C` for `12`). | <img src="/res/acsl/numsystems/mult11.png" style="width: 250px;"/> | There are no calculations to do for the extra carried 9, so it is automatically moved to the bottom. |
-| <img src="/res/acsl/numsystems/mult6.png" style="width: 175px;"/> | There are no calculations to do for the extra carried 9, so it is automatically moved to the bottom. | <img src="/res/acsl/numsystems/mult12.png" style="width: 250px;"/> | The results are finally added together to get **9B7E82**. |
+| <img src="/res/acsl/numsystems/mult1.png" class="img-fluid" /> | This is the start of our operation. | <img src="/res/acsl/numsystems/mult7.png" class="img-fluid" /> | We now continue to do multiplication with the second digit of `DE`. A zero is automatically placed first just like in normal multiplication. Then, `$D*F=13*15=195$`. `$195/16=12 \; R \, 3$`. `C` is used in place of `12`. |
+| <img src="/res/acsl/numsystems/mult2.png" class="img-fluid" /> | `$F*E=15*14=210$`. `$210/16=13 \; R \, 2$`. The `13`, or `D`, is carried. The `2` is put at the bottom. | <img src="/res/acsl/numsystems/mult8.png" class="img-fluid" /> | `$(D*4)+C=(13*4)+12=64$`. `$64/16=4 \; R \, 0$`. |
+| <img src="/res/acsl/numsystems/mult3.png" class="img-fluid" /> | `$(4*E)+D=(4*14)+13=69$`. `$69/16=4 \; R \, 5$`. The `4` is carried, and the `5` is put at the bottom. | <img src="/res/acsl/numsystems/mult9.png" class="img-fluid" /> | `$(D*3)+4=(13*3)+4=43$`. `$56/16=2 \; R \, 11$`. `B` replaces `11`. |
+| <img src="/res/acsl/numsystems/mult4.png" class="img-fluid" /> | `$(3*E)+4=(3*14)+4=46$`. `$46/16=2 \; R \, 14$` (or `E` for `14`). | <img src="/res/acsl/numsystems/mult10.png" class="img-fluid" /> | `$(B*D)+2=(11*13)+2=145$`. `$145/16=9 \; R \, 1$`.|
+| <img src="/res/acsl/numsystems/mult5.png" class="img-fluid" /> | `$(B*E)+2=(11*14)+2=156$`. `$156/16=9 \; R \, 12$` (or `C` for `12`). | <img src="/res/acsl/numsystems/mult11.png" class="img-fluid" /> | There are no calculations to do for the extra carried 9, so it is automatically moved to the bottom. |
+| <img src="/res/acsl/numsystems/mult6.png" class="img-fluid" /> | There are no calculations to do for the extra carried 9, so it is automatically moved to the bottom. | <img src="/res/acsl/numsystems/mult12.png" class="img-fluid" /> | The results are finally added together to get **9B7E82**. |
 
 ## Division
 
@@ -246,14 +246,14 @@ With division, the process of finding how many times the divisor fits into the d
 I will jump right into an example, as it is easier to demonstrate while explaining for division in particular. We will
 do the operation, `$312_4 / 2_4$`. First off, we must remember what range of numbers we can work with: [0, 3]. What
 would also be useful is to list out the results of `$2_4 \bullet 1_4$`, `$2_4 \bullet 2_4$`, and `$2_4 \bullet 3_4$`
-(which are `$2_4$`, `$10_4$`, and `$12_4$` respectively). 
+(which are `$2_4$`, `$10_4$`, and `$12_4$` respectively).
 
 Now, we can start. Refer to the table below.
 
-| Step | Explanation | Step | <div style="width:300px;">Explanation</div> |
+| Step | Explanation | Step | Explanation |
 | --- | --- | --- | --- |
-| <img src="/res/acsl/numsystems/div1.png" style="width: 175px;"/> | This is the start of our problem. | <img src="/res/acsl/numsystems/div3.png" style="width: 175px;"/> | `$2_4$` belongs in `$11_4$` two times since `$2_4 * 2_4 = 10_4$`. `10` is subtracted from `11` to get `1`, and the `2` is carried down. |
-| <img src="/res/acsl/numsystems/div2.png" style="width: 175px;"/> | `$2_4$` belongs in `$3_4$` one time. `1` is put at the top, we do the needed subtraction, and `1` is carried down. We are now left with `11` at the bottom.| <img src="/res/acsl/numsystems/div4.png" style="width: 175px;"/> | `$2_4$` belongs in `$12_4$` three times. `3` is put at the top, `12` is subtracted from `12` (since $2_4 * 3_4 = 12$), and we are left with a remainder of `0`. |
+| <img src="/res/acsl/numsystems/div1.png" class="img-fluid" /> | This is the start of our problem. | <img src="/res/acsl/numsystems/div3.png" class="img-fluid" /> | `$2_4$` belongs in `$11_4$` two times since `$2_4 * 2_4 = 10_4$`. `10` is subtracted from `11` to get `1`, and the `2` is carried down. |
+| <img src="/res/acsl/numsystems/div2.png" class="img-fluid" /> | `$2_4$` belongs in `$3_4$` one time. `1` is put at the top, we do the needed subtraction, and `1` is carried down. We are now left with `11` at the bottom.| <img src="/res/acsl/numsystems/div4.png" class="img-fluid" /> | `$2_4$` belongs in `$12_4$` three times. `3` is put at the top, `12` is subtracted from `12` (since $2_4 * 3_4 = 12$), and we are left with a remainder of `0`. |
 
 <br>
 
@@ -275,8 +275,8 @@ Follow the table below:
 
 | Steps | |
 | --- | --- |
-| <img src="/res/acsl/numsystems/prob2-1.png" style="width: 250px;"/> | <img src="/res/acsl/numsystems/prob2-2.png" style="width: 250px;"/> |
-| <img src="/res/acsl/numsystems/prob2-3.png" style="width: 250px;"/> | <img src="/res/acsl/numsystems/prob2-4.png" style="width: 250px;"/> |
+| <img src="/res/acsl/numsystems/prob2-1.png" class="img-fluid" /> | <img src="/res/acsl/numsystems/prob2-2.png" class="img-fluid" /> |
+| <img src="/res/acsl/numsystems/prob2-3.png" class="img-fluid" /> | <img src="/res/acsl/numsystems/prob2-4.png" class="img-fluid" /> |
 
 ## 3. Evaluate the following expression: `$7176_8 * 6_8$`.
 
@@ -284,8 +284,8 @@ Follow the table below:
 
 | Steps | | |
 | --- | --- | --- |
-| <img src="/res/acsl/numsystems/prob3-1.png" style="width: 250px;"/> | <img src="/res/acsl/numsystems/prob3-2.png" style="width: 250px;"/> | <img src="/res/acsl/numsystems/prob3-3.png" style="width: 250px;"/> |
-| <img src="/res/acsl/numsystems/prob3-4.png" style="width: 250px;"/> | <img src="/res/acsl/numsystems/prob3-5.png" style="width: 250px;"/> | |
+| <img src="/res/acsl/numsystems/prob3-1.png" class="img-fluid" /> | <img src="/res/acsl/numsystems/prob3-2.png" class="img-fluid" /> | <img src="/res/acsl/numsystems/prob3-3.png" class="img-fluid" /> |
+| <img src="/res/acsl/numsystems/prob3-4.png" class="img-fluid" /> | <img src="/res/acsl/numsystems/prob3-5.png" class="img-fluid" /> | |
 
 ## 4. Solve for `x` in the following equation: `$275_x=360_7$`.
 

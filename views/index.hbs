@@ -1,206 +1,81 @@
 <!-- Made by Raymond Zhao, with the navbar from Anton Barchukov -->
 <!doctype html>
-<style>
-	#join-us {
-
-	}
-	#about {
-
-	}
-	#join-info {
-		border-top: 1px solid white;
-		padding-top: 15px;
-	}
-	pre {
-		font-size: 70% !important;
-	}
-
-	@media (min-width: 768px) {
-		#about {
-			padding-right: 20px;
-		}
-		#join-info {
-			border-top: 0;
-			border-left: 1px solid white;
-			padding-left: 20px;
-			padding-top: 0;
-		}
-		pre {
-			font-size: 87.5% !important;
-		}
-	}
-
-	pre {
-		margin-bottom: 0 !important;
-		background: #2b2b2b;
-		padding: 10px;
-	}
-	h1 {
-		margin-bottom: 1rem !important;
-	}
-	h3 {
-		margin: 15px 0 !important;
-	}
-	#aboutcontainer a {
-		color: #7bff !important;
-	}
-
-</style>
-
 <html lang="en">
+
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-173254620-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-173254620-1');
-	</script>
-
-	<!-- Simple metadata -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<!-- Open Graph Protocol metadata -->
-	<meta property="og:title" content="Neuqua Valley Computing Team">
-	<meta property="og:description" content="The website for Neuqua Valley High School's computing team. Join if you love programming!">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://nvcomputing.com">
-	<meta property="og:site_name" content="NVHS Computing Team">
-	<meta property="og:image" content="/res/android-chrome-512x512.png">
-
-	<!-- CSS -->
-	<link rel="stylesheet" href="/css/darcula.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/plugins/line-numbers/prism-line-numbers.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" href="/css/main.css">
-
-	<!-- Libraries -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/components/prism-core.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/plugins/autoloader/prism-autoloader.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
-	<script src="/js/navbar.js"></script>
-
-	<!-- Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap" rel="stylesheet">
-
-	<!-- Favicon stuff -->
-	<link rel="apple-touch-icon" sizes="180x180" href="/res/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/res/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/res/favicon-16x16.png">
-	<link rel="manifest" href="/res/site.webmanifest">
-
-	<title>Neuqua Valley Computing Team</title>
+	{{> head }}
 </head>
-<body>
-<div class="background-page">
-	<div class="navbar-wrapper pt-3">
-		<nav class="navbar navbar-expand-lg navbar-expand-md navbar-dark bg-dark top-navbar navbar-custom" id="navbar">
-			<div class="container">
-				<a href="/" class="navbar-brand d-block d-sm-none" id="navimgref-sm"><img src="/res/nvct-logo.svg" alt="Neuqua Logo" id="navimg" class="img-fluid"></a>
-				<a href="/" class="navbar-brand d-none d-sm-block" id="navimgref-lg"><img src="/res/nvct-logo-h.svg" alt="Neuqua Logo" id="navimg" class="img-fluid"></a>
-				<button class="navbar-toggler navbar-toggler-custom" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-					<ul class="navbar-nav pull-right">
-						<li class="nav-item">
-							<a class="nav-link active" href="/" id="homeref">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/resources" id="resourcesref">Resources</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/practice" id="practiceref">Practice</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/schedule" id="scheduleref">Schedule</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</div>
-	<div class="container py-5">
-		<div class="row h-100 align-items-center py-5">
-			<div class="col-lg-6 text-white">
-				<h1><b>NVHS Computing Team</b></h1>
-				<p class="lead text-white mb-0">Main Building D200 | Thursdays 2:30-3:30</p>
-			</div>
-			<div class="col-lg-6 d-none d-lg-block"><img src="/res/nvabout.png" alt="nvclublogo" class="img-fluid rounded"></div>
-		</div>
-	</div>
-</div>
 
-<div id="join-us">
-	<div class="container">
-		<div class="row py-5">
-			<div class="col-lg text-white">
-				<div class="rounded shadow-sm cards-custom line-numbers">
-					{{{titleCode}}}
+<body>
+	<div class="background-page">
+		<div class="navbar-wrapper pt-3"> {{> navbar }} </div>
+		<div class="container py-5">
+			<div class="row align-items-center py-5">
+				<div class="col-lg-6 text-white">
+					<h1 class="font-weight-bold">NVHS Computing Team</h1>
+					<p class="font-weight-thin lead text-white mb-0">Main Building D200 | Thursdays 2:30-3:30</p>
 				</div>
+				<div class="col-lg-6 d-none d-lg-block"><img src="/res/nvabout.png" alt="nvclublogo" class="img-fluid rounded"></div>
 			</div>
 		</div>
 	</div>
-</div>
-<div id="aboutcontainer">
+	<div class="d-none d-lg-block py-5">
+		<div class="container">
+			<div class="rounded shadow-sm line-numbers"> {{{titleCode}}} </div>
+		</div>
+	</div>
 	<div class="container">
 		<div class="row py-4">
-			<div class="col-md-8 text-white" id="about">
-				<h1>What is Computing Team?</h1>
-				<p>At Computing Team, we do a variety of activities, mostly revolving around programming
-					and computer science topics.</p>
+			<div class="col-md-8 text-white border-md-right pb-4 pr-4">
+				<h1 class="text-center text-md-left mb-4">What is Computing Team?</h1>
+				<p>At Computing Team, we do a variety of activities, mostly revolving around programming and computer science topics.</p>
 				<p><i>(To join the club, it is recommended that you either have taken or are taking AP Computer Science A, otherwise you may have trouble understanding the material.)</i></p>
-				<p>In our meetings, we cover many computer science topics, practice solving programming problems, and do fun programming competitions.
-				Most of the activity we do is to practice and prepare for two major contests:</p>
+				<p>In our meetings, we cover many computer science topics, practice solving programming problems, and do fun programming competitions. Most of the activity we do is to practice and prepare for two major contests:</p>
 				<ul>
 					<li>American Computer Science League (ACSL)</li>
 					<li>USA Computing Olympiad (USACO)</li>
 				</ul>
-				<p>ACSL is a computer science competition that involves short answer and programming problems and
-					a wide variety of computer science related short answer topics. <a href="/resources/acsl/">Further details and resources for ACSL can be found here.</a></p>
-
-				<p>USACO is a multistage programming competition that progressively gets more difficult as you rank up.
-					In USACO, you solve 3 highly difficult programming problems in a set amount of time.
-				There are 4 levels at which people participate, going up in difficulty from Bronze to Platinum.
-					<a href="/resources/usaco/">Further details and resources for USACO can be found here.</a></p>
-
-				<p>Along with preparing for these contests, we also often do mock Codeforces contests as practice.
-				<a href="https://codeforces.com">Codeforces</a> is a website in which you
-				solve multiple programming problems online within a set time frame. We will be hosting multiple practice contests in which
-				you can compete with everyone else in the club throughout the year.</p>
-
-				<p>If any of these activities sound interesting to you, you should definitely join Computing Team (if anything, just for the website.
-				I swear, half the websites in this school are atrocities.)</p>
+				<p>ACSL is a computer science competition that involves short answer and programming problems and a wide variety of computer science related short answer topics. <a href="/resources/acsl/">Further details and resources for ACSL.</a></p>
+				<p>USACO is a multistage programming competition that progressively gets more difficult as you rank up. In USACO, you solve 3 highly difficult programming problems in a set amount of time. There are 4 levels at which people participate, going up in difficulty from Bronze to Platinum. <a href="/resources/usaco/">Further details and resources for USACO.</a></p>
+				<p>Along with preparing for these contests, we also often do mock Codeforces contests as practice. <a href="https://codeforces.com">Codeforces</a> is a website in which you solve multiple programming problems online within a set time frame. We will be hosting multiple practice contests in which you can compete with everyone else in the club throughout the year.</p>
+				<p>If any of these activities sound interesting to you, you should definitely join Computing Team (if anything, just for the website. I swear, half the websites in this school are atrocities.)</p>
 			</div>
-			<div class="col-md-4 text-white" id="join-info">
-				<h1>Club Info</h1>
-				<h3><b>Meeting Times</b><br>
-					Thursdays 2:30-3:30 PM<br>
-					First meeting September 17, 2020</h3>
-				<h3><b>Meeting Location</b><br>
-				D200 (Probably just Zoom right now.)</h3>
-				<h3><b>Registration</b><br>
-					<a href="https://docs.google.com/forms/d/e/1FAIpQLSf9bBhjK4qrUeaye6wQaPgaDY0_CZc7kVo5M5DOfr1SB7RMGw/viewform">Register Here</a>
-				</h3>
-				<br>
-				<h1>FAQ</h1>
-				<p><b>Q: Do you cut people from the club?</b><br>No. ACSL takes the highest scores out of everyone, so we have no reason to.</p>
-				<p><b>Q: Can I join halfway through the year?</b><br>Sure, but you might not be able to compete in some of the contests.</p>
-				<!--<p><b>Q: NOOO YOU CAN'T JUST ADD 10 LINES TO THE BOTTOM OF THE HTML! YOU'RE RUINING THE SPACERINOOOOO</b><br>Haha &#60;br&#62; go<br><br><br><br><br><br><br><br><br><br></p>-->
-				<p><b>Q: Am I good enough to join?</b><br>Yes. Having some computer science knowledge is preferred, but if you are willing to put in the effort to learn, you should join anyway.</p>
+			<div class="col-md-4 text-white pl-4">
+				<div class="pb-4">
+					<h1 class="text-center text-md-left">Club Info</h1>
+					<div class="my-4">
+						<h4 class="font-weight-light">Meeting Times</h4>
+						<p>Thursdays 2:30-3:30 PM <br />First meeting September 17, 2020</p>
+					</div>
+					<div class="my-4">
+						<h4 class="font-weight-light">Meeting Location</h4>
+						<p>D200 / Zoom Sessions</p>
+					</div>
+					<div class="mt-4">
+						<h4 class="font-weight-light">Registration</h4>
+						<a href="https://docs.google.com/forms/d/e/1FAIpQLSf9bBhjK4qrUeaye6wQaPgaDY0_CZc7kVo5M5DOfr1SB7RMGw/viewform">Register Here</a>
+					</div>
+				</div>
+				<div class="pb-4">
+					<h1 class="text-center text-md-left">FAQ</h1>
+					<div class="my-4">
+						<h5>Q: Do you cut people from the club?</h5>
+						<div class="font-weight-light">No. ACSL takes the highest scores out of everyone, so we have no reason to.</div>
+					</div>
+					<div class="my-4">
+						<h5>Q: Can I join halfway through the year?</h5>
+						<div class="font-weight-light">Sure, but you might not be able to compete in some of the contests.</div>
+					</div>
+					<div class="mt-4">
+						<h5>Q: Am I good enough to join?</h5>
+						<div class="font-weight-light">Yes. Having some computer science knowledge is preferred, but if you are willing to put in the effort to learn, you should join anyway.</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-
-<div class="footer">
-	<div class="text-center text-white">&copy;2020 Copyright: <a href="https://nvcomputing.com"> NVComputing.com</a></div>
-</div>
 </body>
+
+{{> footer }}
 
 </html>

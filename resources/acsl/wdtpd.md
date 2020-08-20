@@ -13,14 +13,14 @@ Often times, you may use other programmers' code in your own program. Before inc
 your program, however, you would have to make sure that the code is exactly how you want it; so,
 you would have to review this other code and make any modifications if needed.
 
-Documentation (such as text explanations, in-line comments, and docstrings) is unfortunately 
+Documentation (such as text explanations, in-line comments, and docstrings) is unfortunately
 something that is often forgotten in programs. You may not be able to get in touch with the
 other programmer either. So, that is why it's important that you can understand a program even if
 it doesn't have documentation.
 
 In this category, ACSL presents you with a program, and you will have to determine what it does.
 There is no real "method" to solving these types of problems. Imagine the pseudocode as regular
-code, and go from there. 
+code, and go from there.
 
 <br>
 
@@ -94,7 +94,7 @@ ACSL problems may have a start index of 1 instead.
 
 **Strings**
 
-Strings are marked with " ". They can be empty. The characters are labeled based on a zero index. 
+Strings are marked with " ". They can be empty. The characters are labeled based on a zero index.
 
 Errors occur if the user attempts to access an index that is out of range.
 
@@ -102,9 +102,9 @@ The *len(A)* function will find the length of the String; this is typical Python
 equivalent to *.length()* in Java.
 
 [ ] can be used to specify either a single character or a range of characters with their
-indices. 
+indices.
 
-Now, there are a few inconsistent things that ACSL does with these brackets (not sure why), so 
+Now, there are a few inconsistent things that ACSL does with these brackets (not sure why), so
 be sure to take note of them in the table below. *S* has been used as our example string.
 
 | Code | Explanation |
@@ -142,7 +142,7 @@ output B
 First, *B* is initialized to 0 on line 2. The if statement on line 3 would apply since `$50>48$`,
 so `$B = 0 + (50-48) * 2 * 10 = 40$` and `$H = 48$`.
 
-Then, the if statement starting on line 7 would also execute because `$48>40$`. So, `$B = 
+Then, the if statement starting on line 7 would also execute because `$48>40$`. So, `$B =
 40 + (48-40) * (3/2) * 10 = 40 + 8 * 3/2 * 10 = 40 + 120 = 160$`. `$H = 40$`.
 
 Finally, on line 11, `$B = 160 + 40 * 10 = 160 + 400 = 560$`. So, our final answer is `560`.
@@ -161,8 +161,8 @@ next
 ```
 
 This code first initializes three variables: *A*, *NUM*, and *T*. The first for loop traverses
-through *A* in reverse order and stores the reverse of *A* into *T*. The next for loop checks 
-for if the character at index *J* in *A* is the same as the character at index *J* in *T*; if 
+through *A* in reverse order and stores the reverse of *A* into *T*. The next for loop checks
+for if the character at index *J* in *A* is the same as the character at index *J* in *T*; if
 they are the same, then *NUM* increments by 1.
 
 So, this is what we have. *A* is `BANANAS`. After the for loop, *T* becomes `SANANAB`. These
@@ -192,7 +192,7 @@ For this program, it may be hard to verbally track all of the variables' values.
 will be used instead. One note is that line 11 was broken up into 2 different steps in the table,
 one step being `C(n) = A(j)` and the other being the variable updates.
 
-| Line(s) | <div style="width:50px;">j</div> | <div style="width:50px;">k</div> | <div style="width:50px;">n</div> | <div style="width:50px;">A(j)</div> | <div style="width:50px;">B(k)</div> | <div style="width:50px;">C(n)</div> | 
+| Line(s) | j | k | n | A(j) | B(k) | C(n) |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1-4 | 1 | 1 | 1 | 12 | 17 | -- |
 | 11 | 1 | 1 | 1 | 12 | 17 | 12 |

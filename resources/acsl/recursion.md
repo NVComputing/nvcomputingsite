@@ -52,7 +52,7 @@ int pow_recursion(int x, int y) {
 Here, The two if conditions both represent a base case; when `y` is a certain value, then the
 function will no longer continue to call on itself and will instead return a constant value.
 
-Now, let's discuss a few "types" of recursion. 
+Now, let's discuss a few "types" of recursion.
 
 *Indirection recursion* is when function A calls
 on another function, function B, which eventually calls on function A again.
@@ -79,7 +79,7 @@ The Fibonacci sequence is a famous sequence that goes like so:
 
 The first two numbers in the sequence are 0 and 1 respectively. After that, every number is the
 sum of the preceding two numbers. So, the third number would be `$0+1=1$`. The fourth number
-would be `$1+1=2$`. 
+would be `$1+1=2$`.
 
 So, overall, the list is 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, etc.
 
@@ -178,18 +178,18 @@ each function call we make. Here's the process we can take:
 
 | Step | Reasoning |
 | --- | --- |
-| <img src="/res/acsl/recursion/stack1.png" style="width: 200px;"/> | Our first call would of course be `mystery4(4)`. So, we add this call to our stack. |
-| <img src="/res/acsl/recursion/stack2.png" style="width: 200px;"/> | Since `nNum` is not less than or equal to zero, we skip over the base case and move to line 4, which is a recursive call. So, we add this recursive call to the stack. The extra `4` added to the bottom element marks what line in that specific function call that we left off at. |
-| <img src="/res/acsl/recursion/stack5.png" style="width: 200px;"/> | Here, we fast-forwarded and created the rest of the stack until we finally met the base case, `nNum = 0`. |
+| <img src="/res/acsl/recursion/stack1.png" class="img-fluid" /> | Our first call would of course be `mystery4(4)`. So, we add this call to our stack. |
+| <img src="/res/acsl/recursion/stack2.png" class="img-fluid" /> | Since `nNum` is not less than or equal to zero, we skip over the base case and move to line 4, which is a recursive call. So, we add this recursive call to the stack. The extra `4` added to the bottom element marks what line in that specific function call that we left off at. |
+| <img src="/res/acsl/recursion/stack5.png" class="img-fluid" /> | Here, we fast-forwarded and created the rest of the stack until we finally met the base case, `nNum = 0`. |
 
 Now that the base case is reached, the real calculating can now begin.
 
 | Step | Reasoning |
 | --- | --- |
-| <img src="/res/acsl/recursion/stack4.png" style="width: 200px;"/> | Since `nNum == 0`, we return back to the previous function call, `mystery4(1)`. Now that line 4 has been executed, we continue to execute the rest of the function starting from line 5. Based on the for loops, `-+` would be printed and be followed by a new line. |
-| <img src="/res/acsl/recursion/stack3.png" style="width: 200px;"/> | Now that we have finished executing the rest of `mystery4(1)`, that is removed from the stack, and we move to `mystery4(2)`. The same idea applies; we execute the rest of the function starting from line 5 and print out `--++` with a new line. |
-| <img src="/res/acsl/recursion/stack2.png" style="width: 200px;"/> | We move onto `mystery4(3)` and start from line 5. `---+++` is printed with a new line afterwards. |
-| <img src="/res/acsl/recursion/stack1.png" style="width: 200px;"/> | We are now onto the last element in our stack, `mystery4(4)`, which was our original function. `----++++` is printed with a new line. |
+| <img src="/res/acsl/recursion/stack4.png" class="img-fluid" /> | Since `nNum == 0`, we return back to the previous function call, `mystery4(1)`. Now that line 4 has been executed, we continue to execute the rest of the function starting from line 5. Based on the for loops, `-+` would be printed and be followed by a new line. |
+| <img src="/res/acsl/recursion/stack3.png" class="img-fluid" /> | Now that we have finished executing the rest of `mystery4(1)`, that is removed from the stack, and we move to `mystery4(2)`. The same idea applies; we execute the rest of the function starting from line 5 and print out `--++` with a new line. |
+| <img src="/res/acsl/recursion/stack2.png" class="img-fluid" /> | We move onto `mystery4(3)` and start from line 5. `---+++` is printed with a new line afterwards. |
+| <img src="/res/acsl/recursion/stack1.png" class="img-fluid" /> | We are now onto the last element in our stack, `mystery4(4)`, which was our original function. `----++++` is printed with a new line. |
 
 So, ultimately, our final display from the call `mystery4(4)` gets us:
 
@@ -211,7 +211,7 @@ and the stack literally overflows.
 
 ## Trees
 
-This method is handy for dealing with multiple recursion. The Fibonacci sequence is a good 
+This method is handy for dealing with multiple recursion. The Fibonacci sequence is a good
 example. Let's refer back to this equation:
 
 ### `$\begin{equation*}f(n) = \begin{cases}n &\text{if $n \leq 1$}\\f(n-1)+f(n-2) &\text{if $n > 1$}\end{cases}\end{equation*}$`
@@ -221,8 +221,8 @@ calculations.
 
 | Step | Explanation |
 | --- | --- |
-| <img src="/res/acsl/recursion/tree1.png" style="width: 75px;"/> | This is our original call, `fibonacci(5)`. This will be the root of our tree. |
-| <img src="/res/acsl/recursion/tree2.png" style="width: 200px;"/> | Since `fibonacci(5)` doesn't meet the base condition of `N <= 1`, we will have to make two recursive calls. This is represented by drawing two children from the `5` node. The `4` and `3` represent the new value for `N` in the recursive calls. |
+| <img src="/res/acsl/recursion/tree1.png" class="img-fluid" /> | This is our original call, `fibonacci(5)`. This will be the root of our tree. |
+| <img src="/res/acsl/recursion/tree2.png" class="img-fluid" /> | Since `fibonacci(5)` doesn't meet the base condition of `N <= 1`, we will have to make two recursive calls. This is represented by drawing two children from the `5` node. The `4` and `3` represent the new value for `N` in the recursive calls. |
 
 Eventually, we would end up with this tree:
 
@@ -235,8 +235,8 @@ Now, you just need to work your way up for calculations. Here's how it would loo
 
 | Step | Explanation |
 | --- | --- |
-| <img src="/res/acsl/recursion/tree4.png" style="width: 400px;"/> | First, `$fibonacci(1) = 1$` and `$fibonacci(0) = 0$`. <br><br> `$fibonacci(2) = fibonacci(1) + fibonacci(0)$`. <br><br> So, `$fibonacci(2) = 1 + 0 = 1$`. |
-| <img src="/res/acsl/recursion/tree5.png" style="width: 400px;"/> | We have now determined that `$fibonacci(2) = 1$`. <br><br> `$fibonacci(1) = 1$` like before. <br><br> `$fibonacci(3) = fibonacci(2) + fibonacci(1) = 1 + 1 = 2$`. |
+| <img src="/res/acsl/recursion/tree4.png" class="img-fluid" /> | First, `$fibonacci(1) = 1$` and `$fibonacci(0) = 0$`. <br><br> `$fibonacci(2) = fibonacci(1) + fibonacci(0)$`. <br><br> So, `$fibonacci(2) = 1 + 0 = 1$`. |
+| <img src="/res/acsl/recursion/tree5.png" class="img-fluid" /> | We have now determined that `$fibonacci(2) = 1$`. <br><br> `$fibonacci(1) = 1$` like before. <br><br> `$fibonacci(3) = fibonacci(2) + fibonacci(1) = 1 + 1 = 2$`. |
 
 Once you finish your calculations, you will end up with this:
 
@@ -311,7 +311,7 @@ For this question, we will write equations to get our answer.
 
 Hence, `$f(13) = f(17) = 16$`.
 
-`$f(6) = f(16 - 16) = f(0)$`. 
+`$f(6) = f(16 - 16) = f(0)$`.
 
 `$f(0) = 4 * 0^2 = 0$`. So, our final answer is `0`.
 
@@ -332,25 +332,25 @@ answer is `11`.
 
 ## 4. If the following algorithm is applied to a square with a side of 16 feet, how many square feet will be painted? (This is from the ACSL Wiki):
 
-1. Given a square. 
-2. If the length of a side is less than 2 feet, then stop. 
-3. Divide the square into 4 equal size squares (i.e., draw a “plus” sign inside the square). 
-4. Paint one of these 4 small squares. 
+1. Given a square.
+2. If the length of a side is less than 2 feet, then stop.
+3. Divide the square into 4 equal size squares (i.e., draw a “plus” sign inside the square).
+4. Paint one of these 4 small squares.
 5. Repeat this procedure (start at step 1) for each of the 3 unpainted squares.
 
 This problem gives you a glance at a pseudocode, non-mathematical or programming-related
 recursive algorithm.
 
-Don't bother writing out a mathematical or programming function (unless you 
+Don't bother writing out a mathematical or programming function (unless you
 really want to). Instead, just follow the steps like you would if you were trying to build
 IKEA furniture or a LEGO set.
 
 | Step | Image | Explanation |
 | --- | --- | --- |
-| 1 | <img src="/res/acsl/recursion/prob4-1.png" style="width: 250px;"/> | We first execute the algorithm on our original 16-foot square. We skip Step 2 because the condition doesn't apply. We then execute Steps 3-4. |
-| 2 | <img src="/res/acsl/recursion/prob4-2.png" style="width: 300px;"/> | We will now execute Step 5 from our algorithm pass above. Again, Step 2 would be skipped here. So, we split each of these squares into 4 and paint one of the small squares. |
-| 3 | <img src="/res/acsl/recursion/prob4-3.png" style="width: 400px;"/> | We continue the recursive process. Step 2 does not apply, so we divide and paint. |
-| 4 | <img src="/res/acsl/recursion/prob4-4.png" style="width: 500px;"/> | Again, we go through another recursive pass. Divide and paint. |
+| 1 | <img src="/res/acsl/recursion/prob4-1.png" class="img-fluid" /> | We first execute the algorithm on our original 16-foot square. We skip Step 2 because the condition doesn't apply. We then execute Steps 3-4. |
+| 2 | <img src="/res/acsl/recursion/prob4-2.png" class="img-fluid" /> | We will now execute Step 5 from our algorithm pass above. Again, Step 2 would be skipped here. So, we split each of these squares into 4 and paint one of the small squares. |
+| 3 | <img src="/res/acsl/recursion/prob4-3.png" class="img-fluid" /> | We continue the recursive process. Step 2 does not apply, so we divide and paint. |
+| 4 | <img src="/res/acsl/recursion/prob4-4.png" class="img-fluid" /> | Again, we go through another recursive pass. Divide and paint. |
 
 When we apply the function again to the 81 small, unpainted squares, these squares will have
 only have a side length of 1 foot. Thus, instead of dividing further, we just stop here.

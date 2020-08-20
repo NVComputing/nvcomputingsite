@@ -21,13 +21,13 @@
 
 <br>
 
-# Introduction 
+# Introduction
 
 As many of us may know, booleans are an essential part of programming that can hold one of two values: `true` and `false`, which can be denoted as `1` and `0`. Booleans can take the form of either a variable (such as `s = true`) or an expression (like `$5 < 36$`, which evaluates to `true`). These are most often used in if statements (formatted as `if (boolean condition)`), another essential piece of programming that allows us to perform different functions for different conditions.
 
 Boolean algebra is needed for digital circuits that make up a computer's hardware. This is very useful if you're looking to understand how a computer works, given that computers talk entirely in `1`s and `0`s.
 
-There are booleans everywhere in everyday life - from power switches to advanced searching, 
+There are booleans everywhere in everyday life - from power switches to advanced searching,
 
 Actually, what if everything in the universe is just a boolean? Wouldn't be that surprising.
 
@@ -48,9 +48,9 @@ Here's an example:
 
 So, let's break down how exactly this truth table was drawn:
 
-First, a column was made for each of the variable terms. Under these columns, 
-I listed out all possible combinations of values for X and Y. X and Y can both either 
-be 0 or 1; together, they could form the pairs: `(0, 0)`, `(1, 0)`, `(0, 1)`, and `(1, 1)`. 
+First, a column was made for each of the variable terms. Under these columns,
+I listed out all possible combinations of values for X and Y. X and Y can both either
+be 0 or 1; together, they could form the pairs: `(0, 0)`, `(1, 0)`, `(0, 1)`, and `(1, 1)`.
 Each of these pairs should make up one row in the table. To know how many combinations a
 certain number of variables can make, use `$2^n$` (n being the number of variables).
 
@@ -80,14 +80,14 @@ For this, I broke the expression into two smaller parts. I used `A` to symbolize
 | xor | `$x \oplus y$` | The result is true if the values of x and y are different. This is also equal to `$x\overline{y} + \overline{x}y$`; if `$x = 0$` and `$y = 1$`, then this expression would evaluate to `$0 • 0 + 1 • 1$`, or `1`. Since x and y have different values, this makes sense. Conversely, if `$x = y = 0$`, then this expression would evaluate to `$0 \bullet 1 + 1 \bullet 0$`, or `0`. |
 | xnor | `$x \odot y$` | This is the exact opposite of xor; the result is true if the values of x and y are the same. For this reason, `$x \odot y$` can also be written as `$\overline{x \oplus y}$`. |
 
-For the order of precedence, it goes as follows: 
+For the order of precedence, it goes as follows:
 - not (highest precedence)
 - and
 - xor and xnor
 - or (lowest precedence)
 
 Note that there are two more logic operators (NAND and NOR) that will show up in [Digital Electronics](/resources/acsl/digitalelectronics), which will just be represented here as
-"NOT AND" `$\overline{AB}$` and "NOT OR" `$\overline{A + B}$`. 
+"NOT AND" `$\overline{AB}$` and "NOT OR" `$\overline{A + B}$`.
 
 <br>
 
@@ -101,7 +101,7 @@ Please use this time to thoroughly understand each of these laws. You shouldn't 
 
 ## Commutative Law
 
-The order that you write two separate terms in does not matter. 
+The order that you write two separate terms in does not matter.
 
 1. `$x + y = y + x$`
 2. `$x \bullet y = y \bullet x$`

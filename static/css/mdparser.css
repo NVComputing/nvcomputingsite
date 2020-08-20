@@ -1,6 +1,47 @@
-html {
-	scroll-behavior: smooth;
+table, th, td {
+	border: 1px solid white;
 }
+
+table {
+	border-collapse: collapse;
+	overflow-x: scroll;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+th, td {
+	padding: 0.175rem;
+	text-align: center;
+}
+
+@media (min-width: 576px) {
+	th, td {
+		padding: 0.2rem;
+	}
+}
+
+@media (min-width: 768px) {
+	th, td {
+		padding: 0.5rem;
+	}
+ }
+
+@media (min-width: 992px) {
+	th, td {
+		padding: 0.7rem;
+	}
+ }
+
+@media (min-width: 1200px) {
+	th, td {
+		padding: 1rem;
+	}
+}
+
+mjx-stretchy-h {
+	border-top: 1px solid white;
+}
+
 .resources h1::before {
 	display: block;
 	content: " ";
@@ -9,6 +50,7 @@ html {
 	visibility: hidden;
 	pointer-events: none;
 }
+
 .resources h2::before {
 	display: block;
 	content: " ";
@@ -17,51 +59,32 @@ html {
 	visibility: hidden;
 	pointer-events: none;
 }
+
 .resources h1 {
 	border-bottom: 1px solid white;
-	margin-bottom: 10px;
-	padding-bottom: 5px;
+	margin-bottom: 2rem;
+	padding-bottom: 1rem;
 	font-weight: bold;
 }
+
 .resources h2 {
 	border-bottom: 1px solid #2b2b2b;
-	padding-bottom: 5px;
-	margin-bottom: 10px;
+	padding-bottom: 0.5rem;
+	margin-bottom: 1rem;
 }
-.resources a {
-	color: #7bff !important;
-}
-.tableofcontents a {
-	color: #7bff !important;
-}
+
 .resources hr {
 	border-top: 1px solid #1f1f1f;
 }
-table, th, td {
-	border: 1px solid white;
-}
-table {
-	border-collapse: collapse;
-	overflow-x: scroll;
-	margin-bottom: 20px;
-}
-th, td {
-	padding: 4px;
-}
-mjx-stretchy-h {
-	border-top: 1px solid white;
-}
+
 .inline-latex {
 	color: #fff !important;
-	font-size: inherit !important;
+	font-size: clamp(1rem, 2.5vw, 2rem) !important;
 	background: none !important;
 }
+
 .table-wrapper {
 	overflow-x: auto;
-}
-
-img {
-	max-width: 80vw;
 }
 
 @media (max-width: 768px) {
