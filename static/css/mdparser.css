@@ -67,8 +67,8 @@ mjx-stretchy-h {
 
 .resources h1 {
 	border-bottom: 1px solid white;
-	margin-bottom: 2rem;
-	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	padding-bottom: 0.5rem;
 	font-weight: bold;
 }
 
@@ -84,8 +84,8 @@ mjx-stretchy-h {
 
 .inline-latex {
 	color: #fff !important;
-	font-size: inherit !important;
 	background: none !important;
+	font-size: inherit !important;
 }
 
 .table-wrapper {

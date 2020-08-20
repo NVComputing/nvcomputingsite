@@ -14,7 +14,12 @@ module.exports.set = (app) => {
 			let renderedMarkdown = converter.makeHtml(data);
 			res.render('resources', {
 				resource: renderedMarkdown,
-				title: "Resources | Neuqua Valley Computing Team",
+				title: "Resources | NV Computing Team",
+
+				markdown: true,
+				prism: true,
+				mathjax: true,
+
 				resourcePage: true
 			});
 		});
@@ -38,7 +43,12 @@ module.exports.set = (app) => {
 				res.render('resources', {
 					resource: converter.makeHtml(data),
 					resourceName: title[1],
-					title: title[1] + " | Neuqua Valley Computing Team",
+					title: title[1] + " | NV Computing Team",
+
+					markdown: true,
+					prism: true,
+					mathjax: true,
+
 					resourcePage: true
 				});
 			}

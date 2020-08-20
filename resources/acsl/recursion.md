@@ -346,7 +346,7 @@ really want to). Instead, just follow the steps like you would if you were tryin
 IKEA furniture or a LEGO set.
 
 | Step | Image | Explanation |
-| --- | --- | --- |
+| :-: | --- | --- |
 | 1 | <img src="/res/acsl/recursion/prob4-1.png" class="img-fluid" /> | We first execute the algorithm on our original 16-foot square. We skip Step 2 because the condition doesn't apply. We then execute Steps 3-4. |
 | 2 | <img src="/res/acsl/recursion/prob4-2.png" class="img-fluid" /> | We will now execute Step 5 from our algorithm pass above. Again, Step 2 would be skipped here. So, we split each of these squares into 4 and paint one of the small squares. |
 | 3 | <img src="/res/acsl/recursion/prob4-3.png" class="img-fluid" /> | We continue the recursive process. Step 2 does not apply, so we divide and paint. |
