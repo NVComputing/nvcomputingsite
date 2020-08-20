@@ -1,6 +1,5 @@
 html * {
 	outline: 0 !important;
-	scroll-behavior: smooth;
 }
 
 body {
@@ -100,7 +99,6 @@ footer {
 		transform: translateY(-100px);
 	}
 }
-
 
 .navbar-toggler-custom {
 	font-size: .7rem !important;
@@ -223,3 +221,18 @@ body.side-menu-visible #side-menu.side-menu-left {
 	display: flex;
 }
 
+/* LightBox */
+
+#lightboxOverlay {
+	position: fixed !important;
+	top: 0;
+	left: 0;
+	height: 100% !important;
+	width: 100% !important;
+}
+
+#lightbox {
+	position: fixed !important;
+	top: 50% !important;
+	transform: translateY(-50%);
+}

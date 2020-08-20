@@ -5,14 +5,19 @@ table, th, td {
 table {
 	border-collapse: collapse;
 	overflow-x: scroll;
-	margin-bottom: 20px;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 	width: 100%;
+}
+
+th {
+	text-align: center;
 }
 
 th, td {
 	padding: 0.175rem;
-	text-align: center;
 }
+
 
 @media (min-width: 576px) {
 	th, td {
@@ -79,7 +84,7 @@ mjx-stretchy-h {
 
 .inline-latex {
 	color: #fff !important;
-	font-size: clamp(1rem, 2.5vw, 2rem) !important;
+	font-size: inherit !important;
 	background: none !important;
 }
 

@@ -35,7 +35,6 @@ Algebra page will come with an extra explanation.
 
 Notice how adding the little extra circle causes the logic gate to become negated. So, for example, OR becomes NOR after
 adding the little circle is added to the OR logic gate.
-
 Now, when it comes to reading the overall circuit, the most important thing is to keep track of what comes first.
 Reference the lines to know the order that the logic gates should be evaluated in; look from left to right.
 
