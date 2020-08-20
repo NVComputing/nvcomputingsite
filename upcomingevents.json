@@ -43,13 +43,6 @@
       "tentative": true
     },
     {
-      "name": "Noctem ABCIC",
-      "link": "https://noctem.dev/ABCIC2020.html",
-      "time": 1605409200,
-      "desc": "A competition hosted by the Noctem development team(hopefully online) sometime during the fall where teams of 1-5 students work together to solve problems ranging from USACO Bronze to Gold difficulty.",
-      "tentative": true
-    },
-    {
       "name": "MSOE",
       "link": "https://faculty-web.msoe.edu/hasker/opcomp/",
       "time": 1605880800,
