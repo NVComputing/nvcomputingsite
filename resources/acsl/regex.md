@@ -48,7 +48,7 @@ times.
 
 Here's an example FSA that parses Strings that consist of x's and y's:
 
-![](/res/acsl/regex/fsa.png")
+<img src="/res/acsl/regex/fsa.png" class="img-fluid"/>
 
 Here, we have *A*, *B*, and *C* as our states. *A* is the initial state whereas *C* is the final
 state. There are transition rules that exist between either two different state or a state and

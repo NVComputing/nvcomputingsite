@@ -19,6 +19,7 @@ module.exports.set = (app) => {
 				markdown: true,
 				prism: true,
 				mathjax: true,
+				lightbox: true,
 
 				resourcePage: true
 			});
@@ -48,6 +49,7 @@ module.exports.set = (app) => {
 					markdown: true,
 					prism: true,
 					mathjax: true,
+					lightbox: true,
 
 					resourcePage: true
 				});

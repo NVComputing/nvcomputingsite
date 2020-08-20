@@ -21,25 +21,25 @@ th, td {
 
 @media (min-width: 576px) {
 	th, td {
-		padding: 0.2rem;
+		padding: 0.35rem;
 	}
 }
 
 @media (min-width: 768px) {
 	th, td {
-		padding: 0.5rem;
+		padding: 0.4rem;
 	}
  }
 
 @media (min-width: 992px) {
 	th, td {
-		padding: 0.7rem;
+		padding: 0.45rem;
 	}
  }
 
 @media (min-width: 1200px) {
 	th, td {
-		padding: 1rem;
+		padding: 0.5rem;
 	}
 }
 
