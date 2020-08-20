@@ -31,9 +31,10 @@ let convertedCode = converter.makeHtml(code);
 module.exports.set = (app) => {
 	app.get('/', (req, res) => {
 		res.render('index', {
+			titleCode: convertedCode,
 			title: 'Neuqua Valley Computing Team',
-			homePage: true,
 
+			homePage: true,
 			prism: true,
 
 			titleCode: convertedCode

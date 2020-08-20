@@ -9,6 +9,16 @@ for (let i = 0; i < tables.length; i++) {
 	wrapper.classList.add('table-wrapper');
 	parent.insertBefore(wrapper, table);
 	wrapper.appendChild(table);
+
+	let imgID = Math.random().toString(36).substr(2, 9);
+
+	$(table).find('td img').each((index, item) => {
+		let imgWrapper = document.createElement('a');
+		$(imgWrapper).attr("data-lightbox", imgID);
+		$(imgWrapper).attr("href", $(item).attr("src"));
+		item.parentNode.insertBefore(imgWrapper, item);
+		imgWrapper.appendChild(item);
+	});
 }
 
 let inlineCode = document.getElementsByTagName('code');
