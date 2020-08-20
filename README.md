@@ -1,15 +1,15 @@
 # NVHS Computing Team Website
 
-Rewrite of https://nvcomputing.com/.
+2nd (and hopefully final) rewrite of https://nvcomputing.com/.
 
 Please contribute to the resources folder!
 
 # Credits:
-- Raymond Zhao - Website backend, frontend, Markdown renderer, LaTeX parser, page styling, and maintainer
+- Raymond Zhao - Website backend/infrastructure, website frontend, Markdown renderer, LaTeX and regex parser, page styling, and maintainer
+- Anton Barchukov - Website frontend, navigation bar, Lightbox for images, page styling, HTML cleanup/partials
 - Kelly Hong - Heavy Contributor to Resources
 - Kenneth Zhao - Heavy Contributor to Resources
-- Anton Barchukov - Navbar from old website
-- Nihal Shivannagari - Overweight Contributor to Resources
+- Nihal Shivannagari - Contributor to Resources
 - Nishikar Paruchuri - Contributor to Resources
 
 # Guide to Contributing to Resources
