@@ -1,4 +1,6 @@
 https://nvcomputing.com
+https://nvcomputing.com/schedule
+https://nvcomputing.com/practice
 https://nvcomputing.com/resources
 https://nvcomputing.com/resources/io
 https://nvcomputing.com/resources/index
@@ -6,3 +8,16 @@ https://nvcomputing.com/resources/lambdas
 https://nvcomputing.com/resources/streams
 https://nvcomputing.com/resources/usaco
 https://nvcomputing.com/resources/acsl
+https://nvcomputing.com/resources/efficiency
+https://nvcomputing.com/resources/tips
+https://nvcomputing.com/resources/acsl/assembly
+https://nvcomputing.com/resources/acsl/bitstringflicking
+https://nvcomputing.com/resources/acsl/booleanalgebra
+https://nvcomputing.com/resources/acsl/datastructures
+https://nvcomputing.com/resources/acsl/graphtheory
+https://nvcomputing.com/resources/acsl/lisp
+https://nvcomputing.com/resources/acsl/notation
+https://nvcomputing.com/resources/acsl/numbersystems
+https://nvcomputing.com/resources/acsl/recursion
+https://nvcomputing.com/resources/acsl/regex
+https://nvcomputing.com/resources/acsl/wdtpd

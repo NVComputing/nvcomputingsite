@@ -1,0 +1,93 @@
+table, th, td {
+	border: 1px solid white;
+}
+
+table {
+	border-collapse: collapse;
+	overflow-x: scroll;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	width: 100%;
+}
+
+th {
+	text-align: center;
+}
+
+th, td {
+	padding: 0.175rem;
+}
+
+@media (min-width: 576px) {
+	th, td {
+		padding: 0.35rem;
+	}
+}
+
+@media (min-width: 768px) {
+	th, td {
+		padding: 0.4rem;
+	}
+ }
+
+@media (min-width: 992px) {
+	th, td {
+		padding: 0.45rem;
+	}
+ }
+
+@media (min-width: 1200px) {
+	th, td {
+		padding: 0.5rem;
+	}
+}
+
+mjx-stretchy-h {
+	border-top: 1px solid white;
+}
+
+.resources h1:not(:first-child) {
+	border-bottom: 1px solid white;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	padding-bottom: 0.5rem;
+	font-weight: bold;
+}
+
+.resources h1:first-child {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	padding-bottom: 0.5rem;
+	font-weight: bold;
+}
+
+.resources h2 {
+	border-bottom: 1px solid #2b2b2b;
+	padding-bottom: 0.5rem;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+}
+
+.resources h3 {
+	font-weight: 200;
+}
+
+.resources hr {
+	border-top: 1px solid #1f1f1f;
+}
+
+.inline-latex {
+	color: #fff !important;
+	background: none !important;
+	font-size: inherit !important;
+}
+
+.table-wrapper {
+	overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+	h3 > .inline-latex {
+		font-size: 3.5vw !important;
+	}
+}

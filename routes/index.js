@@ -1,7 +1,7 @@
 let basepage = require('./basepage');
 let resources = require('./resources');
 let practice = require('./practice');
-let contact = require('./contact');
+let contact = require('./schedule');
 
 // Load in all endpoints
 module.exports.set = (app) => {
@@ -9,4 +9,6 @@ module.exports.set = (app) => {
 	resources.set(app);
 	practice.set(app);
 	contact.set(app);
+
+	console.log("Router endpoints registered.");
 }
