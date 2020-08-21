@@ -69,7 +69,7 @@ public class Solution
 ```
 What this code does:
 
-This is a fairly simple problem that doesn't have many tricky efficiency requirements for the test cases. Once you recognize that it is always better to buy a cheaper house than a more expensive house, as it adds the same amount to the total, one, and is cheaper, the problem because very straightforward. It is a simple matter of sorting the array from cheapest house to most expensive, and traversing through the houses until you can't buy anymore. The number houses will be the solution.
+This is a fairly simple problem that doesn't have many tricky efficiency requirements for the test cases. Once you recognize that it is always better to buy a cheaper house than a more expensive house, as it adds the same amount to the total, one, and is cheaper, the problem becomes very straightforward. It is a simple matter of sorting the array from cheapest house to most expensive, and traversing through the houses until you can't buy anymore. The number houses will be the solution.
 
 Efficiency: `$O(nlog(n))$`
   
