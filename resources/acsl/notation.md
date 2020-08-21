@@ -2,7 +2,7 @@
 
 ## Contents
 - [Introduction](#introduction)
-- [More Types of Notations](#moretypesofnotation)
+- [More Types of Notations](#moretypesofnotations)
   - [Evaluating Expressions in Any Notation](#evaluatingexpressionsinanynotation)
 - [Converting Between Notations](#convertingbetweennotations)
   - [Doing Multiple Scans](#doingmultiplescans)

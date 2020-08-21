@@ -3,6 +3,8 @@
 .sidebar {
 	order: 0;
     border-bottom: 1px solid rgba(0,0,0,.1);
+	padding-left: 0;
+	padding-right: 0;
 }
 
 @media (min-width: 1200px) {
@@ -26,14 +28,11 @@
 .breadCrumb {
 	font-weight: 700 !important;
 	color: #fff !important;
-	margin-left: 0.75rem;
+	margin-left: calc(15px + 0.75rem);
 }
 
 .sidebar-heading {
-	margin-top: 2rem;
-	margin-bottom: 1rem;
-	margin-left: 0.75rem;
-	margin-right: 0.75rem;
+	margin: 2rem calc(15px + 0.75rem) 1rem;
 	padding-bottom: 0.5rem;
 	font-weight: bold;
 	/* text-align: center; */
@@ -47,19 +46,33 @@
 
 #sidenav ul {
 	list-style-type: none;
-	padding-inline-start: 0.75rem !important;
+	padding-inline-start: 0 !important;
+	width: 100%;
 }
 
+/*
 #sidenav ul ul {
 	padding-top: 0.25rem;
 	padding-bottom: 0.25rem;
 }
+ */
 
 #sidenav li {
-	padding-top: .2rem;
-	padding-bottom: .2rem;
+	width: 100%;
+	padding: 0;
+}
+
+#sidenav li > a.active {
+	background: #fff !important;
+	color: #404040 !important;
+	font-weight: bold;
 }
 
 #sidenav li a {
+	padding: 4px calc(15px + 0.75rem);
 	color: #fff !important;
+}
+
+#sidenav ul ul li a {
+	padding-left: calc(15px + 1.5rem);
 }

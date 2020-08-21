@@ -1,5 +1,29 @@
 <div></div>
 
+# Contents
+
+<ul>
+	<li style="padding-left: 10px !important; margin-bottom: 10px !important;"><span style="font-weight: bold; padding-left: 10px;">Contests</span>
+		<ul>
+			<li><a href="/resources/usaco">USACO</a></li>
+			<li><a href="/resources/acsl">ACSL</a></li>
+		</ul>
+	</li>
+	<li style="padding-left: 10px !important; margin-bottom: 10px !important;"><span style="font-weight: bold; padding-left: 10px;">General Resources</span>
+		<ul>
+			<li><a href="/resources/io">Input / Output</a></li>
+			<li><a href="/resources/efficiency">Writing Efficient Code</a></li>
+			<li><a href="/resources/tips">Tips</a></li>
+		</ul>
+	</li>
+	<li style="padding-left: 10px !important; margin-bottom: 10px !important;"><span style="font-weight: bold; padding-left: 10px;">Advanced</span>
+		<ul>
+			<li><a href="/resources/streams">Stream API</a></li>
+			<li><a href="/resources/lambdas">Lambdas and Functional Programming</a></li>
+		</ul>
+	</li>
+</ul>
+
 # Index
 
 This is the resources page for the Neuqua Valley Computing Team.
@@ -26,7 +50,7 @@ checked by the captains.
 
 | Unstarted | Started | Needs Checking | Finished |
 | --- | --- | --- | --- |
-| Lambdas and Functional Programming | Input / Output<br />Efficient Code<br />Tips<br />USACO<br />Resources Homepage<br /> | Computer Number Systems<br />Recursive Functions<br />FSAs and Regular Expressions<br />What Does This Program Do?<br />Assembly<br />Bit-String Flicking<br />Boolean Algebra<br />Data Structures<br />ACSL Homepage<br />Digital Electronics<br />Graph Theory<br />LISP<br />Prefix/Infix/Postfix Notation<br />Streams API<br /> |  |
+| Lambdas and Functional Programming | Input / Output<br />Efficient Code<br />Tips<br />USACO<br />Resources Homepage<br /> | Computer Number Systspans<br />Recursive Functions<br />FSAs and Regular Expressions<br />What Does This Program Do?<br />Assspanbly<br />Bit-String Flicking<br />Boolean Algebra<br />Data Structures<br />ACSL Homepage<br />Digital Electronics<br />Graph Theory<br />LISP<br />Prefix/Infix/Postfix Notation<br />Streams API<br /> |  |
 
 You can also suggest a new page to the captains. We'll consider adding it.
 
