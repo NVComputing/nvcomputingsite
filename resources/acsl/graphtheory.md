@@ -5,7 +5,6 @@
 - [Terminology](#terminology)
 - [Classifying Graphs](#classifyinggraphs)
   - [Graph Density](#graphdensity)
-  - [Trees](#graphdensity)
   - [Directed Paths](#directedpaths)
   - [Weighted Graphs](#weightedgraphs)
 - [Adjacency Matrices](#adjacencymatrices)

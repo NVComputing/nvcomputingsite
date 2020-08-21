@@ -2,7 +2,7 @@
 
 ## Contents
 - [Introduction](#introduction)
-- [Understanding Binary, Octal, Decimal, and Hexadecimal](#understandingbinarydecimalandhexadecimal)
+- [Understanding Binary, Octal, Decimal, and Hexadecimal](#understandingbinaryoctaldecimalandhexadecimal)
 - [Converting between Bases](#convertingbetweenbases)
   - [Working with Base 10](#workingwithbase10)
   - [Special Conversions with Binary](#specialconversionswithbinary)
