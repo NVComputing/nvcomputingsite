@@ -13,16 +13,12 @@
 - [Defining Your Own Functions](#definingyourownfunctions)
 - [Sample Problems](#sampleproblems)
 
-<br>
-
 # Introduction
 
 LISP (LISt Processing language) is a computer language with relatively simple syntax
 and semantics that was developed by John McCarthy. LISP is very practical and flexible
 in what it can do; its simplicity also comes in handy in numerous situations, thus it
 can be considered to be one of the most powerful languages there are.
-
-<br>
 
 # Syntax
 
@@ -45,8 +41,6 @@ LISP statements are function calls that follow this format: (**function** *arg1 
 The number of arguments depends on the function; some functions can take in any amount
 of arguments while others take in a fixed amount. All statements will return either an
 atom or a list.
-
-<br>
 
 # Basic Functions
 
@@ -87,8 +81,6 @@ See the following examples.
 | (ATOM p) | NIL | There is no `'` mark before `p`, so an evaluation is done to get us `(ADD 1 2 3 4)`, which is not an atom but a list. |
 | (EVAL 'p) | (ADD 1 2 3 4) | `'p` would first be evaluated to get `(ADD 1 2 3 4)`. However, it is not evaluated further because of the `'` mark. |
 | (EVAL p) | 10 | `'p` is evaluated to get `(ADD 1 2 3 4)`. Unlike the function, there is no `'` mark before `p`; so, `(ADD 1 2 3 4)` would be evaluated further to get us `10`. |
-
-<br>
 
 # List Functions
 
@@ -139,8 +131,6 @@ Refer to the table below for examples:
 | (REVERSE z) | (list a is (red white blue)) | Note how `(red white blue)` did not become `(blue white red)`. This is because `REVERSE` only applies to the outer list, `z`, and any inner lists contained in `z`. |
 | (CDDAR z) | (blue) | While the `REVERSE` function was used on `z` before, remember that list functions don't change the actual list. So, `(CDDAR z)` works with `((red white blue) is a list)`. First, `CAR` runs to get us `(red white blue)`. Then, we call on `CDR` twice. The first time gets us `(white blue)`. The second time gets us `(blue)`. Notice how even though there is only one element in the list, `CDR` still returns a list and not just the atom itself. |
 
-<br>
-
 # Arithmetic Functions
 
 The arithmetic functions are generally all pretty self-explanatory because their names
@@ -160,8 +150,6 @@ are very indicative of what they do. All of them return atoms. Take a look:
 
 The `ADD`, `SUB`, `MULT`, and `DIV` functions can be written with `+`, `-`, `*`, and
 `/` if you'd like.
-
-<br>
 
 # Defining Your Own Functions
 
@@ -185,8 +173,6 @@ our defined `WHAT` function. First, we use the `CDR` function on `'X` to get
 `(c s l)`; the `REVERSE` function is then called on this list to get us `(l s c)`.
 Finally, we have to insert `(a c s l)` into `(l s c)` because of the `CONS` function.
 So, we are left with `((a c s l) l s c)`.
-
-<br>
 
 # Sample Problems
 

@@ -24,10 +24,6 @@ Think of time and space efficiency (read [this page](/resources/efficiency) for 
 - Greedy Algorithms are incredibly useful at the lower level and should always be searched for. A greedy algorithm essentially reduces a problem into a couple of simpler problems and finds the solution to each of these problems. This would be useful in problems where an individual has to find out how many values in array T are the sum of a subset from 0 to K in positive integer array R. You would solve this by doing a prefix sum on array R and binary searching for each value of T on it.
     - This is an example of a greedy algorithm that combines two efficient algorithms.
 
-
-
-<br>
-
 # Java
 
 - A few of you may have recognized that most IDEs, including Eclipse, have debuggers. This is incredibly useful, and I use it frequently. You are able to run through each line of your code and check the values of each variable at the time. It is incredibly convenient when troubleshooting a testcase that gives an incorrect response.

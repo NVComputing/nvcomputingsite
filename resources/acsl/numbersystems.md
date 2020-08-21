@@ -14,8 +14,6 @@
   - [Division](#division)
 - [Sample Problems](#sampleproblems)
 
-<br>
-
 # Introduction
 
 Whenever we work with numbers, we use the decimal base. However, computers use bits, or
@@ -24,8 +22,6 @@ can get quite lengthy, the octal and hexadecimal (or just hex) bases are also us
 
 This category does not cover how to represent negative numbers or floats in binary.
 Occasionally, fractions in other bases may be involved.
-
-<br>
 
 # Understanding Binary, Octal, Decimal, and Hexadecimal
 
@@ -71,8 +67,6 @@ For best success in this category, it would be wise to know the following things
 3. Powers of 2, up to 4096 (`$2^{16}$`)
 4. Powers of 8, up to 4096 (`$8^4$`)
 5. Powers of 16, up to 65,536 (`$16^4$`)
-
-<br>
 
 # Converting between Bases
 
@@ -180,8 +174,6 @@ If we were to generalize this entire process, we would have the following instru
 In the case that you have a mixed fraction, such as `19 4/5`, you would want to convert the whole
 and fraction part separately. Then, add together their results to get your final converted number.
 
-<br>
-
 # Arithmetic for Numbers in Other Bases
 
 Arithmetic in other bases is similar to what we would do with numbers in the decimal base.
@@ -254,8 +246,6 @@ Now, we can start. Refer to the table below.
 | --- | --- | --- | --- |
 | <img src="/res/acsl/numsystems/div1.png" class="img-fluid" /> | This is the start of our problem. | <img src="/res/acsl/numsystems/div3.png" class="img-fluid" /> | `$2_4$` belongs in `$11_4$` two times since `$2_4 * 2_4 = 10_4$`. `10` is subtracted from `11` to get `1`, and the `2` is carried down. |
 | <img src="/res/acsl/numsystems/div2.png" class="img-fluid" /> | `$2_4$` belongs in `$3_4$` one time. `1` is put at the top, we do the needed subtraction, and `1` is carried down. We are now left with `11` at the bottom.| <img src="/res/acsl/numsystems/div4.png" class="img-fluid" /> | `$2_4$` belongs in `$12_4$` three times. `3` is put at the top, `12` is subtracted from `12` (since $2_4 * 3_4 = 12$), and we are left with a remainder of `0`. |
-
-<br>
 
 # Sample Problems
 

@@ -5,8 +5,6 @@
 - [ACSL's Pseudocode Syntax](#acslspseudocodesyntax)
 - [Sample Problems](#sampleproblems)
 
-<br>
-
 # Introduction
 
 Often times, you may use other programmers' code in your own program. Before incorporating it in
@@ -21,8 +19,6 @@ it doesn't have documentation.
 In this category, ACSL presents you with a program, and you will have to determine what it does.
 There is no real "method" to solving these types of problems. Imagine the pseudocode as regular
 code, and go from there.
-
-<br>
 
 # ACSL's Pseudocode Syntax
 
@@ -117,8 +113,6 @@ To access one character in the String, you would just need to write `S[index]` (
 replaced with the number index).
 
 A plus sign is still used to concatenate strings.
-
-<br>
 
 # Sample Problems
 

@@ -5,8 +5,6 @@
 - [Definitions](#definitions)
 - [Sample Problems](#sampleproblems)
 
-<br>
-
 # Introduction
 
 Digital electronics is a way to visualize boolean algebra using drawn-out circuits (also
@@ -14,8 +12,6 @@ known as logic gates). Be sure to make sure you understand all of the boolean op
 check out the [Boolean Algebra](/resources/acsl/booleanalgebra) page if needed.
 
 Do note that there may be multiple ways to display the same boolean expression.
-
-<br>
 
 # Definitions
 
@@ -37,8 +33,6 @@ Notice how adding the little extra circle causes the logic gate to become negate
 adding the little circle is added to the OR logic gate.
 Now, when it comes to reading the overall circuit, the most important thing is to keep track of what comes first.
 Reference the lines to know the order that the logic gates should be evaluated in; look from left to right.
-
-<br>
 
 # Sample Problems
 

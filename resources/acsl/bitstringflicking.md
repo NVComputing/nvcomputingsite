@@ -9,8 +9,6 @@
   - [Evaluations](#evaluations)
   - [Finding Possible Bitstrings](#findingpossiblebitstrings)
 
-<br>
-
 # Introduction
 
 Bit strings are essentially just strings of binary digits (so, for example, `011010`) that can be manipulated in a variety of ways by operators (see Operators below). They can also be represented by
@@ -19,8 +17,6 @@ the binary form of many data types, such as integers, strings, etc.
 Most high-level languages support such operations. Bit strings can be used to represent sets in the form of binary sets. If you were to have a program with 8 different options that all have the choice of "Yes" or "No", one way to store this information would be with an array of size 8. However, an easier and less space-consuming way would be to use a bit string, with each option choice taking up one bit.
 
 Understanding how bit strings work is very helpful in systems programming, assembly language programming, code optimization, and hardware design.
-
-<br>
 
 # Operators
 
@@ -101,8 +97,6 @@ As a result, any CIRC x operations are equal to CIRC (bit length mod x) operatio
 
 For example, LCIRC-19 `10001` is just equivalent to LCIRC-4. This means that we can calculate that the resultant bit string
 is `00011` very quickly. (As a side note, you can simplify this even further: LCIRC-4 = RCIRC-1 on a bitstring with length 5, because 4 mod 5 is also -1 (and LCIRC-x is just RCIRC-(-x))).
-
-<br>
 
 # Sample Problems
 

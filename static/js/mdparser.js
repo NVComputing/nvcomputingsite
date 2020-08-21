@@ -1,3 +1,4 @@
+// Add Table Wrapper and Lightbox for Each Table
 let tables = document.getElementsByTagName('table');
 
 for (let i = 0; i < tables.length; i++) {
@@ -19,6 +20,7 @@ for (let i = 0; i < tables.length; i++) {
 	});
 }
 
+// Fix for Regex
 let inlineCode = document.getElementsByTagName('code');
 
 for (let i = 0; i < inlineCode.length; i++) {
@@ -39,3 +41,6 @@ for (let i = 0; i < inlineCode.length; i++) {
 	}
 }
 
+// Centering for Standalone Images and Images within Tables
+$("p:has(img)").addClass('text-center');
+$("td:has(img)").addClass('text-center');
