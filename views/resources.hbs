@@ -10,40 +10,96 @@
 		<div class="navbar-wrapper pt-3"> {{> navbar }} </div>
 		<div class="container py-5 tableofcontents">
 			<div class="row align-items-center py-5">
-				<div class="col-lg-7 text-white">
+				<div class="col-lg-6 text-white">
 					<h1 class="font-weight-bold">NVHS Computing Team</h1>
 					<h2 class="font-weight-light">Resources</h2>
 					<p class="font-weight-thin lead text-light mb-0">Helpful Information For Competitive Programming.</p>
 					<br>
 				</div>
-				<div class="col-lg-5 text-white bg-dark p-2 px-4 mx-4 mx-lg-0" style="border: solid #2b2b2b 3px;">
-					<h2 id="contents">Resource Pages</h2>
-					<ul>
-						<li><a href="/resources">Main Page</a></li>
-						<li> Contests <ul>
-								<li><a href="/resources/usaco">USACO</a></li>
-								<li><a href="/resources/acsl">ACSL</a></li>
-							</ul>
-						</li>
-						<li> General Resources <ul>
-								<li><a href="/resources/io">Input / Output</a></li>
-								<li><a href="/resources/efficiency">Writing Efficient Code</a></li>
-								<li><a href="/resources/tips">Tips</a></li>
-							</ul>
-						</li>
-						<li> Advanced <ul>
-								<li><a href="/resources/streams">Stream API</a></li>
-								<li><a href="/resources/lambdas">Lambdas and Functional Programming</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
+				<div class="col-lg-6 d-none d-lg-block"><img src="/res/nvabout.png" alt="nvclublogo" class="img-fluid rounded"></div>
 			</div>
 		</div>
 	</div>
-	<div class="resources container pt-5 text-white"> {{{resource}}} </div>
+
+	{{!-- <div class="resources container text-light"> {{{resource}}} </div> --}}
+{{!-- <div class="container-fluid position-relative">
+	<div class="row">
+		<div class="col-lg-3 col-md-4 bg-dark">
+		<div class="mb-3 sticky-top text-white">
+			<h1 class="sidebar-heading">Contents</h1>
+			{{#if sideBarBreadCrumb}}
+			<a href="/resources" class="breadCrumb">Back to Main Page</a>
+			{{/if}}
+			<ul class="nav flex-md-column flex-row justify-content-between font-weight-thin" id="sidenav">
+				<ul>
+					<li>Contests
+						<ul>
+							<li><a href="/resources/usaco">USACO</a></li>
+							<li><a href="/resources/acsl">ACSL</a></li>
+						</ul>
+					</li>
+					<li>General Resources
+						<ul>
+							<li><a href="/resources/io">Input / Output</a></li>
+							<li><a href="/resources/efficiency">Writing Efficient Code</a></li>
+							<li><a href="/resources/tips">Tips</a></li>
+						</ul>
+					</li>
+					<li>Advanced
+						<ul>
+							<li><a href="/resources/streams">Stream API</a></li>
+							<li><a href="/resources/lambdas">Lambdas and Functional Programming</a></li>
+						</ul>
+					</li>
+				</ul>
+			</ul>
+		</div>
+	</div>
+	<div class="col-lg-9 col-md-8">
+		<div class="resources container-fluid text-light"> {{{resource}}} </div>
+		</div>
+	</div>
+</div> --}}
+
+<div class="container-fluid" id="pageContent">
+	<div class="row flex-xl-nowrap">
+		<div class="col-md-4 col-xl-3 pt-2 pb-4 sidebar bg-dark text-white">
+			<h4 class="sidebar-heading">Contents</h4>
+			{{#if sideBarBreadCrumb}}
+			<a href="/resources" class="breadCrumb">Back to Main Page</a>
+			{{/if}}
+			<ul class="nav font-weight-thin" id="sidenav">
+				<ul>
+					<li>Contests
+						<ul>
+							<li><a href="/resources/usaco">USACO</a></li>
+							<li><a href="/resources/acsl">ACSL</a></li>
+						</ul>
+					</li>
+					<li>General Resources
+						<ul>
+							<li><a href="/resources/io">Input / Output</a></li>
+							<li><a href="/resources/efficiency">Writing Efficient Code</a></li>
+							<li><a href="/resources/tips">Tips</a></li>
+						</ul>
+					</li>
+					<li>Advanced
+						<ul>
+							<li><a href="/resources/streams">Stream API</a></li>
+							<li><a href="/resources/lambdas">Lambdas and Functional Programming</a></li>
+						</ul>
+					</li>
+				</ul>
+			</ul>
+		</div>
+		<div class="col-md-8 col-xl-9">
+			<div class="resources container-fluid text-light"> {{{resource}}} </div>
+		</div>
+	</div>
+</div>
+<a id="back-to-top" href="#" class="btn btn-sm btn-light back-to-top" role="button"><i class="fas fa-arrow-up"></i></a>
+
 {{> footer }}
 </body>
 
 </html>
-

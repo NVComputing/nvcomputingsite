@@ -1,3 +1,5 @@
+<div></div>
+
 # Index
 
 This is the resources page for the Neuqua Valley Computing Team.
@@ -13,13 +15,9 @@ This page contains general information and useful links, if that's what you're l
 
 Otherwise, click one of the above links you're interested in to get started!
 
-<br>
-
 # Useful Links
-### [This website's GitHub Repository](https://github.com/NVComputing/nvcomputingsite)
-### [Our Google Drive](https://drive.google.com/drive/u/7/folders/1-9GMKiUQ73BadhtPJca8GAPqXCEi0lAl)
-
-<br>
+### [GitHub Repository](https://github.com/NVComputing/nvcomputingsite)
+### [Google Drive Folder](https://drive.google.com/drive/u/7/folders/1-9GMKiUQ73BadhtPJca8GAPqXCEi0lAl)
 
 # Page Progress Tracker
 
@@ -31,8 +29,6 @@ checked by the captains.
 | Lambdas and Functional Programming | Input / Output<br />Efficient Code<br />Tips<br />USACO<br />Resources Homepage<br /> | Computer Number Systems<br />Recursive Functions<br />FSAs and Regular Expressions<br />What Does This Program Do?<br />Assembly<br />Bit-String Flicking<br />Boolean Algebra<br />Data Structures<br />ACSL Homepage<br />Digital Electronics<br />Graph Theory<br />LISP<br />Prefix/Infix/Postfix Notation<br />Streams API<br /> |  |
 
 You can also suggest a new page to the captains. We'll consider adding it.
-
-<br>
 
 # General Information
 

@@ -20,8 +20,6 @@
 - [Path Lengths](#pathlengths)
 - [Sample Problems](#sampleproblems)
 
-<br>
-
 # Introduction
 
 Data structures are an integral part of efficient algorithms. When you have
@@ -34,8 +32,6 @@ queues. The general idea behind each is covered but not the actual details
 regarding how to implement them in programs.
 
 For programming, there is a much more useful section on data structures (TODO).
-
-<br>
 
 # Stacks and Queues
 
@@ -59,8 +55,6 @@ In the case that the POP operation is called on an empty stack, then the variabl
 Queues, on the other hand, are often used to handle requests. It's similar to waiting in line (or a *queue* in Britain); the first people in line are processed first. Hence, queues follow a "first in, first out" (FIFO) order.
 
 The PUSH operation works the same as it would with stacks. However, with POP, instead of removing the top (most recently added) element, queues have their bottom element removed.
-
-<br>
 
 # Trees
 
@@ -162,8 +156,6 @@ See the table below to understand the differences between the two in more detail
 | <img src="/res/acsl/datastructures/nocompnofull.png" class="img-fluid" /> | It is not complete because the last level's nodes are not all left-oriented. It is not full either because there is 1 node with only 1 child. | <img src="/res/acsl/datastructures/compnofull.png" class="img-fluid" /> | It is complete because every level other than the last level is filled; the node in the last level is also oriented on the left. It is not full, however, because nodes cannot have only 1 child. |
 | <img src="/res/acsl/datastructures/fullnocomp.png" class="img-fluid" /> | It is full because each node indeed has 2 children besides the leaves. It is not complete because the nodes on the last level are not fully left-oriented. | <img src="/res/acsl/datastructures/compfull.png" class="img-fluid" /> | Each node has 2 children except for the leaves, so it is full. Each level is filled except for the last level, whose nodes are left-justified, thus making the tree complete. |
 
-<br>
-
 # Path Lengths
 
 Before moving further into priority queues, let's talk briefly about path lengths. In earlier sections, I addressed "layers"/"levels" of the tree; these can also be referred to as "depths". The root has a depth of 0; the next layer has a depth of "1", and this continues to increment for subsequent, deeper layers.
@@ -174,8 +166,6 @@ Before moving further into priority queues, let's talk briefly about path length
 | --- | --- |
 | <img src="/res/acsl/datastructures/ipl.png" class="img-fluid" /> | <img src="/res/acsl/datastructures/epl.png" class="img-fluid" /> |
 | There are 5 nodes here. Node 1 has a depth of 0 since it's the root. Nodes 2 and 3 have a depth of 1 each. Nodes 4 and 5 have a depth of 2 each. So, the IPL = `0 + 2(1) + 2(2) = 6`. | The squares represent the nodes that can be added to the tree. Two are of depth 2 while the other four are of depth 3. So, the EPL = `2(2) + 4(3) = 16`. We could also solve this with the formula. Since the IPL is 6, and there are 5 nodes, the EPL = `6 + 2(5) = 16`. |
-
-<br>
 
 # Priority Queues
 
@@ -203,8 +193,6 @@ Take this table as an example on how to implement *AMERICAN* with a min-heap:
 Just as a reminder, only the root can be deleted! To do so, replace the root with the rightmost node in the last node. Then, keep switching out the root with its smaller child (or larger child, if using max-heap) until the tree is finally valid. Make sure to make adjustions to the rest of the tree if needed.
 
 In the case that both of the root's children are smaller than the root itself, then choose the smallest child to replace the root with; of course, for max-heap, it would be that if both children are larger than the root, then the larger child should replace the root.
-
-<br>
 
 # Sample Problems
 

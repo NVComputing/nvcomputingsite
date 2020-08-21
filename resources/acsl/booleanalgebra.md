@@ -19,8 +19,6 @@
   - [Simplify the Expression](#simplifytheexpression)
   - [Find the Solutions](#findthesolutions)
 
-<br>
-
 # Introduction
 
 As many of us may know, booleans are an essential part of programming that can hold one of two values: `true` and `false`, which can be denoted as `1` and `0`. Booleans can take the form of either a variable (such as `s = true`) or an expression (like `$5 < 36$`, which evaluates to `true`). These are most often used in if statements (formatted as `if (boolean condition)`), another essential piece of programming that allows us to perform different functions for different conditions.
@@ -30,8 +28,6 @@ Boolean algebra is needed for digital circuits that make up a computer's hardwar
 There are booleans everywhere in everyday life - from power switches to advanced searching,
 
 Actually, what if everything in the universe is just a boolean? Wouldn't be that surprising.
-
-<br>
 
 # Truth Tables
 
@@ -68,8 +64,6 @@ And that's it! One thing to note is that when you get to longer expressions, it 
 
 For this, I broke the expression into two smaller parts. I used `A` to symbolize `X and Y` simply because I didn't want to write out `X and Y or X` in the last column header.
 
-<br>
-
 # Basic Operators
 
 | Operator | How It's Denoted | Description |
@@ -89,15 +83,11 @@ For the order of precedence, it goes as follows:
 Note that there are two more logic operators (NAND and NOR) that will show up in [Digital Electronics](/resources/acsl/digitalelectronics), which will just be represented here as
 "NOT AND" `$\overline{AB}$` and "NOT OR" `$\overline{A + B}$`.
 
-<br>
-
 # Important Laws
 
 These are all useful ways to simplify boolean expressions. An extra description in the form of a table has been made for the laws that may be more difficult to understand.
 
 Please use this time to thoroughly understand each of these laws. You shouldn't have to memorize them; they should just make sense automatically.
-
-<br>
 
 ## Commutative Law
 
@@ -187,8 +177,6 @@ To understand this equation, let's assume a case where `x` and `y` have the same
 For the next two expressions, think about it like this. Since `x` and `y` have the same value, the only way to get a `1` after using a *xor* operation with these terms would be if we were to negate one of these terms. That way, we would have a pair of `0` and `1`, thus rendering the *xor* operation as `1` as we wanted it to. So, written out in equation terms, this proof would be: `$\overline{0} \oplus 0 = 1 \oplus 0 = 1$` and `$0 \oplus \overline{0} = 0 \oplus 1 = 1$`.
 
 So, since these different expressions all evaluate to `1` for when `x` and `y` equal 0, then it is safe to say that this relationship between *xor* and *xnor* has been proven. If you're still not quite convinced, try solving for the expressions when `x` and `y` have different values.
-
-<br>
 
 # Sample Problems
 

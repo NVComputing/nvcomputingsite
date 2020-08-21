@@ -12,8 +12,6 @@
   - [Writing Equations](#writingequations)
 - [Sample Problems](#sampleproblems)
 
-<br>
-
 # Introduction
 
 As we probably know, functions are an essential part of programming; they allow us to get values,
@@ -27,8 +25,6 @@ functions can be written iteratively.
 
 ACSL focuses more on mathematical recursive functions than programming algorithms, but we will
 cover both on this page.
-
-<br>
 
 # Terminology
 
@@ -67,11 +63,7 @@ A program with infinite recursion would eventually crash with a *stack overflow*
 message. Why this occurs may be a bit difficult to explain now, but we will come back to it in the
 `Ways of Evaluating Recursive Calls` section.
 
-<br>
-
 # Common Recursive Functions
-
-<br>
 
 ## Fibonacci Numbers
 
@@ -87,8 +79,6 @@ Now, how would be written as a function? First, we can establish that the base c
 `$f(0) = 0$` and `$f(1) = 1$`. As a mathematical function, we can write:
 
 ### `$\begin{equation*}f(n) = \begin{cases}n &\text{if $n \leq 1$}\\f(n-1)+f(n-2) &\text{if $n > 1$}\end{cases}\end{equation*}$`
-
-<br>
 
 If this was implemented as a programming function, it would be:
 
@@ -120,8 +110,6 @@ So, as a mathematical function, this can be written as:
 
 ### `$\begin{equation*}f(n) = \begin{cases}n &\text{if $n = 0$}\\n \bullet f(n-1) &\text{if $n > 0$}\end{cases}\end{equation*}$`
 
-<br>
-
 Then, here are the Java and Python implementations of this function:
 
 ```java
@@ -138,8 +126,6 @@ def factorial(x):
         return 1
     return x * factorial(x - 1)
 ```
-
-<br>
 
 # Ways of Evaluating Recursive Calls
 
@@ -226,7 +212,7 @@ calculations.
 
 Eventually, we would end up with this tree:
 
-![](/res/acsl/recursion/tree3.png)
+<img src="/res/acsl/recursion/tree3.png" class="img-fluid" />
 
 Notice how the ends of the tree all meet the base case; that is how you will know for sure that
 your tree has been fully constructed.
@@ -240,7 +226,7 @@ Now, you just need to work your way up for calculations. Here's how it would loo
 
 Once you finish your calculations, you will end up with this:
 
-![](/res/acsl/recursion/tree6.png)
+<img src="/res/acsl/recursion/tree6.png" class="img-fluid" />
 
 So, `$fibonacci(5) = 5$`.
 
@@ -272,12 +258,10 @@ Now that we have reached the base condition, we can work back up the equations:
 
 So `$g(11) = 1$`.
 
-<br>
-
 # Sample Problems
 
 ## 1. With the function below, determine the value of `mystery(4)`.
-
+`
 ```java
 public static int mystery(int num) {
     if(num <= 0) {
@@ -291,7 +275,7 @@ public static int mystery(int num) {
 For this problem, I used the tree method. See how I set up the tree and determined the values
 along the way:
 
-![](/res/acsl/recursion/prob1.png)
+<img src="/res/acsl/recursion/prob1.png" class="img-fluid" />
 
 So, our final answer is `-5`.
 
@@ -346,7 +330,7 @@ really want to). Instead, just follow the steps like you would if you were tryin
 IKEA furniture or a LEGO set.
 
 | Step | Image | Explanation |
-| :-: | --- | --- |
+| --- | --- | --- |
 | 1 | <img src="/res/acsl/recursion/prob4-1.png" class="img-fluid" /> | We first execute the algorithm on our original 16-foot square. We skip Step 2 because the condition doesn't apply. We then execute Steps 3-4. |
 | 2 | <img src="/res/acsl/recursion/prob4-2.png" class="img-fluid" /> | We will now execute Step 5 from our algorithm pass above. Again, Step 2 would be skipped here. So, we split each of these squares into 4 and paint one of the small squares. |
 | 3 | <img src="/res/acsl/recursion/prob4-3.png" class="img-fluid" /> | We continue the recursive process. Step 2 does not apply, so we divide and paint. |

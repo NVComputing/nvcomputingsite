@@ -9,8 +9,6 @@
 - [Regex in Programming](#regexinprogramming)
 - [Sample Problems](#sampleproblems)
 
-<br>
-
 # Introduction
 
 A *Finite State Automaton* (or just FSA) is a mathematical model of computation. A regular
@@ -30,8 +28,6 @@ You can also write cool, unintelligible expressions like
 that are actually useful.
 
 In ACSL, FSAs will be limited to parsing strings.
-
-<br>
 
 # Understanding FSAs
 
@@ -65,8 +61,6 @@ as long as the FSA is at the final state.
 So, the FSA above would accept *xy*, *xxy*, *xyy*, *xxxxy*, and much more. In general, the FSA above would
 accept any string that is composed of one or more *x*'s followed by one or more *y*'s.
 
-<br>
-
 # Regex
 
 You can create a regular expression out of an FSA, and vice versa. When it comes to regex, here
@@ -83,8 +77,6 @@ As always, order of precedence still exists. It goes: Kleene star, concatenation
 Parentheses still hold the highest priority. For example, `/dca*b/` would produce strings like
 `dcb`, `dcab`, `dcaaaab`, and so on. On the other hand, `/d(ca)*b/` would produce `db`, `dcab`,
 `dcacacab`, etc.
-
-<br>
 
 ## Syntax
 
@@ -166,8 +158,6 @@ how regex works (treat them like practice for understanding regex logic). Don't 
 | `/(a|b)*/`&nbsp;=&nbsp;`/(a*|b*)*/` | `/(a|b)*/` would print either *a* or *b* (not both) zero or more times, which is just `/a*/` and `/b*/`. `/(a*|b*)*/` states that either `/a*/` or `/b*/` (again, not both) will be displayed 0 or more times. We know from a previous identity that `/(a*)*/` and `/(b*)*/` are just `/a*/` and `/b*/` respectively, which matches with what `/(a|b)*/` displays. |
 | `/(a|b)*/`&nbsp;=&nbsp;`/(a*b*)*/` | Again, `/(a|b)*/` displays either `/a*/` or `/b*/`. For `/a*/`, `/(a*b*)*/` could have it so that `/b*/` displays *b* 0 times. The expression would simplify to `/(a*)*/`, or `/(a*)/`. A similar idea applies if we wanted `/b*/`. |
 | `/(a|b)*/`&nbsp;=&nbsp;`/a*(ba*)*/` | `/(a|b)*/` displays either `/a*/` or `/b*/`. For `/a*/`, we could have it so that `/(ba*)*/` displays 0 times; we would then be left with `/a*/` as we wanted. For `/b*/`, we could have the two `/a*/` in the RH expression display *a* zero times. The expression would then become `/b*/`. |
-
-<br>
 
 # Regex in Programming
 

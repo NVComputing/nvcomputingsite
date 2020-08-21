@@ -14,14 +14,10 @@
   - [Setting Up an Adjacency Matrix](#settingupanadjacencymatrix)
 - [Sample Problems](#sampleproblems)
 
-<br>
-
 # Introduction
 
 In real life, connections can be made in numerous situations such as subway routes connecting one city to another.
 Graphs can be used to model these connections.
-
-<br>
 
 # Terminology
 
@@ -46,8 +42,6 @@ A *simple path* is a path with no vertex repeated. FGHE is an example of a simpl
 would be a *cycle*, a path where the first and last vertex are the same (essentially a path that points back to
 itself). ABDA is an example of a cycle. The same cycle can be depicted in multiple ways; for example, BDAB is the same
 as ABDA except that it starts on a different vertex.
-
-<br>
 
 # Classifying Graphs
 
@@ -101,8 +95,6 @@ A group of disconnected trees is called a *forest*.
 | --- | --- | --- |
 | <img src="/res/acsl/graphtheory/normalweighted.png" class="img-fluid" /> | <img src="/res/acsl/graphtheory/spanning.png" class="img-fluid" /> <br> Cost `$= 4 + 5 + 2 = 11$` | <img src="/res/acsl/graphtheory/minspan.png" class="img-fluid" /> <br> Cost `$= 4 + 1 + 2 = 7$` |
 
-<br>
-
 # Adjacency Matrices
 
 Matrices are very useful when it comes to depicting a graph. They are a more numerical way to represent a graph.
@@ -135,8 +127,6 @@ So, the rest of the matrix will be filled out as follows:
 | A | 1 | 0 | 1 |
 | B | 0 | 1 | 1 |
 | C | 1 | 0 | 0 |
-
-<br>
 
 ## Powers of a Matrix
 
@@ -222,8 +212,6 @@ So, the matrix squared would be:
 
 So, there are 2 paths of length 2 that go from A to itself. There are no paths of length 2 that go from A to B. Similar
 conclusions can be made for the rest of the numbers.
-
-<br>
 
 # Sample Problems
 

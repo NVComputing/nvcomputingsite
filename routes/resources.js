@@ -21,7 +21,8 @@ module.exports.set = (app) => {
 				mathjax: true,
 				lightbox: true,
 
-				resourcePage: true
+				resourcePage: true,
+				sideBarBreadCrumb: false
 			});
 		});
 	});
@@ -51,7 +52,8 @@ module.exports.set = (app) => {
 					mathjax: true,
 					lightbox: true,
 
-					resourcePage: true
+					resourcePage: true,
+					sideBarBreadCrumb: true
 				});
 			}
 		});

@@ -9,16 +9,12 @@
   - [Binary Trees](#binarytrees)
 - [Sample Problems](#sampleproblems)
 
-<br>
-
 # Introduction
 
 We all come in contact with math in numerous situations. Whenever we see a math expression
 like `$8 + 14 * 6$`, we are looking at infix notation. *In-fix* means that the operators
 are written between its two operands. However, there are two other notations that we
 will explore next.
-
-<br>
 
 # More Types of Notations
 
@@ -64,8 +60,6 @@ any operators that are preceded by 2 operands. Here's an example:
 2. `$21 3 - 2 \uparrow$`
 3. `$18 2 \uparrow$`
 4. `$324$`
-
-<br>
 
 # Converting Between Notations
 
@@ -158,8 +152,6 @@ However, since this is written in in-fix terms, you would have to remember to pu
 the operator before or after the operands if you're converting to pre-fix or post-fix.
 So, again, for pre-fix, this would be `$* \; A \; B$`. For post-fix, it would be
 `$A \; B \; *$`.
-
-<br>
 
 # Sample Problems
 
