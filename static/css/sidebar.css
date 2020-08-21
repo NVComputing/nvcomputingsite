@@ -33,6 +33,7 @@
 
 .sidebar-heading {
 	margin: 2rem calc(15px + 0.75rem) 1rem;
+	padding-top: 12px;
 	padding-bottom: 0.5rem;
 	font-weight: bold;
 	/* text-align: center; */

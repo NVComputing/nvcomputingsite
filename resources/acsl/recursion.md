@@ -8,7 +8,7 @@
   - [Factorials](#factorials)
 - [Ways of Evaluating Recursive Calls](#waysofevaluatingrecursivecalls)
   - [Stacks](#stacks)
-  - [Trees](#stacks)
+  - [Trees](#trees)
   - [Writing Equations](#writingequations)
 - [Sample Problems](#sampleproblems)
 

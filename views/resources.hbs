@@ -5,42 +5,33 @@
 	{{> head }}
 </head>
 
-<body class="line-numbers" data-spy="scroll" data-target="#sidenav">
-<div class="background-page">
-	<div class="navbar-wrapper pt-3"> {{> navbar }} </div>
-	<div class="container py-5 tableofcontents">
-		<div class="row align-items-center py-5">
-			<div class="col-lg-6 text-white">
-				<h1 class="font-weight-bold">NVHS Computing Team</h1>
-				<h2 class="font-weight-light">Resources</h2>
-				<p class="font-weight-thin lead text-light mb-0">Helpful Information For Competitive Programming.</p>
-				<br>
+<body class="line-numbers" data-spy="scroll" data-offset="80" data-target="#sidenav">
+	<div class="background-page">
+		<div class="navbar-wrapper pt-3"> {{> navbar }} </div>
+		<div class="container py-5 tableofcontents">
+			<div class="row align-items-center py-5">
+				<div class="col-lg-6 text-white">
+					<h1 class="font-weight-bold">NVHS Computing Team</h1>
+					<h2 class="font-weight-light">Resources</h2>
+					<p class="font-weight-thin lead text-light mb-0">Helpful Information For Competitive Programming.</p>
+				</div>
+				<div class="col-lg-6 d-none d-lg-block"><img src="/res/nvabout.png" alt="nvclublogo" class="img-fluid rounded"></div>
 			</div>
-			<div class="col-lg-6 d-none d-lg-block"><img src="/res/nvabout.png" alt="nvclublogo"
-			                                             class="img-fluid rounded"></div>
 		</div>
 	</div>
-</div>
-
-<div class="container-fluid" id="pageContent">
-	<div class="row flex-xl-nowrap">
-		<div class="col-md-4 col-xl-3 pt-2 pb-4 sidebar bg-dark text-white">
-			<h4 class="sidebar-heading">Contents</h4>
-			{{#if sideBarBreadCrumb}}
-				<a href="/resources" class="breadCrumb">Back to Main Page</a>
-			{{/if}}
-			<ul class="nav font-weight-thin" id="sidenav">
-				<ul style="padding-left: 30px !important;">Loading, please wait...</ul>
-			</ul>
-		</div>
-		<div class="col-md-8 col-xl-9">
-			<div class="resources container-fluid text-light"> {{{resource}}} </div>
+	<div class="container-fluid" id="pageContent">
+		<div class="row flex-xl-nowrap">
+			<div class="col-md-4 col-xl-3 pt-2 pb-4 sidebar bg-dark text-white">
+				<h4 class="sidebar-heading">Contents</h4> {{#if sideBarBreadCrumb}} <a href="/resources" class="breadCrumb">Back to Main Page</a> {{/if}} <ul class="nav font-weight-thin" id="sidenav">
+					<ul style="padding-left: 30px !important;">Loading, please wait...</ul>
+				</ul>
+			</div>
+			<div class="col-md-8 col-xl-9">
+				<div class="resources container-fluid text-light"> {{{resource}}} </div>
+			</div>
 		</div>
 	</div>
-</div>
-<a id="back-to-top" href="#" class="btn btn-sm btn-light back-to-top" role="button"><i class="fas fa-arrow-up"></i></a>
-
-{{> footer }}
+	<a id="back-to-top" href="#" class="btn btn-sm btn-light back-to-top" role="button"><i class="fas fa-arrow-up"></i></a> {{> footer }}
 </body>
 
 </html>
