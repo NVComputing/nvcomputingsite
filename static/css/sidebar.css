@@ -5,6 +5,8 @@
     border-bottom: 1px solid rgba(0,0,0,.1);
 	padding-left: 0;
 	padding-right: 0;
+
+	background-color: #404040;
 }
 
 @media (min-width: 1200px) {
@@ -23,16 +25,21 @@
 		height: calc(100vh - 58px);
 		border-right: 1px solid rgba(0,0,0,.1);
 	}
+	#sidenav {
+		padding-bottom: 4rem;
+	}
 }
 
 .breadCrumb {
 	font-weight: 700 !important;
 	color: #fff !important;
 	margin-left: calc(15px + 0.75rem);
+	margin-bottom: 10px;
 }
 
 .sidebar-heading {
 	margin: 2rem calc(15px + 0.75rem) 1rem;
+	padding-top: 12px;
 	padding-bottom: 0.5rem;
 	font-weight: bold;
 	/* text-align: center; */
@@ -71,6 +78,14 @@
 #sidenav li a {
 	padding: 4px calc(15px + 0.75rem);
 	color: #fff !important;
+}
+
+#sidenav li a:hover {
+	background: #505050;
+}
+
+#sidenav li a:active {
+	background: #ffcc00 !important;
 }
 
 #sidenav ul ul li a {

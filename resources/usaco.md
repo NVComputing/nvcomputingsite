@@ -7,7 +7,7 @@ USACO is a multi-level online programming competition primarily focused on algor
   - [Grading](#grading)
 - [Levels](#levels)
 - [Input / Output](#inputoutput)
-- [Efficient Code](#efficientcode)
+- [Efficiency](#efficiency)
 - [Problems](#problems)
 
 # Contest Format

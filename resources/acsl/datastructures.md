@@ -8,16 +8,16 @@
 - [Trees](#trees)
   - [Terminology](#terminology)
   - [Binary Search Trees](#binarysearchtrees)
-    - [Inserting Nodes](#insertingnodes)
-    - [Deleting Nodes](#deletingnodes)
+    - [Inserting Nodes (Binary Search)](#insertingnodesbinarysearch)
+    - [Deleting Nodes (Binary Search)](#deletingnodesbinarysearch)
     - [Searching for Nodes](#searchingfornodes)
-  - [Classifying Trees Even Further](#classifyingtreesevenfurther)
+  - [Classifying Trees Further](#classifyingtreesfurther)
     - [Balanced Trees](#balancedtrees)
     - [Full vs Complete Trees](#fullvscompletetrees)
-- [Priority Queues](#priorityqueues)
-  - [Inserting Nodes](#insertingnodes)
-  - [Deleting Nodes](#deletingnodes)
 - [Path Lengths](#pathlengths)
+- [Priority Queues](#priorityqueues)
+  - [Inserting Nodes (Priority Queues)](#insertingnodespriorityqueues)
+  - [Deleting Nodes (Priority Queues)](#deletingnodespriorityqueues)
 - [Sample Problems](#sampleproblems)
 
 # Introduction
@@ -72,7 +72,7 @@ Binary search trees are one way to store items in a particular order. They can e
 
 Each node can have a total of two children. The left child must be less than or equal in value, whereas the right child must be greater in value. With numbers, this is easy enough; as for alphabet letters, they are considered to be "less than" another letter if they come earlier in the alphabet. So, for example, A < E.
 
-### Inserting Nodes
+### Inserting Nodes (Binary Search)
 
 Inserting a node requires knowing its position relative to existing nodes. Here's an example with the word *AMERICAN*:
 
@@ -85,7 +85,7 @@ Inserting a node requires knowing its position relative to existing nodes. Here'
 
 Note that if you were to switch out the positions of the letters in *AMERICAN* to become something like *MCEAANIR*, the tree would look very different.
 
-### Deleting Nodes
+### Deleting Nodes (Binary Search)
 
 In the case that a node needs to be deleted, this generally involves some minor shifting. Less, equal, and greater relationships between nodes still have to be considered for proper placement.
 
@@ -173,7 +173,7 @@ Priority queues are similar to binary search trees. Essentially, elements that h
 
 With deleting and finding items, they are limited to the first item/element. While they are more limited, that does not mean they are necessarily worse than binary search trees; in some situations, deleting and finding other items may not be very important and thus can be ignored.
 
-## Inserting Nodes
+## Inserting Nodes (Priority Queues)
 
 Priority queues are typically implemented using a *heap* data structure. When using a *min-heap*, the parent is always less than or equal to its children nodes; the root is the smallest element in the tree. Conversely, a *max-heap* is where the parent is greater than or equal to its children nodes, and the root is the largest element in the tree.
 
@@ -188,7 +188,7 @@ Take this table as an example on how to implement *AMERICAN* with a min-heap:
 | 3. <img src="/res/acsl/datastructures/pqinsert3.png" class="img-fluid" /> | *E* is added into the tree. No shifting of nodes occurs since *E* is indeed larger than *A*. | 7. <img src="/res/acsl/datastructures/pqinsert7.png" class="img-fluid" /> | *A* (not the root) is added as a child of *C*. Since it is less than *C*, the two switch places. Since *A* has the same value as the root *A*, switching the two wouldn't be very useful, so the two *A*s can be kept as is. |
 | 4. <img src="/res/acsl/datastructures/pqinsert4.png" class="img-fluid" /> | *R* is added into the tree and starts the next row since the previous row was completely filled. No shifts occur. | 8. <img src="/res/acsl/datastructures/pqinsert8.png" class="img-fluid" /> | *N* is added as a child of *R* and starts the next row. Since it is less than *R*, the two switch places. *N* is greater than *I*, it does not move further up the heap. We have now finished constructing the tree. |
 
-## Deleting Nodes
+## Deleting Nodes (Priority Queues)
 
 Just as a reminder, only the root can be deleted! To do so, replace the root with the rightmost node in the last node. Then, keep switching out the root with its smaller child (or larger child, if using max-heap) until the tree is finally valid. Make sure to make adjustions to the rest of the tree if needed.
 
