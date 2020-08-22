@@ -2,27 +2,16 @@
 
 # Contents
 
-<ul>
-	<li style="padding-left: 10px !important; margin-bottom: 10px !important;"><span style="font-weight: bold; padding-left: 10px;">Contests</span>
-		<ul>
-			<li><a href="/resources/usaco">USACO</a></li>
-			<li><a href="/resources/acsl">ACSL</a></li>
-		</ul>
-	</li>
-	<li style="padding-left: 10px !important; margin-bottom: 10px !important;"><span style="font-weight: bold; padding-left: 10px;">General Resources</span>
-		<ul>
-			<li><a href="/resources/io">Input / Output</a></li>
-			<li><a href="/resources/efficiency">Writing Efficient Code</a></li>
-			<li><a href="/resources/tips">Tips</a></li>
-		</ul>
-	</li>
-	<li style="padding-left: 10px !important; margin-bottom: 10px !important;"><span style="font-weight: bold; padding-left: 10px;">Advanced</span>
-		<ul>
-			<li><a href="/resources/streams">Stream API</a></li>
-			<li><a href="/resources/lambdas">Lambdas and Functional Programming</a></li>
-		</ul>
-	</li>
-</ul>
+- <a>Contests</a>
+  - [USACO](/resources/usaco)
+  - [ACSL](/resources/acsl)
+- <a>General Resources</a>
+  - [Input / Output](/resources/io)
+  - [Writing Efficient Code](/resources/efficiency)
+  - [Tips](/resources/tips)
+- <a>Advanced</a>
+  - [Stream API](/resources/streams)
+  - [Lambdas and Functional Programming](/resources/lambdas)
 
 # Index
 
