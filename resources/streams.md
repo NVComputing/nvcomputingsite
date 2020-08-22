@@ -6,12 +6,10 @@
 - [Why use streams?](#whyusestreams)
 - [When shouldn't you use streams?](#whenshouldntyouusestreams)
 - [How to use streams](#howtousestreams)
-    1. [Stream Creation](#operation1streamcreation) 
+    1. [Stream Creation](#operation1streamcreation)
     2. [Intermediate Operations](#operation2intermediateoperations)
     3. [Terminal Operations](#operation3terminaloperations)
 - [Putting it all together](#puttingitalltogether)
-
-<br>
 
 ## Introduction
 Java 8 introduced the Streams API.
@@ -20,8 +18,6 @@ This is a high-level API that can more or less replace looping by just chaining 
 This is a relatively advanced feature, so don't feel bad if you don't get it.
 
 Code for the streams API can be found in [StreamAPI.java in our code snippets repository](https://github.com/NVHSComputing/code-snippets/blob/master/src/advanced/StreamAPI.java).
-
-<br>
 
 ## What is a stream?
 Streams represent a flow of data (imagine a stream of strings being basically a pipeline with all the strings from the array flowing through it), be it from an array, ArrayList, or any collection. You can manipulate this data using the Streams
@@ -41,15 +37,11 @@ and basic operations.
 
 Also, streams do not let you access each element in the list's index. If you need access to the index, use a classic for loop.
 
-<br>
-
 # How to use streams
 There are 3 operations you do on a stream:
 - Creation
 - Intermediate Operation
 - Terminal Operation
-
-<br>
 
 ## Operation 1: Stream Creation
 First, let's create a stream. There are a couple ways you can do this.
@@ -69,15 +61,13 @@ the .stream() method on it.
 ```java
 Stream<String> stream = list.stream();
 ```
-		
+
 To get a stream from an array, call the Arrays.stream() method on it.
 ```java
 Stream<String> stream2 = Arrays.stream(list2);
 ```
-		
-At this point in time, these two streams (stream1 and stream2) are basically identical. Let's move on to step 2.
 
-<br>
+At this point in time, these two streams (stream1 and stream2) are basically identical. Let's move on to step 2.
 
 ## Operation 2: Intermediate Operations
 
@@ -116,11 +106,9 @@ with the result of the method called ON the array.
 
 (Note that this can be shortened to `stream2.map(String::toUpperCase)`. Read the part about method references
 in anonymous functions.)
- 
+
 This example specifically calls the toUpperCase method on every string.
 After this, the contents of stream2 become "FOO", "BAR", and "FOOBAR".
-
-<br>
 
 ## Operation 3: Terminal Operations
 
@@ -159,8 +147,6 @@ BAR
 FOOBAR
 ```
 and instead print these three items out of order. If preserving order is vital, use `forEachOrdered()`, which IS ordered.
-
-<br>
 
 # Putting it all together
 

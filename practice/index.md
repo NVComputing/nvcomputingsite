@@ -3,7 +3,7 @@
 [Solutions to Past Programming Problems](/practice/past-problems)
 ##This Week's Homework
 
-Google form: <span style="color: #935000">*Currently Unavailable*</span>
+Google form: <span class="text-danger font-italic">Currently Unavailable</span>
 
 Programming Question Link: [Bus Routes](https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc8/00000000002d83bf#problem)
 

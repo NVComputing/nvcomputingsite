@@ -6,8 +6,6 @@
 - [List of OPCODEs](#listofopcodes)
 - [Sample Problems](#sampleproblems)
 
-<br>
-
 # Introduction
 
 Many of us probably know that computers read instructions as `0`s and `1`s (binary); this is known as machine language.
@@ -30,7 +28,6 @@ being humanly possible to write (unlike machine code). It's applied in applicati
 
 As a note: ACSL defines its own assembly language. Assembly can vary in between implementations, but the basic
 ideas are the same.
-<br>
 
 # How It Works
 
@@ -55,8 +52,6 @@ an `=` sign is put before the data.
 Only OPCODEs that do not modify the LOC field have the option of using immediate data;
 these are marked in the "List of OPCODEs" section down below.
 
-<br>
-
 # List of OPCODEs
 
 Here are the general operations:
@@ -80,8 +75,6 @@ Here are the general operations:
 
 **Note that any read or arithmetic operations are, for some reason, defined by ACSL to be modulo 1,000,000.**
 This probably won't crop up in competition, but it's nice to know.
-
-<br>
 
 # Sample Problems
 

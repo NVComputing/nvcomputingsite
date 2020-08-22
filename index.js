@@ -6,6 +6,7 @@ let express = require('express');
 let app = express();
 
 let routes = require('./routes');
+var hbs = require('hbs');
 
 console.log('Setting redirect functions...');
 app.use(function forceDomain(req, res, next) {
@@ -31,6 +32,8 @@ routes.set(app);
 
 app.set('views', './views');
 app.set('view engine', 'hbs');
+
+hbs.registerPartials(__dirname + '/views/partials', function (err) {});
 
 let listener = app.listen(app.get('port'), function () {
 	console.log('Express server started.');

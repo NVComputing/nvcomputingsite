@@ -3,12 +3,32 @@ html * {
 }
 
 body {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Raleway', sans-serif !important;
 	background: #3c3c3c;
 }
 
+a {
+	color: #7bff;
+}
+
+footer {
+	position: absolute;
+	font-size: 0.8rem;
+	padding: 0.5rem;
+	background: #2b2b2b;
+	width: 100%;
+	z-index: 1001;
+}
+
+.fc-blue {
+	color: #7bff;
+}
+
+.font-weight-thin {
+	font-weight: 200;
+}
+
 .navbar-custom {
-	font-family: 'Raleway', sans-serif;
 	background: #1f1f1f !important;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
@@ -21,7 +41,6 @@ body {
 	-o-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
 }
-
 
 @media (max-width: 1199px) {
 	.navbar-wrapper .navbar-custom {
@@ -84,7 +103,6 @@ body {
 	}
 }
 
-
 .navbar-toggler-custom {
 	font-size: .7rem !important;
 }
@@ -98,6 +116,10 @@ body {
 	margin-top: 55px !important;
 }
 
+#wrapper {
+	overflow-x: hidden;
+}
+
 .background-code {
 	background-image: url(/res/background-carousel.png);
 	background-size: contain;
@@ -108,32 +130,6 @@ body {
 	background-image: url(/res/background-carousel.png);
 	background-size: contain;
 	background-position: center;
-}
-
-.owl-theme .owl-dots .owl-dot span {
-	background: #cccccc !important;
-}
-
-.owl-theme .owl-dots .owl-dot:hover span {
-	background: #3a82db !important;
-}
-
-.owl-theme .owl-dots .owl-dot.active span {
-	background: #2f629c !important;
-}
-
-.large-image {
-	width: 450px;
-}
-
-@media only screen and (max-width: 991px) {
-	.large-image {
-		width: 200px !important;
-	}
-}
-
-.description-text {
-	font-size: 1rem !important;
 }
 
 @media (max-width: 991px) {
@@ -154,50 +150,30 @@ body {
 	}
 }
 
-.card-text-custom {
-	font-family: 'Raleway', sans-serif;
+.border-md-right {
+	border-right: 0px solid #dee2e6 !important;
 }
 
-.carousel-caption-custom {
-	position: absolute;
-	right: 15%;
-	left: 15%;
-	z-index: 10;
-	padding-bottom: 20px;
-	color: #fff;
-	text-align: center;
-	bottom: -35px !important;
-}
-
-
-@media only screen and (max-width: 767px) {
-	#news-title {
-		font-size: 1rem;
-	}
-
-	#news-p-lead {
-		font-size: .9rem;
-	}
-
-	#news-p {
-		font-size: .8rem;
+@media (min-width: 768px) {
+	.border-md-right {
+		border-right: 1px solid #dee2e6 !important;
 	}
 }
 
-.footer {
-	font-size: .8rem;
-	padding-top: 3px;
-	padding-bottom: 3px;
-	background: #2b2b2b;
-}
-
-.cards-custom {
+.title-code {
 	box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 	transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
 
-.cards-custom:hover {
+.title-code:hover {
 	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 3rem;
+    right: 15px;
+    display: none;
 }
 
 /* betternavbarcss */
@@ -265,6 +241,21 @@ body.side-menu-visible #side-menu.side-menu-left {
 }
 
 .monospace {
-	font-family: Consolas, Monaco, 'Andale Mono', monospace;
 	display: flex;
+}
+
+/* LightBox */
+
+#lightboxOverlay {
+	position: fixed !important;
+	top: 0;
+	left: 0;
+	height: 100% !important;
+	width: 100% !important;
+}
+
+#lightbox {
+	position: fixed !important;
+	top: 50% !important;
+	transform: translateY(-50%);
 }

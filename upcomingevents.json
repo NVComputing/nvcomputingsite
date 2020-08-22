@@ -109,7 +109,7 @@
       "name": "Hewlett Packard Codewars",
       "link": "http://hpcodewars.org//",
       "time": 1620421200,
-      "desc": "Hewlett Packard's Codewars competition is aimed at high school level students and is hosted by schools. The contest takes place across close to a week and contains about 20 difficult questions.",
+      "desc": "Hewlett Packard's Codewars competition is aimed at high school level students and is hosted by schools. The contest takes place during a time period of about a week and contains about 20 difficult questions.",
       "tentative": true
     },
     {
@@ -123,7 +123,7 @@
       "name": "Google Code Jam Round 1A",
       "link": "https://codingcompetitions.withgoogle.com/codejam/about",
       "time": 1618124400,
-      "desc": "Google's CodeJam competition. You must place within the top 1500 to move on to Round 2.<br>You must be 16 to participate.",
+      "desc": "Google's Code Jam competition. You must place within the top 1500 to move on to Round 2.<br>You must be 16 to participate.",
       "tentative": true
     },
     {
@@ -157,7 +157,8 @@
   ],
   "deadlines": [
     {
-      "name": "Fill out registration form (go to homepage for link)",
+      "name": "Fill Out Registration Form",
+      "link": "https://docs.google.com/forms/d/e/1FAIpQLSf9bBhjK4qrUeaye6wQaPgaDY0_CZc7kVo5M5DOfr1SB7RMGw/viewform",
       "hard": false,
       "time": 1600372800
     }

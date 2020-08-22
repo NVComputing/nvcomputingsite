@@ -1,6 +1,6 @@
 //Anton Barchukov's navbar code
 
-window.onscroll = function() {
+window.onscroll = function () {
 	navScroll();
 };
 
@@ -13,21 +13,30 @@ function navScroll() {
 	let sticky = navbar.offsetTop;
 	if (window.pageYOffset > sticky) {
 		navbar.classList.add('sticky');
+		$('#back-to-top').fadeIn();
 	} else {
 		navbar.classList.remove('sticky');
+		$('#back-to-top').fadeOut();
 	}
 }
 
+//Back to Top Button
+$('#back-to-top').click(function () {
+	$('html, body').animate({
+		scrollTop: 0
+	}, '300');
+});
+
 // betternavbarjs
-$(function() {
+$(function () {
 	function e() {
-		s.addClass('overflow-hidden'), o.show(), setTimeout(function() {
+		s.addClass('overflow-hidden'), o.show(), setTimeout(function () {
 			s.addClass('side-menu-visible'), d.fadeIn();
 		}, 50);
 	}
 
 	function n() {
-		s.removeClass('side-menu-visible'), d.fadeOut(), setTimeout(function() {
+		s.removeClass('side-menu-visible'), d.fadeOut(), setTimeout(function () {
 			o.hide(), s.removeClass('overflow-hidden');
 		}, 400);
 	}
@@ -41,15 +50,15 @@ $(function() {
 	let t = o.find('.close');
 	o.append('<div class="contents"></div>');
 	let l = o.find('.contents');
-	i.hasClass('better-bootstrap-nav-left') && o.addClass('side-menu-left'), a.on('show.bs.collapse', function(n) {
+	i.hasClass('better-bootstrap-nav-left') && o.addClass('side-menu-left'), a.on('show.bs.collapse', function (n) {
 		n.preventDefault();
 		let s = $(this).html();
 		l.html(s), e();
-	}), t.on('click', function(e) {
+	}), t.on('click', function (e) {
 		e.preventDefault(), n();
-	}), d.on('click', function(e) {
+	}), d.on('click', function (e) {
 		n();
-	}), $(window).resize(function() {
+	}), $(window).resize(function () {
 		!a.is(':visible') && s.hasClass('side-menu-visible') ? (o.show(), d.show()) : (o.hide(), d.hide());
 	});
 });

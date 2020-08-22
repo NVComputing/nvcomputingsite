@@ -7,7 +7,7 @@ USACO is a multi-level online programming competition primarily focused on algor
   - [Grading](#grading)
 - [Levels](#levels)
 - [Input / Output](#inputoutput)
-- [Efficient Code](#efficientcode)
+- [Efficiency](#efficiency)
 - [Problems](#problems)
 
 # Contest Format
@@ -80,8 +80,6 @@ However, the **US Open,** which serves as USACO’s national championship, has a
 *   Problems are significantly more difficult.
 *   Contests are **5 hours** in length instead of 4.
 
-<br>
-
 # Levels
 
 There are **4 levels** in USACO, each representing a different programming skill level.
@@ -100,6 +98,7 @@ Make sure you can solve at least some of these.
 Here is the list of what you need to know for each level’s programming competition / how to pass each level’s programming competition.
 
 ## Bronze
+
 Bronze is the baseline level of USACO.
 
 **Brute force** is usually sufficient to pass most bronze problems (you do not have nearly as many efficiency concerns as the upper levels.
@@ -108,6 +107,7 @@ To pass, you must be able to:
 *   Know / be able to create basic algorithms and logic
     *   Looping, arrays, internal algorithms
 ## Silver
+
 Silver is substantially harder than Bronze to get past.
 
 Brute force **does not work many of the later test cases.** It should be used only if you are unable to come up with a more efficient algorithm, so you can at least get some points for the problem.
@@ -121,6 +121,7 @@ To pass, you must know:
 *   How to come up with and implement efficient, optimal solutions for problems.
 
 ## Gold
+
 This level is where getting any higher takes an extraordinary amount of effort (only 1 person in the last 2 years of Computing Team has gotten past this level).
 
 Performance is everything. If your code is not extremely efficient, you will not get past this level.
@@ -130,7 +131,8 @@ To pass, you must know:
 *   Shortest Path Algorithms
 *   Occasional use of Number Theory
 ## Platinum
-This level is ridiculously difficult: if you score a perfect score in this during the US Open, you are essentially guaranteed a position in the 4 person US national team which competes in IOI (this is much more prestigious than ACSL and is practically a ticket to any college you want). 
+
+This level is ridiculously difficult: if you score a perfect score in this during the US Open, you are essentially guaranteed a position in the 4 person US national team which competes in IOI (this is much more prestigious than ACSL and is practically a ticket to any college you want).
 It is the computing equivalent of making USAMO.
 To be successful in this level, you need to:
     *   Have a sophisticated understanding of how computing functions
@@ -156,7 +158,7 @@ See the input/output document for language-specific details on inputting / outpu
 
 # Efficiency
 
-When coding at a higher level, there are typically two different types of solutions. There are the efficient solutions and the naive solutions. Efficient solutions are typically better at managing time complexity, but it can also be better at managing space complexity. Naive solutions typically use either brute force or require far more computation to come up with a solution. 
+When coding at a higher level, there are typically two different types of solutions. There are the efficient solutions and the naive solutions. Efficient solutions are typically better at managing time complexity, but it can also be better at managing space complexity. Naive solutions typically use either brute force or require far more computation to come up with a solution.
 
 This can work for earlier test cases in USACO, but as the values and parameters get larger, they take longer and longer to run.
 
@@ -166,29 +168,36 @@ A very important tool to measure your code’s efficiency is known as **Big O No
 Some examples of naive versus efficient code can be seen here.
 
 ## Problem
+
 Given an array of n integers, find the subarray of size 2 with the largest sum. (members of subarrays do not have to be adjacent).
 i.e. given the array [1, 2, 6, 5, 11], the largest subarray is [6, 11].
 
 ## Naive Solution
+
 Check every single subarray of size 2 and perform a sum algorithm.  This gets extremely inefficient as n increases (it has a time complexity of **O(n^2)**).
 
 This solution would check [1,2], [1,6], [1,5], [1,11], [2,6], [2,5], [2,11], [6, 5], [6,11], [5,11]. This takes 10 visits.
 
 ## Efficient Solution
+
 Iterate through the array once to find the largest value, store that value, remove that value from the array, and iterate through the remaining array to find the second largest value. This is your subarray.
 
 This is a far more efficient solution that will always finish in 2 traversals, regardless of the size of the array (it has a time complexity of **O(n)**). This takes only 9 visits, once you remove 11 in the second pass. Although this only seems to save you one visit, the amount of visits saved increases quadratically. In an array of size 600(this is relatively small in USACO standards), this algorithm takes only 1199 visits while the other takes 180,300 visits.
 
 ### Note
+
 This problem also demonstrates the importance of understanding the problem correctly, as this problem is just a very confusing way of asking to find the largest two elements, and does not have much to do with subarrays. Many USACO problems, especially bronze will try to mask what they are asking in a much more wordy and complicated way.
 
 ## Problem
+
 Given a sorted array of integers R, return the index of integer K in the array or return -1 if the value isn’t contained in the array. (This is a problem you should have already seen.)
 
 ### Naive Solution
+
 Do a linear search through the array, which runs in O(n). This is something that you are probably familiar with and seems fairly efficient, but is impractical as n gets larger.
 
 ### Efficient Solution
+
 Do a binary search through the array, which runs in O(log(n)). Those of you who took AP CSA probably learned this later in the year. This is very efficient, and runs quickly no matter how large n is.
 
 - Time Complexity: You typically want your code to run at a pace of O(nlog(n)) or better after passing bronze.
@@ -199,6 +208,7 @@ Many of the problems require combining 2 to 3 different algorithms such as combi
 ## Common Techniques to Optimize Code
 
 ### Greedy Algorithm
+
 *   This is a very common algorithm in USACO as it is used to not make questions too repetitive.
 *   A greedy algorithm breaks a problem into parts and finds the most efficient solution to each part and then combines them together.
 *   Prefix Sum

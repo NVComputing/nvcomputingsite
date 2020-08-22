@@ -66,9 +66,6 @@ Those of you who took AP Computer Science A probably learned this later in the y
 # Java
 ## Efficient Java Code
 
-
-<br>
-
 # C++
 
 ---

@@ -7,8 +7,6 @@
 - [Functional Programming](functionalprogramming)
   - [What is functional programming?](whatisfunctionalprogramming)
 
-<br>
-
 # Lambdas
 
 At first, lambdas may seem like a magical mystery creature that you never want to touch; however, they are

@@ -9,18 +9,14 @@
   - [Evaluations](#evaluations)
   - [Finding Possible Bitstrings](#findingpossiblebitstrings)
 
-<br>
-
 # Introduction
 
-Bit strings are essentially just strings of binary digits (so, for example, `011010`) that can be manipulated in a variety of ways by operators (see Operators below). They can also be represented by 
+Bit strings are essentially just strings of binary digits (so, for example, `011010`) that can be manipulated in a variety of ways by operators (see Operators below). They can also be represented by
 the binary form of many data types, such as integers, strings, etc.
 
 Most high-level languages support such operations. Bit strings can be used to represent sets in the form of binary sets. If you were to have a program with 8 different options that all have the choice of "Yes" or "No", one way to store this information would be with an array of size 8. However, an easier and less space-consuming way would be to use a bit string, with each option choice taking up one bit.
 
 Understanding how bit strings work is very helpful in systems programming, assembly language programming, code optimization, and hardware design.
-
-<br>
 
 # Operators
 
@@ -79,7 +75,7 @@ For more details on truth tables, or if you're confused about what a truth table
 
 ## Shift Operators
 
-As their name indicates, "shift" operators are unary operators that involve shifting bits around in a bit string. The direction in which they shift as well as how many positions they shift over by varies based on the operator. For the operators in the table below, we will include the abbreviation that we typically use for each operator. 
+As their name indicates, "shift" operators are unary operators that involve shifting bits around in a bit string. The direction in which they shift as well as how many positions they shift over by varies based on the operator. For the operators in the table below, we will include the abbreviation that we typically use for each operator.
 
 Note that none of these operators change the length of the bit string.
 
@@ -101,8 +97,6 @@ As a result, any CIRC x operations are equal to CIRC (bit length mod x) operatio
 
 For example, LCIRC-19 `10001` is just equivalent to LCIRC-4. This means that we can calculate that the resultant bit string
 is `00011` very quickly. (As a side note, you can simplify this even further: LCIRC-4 = RCIRC-1 on a bitstring with length 5, because 4 mod 5 is also -1 (and LCIRC-x is just RCIRC-(-x))).
-
-<br>
 
 # Sample Problems
 
@@ -183,13 +177,13 @@ Let's first mark `x` as `abcde`. Now, we can carry on:
 
 At this point, you can now solve for a few variables. `d` correlates with `0`. `1` correlates with `1`; notice that while variables are not involved, this is a good way to ensure that you correctly evaluated the bit string. (Note that it is also possible to have *no* answers, so if you're 100% sure you did everything correctly but two constants don't line up, there are *no solutions.* Typically ACSL has solutions, so you probably won't need to worry about this.) `A` is equal to 1; so, `a` is equal to `0`. `b` is equal to `0`, and the final `0` correlates with 0.
 
-So, altogether, `a` = 0, `b` = 0, and `d` = 0. We don't know about `c` or `e`, but their values don't actually matter. This is because regardless of what they are, the equation will always be reduced to what we have in Step 4 (the variables are annihilated somewhere along the line). 
+So, altogether, `a` = 0, `b` = 0, and `d` = 0. We don't know about `c` or `e`, but their values don't actually matter. This is because regardless of what they are, the equation will always be reduced to what we have in Step 4 (the variables are annihilated somewhere along the line).
 
 Thus, our answer is `x` = `00*0*`, with the `*` standing for any value (`0` or `1`). During the ACSL contest, you should write these solutions out manually (unless noted otherwise) as: `00000`, `00100`, `00001`, and `00101`.
 
 ### 4. List all possible values of x (5 bits long) that solve the following equation: (LSHIFT-2 (RCIRC-3 (NOT x))) = 10100. (This is from someone else's Quizlet.)
 
-Again, we will mark `x` as `abcde`. 
+Again, we will mark `x` as `abcde`.
 
 0. (LSHIFT-2 (RCIRC-3 (NOT abcde))) = 10100
 1. (LSHIFT-2 (RCIRC-3 ABCDE)) = 10100

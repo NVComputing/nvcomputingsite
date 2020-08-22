@@ -2,23 +2,19 @@
 
 ## Contents
 - [Introduction](#introduction)
-- [More Types of Notations](#moretypesofnotation)
-  - [Evaluating Expressions in Any Notation](#evaluatingexpressionsinanynotation) 
+- [More Types of Notations](#moretypesofnotations)
+  - [Evaluating Expressions in Any Notation](#evaluatingexpressionsinanynotation)
 - [Converting Between Notations](#convertingbetweennotations)
   - [Doing Multiple Scans](#doingmultiplescans)
   - [Binary Trees](#binarytrees)
 - [Sample Problems](#sampleproblems)
 
-<br>
-
 # Introduction
 
 We all come in contact with math in numerous situations. Whenever we see a math expression
 like `$8 + 14 * 6$`, we are looking at infix notation. *In-fix* means that the operators
-are written between its two operands. However, there are two other notations that we 
+are written between its two operands. However, there are two other notations that we
 will explore next.
-
-<br>
 
 # More Types of Notations
 
@@ -32,7 +28,7 @@ The other type of notation is *post-fix* notation, where each operator is placed
 its operands instead. The post-fix notation of `$8 + 14 * 6$` would be `$8 14 6 * +$`.
 
 One note is that exponents are marked with a `$\uparrow$` rather than a `^` mark.
-Also, pre-fix and post-fix both do not use parentheses. 
+Also, pre-fix and post-fix both do not use parentheses.
 
 ## Evaluating Expressions in Any Notation
 
@@ -41,7 +37,7 @@ parentheses, exponents, multiplication, division, addition, and then subtraction
 Multiplication and division have the same precedence, as do addition and subtraction;
 terms with equal precedence are evaluated from left to right.
 
-With pre-fix and post-fix, there is no specific order of precedence. 
+With pre-fix and post-fix, there is no specific order of precedence.
 
 For pre-fix, you would first scan the expression for any operators that are followed by
 2 operands, simplify those, and continue to cycle over the expression to simplify further
@@ -64,8 +60,6 @@ any operators that are preceded by 2 operands. Here's an example:
 2. `$21 3 - 2 \uparrow$`
 3. `$18 2 \uparrow$`
 4. `$324$`
-
-<br>
 
 # Converting Between Notations
 
@@ -91,12 +85,12 @@ they correspond to. The expression `$X = (AB - C/D)\uparrow E$` will be used as 
 | `$X * A \; B / \; C \; D \; E$` | `$C/D$` is of the same precedence as `$AB$` and thus is evaluated next. |
 | `$X - * \; A \; B \; / \; C \; D \; E$` | `$* \; A \; B$` and `$/ \; C \; D$` become `$AB$` and `$C/D$`. We then have to find the difference of these two, which is why the subtraction mark is put before both `$* \; A \; B$` and `$/ \; C \; D$`. |
 | `$X \uparrow - * A \; B \; / \; C \; D \; E$` | `$- \; * \; A \; B \; / \; C \; D$` is `$(AB - C/D)$`, which is supposed to all be taken to the Eth power. So, the `$\uparrow$` mark at the front of `$- * A \; B \; / \; C \; D$`. |
-| `$ = X \uparrow - * A \; B \; / \; C \; D \; E$` | The equal sign is treated as last in precedence by default since it isn't exactly an operation. 
+| `$ = X \uparrow - * A \; B \; / \; C \; D \; E$` | The equal sign is treated as last in precedence by default since it isn't exactly an operation.
 
 **Post-fix**
 
 Notes will not be written for the steps below as they are identical to the steps taken
-above for pre-fix; the only difference is that the operators are placed after the 
+above for pre-fix; the only difference is that the operators are placed after the
 operands.
 
 0. `$X \; A \; B \; C \; D \; E$`
@@ -120,7 +114,7 @@ what I mean.
 5. `$ X = (AB - C/D)\uparrow E$`
 
 If you want to convert from pre-fix to post-fix or vice versa, it is easy to get
-mixed up; so, converting to in-fix first may be your better choice, although it's 
+mixed up; so, converting to in-fix first may be your better choice, although it's
 a tedious extra step to take.
 
 ## Binary Trees
@@ -128,7 +122,7 @@ a tedious extra step to take.
 Binary trees are a way to represent an expression more visually. For example, if I
 were to represent `$3+6$` as a tree, I would draw:
 
-<img src="/res/acsl/notation/operation.png" height="150"/>
+<img src="/res/acsl/notation/operation.png" class="img-fluid" />
 
 Note how the operator lies in the middle of the two operands and acts as a stem, or
 root. This applies to even pre-fix and post-fix expressions.
@@ -138,9 +132,9 @@ Follow the table below to see the process.
 
 | Construction | |
 | --- | --- |
-| 1. <img src="/res/acsl/notation/sample1.png" style="width: 150px;"/> | 4. <img src="/res/acsl/notation/sample4.png" height="200"/>|
-| 2. <img src="/res/acsl/notation/sample2.png" style="width: 300px;"/> | 5. <img src="/res/acsl/notation/sample5.png" height="200"/>|
-| 3. <img src="/res/acsl/notation/sample3.png" style="width: 300px;"/> | |
+| 1. <img src="/res/acsl/notation/sample1.png" class="img-fluid" /> | 4. <img src="/res/acsl/notation/sample4.png" class="img-fluid" />|
+| 2. <img src="/res/acsl/notation/sample2.png" class="img-fluid" /> | 5. <img src="/res/acsl/notation/sample5.png" class="img-fluid" />|
+| 3. <img src="/res/acsl/notation/sample3.png" class="img-fluid" /> | |
 
 Now, with this completed tree, we can convert to any notation we want. The order to
 write the expression is already drawn out; first, work with the operation in the
@@ -149,17 +143,15 @@ operations in the same row, and then move up to the next row up. In this next ro
 start calculating from left to right again before moving up once more. This process
 is continued until you get to the uppermost (or final) operation.
 
-The only difference between the notations is where you place the operators. In the 
+The only difference between the notations is where you place the operators. In the
 binary tree, you may see:
 
-<img src="/res/acsl/notation/operation.png" height="150"/>
+<img src="/res/acsl/notation/operation.png" class="img-fluid" />
 
 However, since this is written in in-fix terms, you would have to remember to put
 the operator before or after the operands if you're converting to pre-fix or post-fix.
 So, again, for pre-fix, this would be `$* \; A \; B$`. For post-fix, it would be
 `$A \; B \; *$`.
-
-<br>
 
 # Sample Problems
 
@@ -195,8 +187,8 @@ methods have been provided.
 
 | Construction | | |
 | --- | --- | --- |
-| 1. <img src="/res/acsl/notation/prob2-1.png" style="width: 150px;"/> | 2. <img src="/res/acsl/notation/prob2-2.png" style="width: 150px;"/> | 3. <img src="/res/acsl/notation/prob2-3.png" style="width: 300px;"/> |
-| 4. <img src="/res/acsl/notation/prob2-4.png" style="width: 300px;"/> | 5. <img src="/res/acsl/notation/prob2-5.png" style="width: 300px;"/> | 6. <img src="/res/acsl/notation/prob2-6.png" style="width: 300px;"/> |
+| 1. <img src="/res/acsl/notation/prob2-1.png" class="img-fluid" /> | 2. <img src="/res/acsl/notation/prob2-2.png" class="img-fluid" /> | 3. <img src="/res/acsl/notation/prob2-3.png" class="img-fluid" /> |
+| 4. <img src="/res/acsl/notation/prob2-4.png" class="img-fluid" /> | 5. <img src="/res/acsl/notation/prob2-5.png" class="img-fluid" /> | 6. <img src="/res/acsl/notation/prob2-6.png" class="img-fluid" /> |
 
 Notice that in a few of the steps, I chose to work on subbranches of the final tree
 before putting them altogether.
@@ -237,8 +229,8 @@ We would first construct the tree like so:
 
 | Construction | |
 | --- | --- |
-| 1. <img src="/res/acsl/notation/prob3-1.png" style="width: 150px;"/> | 2. <img src="/res/acsl/notation/prob3-2.png" style="width: 150px;"/> |
-| 3. <img src="/res/acsl/notation/prob3-3.png" style="width: 150px;"/> | 4. <img src="/res/acsl/notation/prob3-4.png" style="width: 150px;"/> |
+| 1. <img src="/res/acsl/notation/prob3-1.png" class="img-fluid" /> | 2. <img src="/res/acsl/notation/prob3-2.png" class="img-fluid" /> |
+| 3. <img src="/res/acsl/notation/prob3-3.png" class="img-fluid" /> | 4. <img src="/res/acsl/notation/prob3-4.png" class="img-fluid" /> |
 
 Then, we can analyze this tree from bottom to top, left to right to get our pre-fix
 expression:
