@@ -4,7 +4,7 @@
 - [Allocation (Easy)](#Allocation)
 - [Bus Routes (Easy)](#BusRoutes)
 - [Longest Arithmetic (Easy)](#LongestArithmetic)
-- [High Buildings (Medium)](#High Buildings)
+- [High Buildings (Medium)](#HighBuildings)
 - [Toys (Hard)](#Toys)
 
 
