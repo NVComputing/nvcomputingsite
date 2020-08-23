@@ -20,13 +20,6 @@ function navScroll() {
 	}
 }
 
-//Back to Top Button
-$('#back-to-top').click(function () {
-	$('html, body').animate({
-		scrollTop: 0
-	}, '300');
-});
-
 // betternavbarjs
 $(function () {
 	function e() {

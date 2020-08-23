@@ -12,7 +12,7 @@ USACO is a multi-level online programming competition primarily focused on algor
 
 # Contest Format
 
-**_For full rules, check the [USACO website’s rules page.](http://usaco.org/index.php?page=instructions)_**
+**_For full rules, check the <a href="http://usaco.org/index.php?page=instructions" target="_blank" rel="noopener noreferrer">USACO website’s rules page</a>._**
 
 USACO is a programming competition that occurs **4 times** during the year.
 
@@ -91,7 +91,7 @@ There are **4 levels** in USACO, each representing a different programming skill
 
 Everybody begins at Bronze, and makes their way up through the course of different contests. There is a contest for each skill level for each USACO competition (i.e. Silver people don’t take the same contest as Bronze people).
 
-You can find sample problems from past competitions [here](http://usaco.org/index.php?page=contests).
+You can find sample problems from past competitions <a href="http://usaco.org/index.php?page=contests" target="_blank" rel="noopener noreferrer">here</a>.
 
 Make sure you can solve at least some of these.
 
