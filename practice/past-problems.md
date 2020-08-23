@@ -3,6 +3,7 @@
 - [Example (<span style="color: #935000">Difficulty</span>)](#Example)
 - [Allocation (Easy)](#Allocation)
 - [Bus Routes (Easy)](#BusRoutes)
+- [Longest Arithmetic (Easy)](#LongestArithmetic)
 
 
 ## Example
@@ -110,4 +111,62 @@ What this code does:
 The solution to the problem is fairly intuitive. You would need to find the latest bus for each value less than n, and each time you find a bus, you reduce `$n$` to the day for the bus. The solution is to traverse backwards through the list of busses and find the latest multiple less than n. Once you find that, you make that latest multiple `$n$` and remove that bus from the list. Fortunately, integer division automatically truncates in Java, so you can simply divide `$n$` by the day for the bus and multiply the day for the bus again. Repeat this and the final value for `$n$` you are left with is the solution.
 
 Efficiency: `$O(n)$`
-  
+
+## Longest Arithmetic 
+
+Link: [Longest Arithmetic](https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff47/00000000003bf4ed)
+
+Solution (in Java):
+```java
+//Code written by Jason
+import java.io.*;
+import java.util.*;
+public class Solution 
+{
+	public static void main(String[] args) 
+	{
+		Scanner in = new Scanner(System.in);
+		{
+			int cases = in.nextInt();
+			for(int t = 1; t<=cases; t++)
+			{
+				int n = in.nextInt();
+				int[] k = new int[n];
+				for(int x = 0; x<n; x++)
+				{
+					k[x] = in.nextInt();
+				}				
+				int maxcount = 0;
+				int count = 0;
+				int common = k[0]-k[1];
+				for(int x = 1; x<n; x++)
+				{
+					if(k[x-1]-k[x]==common)
+					{
+						count++;
+						if(maxcount<count)
+						{
+							maxcount = count;
+						}
+					}
+					else
+					{
+						count = 0;
+						common = k[x-1]-k[x];
+						x--;
+					}
+				} 
+				maxcount++;
+				System.out.println("Case #"+t+": "+maxcount);				
+			}
+		}
+	}
+}
+
+```
+What this code does:
+
+There isn't much to work on regarding efficiency in this problem. The best way to solve the problem is traverse throught the array and when you see a difference repeat, you count how long it lasts for, and everytime it changes, you reset. Then you just find the largest length, giving you the solution.
+
+Efficiency: `$O(n)$`
+
