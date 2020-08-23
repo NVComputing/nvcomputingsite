@@ -2,7 +2,6 @@
 ## Contents
 - [General Tips](#generaltips)
 - [Java-Specific Tips](#java)
-    -
 
 # General Tips
 

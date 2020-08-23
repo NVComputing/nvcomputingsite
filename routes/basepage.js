@@ -5,7 +5,7 @@ let code =
 `\`\`\`java
 public class ComputingTeam {
 	public static void main(String[] args) {
-		School neuqua = new School("NEUQUA VALLEY HIGH SCHOOL");
+		School Neuqua = new School("NEUQUA VALLEY HIGH SCHOOL");
 		ArrayList<String> people = new ArrayList<>(neuqua.getPeople());
 
 		// Find the cool people
