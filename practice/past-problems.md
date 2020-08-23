@@ -210,23 +210,21 @@ public class Solution
 			}
 			else
 			{
-				int temp=0;
-				boolean switcher=false;
-			int starter=n-(a-c);
-			for(int x=0;x<a-c;x++)
-			{
-				ans.add(starter);
-				starter++;
-			}
-			int adder=0;
-			for(int x=0;x<c;x++)
-			{
-				ans.add(n);
-				if(x==0)
-				{
-					adder=ans.size();
-				}
-			}
+			    int starter=n-(a-c);
+			    for(int x=0;x<a-c;x++)
+			    {
+				    ans.add(starter);
+				    starter++;
+			    }
+			    int adder=0;
+			    for(int x=0;x<c;x++)
+			    {
+				    ans.add(n);
+				    if(x==0)
+				    {
+					    adder=ans.size();
+				    }
+			    }
 			for(int x=0;x<b-c;x++)
 			{
 				ans.add(n-x-1);
@@ -245,7 +243,6 @@ public class Solution
 			}
 
 			System.out.print("Case #" + (g+1) + ": ");
-			//if(switcher==false) {
 			for(int x=0;x<n;x++)
 			{
 				if(x!=n-1)
@@ -264,7 +261,7 @@ public class Solution
 ```
 What this code does:
 
-There are a couple of things you need to recognize for this problem. First, look for the impossible cases. The only times the cases are impossible is if `$a=b=1$` but `$n>1$`, or if `$a+b-c>n$`, as there are that many houses visible, so n must be at least greater than that. Once you recognize this, there you will notice there are 2 types of possible cases. First, if `$c>1$`, all the towers that the both can see must be the same height. For convenience, we will make the height of the tall towers `$n$`. There will also be `$a-c$` short towers, of size 1, to the left of those equally tall towers and `$b-c$` short towers to the right of the tall towers. Any towers that neither can person can see, the number can be found from `$n-(a+b-c)$`, will be short towers put within the equally tall towers. This will work for all test cases where `$c>1$` that pass the impossible cases. Next, you solve for if `$c=1$`. You would check for the side, `$a$` or `$b$`, that is `$>1$`. If this is not true for `$a$` or `$b$` but it passed the impossible case, the solution is 1. Now, given the side `$>1$`, you take the other side and add `$b-c$` short towers. Then you place 1 tall tower to the correct side of small towers. Next you take the side that passes that `$>1$`, suppose the value was `$pass$`, and put `$pass-c-1$` short towers to the correct side. Now you place, a medium tower, for convenience it will have height `$n-1$`, between the pass side and the tall tower. Now, any invisible towers, there will be `$n-(a+b-c)$` of them, will be placed between the medium height tower and the tall tower. With all these circumstances complete, your code should effeciently run through the test sets.
+There are a couple of things you need to recognize for this problem. First, look for the impossible cases. The only times the cases are impossible is if `$a=b=1$` but `$n>1$`, or if `$a+b-c>n$`, as there are that many houses visible, so `$n$` must be at least greater than that. Once you recognize this, you will also notice that all `$c$` towers that all can see must be the same height(else they would block each other out), and must be the tallest towers. For convenience, we will make the height of the tall towers `$n$`. There will also be `$a-c$` short towers, of increasing size to the left of those equally tall towers and `$b-c$` towers of decreasing length to the right of the tall towers. This way, the `$c$` common towers will block `$a-c$` towers for one viewer and `$b-c$` for the other viewer. The height of the `$a-c$` and `$b-c$` towers could be 1, but this code chose to have them in increasing order and decreasing order(with towers being as tall as possible). So if `$n$` was 6, and `$a-c$` was 2, the code would maximize the height of the left towers by making the towers heights 4 and height 5. After adding in all these required towers, the code checks if all `$n$` building are accounted for. If they are not, and `$c>1$`, all the remaining towers will be put in between two of the `$c$` common towers, with size 1. When `$c=1$`, because the towers to the left and right of it are of size `$n-1$` in this code, the extra towers are inserted to the right of the single common tower (the `$n-1$` height tower to the right will make them invisible). The only special case that needs to be addressed is when `$b=c$`, so the common tower is already to the very right with no decreasing `$n-1$` tower to the right. In this case, simply add the extra towers of height 1 to the left of the common tower, as the `$n-1$` tower to the left will make them invisible. You do not need to account for when there are no `$n-1$` height towers to the right or left, as that means `$a=b=c$`, and if `$c=1$`, then you are guaranteed all `$n$` towers are accounted for(`$n=1$`), or the case is impossible(`$n>1$`). With all these circumstances complete, your code should efficiently run through the test sets.
 
 Efficiency: `$O(n)$`
 
