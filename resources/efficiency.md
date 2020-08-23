@@ -1,9 +1,9 @@
 # Efficiency
 ## Contents
 - [General Tips](#generaltips)
-  - [Efficient ]
+  - [Efficient Code] (#writeefficientcode)
 - [Java](#java)
-  - [Efficient Java Code](#efficiency)
+  - [Efficient Java Code](#efficientjavacode)
 
 
 # General Tips

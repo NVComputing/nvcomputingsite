@@ -23,8 +23,12 @@
 		<div class="row flex-xl-nowrap">
 			<div class="col-md-4 col-xl-3 pt-2 pb-4 sidebar text-white">
 				<h4 class="sidebar-heading">Contents</h4>
-					{{#if sideBarBreadCrumb}}
-						<a href="/resources" class="breadCrumb">Back to Main Page</a>
+					{{#if noBreadCrumb}}
+						{{#if mainResources}}
+							<a href="/resources" class="breadCrumb">Back to Main Page</a>
+						{{else}}
+							<a href="/resources/{{{previousPage}}}" class="breadCrumb">Back to <span class="text-uppercase">{{{previousPage}}}</span></a>
+						{{/if}}
 					{{/if}}
 				<ul class="nav font-weight-thin" id="sidenav">
 					<li style="padding-left: 30px !important;">Loading, please wait...</li>

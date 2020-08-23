@@ -6,9 +6,9 @@
 - [Why use streams?](#whyusestreams)
 - [When shouldn't you use streams?](#whenshouldntyouusestreams)
 - [How to use streams](#howtousestreams)
-    1. [Stream Creation](#operation1streamcreation)
-    2. [Intermediate Operations](#operation2intermediateoperations)
-    3. [Terminal Operations](#operation3terminaloperations)
+    - [Stream Creation](#operation1streamcreation)
+    - [Intermediate Operations](#operation2intermediateoperations)
+    - [Terminal Operations](#operation3terminaloperations)
 - [Putting it all together](#puttingitalltogether)
 
 ## Introduction
@@ -17,7 +17,7 @@ This is a high-level API that can more or less replace looping by just chaining 
 
 This is a relatively advanced feature, so don't feel bad if you don't get it.
 
-Code for the streams API can be found in [StreamAPI.java in our code snippets repository](https://github.com/NVHSComputing/code-snippets/blob/master/src/advanced/StreamAPI.java).
+Code for the streams API can be found in <a href="https://github.com/NVHSComputing/code-snippets/blob/master/src/advanced/StreamAPI.java" target="_blank" rel="noopener noreferrer">StreamAPI.java in our code snippets repository</a>.
 
 ## What is a stream?
 Streams represent a flow of data (imagine a stream of strings being basically a pipeline with all the strings from the array flowing through it), be it from an array, ArrayList, or any collection. You can manipulate this data using the Streams
