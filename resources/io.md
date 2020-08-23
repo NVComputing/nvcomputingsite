@@ -27,7 +27,7 @@ of input/output.*
 ## Scanner
 Scanner is an easy to use input reading system. It can read from files, as well as from console inputs, making it useful when wanting to test code before submitting. It's worth noting that the hasMoreTokens() method doesn't work properly when taking a console input.
 
-At the beginning of your close, make sure you import java.io.*; and import java.util.*; at the top of your class to use Scanner. Also, change your main method to the following:
+At the beginning of your class, make sure you import java.io.*; and import java.util.*; at the top of your class to use Scanner. Also, change your main method to the following:
 ```java
 public static void main(String[] args) throws IOException
 ```

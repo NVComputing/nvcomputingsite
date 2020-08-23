@@ -5,7 +5,7 @@
 
 Google form: <span class="text-danger font-italic">Currently Unavailable</span>
 
-Programming Question Link: [Bus Routes](https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc8/00000000002d83bf#problem)
+Programming Question Link: <span class="text-danger font-italic">Currently Unavailable</span>
 
 ## Do your practice!
 
