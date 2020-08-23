@@ -17,6 +17,7 @@ footer {
 	padding: 0.5rem;
 	background: #2b2b2b;
 	width: 100%;
+	z-index: 1001;
 }
 
 .fc-blue {
@@ -77,27 +78,28 @@ footer {
 	width: 100%;
 	max-width: 100% !important;
 	-webkit-animation: scale-up-hor-center 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: scale-up-hor-center 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: scale-up-hor-center 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 @-webkit-keyframes scale-up-hor-center {
 	0% {
-	  -webkit-transform: scaleX(0.4);
-			  transform: scaleX(0.4);
+		-webkit-transform: scaleX(0.4);
+		transform: scaleX(0.4);
 	}
 	100% {
-	  -webkit-transform: scaleX(1);
-			  transform: scaleX(1);
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1);
 	}
-  }
-  @keyframes scale-up-hor-center {
+}
+
+@keyframes scale-up-hor-center {
 	0% {
-	  -webkit-transform: scaleX(0.4);
-			  transform: scaleX(0.4);
+		-webkit-transform: scaleX(0.4);
+		transform: scaleX(0.4);
 	}
 	100% {
-	  -webkit-transform: scaleX(1);
-			  transform: scaleX(1);
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1);
 	}
 }
 
@@ -168,10 +170,10 @@ footer {
 }
 
 .back-to-top {
-    position: fixed;
-    bottom: 3rem;
-    right: 15px;
-    display: none;
+	position: fixed;
+	bottom: 3rem;
+	right: 15px;
+	display: none;
 }
 
 /* betternavbarcss */
