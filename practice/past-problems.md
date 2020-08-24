@@ -20,7 +20,7 @@ public class Solution
 {
     public static void main(String args[])
     {
-        Scanner sc=new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println(sc.nextInt());
     }
 }
@@ -32,7 +32,7 @@ What this code does:
 Efficiency:
 <span style="color: #935000">*This will be written in big O notation. More information about big O notation can be found [here](/resources/efficiency).*</span>
 
-  
+
 ## Allocation
 
 Link: [Allocation](https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d3f56)
@@ -45,27 +45,22 @@ public class Solution
 {
 	public static void main(String args[])
 	{
-		Scanner sc=new Scanner(System.in);
-		int test= sc.nextInt();
-		for(int count=1;count<=test;count++)
-		{
-			int answer=0; int n=sc.nextInt();int b=sc.nextInt();
-			int[] a=new int[n];
-			for(int x=0;x<n;x++)
-			{
-				a[x]=sc.nextInt();
+		Scanner sc = new Scanner(System.in);
+		int test = sc.nextInt();
+		for(int count = 1; count <= test; count++) {
+			int answer = 0; int n = sc.nextInt(); int b = sc.nextInt();
+			int[] a = new int[n];
+			for(int x = 0; x < n; x++) {
+				a[x] = sc.nextInt();
 			}
 			Arrays.sort(a);
-			for(int x=0;x<n;x++)
-			{
-				if(a[x]<=b)
-				{
-					answer++; b-=a[x];
+			for(int x = 0; x < n; x++) {
+				if(a[x] <= b) {
+					answer++; b -= a[x];
 				}
-				else
-				{break;}
+				else { break; }
 			}
-			System.out.println("Case #"+count+": "+answer);
+			System.out.println("Case #" + count + ": " + answer);
 		}
 		sc.close();
 	}
@@ -76,7 +71,7 @@ What this code does:
 This is a fairly simple problem that doesn't have many tricky efficiency requirements for the test cases. Once you recognize that it is always better to buy a cheaper house than a more expensive house, as it adds the same amount to the total, one, and is cheaper, the problem becomes very straightforward. It is a simple matter of sorting the array from cheapest house to most expensive, and traversing through the houses until you can't buy anymore. The number houses will be the solution.
 
 Efficiency: `$O(nlog(n))$`
-  
+
 ## Bus Routes
 
 Link: [Bus Routes](https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc8/00000000002d83bf)
@@ -85,25 +80,20 @@ Solution (in Java):
 ```java
 //Code written by Nihal
 import java.util.*;
-public class Solution
-{
-    public static void main(String args[])
-    {
-        Scanner sc=new Scanner(System.in);
-        int test=sc.nextInt();
-        for(int xix=1;xix<=test;xix++)
-        {
-            int n=sc.nextInt();long d=sc.nextLong();
-            int[]i=new int[n];
-            for(int x=0;x<n;x++)
-            {
-                i[x]=sc.nextInt();
+public class Solution {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int test = sc.nextInt();
+        for(int xix = 1; xix <= test; xix++) {
+            int n = sc.nextInt(); long d = sc.nextLong();
+            int[] i = new int[n];
+            for(int x = 0; x < n; x++) {
+                i[x] = sc.nextInt();
             }
-            for(int x=n-1;x>=0;x--)
-            {
-                d/=i[x];d*=i[x];
+            for(int x=n-1;x>=0;x--) {
+                d /= i[x]; d *= i[x];
             }
-            System.out.println("Case #"+xix+": "+d);
+            System.out.println("Case #" + xix + ": " + d);
         }
     }
 }
@@ -114,7 +104,7 @@ The solution to the problem is fairly intuitive. You would need to find the late
 
 Efficiency: `$O(n)$`
 
-## Longest Arithmetic 
+## Longest Arithmetic
 
 Link: [Longest Arithmetic](https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff47/00000000003bf4ed)
 
@@ -123,43 +113,35 @@ Solution (in Java):
 //Code written by Jason
 import java.io.*;
 import java.util.*;
-public class Solution 
-{
-	public static void main(String[] args) 
-	{
+public class Solution {
+	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		{
 			int cases = in.nextInt();
-			for(int t = 1; t<=cases; t++)
-			{
+			for(int t = 1; t <= cases; t++) {
 				int n = in.nextInt();
 				int[] k = new int[n];
-				for(int x = 0; x<n; x++)
-				{
+				for(int x = 0; x < n; x++) {
 					k[x] = in.nextInt();
-				}				
+				}
 				int maxcount = 0;
 				int count = 0;
-				int common = k[0]-k[1];
-				for(int x = 1; x<n; x++)
-				{
-					if(k[x-1]-k[x]==common)
-					{
+				int common = k[0] - k[1];
+				for(int x = 1; x < n; x++) {
+					if(k[x-1] - k[x] == common) {
 						count++;
-						if(maxcount<count)
-						{
+						if(maxcount < count) {
 							maxcount = count;
 						}
 					}
-					else
-					{
+					else {
 						count = 0;
-						common = k[x-1]-k[x];
+						common = k[x-1] - k[x];
 						x--;
 					}
-				} 
+				}
 				maxcount++;
-				System.out.println("Case #"+t+": "+maxcount);				
+				System.out.println("Case #" + t + ": " + maxcount);
 			}
 		}
 	}
@@ -172,7 +154,7 @@ There isn't much to work on regarding efficiency in this problem. The best way t
 
 Efficiency: `$O(n)$`
 
-## High Buildings 
+## High Buildings
 
 Link: [High Buildings](https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff47/00000000003bef73)
 
@@ -181,78 +163,62 @@ Solution (in Java):
 //Code written by Nishikar
 import java.io.*;
 import java.util.*;
-public class Solution
-{
-	public static void main(String[] args) throws IOException
-	{
-		Scanner sc=new Scanner(System.in);
-		int test=sc.nextInt();
-		for(int g=0;g<test;g++)
-		{
-			int n=sc.nextInt();
-			int a=sc.nextInt();
-			int b=sc.nextInt();
-			int c=sc.nextInt();
-			ArrayList<Integer> ans= new ArrayList<Integer>();
-			if((a-c)+(b-c)+c>n)
-			{
-				System.out.println("Case #" + (g+1) + ": " + "IMPOSSIBLE");	
+public class Solution {
+	public static void main(String[] args) throws IOException {
+		Scanner sc = new Scanner(System.in);
+		int test = sc.nextInt();
+		for(int g = 0; g < test; g++) {
+			int n = sc.nextInt();
+			int a = sc.nextInt();
+			int b = sc.nextInt();
+			int c = sc.nextInt();
+			ArrayList<Integer> ans = new ArrayList<Integer>();
+			if((a-c) + (b-c) + c > n) {
+				System.out.println("Case #" + (g+1) + ": " + "IMPOSSIBLE");
 			}
-			else if(a==b&&b==c&&a==1)
-			{
-				if(n==1)
-				{
-					System.out.println("Case #" + (g+1) + ": 1");	
-
+			else if(a==b&&b==c&&a==1) {
+				if(n == 1) {
+					System.out.println("Case #" + (g+1) + ": 1");
 				}
-				else
-				System.out.println("Case #" + (g+1) + ": " + "IMPOSSIBLE");	
+				else {
+					System.out.println("Case #" + (g+1) + ": " + "IMPOSSIBLE");
+				}
 			}
-			else
-			{
-			    int starter=n-(a-c);
-			    for(int x=0;x<a-c;x++)
-			    {
+			else {
+			    int starter = n - (a-c);
+			    for(int x = 0; x < a-c; x++) {
 				    ans.add(starter);
 				    starter++;
 			    }
-			    int adder=0;
-			    for(int x=0;x<c;x++)
-			    {
+			    int adder = 0;
+			    for(int x = 0; x < c; x++) {
 				    ans.add(n);
-				    if(x==0)
-				    {
-					    adder=ans.size();
+				    if(x == 0) {
+						adder=ans.size();
 				    }
 			    }
-			for(int x=0;x<b-c;x++)
-			{
-				ans.add(n-x-1);
 			}
-			while(ans.size()<n)
-			{
-				if(c==1&&adder==ans.size())
-				{
-					ans.add(adder-1,1);
+			for(int x = 0; x < b-c; x++) {
+				ans.add(n - x - 1);
+			}
+			while(ans.size() < n) {
+				if(c == 1 && adder == ans.size()) {
+					ans.add(adder - 1, 1);
 				}
-				else
-				{	
-					ans.add(adder,1);
+				else {
+					ans.add(adder, 1);
 				}
-
 			}
 
 			System.out.print("Case #" + (g+1) + ": ");
-			for(int x=0;x<n;x++)
-			{
-				if(x!=n-1)
-				System.out.print(ans.get(x)+ " ");
+			for(int x = 0; x < n; x++) {
+				if(x != n - 1)
+					System.out.print(ans.get(x) + " ");
 				else
-				System.out.print(ans.get(x));
-
+					System.out.print(ans.get(x));
 			}
 			System.out.println();
-			
+
 			}
 		}
 	}
@@ -265,7 +231,7 @@ There are a couple of things you need to recognize for this problem. First, look
 
 Efficiency: `$O(n)$`
 
-## Toys 
+## Toys
 
 Link: [Toys](https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff47/00000000003bede9)
 
@@ -273,65 +239,68 @@ Solution (in Java):
 ```java
 //Code written by Nihal
 import java.util.*;
-public class Solution
-{
-	public static void main(String args[])
-	{
-		Scanner sc=new Scanner(System.in);
-		int test= sc.nextInt();
-		for(int count=1;count<=test;count++)
-		{
-			int n=sc.nextInt();int[]e=new int[n]; int[] r=new int[n];
-			for(int x=0;x<n;x++)
-			{e[x]=sc.nextInt();r[x]=sc.nextInt();}
-			long[]and=recurse(e,r,new boolean[n],0);
-			long sol=n-and[0];
-			long ans=and[1];
-			System.out.print("Case #"+count+": "+sol+" ");
-			if(ans==-1) {System.out.println("INDEFINITELY");}
-			else {System.out.println(ans);}
+public class Solution {
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		int test = sc.nextInt();
+		for(int count = 1; count <= test; count++) {
+			int n = sc.nextInt(); int[]e = new int[n]; int[] r = new int[n];
+			for(int x = 0; x < n; x++) {
+				e[x] = sc.nextInt(); r[x] = sc.nextInt();
+			}
+			long[] and = recurse(e, r, new boolean[n], 0);
+			long sol = n - and[0];
+			long ans = and[1];
+			System.out.print("Case #" + count + ": " + sol + " ");
+			if(ans == -1) {
+				System.out.println("INDEFINITELY");
+			}
+			else {
+				System.out.println(ans);
+			}
 		}
 		sc.close();
 	}
-	public static long[] recurse(int[]e,int[]r,boolean[]check,int i)
-	{
-		if(i>=e.length)
-		{
-			long[]w=new long[2];long esum=0; boolean passed=true;
-			for(int x=0;x<e.length;x++)
-			{
-				if(check[x])
-				{w[0]++;esum+=e[x];}
+	public static long[] recurse(int[]e, int[]r, boolean[]check, int i) {
+		if(i >= e.length) {
+			long[] w = new long[2]; long esum = 0; boolean passed = true;
+			for(int x = 0; x < e.length; x++) {
+				if(check[x]) {
+					w[0]++; esum += e[x];
+				}
 			}
-			if(w[0]==0) {return w;}
-			for(int x=0;x<e.length;x++)
-			{
-				if(check[x]&&r[x]>esum-e[x])
-				{passed=false; w[1]+=esum;break;}
-				else if(check[x]) {w[1]+=e[x];}
+			if(w[0] == 0) return w;
+
+			for(int x = 0; x < e.length; x++) {
+				if(check[x] && r[x] > esum - e[x]) {
+					passed = false;
+					w[1] += esum;
+					break;
+				}
+				else if(check[x]) {
+					w[1] += e[x];
+				}
 			}
-			if(passed) {w[1]=-1;}
+			if(passed) {
+				w[1] =- 1;
+			}
 			return w;
 		}
-		else
-		{
-			check[i]=false;
-			long[]w=recurse(e,r,check,i+1);
-			check[i]=true;
-			long[]v=recurse(e,r,check,i+1);
-			if(w[1]==-1&&v[1]==-1)
-			{
-				if(w[0]>v[0]) {return w;} return v;
+		else {
+			check[i] = false;
+			long[] w = recurse(e, r, check, i+1);
+			check[i] = true;
+			long[] v = recurse(e, r, check, i+1);
+			if(w[1] == -1 && v[1] == -1) {
+				if(w[0] > v[0]) return w;
+				return v;
 			}
-			else if(w[1]==-1)
-			{return w;}
-			else if(v[1]==-1)
-			{return v;}
-			else if(w[1]>v[1]) {return w;}
-			else if(w[1]<v[1]) {return v;}
-			else if(v[0]>w[0]) {return v;}
+			else if(w[1] == -1) return w;
+			else if(v[1] == -1) return v;
+			else if(w[1] > v[1]) return w;
+			else if(w[1] < v[1]) return v;
+			else if(v[0] > w[0]) return v;
 			return w;
-				
 		}
 	}
 }
@@ -341,4 +310,3 @@ What this code does:
 Since this problem is quite difficult and most of us aren't ready for it, we will only be reviewing how to get the first test set, which is efficient but not as efficient as it can be. Fortunately, the `$n$` value is capped at 12, so we are able to practically brute force the solution. However, a pure brute force algorithm won't work. We still need to avoid repeated cases through a primitive form of dynamic programming. The way to approach this is to treat every permutation as a series of true or falses for the toys regarding whether they are in the set or not. Then, we find the highest possible amount of time of entertainment throughtout the permutations. Finally, if there are multiple cases with the same highest value, we check which one has the most toys and use that as the solution.
 
 Efficiency: `$O(n*2^n)$`
-
