@@ -1,6 +1,4 @@
-## Practice
-
-[Solutions to Past Programming Problems](/practice/past-problems)
+# Practice
 
 ##This Week's Homework
 
@@ -12,7 +10,7 @@ Programming Question Link: <span class="text-danger font-italic">Currently Unava
 
 We will be keeping track of who does and who doesn't do their practice. This will greatly influence our decisions
 for who to bring to programming competitions and who to put on the senior team for ACSL, as students who
-do their work are most likely much more motivated and prepared for these events.
+do their work are most likely much more motivated and prepared for these events. You can view solutions to past problems here: [Solutions to Past Programming Problems](/practice/past-problems)
 
 ## Contents
 

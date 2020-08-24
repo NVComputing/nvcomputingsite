@@ -72,6 +72,72 @@ mjx-stretchy-h {
 	font-weight: 200;
 }
 
+
+/* Responsive Title Tags */
+.resources h1 {
+	font-size: 1.75rem;
+}
+
+.resources h2 {
+	font-size: 1.5rem;
+}
+
+.resources h3 {
+	font-size: 1.25rem;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+	.resources h1 {
+		font-size: 1.85rem;
+	}
+	.resources h2 {
+		font-size: 1.65rem;
+	}
+	.resources h3 {
+		font-size: 1.4rem;
+	}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	.resources h1 {
+		font-size: 2rem;
+	}
+	.resources h2 {
+		font-size: 1.75rem;
+	}
+	.resources h3 {
+		font-size: 1.5rem;
+	}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	.resources h1 {
+		font-size: 2.25rem;
+	}
+	.resources h2 {
+		font-size: 1.85rem;
+	}
+	.resources h3 {
+		font-size: 1.6rem;
+	}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	.resources h1 {
+		font-size: 2.5rem;
+	}
+	.resources h2 {
+		font-size: 2rem;
+	}
+	.resources h3 {
+		font-size: 1.75rem;
+	}
+}
+
 .resources hr {
 	border-top: 1px solid #1f1f1f;
 }
