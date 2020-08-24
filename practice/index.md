@@ -1,6 +1,7 @@
-# Practice
+## Practice
 
 [Solutions to Past Programming Problems](/practice/past-problems)
+
 ##This Week's Homework
 
 Google form: <span class="text-danger font-italic">Currently Unavailable</span>
