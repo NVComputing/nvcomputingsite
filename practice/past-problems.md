@@ -181,78 +181,56 @@ Solution (in Java):
 //Code written by Nishikar
 import java.io.*;
 import java.util.*;
-public class Solution
-{
-	public static void main(String[] args) throws IOException
-	{
-		Scanner sc=new Scanner(System.in);
-		int test=sc.nextInt();
-		for(int g=0;g<test;g++)
-		{
-			int n=sc.nextInt();
-			int a=sc.nextInt();
-			int b=sc.nextInt();
-			int c=sc.nextInt();
-			ArrayList<Integer> ans= new ArrayList<Integer>();
-			if((a-c)+(b-c)+c>n)
-			{
-				System.out.println("Case #" + (g+1) + ": " + "IMPOSSIBLE");	
-			}
-			else if(a==b&&b==c&&a==1)
-			{
-				if(n==1)
-				{
-					System.out.println("Case #" + (g+1) + ": 1");	
 
+public class Solution {
+	public static void main(String[] args) throws IOException {
+		Scanner sc = new Scanner(System.in);
+		int test = sc.nextInt();
+		for (int g = 0; g < test; g++) {
+			int n = sc.nextInt();
+			int a = sc.nextInt();
+			int b = sc.nextInt();
+			int c = sc.nextInt();
+			ArrayList<Integer> ans = new ArrayList<Integer>();
+			if ((a - c) + (b - c) + c > n) {
+				System.out.println("Case #" + (g + 1) + ": " + "IMPOSSIBLE");
+			} else if (a == b && b == c && a == 1) {
+				if (n == 1) {
+					System.out.println("Case #" + (g + 1) + ": 1");
+				} else
+					System.out.println("Case #" + (g + 1) + ": " + "IMPOSSIBLE");
+			} else {
+				int starter = n - (a - c);
+				for (int x = 0; x < a - c; x++) {
+					ans.add(starter);
+					starter++;
 				}
-				else
-				System.out.println("Case #" + (g+1) + ": " + "IMPOSSIBLE");	
-			}
-			else
-			{
-			    int starter=n-(a-c);
-			    for(int x=0;x<a-c;x++)
-			    {
-				    ans.add(starter);
-				    starter++;
-			    }
-			    int adder=0;
-			    for(int x=0;x<c;x++)
-			    {
-				    ans.add(n);
-				    if(x==0)
-				    {
-					    adder=ans.size();
-				    }
-			    }
-			for(int x=0;x<b-c;x++)
-			{
-				ans.add(n-x-1);
-			}
-			while(ans.size()<n)
-			{
-				if(c==1&&adder==ans.size())
-				{
-					ans.add(adder-1,1);
+				int adder = 0;
+				for (int x = 0; x < c; x++) {
+					ans.add(n);
+					if (x == 0) {
+						adder = ans.size();
+					}
 				}
-				else
-				{	
-					ans.add(adder,1);
+				for (int x = 0; x < b - c; x++) {
+					ans.add(n - x - 1);
 				}
+				while (ans.size() < n) {
+					if (c == 1 && adder == ans.size()) {
+						ans.add(adder - 1, 1);
+					} else {
+						ans.add(adder, 1);
+					}
+				}
+				System.out.print("Case #" + (g + 1) + ": ");
+				for (int x = 0; x < n; x++) {
+					if (x != n - 1)
+						System.out.print(ans.get(x) + " ");
+					else
+						System.out.print(ans.get(x));
+				}
+				System.out.println();
 
-			}
-
-			System.out.print("Case #" + (g+1) + ": ");
-			for(int x=0;x<n;x++)
-			{
-				if(x!=n-1)
-				System.out.print(ans.get(x)+ " ");
-				else
-				System.out.print(ans.get(x));
-
-			}
-			System.out.println();
-			
 			}
 		}
 	}
