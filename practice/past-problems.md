@@ -20,7 +20,7 @@ public class Solution
 {
     public static void main(String args[])
     {
-        Scanner sc=new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println(sc.nextInt());
     }
 }
@@ -45,27 +45,22 @@ public class Solution
 {
 	public static void main(String args[])
 	{
-		Scanner sc=new Scanner(System.in);
-		int test= sc.nextInt();
-		for(int count=1;count<=test;count++)
-		{
-			int answer=0; int n=sc.nextInt();int b=sc.nextInt();
-			int[] a=new int[n];
-			for(int x=0;x<n;x++)
-			{
-				a[x]=sc.nextInt();
+		Scanner sc = new Scanner(System.in);
+		int test = sc.nextInt();
+		for(int count = 1; count <= test; count++) {
+			int answer = 0; int n = sc.nextInt(); int b = sc.nextInt();
+			int[] a = new int[n];
+			for(int x = 0; x < n; x++) {
+				a[x] = sc.nextInt();
 			}
 			Arrays.sort(a);
-			for(int x=0;x<n;x++)
-			{
-				if(a[x]<=b)
-				{
-					answer++; b-=a[x];
+			for(int x = 0; x < n; x++) {
+				if(a[x] <= b) {
+					answer++; b -= a[x];
 				}
-				else
-				{break;}
+				else { break; }
 			}
-			System.out.println("Case #"+count+": "+answer);
+			System.out.println("Case #" + count + ": " + answer);
 		}
 		sc.close();
 	}
@@ -85,25 +80,20 @@ Solution (in Java):
 ```java
 //Code written by Nihal
 import java.util.*;
-public class Solution
-{
-    public static void main(String args[])
-    {
-        Scanner sc=new Scanner(System.in);
-        int test=sc.nextInt();
-        for(int xix=1;xix<=test;xix++)
-        {
-            int n=sc.nextInt();long d=sc.nextLong();
-            int[]i=new int[n];
-            for(int x=0;x<n;x++)
-            {
-                i[x]=sc.nextInt();
+public class Solution {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int test = sc.nextInt();
+        for(int xix = 1; xix <= test; xix++) {
+            int n = sc.nextInt(); long d = sc.nextLong();
+            int[] i = new int[n];
+            for(int x = 0; x < n; x++) {
+                i[x] = sc.nextInt();
             }
-            for(int x=n-1;x>=0;x--)
-            {
-                d/=i[x];d*=i[x];
+            for(int x=n-1;x>=0;x--) {
+                d /= i[x]; d *= i[x];
             }
-            System.out.println("Case #"+xix+": "+d);
+            System.out.println("Case #" + xix + ": " + d);
         }
     }
 }
@@ -119,47 +109,38 @@ Efficiency: `$O(n)$`
 Link: [Longest Arithmetic](https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff47/00000000003bf4ed)
 
 Solution (in Java):
-```java
 //Code written by Jason
 import java.io.*;
 import java.util.*;
-public class Solution 
-{
-	public static void main(String[] args) 
-	{
+public class Solution {
+	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		{
 			int cases = in.nextInt();
-			for(int t = 1; t<=cases; t++)
-			{
+			for(int t = 1; t <= cases; t++) {
 				int n = in.nextInt();
 				int[] k = new int[n];
-				for(int x = 0; x<n; x++)
-				{
+				for(int x = 0; x < n; x++) {
 					k[x] = in.nextInt();
-				}				
+				}
 				int maxcount = 0;
 				int count = 0;
-				int common = k[0]-k[1];
-				for(int x = 1; x<n; x++)
-				{
-					if(k[x-1]-k[x]==common)
-					{
+				int common = k[0] - k[1];
+				for(int x = 1; x < n; x++) {
+					if(k[x-1] - k[x] == common) {
 						count++;
-						if(maxcount<count)
-						{
+						if(maxcount < count) {
 							maxcount = count;
 						}
 					}
-					else
-					{
+					else {
 						count = 0;
-						common = k[x-1]-k[x];
+						common = k[x-1] - k[x];
 						x--;
 					}
-				} 
+				}
 				maxcount++;
-				System.out.println("Case #"+t+": "+maxcount);				
+				System.out.println("Case #" + t + ": " + maxcount);
 			}
 		}
 	}
@@ -251,65 +232,68 @@ Solution (in Java):
 ```java
 //Code written by Nihal
 import java.util.*;
-public class Solution
-{
-	public static void main(String args[])
-	{
-		Scanner sc=new Scanner(System.in);
-		int test= sc.nextInt();
-		for(int count=1;count<=test;count++)
-		{
-			int n=sc.nextInt();int[]e=new int[n]; int[] r=new int[n];
-			for(int x=0;x<n;x++)
-			{e[x]=sc.nextInt();r[x]=sc.nextInt();}
-			long[]and=recurse(e,r,new boolean[n],0);
-			long sol=n-and[0];
-			long ans=and[1];
-			System.out.print("Case #"+count+": "+sol+" ");
-			if(ans==-1) {System.out.println("INDEFINITELY");}
-			else {System.out.println(ans);}
+public class Solution {
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		int test = sc.nextInt();
+		for(int count = 1; count <= test; count++) {
+			int n = sc.nextInt(); int[]e = new int[n]; int[] r = new int[n];
+			for(int x = 0; x < n; x++) {
+				e[x] = sc.nextInt(); r[x] = sc.nextInt();
+			}
+			long[] and = recurse(e, r, new boolean[n], 0);
+			long sol = n - and[0];
+			long ans = and[1];
+			System.out.print("Case #" + count + ": " + sol + " ");
+			if(ans == -1) {
+				System.out.println("INDEFINITELY");
+			}
+			else {
+				System.out.println(ans);
+			}
 		}
 		sc.close();
 	}
-	public static long[] recurse(int[]e,int[]r,boolean[]check,int i)
-	{
-		if(i>=e.length)
-		{
-			long[]w=new long[2];long esum=0; boolean passed=true;
-			for(int x=0;x<e.length;x++)
-			{
-				if(check[x])
-				{w[0]++;esum+=e[x];}
+	public static long[] recurse(int[]e, int[]r, boolean[]check, int i) {
+		if(i >= e.length) {
+			long[] w = new long[2]; long esum = 0; boolean passed = true;
+			for(int x = 0; x < e.length; x++) {
+				if(check[x]) {
+					w[0]++; esum += e[x];
+				}
 			}
-			if(w[0]==0) {return w;}
-			for(int x=0;x<e.length;x++)
-			{
-				if(check[x]&&r[x]>esum-e[x])
-				{passed=false; w[1]+=esum;break;}
-				else if(check[x]) {w[1]+=e[x];}
+			if(w[0] == 0) return w;
+
+			for(int x = 0; x < e.length; x++) {
+				if(check[x] && r[x] > esum - e[x]) {
+					passed = false;
+					w[1] += esum;
+					break;
+				}
+				else if(check[x]) {
+					w[1] += e[x];
+				}
 			}
-			if(passed) {w[1]=-1;}
+			if(passed) {
+				w[1] =- 1;
+			}
 			return w;
 		}
-		else
-		{
-			check[i]=false;
-			long[]w=recurse(e,r,check,i+1);
-			check[i]=true;
-			long[]v=recurse(e,r,check,i+1);
-			if(w[1]==-1&&v[1]==-1)
-			{
-				if(w[0]>v[0]) {return w;} return v;
+		else {
+			check[i] = false;
+			long[] w = recurse(e, r, check, i+1);
+			check[i] = true;
+			long[] v = recurse(e, r, check, i+1);
+			if(w[1] == -1 && v[1] == -1) {
+				if(w[0] > v[0]) return w;
+				return v;
 			}
-			else if(w[1]==-1)
-			{return w;}
-			else if(v[1]==-1)
-			{return v;}
-			else if(w[1]>v[1]) {return w;}
-			else if(w[1]<v[1]) {return v;}
-			else if(v[0]>w[0]) {return v;}
+			else if(w[1] == -1) return w;
+			else if(v[1] == -1) return v;
+			else if(w[1] > v[1]) return w;
+			else if(w[1] < v[1]) return v;
+			else if(v[0] > w[0]) return v;
 			return w;
-				
 		}
 	}
 }
