@@ -29,9 +29,8 @@ This page contains general information and useful links, if that's what you're l
 Otherwise, click one of the above links you're interested in to get started!
 
 # Useful Links
-### [GitHub Repository](https://github.com/NVComputing/nvcomputingsite)
-### [Google Drive Folder](https://drive.google.com/drive/u/7/folders/1-9GMKiUQ73BadhtPJca8GAPqXCEi0lAl)
-
+### <a href="https://github.com/NVComputing/nvcomputingsite" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+### <a href="https://drive.google.com/drive/u/7/folders/1-9GMKiUQ73BadhtPJca8GAPqXCEi0lAl" target="_blank" rel="noopener noreferrer">Google Drive Folder</a>
 # Page Progress Tracker
 
 If you would like to contribute, either work on a unstarted page or finish a started page. Pages that need checking will be

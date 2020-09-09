@@ -22,7 +22,7 @@ module.exports.set = (app) => {
 				lightbox: true,
 
 				resourcePage: true,
-				sideBarBreadCrumb: false
+				noBreadCrumb: false
 			});
 		});
 	});
@@ -31,7 +31,15 @@ module.exports.set = (app) => {
 		let resourceName = req.params.resourceName;
 		let subPath = req.params['0'];
 
+		let previousPage = "";
+		let mainResources = true;
+
 		let filepath = path.join(__dirname, `../resources/${resourceName}${subPath}.md`);
+
+		if(subPath != ""){
+			mainResources = false;
+			previousPage = resourceName;
+		}
 
 		fs.readFile(filepath, 'utf-8', function (err, data) {
 			if (err) {
@@ -53,7 +61,9 @@ module.exports.set = (app) => {
 					lightbox: true,
 
 					resourcePage: true,
-					sideBarBreadCrumb: true
+					noBreadCrumb: true,
+					mainResources: mainResources,
+					previousPage: previousPage
 				});
 			}
 		});

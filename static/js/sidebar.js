@@ -15,7 +15,7 @@ for (let i = 0; i < sidenavLinks.length; i++) {
 }
 
 //Use Smooth Scrolling for Links within the Sidebar
-$('a[href*="#"]').on('click', function (e) {
+$('#sidenav a[href*="#"]').on('click', function (e) {
     e.preventDefault()
 
     $('html, body').animate(

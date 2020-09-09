@@ -5,7 +5,6 @@
     border-bottom: 1px solid rgba(0,0,0,.1);
 	padding-left: 0;
 	padding-right: 0;
-
 	background-color: #404040;
 }
 
@@ -57,13 +56,6 @@
 	width: 100%;
 }
 
-/*
-#sidenav ul ul {
-	padding-top: 0.25rem;
-	padding-bottom: 0.25rem;
-}
- */
-
 #sidenav li {
 	width: 100%;
 	padding: 0;
@@ -82,10 +74,6 @@
 
 #sidenav li a:hover {
 	background: #505050;
-}
-
-#sidenav li a:active {
-	background: #ffcc00 !important;
 }
 
 #sidenav ul ul li a {
