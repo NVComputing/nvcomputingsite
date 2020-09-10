@@ -32,7 +32,7 @@ What this code does:
 Efficiency:
 <span style="color: #935000">*This will be written in big O notation. More information about big O notation can be found [here](/resources/efficiency).*</span>
 
-
+  
 ## Allocation
 
 Link: [Allocation](https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d3f56)
@@ -71,7 +71,7 @@ What this code does:
 This is a fairly simple problem that doesn't have many tricky efficiency requirements for the test cases. Once you recognize that it is always better to buy a cheaper house than a more expensive house, as it adds the same amount to the total, one, and is cheaper, the problem becomes very straightforward. It is a simple matter of sorting the array from cheapest house to most expensive, and traversing through the houses until you can't buy anymore. The number houses will be the solution.
 
 Efficiency: `$O(nlog(n))$`
-
+  
 ## Bus Routes
 
 Link: [Bus Routes](https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc8/00000000002d83bf)
@@ -104,12 +104,11 @@ The solution to the problem is fairly intuitive. You would need to find the late
 
 Efficiency: `$O(n)$`
 
-## Longest Arithmetic
+## Longest Arithmetic 
 
 Link: [Longest Arithmetic](https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff47/00000000003bf4ed)
 
 Solution (in Java):
-```java
 //Code written by Jason
 import java.io.*;
 import java.util.*;
@@ -154,7 +153,7 @@ There isn't much to work on regarding efficiency in this problem. The best way t
 
 Efficiency: `$O(n)$`
 
-## High Buildings
+## High Buildings 
 
 Link: [High Buildings](https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff47/00000000003bef73)
 
@@ -163,61 +162,55 @@ Solution (in Java):
 //Code written by Nishikar
 import java.io.*;
 import java.util.*;
+
 public class Solution {
 	public static void main(String[] args) throws IOException {
 		Scanner sc = new Scanner(System.in);
 		int test = sc.nextInt();
-		for(int g = 0; g < test; g++) {
+		for (int g = 0; g < test; g++) {
 			int n = sc.nextInt();
 			int a = sc.nextInt();
 			int b = sc.nextInt();
 			int c = sc.nextInt();
 			ArrayList<Integer> ans = new ArrayList<Integer>();
-			if((a-c) + (b-c) + c > n) {
-				System.out.println("Case #" + (g+1) + ": " + "IMPOSSIBLE");
-			}
-			else if(a==b&&b==c&&a==1) {
-				if(n == 1) {
-					System.out.println("Case #" + (g+1) + ": 1");
+			if ((a - c) + (b - c) + c > n) {
+				System.out.println("Case #" + (g + 1) + ": " + "IMPOSSIBLE");
+			} else if (a == b && b == c && a == 1) {
+				if (n == 1) {
+					System.out.println("Case #" + (g + 1) + ": 1");
+				} else
+					System.out.println("Case #" + (g + 1) + ": " + "IMPOSSIBLE");
+			} else {
+				int starter = n - (a - c);
+				for (int x = 0; x < a - c; x++) {
+					ans.add(starter);
+					starter++;
 				}
-				else {
-					System.out.println("Case #" + (g+1) + ": " + "IMPOSSIBLE");
+				int adder = 0;
+				for (int x = 0; x < c; x++) {
+					ans.add(n);
+					if (x == 0) {
+						adder = ans.size();
+					}
 				}
-			}
-			else {
-			    int starter = n - (a-c);
-			    for(int x = 0; x < a-c; x++) {
-				    ans.add(starter);
-				    starter++;
-			    }
-			    int adder = 0;
-			    for(int x = 0; x < c; x++) {
-				    ans.add(n);
-				    if(x == 0) {
-						adder=ans.size();
-				    }
-			    }
-			}
-			for(int x = 0; x < b-c; x++) {
-				ans.add(n - x - 1);
-			}
-			while(ans.size() < n) {
-				if(c == 1 && adder == ans.size()) {
-					ans.add(adder - 1, 1);
+				for (int x = 0; x < b - c; x++) {
+					ans.add(n - x - 1);
 				}
-				else {
-					ans.add(adder, 1);
+				while (ans.size() < n) {
+					if (c == 1 && adder == ans.size()) {
+						ans.add(adder - 1, 1);
+					} else {
+						ans.add(adder, 1);
+					}
 				}
-			}
-
-			System.out.print("Case #" + (g+1) + ": ");
-			for(int x = 0; x < n; x++) {
-				if(x != n - 1)
-					System.out.print(ans.get(x) + " ");
-				else
-					System.out.print(ans.get(x));
-			}
-			System.out.println();
+				System.out.print("Case #" + (g + 1) + ": ");
+				for (int x = 0; x < n; x++) {
+					if (x != n - 1)
+						System.out.print(ans.get(x) + " ");
+					else
+						System.out.print(ans.get(x));
+				}
+				System.out.println();
 
 			}
 		}
@@ -231,7 +224,7 @@ There are a couple of things you need to recognize for this problem. First, look
 
 Efficiency: `$O(n)$`
 
-## Toys
+## Toys 
 
 Link: [Toys](https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff47/00000000003bede9)
 
@@ -310,3 +303,4 @@ What this code does:
 Since this problem is quite difficult and most of us aren't ready for it, we will only be reviewing how to get the first test set, which is efficient but not as efficient as it can be. Fortunately, the `$n$` value is capped at 12, so we are able to practically brute force the solution. However, a pure brute force algorithm won't work. We still need to avoid repeated cases through a primitive form of dynamic programming. The way to approach this is to treat every permutation as a series of true or falses for the toys regarding whether they are in the set or not. Then, we find the highest possible amount of time of entertainment throughtout the permutations. Finally, if there are multiple cases with the same highest value, we check which one has the most toys and use that as the solution.
 
 Efficiency: `$O(n*2^n)$`
+
