@@ -1,5 +1,5 @@
 table, th, td {
-	border: 1px solid white;
+	border: 1px solid #ffffff9e;
 }
 
 table {
@@ -42,8 +42,12 @@ th, td {
 	}
 }
 
+td img {
+	max-height: 150px !important;
+}
+
 mjx-stretchy-h {
-	border-top: 1px solid white;
+	border-top: 1px solid #ffffff6e;
 }
 
 .resources h1:not(:first-child) {
