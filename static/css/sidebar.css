@@ -8,13 +8,6 @@
 	background-color: #404040;
 }
 
-@media (min-width: 1200px) {
-	.sidebar {
-		-ms-flex: 0 1 320px;
-		flex: 0 1 320px;
-	}
-}
-
 @media (min-width: 768px) {
 	.sidebar {
 		position: -webkit-sticky;

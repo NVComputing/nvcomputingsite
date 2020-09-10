@@ -69,11 +69,11 @@ within our team.
 - MAKE SURE to include a header at the top of your submitted code. The header should look like this:
 ```java
 /*
- * Name: Raymond Zhao
+ * Name: (First Name) (Last Name)
  * School: Neuqua Valley High School
- * Division: Senior
- * Grade: 12
- * Problem: Some Arbitrary Proprietary Board Game ACSL Randomly Decided To Come Up With
+ * Division: (Junior / Senior)
+ * Grade: ( 9 / 10 / 11 / 12 )
+ * Problem: (Full Problem Name)
  */
 ```
 - Oftentimes, ACSL's problems (more often in programming than short answer) are vague and confusing. Sometimes, you might find yourself

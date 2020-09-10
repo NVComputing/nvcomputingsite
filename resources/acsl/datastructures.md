@@ -76,12 +76,16 @@ Each node can have a total of two children. The left child must be less than or 
 
 Inserting a node requires knowing its position relative to existing nodes. Here's an example with the word *AMERICAN*:
 
-| Step  | Description  | Step | Description |
-| --- | --- | --- | --- |
-| 1. <img src="/res/acsl/datastructures/insert1.png" class="img-fluid" /> | *AMERICAN* starts with an *A*; thus, it is natural to make the tree's root an *A*. | 5. <img src="/res/acsl/datastructures/insert5.png" class="img-fluid" /> | *I* belongs on the right of *A*. It belongs to the left of *M* as well. *I* comes later in the alphabet than *E*, so *I* is placed to the right of *E*. |
-| 2. <img src="/res/acsl/datastructures/insert2.png" class="img-fluid" /> | *M* is placed to the right of *A* because it comes later in the alphabet. | 6. <img src="/res/acsl/datastructures/insert6.png" class="img-fluid" /> | *C* belongs on the right of *A* and to the left of *M*. Since *C* comes before *E*, it is placed to the left. |
-| 3. <img src="/res/acsl/datastructures/insert3.png" class="img-fluid" /> | *E* belongs on the right of *A*; however, because it comes before *M* in the alphabet, it is placed to the left of *M*. | 7. <img src="/res/acsl/datastructures/insert7.png" class="img-fluid" /> | *A* (the second one) is equal to the root *A*. So, it is placed to the left of the root. |
-| 4. <img src="/res/acsl/datastructures/insert4.png" class="img-fluid" /> | *R* belongs on the right of *A*. Since it also comes after *M*, it is placed to the right of *M*. | 8. <img src="/res/acsl/datastructures/insert8.png" class="img-fluid" /> | *N* comes after *A* and *M*, so it belongs on the right of those. However, it is placed to the left of *R*, which comes even later. |
+| Step | Description |
+| --- | --- |
+| <img src="/res/acsl/datastructures/insert1.png" class="img-fluid" /> | *AMERICAN* starts with an *A*; thus, it is natural to make the tree's root an *A*. |
+| <img src="/res/acsl/datastructures/insert2.png" class="img-fluid" /> | *M* is placed to the right of *A* because it comes later in the alphabet. |
+| <img src="/res/acsl/datastructures/insert3.png" class="img-fluid" /> | *E* belongs on the right of *A*; however, because it comes before *M* in the alphabet, it is placed to the left of *M*. |
+| <img src="/res/acsl/datastructures/insert4.png" class="img-fluid" /> | *R* belongs on the right of *A*. Since it also comes after *M*, it is placed to the right of *M*. |
+| <img src="/res/acsl/datastructures/insert5.png" class="img-fluid" /> | *I* belongs on the right of *A*. It belongs to the left of *M* as well. *I* comes later in the alphabet than *E*, so *I* is placed to the right of *E*. |
+| <img src="/res/acsl/datastructures/insert6.png" class="img-fluid" /> | *C* belongs on the right of *A* and to the left of *M*. Since *C* comes before *E*, it is placed to the left. |
+| <img src="/res/acsl/datastructures/insert7.png" class="img-fluid" /> | *A* (the second one) is equal to the root *A*. So, it is placed to the left of the root. |
+| <img src="/res/acsl/datastructures/insert8.png" class="img-fluid" /> | *N* comes after *A* and *M*, so it belongs on the right of those. However, it is placed to the left of *R*, which comes even later. |
 
 Note that if you were to switch out the positions of the letters in *AMERICAN* to become something like *MCEAANIR*, the tree would look very different.
 
@@ -151,10 +155,12 @@ A *Full tree*, or *strictly binary tree*, is drawn in a way such that each node 
 
 See the table below to understand the differences between the two in more detail:
 
-| Tree | Description | Tree | Description |
-| --- | --- | --- | --- |
-| <img src="/res/acsl/datastructures/nocompnofull.png" class="img-fluid" /> | It is not complete because the last level's nodes are not all left-oriented. It is not full either because there is 1 node with only 1 child. | <img src="/res/acsl/datastructures/compnofull.png" class="img-fluid" /> | It is complete because every level other than the last level is filled; the node in the last level is also oriented on the left. It is not full, however, because nodes cannot have only 1 child. |
-| <img src="/res/acsl/datastructures/fullnocomp.png" class="img-fluid" /> | It is full because each node indeed has 2 children besides the leaves. It is not complete because the nodes on the last level are not fully left-oriented. | <img src="/res/acsl/datastructures/compfull.png" class="img-fluid" /> | Each node has 2 children except for the leaves, so it is full. Each level is filled except for the last level, whose nodes are left-justified, thus making the tree complete. |
+| Tree | Description |
+| --- | --- |
+| <img src="/res/acsl/datastructures/nocompnofull.png" class="img-fluid" /> | It is not complete because the last level's nodes are not all left-oriented. It is not full either because there is 1 node with only 1 child. |
+| <img src="/res/acsl/datastructures/compnofull.png" class="img-fluid" /> | It is complete because every level other than the last level is filled; the node in the last level is also oriented on the left. It is not full, however, because nodes cannot have only 1 child. |
+| <img src="/res/acsl/datastructures/fullnocomp.png" class="img-fluid" /> | It is full because each node indeed has 2 children besides the leaves. It is not complete because the nodes on the last level are not fully left-oriented. |
+| <img src="/res/acsl/datastructures/compfull.png" class="img-fluid" /> | Each node has 2 children except for the leaves, so it is full. Each level is filled except for the last level, whose nodes are left-justified, thus making the tree complete. |
 
 # Path Lengths
 
@@ -181,12 +187,16 @@ As you add nodes, the tree is filled in from left to right, top to bottom; a lev
 
 Take this table as an example on how to implement *AMERICAN* with a min-heap:
 
-| Step  | Description  | Step | Description |
-| --- | --- | --- | --- |
-| 1. <img src="/res/acsl/datastructures/pqinsert1.png" class="img-fluid" /> | *A* is added like normal as the root of the new tree. | 5. <img src="/res/acsl/datastructures/pqinsert5.png" class="img-fluid" /> | *I* is first added as an child of *M*. However, because it is less than *M*, the two switch places. *I* is not less than *A*, so it does not move further up the heap. |
-| 2. <img src="/res/acsl/datastructures/pqinsert2.png" class="img-fluid" /> | *M* is added as a child of *A* on the left end. Since *M* is larger than *A*, it stays where it is. | 6. <img src="/res/acsl/datastructures/pqinsert6.png" class="img-fluid" /> | *C* is added as a child of *E*. However, since it is less than *E*, the two switch places. *C* is greater than *A*, so it does not switch places with the root. |
-| 3. <img src="/res/acsl/datastructures/pqinsert3.png" class="img-fluid" /> | *E* is added into the tree. No shifting of nodes occurs since *E* is indeed larger than *A*. | 7. <img src="/res/acsl/datastructures/pqinsert7.png" class="img-fluid" /> | *A* (not the root) is added as a child of *C*. Since it is less than *C*, the two switch places. Since *A* has the same value as the root *A*, switching the two wouldn't be very useful, so the two *A*s can be kept as is. |
-| 4. <img src="/res/acsl/datastructures/pqinsert4.png" class="img-fluid" /> | *R* is added into the tree and starts the next row since the previous row was completely filled. No shifts occur. | 8. <img src="/res/acsl/datastructures/pqinsert8.png" class="img-fluid" /> | *N* is added as a child of *R* and starts the next row. Since it is less than *R*, the two switch places. *N* is greater than *I*, it does not move further up the heap. We have now finished constructing the tree. |
+| Step | Description |
+| --- | --- |
+| <img src="/res/acsl/datastructures/pqinsert1.png" class="img-fluid" /> | *A* is added like normal as the root of the new tree. |
+| <img src="/res/acsl/datastructures/pqinsert2.png" class="img-fluid" /> | *M* is added as a child of *A* on the left end. Since *M* is larger than *A*, it stays where it is. |
+| <img src="/res/acsl/datastructures/pqinsert3.png" class="img-fluid" /> | *E* is added into the tree. No shifting of nodes occurs since *E* is indeed larger than *A*. |
+| <img src="/res/acsl/datastructures/pqinsert4.png" class="img-fluid" /> | *R* is added into the tree and starts the next row since the previous row was completely filled. No shifts occur. |
+| <img src="/res/acsl/datastructures/pqinsert5.png" class="img-fluid" /> | *I* is first added as an child of *M*. However, because it is less than *M*, the two switch places. *I* is not less than *A*, so it does not move further up the heap. |
+| <img src="/res/acsl/datastructures/pqinsert6.png" class="img-fluid" /> | *C* is added as a child of *E*. However, since it is less than *E*, the two switch places. *C* is greater than *A*, so it does not switch places with the root. |
+| <img src="/res/acsl/datastructures/pqinsert7.png" class="img-fluid" /> | *A* (not the root) is added as a child of *C*. Since it is less than *C*, the two switch places. Since *A* has the same value as the root *A*, switching the two wouldn't be very useful, so the two *A*s can be kept as is. |
+| <img src="/res/acsl/datastructures/pqinsert8.png" class="img-fluid" /> | *N* is added as a child of *R* and starts the next row. Since it is less than *R*, the two switch places. *N* is greater than *I*, it does not move further up the heap. We have now finished constructing the tree. |
 
 ## Deleting Nodes (Priority Queues)
 
@@ -215,11 +225,11 @@ As a queue... 18 would be added first; then, this would be popped out and stored
 
 Follow the table below to see how the priority queue is constructed:
 
-| Construction |  |  |  |
-| --- | --- | --- | --- |
-| <img src="/res/acsl/datastructures/computing1.png" class="img-fluid" /> | <img src="/res/acsl/datastructures/computing2.png" class="img-fluid" /> | <img src="/res/acsl/datastructures/computing3.png" class="img-fluid" /> | <img src="/res/acsl/datastructures/computing4.png" class="img-fluid" /> |
-| <img src="/res/acsl/datastructures/computing5.png" class="img-fluid" /> | <img src="/res/acsl/datastructures/computing6.png" class="img-fluid" /> | <img src="/res/acsl/datastructures/computing7.png" class="img-fluid" /> | <img src="/res/acsl/datastructures/computing8.png" class="img-fluid" /> |
-| <img src="/res/acsl/datastructures/computing9.png" class="img-fluid" /> | | | |
+| | | |
+| --- | --- | --- |
+| <img src="/res/acsl/datastructures/computing1.png" class="img-fluid" /> | <img src="/res/acsl/datastructures/computing2.png" class="img-fluid" /> | <img src="/res/acsl/datastructures/computing3.png" class="img-fluid" /> |
+| <img src="/res/acsl/datastructures/computing4.png" class="img-fluid" /> | <img src="/res/acsl/datastructures/computing5.png" class="img-fluid" /> | <img src="/res/acsl/datastructures/computing6.png" class="img-fluid" /> |
+| <img src="/res/acsl/datastructures/computing7.png" class="img-fluid" /> | <img src="/res/acsl/datastructures/computing8.png" class="img-fluid" /> | <img src="/res/acsl/datastructures/computing9.png" class="img-fluid" /> |
 
 So, the bottommost letters are *P* and *O*.
 
@@ -227,7 +237,7 @@ So, the bottommost letters are *P* and *O*.
 
 Follow the table below to see how the binary search tree is constructed:
 
-| Construction |  |  |
+| | | |
 | --- | --- | --- |
 | <img src="/res/acsl/datastructures/neuqua1.png" class="img-fluid" /> | <img src="/res/acsl/datastructures/neuqua2.png" class="img-fluid" /> | <img src="/res/acsl/datastructures/neuqua3.png" class="img-fluid" /> |
 | <img src="/res/acsl/datastructures/neuqua4.png" class="img-fluid" /> | <img src="/res/acsl/datastructures/neuqua5.png" class="img-fluid" /> | <img src="/res/acsl/datastructures/neuqua6.png" class="img-fluid" /> |
