@@ -9,6 +9,10 @@ module.exports.set = (app) => {
 			return a.time - b.time;
 		}).map((o) => {
 			let obj = JSON.parse(JSON.stringify(o));
+			if(Date.now() / 1000 >= obj.time) {
+				obj.pastDue = true;
+				obj.notPastDue = false;
+			}
 			obj.time = tz(obj.time * 1000, timeStr, 'en_EN', 'America/Chicago');
 			return obj;
 		});
