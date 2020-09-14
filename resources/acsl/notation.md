@@ -130,11 +130,13 @@ root. This applies to even pre-fix and post-fix expressions.
 Let's look at `$X = (AB - C/D)\uparrow E$` once more and convert it into a tree.
 Follow the table below to see the process.
 
-| Construction | |
-| --- | --- |
-| 1. <img src="/res/acsl/notation/sample1.png" class="img-fluid" /> | 4. <img src="/res/acsl/notation/sample4.png" class="img-fluid" />|
-| 2. <img src="/res/acsl/notation/sample2.png" class="img-fluid" /> | 5. <img src="/res/acsl/notation/sample5.png" class="img-fluid" />|
-| 3. <img src="/res/acsl/notation/sample3.png" class="img-fluid" /> | |
+| Construction |
+| --- |
+| <img src="/res/acsl/notation/sample1.png" class="img-fluid" /> |
+| <img src="/res/acsl/notation/sample2.png" class="img-fluid" /> |
+| <img src="/res/acsl/notation/sample3.png" class="img-fluid" /> |
+| <img src="/res/acsl/notation/sample4.png" class="img-fluid" /> |
+| <img src="/res/acsl/notation/sample5.png" class="img-fluid" /> |
 
 Now, with this completed tree, we can convert to any notation we want. The order to
 write the expression is already drawn out; first, work with the operation in the
@@ -185,10 +187,14 @@ methods have been provided.
 
 ### **Binary Tree**
 
-| Construction | | |
-| --- | --- | --- |
-| 1. <img src="/res/acsl/notation/prob2-1.png" class="img-fluid" /> | 2. <img src="/res/acsl/notation/prob2-2.png" class="img-fluid" /> | 3. <img src="/res/acsl/notation/prob2-3.png" class="img-fluid" /> |
-| 4. <img src="/res/acsl/notation/prob2-4.png" class="img-fluid" /> | 5. <img src="/res/acsl/notation/prob2-5.png" class="img-fluid" /> | 6. <img src="/res/acsl/notation/prob2-6.png" class="img-fluid" /> |
+| Construction |
+| --- |
+| <img src="/res/acsl/notation/prob2-1.png" class="img-fluid" /> |
+| <img src="/res/acsl/notation/prob2-2.png" class="img-fluid" /> |
+| <img src="/res/acsl/notation/prob2-3.png" class="img-fluid" /> |
+| <img src="/res/acsl/notation/prob2-4.png" class="img-fluid" /> |
+| <img src="/res/acsl/notation/prob2-5.png" class="img-fluid" /> |
+| <img src="/res/acsl/notation/prob2-6.png" class="img-fluid" /> |
 
 Notice that in a few of the steps, I chose to work on subbranches of the final tree
 before putting them altogether.
@@ -227,10 +233,12 @@ Then, we will convert this into pre-fix:
 
 We would first construct the tree like so:
 
-| Construction | |
-| --- | --- |
-| 1. <img src="/res/acsl/notation/prob3-1.png" class="img-fluid" /> | 2. <img src="/res/acsl/notation/prob3-2.png" class="img-fluid" /> |
-| 3. <img src="/res/acsl/notation/prob3-3.png" class="img-fluid" /> | 4. <img src="/res/acsl/notation/prob3-4.png" class="img-fluid" /> |
+| Construction |
+| --- |
+| <img src="/res/acsl/notation/prob3-1.png" class="img-fluid" /> |
+| <img src="/res/acsl/notation/prob3-2.png" class="img-fluid" /> |
+| <img src="/res/acsl/notation/prob3-3.png" class="img-fluid" /> |
+| <img src="/res/acsl/notation/prob3-4.png" class="img-fluid" /> |
 
 Then, we can analyze this tree from bottom to top, left to right to get our pre-fix
 expression:
