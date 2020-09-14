@@ -109,6 +109,7 @@ Efficiency: `$O(n)$`
 Link: [Longest Arithmetic](https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff47/00000000003bf4ed)
 
 Solution (in Java):
+```java
 //Code written by Jason
 import java.io.*;
 import java.util.*;
