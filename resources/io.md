@@ -1,6 +1,9 @@
 # Input / Output
+
 *Input and output are essential parts of any program. Every programming problem in competitive programming will involve some kind
 of input/output.*
+
+**This page is under construction.**
 
 ## Contents
 - [Introduction](#introduction)
