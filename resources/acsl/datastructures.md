@@ -116,7 +116,6 @@ while (p ≠ NIL) and (not found)
   end if
 end while
 ```
-
 So, searching first starts at the root of the tree and works its way down, moving either left or right based on what character you are searching for and where it is positioned within the tree. As an example, I will once again use the *AMERICAN* tree and attempt to find *E*.
 
 <img src="/res/acsl/datastructures/insert8.png" alt="insert" class="img-fluid" />
@@ -126,6 +125,16 @@ First, *p* is set to the root, *A*. *x* holds the value we are trying to find, *
 Then, we move on to the while loop, whose conditions have both been met. In this loop, since *E* > *p*'s key, *p* is then set to equal *M*. The cycle then ends, and we start the loop anew. This time, *E* < *p*'s key, so *p* is now set to equal *E*. Note that the while loop does not stop here! Instead, it would traverse through the loop once again and then execute the "else" statement to make *found = TRUE*.
 
 So, by following this pseudocode, we have now successfully found our desired node.
+
+### Tree Traversal
+
+Often times, storing inputs(namely in USACO Silver problems) for programming problems in a tree data structure is very advantageous. The following are two algorithms to traverse the tree data structure to search for a given node.
+Algorithms to traverse a tree efficiently.
+
+*   Depth-First-Search
+    *   This technique is typically done with recursion and goes through each branch individually.
+*   Breadth-First-Search
+    *   This technique is done with a queue and adds the leaves of a branch to the end of the queue after each branch is done.
 
 ## Classifying Trees Further
 

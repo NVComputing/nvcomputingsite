@@ -37,9 +37,9 @@ Here's an example:
 
 | X | Y | X and Y |
 | --- | --- | --- |
-| 0 | 0 | 0 |
-| 1 | 0 | 0 |
-| 0 | 1 | 0 |
+| `$0$` | `$0$` | `$0$` |
+| 1 | `$0$` | `$0$` |
+| `$0$` | 1 | `$0$` |
 | 1 | 1 | 1 |
 
 So, let's break down how exactly this truth table was drawn:

@@ -179,20 +179,12 @@ Many of these tricks involve knowing a certain algorithm - oftentimes, problems 
 *   Prefix sums replace every index with the sum of all the prefix indexes and runs O(n) to create a prefix sum for both time and space complexity.
 *   This is typically used to find sum of the values between two indices. Given indices A and B, this would normally take O(B-A), but with a prefix sum array, it can be done in O(1).
 
-## Tree Traversal
-
-Algorithms to traverse a tree efficiently.
-
-*   Depth-First-Search
-    *   This technique is typically done with recursion and goes through each branch individually.
-*   Breadth-First-Search
-    *   This technique is done with a queue and adds the leaves of a branch to the end of the queue after each branch is done.
-
 ## Dynamic Programming
 
 *   This technique is normally used to avoid recursion.
 *   It can be used to optimize a brute force algorithm by making sure repeated method calls don’t occur.
 *   This can be seen in the flood fill algorithm (this is algorithm used the paint bucket in MS paint)
+*   It can also be seen in the efficient Fibonacci series algorithm.
 
 ## Just use C++
 
