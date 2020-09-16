@@ -70,7 +70,7 @@ are a few things to keep in mind:
 2. If *a* and *b* are both regex, then so are the following:
     * `$ab$` - This is just *a* followed by *b*; it does not mean *and* like it would in boolean algebra. The proper term for this would be **concatenation**.
     * `$a\cup b$` or `$a\,|\,b$` - This stands for *a or b*. The proper term for this is *union*. (In almost every programming language or sensible implementation of regex, the pipe symbol `|` is used.)
-    * `$a*$` - This is *a* repeated 0 or more times. This is known as *closure*, or the *Kleene star* (named after Stephen Cole Kleene, the computer scientist who invented regular expressions and helped establish recursion theory).
+    * `$a*$` - This is *a* repeated `$0$`  or more times. This is known as *closure*, or the *Kleene star* (named after Stephen Cole Kleene, the computer scientist who invented regular expressions and helped establish recursion theory).
 
 As always, order of precedence still exists. It goes: Kleene star, concatenation, and then union.
 
@@ -121,8 +121,8 @@ Also, we'll go over the actual syntax in programming languages further down
 
 | Symbol | Meaning | Example | Matches | Doesn't Match |
 | --- | --- | --- | --- | --- |
-| `/*/` | This matches the preceding token **0 or more** times. | `/ba*/` | `b` `ba`, `baa`, `baaaaaa` | `bbaa`, `aaa` |
-| `/?/` | This matches the preceding token **0 or 1** times (basically, makes the previous token *optional*). | `/colou?r/` | `color`, `colour` | `coloer` |
+| `/*/` | This matches the preceding token **`$0$` or more** times. | `/ba*/` | `b` `ba`, `baa`, `baaaaaa` | `bbaa`, `aaa` |
+| `/?/` | This matches the preceding token **`$0$`  or 1** times (basically, makes the previous token *optional*). | `/colou?r/` | `color`, `colour` | `coloer` |
 | `/+/` | This matches the preceding token **1 or more** times. Not to be confused with `/*/` - this requires at least one of the preceding token. | `/a+h/` | `ah`, `aaah`, `aaaaaah` (etc) | `h`, `aaahh` |
 
 ### Group Constructs
@@ -145,7 +145,7 @@ It may take a bit to really understand why these identities are valid, but be su
 time. It's always better to reason with the logic behind each identity so that they become
 common sense rather than something you have to memorize.
 
-Although frankly, for most of these identities, they won't be any use at all. Just use these to get the hang of
+Although frankly, for most of these identities, memorizing them won't be much use at all. Just use these to get the hang of
 how regex works (treat them like practice for understanding regex logic). Don't even bother trying to memorize them.
 
 | Identity | Explanation |
