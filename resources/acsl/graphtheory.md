@@ -7,6 +7,7 @@
   - [Graph Density](#graphdensity)
   - [Directed Paths](#directedpaths)
   - [Weighted Graphs](#weightedgraphs)
+  - [Trees](#trees)
 - [Adjacency Matrices](#adjacencymatrices)
   - [Writing The Graph as a Matrix](#writingthegraphasamatrix)
   - [Powers of a Matrix](#powersofamatrix)
@@ -90,9 +91,17 @@ are found in weighted graphs and are spanning trees that minimize the cost it ta
 
 A group of disconnected trees is called a *forest*.
 
-| Weighted Graph | Spanning Tree | Minimum Spanning Tree |
-| --- | --- | --- |
-| <img src="/res/acsl/graphtheory/normalweighted.png" class="img-fluid" /> | <img src="/res/acsl/graphtheory/spanning.png" class="img-fluid" /> <br> Cost `$= 4 + 5 + 2 = 11$` | <img src="/res/acsl/graphtheory/minspan.png" class="img-fluid" /> <br> Cost `$= 4 + 1 + 2 = 7$` |
+| Weighted Graph |
+| --- |
+| <img src="/res/acsl/graphtheory/normalweighted.png" class="img-fluid" /> |
+
+| Spanning Tree |
+| --- |
+| <img src="/res/acsl/graphtheory/spanning.png" class="img-fluid" /> <div class="text-center">Cost `$= 4 + 5 + 2 = 11$`</div> |
+
+| Minimum Spanning Tree |
+| --- |
+| <img src="/res/acsl/graphtheory/minspan.png" class="img-fluid" /> <div class="text-center">Cost `$= 4 + 1 + 2 = 7$`</div> |
 
 # Adjacency Matrices
 
@@ -187,7 +196,7 @@ Let's use the following graph once more:
 
 As we calculated before, the matrix would be:
 
-| `M` | A | B | C |
+| `$M$` | A | B | C |
 | --- | --- | --- | --- |
 | A | 1 | 0 | 1 |
 | B | 0 | 1 | 1 |
@@ -223,7 +232,7 @@ So, in total, there are 3 different cycles in the graph.
 
 ## 2. Using the adjacency matrix below, draw the directed graph.
 
-| `M` | A | B | C | D | E |
+| `$M$` | A | B | C | D | E |
 | --- | --- | --- | --- | --- | --- |
 | A | 1 | 0 | 1 | 1 | 0 |
 | B | 0 | 1 | 0 | 1 | 1 |
@@ -233,11 +242,13 @@ So, in total, there are 3 different cycles in the graph.
 
 The drawn graph below is only one way to depict this matrix.
 
-| Step | Graph | Step | Graph |
-| --- | --- | --- | --- |
-| 1. Draw in A's edges | <img src="/res/acsl/graphtheory/prob2-1.png" class="img-fluid" /> | 4. Add D's edges | <img src="/res/acsl/graphtheory/prob2-4.png" class="img-fluid" /> |
-| 2. Add B's edges | <img src="/res/acsl/graphtheory/prob2-2.png" class="img-fluid" /> | 5. Add E's edges | <img src="/res/acsl/graphtheory/prob2-5.png" class="img-fluid" /> |
-| 3. Add C's edges | <img src="/res/acsl/graphtheory/prob2-3.png" class="img-fluid" /> | |
+| Step | Graph |
+| --- | --- |
+| Draw in A's edges | <img src="/res/acsl/graphtheory/prob2-1.png" class="img-fluid" /> |
+| Add B's edges | <img src="/res/acsl/graphtheory/prob2-2.png" class="img-fluid" /> |
+| Add C's edges | <img src="/res/acsl/graphtheory/prob2-3.png" class="img-fluid" /> |
+| Add D's edges | <img src="/res/acsl/graphtheory/prob2-4.png" class="img-fluid" /> |
+| Add E's edges | <img src="/res/acsl/graphtheory/prob2-5.png" class="img-fluid" /> |
 
 ## 3. In the following directed graph, find the total number of different paths from vertex B to vertex D of length 3.
 <img src="/res/acsl/graphtheory/prob3.png" class="img-fluid" />
