@@ -137,10 +137,6 @@ This level is ridiculously difficult: if you score a perfect score in this durin
 It is the computing equivalent of making USAMO.
 
 To be successful in this level, you need to:
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 *   Have a sophisticated understanding of how computing functions
 *   Have incredible proficiency in number theory and a very good mathematical background
 *   Become one with the graphs

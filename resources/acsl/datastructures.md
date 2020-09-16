@@ -129,8 +129,6 @@ So, by following this pseudocode, we have now successfully found our desired nod
 ### Tree Traversal
 
 Often times, storing inputs(namely in USACO Silver problems) for programming problems in a tree data structure is very advantageous. The following are two algorithms to traverse the tree data structure to search for a given node.
-Algorithms to traverse a tree efficiently.
-
 *   Depth-First-Search
     *   This technique is typically done with recursion and goes through each branch individually.
 *   Breadth-First-Search

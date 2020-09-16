@@ -54,15 +54,12 @@ Then, a column was made for the actual expression itself. In this column, I wrot
 
 And that's it! One thing to note is that when you get to longer expressions, it may be wise to break it down and use multiple columns. Let's say the expression was `X and Y or X`. This is how it could be set up:
 
-| | | A | |
+| `$X$` | `$Y$` | `$X$` AND `$Y$` | (`$X$` AND `$Y$`) OR `$X$` |
 | --- | --- | --- | --- |
-| `$X$` | `$Y$` | `$X$` & `$Y$` | `$A$` \| `$X$` |
-| 0 | 0 | 0 | 0 |
-| 1 | 0 | 0 | 1 |
-| 0 | 1 | 0 | 0 |
+| `$0$` | `$0$` | `$0$` | `$0$` |
+| 1 | `$0$` | `$0$` | 1 |
+| `$0$` | 1 | `$0$` | `$0$` |
 | 1 | 1 | 1 | 1 |
-
-For this, I broke the expression into two smaller parts. I used `A` to symbolize `X and Y` simply because I didn't want to write out `X and Y or X` in the last column header.
 
 # Basic Operators
 
