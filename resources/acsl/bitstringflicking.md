@@ -14,7 +14,7 @@
 Bit strings are essentially just strings of binary digits (so, for example, `011010`) that can be manipulated in a variety of ways by operators (see Operators below). They can also be represented by
 the binary form of many data types, such as integers, strings, etc.
 
-Most high-level languages support such operations. Bit strings can be used to represent sets in the form of binary sets. If you were to have a program with 8 different options that all have the choice of "Yes" or "No", one way to store this information would be with an array of size 8. However, an easier and less space-consuming way would be to use a bit string, with each option choice taking up one bit.
+Most high-level languages support such operations. Bit strings can be used to represent data in the form of binary sets. If you were to have a program with 8 different options that all have the choice of "Yes" or "No", one way to store this information would be with an array of size 8. However, an easier and less space-consuming way would be to use a bit string, with each option choice taking up one bit.
 
 Understanding how bit strings work is very helpful in systems programming, assembly language programming, code optimization, and hardware design.
 
@@ -50,7 +50,7 @@ not the whole bit string as one.
 | not | `$\sim$` or `$\neg$` | Logical negation is performed on each bit in the bit strings. 0s turn into 1s, and vice versa. | <div class="monospace"><div>`$\neg$`<br>=&nbsp;</div><div>`$10110$`<br>`$01001$`</div></div> |
 | and | & | A comparison is made between a bit and its corresponding bit (based on position) in the other bit string. If both bits are 1s, then the resultant bit will be a 1; otherwise, it will be 0. This is done for each bit in the bit strings.| <div class="monospace"><div><br>&<br>=&nbsp;</div><div>`$10001$`<br>`$01101$`<br>`$00001$`</div></div>|
 | or | \| | Similar to *and*, bits are compared with the bits in the other bit string. If at least one bit is a 1, then the resultant bit will be a 1. This is done for each bit in the bit strings. | <div class="monospace"><div><br>\|<br>=&nbsp;</div><div>`$101011$`<br>`$011001$`<br>`$111011$`</div></div> |
-| xor | `$\oplus$` | Again, this involves bit comparison. If one bit has a value of 0 while the other has a value of 1, then the resultant bit is 1 (so basically, if the bits have different values). This is done for each bit in the bit strings. | <div class="monospace"><div><br>`$\oplus$`<br>=&nbsp;</div><div>`$101011$`<br>`$011001$`<br>`$110010$`</div></div>|
+| xor | `$\oplus$` | Again, this involves bit comparison. If one bit has a value of 0 while the other has a value of 1, then the resultant bit is 1, otherwise it is `$0$' (so basically, if the bits have different values, the result is 1). This is done for each bit in the bit strings. | <div class="monospace"><div><br>`$\oplus$`<br>=&nbsp;</div><div>`$101011$`<br>`$011001$`<br>`$110010$`</div></div>|
 
 Note: There is a shortcut for xor specifically - you can think of it like this:
 
@@ -64,12 +64,12 @@ This works because of the truth table for XOR:
 
 | `$X$` | `$Y$` | `$X \oplus Y$` |
 | --- | --- | --- |
-| 0 | 0 | 0 |
-| 1 | 0 | 1 |
-| 0 | 1 | 1 |
-| 1 | 1 | 0 |
+| '$0$' | '$0$' | '$0$' |
+| 1 | '$0$' | 1 |
+| '$0$' | 1 | 1 |
+| 1 | 1 | '$0$' |
 
-We can see that the `$X \oplus Y$` bit is equal to `$X$` when `$Y$` is 0, and equal to `$\neg X$` when `$Y$` is 1.
+We can see that the `$X \oplus Y$` bit is equal to `$X$` when `$Y$` is '$0$', and equal to `$\neg X$` when `$Y$` is 1.
 
 For more details on truth tables, or if you're confused about what a truth table is, check out our page on [Boolean Algebra](/resources/acsl/booleanalgebra).
 
@@ -81,8 +81,8 @@ Note that none of these operators change the length of the bit string.
 
 | Operator | Abbrev. | Description | Example |
 | --- | --- | --- | --- |
-| LSHIFT-x | LS-x | Each bit in the bit string is shifted over by *x* positions to the left. If its shift causes it to go out of bounds, that bit will be lost ("shifted out"); a 0 at the other end (the right) will be ended to preserve bit string length. | `LS-2 01101`: The first two bits, `01`, are shifted out, leaving us with `101`. 2 zeros are then filled at the right end of the bit string, thus leaving us with `10100`.|
-| RSHIFT-x | RS-x | Each bit in the bit string is shifted over by *x* positions to the right. If its shift causes it to go out of bounds, that bit will be lost ("shifted out"); a 0 at the other end (the left) will be ended to preserve bit string length. | `RS-3 01101`: The first three bits on the right, `101` are shifted out; now we have `01` left. 3 zeros are then filled at the left end of the bit string, thus leaving us with `00001`. |
+| LSHIFT-x | LS-x | Each bit in the bit string is shifted over by *x* positions to the left. If its shift causes it to go out of bounds, that bit will be lost ("shifted out"); a '$0$' will be added at the other end (the right) to preserve bit string length. | `LS-2 01101`: The first two bits, `01`, are shifted out, leaving us with `101`. 2 zeros are then filled at the right end of the bit string, thus leaving us with `10100`.|
+| RSHIFT-x | RS-x | Each bit in the bit string is shifted over by *x* positions to the right. If its shift causes it to go out of bounds, that bit will be lost ("shifted out"); a '$0$' will be added at the other end (the left) to preserve bit string length. | `RS-3 01101`: The first three bits on the right, `101` are shifted out; now we have `01` left. 3 zeros are then filled at the left end of the bit string, thus leaving us with `00001`. |
 | LCIRC-x | LC-x | Each bit in the bit string is shifted over by *x* positions to the left. If its shift causes it to go out of bounds, then that bit will circulate to the other end (the right) rather than being lost. | `LC-3 01101`: The first three digits circulate over to the other end of the bit string in order. The resulting bit string becomes `01011`. |
 | RCIRC-x | RC-x | Each bit in the bit string is shifted over by *x* positions to the right. If its shift causes it to go out of bounds, then that bit will circulate to the other end (the left) rather than being lost. | `RC-2 01011`: The first two digits on the right are circulated over to the other end of the bit string. So, `01011` becomes `11010`. |
 
@@ -158,7 +158,7 @@ Many of these concepts are ripped straight from the [Boolean Algebra](/resources
 | `$\neg A$` | a | Similarly, negating the negated version of `a` would return `a`.|
 | `$a \oplus 0$` | a | If `a` was a 1, then the resultant value would be `1`. If `a` was a 0, then the resultant value would also be `0`. So, overall, the result is `a`. |
 | `$a \oplus 1$` | A | If `a` was a 1, then the resultant value would be `0`. If `a` was a 1, then the resultant value would be `0`. Note how the end result is the opposite value of `a`; so, we mark the end result as `A`. |
-| `$a$` & `$0$` | 0 | Regardless of what `a` is, this would always return `0` because one of the operands is already 0. (See [Annihilator Law](/resources/acsl/booleanalgebra#annihilatorlaw)) |
+| `$a$` & `$0$` | `$0$` | Regardless of what `a` is, this would always return `0` because one of the operands is already 0. (See [Annihilator Law](/resources/acsl/booleanalgebra#annihilatorlaw)) |
 | `$a$` & `$1$` | a | If `a` was a 1, then the resultant value would be `1`. If `a` was a 0, then the resultant value would also be `0`. So, overall the result is `a`. (See [Identity Law](/resources/acsl/booleanalgebra#identitylaw)) |
 | `$a$` \| `$0$` | a | Since one of the operands is already 0, then whether this operation returns a 0 or 1 all depends on `a`. If `a` is a 1, then the value also becomes `1`; the same applies for if `a` is a 0. So, overall, the result is `a`. (See [Identity Law](/resources/acsl/booleanalgebra#identitylaw)) |
 | `$a$` \| `$1$` | 1 | Regardless of what `a` is, this would always return `1` because one of the operands is already 1, thus meeting the condition of the \| operator. (See [Annihilator Law](/resources/acsl/booleanalgebra#annihilatorlaw)) |
@@ -192,7 +192,7 @@ Again, we will mark `x` as `abcde`.
 
 Now, the chances that we calculated this correctly are fairly high since the last two bit pairs match correctly (`0` and `0`). So, `E` = 1, `A` = 0, and `B` = 1.
 
-This translates to `e` = 0, `a` = 1, and `b` = 0. The values of `c` and `d` don't matter and thus can either be `0` or `1`.
+This translates to `e` = `$0$`, `a` = 1, and `b` = `$0$`. The values of `c` and `d` don't matter and thus can either be `0` or `1`.
 
 So, our answer is `x` = `10**0` with the `*` standing for any value (`0` or `1`). Fully written out, this would be: `10000`, `10100`, `10010`, and `10110`.
 

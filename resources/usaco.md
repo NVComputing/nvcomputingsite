@@ -35,7 +35,7 @@ Once the contest begins, you have **4 hours** to view and solve **3 separate pro
 (usually about Farmer John and his cows).
 
 These problems have varying difficulty depending on your level in USACO (scroll down to read more about levels).
-All 3 problems are worth 333.333 points for a **total of 1000 points.** For each problem, the points are allocated evenly among every test case. If there are are 10 test cases for problem 1, 11 for problem 2, and 12 test cases for problem 3, each test case in problem 1 would  be worth 33.33 points, each test case in problem 2 will be worth 30 points, and each test case in problem three will be worth 27.77 points)
+All 3 problems are worth 333.333 points for a **total of 1000 points.** For each problem, the points are allocated evenly among every test case. If there are are 10 test cases for problem 1, 11 for problem 2, and 12 test cases for problem 3, each test case in problem 1 would  be worth 33.33 points, each test case in problem 2 will be worth 30 points, and each test case in problem three will be worth 27.77 points.
 
 Problems are submitted online, and can be coded using a variety of languages. The full list is as follows:
 
@@ -134,13 +134,14 @@ To pass, you must know:
 
 This level is ridiculously difficult: if you score a perfect score in this during the US Open, you are essentially guaranteed a position in the 4 person US national team which competes in IOI (this is much more prestigious than ACSL and is practically a ticket to any college you want).
 It is the computing equivalent of making USAMO.
+
 To be successful in this level, you need to:
-    *   Have a sophisticated understanding of how computing functions
-    *   Have incredible proficiency in number theory and a very good mathematical background
-    *   Become one with the graphs
-    *   Have a highly developed understanding of time/space complexity and how to optimize code to the fullest
-    *   Have a creative perspective to unique problems
-    *   Have skills in pattern recognition and problem solving
+*   Have a sophisticated understanding of how computing functions
+*   Have incredible proficiency in number theory and a very good mathematical background
+*   Become one with the graphs
+*   Have a highly developed understanding of time/space complexity and how to optimize code to the fullest
+*   Have a creative perspective to unique problems
+*   Have skills in pattern recognition and problem solving
 
 # Input / Output
 
@@ -162,7 +163,7 @@ When coding at a higher level, there are typically two different types of soluti
 
 This can work for earlier test cases in USACO, but as the values and parameters get larger, they take longer and longer to run.
 
-A very important tool to measure your code’s efficiency is known as **Big O Notation. **Big O is denoted with the syntax “O(some expression involving n)”. It is a way to determine how many operations your code requires to run.
+A very important tool to measure your code’s efficiency is known as **Big O Notation.** Big O is denoted with the syntax “O(some expression involving n)”. It is a way to determine how many operations your code requires to run.
 
 
 Some examples of naive versus efficient code can be seen here.
