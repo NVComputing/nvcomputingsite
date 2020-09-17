@@ -41,7 +41,7 @@ With pre-fix and post-fix, there is no specific order of precedence.
 
 For pre-fix, you would first scan the expression for any operators that are followed by
 2 operands, simplify those, and continue to cycle over the expression to simplify further
-and further. Here's an example:
+and further. If there are two or more different operators that are each followed by two operands, perform the leftmost operation first. Here's an example:
 
 0. `$\uparrow - * 3 7 / 6 2 2$`
 1. `$\uparrow - 21 / 6 2 2$`
@@ -115,7 +115,7 @@ what I mean.
 
 If you want to convert from pre-fix to post-fix or vice versa, it is easy to get
 mixed up; so, converting to in-fix first may be your better choice, although it's
-a tedious extra step to take.
+a tedious extra step to take. See the next section for a method that will allow for direct conversion from prefix to post fix, but again, just converting to in-fix first is the recommended option.
 
 ## Binary Trees
 
@@ -144,6 +144,11 @@ bottommost row on the left (which is `$A*B$` in this case). Complete any other
 operations in the same row, and then move up to the next row up. In this next row,
 start calculating from left to right again before moving up once more. This process
 is continued until you get to the uppermost (or final) operation.
+
+Another way to think about converting from a tree to an expression is as follows:
+For in-fix, starting at the parent node, visit the left child node, then the parent node, and finally the right child node. If any of the child nodes have children, apply the same process to those nodes. For example, starting at the equals sign, visit the left X node, and since it has no children write it down. Do the same for the parent equals sign node. Then visit the right node. But this node has a left child so visit its left child before writing down this new node. Using the same logic, the multiplies node has a left child as well, so visist that. The A had no children so write that down, and then write down the multiply sign. Finally, visit the right node of the multiplies and since it has no children write down B. Now you have finally finished evaluating the left child of the minus sign, so now you can write down the minus node, and proceed to visit the right child of that node. Continue down this process, and get the equation `$X = (AB - C/D)\uparrow E$`. 
+
+For pre fix, visit the parent node, the left node, and then the right node. For post fix, visit the left node, right node, and then the parent node. Notice that you always visit the left node and then the right node, only varying when you visit the parent node.
 
 The only difference between the notations is where you place the operators. In the
 binary tree, you may see:
