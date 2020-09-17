@@ -125,7 +125,7 @@ To start off, our template matrix would look like so:
 
 Note that the letters are simply written as a reference; they are not part of the actual matrix.
 
-Then, we fill out our matrix with 0s and 1s, with 1 signifying that an edge connects the vertice in its column and its row. So, for example, in the top right empty box, this would
+Then, we fill out our matrix with 0s and 1s, with 1 signifying that an edge connects the vertice in its column and row. So, for example, in the top right empty box, this would
 be filled out with a 1 because there is indeed an edge that goes from A to C. Pay careful attention to which box there is a `$1$` in for directed graphs as sometimes there is an edge connecting B to C but not C to B.
 
 So, the rest of the matrix will be filled out as follows:

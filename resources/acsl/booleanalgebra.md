@@ -216,7 +216,7 @@ Now, we can set this final reduced expression to 1, since the problem asks us to
 | X     | Y     | `$\overline{Y}$`|`$X + \overline{Y}$` |
 | ---   | ---   | ---             |---                  |
 | `$0$` | `$0$` | `$1$`           | `$1$`               |
-| `$1$` | `$0$` | `$1$`           | `$1$`                  |
+| `$1$` | `$0$` | `$1$`           | `$1$`               |
 | `$0$` | `$1$` | `$0$`           | `$0$`               |
 | `$1$` | `$1$` | `$0$`           | `$1$`               |
 

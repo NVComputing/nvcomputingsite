@@ -75,7 +75,7 @@ Each node can have a total of two children. The left child must be less than or 
 
 ### Inserting Nodes (Binary Search)
 
-Inserting a node requires knowing its position relative to existing nodes. Compare the node you are inserting to the root node to determine whether the node will go to the right or left of it. If there is no existing node at that point, insert the node there. If not, compare the node you are inserting with the child node, just like you did with the root node. Repeat this process until there is an open space to insert the node. Here's an example with the word *AMERICAN*:
+Inserting a node requires knowing its position relative to existing nodes. Compare the node you are inserting to the root node to determine whether it will go to the left or right of the root node. If there is no existing node at that point, insert the node there. If not, compare the node you are inserting with the child node, just like you did with the root node. Repeat this process until there is an open space to insert the node. Here's an example with the word *AMERICAN*:
 
 | Step | Description |
 | --- | --- |
