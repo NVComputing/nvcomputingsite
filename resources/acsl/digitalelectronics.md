@@ -9,7 +9,7 @@
 
 Digital electronics is a way to visualize boolean algebra using drawn-out circuits (also
 known as logic gates). Be sure to make sure you understand all of the boolean operations;
-check out the [Boolean Algebra](/resources/acsl/booleanalgebra) page if needed. If you understood that page really well, this page will be a piece of cake for you.
+check out the [Boolean Algebra](/resources/acsl/booleanalgebra) page if needed. If you understand boolean algebra, you understand digital electronics.
 
 Do note that there may be multiple ways to display the same boolean expression.
 

@@ -48,7 +48,7 @@ different, as it is written as `X = POP()`. What this does is that it removes th
 element in the stack and stores it in variable X. So, if there was a stack with its
 top element being "E", then writing `H = POP()` would store "E" in H.
 
-In the case that the POP operation is called on an empty stack, then the variable is given the special value NIL(Not In List), which means "nonexistent".
+In the case that the POP operation is called on an empty stack, then the variable is given the special value NIL (Not In List), which means "nonexistent".
 
 ## Queues
 
@@ -56,7 +56,7 @@ Queues, on the other hand, are often used to handle requests. It's similar to wa
 
 The PUSH operation works the same as it would with stacks(the element is added to the top of the data structure). However, with POP, instead of removing the top (most recently added) element, queues have their bottom element removed.
 
-A tip to handle both queue and stack related problems is to keep a list of all the elements, with the pushed elements being added to the top of the list. In a queue, cross of the bottom element, and in a stack cross of the top element. 
+A tip to handle both queue and stack related problems is to keep a list of all the elements, with the pushed elements being added to the top of the list. In a queue, cross off the bottom element, and in a stack cross of the top element. 
 # Trees
 
 ## Terminology
@@ -75,7 +75,7 @@ Each node can have a total of two children. The left child must be less than or 
 
 ### Inserting Nodes (Binary Search)
 
-Inserting a node requires knowing its position relative to existing nodes Starting at the root node, compare the node you are inserting to another node to determine whether the node will go to the right or left of the node you are comparing it to. If there is no exisiting node, insert the node there, or repeat this process with the node that is there until.  Here's an example with the word *AMERICAN*:
+Inserting a node requires knowing its position relative to existing nodes. Compare the node you are inserting to the root node to determine whether the node will go to the right or left of it. If there is no existing node at that point, insert the node there. If not, compare the node you are inserting with the child node, just like you did with the root node. Repeat this process until there is an open space to insert the node. Here's an example with the word *AMERICAN*:
 
 | Step | Description |
 | --- | --- |
@@ -92,7 +92,7 @@ Note that the order you insert the nodes does matter, so if you were to switch o
 
 ### Deleting Nodes (Binary Search)
 
-In the case that a node needs to be deleted, there are three cases you must consider: the removed node has `$0$` children, `$1$` child, or `$2$` children. When there are no children, you can simply remove the node. When there is one child, move the child node and its children up to replace the parent node. When there are two children, move the left child and its children up to replace the parent node, and add on the right child and all of its children to the left child or its children, using the same comparison process as described above. Removing nodes generally involves some minor shifting because "less than or equal to" and "greater than" relationships between nodes still have to be considered for proper placement.
+In the case that a node needs to be deleted, there are three cases you must consider: the removed node has 0 children, 1 child, or 2 children. When there are no children, you can simply remove the node. When there is one child, move the child node and its children up to replace the parent node. When there are two children, move the left child and its children up to replace the parent node, and add on the right child and all of its children to the left child or its children, using the same comparison process as described above. Removing nodes generally involves some minor shifting because "less than or equal to" and "greater than" relationships between nodes still have to be considered for proper placement.
 
 |# of Children | Original  | Deletion  | Description  |
 | --- | --- | --- | --- |
@@ -174,7 +174,7 @@ See the table below to understand the differences between the two in more detail
 
 # Path Lengths
 
-Before moving further into priority queues, let's talk briefly about path lengths. In earlier sections, I addressed "layers"/"levels" of the tree; these can also be referred to as "depths". The root node has a depth of `$0$`; the next layer has a depth of "1", and this continues to increment for subsequent, deeper layers.
+Before moving further into priority queues, let's talk briefly about path lengths. In earlier sections, I addressed "layers"/"levels" of the tree; these can also be referred to as "depths". The root node has a depth of 0; the next layer has a depth of 1, and this continues to increment for subsequent, deeper layers.
 
 *Internal path length* (IPL) is the sum of the depths of all nodes in the tree. *External path length* (EPL) is the sum of the depths of the nodes that can be added to the tree's current leaves. An easier way to calculate the EPL is with this formula: `EPL = IPL + 2n`, where `n` represents the number of nodes in the tree.
 

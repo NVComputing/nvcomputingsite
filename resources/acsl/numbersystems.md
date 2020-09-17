@@ -39,7 +39,7 @@ number; so for example, 10 is denoted as `A`, 11 is denoted as `B`, and so on.
 
 With these ranges, notice that the upper bound is one less than the base; so, with binary,
 which is base 2, the upper bound is `$2 - 1 = 0$`. Also notice that all of them have a
-lower bound of `$0$`.
+lower bound of 0.
 
 Moving on, a group of 3 bits make up a single octal digit; this is because `$111_2 =
 ((1*2^2)+(1*2^1)+(1*2^0))_{10} = (4 + 2 + 1)_{10} = 7_{10}$`, which is the upper bound for the
@@ -129,7 +129,7 @@ The same idea applies for if you want to convert from binary to hex and vice ver
 you work with groups of 4 bits instead of 3. Also, you will have to work with the letters A-E,
 which again, represent 10-15. 
 
-When converting between hex to octal or vice versa, you can use this trick to go to binary first and then to the desired base. This trick can be very helpful as the numbers you deal with are much smaller, leaves you much less prone to computing errors, and could potentially save time.
+When converting between hex to octal or vice versa, you can use this trick to go to binary first and then to the desired base. This trick is very helpful as the numbers you deal with are much smaller, leave you much less prone to computing errors, and could save you a lot of time.
 
 ## Fractions
 

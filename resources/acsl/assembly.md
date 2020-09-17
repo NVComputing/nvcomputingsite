@@ -149,7 +149,7 @@ Look at the following table below to understand how the program changes over tim
 | MULT | 8 | 1 | 4 |
 | STORE | 8 | 1 | 8 |
 | LOAD | 1 | 1 | 8 |
-| SUB | `$0$` | 1 | 8 |
+| SUB | 0 | 1 | 8 |
 
 Now that ACC is equal to '$0$', the branch instruction BE after SUB now applies,
 thus taking us to DONE, where the value of W, or 8,

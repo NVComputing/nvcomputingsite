@@ -37,10 +37,10 @@ Here's an example:
 
 | X | Y | X and Y |
 | --- | --- | --- |
-| `$0$` | `$0$` | `$0$` |
-| `$1$` | `$0$` | `$0$` |
-| `$0$` | `$1$` | `$0$` |
-| `$1$` | `$1$` | `$1$` |
+| 0 | 0 | 0 |
+| 1 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 1 | 1 |
 
 So, let's break down how exactly this truth table was drawn:
 
@@ -213,12 +213,12 @@ First off, let's simplify this expression:
 
 Now, we can set this final reduced expression to 1, since the problem asks us to find ordered pairs to make the expression true. Then, using a truth table, the solutions can be easily found:
 
-| X | Y | `$\overline{Y}$`|`$X + \overline{Y}$` |
-| --- | --- | ---|--- |
-| `$0$` | `$0$` | `$1$` | `$1$` |
-| `$1$` | `$0$` | `$1$` | `$1$` |
-| `$0$` | `$1$` | `$0$` | `$0$` |
-| `$1$` | `$1$` | `$0$` | `$1$` |
+| X     | Y     | `$\overline{Y}$`|`$X + \overline{Y}$` |
+| ---   | ---   | ---             |---                  |
+| `$0$` | `$0$` | `$1$`           | `$1$`               |
+| `$1$` | `$0$` | `$1$`           | `$1$`                  |
+| `$0$` | `$1$` | `$0$`           | `$0$`               |
+| `$1$` | `$1$` | `$0$`           | `$1$`               |
 
 So, as we can see here, the ordered pairs that would make the expression true are: `(0, 0)`, `(1, 0)`, and `(1, 1)`.
 
