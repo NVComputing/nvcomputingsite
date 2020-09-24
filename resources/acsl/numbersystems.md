@@ -50,7 +50,7 @@ is the upper bound for the hex base.
 How bases essentially work is like this:
 
 Say we have the number `$167_{10}$`. We refer to `7` as the ones digits, `6` as the tens
-digit, and `1` as the hundreds digit. In fact, `$167_10$` can be written as
+digit, and `1` as the hundreds digit. In fact, `$167_{10}$` can be written as
 `$((1*100)+(6*10)+(7*1))_{10}$`, or `$((1*10^2)+(6*10^1)+(7*10^0)_{10})$`.
 
 A similar idea applies to other bases. Let's say we have `$01101_2$`. However,
@@ -248,7 +248,9 @@ Here's an example (again, this will be in base 16):
 With division, the process of finding how many times the divisor fits into the dividend has an extra step to it.
 
 I will jump right into an example, as it is easier to demonstrate while explaining for division in particular. We will
-do the operation, `$312_4 / 2_4$`. First off, we must remember what range of numbers we can work with: [0, 3]. What
+do the operation, `$312_4 / 2_4$`. First off, we must remember what range of numbers we can work with: [0, 3] (because we're in base 4). 
+
+What
 would also be useful is to list out the results of `$2_4 \bullet 1_4$`, `$2_4 \bullet 2_4$`, and `$2_4 \bullet 3_4$`
 (which are `$2_4$`, `$10_4$`, and `$12_4$` respectively).
 
