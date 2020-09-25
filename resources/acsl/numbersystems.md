@@ -17,7 +17,7 @@
 # Introduction
 
 Whenever we work with numbers, we use the decimal base. However, computers use bits, or
-**bi**nary digi**t**s, to store numbers and other information. Since binary numbers
+**bi**nary digi**ts**, to store numbers and other information. Since binary numbers
 can get quite lengthy, the octal and hexadecimal (or just hex) bases are also used.
 
 This category does not cover how to represent negative numbers or floats in binary.
@@ -56,8 +56,7 @@ digit, and `1` as the hundreds digit. In fact, `$167_{10}$` can be written as
 A similar idea applies to other bases. Let's say we have `$01101_2$`. However,
 instead of multiplying each digit by 10 to a certain power, we would multiply it by
 2 to a certain power since that's the base we're working with instead. So, `$01101_2$`
-is technically `$(0*2^4)+(1*2^3)+(1*2^2)+(0*2^1)+(1*2^0) = 0+8+4+0+1 = 13$`, although
-the `13` would be in base 10. While this evaluation used powers of 2, the overall
+is technically `$(0*2^4)+(1*2^3)+(1*2^2)+(0*2^1)+(1*2^0) = 0+8+4+0+1 = 13_{10}$`. Of couse, just like in base `$10$`, the leading `$0$` in `$01101_2$` could have been removed to become `$1101_2$`. While this evaluation used powers of 2, the overall
 calculation was in base 10.
 
 For best success in this category, it would be wise to know the following things:
@@ -106,7 +105,9 @@ Number: 1  ___ ___ ___
 I will then subtract `$1 * 2^3$` from `12` to get `3`. Now, I will repeat the process with
 the remaining slots. `$2^2$` fits into `3` one time, so that slot will be filled in with a 1.
 `$1 * 2^2$` will be subtracted from `3` to get us `0`. `$2^1$` and `$2^0$` both fit into `0`
-0 times, so those slots are filled in with 0. Hence our final answer is `$1100_2$`.
+`$0$` times, so those slots are filled in with `$0$`. Hence our final answer is `$1100_2$`.
+
+While converting to base 2 only leaves two options for each slot (`$0$` or `$1$`), the process is very similar to converting from base 10 to base 8 and 16 (and any other base for that matter). You find the highest power of the base less than the base 10 number, subtract it as many times as possible, fill in that corresponding slot, and repeat.
 
 ## Special Conversions with Binary
 
@@ -126,7 +127,9 @@ would be reduced to `$1111011_2$`.
 
 The same idea applies for if you want to convert from binary to hex and vice versa except that
 you work with groups of 4 bits instead of 3. Also, you will have to work with the letters A-E,
-which again, represent 10-15.
+which again, represent 10-15. 
+
+When converting between hex to octal or vice versa, you can use this trick to go to binary first and then to the desired base. This trick is very helpful as the numbers you deal with are much smaller, leave you much less prone to computing errors, and could save you a lot of time.
 
 ## Fractions
 
