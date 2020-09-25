@@ -5,7 +5,7 @@ let schedule = require('../upcomingevents.json');
 
 module.exports.set = (app) => {
 	app.get('/schedule', (req, res) => {
-		let data = schedule.upcomingEvents.sort(function (a, b) {
+		let data = schedule.upcomingEvents.sort((a, b) => {
 			return a.time - b.time;
 		}).map((o) => {
 			let obj = JSON.parse(JSON.stringify(o));
@@ -17,7 +17,7 @@ module.exports.set = (app) => {
 			return obj;
 		});
 
-		let data2 = schedule.deadlines.sort(function (a, b) {
+		let data2 = schedule.deadlines.sort((a, b) => {
 			return a.time - b.time;
 		}).map((o) => {
 			let obj = JSON.parse(JSON.stringify(o));

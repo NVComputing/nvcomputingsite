@@ -50,12 +50,6 @@ footer {
 
 @media (max-width: 991px) {
 	.navbar-wrapper .navbar-custom {
-		max-width: 720px;
-	}
-}
-
-@media (max-width: 767px) {
-	.navbar-wrapper .navbar-custom {
 		position: fixed;
 		top: 0;
 		z-index: 3000;
@@ -132,6 +126,10 @@ footer {
 	background-position: center;
 }
 
+.header-offset {
+	padding-top: calc(3rem + 57.8px) !important;
+}
+
 @media (max-width: 991px) {
 	#navbrand {
 		font-size: .9rem;
@@ -174,6 +172,23 @@ footer {
 	bottom: 3rem;
 	right: 15px;
 	display: none;
+}
+
+.card {
+	background-color: #4d4d4d !important;
+	image-rendering: -webkit-optimize-contrast;
+}
+
+.card-body {
+	padding: 1.25rem 1.25rem 1rem;
+}
+
+.card-footer .btn {
+	background-color: #1a212c !important;
+}
+
+.card-footer a {
+	color: #ffff !important;
 }
 
 /* betternavbarcss */

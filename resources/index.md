@@ -38,7 +38,7 @@ checked by the captains.
 
 | Unstarted | Started | Needs Checking | Finished |
 | --- | --- | --- | --- |
-| Lambdas and Functional Programming | Input / Output<br />Efficient Code<br />Tips<br />USACO<br />Resources Homepage<br /> | Computer Number Systspans<br />Recursive Functions<br />FSAs and Regular Expressions<br />What Does This Program Do?<br />Assspanbly<br />Bit-String Flicking<br />Boolean Algebra<br />Data Structures<br />ACSL Homepage<br />Digital Electronics<br />Graph Theory<br />LISP<br />Prefix/Infix/Postfix Notation<br />Streams API<br /> |  |
+| Lambdas and Functional Programming | Input / Output<br />Efficient Code<br />Tips<br />USACO<br />Resources Homepage<br /> | Computer Number Systems<br />Recursive Functions<br />FSAs and Regular Expressions<br />What Does This Program Do?<br />Assembly<br />Bit-String Flicking<br />Boolean Algebra<br />Data Structures<br />ACSL Homepage<br />Digital Electronics<br />Graph Theory<br />LISP<br />Prefix/Infix/Postfix Notation<br />Streams API<br /> |  |
 
 You can also suggest a new page to the captains. We'll consider adding it.
 
