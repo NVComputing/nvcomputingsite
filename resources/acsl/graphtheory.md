@@ -41,7 +41,7 @@ from vertex F to vertex E in the above graph.
 A *simple path* is a path with no vertex repeated. FGHE is an example of a simple path. The opposite of a simple path
 would be a *cycle*, a path where the first and last vertex are the same (essentially a path that points back to
 itself). ABDA is an example of a cycle. The same cycle can be depicted in multiple ways; for example, BDAB is the same
-as ABDA except that it starts on a different vertex.
+as ABDA except that it starts on a different vertex. Note: It is very important to be able to recognize whether two cycles are the same or not as identifying the number of distinct cycles in a graph is a commonly asked question.
 
 # Classifying Graphs
 
@@ -54,7 +54,7 @@ In many cases, there may not be an edge to connect a vertex to every other verte
 taken to get from one vertex to another.
 
 *Sparse* graphs are graphs that have relatively few edges present, whereas *dense* graphs have most edges present.
-*Complete* graphs have all edges present.
+*Complete* graphs have all edges present. All edges means that there is an edge connecting every pair of two vertices. 
 
 | Sparse | Dense | Complete |
 | --- | --- | --- |
@@ -71,6 +71,8 @@ A directed graph with no cycles can be referred to as a *dag*, which stands for 
 *Undirected graphs* are graphs where all edges can go both ways. So, they are essentially graphs where the edges
 all have dual arrows on both ends.
 
+Unless arrows are present on the edges, or the problem indicates it specifically, assume any graph given to you is an undirected graph.
+
 ## Weighted Graphs
 
 Weighted graphs are those where each edge has a numerical weight/cost associated with it. These weights are usually
@@ -86,8 +88,7 @@ between two countries.
 A *tree* is a graph that contains no cycles, meaning that there is only one path between any two nodes. A tree with
 *N* vertices has exactly *N-1* edges, unlike regular graphs, which can vary in how many edges they have.
 
-A *spanning tree* of a graph is a tree that connects all of the graph's vertices together. *Minimal spanning trees*
-are found in weighted graphs and are spanning trees that minimize the cost it takes to connect all vertices together.
+A *spanning tree* of a graph is a tree that contains all of the vertices of a graph. A *Minimal spanning tree* is the spanning tree that has the minimum cost, which is calculated by the sum of all the edges in the tree. Naturally, the minimal spanning tree can only be found in a weighted graph.
 
 A group of disconnected trees is called a *forest*.
 
@@ -124,17 +125,16 @@ To start off, our template matrix would look like so:
 
 Note that the letters are simply written as a reference; they are not part of the actual matrix.
 
-Then, we fill out our matrix with 0s and 1s, with 1 standing for if an edge between two specific vertices, from
-the vertex in the column to the vertex in the row, exists. So, for example, in the top right empty box, this would
-be filled out with a 1 because there is indeed an edge that goes from A to C.
+Then, we fill out our matrix with 0s and 1s, with 1 signifying that an edge connects the vertice in its column and row. So, for example, in the top right empty box, this would
+be filled out with a 1 because there is indeed an edge that goes from A to C. Pay careful attention to which box there is a `$1$` in for directed graphs as sometimes there is an edge connecting B to C but not C to B.
 
 So, the rest of the matrix will be filled out as follows:
 
 | | A | B | C |
 | --- | --- | --- | --- |
-| A | 1 | 0 | 1 |
-| B | 0 | 1 | 1 |
-| C | 1 | 0 | 0 |
+| A | `$1$` | `$0$` | `$1$` |
+| B | `$0$` | `$1$` | `$1$` |
+| C | `$1$` | `$0$` | `$0$` |
 
 ## Powers of a Matrix
 
@@ -219,7 +219,7 @@ So, the matrix squared would be:
 | C | 1 | 0 | 1 |
 
 So, there are 2 paths of length 2 that go from A to itself. There are no paths of length 2 that go from A to B. Similar
-conclusions can be made for the rest of the numbers.
+conclusions can be made for the rest of the numbers. if you were to find `$M^3$` or `$M^4$` instead, you would find the number of paths of lengths 3 and 4, respectively, that connect two given vertices. This idea is very useful when ACSL asks to find all cycles or paths of a certain lengths, since manually counting the number of paths is a tedious and error-prone process (See example question 3).
 
 # Sample Problems
 

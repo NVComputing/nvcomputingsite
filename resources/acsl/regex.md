@@ -145,7 +145,7 @@ It may take a bit to really understand why these identities are valid, but be su
 time. It's always better to reason with the logic behind each identity so that they become
 common sense rather than something you have to memorize.
 
-Although frankly, for most of these identities, they won't be any use at all. Just use these to get the hang of
+Although frankly, for most of these identities, memorizing them won't be much use at all. Just use these to get the hang of
 how regex works (treat them like practice for understanding regex logic). Don't even bother trying to memorize them.
 
 | Identity | Explanation |

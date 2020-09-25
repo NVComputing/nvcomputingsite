@@ -64,12 +64,12 @@ This works because of the truth table for XOR:
 
 | `$X$` | `$Y$` | `$X \oplus Y$` |
 | --- | --- | --- |
-| '$0$' | '$0$' | '$0$' |
-| 1 | '$0$' | 1 |
-| '$0$' | 1 | 1 |
-| 1 | 1 | '$0$' |
+| `$0$` | `$0$` | `$0$`|
+| 1 | `$0$` | 1 |
+| `$0$` | 1 | 1 |
+| 1 | 1 | `$0$` |
 
-We can see that the `$X \oplus Y$` bit is equal to `$X$` when `$Y$` is '$0$', and equal to `$\neg X$` when `$Y$` is 1.
+We can see that the `$X \oplus Y$` bit is equal to `$X$` when `$Y$` is `$0$`, and equal to `$\neg X$` when `$Y$` is 1.
 
 For more details on truth tables, or if you're confused about what a truth table is, check out our page on [Boolean Algebra](/resources/acsl/booleanalgebra).
 
@@ -81,8 +81,8 @@ Note that none of these operators change the length of the bit string.
 
 | Operator | Abbrev. | Description | Example |
 | --- | --- | --- | --- |
-| LSHIFT-x | LS-x | Each bit in the bit string is shifted over by *x* positions to the left. If its shift causes it to go out of bounds, that bit will be lost ("shifted out"); a '$0$' will be added at the other end (the right) to preserve bit string length. | `LS-2 01101`: The first two bits, `01`, are shifted out, leaving us with `101`. 2 zeros are then filled at the right end of the bit string, thus leaving us with `10100`.|
-| RSHIFT-x | RS-x | Each bit in the bit string is shifted over by *x* positions to the right. If its shift causes it to go out of bounds, that bit will be lost ("shifted out"); a '$0$' will be added at the other end (the left) to preserve bit string length. | `RS-3 01101`: The first three bits on the right, `101` are shifted out; now we have `01` left. 3 zeros are then filled at the left end of the bit string, thus leaving us with `00001`. |
+| LSHIFT-x | LS-x | Each bit in the bit string is shifted over by *x* positions to the left. If its shift causes it to go out of bounds, that bit will be lost ("shifted out"); a `$0$` will be added at the other end (the right) to preserve bit string length. | `LS-2 01101`: The first two bits, `01`, are shifted out, leaving us with `101`. 2 zeros are then filled at the right end of the bit string, thus leaving us with `10100`.|
+| RSHIFT-x | RS-x | Each bit in the bit string is shifted over by *x* positions to the right. If its shift causes it to go out of bounds, that bit will be lost ("shifted out"); a `$0$` will be added at the other end (the left) to preserve bit string length. | `RS-3 01101`: The first three bits on the right, `101` are shifted out; now we have `01` left. 3 zeros are then filled at the left end of the bit string, thus leaving us with `00001`. |
 | LCIRC-x | LC-x | Each bit in the bit string is shifted over by *x* positions to the left. If its shift causes it to go out of bounds, then that bit will circulate to the other end (the right) rather than being lost. | `LC-3 01101`: The first three digits circulate over to the other end of the bit string in order. The resulting bit string becomes `01011`. |
 | RCIRC-x | RC-x | Each bit in the bit string is shifted over by *x* positions to the right. If its shift causes it to go out of bounds, then that bit will circulate to the other end (the left) rather than being lost. | `RC-2 01011`: The first two digits on the right are circulated over to the other end of the bit string. So, `01011` becomes `11010`. |
 

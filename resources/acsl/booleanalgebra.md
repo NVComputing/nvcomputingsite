@@ -46,23 +46,20 @@ So, let's break down how exactly this truth table was drawn:
 
 First, a column was made for each of the variable terms. Under these columns,
 I listed out all possible combinations of values for X and Y. X and Y can both either
-be 0 or 1; together, they could form the pairs: `(0, 0)`, `(1, 0)`, `(0, 1)`, and `(1, 1)`.
+be `0` or `1`; together, they could form the pairs: `(0, 0)`, `(1, 0)`, `(0, 1)`, and `(1, 1)`.
 Each of these pairs should make up one row in the table. To know how many combinations a
 certain number of variables can make, use `$2^n$` (n being the number of variables).
 
-Then, a column was made for the actual expression itself. In this column, I wrote out all of the resultant values for each row. So, for example, in the first row (excluding the header labels), the values for X and Y were both 0. `X and Y` would thus be `0 and 0`, which simplifies down to `0`. Because of this, I put down a `0` for that row. I then did the same for the other rows.
+Then, a column was made for the actual expression itself. In this column, I wrote out all of the resultant values for each row. So, for example, in the first row, the values for X and Y were both `0`. `X and Y` would thus be `0 and 0`, which simplifies down to `0`. Because of this, I put down a `0` for that row. I then did the same for the other rows.
 
 And that's it! One thing to note is that when you get to longer expressions, it may be wise to break it down and use multiple columns. Let's say the expression was `X and Y or X`. This is how it could be set up:
 
-| | | A | |
+| `$X$` | `$Y$` | `$X$` AND `$Y$` | (`$X$` AND `$Y$`) OR `$X$` |
 | --- | --- | --- | --- |
-| `$X$` | `$Y$` | `$X$` & `$Y$` | `$A$` \| `$X$` |
-| 0 | 0 | 0 | 0 |
-| 1 | 0 | 0 | 1 |
-| 0 | 1 | 0 | 0 |
-| 1 | 1 | 1 | 1 |
-
-For this, I broke the expression into two smaller parts. I used `A` to symbolize `X and Y` simply because I didn't want to write out `X and Y or X` in the last column header.
+| `$0$` | `$0$` | `$0$` | `$0$` |
+| `$1$` | `$0$` | `$0$` | `$1$` |
+| `$0$` | `$1$` | `$0$` | `$0$` |
+| `$1$` | `$1$` | `$1$` | `$1$`|
 
 # Basic Operators
 
@@ -216,12 +213,12 @@ First off, let's simplify this expression:
 
 Now, we can set this final reduced expression to 1, since the problem asks us to find ordered pairs to make the expression true. Then, using a truth table, the solutions can be easily found:
 
-| X | Y | `$X + \overline{Y}$` |
-| --- | --- | --- |
-| 0 | 0 | 1 |
-| 1 | 0 | 1 |
-| 0 | 1 | 0 |
-| 1 | 1 | 1 |
+| X     | Y     | `$\overline{Y}$`|`$X + \overline{Y}$` |
+| ---   | ---   | ---             |---                  |
+| `$0$` | `$0$` | `$1$`           | `$1$`               |
+| `$1$` | `$0$` | `$1$`           | `$1$`               |
+| `$0$` | `$1$` | `$0$`           | `$0$`               |
+| `$1$` | `$1$` | `$0$`           | `$1$`               |
 
 So, as we can see here, the ordered pairs that would make the expression true are: `(0, 0)`, `(1, 0)`, and `(1, 1)`.
 

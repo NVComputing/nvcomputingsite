@@ -9,7 +9,7 @@
 
 Digital electronics is a way to visualize boolean algebra using drawn-out circuits (also
 known as logic gates). Be sure to make sure you understand all of the boolean operations;
-check out the [Boolean Algebra](/resources/acsl/booleanalgebra) page if needed.
+check out the [Boolean Algebra](/resources/acsl/booleanalgebra) page if needed. If you understand boolean algebra, you understand digital electronics.
 
 Do note that there may be multiple ways to display the same boolean expression.
 
@@ -45,19 +45,19 @@ may not necessarily be the same one that you may have taken, but it is just one 
 1. `$\overline{A}$`
 2. `$A + \overline{A}$`
 3. `$A \bullet (A + \overline{A})$`
-4. `$A \bullet (A + \overline{A}) , AY$` -> A comma was used to separate two chunks of the expression that have not been merged yet.
-5. `$(A \bullet (A + \overline{A})) + AY$` -> The two chunks have now been merged.
-6. `$(A \bullet (A + \overline{A})) + AY , (Y + Y)$`
-7. `$((A \bullet (A + \overline{A})) + AY) \bullet (Y + Y)$`
+4. `$A \bullet (A + \overline{A}) , AB$` -> A comma was used to separate two chunks of the expression that have not been merged yet.
+5. `$(A \bullet (A + \overline{A})) + AB$` -> The two chunks have now been merged.
+6. `$(A \bullet (A + \overline{A})) + AB , (B + B)$`
+7. `$((A \bullet (A + \overline{A})) + AB) \bullet (B + B)$`
 
 Now, this expression has to be simplified; knowing the laws from the [Boolean Algebra](/resources/acsl/booleanalgebra) page
 is essential.
 
-0. `$((A \bullet (A + \overline{A})) + AY) \bullet (Y + Y)$`
-1. `$((A \bullet 1) + AY) \bullet (Y + Y)$`
-2. `$(A + AY) \bullet (Y + Y)$`
-3. `$A \bullet (Y + Y)$`
-4. `$A \bullet Y$`
+0. `$((A \bullet (A + \overline{A})) + AB) \bullet (B + B)$`
+1. `$((A \bullet 1) + AB) \bullet (B + B)$`
+2. `$(A + AB) \bullet (B + B)$`
+3. `$A \bullet (B + B)$`
+4. `$A \bullet B$`
 
 Thus, our final answer is: `$AY$`.
 
@@ -77,14 +77,14 @@ be made to get the solution.
 | A | B | C | `$A + \overline{B} + \overline{C}$` | `$q \oplus C$` | `$A \bullet r$` |
 | --- | --- | --- | --- | --- | --- |
 | | | | q | r | |
-| 0 | 0 | 0 | 1 | 1 | 0 |
-| 1 | 0 | 0 | 1 | 1 | 1 |
-| 0 | 1 | 0 | 0 | 0 | 0 |
-| 0 | 0 | 1 | 0 | 1 | 0 |
-| 1 | 1 | 0 | 1 | 1 | 1 |
-| 1 | 0 | 1 | 1 | 0 | 0 |
-| 0 | 1 | 1 | 0 | 1 | 0 |
-| 1 | 1 | 1 | 1 | 0 | 0 |
+| `$0$` | `$0$` | `$0$` | `$1$`  | `$1$`  | `$0$` |
+| `$1$` | `$0$` | `$0$` | `$1$`  | `$1$`  | `$1$`  |
+| `$0$` | `$1$`  | `$0$` | `$0$` | `$0$` | `$0$` |
+| `$0$` | `$0$` | `$1$`  | `$0$` | `$1$`  | `$0$` |
+| `$1$`  | `$1$`  | `$0$` | `$1$`  | `$1$`  | `$1$`  |
+| `$1$`  | `$0$` | `$1$` | `$1$`  | `$0$` | `$0$` |
+| `$0$` | `$1$`  | `$1$`  | `$0$` | `$1$`  | `$0$` |
+| `$1$`  | `$1$`  | `$1$`  | `$0$` | `$0$` | `$0$` |
 
 So, there are 2 ordered 3-tuples that make the circuit true: `(1, 0, 0)` and `(1, 1, 0)`.
 
