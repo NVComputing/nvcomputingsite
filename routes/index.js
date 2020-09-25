@@ -2,7 +2,7 @@ let basepage = require('./basepage');
 let resources = require('./resources');
 let practice = require('./practice');
 let schedule = require('./schedule');
-let meetingsummaries = require('./meetingsummaries');
+let meetingsummaries = require('./meetings');
 
 // Load in all endpoints
 module.exports.set = (app) => {
