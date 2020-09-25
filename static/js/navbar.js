@@ -11,12 +11,14 @@ function navScroll() {
 
 	// Get the offset position of the navbar
 	let sticky = navbar.offsetTop;
-	if (window.pageYOffset > sticky) {
-		navbar.classList.add('sticky');
-		$('#back-to-top').fadeIn();
-	} else {
-		navbar.classList.remove('sticky');
-		$('#back-to-top').fadeOut();
+	if (window.innerWidth > 991) {
+		if (window.pageYOffset > sticky) {
+			navbar.classList.add('sticky');
+			$('#back-to-top').fadeIn();
+		} else {
+			navbar.classList.remove('sticky');
+			$('#back-to-top').fadeOut();
+		}
 	}
 }
 
