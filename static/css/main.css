@@ -130,6 +130,12 @@ footer {
 	padding-top: calc(3rem + 57.8px) !important;
 }
 
+@media (min-width: 991px) {
+	.header-offset {
+		padding-top: 3rem !important;
+	}
+}
+
 @media (max-width: 991px) {
 	#navbrand {
 		font-size: .9rem;
