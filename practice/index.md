@@ -1,10 +1,10 @@
 # Practice
 
-##This Week's Homework
+## This Week's Homework
 
-Google form: <span class="text-danger font-italic">Currently Unavailable</span>
+Questions: [Here](/practice/week1/problems)<!--span class="text-danger font-italic">Currently Unavailable</span-->
 
-Programming Question Link: <span class="text-danger font-italic">Currently Unavailable</span>
+Google Form: [Here](https://docs.google.com/forms/d/e/1FAIpQLScBeBbk3tkA4QXn4BQozSmF8PGJZP6Yg57tRyH8jFY4rwrHew/viewform?usp=sf_link) <!--span class="text-danger font-italic">Currently Unavailable</span-->
 
 ## Do your practice!
 
