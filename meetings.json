@@ -1,14 +1,20 @@
 [
     {
+      "title": "",
+      "description": "",
+      "img": "",
+      "link": ""
+    },
+    {
       "title": "Agenda 9/24",
       "description": "Registration, ACSL Contest 1, Practice.",
-      "img": "/res/meetingsummaries/agenda924.png",
+      "img": "agenda924.png",
       "link": "https://docs.google.com/presentation/d/1CVp5bVt4Q2uHMi-6wovxuSUk-8oaZKurs15yOaoe4F0/"
     },
     {
       "title": "Informational Meeting",
       "description": "Information for Members.",
-      "img": "/res/meetingsummaries/informationalMeeting.png",
+      "img": "informationalMeeting.png",
       "link": "https://docs.google.com/presentation/d/15y1uA5W0Wdx8CkxoDt_m8Necsr54K5zUoxAfxMQMh-g/"
     }
 ]

@@ -8,7 +8,7 @@
 <body class="line-numbers">
 	<div class="background-page">
 		<div class="navbar-wrapper pt-3"> {{> navbar }} </div>
-		<div class="container py-5">
+		<div class="container">
 			<div class="row align-items-center pb-5 header-offset">
 				<div class="col-lg-6 text-white">
 					<h1 class="font-weight-bold">NVHS Computing Team</h1>
@@ -22,7 +22,7 @@
 	<div class="container text-white" style="min-height: 60vh;">
 		<div class="row">
 			{{#each agenda}}
-				<div class="col-md-6 d-flex align-items-stretch my-3">
+				<div class="col-md-6 col-lg-4 d-flex align-items-stretch my-3">
 					<div class="card border-0">
 						<a href="{{ this.link }}" target="__blank">
 							<img class="card-img-top" src="{{ this.img }}" alt="{{ this.title }}">
