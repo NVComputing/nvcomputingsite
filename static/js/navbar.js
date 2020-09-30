@@ -14,8 +14,10 @@ function navScroll() {
 	if (window.innerWidth > 991) {
 		if (window.pageYOffset > sticky) {
 			navbar.classList.add('sticky');
+			navbar.classList.remove('unsticky');
 			$('#back-to-top').fadeIn();
 		} else {
+			navbar.classList.add('unsticky');
 			navbar.classList.remove('sticky');
 			$('#back-to-top').fadeOut();
 		}
