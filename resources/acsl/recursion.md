@@ -145,9 +145,8 @@ Here's an example:
 
 ```java
 public void mystery4(int nNum) {
-    if(nNum <= 0) {
+    if(nNum <= 0)
         return;
-    }
     mystery4(nNum - 1);
     for(int nI = 0; nI < nNum; nI++) {
         System.out.print("-");
@@ -165,16 +164,16 @@ each function call we make. Here's the process we can take:
 | Step | Reasoning |
 | --- | --- |
 | <img src="/res/acsl/recursion/stack1.png" class="img-fluid" /> | Our first call would of course be `mystery4(4)`. So, we add this call to our stack. |
-| <img src="/res/acsl/recursion/stack2.png" class="img-fluid" /> | Since `nNum` is not less than or equal to zero, we skip over the base case and move to line 5, which is a recursive call. So, we add this recursive call to the stack. The extra `4` added to the bottom element marks what line in that specific function call that we left off at. |
+| <img src="/res/acsl/recursion/stack2.png" class="img-fluid" /> | Since `nNum` is not less than or equal to zero, we skip over the base case and move to line 4, which is a recursive call. So, we add this recursive call to the stack. The extra `4` added to the bottom element marks what line in that specific function call that we left off at. |
 | <img src="/res/acsl/recursion/stack5.png" class="img-fluid" /> | Here, we fast-forwarded and created the rest of the stack until we finally met the base case, `nNum = 0`. |
 
 Now that the base case is reached, the real calculating can now begin.
 
 | Step | Reasoning |
 | --- | --- |
-| <img src="/res/acsl/recursion/stack4.png" class="img-fluid" /> | Since `nNum == 0`, we return back to the previous function call, `mystery4(1)`. Now that line 5 has been executed, we continue to execute the rest of the function starting from line 6. Based on the for loops, `-+` would be printed and be followed by a new line. |
-| <img src="/res/acsl/recursion/stack3.png" class="img-fluid" /> | Now that we have finished executing the rest of `mystery4(1)`, that is removed from the stack, and we move to `mystery4(2)`. The same idea applies; we execute the rest of the function starting from line 6 and print out `--++` with a new line. |
-| <img src="/res/acsl/recursion/stack2.png" class="img-fluid" /> | We move onto `mystery4(3)` and start from line 6. `---+++` is printed with a new line afterwards. |
+| <img src="/res/acsl/recursion/stack4.png" class="img-fluid" /> | Since `nNum == 0`, we return back to the previous function call, `mystery4(1)`. Now that line 4 has been executed, we continue to execute the rest of the function starting from line 5. Based on the for loops, `-+` would be printed and be followed by a new line. |
+| <img src="/res/acsl/recursion/stack3.png" class="img-fluid" /> | Now that we have finished executing the rest of `mystery4(1)`, that is removed from the stack, and we move to `mystery4(2)`. The same idea applies; we execute the rest of the function starting from line 5 and print out `--++` with a new line. |
+| <img src="/res/acsl/recursion/stack2.png" class="img-fluid" /> | We move onto `mystery4(3)` and start from line 5. `---+++` is printed with a new line afterwards. |
 | <img src="/res/acsl/recursion/stack1.png" class="img-fluid" /> | We are now onto the last element in our stack, `mystery4(4)`, which was our original function. `----++++` is printed with a new line. |
 
 So, ultimately, our final display from the call `mystery4(4)` gets us:
