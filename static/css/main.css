@@ -36,10 +36,10 @@ footer {
 .navbar-wrapper .navbar-custom {
 	max-width: 1200px;
 	margin: 0 auto;
-	/* -webkit-transition: all 0.3s ease 0s;
+	-webkit-transition: all 0.3s ease 0s;
 	-moz-transition: all 0.3s ease 0s;
 	-o-transition: all 0.3s ease 0s;
-	transition: all 0.3s ease 0s; */
+	transition: all 0.3s ease 0s;
 }
 
 @media (max-width: 1199px) {
@@ -58,7 +58,6 @@ footer {
 		-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 		width: 100%;
 		max-width: 100% !important;
-		transition: auto !important;
 	}
 }
 
@@ -71,30 +70,6 @@ footer {
 	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 	width: 100%;
 	max-width: 100% !important;
-	-webkit-animation: scale-up-hor-center 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	animation: scale-up-hor-center 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-@-webkit-keyframes scale-up-hor-center {
-	0% {
-		-webkit-transform: scaleX(0.4);
-		transform: scaleX(0.4);
-	}
-	100% {
-		-webkit-transform: scaleX(1);
-		transform: scaleX(1);
-	}
-}
-
-@keyframes scale-up-hor-center {
-	0% {
-		-webkit-transform: scaleX(0.4);
-		transform: scaleX(0.4);
-	}
-	100% {
-		-webkit-transform: scaleX(1);
-		transform: scaleX(1);
-	}
 }
 
 .navbar-toggler-custom {
@@ -128,6 +103,12 @@ footer {
 
 .header-offset {
 	padding-top: calc(3rem + 57.8px) !important;
+}
+
+@media (min-width: 991px) {
+	.header-offset {
+		padding-top: 3rem !important;
+	}
 }
 
 @media (max-width: 991px) {

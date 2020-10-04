@@ -145,9 +145,8 @@ Here's an example:
 
 ```java
 public void mystery4(int nNum) {
-    if(nNum <= 0) {
+    if(nNum <= 0)
         return;
-    }
     mystery4(nNum - 1);
     for(int nI = 0; nI < nNum; nI++) {
         System.out.print("-");
