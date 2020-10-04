@@ -11,7 +11,16 @@ module.exports.set = (app) => {
 		fs.readFile(path.join(__dirname, '../practice/index.md'), 'utf-8', function(err, data) {
 			if (err) throw err;
 			let renderedMarkdown = converter.makeHtml(data);
-			res.render('practice', {resource: renderedMarkdown});
+			res.render('practice', {
+				resource: renderedMarkdown,
+				title: "Practice | NV Computing Team",
+
+				markdown: true,
+				prism: true,
+				mathjax: true,
+
+				practicePage: true
+			});
 		});
 	});
 
@@ -27,7 +36,17 @@ module.exports.set = (app) => {
 					res.render('practice', { resource: converter.makeHtml(errorMd) });
 				});
 			} else {
-				res.render('practice', { resource: converter.makeHtml(data) });
+				let title = data.match(/#\s*(.*?)\s*\n/);
+				res.render('practice', {
+					resource: converter.makeHtml(data),
+					title: title[1] + " | NV Computing Team",
+
+					markdown: true,
+					prism: true,
+					mathjax: true,
+
+					practicePage: true
+				});
 			}
 		});
 	});

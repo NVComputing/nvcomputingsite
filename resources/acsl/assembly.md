@@ -6,8 +6,6 @@
 - [List of OPCODEs](#listofopcodes)
 - [Sample Problems](#sampleproblems)
 
-<br>
-
 # Introduction
 
 Many of us probably know that computers read instructions as `0`s and `1`s (binary); this is known as machine language.
@@ -30,7 +28,6 @@ being humanly possible to write (unlike machine code). It's applied in applicati
 
 As a note: ACSL defines its own assembly language. Assembly can vary in between implementations, but the basic
 ideas are the same.
-<br>
 
 # How It Works
 
@@ -55,8 +52,6 @@ an `=` sign is put before the data.
 Only OPCODEs that do not modify the LOC field have the option of using immediate data;
 these are marked in the "List of OPCODEs" section down below.
 
-<br>
-
 # List of OPCODEs
 
 Here are the general operations:
@@ -70,8 +65,8 @@ Here are the general operations:
 | MULT | No | The value of LOC is multiplied by ACC's value. The product becomes the new value of ACC. |
 | DIV | No | ACC's value is divided by the value of LOC. The quotient becomes the new value of ACC; decimals are rounded down to integers. |
 | BG | | This branch instruction will return to the instruction labeled with LOC if ACC's value is greater than 0 (hence B**G** for "greater"). So, if ACC's value is 3, and LOC is *TOP*, then the program will move back to the instruction labeled as *TOP*.|
-| BE | | This branch instruction will return to the instruction labeled with LOC if ACC's value is equal to 0 (hence B**E** for "equal"). |
-| BL | | This branch instruction will return to the instruction labeled with LOC if ACC's value is less than 0 (hence B**L** for "less"). |
+| BE | | This branch instruction will return to the instruction labeled with LOC if ACC's value is equal to `$0$` (hence B**E** for "equal"). |
+| BL | | This branch instruction will return to the instruction labeled with LOC if ACC's value is less than `$0$` (hence B**L** for "less"). |
 | BU | | This branch instruction will return to the instruction labeled with LOC regardless of what ACC's value is (hence B**U** for "unconditional"). |
 | READ | Yes | This essentially serves as a way to read user input into LOC. So, writing `READ X` will read for an input and store it into X. |
 | PRINT | No | This is exactly as it sounds; it prints the value of LOC. |
@@ -80,8 +75,6 @@ Here are the general operations:
 
 **Note that any read or arithmetic operations are, for some reason, defined by ACSL to be modulo 1,000,000.**
 This probably won't crop up in competition, but it's nice to know.
-
-<br>
 
 # Sample Problems
 
@@ -93,7 +86,7 @@ and any other variables that may have been defined in the program.
 
 | LABEL | OPCODE | LOC |
 | --- | --- | --- |
-| TEMP | DC | 0 |
+| TEMP | DC | `$0$` |
 | A | DC | 8 |
 | B | DC | -2 |
 | C | DC | 3 |
@@ -158,7 +151,7 @@ Look at the following table below to understand how the program changes over tim
 | LOAD | 1 | 1 | 8 |
 | SUB | 0 | 1 | 8 |
 
-Now that ACC is equal to 0, the branch instruction BE after SUB now applies,
+Now that ACC is equal to '$0$', the branch instruction BE after SUB now applies,
 thus taking us to DONE, where the value of W, or 8,
 is printed. The program then ends.
 

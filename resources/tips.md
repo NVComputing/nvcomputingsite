@@ -2,14 +2,13 @@
 ## Contents
 - [General Tips](#generaltips)
 - [Java-Specific Tips](#java)
-    - 
 
 # General Tips
 
 - It's always good to write your code in chunks (specifically as functions/methods, if applicable),
 as it is easy to lose track of what does what otherwise!
 It also makes testing easier, as it is harder to find an error in a
-large block of code than in a smaller block of code. 
+large block of code than in a smaller block of code.
 
 - Just because you are able to solve a problem does not
 necessarily mean that you have the best answer! Consider the efficiency of your program.
@@ -23,10 +22,6 @@ Think of time and space efficiency (read [this page](/resources/efficiency) for 
 
 - Greedy Algorithms are incredibly useful at the lower level and should always be searched for. A greedy algorithm essentially reduces a problem into a couple of simpler problems and finds the solution to each of these problems. This would be useful in problems where an individual has to find out how many values in array T are the sum of a subset from 0 to K in positive integer array R. You would solve this by doing a prefix sum on array R and binary searching for each value of T on it.
     - This is an example of a greedy algorithm that combines two efficient algorithms.
-
-
-
-<br>
 
 # Java
 

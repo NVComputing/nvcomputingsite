@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-expand-lg navbar-dark bg-dark top-navbar navbar-custom" id="navbar">
+	<div class="container">
+		<a href="/" class="navbar-brand d-block d-sm-none" id="navimgref-sm">
+			<img src="/res/nvct-logo.svg" alt="Neuqua Logo" id="navimg" class="img-fluid">
+		</a>
+		<a href="/" class="navbar-brand d-none d-sm-block" id="navimgref-lg">
+			<img src="/res/nvct-logo-h.svg" alt="Neuqua Logo" id="navimg" class="img-fluid">
+		</a>
+		<button class="navbar-toggler navbar-toggler-custom" type="button" data-toggle="collapse"
+		        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+		        aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+			<ul class="navbar-nav pull-right">
+				<li class="nav-item">
+					<a class="nav-link{{#if homePage}} active{{/if}}" href="/">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link{{#if resourcePage}} active{{/if}}" href="/resources">Resources</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link{{#if meetingsPage}} active{{/if}}" href="/meetings">Meetings</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link{{#if practicePage}} active{{/if}}" href="/practice">Practice</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link{{#if schedulePage}} active{{/if}}" href="/schedule">Schedule</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>

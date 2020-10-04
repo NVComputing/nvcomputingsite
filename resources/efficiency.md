@@ -1,9 +1,9 @@
 # Efficiency
 ## Contents
 - [General Tips](#generaltips)
-  - [Efficient ]
+  - [Efficient Code] (#writeefficientcode)
 - [Java](#java)
-  - [Efficient Java Code](#efficiency)
+  - [Efficient Java Code](#efficientjavacode)
 
 
 # General Tips
@@ -65,9 +65,6 @@ Those of you who took AP Computer Science A probably learned this later in the y
 
 # Java
 ## Efficient Java Code
-
-
-<br>
 
 # C++
 

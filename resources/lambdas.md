@@ -1,13 +1,11 @@
 # Lambdas and Functional Programming
 
 ## Contents
-- [Lambdas](lambdas)
-  - [What is a lambda?](whatisalambda)
-  - [How do I use it?](howdoiuseit)
-- [Functional Programming](functionalprogramming)
-  - [What is functional programming?](whatisfunctionalprogramming)
-
-<br>
+- [Lambdas](#lambdas)
+  - [What is a lambda?](#whatisalambda)
+  - [How do I use it?](#howdoiuseit)
+- [Functional Programming](#functionalprogramming)
+  - [What is functional programming?](#whatisfunctionalprogramming)
 
 # Lambdas
 

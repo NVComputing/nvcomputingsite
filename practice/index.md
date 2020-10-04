@@ -1,17 +1,16 @@
 # Practice
 
-[Solutions to Past Programming Problems](/practice/past-problems)
-##This Week's Homework
+## This Week's Homework
 
-Google form: <span style="color: #935000">*Currently Unavailable*</span>
+Questions: [Homework Problems - Week 1](/practice/week1/problems)<!--span class="text-danger font-italic">Currently Unavailable</span-->
 
-Programming Question Link: <span style="color: #935000">*Currently Unavailable*</span>
+Google Form: [Week 1 Homework Problems](https://docs.google.com/forms/d/e/1FAIpQLScBeBbk3tkA4QXn4BQozSmF8PGJZP6Yg57tRyH8jFY4rwrHew/viewform?usp=sf_link) <!--span class="text-danger font-italic">Currently Unavailable</span-->
 
 ## Do your practice!
 
 We will be keeping track of who does and who doesn't do their practice. This will greatly influence our decisions
 for who to bring to programming competitions and who to put on the senior team for ACSL, as students who
-do their work are most likely much more motivated and prepared for these events.
+do their work are most likely much more motivated and prepared for these events. You can view solutions to past problems here: [Solutions to Past Programming Problems](/practice/past-problems)
 
 ## Contents
 
