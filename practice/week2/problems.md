@@ -50,10 +50,14 @@ Given the mathematical function below, find `$f(15,18)$`.
 
 ### `$\begin{equation*}f(x,y) = \begin{cases}f(x+1,y-2)+f(y,x)+1 &\text{if $x < y$}\\f(f(\frac{x}{2},y),\frac{x}{2})-3 &\text{if $x = y$}\\x-y &\text{if $x > y$}\end{cases}\end{equation*}$`
 
+Express your answer as an integer.
+
 ## Challenge Question 2
 Given the mathematical function below, find `$f(20,15)$`.
 
 ### `$\begin{equation*}f(x,y) = \begin{cases}1 &\text{if $x + y = 2$}\\xy \bullet f(x-1, y) &\text{if $y = 1$ and $x > 1$}\\\frac{f(x,1)}{f(y,1) \bullet f(x-y, 1)} &\text{if $y > 1$}\end{cases}\end{equation*}$`
+
+Express your answer as an integer.
 
 ## Practice Programming Problem
 For this week, there is one problem:
