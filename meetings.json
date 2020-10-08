@@ -1,5 +1,11 @@
 [
     {
+      "title": "Agenda 10/7",
+      "description": "Local CodeForces Contest.",
+      "img": "agenda107.png",
+      "link": "https://docs.google.com/presentation/d/1tsqHs_PiNWpAW9r91dKSck8cB5FgqUPfi0nY735ScGU/"
+    },
+    {
       "title": "Agenda 10/1",
       "description": "Recursion, Fibonacci, Factorials, ACSL.",
       "img": "agenda101.png",
