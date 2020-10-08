@@ -62,7 +62,7 @@ Express your answer as an integer.
 ## Practice Programming Problem
 For this week, there is one problem:
 
-[Factorial](https://codeforces.com/problemset/problem/64/A)
+[Diverse Team](https://codeforces.com/contest/988/problem/A)
 
 Solve this problem and submit your answer to Codeforces (contact the captains if you have any issues with Codeforces).
 
