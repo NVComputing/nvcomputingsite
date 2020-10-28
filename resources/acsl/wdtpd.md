@@ -150,7 +150,7 @@ for J = len(A) - 1 to 0 step -1
     T = T + A[J]
 next
 for J = 0 to len(A) - 1
-    if A[J} == T[J] then NUM = NUM + 1
+    if A[J] == T[J] then NUM = NUM + 1
 next
 ```
 

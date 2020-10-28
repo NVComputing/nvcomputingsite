@@ -5,12 +5,12 @@
 Please contribute to the resources folder!
 
 # Credits:
-- Raymond Zhao - Website backend/infrastructure, website frontend, Markdown renderer, LaTeX and regex parser, page styling, and maintainer
+- Raymond Zhao - Website backend/infrastructure, formatting supervision, website frontend, Markdown renderer, LaTeX and regex parser, page styling, and maintainer
 - Anton Barchukov - Website frontend, navigation bar, Lightbox for images, page styling, HTML cleanup/partials
-- Kelly Hong - Heavy Contributor to Resources
-- Kenneth Zhao - Heavy Contributor to Resources
-- Nihal Shivannagari - Contributor to Resources
-- Nishikar Paruchuri - Contributor to Resources
+- Kelly Hong - Heavy Contributor to Resources / Practice
+- Kenneth Zhao - Heavy Contributor to Resources / Practice
+- Nihal Shivannagari - Contributor to Resources / Practice
+- Nishikar Paruchuri - Contributor to Resources / Practice
 
 # Guide to Contributing to Resources
 To contribute to resources, simply add your Markdown (`.md`) files to the `markdown` folder. 
