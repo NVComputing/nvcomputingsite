@@ -1,5 +1,23 @@
 [
     {
+      "title": "Agenda 10/22",
+      "description": "ACSL Practice and Registration.",
+      "img": "agenda1022.png",
+      "link": "https://docs.google.com/presentation/d/1U5qhBLIKLkFxNnhg_BjL7m7kUjxV85ioXYwQuPpBDIk/"
+    },
+    {
+      "title": "Agenda 10/15",
+      "description": "WDTPD, Programming Practice.",
+      "img": "agenda1015.png",
+      "link": "https://docs.google.com/presentation/d/18Zy70M02xjc0TRjT4jji_KkX6RQ9amcc7hUImQKBBUg/"
+    },
+    {
+      "title": "Agenda 10/8",
+      "description": "Local CodeForces Contest.",
+      "img": "agenda108.png",
+      "link": "https://docs.google.com/presentation/d/1tsqHs_PiNWpAW9r91dKSck8cB5FgqUPfi0nY735ScGU/"
+    },
+    {
       "title": "Agenda 10/1",
       "description": "Recursion, Fibonacci, Factorials, ACSL.",
       "img": "agenda101.png",

@@ -30,7 +30,7 @@ Given the mathematical function below, find the value of `$f(32, 14)$`.
 
 Note: `$\left \lfloor{x}\right \rfloor$` is the mathematical "floor" function, which asks you to round down to the nearest integer (for example, `$\left \lfloor{5.76}\right \rfloor = 5$`)
 
-### `$\begin{equation*}f(x, y) = \begin{cases}x y &\text{if $x \leq y$}\\f(3 \left \lfloor{\sqrt{x}}\right \rfloor, y + 1) &\text{if $x > y$}\end{cases}\end{equation*}$`
+### `$\begin{equation*}f(x, y) = \begin{cases}x y &\text{if $x \leq y$}\\f(3 \left \lfloor{\sqrt{x}}\right \rfloor, y + 1)-f(x/2, y+1) &\text{if $x > y$}\end{cases}\end{equation*}$`
 
 Express your answer as an integer.
 

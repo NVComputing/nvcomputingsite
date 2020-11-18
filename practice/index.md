@@ -2,13 +2,14 @@
 
 ## This Week's Homework
 
-Questions: [Homework Problems - Week 2](/practice/week2/problems)<!--span class="text-danger font-italic">Currently Unavailable</span-->
+Questions: [Homework Problems - Week 3](/practice/week3/problems)<!--span class="text-danger font-italic">Currently Unavailable</span-->
 
-Google Form: [Week 2 Homework Problems](https://forms.gle/g2q6DRWVhpuEQWvn8) <!--span class="text-danger font-italic">Currently Unavailable</span-->
+Google Form: [Week 3 Homework Problems](https://forms.gle/eHLAeb9h1DQXJhpM8) <!--span class="text-danger font-italic">Currently Unavailable</span-->
 
 ## Past Homework
 
 [Homework Problems - Week 1](/practice/week1/problems)
+[Homework Problems - Week 2](/practice/week2/problems)
 
 ## Do your practice!
 
