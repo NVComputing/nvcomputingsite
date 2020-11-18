@@ -211,6 +211,25 @@
       "link": "/practice/week1/problems",
       "hard": "true",
       "time": 1601578800
+    },
+    {
+      "name": "Finish Week 2 Homework Problems",
+      "link": "/practice/week2/problems",
+      "hard": "true",
+      "time": 1602183600
+    },
+    {
+      "name": "Finish Week 3 Homework Problems",
+      "link": "/practice/week3/problems",
+      "hard": "true",
+      "time": 1602788400
+    },
+    {
+      "name": "Finish Week 4 Programming Problems",
+      "link": "",
+      "hard": "true",
+      "time": 1605814000
     }
+
   ]
 }

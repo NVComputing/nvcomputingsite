@@ -1,5 +1,23 @@
 [
-    {
+  {
+    "title": "Agenda 11/12",
+    "description": "ACSL and Programming Practice.",
+    "img": "agenda1022.png",
+    "link": "https://docs.google.com/presentation/d/1gMCK6iNeof6Pp9cI1UwrIUQ1k4n__xXFwMMw_QhJ2lY/edit?usp=sharing"
+  },
+  {
+    "title": "Agenda 11/5",
+    "description": "USACO Practice.",
+    "img": "agenda1022.png",
+    "link": "https://docs.google.com/presentation/d/1N_Ki6bOSBjFuC7FNYbqzr_6OUYoMqiFFcDF7ZidOQCQ/edit?usp=sharing"
+  },
+  {
+    "title": "Agenda 10/29",
+    "description": "ACSL and Programming Practice.",
+    "img": "agenda1022.png",
+    "link": "https://docs.google.com/presentation/d/1kOInDTnY0ZWwV7baKmgxFs3ChW8PitwRgzG6tr2QPFU/edit?usp=sharing"
+  },
+  {
       "title": "Agenda 10/22",
       "description": "ACSL Practice and Registration.",
       "img": "agenda1022.png",
