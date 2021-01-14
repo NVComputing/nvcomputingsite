@@ -10,13 +10,12 @@ Answer the following problems, and submit your answers to the Google form linked
 ## Don't use:
 - Calculators
 - Online Resources
-- Friends (Because Nihal doesn't have any so it's an unfair advantage)
+- Friends
 
 ## Problem 1
 What would be printed?
 
-### 
-```
+```text
 Q=101: X=0: Y=1
 FOR A=1 TO Y
 	IF INT(Q/A)== Q/A THEN 
@@ -29,8 +28,7 @@ OUTPUT X*Y
 ## Problem 2
 What is the last value in the array?
 
-###
-```
+```text
 A(0)=32: A(1)=12: A(2)= 45: A(3)=4: A(4)= 14: A(5)=21: A(6)=22: A(7)=6: A(8)=39: A(9)=5
 C=5
 FOR X=0 TO 9
@@ -45,8 +43,7 @@ NEXT
 ## Problem 3
 Find the difference between the outputs for when the input is 40,40 and when the input is 35,30.
 
-### 
-```
+```text
 INPUT A, B
 C=0
 IF A>36 THEN
@@ -66,8 +63,7 @@ The next question is a challenge question. This means it is OPTIONAL. (They migh
 ## Challenge Question
 What would be printed?
 
-###
-```
+```text
 A=1476: B=1944
 IF A<B THEN
 C=B: B=A: A=C
@@ -77,7 +73,6 @@ WHILE B!=0
 END WHILE
 OUTPUT A
 ```
-
 
 ## Practice Programming Problem
 For this week, there is one problem:
