@@ -1,7 +1,5 @@
 let agenda = require('../meetings.json');
 
-console.log(agenda[0]);
-
 agenda.forEach(agendaSlide => {
 	if(!(agendaSlide.title)) {
 		let date = new Date();
