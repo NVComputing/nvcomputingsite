@@ -1,5 +1,35 @@
 [
     {
+      "title": "Agenda 2/18",
+      "description": "ACSL Short Answers Practice.",
+      "img": "agenda218.png",
+      "link": "https://docs.google.com/presentation/d/1OxL62pkt8ZNMgozmIxj0dK2ymroIjzr7WVOAwx1b4Bs/"
+    },
+    {
+      "title": "Agenda 2/11",
+      "description": "Contest 2 ACSL Prep, LISP.",
+      "img": "agenda211.png",
+      "link": "https://docs.google.com/presentation/d/1d08se9MvWeX9vNc7io5Ld-aMSE80UPT0_qB45m984wk/"
+    },
+    {
+      "title": "Agenda 1/28",
+      "description": "Bit String Flicking.",
+      "img": "agenda128.png",
+      "link": "https://docs.google.com/presentation/d/1878_K1ODeVvtxTgWaCuVuuuG6zGP9L88oIO4AVNjmO8/"
+    },
+    {
+      "title": "Agenda 1/14",
+      "description": "Pre, In, and Postfix Notation.",
+      "img": "agenda114.png",
+      "link": "https://docs.google.com/presentation/d/17T6QjnS2syO4y_EFMXNF_donSRzdMZ_IZcc-wArHdio/"
+    },
+    {
+      "title": "Agenda 12/17",
+      "description": "USACO Details.",
+      "img": "agenda1217.png",
+      "link": "https://docs.google.com/presentation/d/1bPErG4PFifno2h5tAQNCvsyVS033-OwxysnV-JoKwSg/"
+    },
+    {
       "title": "Agenda 12/03",
       "description": "ACSL Programming Practice.",
       "img": "agenda123.png",
