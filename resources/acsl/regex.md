@@ -121,7 +121,7 @@ Also, we'll go over the actual syntax in programming languages further down
 
 | Symbol | Meaning | Example | Matches | Doesn't Match |
 | --- | --- | --- | --- | --- |
-| `/*/` | This matches the preceding token **0 or more** times. | `/ba*/` | `b` `ba`, `baa`, `baaaaaa` | `bbaa`, `aaa` |
+| `/*/` | This matches the preceding token **0 or more** times. | `/ba*/` | `b`, `ba`, `baa`, `baaaaaa` | `bbaa`, `aaa` |
 | `/?/` | This matches the preceding token **0 or 1** times (basically, makes the previous token *optional*). | `/colou?r/` | `color`, `colour` | `coloer` |
 | `/+/` | This matches the preceding token **1 or more** times. Not to be confused with `/*/` - this requires at least one of the preceding token. | `/a+h/` | `ah`, `aaah`, `aaaaaah` (etc) | `h`, `aaahh` |
 
@@ -298,10 +298,151 @@ backslash in Java regex requires `\\\\`.)
 | `/\D/` | Matches a single character that DOESN'T match `/\d/` (isn't a digit from 0 to 9). (Opposite of `/\d/`, basically.) |
 | `/\W/` | Opposite of `/\w/`. |
 | `/\S/` | Opposite of `/\s/`. |
-| `/\b/` | A word boundary. Matches, without actually taking up any characters in the match, immediately between a character that matches `/\w/` and one that doesn't. Especially useful in conjunction with capturing groups (more details below, because this is incredibly hard to show using matches). | Usage Below | 
-| `/\B/` | Opposite of `/\b/` - matches, without actually taking up any characters in the match, immediately between two characters that match `/\w/`. |
+| `/\b/` | A word boundary. Matches, without actually taking up any characters in the match, immediately between a character that matches `/\w/` and one that doesn't. | `/.*\bis\b.*/` | `that is cool`, `is that cool` | `islands suck`, `israel isn't istanbul` |
+| `/\B/` | Opposite of `/\b/` - matches, without actually taking up any characters in the match, immediately between two characters that match `/\w/`. | `/.*\Bis\B.*/` | `bliss` | `this`, `that is cool` |
 
 ### Quantifiers
+
+`/+/`, `/*/`, `/?/`... you know them, you love them. They're included here again for the sake of completeness, along with a few other
+quantifiers that ACSL won't tell you about.
+
+| Symbol | Meaning | Example | Matches | Doesn't Match |
+| --- | --- | --- | --- | --- |
+| `/a+/` | Matches one or more of `a`. | `/a+h/` | `ah`, `aaah`, `aaaaaah` (etc) | `h`, `aaahh` |
+| `/a*/` | Matches one or more of `a`. | `/ba*/` | `b`, `ba`, `baa`, `baaaaaa` | `bbaa`, `aaa` |
+| `/a?/` | Matches zero or one of `a` (optional). | `/colou?r/` | `color`, `colour` | `coloer` |
+| `/a{n}/` | Matches exactly `n` of `a`. | `/\d{4}/` | `1234` | `231`, `52355` |
+| `/a{n,}/` | Matches exactly `n` **or more** of `a`. | `re{2,}` | `ree`, `reeee`, `reeeeeeeeeee` | `re`, `ee` |
+| `/a{n,m}/` | Matches `a` between `n` and `m` times (inclusive). | `we{2,4}` | `wee`, `weee`, `weeee` | `we`, `weeeee` |
+
+Now, there are also *lazy* and *possessive* quantifiers.
+
+Here's a very brief summary of both:
+
+#### Lazy Quantifiers
+
+You put a `?` behind a quantifier to make it lazy (i.e. `a+?`)
+
+Lazy quantifiers mean that in ambiguous situations, they will capture the *shortest* string possible (instead of the longest string possible, as is the default behavior).
+As this is a summary, I'll just show a brief example.
+
+```html
+<p>test</p>
+```
+
+Given this very brief snippet of HTML, this regular expression:
+`/<.*>/`
+
+will match the entire thing `<p>test</p>`, as it is between a `<` and a `>`,
+while this regular expression `/<.*?>/` (using a *lazy* quantifier) will only match `<p>`, as it will stop as soon as it possibly can.
+
+This does have its fair share of applications, but that's beyond the scope of this introduction.
+
+#### Possessive Quantifiers
+
+You put a `+` behind a quantifier to make it possessive (i.e. `a++`)
+
+Similar to greedy quantifiers, but even greedier. It refuses to share.
+
+This means that once it captures something, it will refuse to give it back.
+
+For example, given the following string:
+
+```none
+whyyyyyy
+```
+
+`/why+y/` will match.
+`/why++y/` will NOT match. The `y++` will eat every single y in the expression, and the final `y` will not get matched,
+leading to a complete match failure.
+
+This is mostly useful for improving the performance of your regular expression in situations where that matters (so basically,
+I'm saying that you're probably never going to use this. It's not nearly as useful as lazy quantifiers.)
+
+### Group Constructs
+
+Here comes the fun part!
+
+You might be wondering how to use a regular expression to parse input. (You're probably not, but whatever. I doubt
+anyone is reading this far anyway. If you read this, tell me on Discord and I'll gift you something if you're the first person. (This offer was posted on 3/24/2021. It's still open.))
+
+Say hello to the most basic of group constructs: the *capturing group*.
+
+`/()/`
+
+***Wait, isn't that just parenthesis?***
+
+Aha, you feeble-minded ASCL simp who is only here for the college credit. You fool. You moron.
+
+Unbeknownst to both you and ACSL, the parenthesis were serving a sinister function. They were *capturing*
+whatever was in them.
+
+This is by far the most useful thing for parsing using regular expressions.
+
+For example, let's say I have a problem. I want to find the area code of someone's phone number.
+
+I simply do this:
+`/(d{3})-d{3}-d{4}/`.
+
+This, unbeknownst to you, populates the first "group" of the regular expression with the first 3 digits.
+
+For example, if I matched this regular expression onto `123-456-7890`, we'd have `123` in the 1st group.
+
+The only other construct I'll be going over here is the non-capturing group: `/(?:something)/`
+This is literally treated the same as you would expect regular parenthesis to be. They don't capture anything,
+they literally just group. There's a bunch of other constructs that I won't go into at this time.
+
+If you would like to do a deep dive into regular expressions, you will begin finding incredibly alien terms, such as:
+
+- Catastrophic Backtracking
+- Negative/Postiive Lookaround Assertions
+- Backreferences and Relative Backreferences
+- Atomic Grouping
+- Regular Expression Recursion (note: I still don't understand why this is a thing. It will make your brain hurt.)
+- Subroutines
+
+I... well, you can learn about this if you want. Do you have to? No. Frankly, I'm just shocked you read this far.
+
+One last thing before you go: Some example code.
+
+## Example Code
+
+### Java
+
+```java
+//forget the import statements, just auto import, it's somewhere in java.util
+
+public class WhyAmIHere {
+    public static void main(String[] args) {
+        Pattern pattern = Pattern.compile("(\\d{3})-\\d{3}-\\d{4}";
+        Matcher matcher = pattern.matcher("123-456-7890");
+        
+        // you must call this in order for the regex search to be performed
+        if(matcher.find()) {
+            System.out.println(matcher.group(1)); // "123"
+        }
+        
+        // simpler regex for when you don't need groups
+        System.out.println("123-456-7890".matches("asdfgh")); // false
+    }
+}
+```
+
+### Python
+
+```python
+import re # or something
+
+phone_number = re.compile(r"(\d{3})-\d{3}-\d{4})")
+test = phone_number.search("123-456-7890")
+
+print(test.group(1)) # 123
+print(test.group()) # 123-456-7890
+```
+
+Like I said before, these use what's called different "flavors" of regular expressions - certain things are different, but
+all the core functionality is the same. Look up language documentation for more specific details.
+
 
 # Sample Problems
 
