@@ -208,7 +208,7 @@ This code is exactly equivalent to the above traditional for loop, except it loo
 And now you know the basics of how to use the Streams API!
 
 There are a few finer details I've glossed over here, like how streams of primitives work (they require a bit more caution. If you're
-interested, check out the IntStream class and similar classes, and the mapToInt() and toArray() functions. Or you can always just ask me in person.)
+interested, check out the IntStream class and similar classes, and the mapToInt() and toArray() functions. Or you can always just ask me in person. Over Discord. I'm probably gone by the time you read this.)
 
 ---
 *Author: Raymond Zhao*
