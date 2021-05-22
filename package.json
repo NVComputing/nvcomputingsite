@@ -18,7 +18,7 @@
   "homepage": "https://github.com/NVComputing/nvcomputingsite#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "hbs": "^4.1.1",
+    "hbs": "^4.1.2",
     "showdown": "^1.9.1",
     "timezone": "^1.0.23"
   },
