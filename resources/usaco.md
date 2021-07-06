@@ -18,10 +18,10 @@ USACO is a programming competition that occurs **4 times** during the year.
 
 (These dates are from last year, and are a rough estimate; they are not necessarily accurate for the 2020-2021 season.)_
 
-*   Dec 13-16: First Contest
-*   Jan 17-20: Second Contest
-*   Feb 21-24: Third Contest
-*   Mar 27-30: US Open
+*   Dec 18-21: First Contest
+*   Jan 22-25: Second Contest
+*   Feb 26-Mar 1: Third Contest
+*   Apr 2-5: US Open
 
 The first three contests are **identical in format**.
 
