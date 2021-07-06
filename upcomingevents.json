@@ -1,15 +1,6 @@
 {
   "upcomingEvents": [
     {
-      "name": "ProCom",
-      "link": "http://procom.mystrikingly.com/",
-      "time": 1615039200,
-      "pastDue": false,
-      "notPastDue": true,
-      "desc": "A Java programming competition in Chicago, where teams of 4 solve a multitude of problems with different difficulties.",
-      "tentative": true
-    },
-    {
       "name": "Generic Hackathon",
       "link": "https://hackathon.generic",
       "time": 1641038400,
