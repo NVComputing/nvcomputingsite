@@ -1,13 +1,13 @@
 {
   "upcomingEvents": [
     {
-      "name": "Generic Hackathon",
-      "link": "https://hackathon.generic",
-      "time": 1641038400,
+      "name": "Hack The Northeast Hackathon",
+      "link": "https://www.hackthenortheast.com/",
+      "time": 1642226400,
       "pastDue": false,
       "notPastDue": true,
-      "desc": "A generic hackathon.",
-      "tentative": false
+      "desc": "Hackathon with workshops and prizes.",
+      "tentative": true
     }
   ],
   "deadlines": [
