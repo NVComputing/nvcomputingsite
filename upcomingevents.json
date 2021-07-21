@@ -17,6 +17,15 @@
       "notPastDue": true,
       "desc": "A prestigious Programming Competition with 4 divisions",
       "tentative": true
+    },
+    {
+      "name": "Google Kickstart Round E",
+      "link": "https://codingcompetitions.withgoogle.com/kickstart/schedule",
+      "time": 1629689400,
+      "pastDue": false,
+      "notPastDue": true,
+      "desc": "Programming Competition hosted by Google",
+      "tentative": false
     }
   ],
   "deadlines": [
