@@ -8,6 +8,15 @@
       "notPastDue": true,
       "desc": "Hackathon with workshops and prizes.",
       "tentative": true
+    },
+    {
+      "name": "USACO (USA Computing Olympiad) Contest #1",
+      "link": "http://usaco.org/",
+      "time": 1639807200,
+      "pastDue": false,
+      "notPastDue": true,
+      "desc": "A prestigious Programming Competition with 4 divisions",
+      "tentative": true
     }
   ],
   "deadlines": [
