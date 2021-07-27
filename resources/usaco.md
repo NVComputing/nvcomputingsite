@@ -16,12 +16,12 @@ USACO is a multi-level online programming competition primarily focused on algor
 
 USACO is a programming competition that occurs **4 times** during the year.
 
-(These dates are from last year, and are a rough estimate; they are not necessarily accurate for the 2020-2021 season.)_
+(These dates are a rough estimate; they are not necessarily accurate for the 2021-2022 season.)
 
-*   Dec 18-21: First Contest
-*   Jan 22-25: Second Contest
-*   Feb 26-Mar 1: Third Contest
-*   Apr 2-5: US Open
+*   Dec 17-20: First Contest
+*   Jan 21-24: Second Contest
+*   Feb 25-28: Third Contest
+*   Apr 1-4: US Open
 
 The first three contests are **identical in format**.
 
@@ -45,7 +45,6 @@ Problems are submitted online, and can be coded using a variety of languages. Th
 - C
 - Python 2 (2.7.6)
 - Python 3 (3.4.0)
-- Pascal
 
 (If you’re using Java, **make sure there is no “package” line at the top of your code.**)
 
@@ -66,7 +65,7 @@ Your program must also **first get the sample case correct** before grading begi
 Once your program passes initial compilation and the sample test case, it will be run against all the test cases.
 There are a few codes for what caused a test case to fail.
 
-- `T`: Timeout (you are provided 4 seconds in Java / 2 seconds in every other language for your code to successfully run and return a solution)
+- `T`: Timeout (you are provided 4 seconds in Java and Python / 2 seconds in every other language for your code to successfully run and return a solution)
 - `!`: Runtime Error (typical runtime errors, but also includes exceeding the memory limit, which is rare, but may happen)
 - `X`: Wrong answer (your answer for the test case was incorrect)
 
@@ -145,6 +144,12 @@ To be successful in this level, you need to:
 *   Have skills in pattern recognition and problem solving
 
 # Input / Output
+
+**As of December 2020, the input/output method for USACO has been changed.**
+
+USACO now uses the standard input/output (i.e. System.in/System.out in java).
+
+**For contests before December 2020, read below:**
 
 In USACO, input/output is done in a very specific manner.
 
