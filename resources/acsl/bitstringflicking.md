@@ -50,13 +50,13 @@ not the whole bit string as one.
 | not | `$\sim$` or `$\neg$` | Logical negation is performed on each bit in the bit strings. 0s turn into 1s, and vice versa. | <div class="monospace"><div>`$\neg$`<br>=&nbsp;</div><div>`$10110$`<br>`$01001$`</div></div> |
 | and | & | A comparison is made between a bit and its corresponding bit (based on position) in the other bit string. If both bits are 1s, then the resultant bit will be a 1; otherwise, it will be 0. This is done for each bit in the bit strings.| <div class="monospace"><div><br>&<br>=&nbsp;</div><div>`$10001$`<br>`$01101$`<br>`$00001$`</div></div>|
 | or | \| | Similar to *and*, bits are compared with the bits in the other bit string. If at least one bit is a 1, then the resultant bit will be a 1. This is done for each bit in the bit strings. | <div class="monospace"><div><br>\|<br>=&nbsp;</div><div>`$101011$`<br>`$011001$`<br>`$111011$`</div></div> |
-| xor | `$\oplus$` | Again, this involves bit comparison. If one bit has a value of 0 while the other has a value of 1, then the resultant bit is 1, otherwise it is `$0$' (so basically, if the bits have different values, the result is 1). This is done for each bit in the bit strings. | <div class="monospace"><div><br>`$\oplus$`<br>=&nbsp;</div><div>`$101011$`<br>`$011001$`<br>`$110010$`</div></div>|
+| xor | `$\oplus$` | Again, this involves bit comparison. If one bit has a value of 0 while the other has a value of 1, then the resultant bit is 1, otherwise it is `$0$` (so basically, if the bits have different values, the result is 1). This is done for each bit in the bit strings. | <div class="monospace"><div><br>`$\oplus$`<br>=&nbsp;</div><div>`$101011$`<br>`$011001$`<br>`$110010$`</div></div>|
 
 Note: There is a shortcut for xor specifically - you can think of it like this:
 
 <div class="monospace"><div>&nbsp;&nbsp;<br><code>$\oplus$</code></div><div><code>$101011$</code><br><code>$011001$</code></div></div>
 
-For each bit, instead of comparing them individually, just look at the bits in the 2nd bit string with a `1`. *Toggle* (perform the NOT operation on) the bits corresponding to those `1`s in the first string to get your final bit string.
+<br>For each bit, instead of comparing them individually, just look at the bits in the 2nd bit string with a `1`. *Toggle* (perform the NOT operation on) the bits corresponding to those `1`s in the first string to get your final bit string.
 
 So for this example, we're toggling <code class="text-white">1</code>`01`<code class="text-white">01</code>`1`. After flipping the red bits, we have `$110010$`, which is exactly what the answer should be.
 
@@ -90,13 +90,14 @@ So, while SHIFTs may cause there to be different bits, CIRCs only change the ord
 
 Also, because of the way these operators work, you can significantly simplify operations depending on the length of the bit string.
 
-If SHIFT has a higher shift than the length of the string, obviously the entire string is shifted out and becomes just zeros.
-
-If CIRC has a shift that is a multiple of the string length, the shift leaves the bits in their original location (no effect).
-As a result, any CIRC x operations are equal to CIRC (bit length mod x) operations. That means you can divide the CIRC x by the bit length and just use the remainder as your CIRC.
+<ul>
+  <li>If SHIFT has a higher shift than the length of the string, obviously the entire string is shifted out and becomes just zeros.</li>
+  <li>If CIRC has a shift that is a multiple of the string length, the shift leaves the bits in their original location (no effect).
+      As a result, any CIRC x operations are equal to CIRC (bit length mod x) operations. That means you can divide the CIRC x by the bit length and just use the remainder as your CIRC.</li>
+</ul>
 
 For example, LCIRC-19 `10001` is just equivalent to LCIRC-4. This means that we can calculate that the resultant bit string
-is `00011` very quickly. (As a side note, you can simplify this even further: LCIRC-4 = RCIRC-1 on a bitstring with length 5, because 4 mod 5 is also -1 (and LCIRC-x is just RCIRC-(-x))).
+is `00011` very quickly. 
 
 # Sample Problems
 
@@ -106,42 +107,48 @@ Here are some sample problems that you can use to practice bit-string flicking. 
 
 This requires knowing all of the bit string operators and how they work. Refer to the Operators section if needed. 
 
-### 1. ((RS–1 (NOT (LC–1 10110))) OR (NOT (LC–1 (RS–1 01001)))) . (This is from North Hollywood ACSL.)
+### 1. ((RS–1 (NOT (LC–1 10110))) OR (NOT (LC–1 (RS–1 01001))))  
+
+(Note: This is from North Hollywood ACSL.)
 
 The following solution is broken down into smaller steps to help improve understanding:
 
-0. ((RS–1 (NOT (LC–1 10110))) OR (NOT (LC–1 (RS–1 01001))))
-1. ((RS–1 (NOT 01101)) OR (NOT (LC–1 (RS–1 01001))))
-2. ((RS–1 10010) OR (NOT (LC–1 (RS–1 01001))))
-3. (01001 OR (NOT (LC–1 (RS–1 01001))))
-4. (01001 OR (NOT (LC–1 00100)))
-5. (01001 OR (NOT 01000))
-6. (01001 OR 10111)
-7. **11111**
+0. (&ensp;(&ensp;RS–1 &emsp;(&ensp;NOT&emsp; **(&ensp;LC–1 10110&ensp;)**&ensp;)&ensp;) &emsp;OR &emsp;(&ensp;NOT &emsp;(&ensp;LC–1 &emsp;(&ensp;RS–1 01001&ensp;)&ensp;)&ensp;)&ensp;)
+1. (&ensp;(&ensp;RS–1 &emsp;**(&ensp;NOT 01101&ensp;)**&ensp;) &emsp;OR &emsp;(&ensp;NOT &emsp;(&ensp;LC–1&emsp; (&ensp;RS–1 01001&ensp;)&ensp;)&ensp;)&ensp;)
+2. (&ensp;**(&ensp;RS–1 10010&ensp;)** &emsp;OR &emsp;(&ensp;NOT&emsp; (&ensp;LC–1&emsp; (&ensp;RS–1 01001&ensp;)&ensp;)&ensp;)&ensp;)
+3. (&ensp;01001 &emsp;OR&emsp; (&ensp;NOT&emsp; (&ensp;LC–1&emsp;**(&ensp;RS–1 01001&ensp;)**&ensp;)&ensp;)&ensp;)
+4. (&ensp;01001&emsp; OR&emsp; (&ensp;NOT&emsp; **(&ensp;LC–1 00100&ensp;)**&ensp;)&ensp;)
+5. (&ensp;01001&emsp; OR&emsp; **(&ensp;NOT 01000&ensp;)**&ensp;)
+6. (&ensp;01001 &emsp;OR&emsp; 10111&ensp;)
+7. <u>**11111**</u>
 
-### 2. ((RC-14 (LC-23 01101)) | (LS-1 10011) & (RS-2 10111)) . (This is from the ACSL Wiki.)
+### 2. ((RC-14 (LC-23 01101)) | (LS-1 10011) & (RS-2 10111)) 
 
-Note that the CIRC operation involve circulating by multiple positions beyond one cycle. However, if you think about it, `LC-5 01101` is just `01101`, since one full cycle would have been done. So, accounting for these full cycles, `LC-23 01101` would go through 4 full cycles (since `23 // 5 = 4`); thus, it is equivalent to `LC-3 01101`.
+(Note: This is from the ACSL Wiki.)
+
+Note that the CIRC operation involves circulating by multiple positions beyond one cycle. However, if you think about it, `LC-5 01101` is just `01101`, since one full cycle would have been done. So, accounting for these full cycles, `LC-23 01101` would go through 4 full cycles (since `23 // 5 = 4`); thus, it is equivalent to `LC-3 01101`.
 
 A similar idea applies to `RC-14`. `RC-5` on a 5-bit bit string would just be 1 full cycle that doesn't have any impact on the bit string. So, `RC-14` would go through 2 full cycles (since `14 // 5 = 2`); so, it is equal to `RC-4` (for a 5-bit bit string, at least).
 
 Knowing this, we can now reduce our problem to simpler terms and then solve.
 
-0. ((RC-14 (LC-23 01101)) | (LS-1 10011) & (RS-2 10111))
+0. (&ensp;(&ensp;RC-14 &emsp;**(&ensp;LC-23 01101&ensp;)**&ensp;) &emsp;|&emsp; (&ensp;LS-1 10011&ensp;) &emsp;&&emsp; (&ensp;RS-2 10111&ensp;)&ensp;)
 
-1. ((RC-4 (LC-3 01101)) | (LS-1 10011) & (RS-2 10111))
+1. (&ensp;(&ensp;RC-4 &emsp;**(&ensp;LC-3 01101&ensp;)**&ensp;) &emsp;|&emsp; (&ensp;LS-1 10011&ensp;) &emsp;&&emsp; (&ensp;RS-2 10111&ensp;)&ensp;)
 
-2. ((RC-4 01011) | (LS-1 10011) & (RS-2 10111))
+2. (&ensp;**(&ensp;RC-4 01011&ensp;)** &emsp;|&emsp; (&ensp;LS-1 10011&ensp;) &emsp;&&emsp; (&ensp;RS-2 10111&ensp;)&ensp;)
 
-3. (10110 | (LS-1 10011) & (RS-2 10111))
+3. (&ensp;10110 &emsp;|&emsp; **(&ensp;LS-1 10011&ensp;)** &emsp;&&emsp; (&ensp;RS-2 10111&ensp;)&ensp;)
 
-4. (10110 | 00110 & (RS-2 10111))
+4. (&ensp;10110 &emsp;|&emsp; 00110 &emsp;&&emsp; **(&ensp;RS-2 10111&ensp;)**&ensp;)
 
-5. (10110 | 00110 & 00101)
+5. (&ensp;10110 &emsp;|&emsp; **00110 &emsp;&&emsp; 00101**&ensp;)
 
-6. (10110 | 00100)
+6. (&ensp;10110 &emsp;|&emsp; 00100&ensp;)
 
-7. **10110**
+7. <u>**10110**</u>
+
+Note the precedence in step 5; AND (&) comes before OR (|).
 
 ## Finding Possible Bitstrings
 
@@ -165,14 +172,16 @@ Many of these concepts are ripped straight from the [Boolean Algebra](/resources
 
 Now, using this table, please try the following problems:
 
-### 3. List all possible values of x (5 bits long) that solve the following equation: (LS-1 (10110 XOR (RC-3 x) AND 11011)) = 01100. (This is from the ACSL Wiki).
+### 3. List all possible values of x (5 bits long) that solve the following equation: (LS-1 (10110 XOR (RC-3 x) AND 11011)) = 01100. 
+
+(Note: This is from the ACSL Wiki.)
 
 Let's first mark `x` as `abcde`. Now, we can carry on:
 
-0. (LS-1 (10110 XOR (RC-3 abcde) AND 11011)) = 01100
-1. (LS-1 (10110 XOR cdeab AND 11011)) = 01100
-2. (LS-1 (10110 XOR cd0ab)) = 01100
-3. (LS-1 Cd1Ab) = 01100
+0. (&ensp;LS-1 &emsp;(&ensp;10110 &emsp;XOR&emsp; (&ensp;RC-3 abcde&ensp;) &emsp;AND&emsp; 11011&ensp;)&ensp;) &emsp;=&emsp; 01100
+1. (&ensp;LS-1 &emsp;(&ensp;10110 &emsp;XOR&emsp; cdeab AND 11011&ensp;)&ensp;) &emsp;=&emsp; 01100
+2. (&ensp;LS-1 &emsp;(&ensp;10110 XOR cd0ab&ensp;)&ensp;) &emsp;=&emsp; 01100
+3. (&ensp;LS-1 Cd1Ab&ensp;) &emsp;=&emsp; 01100
 4. d1Ab0 = 01100
 
 At this point, you can now solve for a few variables. `d` correlates with `0`. `1` correlates with `1`; notice that while variables are not involved, this is a good way to ensure that you correctly evaluated the bit string. (Note that it is also possible to have *no* answers, so if you're 100% sure you did everything correctly but two constants don't line up, there are *no solutions.* Typically ACSL has solutions, so you probably won't need to worry about this.) `A` is equal to 1; so, `a` is equal to `0`. `b` is equal to `0`, and the final `0` correlates with 0.
@@ -181,13 +190,15 @@ So, altogether, `a` = 0, `b` = 0, and `d` = 0. We don't know about `c` or `e`, b
 
 Thus, our answer is `x` = `00*0*`, with the `*` standing for any value (`0` or `1`). During the ACSL contest, you should write these solutions out manually (unless noted otherwise) as: `00000`, `00100`, `00001`, and `00101`.
 
-### 4. List all possible values of x (5 bits long) that solve the following equation: (LSHIFT-2 (RCIRC-3 (NOT x))) = 10100. (This is from someone else's Quizlet.)
+### 4. List all possible values of x (5 bits long) that solve the following equation: (LSHIFT-2 (RCIRC-3 (NOT x))) = 10100. 
+
+(Note: This is from someone else's Quizlet.)
 
 Again, we will mark `x` as `abcde`.
 
-0. (LSHIFT-2 (RCIRC-3 (NOT abcde))) = 10100
-1. (LSHIFT-2 (RCIRC-3 ABCDE)) = 10100
-2. (LSHIFT-2 CDEAB) = 10100
+0. (&ensp;LSHIFT-2 &emsp;(&ensp;RCIRC-3 &emsp;(&ensp;NOT abcde&ensp;)&ensp;)&ensp;) &emsp;=&emsp; 10100
+1. (&ensp;LSHIFT-2 &emsp;(&ensp;RCIRC-3 ABCDE&ensp;)&ensp;) &emsp;=&emsp; 10100
+2. (&ensp;LSHIFT-2 CDEAB&ensp;) &emsp;=&emsp; 10100
 3. EAB00 = 10100.
 
 Now, the chances that we calculated this correctly are fairly high since the last two bit pairs match correctly (`0` and `0`). So, `E` = 1, `A` = 0, and `B` = 1.

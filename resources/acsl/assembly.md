@@ -26,8 +26,8 @@ Since assembly languages are so low-level, it runs ridiculously quickly on all h
 being humanly possible to write (unlike machine code). It's applied in applications where performance is absolutely critical
 (which is why C++ compiles to it). Knowing it can help you understand how hardware (like the CPU) works.
 
-As a note: ACSL defines its own assembly language. Assembly can vary in between implementations, but the basic
-ideas are the same.
+**As a note: ACSL defines its own assembly language. Assembly can vary in between implementations, but the basic
+ideas are the same.**
 
 # How It Works
 
@@ -44,7 +44,7 @@ One line of an assembly language program is formatted as follows:
 The LABEL field is optional; when paired with the DC command,
 it serves as a way to declare a variable.
 Otherwise, it essentially "marks" a line that you may want to utilize later on.
-OPCODEs are uppercase reserved words that cannot be used as a label.
+OPCODEs are uppercase reserved words that cannot be used as a label. Meaning, for example, I cannot have a label called "ADD".
 
 The LOC field can either reference a label defined in a previous line
 or immediate data (data not stored in a "variable"). When using immediate data,
@@ -100,10 +100,10 @@ and any other variables that may have been defined in the program.
 
 This program defines 4 variables: TEMP, A, B, and C.
 
-The value of B (-2) is loaded into the ACC.
+The value of B (which is -2) is loaded into the ACC.
 The value of ACC is multiplied by C, or 3, and the new value of ACC becomes -6.
-Then, ACC holds a value of 2 (+8), -1 (/-2),
-and then -9 (-8). This value is then stored into TEMP; thus, TEMP has a value of -9.
+Then, ACC holds a value of 2 (added 8), -1 (divided by -2),
+and then -9 (subtracted 8). This value is then stored into TEMP; thus, TEMP has a value of -9.
 
 ## 2. What is printed in this program?
 
@@ -151,7 +151,7 @@ Look at the following table below to understand how the program changes over tim
 | LOAD | 1 | 1 | 8 |
 | SUB | 0 | 1 | 8 |
 
-Now that ACC is equal to '$0$', the branch instruction BE after SUB now applies,
+Now that ACC is equal to `$0$`, the branch instruction BE after SUB now applies,
 thus taking us to DONE, where the value of W, or 8,
 is printed. The program then ends.
 
@@ -161,7 +161,7 @@ As we said before, we inputted a 3 for Q. 2 ^ 3 = 8; so, this program prints 2 ^
 
 The equivalent Java code would look something like this:
 ```java
-int Q = 3; //not writing scanner for this lol
+int Q = 3; //not writing Scanner for this lol
 int W = 2;
 
 while (true) {

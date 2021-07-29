@@ -21,7 +21,7 @@
 
 # Introduction
 
-As many of us may know, booleans are an essential part of programming that can hold one of two values: `true` and `false`, which can be denoted as `1` and `0`. Booleans can take the form of either a variable (such as `s = true`) or an expression (like `$5 < 36$`, which evaluates to `true`). These are most often used in if statements (formatted as `if (boolean condition)`), another essential piece of programming that allows us to perform different functions for different conditions.
+As many of us may know, booleans are an essential part of programming that can hold one of two values: `true` and `false`, which can be denoted as `1` and `0` respectively. Booleans can take the form of either a variable (such as `s = true`) or an expression (like `$5 < 36$`, which evaluates to `true`). These are most often used in if statements (formatted as `if (boolean condition)`), another essential piece of programming that allows us to perform different functions for different conditions.
 
 Boolean algebra is needed for digital circuits that make up a computer's hardware. This is very useful if you're looking to understand how a computer works, given that computers talk entirely in `1`s and `0`s.
 
