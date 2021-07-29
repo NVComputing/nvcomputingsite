@@ -6,7 +6,7 @@
       "time": 1642226400,
       "pastDue": false,
       "notPastDue": true,
-      "desc": "Hackathon with workshops and prizes.",
+      "desc": "A hackathon with workshops and prizes.",
       "tentative": true
     },
     {
@@ -15,7 +15,34 @@
       "time": 1639807200,
       "pastDue": false,
       "notPastDue": true,
-      "desc": "A prestigious Programming Competition with 4 divisions",
+      "desc": "A prestigious programming competition with 4 divisions. You will have 3-5 hours to complete 3 problems.",
+      "tentative": true
+    },
+    {
+      "name": "USACO (USA Computing Olympiad) Contest #2",
+      "link": "http://usaco.org/",
+      "time": 1642831200,
+      "pastDue": false,
+      "notPastDue": true,
+      "desc": "A 3-day 0restigious programming competition with 4 divisions. You will have 3-5 hours to complete 3 problems.",
+      "tentative": true
+    },
+    {
+      "name": "USACO (USA Computing Olympiad) Contest #3",
+      "link": "http://usaco.org/",
+      "time": 1645855200,
+      "pastDue": false,
+      "notPastDue": true,
+      "desc": "A 3-day prestigious programming competition with 4 divisions. You will have 3-5 hours to complete 3 problems.",
+      "tentative": true
+    },
+    {
+      "name": "USACO (USA Computing Olympiad) US Open",
+      "link": "http://usaco.org/",
+      "time": 1648875600,
+      "pastDue": false,
+      "notPastDue": true,
+      "desc": "A 3-day prestigious programming competition with 4 divisions. You will have 3-5 hours to complete 3 problems.",
       "tentative": true
     },
     {
@@ -24,16 +51,103 @@
       "time": 1629689400,
       "pastDue": false,
       "notPastDue": true,
-      "desc": "Programming Competition hosted by Google",
+      "desc": "A programming competition hosted by Google. You will have 3 hours to complete 4 problems.",
       "tentative": false
+    },
+    {
+      "name": "Google Kickstart Round F",
+      "link": "https://codingcompetitions.withgoogle.com/kickstart/schedule",
+      "time": 1631984400,
+      "pastDue": false,
+      "notPastDue": true,
+      "desc": "A programming competition hosted by Google. You will have 3 hours to complete 4 problems.",
+      "tentative": false
+    },
+    {
+      "name": "Google Kickstart Round G",
+      "link": "https://codingcompetitions.withgoogle.com/kickstart/schedule",
+      "time": 1634385600,
+      "pastDue": false,
+      "notPastDue": true,
+      "desc": "A programming competition hosted by Google. You will have 3 hours to complete 4 problems.",
+      "tentative": false
+    },
+    {
+      "name": "Google Kickstart Round H",
+      "link": "https://codingcompetitions.withgoogle.com/kickstart/schedule",
+      "time": 1636858800,
+      "pastDue": false,
+      "notPastDue": true,
+      "desc": "A programming competition hosted by Google. You will have 3 hours to complete 4 problems.",
+      "tentative": false
+    },
+    {
+      "name": "ACSL Contest #1",
+      "link": "https://www.acsl.org/get-started/study-materials",
+      "time": 1642201200,
+      "pastDue": false,
+      "notPastDue": true,
+      "desc": "A national competition consisting of a short answer and programming portion. You will either compete in the Intermediate or Senior division.",
+      "tentative": false
+    },
+    {
+      "name": "ACSL Contest #2",
+      "link": "https://www.acsl.org/get-started/study-materials",
+      "time": 1646434800,
+      "pastDue": false,
+      "notPastDue": true,
+      "desc": "A national competition consisting of a short answer and programming portion. You will either compete in the Intermediate or Senior division.",
+      "tentative": false
+    },
+    {
+      "name": "ACSL Contest #3",
+      "link": "https://www.acsl.org/get-started/study-materials",
+      "time": 1649458800,
+      "pastDue": false,
+      "notPastDue": true,
+      "desc": "A national competition consisting of a short answer and programming portion. You will either compete in the Intermediate or Senior division.",
+      "tentative": false
+    },
+    {
+      "name": "ACSL Contest #4",
+      "link": "https://www.acsl.org/get-started/study-materials",
+      "time": 1652482800,
+      "pastDue": false,
+      "notPastDue": true,
+      "desc": "A national competition consisting of a short answer and programming portion. You will either compete in the Intermediate or Senior division.",
+      "tentative": false
+    },
+    {
+      "name": "ACSL Finals",
+      "link": "https://www.acsl.org/finals",
+      "time": 1653750000,
+      "pastDue": false,
+      "notPastDue": true,
+      "desc": "A national competition consisting of a short answer and programming portion. You will either compete in the Intermediate or Senior division. Participation is dependent on scores from the previous contests.",
+      "tentative": false
+    },
+    {
+      "name": "CodeWars",
+      "link": "https://codewarscentral.org/",
+      "time": 1646499600,
+      "pastDue": false,
+      "notPastDue": true,
+      "desc": "A team programming competition where you will be given 20-30 problems to solve.",
+      "tentative": true
     }
   ],
   "deadlines": [
     {
       "name": "Fill Out Registration Form",
-      "link": "https://docs.google.com/forms/d/e/1FAIpQLSf9bBhjK4qrUeaye6wQaPgaDY0_CZc7kVo5M5DOfr1SB7RMGw/viewform",
+      "link": "https://docs.google.com/forms/d/e/1FAIpQLSeNnhqH6O8lfEqyPLuCSTvvW4mdemlE7naNov3UCQKMEpR0nQ/viewform?usp=sf_link",
       "hard": false,
       "time": 1631822400
+    },
+    {
+      "name": "(Optional) Congressional App Challenge Submissions Due",
+      "link": "https://www.congressionalappchallenge.us/students/rules/",
+      "hard": true,
+      "time": 1635742800
     }
   ]
 }
