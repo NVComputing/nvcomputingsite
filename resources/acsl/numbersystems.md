@@ -32,13 +32,13 @@ All of these bases have a range that their digits work in. For example, for deci
 base numbers, the digits range from `0` to `9`; having a digit of `10` would not make
 much sense.
 
-Binary digits has a range of `[0, 1]`, octal with a range of `[0, 7]`, decimal with
+Binary digits have a range of `[0, 1]`, octal with a range of `[0, 7]`, decimal with
 `[0, 9]`, and hex with `[0, F]`. Notice that for hex, a letter is the upper bound. This
 is because to represent the numbers 10 to 15, we use letters instead of the actual
 number; so for example, 10 is denoted as `A`, 11 is denoted as `B`, and so on.
 
 With these ranges, notice that the upper bound is one less than the base; so, with binary,
-which is base 2, the upper bound is `$2 - 1 = 0$`. Also notice that all of them have a
+which is base 2, the upper bound is `$2 - 1 = 1$`. Also notice that all of them have a
 lower bound of 0.
 
 Moving on, a group of 3 bits make up a single octal digit; this is because `$111_2 =
@@ -51,12 +51,12 @@ How bases essentially work is like this:
 
 Say we have the number `$167_{10}$`. We refer to `7` as the ones digits, `6` as the tens
 digit, and `1` as the hundreds digit. In fact, `$167_{10}$` can be written as
-`$((1*100)+(6*10)+(7*1))_{10}$`, or `$((1*10^2)+(6*10^1)+(7*10^0)_{10})$`.
+`$((1*100)+(6*10)+(7*1))_{10}$`, or `$((1*10^2)+(6*10^1)+(7*10^0))_{10}$`.
 
 A similar idea applies to other bases. Let's say we have `$01101_2$`. However,
 instead of multiplying each digit by 10 to a certain power, we would multiply it by
 2 to a certain power since that's the base we're working with instead. So, `$01101_2$`
-is technically `$(0*2^4)+(1*2^3)+(1*2^2)+(0*2^1)+(1*2^0) = 0+8+4+0+1 = 13_{10}$`. Of couse, just like in base `$10$`, the leading `$0$` in `$01101_2$` could have been removed to become `$1101_2$`. While this evaluation used powers of 2, the overall
+is technically `$(0*2^4)+(1*2^3)+(1*2^2)+(0*2^1)+(1*2^0) = 0+8+4+0+1 = 13_{10}$`. Of course, just like in base `$10$`, the leading `$0$` in `$01101_2$` could have been removed to become `$1101_2$`. Note that while this evaluation used powers of 2, the overall
 calculation was in base 10.
 
 For best success in this category, it would be wise to know the following things:
@@ -150,10 +150,11 @@ If we wanted to convert a fraction from base 10 to a different base, the process
 complicated. Let's convert `7/8` to base 2 as an example.
 
 First off, let's convert this into a decimal once again; we would get `0.875`. Then, we will
-multiply this number by 2 (to be more general, the base that it's currently in); we would get
+multiply this number by 2 (to be more general, the base that we want to convert to); we would get
 `1.75`. However, instead of writing down `1.75`, we will want to write down the result of
-`$1.75 % 2$`, which is still `1.75` (in this case). We will now multiply this number by 2 again
-to get `3.5`. We will want to write down `$3.5 % 2$`, which is `1.5`. This process continues
+`$1.75$` % `$2$` (again, you would replace the 2 with whatever base you're converting to), 
+which is still `1.75` (in this case). We will now multiply this number by 2 again
+to get `3.5`. We will want to write down `$3.5$` % `$2$`, which is `1.5`. This process continues
 until we get a remainder of 0.
 
 For this sample problem, here's a summary of the steps we took:
@@ -169,9 +170,9 @@ at the first digit in particular; we have 3 1's. So, `$0.875_{10} = 0.111_2$`.
 If we were to generalize this entire process, we would have the following instructions:
 
 1. Convert the fraction into a decimal.
-2. Multiply this decimal by the current base it's in.
-3. Write down the result of `number % currentBase`.
-4. Repeat Steps 2-3 until `number % currentBase = 0`.
+2. Multiply this decimal by the base you want to convert to.
+3. Write down the result of `number % targetBase`.
+4. Repeat Steps 2-3 until `number % targetBase = 0`.
 5. Write down the first digits of the results from each multiplication step (except the last one). This will make up your new converted number.
 
 In the case that you have a mixed fraction, such as `19 4/5`, you would want to convert the whole
@@ -248,13 +249,12 @@ Here's an example (again, this will be in base 16):
 
 ## Division
 
-With division, the process of finding how many times the divisor fits into the dividend has an extra step to it.
+With division, the process of finding how many times the divisor (what you're dividing by) fits into the dividend (what you're dividing) has an extra step to it.
 
 I will jump right into an example, as it is easier to demonstrate while explaining for division in particular. We will
 do the operation, `$312_4 / 2_4$`. First off, we must remember what range of numbers we can work with: [0, 3] (because we're in base 4). 
 
-What
-would also be useful is to list out the results of `$2_4 \bullet 1_4$`, `$2_4 \bullet 2_4$`, and `$2_4 \bullet 3_4$`
+What would also be useful is to list out the results of `$2_4 \bullet 1_4$`, `$2_4 \bullet 2_4$`, and `$2_4 \bullet 3_4$`
 (which are `$2_4$`, `$10_4$`, and `$12_4$` respectively).
 
 Now, we can start. Refer to the table below.
@@ -264,7 +264,9 @@ Now, we can start. Refer to the table below.
 | <img src="/res/acsl/numsystems/div1.png" class="img-fluid" /> | This is the start of our problem. |
 | <img src="/res/acsl/numsystems/div2.png" class="img-fluid" /> | `$2_4$` belongs in `$3_4$` one time. `1` is put at the top, we do the needed subtraction, and `1` is carried down. We are now left with `11` at the bottom.|
 | <img src="/res/acsl/numsystems/div3.png" class="img-fluid" /> | `$2_4$` belongs in `$11_4$` two times since `$2_4 * 2_4 = 10_4$`. `10` is subtracted from `11` to get `1`, and the `2` is carried down. |
-| <img src="/res/acsl/numsystems/div4.png" class="img-fluid" /> | `$2_4$` belongs in `$12_4$` three times. `3` is put at the top, `12` is subtracted from `12` (since $2_4 * 3_4 = 12$), and we are left with a remainder of `0`. |
+| <img src="/res/acsl/numsystems/div4.png" class="img-fluid" /> | `$2_4$` belongs in `$12_4$` three times. `3` is put at the top, `12` is subtracted from `12` (since `$2_4 * 3_4 = 12$`), and we are left with a remainder of `0`. |
+
+If division is still a bit tricky for you, no worries! ACSL mainly focuses on addition/subtraction and sometimes multiplication, so you should be safe.
 
 # Sample Problems
 
@@ -297,6 +299,9 @@ Follow the table below:
 | <img src="/res/acsl/numsystems/prob3-4.png" class="img-fluid" /> | <img src="/res/acsl/numsystems/prob3-5.png" class="img-fluid" /> | |
 
 ## 4. Solve for `x` in the following equation: `$275_x=360_7$`.
+
+Now this problem is pretty cool. Before, we noted that `$01101_2$` is `$((0*2^4)+(1*2^3)+(1*2^2)+(0*2^1)+(1*2^0))_{10} = (0+8+4+0+1)_{10} = 13_{10}$`.
+We will use this concept to our advantage. 
 
 0. `$275_x=360_7$`
 1. `$2x^2 \; + \; 7x \; + \; 5 \; = \; 360_7$`

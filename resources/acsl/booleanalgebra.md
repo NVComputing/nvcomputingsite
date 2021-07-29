@@ -61,6 +61,8 @@ And that's it! One thing to note is that when you get to longer expressions, it 
 | `$0$` | `$1$` | `$0$` | `$0$` |
 | `$1$` | `$1$` | `$1$` | `$1$`|
 
+This way, I can just look at the `X` and `X AND Y` columns to get the values for the last column!
+
 # Basic Operators
 
 | Operator | How It's Denoted | Description |
@@ -95,7 +97,7 @@ The order that you write two separate terms in does not matter.
 
 ## Associative Law
 
-You can regroup terms in an expression without changing the value of the expression as long as the operators are the same. For example, `$(0 + 1) + 0$` is the same as `$(0 + (1 + 0)$`, as both would evaluate to `1`. However, `$(1 + 0) \bullet 0$` is not the same as `$1 + (0 \bullet 0)$`; they would return `0` and `1` respectively.
+You can regroup terms in an expression without changing the value of the expression <u>as long as the operators are the same</u>. For example, `$(0 + 1) + 0$` is the same as `$(0 + (1 + 0)$`, as both would evaluate to `1`. However, `$(1 + 0) \bullet 0$` is not the same as `$1 + (0 \bullet 0)$`; they would return `0` and `1` respectively.
 
 1. `$(x + y) + z = x + (y + z)$`
 2. `$(x \bullet y) \bullet z = x \bullet (y \bullet z)$`
@@ -144,6 +146,10 @@ Just like regular math, the distributive law can also apply to boolean algebra.
 2. `$(x + y) \bullet (p + q) = xp + xq + yp + yq$`
 3. `$(x + y)(x + z) = x + yz$`
 
+For the last law, a few extra laws were used to simplify the expression. From `$(x + y)(x + z)$`, we'd get `$xx + xy + xz + yz$`.
+We can then use the Idempotent Law to simplify this to `$x + xy + xz + yz$`. The next step does require the Absorptive Law, which you'll
+read down below. By rewriting the expression as `$x \bullet (1 + y + z) + yz$`, we can simplify everything down to `$x + yz$`.
+
 ## Absorptive Law
 
 The expressions below are reduced by "absorbing" like terms.
@@ -185,9 +191,11 @@ It may take a while to remember all of the laws, so take your time! Also make su
 
 0. `$\overline{\overline{A}(B + C)} \bullet B + \overline{B}$`
 1. `$(\overline{\overline{A}} + \overline{B + C}) \bullet B + \overline{B}$`  - this uses DeMorgan's Law
-2. `$A + \overline{B} \bullet \overline{C} \bullet B + \overline{B}$` - this uses DeMorgan's Law and Double Negation
-3. `$A + 0 \bullet \overline{C} + \overline{B}$` - this uses the Complement Law
-4. `$A + \overline{B}$` - this uses the Annihilator Law
+2. `$(A + \overline{B} \bullet \overline{C}) \bullet B + \overline{B}$` - this uses DeMorgan's Law and Double Negation
+3. `$AB + B \bullet \overline{B} \bullet \overline{C} + \overline{B}$` - this uses Distributive Law
+4. `$AB + 0 \bullet \overline{C} + \overline{B}$` - this uses the Complement Law
+5. `$AB + \overline{B}$` - this uses the Annihilator Law
+6. `$A + \overline{B}$` - this uses Absorptive Law
 
 ### Problem 2: `$$(X(X \bullet 1))(X + Y) + C$$`
 
@@ -198,18 +206,18 @@ It may take a while to remember all of the laws, so take your time! Also make su
 
 ## Find the Solutions
 
-These types of problems involve one extra step after simplifying the expression, as you have to consider what values for each term within the expression would make that expression true or false.
+These types of problems involve one extra step after simplifying the expression, as you have to consider what values for each term within the expression would make that expression true (= 1) or false (= 0).
 
 ### 3. Find all ordered pairs (X, Y) that make the following expression true: `$\overline{\overline{X + XY} \bullet Y} + X$`
 
 First off, let's simplify this expression:
 
 0. `$\overline{\overline{X + XY} \bullet Y} + X$`
-1. `$\overline{\overline{X} \bullet Y} + X$`
-2. `$\overline{\overline{X}} + \overline{Y} + X$`
-3. `$X + \overline{Y} + X$`
-4. `$X + X + \overline{Y}$`
-5. `$X + \overline{Y}$`
+1. `$\overline{\overline{X} \bullet Y} + X$` - Absorptive Law
+2. `$\overline{\overline{X}} + \overline{Y} + X$` - DeMorgan's Law
+3. `$X + \overline{Y} + X$` - Double Negation
+4. `$X + X + \overline{Y}$` - (Simply reformatted here for better understanding)
+5. `$X + \overline{Y}$` - Idempotent Law
 
 Now, we can set this final reduced expression to 1, since the problem asks us to find ordered pairs to make the expression true. Then, using a truth table, the solutions can be easily found:
 

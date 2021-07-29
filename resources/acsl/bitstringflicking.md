@@ -178,10 +178,10 @@ Now, using this table, please try the following problems:
 
 Let's first mark `x` as `abcde`. Now, we can carry on:
 
-0. (&ensp;LS-1 &emsp;(&ensp;10110 &emsp;XOR&emsp; (&ensp;RC-3 abcde&ensp;) &emsp;AND&emsp; 11011&ensp;)&ensp;) &emsp;=&emsp; 01100
-1. (&ensp;LS-1 &emsp;(&ensp;10110 &emsp;XOR&emsp; cdeab AND 11011&ensp;)&ensp;) &emsp;=&emsp; 01100
-2. (&ensp;LS-1 &emsp;(&ensp;10110 XOR cd0ab&ensp;)&ensp;) &emsp;=&emsp; 01100
-3. (&ensp;LS-1 Cd1Ab&ensp;) &emsp;=&emsp; 01100
+0. (&ensp;LS-1 &emsp;(&ensp;10110 &emsp;XOR&emsp; **(&ensp;RC-3 abcde&ensp;)** &emsp;AND&emsp; 11011&ensp;)&ensp;) &emsp;=&emsp; 01100
+1. (&ensp;LS-1 &emsp;(&ensp;10110 &emsp;XOR&emsp; **cdeab AND 11011**&ensp;)&ensp;) &emsp;=&emsp; 01100
+2. (&ensp;LS-1 &emsp;**(&ensp;10110 XOR cd0ab&ensp;)**&ensp;) &emsp;=&emsp; 01100
+3. **(&ensp;LS-1 Cd1Ab&ensp;)** &emsp;=&emsp; 01100
 4. d1Ab0 = 01100
 
 At this point, you can now solve for a few variables. `d` correlates with `0`. `1` correlates with `1`; notice that while variables are not involved, this is a good way to ensure that you correctly evaluated the bit string. (Note that it is also possible to have *no* answers, so if you're 100% sure you did everything correctly but two constants don't line up, there are *no solutions.* Typically ACSL has solutions, so you probably won't need to worry about this.) `A` is equal to 1; so, `a` is equal to `0`. `b` is equal to `0`, and the final `0` correlates with 0.
@@ -196,9 +196,9 @@ Thus, our answer is `x` = `00*0*`, with the `*` standing for any value (`0` or `
 
 Again, we will mark `x` as `abcde`.
 
-0. (&ensp;LSHIFT-2 &emsp;(&ensp;RCIRC-3 &emsp;(&ensp;NOT abcde&ensp;)&ensp;)&ensp;) &emsp;=&emsp; 10100
-1. (&ensp;LSHIFT-2 &emsp;(&ensp;RCIRC-3 ABCDE&ensp;)&ensp;) &emsp;=&emsp; 10100
-2. (&ensp;LSHIFT-2 CDEAB&ensp;) &emsp;=&emsp; 10100
+0. (&ensp;LSHIFT-2 &emsp;(&ensp;RCIRC-3 &emsp;**(&ensp;NOT abcde&ensp;)**&ensp;)&ensp;) &emsp;=&emsp; 10100
+1. (&ensp;LSHIFT-2 &emsp;**(&ensp;RCIRC-3 ABCDE&ensp;)**&ensp;) &emsp;=&emsp; 10100
+2. **(&ensp;LSHIFT-2 CDEAB&ensp;)** &emsp;=&emsp; 10100
 3. EAB00 = 10100.
 
 Now, the chances that we calculated this correctly are fairly high since the last two bit pairs match correctly (`0` and `0`). So, `E` = 1, `A` = 0, and `B` = 1.
