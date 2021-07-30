@@ -31,7 +31,7 @@ ACSL specifically focuses on stacks, queues, binary search trees, and priority
 queues. The general idea behind each is covered but not the actual details
 regarding how to implement them in programs.
 
-For programming, there is a much more useful section on data structures (TODO).
+For programming, there is a much more useful section on data structures (to come).
 
 # Stacks and Queues
 
@@ -54,9 +54,10 @@ In the case that the POP operation is called on an empty stack, then the variabl
 
 Queues, on the other hand, are often used to handle requests. It's similar to waiting in line (or a *queue*); the first people in line are processed first. Hence, queues follow a "first in, first out" (FIFO) order.
 
-The PUSH operation works the same as it would with stacks(the element is added to the top of the data structure). However, with POP, instead of removing the top (most recently added) element, queues have their bottom element removed.
+The PUSH operation works the same as it would with stacks (the element is added to the top of the data structure). However, with POP, instead of removing the top (most recently added) element, queues have their bottom element removed.
 
-A tip to handle both queue and stack related problems is to keep a list of all the elements, with the pushed elements being added to the top of the list. In a queue, cross off the bottom element, and in a stack cross of the top element. 
+A tip to handle both queue and stack related problems is to keep a list of all the elements, with the pushed elements being added to the top of the list. In a queue, cross off the bottom element, and in a stack cross off the top element. 
+
 # Trees
 
 ## Terminology
@@ -92,7 +93,7 @@ Note that the order you insert the nodes does matter, so if you were to switch o
 
 ### Deleting Nodes (Binary Search)
 
-In the case that a node needs to be deleted, there are three cases you must consider: the removed node has 0 children, 1 child, or 2 children. When there are no children, you can simply remove the node. When there is one child, move the child node and its children up to replace the parent node. When there are two children, move the left child and its children up to replace the parent node, and add on the right child and all of its children to the left child or its children, using the same comparison process as described above. Removing nodes generally involves some minor shifting because "less than or equal to" and "greater than" relationships between nodes still have to be considered for proper placement.
+In the case that a node needs to be deleted, there are three cases you must consider: if the removed node has 0 children, 1 child, or 2 children. When there are no children, you can simply remove the node. When there is one child, move the child node and its children up to replace the parent node. When there are two children, move the left child and its children up to replace the parent node, and add on the right child and all of its children to the left child or its children, using the same comparison process as described above. Removing nodes generally involves some minor shifting because "less than or equal to" and "greater than" relationships between nodes still have to be considered for proper placement.
 
 |# of Children | Original  | Deletion  | Description  |
 | --- | --- | --- | --- |
@@ -131,7 +132,7 @@ So, by following this pseudocode, we have now successfully found our desired nod
 
 ### Tree Traversal
 
-Often times, storing inputs(namely in USACO Silver problems) for programming problems in a tree data structure is very advantageous. The following are two algorithms to traverse the tree data structure to search for a given node.
+Often times, storing inputs (namely in USACO Silver problems) for programming problems in a tree data structure is very advantageous. The following are two algorithms to traverse the tree data structure to search for a given node.
 *   Depth-First-Search
     *   This technique is typically done with recursion and goes through each branch individually.
 *   Breadth-First-Search
@@ -174,7 +175,7 @@ See the table below to understand the differences between the two in more detail
 
 # Path Lengths
 
-Before moving further into priority queues, let's talk briefly about path lengths. In earlier sections, I addressed "layers"/"levels" of the tree; these can also be referred to as "depths". The root node has a depth of 0; the next layer has a depth of 1, and this continues to increment for subsequent, deeper layers.
+Before moving further into priority queues, let's talk briefly about path lengths. In earlier sections, we addressed "layers"/"levels" of the tree; these can also be referred to as "depths". The root node has a depth of 0; the next layer has a depth of 1, and this continues to increment for subsequent, deeper layers.
 
 *Internal path length* (IPL) is the sum of the depths of all nodes in the tree. *External path length* (EPL) is the sum of the depths of the nodes that can be added to the tree's current leaves. An easier way to calculate the EPL is with this formula: `EPL = IPL + 2n`, where `n` represents the number of nodes in the tree.
 
@@ -189,7 +190,7 @@ Priority queues are similar to binary search trees. Essentially, elements that h
 
 With deleting and finding items, they are limited to the first item/element. While they are more limited, that does not mean they are necessarily worse than binary search trees; in some situations, deleting and finding other items may not be very important and thus can be ignored.
 
-## Inserting Nodes (Priority Queues)
+## Inserting Nodes
 
 Priority queues are typically implemented using a *heap* data structure. When using a *min-heap*, the parent is always less than or equal to its children nodes; the root is the smallest element in the tree. Conversely, a *max-heap* is where the parent is greater than or equal to its children nodes, and the root is the largest element in the tree.
 
@@ -208,9 +209,9 @@ Take this table as an example on how to implement *AMERICAN* with a min-heap:
 | <img src="/res/acsl/datastructures/pqinsert7.png" class="img-fluid" /> | *A* (not the root) is added as a child of *C*. Since it is less than *C*, the two switch places. Since *A* has the same value as the root *A*, switching the two wouldn't be very useful, so the two *A*s can be kept as is. |
 | <img src="/res/acsl/datastructures/pqinsert8.png" class="img-fluid" /> | *N* is added as a child of *R* and starts the next row. Since it is less than *R*, the two switch places. *N* is greater than *I*, it does not move further up the heap. We have now finished constructing the tree. |
 
-## Deleting Nodes (Priority Queues)
+## Deleting Nodes 
 
-Just as a reminder, only the root can be deleted! To do so, replace the root with the rightmost node in the last node. Then, keep switching out the root with its smaller child (or larger child, if using max-heap) until the tree is finally valid. Make sure to make adjustions to the rest of the tree if needed.
+Just as a reminder, only the root can be deleted! To do so, replace the root with the rightmost node in the last node layer. Then, keep switching out the root with its smaller child (or larger child, if using max-heap) until the tree is finally valid. Make sure to make adjustions to the rest of the tree if needed.
 
 In the case that both of the root's children are smaller than the root itself, then choose the smallest child to replace the root with; of course, for max-heap, it would be that if both children are larger than the root, then the larger child should replace the root.
 
@@ -256,5 +257,4 @@ The internal path length would be `0 + 2(1) + 2(2) + 3 = 9`. The external path l
 
 ---
 
-Author: Kelly Hong
-Revisions: Raymond Zhao
+Authors: Kelly Hong, Raymond Zhao

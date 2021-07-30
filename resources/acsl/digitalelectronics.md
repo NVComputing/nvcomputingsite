@@ -59,7 +59,7 @@ is essential.
 3. `$A \bullet (B + B)$`
 4. `$A \bullet B$`
 
-Thus, our final answer is: `$AY$`.
+Thus, our final answer is: `$AB$`.
 
 ## 2. How many ordered 3-tuples (A, B, C) make the following circuit TRUE?
 <img src="/res/acsl/digitalelectronics/prob2.png" class="img-fluid" />
@@ -72,7 +72,8 @@ This circuit will first be written as a boolean expression for better ease of so
 4. `$A \bullet ((A + \overline{BC}) \oplus C)$`
 
 Broken up, this would become `$A \bullet ((A + \overline{B} + \overline{C}) \oplus C)$`. Now, a truth table can
-be made to get the solution.
+be made to get the solution. Note that the 4th and 5th columns are labeled with a `q` and `r` just to make avoid
+having to write the entire expression over again in the next column.
 
 | A | B | C | `$A + \overline{B} + \overline{C}$` | `$q \oplus C$` | `$A \bullet r$` |
 | --- | --- | --- | --- | --- | --- |
