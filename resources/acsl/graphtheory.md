@@ -41,7 +41,9 @@ from vertex F to vertex E in the above graph.
 A *simple path* is a path with no vertex repeated. FGHE is an example of a simple path. The opposite of a simple path
 would be a *cycle*, a path where the first and last vertex are the same (essentially a path that points back to
 itself). ABDA is an example of a cycle. The same cycle can be depicted in multiple ways; for example, BDAB is the same
-as ABDA except that it starts on a different vertex. Note: It is very important to be able to recognize whether two cycles are the same or not as identifying the number of distinct cycles in a graph is a commonly asked question.
+as ABDA except that it starts on a different vertex. 
+
+*Note: It is very important to be able to recognize whether two cycles are the same or not as identifying the number of distinct cycles in a graph is a commonly asked question.*
 
 # Classifying Graphs
 
@@ -54,7 +56,7 @@ In many cases, there may not be an edge to connect a vertex to every other verte
 taken to get from one vertex to another.
 
 *Sparse* graphs are graphs that have relatively few edges present, whereas *dense* graphs have most edges present.
-*Complete* graphs have all edges present. All edges means that there is an edge connecting every pair of two vertices. 
+*Complete* graphs have all edges present. 'All edges' means that there is an edge connecting every pair of vertices. 
 
 | Sparse | Dense | Complete |
 | --- | --- | --- |
@@ -88,7 +90,7 @@ between two countries.
 A *tree* is a graph that contains no cycles, meaning that there is only one path between any two nodes. A tree with
 *N* vertices has exactly *N-1* edges, unlike regular graphs, which can vary in how many edges they have.
 
-A *spanning tree* of a graph is a tree that contains all of the vertices of a graph. A *Minimal spanning tree* is the spanning tree that has the minimum cost, which is calculated by the sum of all the edges in the tree. Naturally, the minimal spanning tree can only be found in a weighted graph.
+A *spanning tree* of a graph is a tree that contains all of the vertices of a graph. A *minimal spanning tree* is the spanning tree that has the minimum cost, which is calculated by the sum of all the edges in the tree. Naturally, the minimal spanning tree can only be found in a weighted graph.
 
 A group of disconnected trees is called a *forest*.
 
@@ -123,9 +125,10 @@ To start off, our template matrix would look like so:
 | B | | | |
 | C | | | |
 
-Note that the letters are simply written as a reference; they are not part of the actual matrix.
+Note that the letters are simply written as a reference; they are not part of the actual matrix. 
+The letters written vertically represent starting locations. The letters written horizontally represent destinations.
 
-Then, we fill out our matrix with 0s and 1s, with 1 signifying that an edge connects the vertice in its column and row. So, for example, in the top right empty box, this would
+Then, we fill out our matrix with 0s and 1s, with 1 signifying that an edge connects the vertices in its column and row. So, for example, in the top right empty box, this would
 be filled out with a 1 because there is indeed an edge that goes from A to C. Pay careful attention to which box there is a `$1$` in for directed graphs as sometimes there is an edge connecting B to C but not C to B.
 
 So, the rest of the matrix will be filled out as follows:
@@ -187,7 +190,7 @@ This would then ultimately simplify to:
 ## Setting Up an Adjacency Matrix
 
 Now, with matrix multiplication, you can now set up adjacency matrices! This is how it works. Let's say we have the
-matrix M and would like to know how many paths of length 2 between two specific vertices. So, we would calculate
+matrix M and would like to know how many paths of length 2 exist between two specific vertices. So, we would calculate
  `$M^2$`, or `$M \bullet M$`. Our new numbers would get us our answer.
 
 Let's use the following graph once more:
@@ -240,7 +243,7 @@ So, in total, there are 3 different cycles in the graph.
 | D | 0 | 1 | 1 | 0 | 1 |
 | E | 1 | 0 | 1 | 1 | 1 |
 
-The drawn graph below is only one way to depict this matrix.
+The drawn graph below is only one way to depict this matrix. You can place the nodes anywhere you'd like.
 
 | Step | Graph |
 | --- | --- |

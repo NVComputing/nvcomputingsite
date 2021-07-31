@@ -51,7 +51,7 @@ will make more sense in the next few sections.
 
 There are two functions that can initialize variables: `SET` and `SETQ`. `SET` is set
 up as `(SET '*atomName* *value*)`. `SETQ` is very similar except the `'` mark before
-`atomName` is not needed.
+`atomName` is not needed. You can think of it as the `Q` standing for 'quotation mark' or something.
 
 See the table below:
 
@@ -79,8 +79,8 @@ See the following examples.
 | (SETQ p '(ADD 1 2 3 4)) | (ADD 1 2 3 4) | This simply sets the atom `'p` to be equal to `'(ADD 1 2 3 4)`. |
 | (ATOM 'p) | true | The `'` mark before `p` attests to the fact that it is indeed an atom. Hence, this function returns true. |
 | (ATOM p) | NIL | There is no `'` mark before `p`, so an evaluation is done to get us `(ADD 1 2 3 4)`, which is not an atom but a list. |
-| (EVAL 'p) | (ADD 1 2 3 4) | `'p` would first be evaluated to get `(ADD 1 2 3 4)`. However, it is not evaluated further because of the `'` mark. |
-| (EVAL p) | 10 | `'p` is evaluated to get `(ADD 1 2 3 4)`. Unlike the function, there is no `'` mark before `p`; so, `(ADD 1 2 3 4)` would be evaluated further to get us `10`. |
+| (EVAL 'p) | (ADD 1 2 3 4) | `'p` would first be evaluated because of the EVAL function to get `(ADD 1 2 3 4)`. However, it is not evaluated further because of the `'` mark. |
+| (EVAL p) | 10 | Because there is no `'` written before `p`, we would evaluate `p` to get `(ADD 1 2 3 4)`. Then, we have the extra step of evaluating `(ADD 1 2 3 4)` because of the EVAL function; so, `(ADD 1 2 3 4)` would be evaluated further to get us `10`. |
 
 # List Functions
 
@@ -95,6 +95,7 @@ These two functions are likely the two most famous functions in LISP.
 `CAR` takes in an argument that must be a list. Then, it returns the first
 atom in that list. `CDR` (pronounced as could-er, if you were wondering) takes in its
 list argument and returns that list argument without its first element.
+(Well technically, these two take in an atom that represents a list, hence the `'` that you'll see in the examples below)
 
 These two functions are both used to grab specific elements in a list, which is why they
 are very useful. Often times, you may need to call on `CAR` and/or `CDR` multiple
@@ -115,7 +116,7 @@ Here are a few other examples:
 ## CONS and REVERSE
 
 `CONS` essentially works as an insert function. It takes in two arguments; the second
-argument must be a list. `CONS` will then insert the first argument to be the new
+argument must be a list (or technically, an atom representing a list). `CONS` will then insert the first argument to be the new
 first element of that list and then return the new list.
 
 `REVERSE` is exactly as it sounds; it takes in a list and reverses the order. Note that
@@ -129,7 +130,7 @@ Refer to the table below for examples:
 | (CONS 'red '(white blue)) | (red white blue) | The atom `'red` is inserted into the start of the list to get a new list, `(red white blue)`. |
 | (SETQ z (CONS '(red white blue) (CDR '(This is a list)))) | ((red white blue) is a list) | The `CDR` function call should be handled first; `This` is removed from the argument list to get `(is a list)`. Then, `'(red white blue)` is to be inserted into this list. The elements are inserted into the list as an inner list; they do not become part of the larger list. So, the new list becomes `((red white blue) is a list)`. `'z` is then finally initialized with this list. |
 | (REVERSE z) | (list a is (red white blue)) | Note how `(red white blue)` did not become `(blue white red)`. This is because `REVERSE` only applies to the outer list, `z`, and any inner lists contained in `z`. |
-| (CDDAR z) | (blue) | While the `REVERSE` function was used on `z` before, remember that list functions don't change the actual list. So, `(CDDAR z)` works with `((red white blue) is a list)`. First, `CAR` runs to get us `(red white blue)`. Then, we call on `CDR` twice. The first time gets us `(white blue)`. The second time gets us `(blue)`. Notice how even though there is only one element in the list, `CDR` still returns a list and not just the atom itself. |
+| (CDDAR z) | (blue) | While the `REVERSE` function was used on `z` before, remember that **list functions don't change the actual list; they simply return a new revised list**. So, `(CDDAR z)` works with `((red white blue) is a list)`. First, `CAR` runs to get us `(red white blue)`. Then, we call on `CDR` twice. The first time gets us `(white blue)`. The second time gets us `(blue)`. Notice how even though there is only one element in the list, `CDR` still returns a list and not just the atom itself. So yes, `(blue)` and `blue` are not the same. |
 
 # Arithmetic Functions
 
@@ -148,8 +149,7 @@ are very indicative of what they do. All of them return atoms. Take a look:
 | (POS a) | 1 | `true` if `a` is positive, `NIL` otherwise |
 | (NEG a) | 1 | `true` if `a` is negative, `NIL` otherwise |
 
-The `ADD`, `SUB`, `MULT`, and `DIV` functions can be written with `+`, `-`, `*`, and
-`/` if you'd like.
+The `ADD`, `SUB`, `MULT`, and `DIV` functions can be written with your regular `+`, `-`, etc. symbols if you'd like.
 
 # Defining Your Own Functions
 
@@ -164,9 +164,12 @@ parameter.
 
 Here's an example of a defined function:
 
-`(SETQ X '(a c s l))`
-`(DEF WHAT(args) (CONS args (REVERSE (CDR args))))`
-`(WHAT X)` - returns `((a c s l) l s c)`
+```none
+(SETQ X '(a c s l))
+(DEF WHAT(args) (CONS args (REVERSE (CDR args))))
+(WHAT X)
+```
+This would return `((a c s l) l s c)`.
 
 Here, `'X` is first initialized as `(a c s l)`. `'X` is then used as the parameter of
 our defined `WHAT` function. First, we use the `CDR` function on `'X` to get
@@ -178,7 +181,7 @@ So, we are left with `((a c s l) l s c)`.
 
 As you work through these problems, it is crucial that you keep track of parentheses!
 
-## 1. Evaluate the following expression: `CADDAADR (apple ((banana coconut durian elderberry fig) grape huckleberry))`
+## 1. Evaluate the following expression: `CADDAADR '(apple ((banana coconut durian elderberry fig) grape huckleberry))`
 
 Here are the steps to solving this problem:
 
@@ -188,7 +191,7 @@ Here are the steps to solving this problem:
 3. `CADDR '(banana coconut durian elderberry fig)`
 4. `CADR '(coconut durian elderberry fig)`
 5. `CAR '(durian elderberry fig)`
-6. **`'durian`**
+6. **`durian`**
 
 ## 2. With the code block below, evaluate what the last line of code would return.
 
@@ -201,7 +204,7 @@ Here are the steps to solving this problem:
 
 Here, pay close attention to the `'` marks as well as parentheses.
 
-First `'X` is initalized the the list `(pencil giraffe revolution drawer)`. Then,
+First `'X` is initalized as the list `(pencil giraffe revolution drawer)`. Then,
 `'X` is re-initialized in the next line; let's look at
 `(CONS '(ADD (MULT 2 3) (DIV 12 4)) X)` first. Because of the `'` mark,
 `(ADD (MULT 2 3) (DIV 12 4))` is not evaluated further. It is then inserted at the
@@ -213,7 +216,7 @@ The next step is initializing `'B`. `(CAR X)` would get us
 
 Finally, we get to the last line. `'B` is first evaluated to get
 `(ADD (MULT 2 3) (DIV 12 4))`. This is not evaluated further because of the `'` mark.
-So, our final answer is **`(ADD (MULT 2 3) (DIV 12 4))`.
+So, our final answer is **`(ADD (MULT 2 3) (DIV 12 4))`**.
 
 ## 3. With the function definitions below, what would be the value of the following: `(WG (DR (WG '((us ru fr) ch uk jp))))`.
 
@@ -224,11 +227,11 @@ So, our final answer is **`(ADD (MULT 2 3) (DIV 12 4))`.
 
 This problem will involve going back and forth between the two functions multiple times.
 
-First, let's look at our expression again: `(WG (DR (WG '((us ru fr) ch uk jp))))``.
+First, let's look at our expression again: `(WG (DR (WG '((us ru fr) ch uk jp))))`.
 
 To start off, we need to evaluate `(WG '((us ru fr) ch uk jp))`. So, we pass the
 list down as an argument, and after plugging it into the actions defined in the `WG`
-function, we have `(CONS '((no one)(knows why)) '(DR ((us ru fr) ch uk jp)))`.
+function, we have `(CONS '((no one)(knows why)) (DR ((us ru fr) ch uk jp)))`.
 
 Now, we have to jump to the `DR` function. `CAR '((us ru fr) ch uk jp)` would be
 `(us ru fr)`; this is then reversed to get `(fr ru us)`. This list is then returned;
@@ -236,7 +239,7 @@ we are now left with `(CONS '((no one)(knows why)) '(fr ru us))`, which evaluate
 `(((no one)(knows why)) fr ru us)`.
 
 So that's one step done. We now have `(WG (DR (((no one)(knows why)) fr ru us)))` left.
-We will calculate (DR (((no one)(knows why)) fr ru us)).
+We will calculate `(DR (((no one)(knows why)) fr ru us))`.
 `CAR '(((no one)(knows why)) fr ru us)` would give us `((no one)(knows why))`. Then,
 the reversed version of this would be `((knows why)(no one))`.
 
@@ -247,6 +250,10 @@ The reverse of that would be `(why knows)`.
 
 So, we are down to `(CONS '((no one)(knows why)) '(why knows))`. This would get us
 to our final answer, **`(((no one)(knows why)) why knows)`**.
+
+A bit complicated yes, but as long as you keep track of parentheses and order, you'll be fine. 
+Feel free to space out the parentheses or distinguish sets of parentheses with different colors
+if that helps you organize things better.
 
 ---
 Author: Kelly Hong

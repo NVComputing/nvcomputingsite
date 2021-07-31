@@ -7,6 +7,9 @@
   - [Syntax](#syntax)
   - [Identities](#identities)
 - [Regex in Programming](#regexinprogramming)
+  - [Example Use](#exampleuse)
+  - [Syntax (Again)](#syntaxagain)
+  - [Example Code](#examplecode)
 - [Sample Problems](#sampleproblems)
 
 # Introduction
@@ -38,7 +41,7 @@ active.
 The *initial state* has an arrow pointing toward it from nowhere (i.e. this arrow does not come from any other
 state). The *final state* is marked as a double circle.
 
-To go from one state to another, we have *transition rules*, which are shown as labeled edges.
+To go from one state to another, we have *transition rules*, which are shown as labeled edges (the arrows labeled with `x`s and `y`s).
 Transition rules can also go from one state to itself; however, these rules may occur 0 or more
 times.
 
@@ -47,13 +50,13 @@ Here's an example FSA that parses Strings that consist of x's and y's:
 <img src="/res/acsl/regex/fsa.png" class="img-fluid"/>
 
 Here, we have *A*, *B*, and *C* as our states. *A* is the initial state whereas *C* is the final
-state. There are transition rules that exist between either two different state or a state and
+state. There are transition rules that exist between either two different states or a state and
 itself.
 
 To go from state A to state B, the FSA must "see" the letter *x* in the input String. Then,
 when it gets to state B, there are two options. If the FSA sees an *x*, then *B* will stay as
 the active state; if it sees a *y*, then the FSA will move to *C*, which becomes the new active
-state. Any additional *y*(s) will keep *C* as the active state.
+state. Any additional *y*'s will keep *C* as the active state.
 
 Once the string has been completely processed, it will be deemed as **accepted** by the FSA
 as long as the FSA is at the final state.
@@ -86,10 +89,6 @@ ACSL chose to cover them.
 
 In regex, a string *matches* if it can be represented completely by a regex.
 
-In the Matches column, commas have been used to separate possible
-matches. So, for example, `a`, `b` is not a literal match; `a` and `b` are the actual 
-possible matches.
-
 ACSL presents these symbols in a long list; however, it is easier to understand if you classify them into different classes.
 
 - **Tokens** - These are things that literally match a part of the string. For example, `/a/`
@@ -101,8 +100,8 @@ You might've also noticed the syntax highlighting of the regex on this page.
 Here's how the highlighting is done for each class: (This is in accordance with IntelliJ's Darcula theme.)
 
 - **Tokens** - Regular, literal string tokens (like just `/a/`) are green.
-However, special tokens, like `/./`, ranges `/[A-Za-z]/`, and other
-tokens with special meanings that aren't *match literally just what this token says*, are highlighted in yellow.
+However, special tokens (like `/./`), ranges (e.g `/[A-Za-z]/`), and other
+tokens whose meanings aren't just *match literally just what this token says*, are highlighted in yellow.
 - **Quantifiers** - These are highlighted in blue.
 - **Group Constructs** - The OR operator is highlighted in orange `/|/`, and any groups are highlighted in yellow.
 
@@ -123,13 +122,13 @@ Also, we'll go over the actual syntax in programming languages further down
 | --- | --- | --- | --- | --- |
 | `/*/` | This matches the preceding token **0 or more** times. | `/ba*/` | `b`, `ba`, `baa`, `baaaaaa` | `bbaa`, `aaa` |
 | `/?/` | This matches the preceding token **0 or 1** times (basically, makes the previous token *optional*). | `/colou?r/` | `color`, `colour` | `coloer` |
-| `/+/` | This matches the preceding token **1 or more** times. Not to be confused with `/*/` - this requires at least one of the preceding token. | `/a+h/` | `ah`, `aaah`, `aaaaaah` (etc) | `h`, `aaahh` |
+| `/+/` | This matches the preceding token **1 or more** times. Not to be confused with `/*/` - this requires at least one of the preceding token. | `/a+h/` | `ah`, `aaah`, `aaaaaah` | `h`, `aaahh` |
 
 ### Group Constructs
 
 | Symbol | Meaning | Example | Matches | Doesn't Match |
 | --- | --- | --- | --- | --- |
-| `/|/` or `$\cup$` | "Or". This separates alternatives. Notably, ACSL prefers the `$\cup$` syntax. Also, note that parenthesis are not required to group this specific operator - it tells the regular expression to either match *everything to the left of it* or *everything to the right of it*. To limit its scope, you need to use parentheses to group it. If you want more options, just add more pipe operators (`/a|b|c/` matches a, b, and c). | `/dog|cat/` | `dog`, `cat` | `dogat`, `docat` |
+| `/|/` or `$\cup$` | Standing for 'or', this separates alternatives. Notably, ACSL prefers the `$\cup$` syntax. <br><br> Also, note that parentheses are not required to group this specific operator - it tells the regular expression to either match *everything to the left of it* or *everything to the right of it*. For instance, in the example on the right, the `/|/` doesn't just apply to `g` and `c` but to `dog` and `cat`. <br><br> To limit its scope, you need to use parentheses to group it. If you want more options, just add more pipe operators (`/a|b|c/` matches a, b, and c). | `/dog|cat/` | `dog`, `cat` | `dogat`, `docat` |
 | `/( )/` | This is used to define a sub-expression. The contents cannot be separated. As said before, these take the highest priority. | `/(ab)+/` | `ab`, `abab`, `ababab` | `aabb` |
 
 ### Other Syntax Notes
@@ -150,12 +149,12 @@ how regex works (treat them like practice for understanding regex logic). Don't 
 
 | Identity | Explanation |
 | --- | --- |
-| `/(a*)*/`&nbsp;=&nbsp;`/a*/` | One means "0 or more `a`s", and the other means "0 or more `a`s 0 or more times". So basically, they both just say "print as many `a`s as you want". `/a*/` is essentially the simplified version of `/(a*)*/`. |
+| `/(a*)*/`&nbsp;=&nbsp;`/a*/` | The `/a*/` means "0 or more `a`s", and `/(a*)*/` means "0 or more `a`s 0 or more times". So basically, they both just say "print as many `a`s as you want". `/a*/` is essentially the simplified version of `/(a*)*/`. |
 | `/aa*/`&nbsp;=&nbsp;`/a*a/` | Let's say `/a*/` displayed 1 *a* for both the LH and RH expressions in this equation. `/a*a/` and `/aa*/` would both print *aa*. So, regardless of which *a* in the regex receives a `/*/`, the evaluation is the same (note that these are both also equivalent to `/a+/`). |
-| `/aa*|λ/`&nbsp;=&nbsp;`/a*/` | `/aa*/` would display *a* 1 or more times. However, since we're saying the the String could also be null (`/λ/`), then we simplify this to `/a*/`. (I don't know what ACSL has against `/a+/`, but they just never use it for some reason, and use `/aa*/` instead. Weird.) |
-| `/a(b|c)/`&nbsp;=&nbsp;`/ab|ac/` | `/b|c/` means that either *b* or *c* will be displayed. *a* will definitely be displayed. So, the display may be *ab* or *ac*, which we can write down as `/ab|ac/`. |
+| `/aa*|λ/`&nbsp;=&nbsp;`/a*/` | `/aa*/` would display `a` 1 or more times. However, since we're saying the the String could also be null (`/λ/`), then we simplify this to `/a*/`. (I don't know what ACSL has against `/a+/`, but they just never use it for some reason, and use `/aa*/` instead. Weird.) |
+| `/a(b|c)/`&nbsp;=&nbsp;`/ab|ac/` | `/b|c/` means that either *b* or *c* will be displayed. *a* will definitely be displayed; this is because the parentheses make it so that the `/|/` only applies to `b` and `c`. So, the display may be *ab* or *ac*, which we can write down as `/ab|ac/`. |
 | `/a(ba)*/`&nbsp;=&nbsp;`/(ab)*a/` | Let's say that the characters in the parentheses display twice. `/a(ba)*/` would print *ababa*, as would `/(ab)*a/`. The same applies if the characters in the parentheses were displayed any other amount of times. (This isn't a very useful property. I'm not sure why ACSL chose to show it.) |
-| `/(a|b)*/`&nbsp;=&nbsp;`/(a*|b*)*/` | `/(a|b)*/` would print either *a* or *b* (not both) zero or more times, which is just `/a*/` and `/b*/`. `/(a*|b*)*/` states that either `/a*/` or `/b*/` (again, not both) will be displayed 0 or more times. We know from a previous identity that `/(a*)*/` and `/(b*)*/` are just `/a*/` and `/b*/` respectively, which matches with what `/(a|b)*/` displays. |
+| `/(a|b)*/`&nbsp;=&nbsp;`/(a*|b*)*/` | `/(a|b)*/` would print either *a* or *b* (not both, the `/|/` is evaluated first because parentheses have priority) zero or more times, which is just `/a*/` and `/b*/`. `/(a*|b*)*/` states that either `/a*/` or `/b*/` (again, not both) will be displayed 0 or more times. We know from a previous identity that `/(a*)*/` and `/(b*)*/` are just `/a*/` and `/b*/` respectively, which matches with what `/(a|b)*/` displays. |
 | `/(a|b)*/`&nbsp;=&nbsp;`/(a*b*)*/` | Again, `/(a|b)*/` displays either `/a*/` or `/b*/`. For `/a*/`, `/(a*b*)*/` could have it so that `/b*/` displays *b* 0 times. The expression would simplify to `/(a*)*/`, or `/(a*)/`. A similar idea applies if we wanted `/b*/`. |
 | `/(a|b)*/`&nbsp;=&nbsp;`/a*(ba*)*/` | `/(a|b)*/` displays either `/a*/` or `/b*/`. For `/a*/`, we could have it so that `/(ba*)*/` displays 0 times; we would then be left with `/a*/` as we wanted. For `/b*/`, we could have the two `/a*/` in the RH expression display *a* zero times. The expression would then become `/b*/`. |
 
@@ -168,7 +167,7 @@ of regular expressions.
 
 If you don't want to bother with reading that, however, this section is basically the SparkNotes version.
 
-Let's start with the biggest question: **Why do I need to learn regex?**<br> Regex oftentimes seems like a foreign language that you
+Let's start with the biggest question: **Why do I need to learn regex?** -  Regex oftentimes seems like a foreign language that you
 never want to touch or bother with, because you're never going to use them anyway, right?
 
 **Wrong.** In fact, you couldn't be more wrong. Out of *everything* I have learned in the last 2 years about computer science,
@@ -182,7 +181,7 @@ This quote from Automate the Boring Stuff sums it up pretty well:
 If you still don't have any interest in learning more than is absolutely needed for ACSL about regex,
 you can skip this section.
 
-### [Skip this section](#sampleproblems)
+### [Click here to skip to Sample Problems](#sampleproblems)
 
 ---
 
@@ -206,18 +205,18 @@ First, we know that the phone number is going to be 12 characters long.
 We'll check every individual location to see if it's a number or a dash.
 
 ```java
-public static boolean isPhoneNumber(String str) {
+public static boolean isPhoneNumber(String str) { //str being our potential phone number
     String numbers = "1234567890";
 
-    if(str.length() != 12) {
-        return false;
+    if(str.length() != 12) { 
+        return false; //because a length of anything other than 12 would violate our predefined xxx-xxx-xxxx format
     }
     if (!str.substring(3, 4).equals("-") || !str.substring(7, 8).equals("-")) {
         return false;
     }
 
-    for(int i = 0; i < 3; i++) {
-        if(!numbers.contains(str.substring(i, i + 1))) {
+    for(int i = 0; i < 3; i++) { //check if any of the chars (indices 0-2) of str are not numbers
+        if(!numbers.contains(str.substring(i, i + 1))) { 
             return false;
         }
     }
@@ -254,14 +253,14 @@ because [JEP 326 for Java 12 was rejected](https://openjdk.java.net/jeps/326) be
 two backslashes for every single regex delimiter and FOUR BACKSLASHES to match a single literal backslash in regex
 doesn't cause [Leaning Toothpick Syndrome](https://en.wikipedia.org/wiki/Leaning_toothpick_syndrome) and force you
 to destroy your code readability by double escaping everything in regex - this is why I use Python instead
-no I'm not salty at all don't @ me.)
+no I'm not salty at all don't @ me. -Raymond)
 
 ---
 Now you might be wondering: What's that `/\d/` symbol? Why are there *curly brackets*?
 
 To answer that, we'll need to delve into the actual syntax.
 
-## Syntax
+## Syntax (Again)
 
 All the syntax ACSL uses is preserved in actual regex, but actual regex has a much richer set of features.
 
@@ -280,7 +279,7 @@ And a few more notes:
 
 - Like mentioned above, Java requires double-escapes for every backslash inside a string (so they're not interpreted incorrectly.)
 So think of every pair of two backslashes in your Java string as one backslash in your regex string. (Yes, this means matching a literal
-backslash in Java regex requires `\\\\`.)
+backslash in Java regex requires `\\\\` since the backslash itself requires the escape sequence `\\`)
 - Syntax varies *slightly* depending on the *flavor* of regex - the regex expressions that follow will mostly be **PERL flavor** (this is the one that most programming languages, Java and Python included, use.)
 - Anything that isn't listed as special here is a literal token.
 - If you want to enter something in regex that's a special character, but you want it to be interpreted as literal, escape it with a `\` (i.e. `/\./` matches a literal `.`)
@@ -298,8 +297,8 @@ backslash in Java regex requires `\\\\`.)
 | `/\D/` | Matches a single character that DOESN'T match `/\d/` (isn't a digit from 0 to 9). (Opposite of `/\d/`, basically.) |
 | `/\W/` | Opposite of `/\w/`. |
 | `/\S/` | Opposite of `/\s/`. |
-| `/\b/` | A word boundary. Matches, without actually taking up any characters in the match, immediately between a character that matches `/\w/` and one that doesn't. | `/.*\bis\b.*/` | `that is cool`, `is that cool` | `islands suck`, `israel isn't istanbul` |
-| `/\B/` | Opposite of `/\b/` - matches, without actually taking up any characters in the match, immediately between two characters that match `/\w/`. | `/.*\Bis\B.*/` | `bliss` | `this`, `that is cool` |
+| `/\b/` | A word boundary. Matches, without actually taking up any characters in the match, immediately between a character that matches `/\w/` and one that doesn't. In the String version, think of it like replacing the `/\b/` with any non-alphanumeric character. | `/.*\bis\b.*/` | `that is cool`, `is that cool` | `islands suck`, `israel isn't istanbul` |
+| `/\B/` | Opposite of `/\b/` - matches, without actually taking up any characters in the match, immediately between two characters that match `/\w/`. In the String version, think of it like replacing the `/\b/` with any alphanumeric character. | `/.*\Bis\B.*/` | `bliss` | `this`, `that is cool` |
 
 ### Quantifiers
 
@@ -308,12 +307,12 @@ quantifiers that ACSL won't tell you about.
 
 | Symbol | Meaning | Example | Matches | Doesn't Match |
 | --- | --- | --- | --- | --- |
-| `/a+/` | Matches one or more of `a`. | `/a+h/` | `ah`, `aaah`, `aaaaaah` (etc) | `h`, `aaahh` |
+| `/a+/` | Matches one or more of `a`. | `/a+h/` | `ah`, `aaah`, `aaaaaah` | `h`, `aaahh` |
 | `/a*/` | Matches one or more of `a`. | `/ba*/` | `b`, `ba`, `baa`, `baaaaaa` | `bbaa`, `aaa` |
 | `/a?/` | Matches zero or one of `a` (optional). | `/colou?r/` | `color`, `colour` | `coloer` |
-| `/a{n}/` | Matches exactly `n` of `a`. | `/\d{4}/` | `1234` | `231`, `52355` |
-| `/a{n,}/` | Matches exactly `n` **or more** of `a`. | `re{2,}` | `ree`, `reeee`, `reeeeeeeeeee` | `re`, `ee` |
-| `/a{n,m}/` | Matches `a` between `n` and `m` times (inclusive). | `we{2,4}` | `wee`, `weee`, `weeee` | `we`, `weeeee` |
+| `/a{n}/` | Matches exactly `n` of `a`, with `n` being a number. | `/\d{4}/` | `1234` | `231`, `52355` |
+| `/a{n,}/` | Matches exactly `n` **or more** of `a`, with `n` being a number. | `re{2,}` | `ree`, `reeee`, `reeeeeeeeeee` | `re`, `ee` |
+| `/a{n,m}/` | Matches `a` between `n` and `m` times (inclusive), with `n` and `m` both being numbers. | `we{2,4}` | `wee`, `weee`, `weeee` | `we`, `weeeee` |
 
 Now, there are also *lazy* and *possessive* quantifiers.
 
@@ -330,10 +329,7 @@ As this is a summary, I'll just show a brief example.
 <p>test</p>
 ```
 
-Given this very brief snippet of HTML, this regular expression:
-`/<.*>/`
-
-will match the entire thing `<p>test</p>`, as it is between a `<` and a `>`,
+Given this very brief snippet of HTML, this regular expression: `/<.*>/` will match the entire thing `<p>test</p>`, as it is between a `<` and a `>`,
 while this regular expression `/<.*?>/` (using a *lazy* quantifier) will only match `<p>`, as it will stop as soon as it possibly can.
 
 This does have its fair share of applications, but that's beyond the scope of this introduction.
@@ -342,9 +338,7 @@ This does have its fair share of applications, but that's beyond the scope of th
 
 You put a `+` behind a quantifier to make it possessive (i.e. `a++`)
 
-Similar to greedy quantifiers, but even greedier. It refuses to share.
-
-This means that once it captures something, it will refuse to give it back.
+Similar to greedy quantifiers, but even greedier. It refuses to share. This means that once it captures something, it will refuse to give it back.
 
 For example, given the following string:
 
@@ -352,9 +346,12 @@ For example, given the following string:
 whyyyyyy
 ```
 
-`/why+y/` will match.
-`/why++y/` will NOT match. The `y++` will eat every single y in the expression, and the final `y` will not get matched,
-leading to a complete match failure.
+<br>
+`/why+y/` will match. We can take it as the `y+` matched with `yyyyy`, and the extra `y` after the `+` matched with a single `y`. However, `/why++y/` will NOT match. The `y++` will eat every single y in the expression, and the final `y` will not get matched,
+leading to a complete match failure. 
+
+Meaning, whereas with `/why+y/` where `whyyyyyy` was a match due to `y+` matching `yyyyy`, `y++` would
+take every `y` it can and thus match with `yyyyyy`. This leaves the final `y` with nothing to match with, thus resulting in failure.
 
 This is mostly useful for improving the performance of your regular expression in situations where that matters (so basically,
 I'm saying that you're probably never going to use this. It's not nearly as useful as lazy quantifiers.)
@@ -364,7 +361,7 @@ I'm saying that you're probably never going to use this. It's not nearly as usef
 Here comes the fun part!
 
 You might be wondering how to use a regular expression to parse input. (You're probably not, but whatever. I doubt
-anyone is reading this far anyway. If you read this, tell me on Discord and I'll gift you something if you're the first person. (This offer was posted on 3/24/2021. It's still open.))
+anyone is reading this far anyway. If you read this, tell me on Discord and I'll gift you something if you're the first person. (This offer was posted on 3/24/2021. It's still open.)
 
 Say hello to the most basic of group constructs: the *capturing group*.
 
@@ -523,11 +520,11 @@ Here is a brief description of how you might do this intuitively:
 
 | String | Explanation |
 | --- | --- |
-| `ababbaab` | `ab` literally, `b` must be 0 times, don't match optional `a` (to avoid failing next part), `a` literally, last part can't match remaining `bbaab` |
-| `ababa` | `ab` literally, `b` must be 0 times, don't match optional `a` (to avoid failing next part), `a` literally, last part can't match remaining `ba` |
-| `aaabb` | can't match `ab` literally |
-| `abbbbab` | `ab` literally, `b` 3 times, don't match optional `a` (to avoid failing next part), `a` literally, last part matches remaining `b`  |
-| `abbaababbaa` | `ab` literally, `b` 1 time, match optional `a`, `a` literally, last part can't match remaining `babbaa` |
+| `ababbaab` | `ab` literally, followed by `b` 0 times. Although the next character is an `a`, we will not match with that and will instead match with `b` 0 times so that we don't fail the next part. Then `a` literally. Last part can't match remaining `bbaab`. |
+| `ababa` | `ab` literally, followed by `b` 0 times. Although the next character is an `a`, we will not match with that and will instead match with `b` 0 times so that we don't fail the next part. Then `a` literally. Last part can't match remaining `ba`. |
+| `aaabb` | Can't match `ab` literally. |
+| `abbbbab` | `ab` literally, followed by `b` 3 times. Although the next character is an `a`, we will not match with that and will instead match with `b` 0 times so that we don't fail the next part. Then `a` literally. Last part matches remaining `b`.  |
+| `abbaababbaa` | `ab` literally, followed by `b` 1 time. Match with optional `a` and not `b*`. Then `a` literally. Last part can't match remaining `babbaa`. |
 
 ## 3. Determine what strings would be accepted by the following FSA. Make your answer general. (So basically, give us a regular expression.)
 
@@ -540,7 +537,7 @@ Notice where they are the same and where they differ.
 They both share `/10*11/` at the beginning as well as `/10*0/` at the end. The middle conflicting
 portion can be written as a union in our final regex.
 
-So, we would have `/10*11((01*)|0*)10*0/` as our regex.
+So, we would have `/10*11(01*|0*)10*0/` as our regex.
 
 ## 4. Which of the given strings would be accepted by the following FSA?
 
@@ -562,7 +559,7 @@ can analyze the two subpaths separately. The upper path would produce either `/b
 The lower path would produce `/aba*ab/`.
 
 Now, we can put these together to get our overall regex of `/a((ba*a(ab|ba)a)|(aba*ab))/`.
-Note how many parentheses were used to clarify what the different union alternatives are. This
+Note that many parentheses were used to clarify what the different union alternatives are. This
 regex matches what is written for #3; hence, #3 is our answer.
 
 ---
