@@ -63,6 +63,16 @@ If you have trouble with programming in general, don't worry! Each week, we will
 programming question so that you can improve your skills. We will also hold CodeForces "contests"
 within our team.
 
+If you're new to CodeForces and you want to practice on your own, great! If you click on 'PROBLEMSET' at the top, you can sort
+the problems based on difficulty through a few ways. `A` are the easier problems whereas `C` is harder; however, this by itself
+isn't a very good difficulty indicator. Instead, you can click on the lightning symbol to sort by rating (higher rating = harder) or
+on the checkmark symbol to sort by how many other people were able to solve the problem (so if more people were able to solve a problem,
+chances are the problem is relatively easier).
+
+Some other good places to practice programming are: LeetCode, HackerRank, and CodeSignal. There are also a few other contests
+(check out the "Schedule" tab at the top of this website) that we highly recommend you attend; some of the contests have more difficult problems, but feel
+free to challenge yourself a bit.
+
 ## What to Keep In Mind
 
 - Don't forget the [general tips](/resources/tips) that apply to all code you write. Also, make sure your code [is efficient](/resources/efficiency).

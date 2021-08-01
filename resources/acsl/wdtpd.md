@@ -43,7 +43,7 @@ The pseudocode listed below should all look familiar, as they reflect basic prog
 **Variables**
 
 Variable names still start with a letter. However, they will only consist of letters and digits
-(so not underscores or anything like that).
+(so no underscores or anything like that).
 
 **Sequential Statements**
 
@@ -63,6 +63,8 @@ ELSE (optional)
 Statement(s)
 END IF
 ```
+
+Unlike many programs like Java and Python, ACSL does add an 'end' to better distinguish what statements belong in the if block.
 
 **While (Indefinite) Loops**
 
@@ -90,7 +92,7 @@ ACSL problems may have a start index of 1 instead.
 
 **Strings**
 
-Strings are marked with " ". They can be empty. The characters are labeled based on a zero index.
+Strings are marked with " " (quotation marks). They can be empty. The characters are labeled based on a zero index.
 
 Errors occur if the user attempts to access an index that is out of range.
 
@@ -112,7 +114,7 @@ be sure to take note of them in the table below. *S* has been used as our exampl
 To access one character in the String, you would just need to write `S[index]` (with *index*
 replaced with the number index).
 
-A plus sign is still used to concatenate strings.
+A plus sign is still used to concatenate (or join) strings.
 
 # Sample Problems
 

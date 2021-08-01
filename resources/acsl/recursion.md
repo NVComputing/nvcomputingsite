@@ -45,7 +45,7 @@ int pow_recursion(int x, int y) {
 }
 ```
 
-Here, The two if conditions both represent a base case; when `y` is a certain value, then the
+Here, the two if conditions both represent a base case; when `y` is a certain value, then the
 function will no longer continue to call on itself and will instead return a constant value.
 
 Now, let's discuss a few "types" of recursion.
@@ -54,7 +54,9 @@ Now, let's discuss a few "types" of recursion.
 on another function, function B, which eventually calls on function A again.
 
 *Single recursion* is recursion that only calls on itself once in the function, an example being
-the `pow_recursion` function mentioned previously. *Multiple recursion* is when a function
+the `pow_recursion` function mentioned previously. 
+
+*Multiple recursion* is when a function
 references itself multiple times; an example is the Fibonacci sequence referenced in the next
 section.
 
@@ -102,13 +104,13 @@ def fibonacci(x):
 
 ## Factorials
 
-Factorials can be written as `$n!$`, which equals `$n \bullet (n - 1) \bullet ... \bullet 1$`.
+Factorials can be written as `$n!$`, which equals `$n \bullet (n - 1) \; \bullet \; ... \; \bullet \; 1$`.
 `$0!$` would automatically have a value of 1. We will not worry about factorials of negative
 numbers.
 
 So, as a mathematical function, this can be written as:
 
-### `$\begin{equation*}f(n) = \begin{cases}n &\text{if $n = 0$}\\n \bullet f(n-1) &\text{if $n > 0$}\end{cases}\end{equation*}$`
+### `$\begin{equation*}f(n) = \begin{cases}1 &\text{if $n = 0$}\\n \bullet f(n-1) &\text{if $n > 0$}\end{cases}\end{equation*}$`
 
 Then, here are the Java and Python implementations of this function:
 
@@ -231,7 +233,8 @@ So, `$fibonacci(5) = 5$`.
 
 ## Writing Equations
 
-This method is good for handling mathematical functions.
+This method is good for handling mathematical functions. On the ACSL contests, you'll most likely be using this method
+because ACSL recursion problems are pretty much always written at mathematical functions rather than actual programming.
 
 Sample Problem 1 on the ACSL Wiki page is a good example:
 
@@ -260,7 +263,7 @@ So `$g(11) = 1$`.
 # Sample Problems
 
 ## 1. With the function below, determine the value of `mystery(4)`.
-`
+
 ```java
 public static int mystery(int num) {
     if(num <= 0) {
@@ -313,7 +316,9 @@ We will also write equations to get our answer for this question.
 So, `$f(6, 4) = 5 + 2 = 7$`, `$f(11, 5) = 7 + 2 = 9$`, and `$f(17, 6) = 9 + 2 = 11$`. So, our
 answer is `11`.
 
-## 4. If the following algorithm is applied to a square with a side of 16 feet, how many square feet will be painted? (This is from the ACSL Wiki):
+## 4. If the following algorithm is applied to a square with a side of 16 feet, how many square feet will be painted?:
+
+(Note: This is from the ACSL Wiki.)
 
 1. Given a square.
 2. If the length of a side is less than 2 feet, then stop.
@@ -343,7 +348,7 @@ square. In Step 2, we had three 4 x 4 squares. In Step 3, we had nine 2 x 2 squa
 4, we had twenty-seven 1 x 1 squares.
 
 So, we have `$(1 * 8^2) + (3 * 4^2) +
-(9 * 2^2) + (27 * 1^2)$`<br>
+(9 * 2^2) + (27 * 1^2)$`
  `$= 64 + 48 + 36 + 27 = 175$` square feet.
 
 ---
