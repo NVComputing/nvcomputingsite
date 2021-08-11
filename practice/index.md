@@ -9,6 +9,7 @@ Google Form: [Week 3 Homework Problems](https://forms.gle/eHLAeb9h1DQXJhpM8) <!-
 ## Past Homework
 
 [Homework Problems - Week 1](/practice/week1/problems)
+
 [Homework Problems - Week 2](/practice/week2/problems)
 
 ## Do your practice!
