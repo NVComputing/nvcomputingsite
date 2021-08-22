@@ -15,7 +15,7 @@ agenda.forEach(agendaSlide => {
 	}
 
 	if(!(agendaSlide.link)) {
-		agendaSlide.link = "https://drive.google.com/drive/u/0/folders/1RtjVxkDX58GHdr5cnKzXESiUAFC28_nT";
+		agendaSlide.link = "https://drive.google.com/drive/folders/1ROVbCUoudELV98TVfI9uC29kMvp-pcU_?usp=sharing";
 	}
 
 	agendaSlide.img = "/res/meetingsummaries/" + agendaSlide.img;
