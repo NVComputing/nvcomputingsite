@@ -82,7 +82,8 @@ Statement(s)
 NEXT
 ```
 
-The step argument is optional; if it is not given, then the default step is +1.
+The step argument is optional; if it is not given, then the default step is +1. `end` is also inclusive, meaning that when `variable`
+does equal `end`, the loop would still run one last time.
 
 **Arrays**
 
