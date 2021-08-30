@@ -37,7 +37,7 @@ and basic operations.
 
 Also, streams do not let you access each element in the list's index. If you need access to the index, use a classic for loop.
 
-# How to use streams
+# How to Use Streams
 There are 3 operations you do on a stream:
 - Creation
 - Intermediate Operation

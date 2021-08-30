@@ -20,4 +20,6 @@ functions can be passed around as objects.
 
 ## What is a lambda?
 
-You can think of a lambda as an "anonymous" function. They were added into Java in Java 8,
+You can think of a lambda as an "anonymous" function. They were added into Java in Java 8.
+
+(As you can see, this page has been left unfinished. We will complete it at a later date, or you may help us out by writing content yourself! Please let us know if you want to do the latter.)

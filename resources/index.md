@@ -34,11 +34,12 @@ Otherwise, click one of the above links you're interested in to get started!
 ### <a href="https://github.com/Vannagar/DataStructures" target="_blank" rel="noopener noreferrer">Useful Coding Classes</a>
 # Page Progress Tracker
 
-If you would like to contribute, either work on a unstarted page or finish a started page. Pages that need checking will be
-checked by the captains.
+If you would like to contribute, please work on one (or more) of the following pages. Please let a captain know if you plan on doing this so that we may check your changes afterwards.
 
-| Unstarted | Started | Needs Checking | Finished |
-| --- | --- | --- | --- |
-| Lambdas and Functional Programming | Input / Output<br />Efficient Code<br />Tips<br />USACO<br /> | ACSL Homepage<br />Streams API<br /> | Resources Homepage<br /> Computer Number Systems<br />Recursive Functions<br />FSAs and Regular Expressions<br />What Does This Program Do?<br /> Assembly Language<br />Bit-String Flicking<br />Boolean Algebra<br />Data Structures<br /> Digital Electronics<br />Graph Theory<br />LISP<br />Prefix/Infix/Postfix Notation<br />|
+* Lambdas and Functional Programming (Unstarted)
+* Input / Output (Started)
+* Efficient Code (Started)
+* Tips (Started)
+* USACO (Started)
 
 You can also suggest a new page to the captains. We'll consider adding it.
