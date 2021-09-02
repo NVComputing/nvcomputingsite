@@ -2,17 +2,20 @@
 
 ## This Week's Homework
 
-This section is temporarily empty. We will begin to post regularly once our computing season begins.
+This section is temporarily empty. We will begin posting regularly once our computing season begins.
 
 ## Past Homework
 
-This section is temporarily empty. We will begin to post regularly once our computing season begins.
+This section is temporarily empty. We will begin posting regularly once our computing season begins.
 
 ## Do your practice!
 
 We will be keeping track of who does and who doesn't do their practice. This will greatly influence our decisions
-for who to bring to programming competitions and who to put on the senior team for ACSL, as students who
+for who to bring to programming competitions and who to put on the senior team for ACSL. Students who
 do their work are most likely much more motivated and prepared for these events.
+
+(To the two geniuses who think they can breeze by without doing any practice: I was in your position 3 years ago. Figuring out how 
+some topics really work during the contest itself isn't fun. Figure it out before you actually do any contests. -past captain Raymond)
 
 ## Contents
 
