@@ -1,8 +1,14 @@
 [
     {
-        "title": "Google Drive Link",
-        "description": "Link to all past meeting slides",
-        "img": "agendanone.png",
-        "link": "https://drive.google.com/drive/folders/1ROVbCUoudELV98TVfI9uC29kMvp-pcU_?usp=sharing"
+        "title": "September 23 Agenda",
+        "description": "Practice programming contest on Codeforces.",
+        "img": "9-23.PNG",
+        "link": "https://docs.google.com/presentation/d/1hC-x8fSM5NWU08GZ_sFot1QEgfT3CO4vpk-n41Gn8ik/edit?usp=sharing"
+    },
+    {
+        "title": "Informational Meeting",
+        "description": "Description about the team.",
+        "img": "infomeeting.PNG",
+        "link": "https://docs.google.com/presentation/d/10AgdLrM5OY0jIbh4sitkqibCsFeAuEIi4m_4y59PkwE/edit?usp=sharing"
     }
 ]
