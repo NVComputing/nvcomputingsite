@@ -1,5 +1,11 @@
 [
     {
+        "title": "September 30 Agenda",
+        "description": "ACSL Contest 1 Topic: Recursion",
+        "img": "9-30.PNG",
+        "link": "https://docs.google.com/presentation/d/1DvyxFjlVH4Yy2RAkChQk4A6yGaP1081XWOhnuM72dms/edit?usp=sharing"
+    },
+    {
         "title": "September 23 Agenda",
         "description": "Practice programming contest on Codeforces.",
         "img": "9-23.PNG",
@@ -11,4 +17,5 @@
         "img": "infomeeting.PNG",
         "link": "https://docs.google.com/presentation/d/10AgdLrM5OY0jIbh4sitkqibCsFeAuEIi4m_4y59PkwE/edit?usp=sharing"
     }
+
 ]
