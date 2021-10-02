@@ -2,7 +2,7 @@
 
 ## This Week's Homework
 
-This section is temporarily empty. We will begin posting regularly once our computing season begins.
+[Sept 30: Recursion](https://docs.google.com/document/d/1eHEsEhxqGpF_wHQiPvGGlHZAmntGlYj_I8HKxYtSw6s/edit?usp=sharing) - [Submit here](https://forms.gle/PmxfAmeMtk76a2Z27) - (Answers to be posted.) 
 
 ## Past Homework
 
@@ -19,11 +19,18 @@ some topics really work during the contest itself isn't fun. Figure it out befor
 
 ## Contents
 
-Practice will usually consist of a few short-answer problems relating to our short-answer topic. Solutions will be posted the week after; please ask questions
+Practice will usually consist of a few short-answer problems relating to our short-answer topic. You should not use any calculators or any websites to help you, 
+as you won't have these resources during the actual contest.
+
+Solutions will be posted the week after; please ask questions
 via Discord, Remind, or email if you do not understand a problem, as we want to make sure you are as successful as you can be!
 
 ## Submission
 
-We will not make submission a requirement. However, we will ask at the start of our meetings who did or did not do the homework just to get a head count;
-please be honest when we do so.
+A submission form will be included with each homework assignment. On this submission form, you will be submitting both your answers for the short answer
+problems and also a picture of your accepted code submission. The latter should look something like this:
+
+![](https://cdn.discordapp.com/attachments/755867961369165854/759560439607722015/unknown.png)
+
+We will not check your code unless you specifically ask us to.
 
