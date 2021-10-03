@@ -25,7 +25,7 @@
 			{{#each deadlines}}
 				<div class="py-4 border-bottom border-top">
 					{{#if this.link}}
-						<a href="{{this.link}}" target="_blank"><h3 class="fc-blue">{{this.name}}</h3></a>
+						<a href="{{this.link}}" target="_blank" rel="noopener noreferrer"><h3 class="fc-blue">{{this.name}}</h3></a>
 					{{else}}
 						<h3 class="fc-blue">{{this.name}}</h3>
 					{{/if}}
@@ -51,7 +51,7 @@
 			{{#each upcomingEvents}}
 				{{#if notPastDue}}
 					{{#if this.link}}
-						<h3><a href="{{this.link}}" target="_blank">{{this.name}}</a></h3>
+						<h3><a href="{{this.link}}" target="_blank" rel="noopener noreferrer">{{this.name}}</a></h3>
 					{{else}}
 						<h3>{{this.name}}</h3>
 					{{/if}}
@@ -72,7 +72,7 @@
 			{{#each upcomingEvents}}
 				{{#if pastDue}}
 					{{#if this.link}}
-						<h3><a href="{{this.link}}" target="_blank">{{this.name}}</a></h3>
+						<h3><a href="{{this.link}}" target="_blank" rel="noopener noreferrer">{{this.name}}</a></h3>
 					{{else}}
 						<h3>{{this.name}}</h3>
 					{{/if}}
