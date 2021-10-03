@@ -2,7 +2,12 @@
 
 ## This Week's Homework
 
-[Sept 30: Recursion](https://docs.google.com/document/d/1eHEsEhxqGpF_wHQiPvGGlHZAmntGlYj_I8HKxYtSw6s/edit?usp=sharing) - [Submit here](https://forms.gle/PmxfAmeMtk76a2Z27) - (Answers to be posted.) 
+<code>
+  <!-- Code tag required for showdown html, md does not support target tag -->
+  <a href="https://docs.google.com/document/d/1eHEsEhxqGpF_wHQiPvGGlHZAmntGlYj_I8HKxYtSw6s/edit?usp=sharing" target="_blank">Sept 30: Recursion</a>
+  - <a href="https://forms.gle/PmxfAmeMtk76a2Z27" target="_blank">Submit here</a>
+  - (Answers to be posted.)
+</code>
 
 ## Past Homework
 
