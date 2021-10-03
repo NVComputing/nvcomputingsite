@@ -24,7 +24,7 @@
 			{{#each agenda}}
 				<div class="col-md-6 col-lg-4 d-flex align-items-stretch my-2">
 					<div class="card border-0">
-						<a href="{{ this.link }}" target="__blank">
+						<a href="{{ this.link }}" target="__blank" rel="noopener noreferrer">
 							<img class="card-img-top" src="{{ this.img }}" alt="{{ this.title }}">
 						</a>
 						<div class="card-body">
@@ -32,7 +32,7 @@
 							<p class="card-text-custom">{{ this.description }}</p>
 						</div>
 						<div class="card-footer">
-							<a href="{{ this.link }}" class="btn btn-md float-right mt-auto" target="__blank">View Slides</a>
+							<a href="{{ this.link }}" class="btn btn-md float-right mt-auto" target="__blank" rel="noopener noreferrer">View Slides</a>
 						</div>
 					</div>
 				</div>
