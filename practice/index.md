@@ -3,8 +3,8 @@
 ## This Week's Homework
 
 <a href="https://docs.google.com/document/d/1eHEsEhxqGpF_wHQiPvGGlHZAmntGlYj_I8HKxYtSw6s/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Sept 30: Recursion</a> - 
-<a href="https://forms.gle/PmxfAmeMtk76a2Z27" target="_blank" rel="noopener noreferrer">Submit here</a> - 
-(Answers to be posted.)
+<a href="https://forms.gle/PmxfAmeMtk76a2Z27" target="_blank" rel="noopener noreferrer">Submit here</a> -
+<a href="https://docs.google.com/document/d/1yfe5DV45syh4Mbrj5ular4FHpBk0gKHRc1_VjfsQz2s/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Solutions</a>
 
 ## Past Homework
 
