@@ -1,7 +1,13 @@
 [
     {
+        "title": "October 7 Agenda",
+        "description": "Practice programming contest on Codeforces.",
+        "img": "10-7.PNG",
+        "link": "https://docs.google.com/presentation/d/1bQHOI2NXV7d5GNASBlwNGNcXjxOlfuuJUfCI2B7VmQE/edit?usp=sharing"
+    },
+    {
         "title": "September 30 Agenda",
-        "description": "ACSL Contest 1 Topic: Recursion",
+        "description": "ACSL Contest 1 Topic: Recursion.",
         "img": "9-30.PNG",
         "link": "https://docs.google.com/presentation/d/1DvyxFjlVH4Yy2RAkChQk4A6yGaP1081XWOhnuM72dms/edit?usp=sharing"
     },
