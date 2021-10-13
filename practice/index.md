@@ -2,8 +2,8 @@
 
 ## This Week's Homework
 
-There is no official homework this week, but take some time to complete any programming problems you didn't get to from our practice contest.
-
+<a href="https://docs.google.com/document/d/1oMYwyxkifqgKmTGkLxoEhguKPu5LEqoPqAT_j_kRt-E/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Oct 14: WDTPD</a> -
+<a href="https://forms.gle/KarHN2yhY4EhJtv98" target="_blank" rel="noopener noreferrer">Submit here</a>
 ## Past Homework
 
 <a href="https://docs.google.com/document/d/1eHEsEhxqGpF_wHQiPvGGlHZAmntGlYj_I8HKxYtSw6s/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Sept 30: Recursion</a> - 
