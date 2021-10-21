@@ -108,9 +108,9 @@ be sure to take note of them in the table below. *S* has been used as our exampl
 
 | Code | Explanation |
 | --- | --- |
-| S[start:] | This would give you the characters from index *start* all the way to the last character (inclusive). You can think of this as the last *start* characters of the string. |
-| S[:end] | This would give you all the characters starting from the first character to the character at index *end* (**not inclusive**). You can think of this as the first *end* characters of the string. |
-| S[start:end] | This would give you the characters starting from index *start* to index *end* (**inclusive**).
+| S[start:] | This would give you the last *start* characters of the string- inclusive. |
+| S[:end] | This would give you the first *end* characters of the string- not inclusive. |
+| S[start:end] | This would give you the characters starting from index *start* to index *end* (**inclusive on both sides**).
 
 To access one character in the String, you would just need to write `S[index]` (with *index*
 replaced with the number index).
