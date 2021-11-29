@@ -2,10 +2,14 @@
 
 ## This Week's Homework
 
-<a href="https://docs.google.com/document/d/1qH-vsGQUQNRN53lvgQBQoFrmjlLAeSCpAQ710Odjgmg/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Oct 28: Number Systems</a> -
-<a href="https://forms.gle/j9Dwrokm6a8cEjK18" target="_blank" rel="noopener noreferrer">Submit here</a>
+None!
 
 ## Past Homework
+
+<a href="https://docs.google.com/document/d/1qH-vsGQUQNRN53lvgQBQoFrmjlLAeSCpAQ710Odjgmg/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Oct 28: Number Systems</a> -
+<a href="https://forms.gle/j9Dwrokm6a8cEjK18" target="_blank" rel="noopener noreferrer">Submit here</a> -
+<a href="https://docs.google.com/document/d/1ogpbRLW_RqMOjSJWiwrfcfNQHKWyeEbS59ZDhYL-_d4/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Solutions</a>
+
 <a href="https://docs.google.com/document/d/1oMYwyxkifqgKmTGkLxoEhguKPu5LEqoPqAT_j_kRt-E/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Oct 14: WDTPD</a> -
 <a href="https://forms.gle/KarHN2yhY4EhJtv98" target="_blank" rel="noopener noreferrer">Submit here</a> -
 <a href="https://docs.google.com/document/d/1hQAlifxD9tH3Z0qSvKnNPn0xlYWoPWqKSB3EfvSt3pU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Solutions</a>
