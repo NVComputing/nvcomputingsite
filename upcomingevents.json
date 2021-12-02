@@ -12,7 +12,7 @@
     {
       "name": "USACO (USA Computing Olympiad) Contest #1",
       "link": "http://usaco.org/",
-      "time": 1639807200,
+      "time": 	1639720800,
       "pastDue": false,
       "notPastDue": true,
       "desc": "A prestigious programming competition with 4 divisions. You will have 3-5 hours to complete 3 problems.",
@@ -21,7 +21,7 @@
     {
       "name": "USACO (USA Computing Olympiad) Contest #2",
       "link": "http://usaco.org/",
-      "time": 1642831200,
+      "time": 	1643349600,
       "pastDue": false,
       "notPastDue": true,
       "desc": "A 3-day 0restigious programming competition with 4 divisions. You will have 3-5 hours to complete 3 problems.",
@@ -30,7 +30,7 @@
     {
       "name": "USACO (USA Computing Olympiad) Contest #3",
       "link": "http://usaco.org/",
-      "time": 1645855200,
+      "time": 1645768800,
       "pastDue": false,
       "notPastDue": true,
       "desc": "A 3-day prestigious programming competition with 4 divisions. You will have 3-5 hours to complete 3 problems.",
@@ -39,7 +39,7 @@
     {
       "name": "USACO (USA Computing Olympiad) US Open",
       "link": "http://usaco.org/",
-      "time": 1648875600,
+      "time": 	1648184400,
       "pastDue": false,
       "notPastDue": true,
       "desc": "A 3-day prestigious programming competition with 4 divisions. You will have 3-5 hours to complete 3 problems.",
