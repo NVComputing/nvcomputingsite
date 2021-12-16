@@ -16,12 +16,10 @@ USACO is a multi-level online programming competition primarily focused on algor
 
 USACO is a programming competition that occurs **4 times** during the year.
 
-(These dates are a rough estimate; they are not necessarily accurate for the 2021-2022 season.)
-
 *   Dec 17-20: First Contest
-*   Jan 21-24: Second Contest
+*   Jan 28-31: Second Contest
 *   Feb 25-28: Third Contest
-*   Apr 1-4: US Open
+*   Mar 25-28: US Open
 
 The first three contests are **identical in format**.
 
