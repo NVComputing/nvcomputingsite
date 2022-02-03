@@ -2,7 +2,8 @@
 
 ## This Week's Homework
 
-None!
+<a href="https://docs.google.com/document/d/1HCPBycc-q7iCOtWYme55lvXOnkLXtQ-_2A6Em-JyJmc/edit?usp=sharing" target="_blank" rel="noopener noreferrer">January 27: Pre/Post/In-fix</a> -
+<a href="https://forms.gle/bpbk1g9cRVJex2Yq7" target="_blank" rel="noopener noreferrer">Submit here</a>
 
 ## Past Homework
 
