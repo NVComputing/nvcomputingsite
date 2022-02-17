@@ -2,7 +2,7 @@
 
 ## This Week's Homework
 
-<a href="https://docs.google.com/document/d/1ZxrVKibC7TgAfEZKBcYK8ZyaK4gMjD6RAnvn0pfKOTg/edit?usp=sharing" target="_blank" rel="noopener noreferrer">January 27: Pre/Post/In-fix</a> -
+<a href="https://docs.google.com/document/d/1ZxrVKibC7TgAfEZKBcYK8ZyaK4gMjD6RAnvn0pfKOTg/edit?usp=sharing" target="_blank" rel="noopener noreferrer">February 17- Bit String Flicking</a> -
 <a href="https://forms.gle/tiX7qrFUz7tQaYbU7" target="_blank" rel="noopener noreferrer">Submit here</a> 
 
 ## Past Homework
