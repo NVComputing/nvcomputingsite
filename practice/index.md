@@ -2,12 +2,13 @@
 
 ## This Week's Homework
 
+<a href="https://docs.google.com/document/d/1ZxrVKibC7TgAfEZKBcYK8ZyaK4gMjD6RAnvn0pfKOTg/edit?usp=sharing" target="_blank" rel="noopener noreferrer">January 27: Pre/Post/In-fix</a> -
+<a href="https://forms.gle/tiX7qrFUz7tQaYbU7" target="_blank" rel="noopener noreferrer">Submit here</a> 
+
+## Past Homework
 <a href="https://docs.google.com/document/d/1HCPBycc-q7iCOtWYme55lvXOnkLXtQ-_2A6Em-JyJmc/edit?usp=sharing" target="_blank" rel="noopener noreferrer">January 27: Pre/Post/In-fix</a> -
 <a href="https://forms.gle/bpbk1g9cRVJex2Yq7" target="_blank" rel="noopener noreferrer">Submit here</a> -
 <a href="https://docs.google.com/document/d/1H_xr-i2Idg32ajsqoCvKwzV8qWBGp1qn8UkwGXyMWUQ/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Solutions</a>
-
-
-## Past Homework
 
 <a href="https://docs.google.com/document/d/1qH-vsGQUQNRN53lvgQBQoFrmjlLAeSCpAQ710Odjgmg/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Oct 28: Number Systems</a> -
 <a href="https://forms.gle/j9Dwrokm6a8cEjK18" target="_blank" rel="noopener noreferrer">Submit here</a> -
