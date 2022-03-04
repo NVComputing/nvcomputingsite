@@ -1,11 +1,15 @@
 # Practice
 
 ## This Week's Homework
-<a href="https://docs.google.com/document/d/1XAslqYWbEBvU_9ekrBwuPo6vHQiBYQUOiXNs5Qbt7kU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">February 24- LISP</a> -
-<a href="https://forms.gle/WqmvnCBwP5eT19a6A" target="_blank" rel="noopener noreferrer">Submit here</a>
+None, good luck on ACSL!
+
 
 
 ## Past Homework
+<a href="https://docs.google.com/document/d/1XAslqYWbEBvU_9ekrBwuPo6vHQiBYQUOiXNs5Qbt7kU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">February 24- LISP</a> -
+<a href="https://forms.gle/WqmvnCBwP5eT19a6A" target="_blank" rel="noopener noreferrer">Submit here</a> -
+<a href="https://docs.google.com/document/d/1FpZOCPOEGTrg7tKz-hrH1UwNL4BAGFmUbrsVZsnOA8c/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Solutions</a>
+
 <a href="https://docs.google.com/document/d/1ZxrVKibC7TgAfEZKBcYK8ZyaK4gMjD6RAnvn0pfKOTg/edit?usp=sharing" target="_blank" rel="noopener noreferrer">February 17- Bit String Flicking</a> -
 <a href="https://forms.gle/tiX7qrFUz7tQaYbU7" target="_blank" rel="noopener noreferrer">Submit here</a> -
 <a href="https://docs.google.com/document/d/1B2uCKTnpHsu746oaV_6wISEVdzcoyzXAfyjdPUnHNCU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Solutions</a>
