@@ -171,12 +171,32 @@ Many of these tricks involve knowing a certain algorithm - oftentimes, problems 
 
 ## Greedy Algorithm
 
-*   This is a very common algorithm in USACO as it is used to not make questions too repetitive.
-*   A greedy algorithm breaks a problem into parts and finds the most efficient solution to each part and then combines them together.
-*   Prefix Sum
-*   This problem assists in reducing the number of array traversals and is often paired with a greedy algorithm.
-*   Prefix sums replace every index with the sum of all the prefix indexes and runs O(n) to create a prefix sum for both time and space complexity.
-*   This is typically used to find sum of the values between two indices. Given indices A and B, this would normally take O(B-A), but with a prefix sum array, it can be done in O(1).
+* This is a very common algorithm in USACO as it is used to not make questions too repetitive.
+* A greedy algorithm, as stated in the name, finds the fastest solutions **at the moment**. 
+* A greedy algorithm never goes back on its work and constructs a direct solution.
+
+## Prefix Sums
+The simplest way to explain prefix sums is to show a basic example: finding the sum of part of an array. In this case, we want to find the sum of `$[1, 3]$`.
+
+|Index| 0 | 1 | 2 | 3 | 4 |
+| --- | --- | --- | --- | --- | --- |
+|Value| 3 | 2 | 5 | 1 | 6 |
+
+The most basic way of doing so is to loop through the indices and sum them up, taking `$O(N)$` time to do so:
+
+`$A[1] + A[2] + A[3] = 2 + 5 + 1 = 8$`.
+
+However, a much faster way is to construct a "sum" array as we input it:
+
+|Index| 0 | 1 | 2 | 3 | 4 |
+| --- | --- | --- | --- | --- | --- |
+|Value| 3 | 5 | 10 | 11 | 17 |
+
+Now, if we want to find the entire sum of the array, we just take `$A[4] = 17$`. This takes `$O(1)$` time. If we want to find the sum between two indexes,
+such as `$[1,3]$`, we can take `$A[3] - A[0] = 8$`, which is the same answer we got above.
+
+The general form of taking the prefix sum of an array from index `$[X, Y]$` would be `$A[Y] - A[X - 1]$`.
+
 
 ## Dynamic Programming
 

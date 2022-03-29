@@ -1,22 +1,36 @@
 # Efficiency
 ## Contents
 - [General Tips](#generaltips)
-  - [Efficient Code] (#writeefficientcode)
-- [Java](#java)
-  - [Efficient Java Code](#efficientjavacode)
-
+- [How to Write Efficient Code] (#writeefficientcode)
 
 # General Tips
+* Try to limit your usage of for loops. For loops can take especially long, and are the main reason why your code is not passing time constraints.
+* Avoid nesting loops.
+* Even though they seem like a single function, methods such as `.sort` actually do take up time.
 
-## Write Efficient Code
+# Writing Efficient Code
 
 When coding at a higher level, there are typically two different types of solutions. There are the efficient solutions and the naive solutions. Efficient solutions are typically better at managing time complexity, but it can also be better at managing space complexity. Naive solutions typically use either brute force or require far more computation to come up with a solution. 
 
 This can work for earlier test cases in USACO, but as the values and parameters get larger, they take longer and longer to run.
 
-A very important tool to measure your code’s efficiency is known as **Big O Notation.**
-Big O is denoted with the syntax “O(some expression involving n)”.
-It is a way to determine how many operations your code requires to run.
+##"Big O" Notation
+A common way to measure the efficiency of code is to use "Big O" notation. They are formatted using a capital O, followed by a mathematical
+formula in parentheses (e.g. O(log N)). Here's a list of the common "Big O"'s, in order of fastest to slowest:
+
+| Notation | Example |
+| --- | --- |
+| `$O(1)$` | One simple action, such as `x++`.|
+| `$O(\log(N))$` | Binary search, sorted set/maps and queues. |
+| `$O(N)$` | A set amount of actions, such as a for loop with size `$N$`.|
+| `$O(N\log(N))$` | Sorting algorithms (`Arrays.sort`, `Collections.sort`, etc.). |
+| `$O(N^2)$` | Two nested for loops (one for loop inside the other). |
+| `$O(2^N)$` | Iterating through every single subset. |
+| `$O(N!)$` | Iterating through every single permutation. |
+
+Generally, you want to avoid doing anything above `$O(N)$`. In smaller cases, `$O(N\log(N))$` and `$O(N^2)$` are forgivable, but be cautious
+when doing so. Also, Big O Notation disregards the constant value, so if your `$N$` is like `$9 * 10^{17}$`, obviously `$O(N)$` will be
+extremely slow.
 
 An example of naive versus efficient code can be seen here.
 
@@ -63,10 +77,5 @@ Do a binary search through the array, which runs in O(log(n)).
 Those of you who took AP Computer Science A probably learned this later in the year, and it runs much faster as time goes on.
 
 
-# Java
-## Efficient Java Code
-
-# C++
-
 ---
-*Authors: Raymond Zhao, Nishikar Paruchuri, Nihal Shivannagari*
+*Authors: Raymond Zhao, Nishikar Paruchuri, Nihal Shivannagari, Daniel Li*
