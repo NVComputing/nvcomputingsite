@@ -72,3 +72,21 @@ the code into its only method (since it's a functional interface), so if we call
 For more on lambda expressions, refer to the
 <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html" target="_blank" rel="noopener noreferrer"> Javadoc</a>, and the
 <a href="https://www.programiz.com/java-programming/lambda-expression" target="_blank" rel="noopener noreferrer"> source.</a>
+
+# Functional Programming
+
+This will be a basic introduction into functional programming, I recommend first reading the earlier section on lambdas and our section on [streams](/resources/streams) as it will help a lot and since 
+most of functional programming is streams and lambdas.
+
+## What is Functional Programming
+
+The main idea behind functional programming is that it's programming without any side effects. In other words, it's programming where no variables are being altered or affected. So for example:
+```java
+int[] things = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+int[] otherThings = Arrays.stream(things).filter(i->i>5).toArray();
+```
+This program created a new array that only contained the integers that were greater than 5 from `things[]`. The important detail is that `things[]` was never altered; there were no side effects. 
+As a result, streams are an example of functional programing (but not the only one) since they never alter the original collection, and lambdas are too (as long as the input never gets altered). If you like to think of it mathematically, f(x) 
+must always return the same number (let's say a); but if you change the value of x it won't return a. If x never gets changed, then we have functional
+programming; but if it doesn't then we don't. 
+
