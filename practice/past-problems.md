@@ -4,18 +4,17 @@ Since we have solutions from a variety of past contests, we have separated the s
 Please note that we do not have every single problem, so if there's one you'd like us to do please contact us on Discord or email us. Also, if
 you would like to add a solution that is missing, feel free to do so, but contact us as well.
 
-# [Google Kickstart](/practice/problems/kickstart)
-# [USACO](/practice/problems/usacoproblems)
-# [Codeforces](/practice/problems/codeforces)
-# [LeetCode](/practice/problems/leetcode)
+| | |
+| --- | --- |
+ | **[Google Kickstart Problems](/practice/problems/kickstart)**| **[USACO Problems](/practice/problems/usacoproblems)** |
+ | **[Codeforces Problems](/practice/problems/codeforces)** | **[LeetCode Problems](/practice/problems/leetcode)** |
 
-Here is an example of what a solution will look like:
 
 ## Example
 
 Link: [Problem](codeforces.com)
 
-Solution (in <span style="color: #935000">language used</span>):
+Solution (in *language used*):
 ```java
 //The example is in Java for simplicity.
 import java.util.*;
@@ -30,7 +29,7 @@ public class Solution
 ```
 What this code does:
 
-<span style="color: #935000">*This will try to explain the solution in plain English.*</span>
+*This will try to explain the solution in plain English.*
 
 Efficiency:
-<span style="color: #935000">*This will be written in big O notation. More information about big O notation can be found [here](/resources/efficiency).*</span>
+*This will be written in big O notation. More information about big O notation can be found [here](/resources/efficiency).*
