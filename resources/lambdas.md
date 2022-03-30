@@ -97,3 +97,4 @@ programming; but if it doesn't then we don't.
 Functional programming is really useful for a lot of things. A big example is with javascript's `something().then(thing())` which causes `thing()` to run after `something()` runs. If you want to try it out, try experimenting with functions as arguments
 since there's a lot of cool stuff you can do with that.
 
+*Author: Daniel Li, Anmol Shah, Raymond Zhao*
