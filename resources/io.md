@@ -167,6 +167,11 @@ Coolio
 ```
 Again, it is good practice to close your BufferedReader at the end of the code. Also note that the main disadvantage with BufferedReader is that you need to know how many lines of input you are going to be given.
 ## Which one should I use?
+For beginners, Scanner will probably be better. It's easier to use, easier to understand and provides the same result. Although it is a bit
+slower, in most projects and/or problems it should have no problem with the time limit. Only in certain complex problems will the speed
+of the input system be an issue. In those cases, BufferedReader will work better. It's faster, but a bit more complex to use since it reads
+everything as a String (which is why we need to use ParseInt() to convert numbers to integers). Overall, it is completely up to the user's
+preference.
 
 ## Advanced I/O / Input Processing
 

@@ -88,7 +88,7 @@ between `$A$` and `$B$`. Unless your problem specifically states that the `$q$` 
 go up to extreme values. Therefore, `$O(qN)$` will be too slow.
 
 ### Efficient Solution
-Use [prefix sums](https://usaco.guide/silver/prefix-sums?lang=java) (also explained in our USACO page). Instead of inputting the array,
+Use [prefix sums](/resources/usaco#prefixsums). Instead of inputting the array,
 input a prefix sum array that will show the sum at that specific index instead of the value. To find the sum between the two indices, take
 `$P[B] - P[A - 1]$`. This runs in `$(N)$` time, which is much faster.
 

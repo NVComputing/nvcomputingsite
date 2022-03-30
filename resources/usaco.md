@@ -100,9 +100,11 @@ Bronze is the baseline level of USACO.
 
 **Brute force** is usually sufficient to pass most bronze problems (you do not have nearly as many efficiency concerns as the upper levels.
 To pass, you must be able to:
-*   Solve and interpret a programming problem.
-*   Know / be able to create basic algorithms and logic
-    *   Looping, arrays, internal algorithms
+* Interpret a programming problem.
+* Know / be able to create basic algorithms and logic.
+    * Looping, arrays, internal algorithms
+* Know / be able to transfer your own thoughts to code.
+
 
 ## Silver
 
@@ -111,11 +113,12 @@ Silver is substantially harder than Bronze to get past.
 Brute force **does not work many of the later test cases.** It should be used only if you are unable to come up with a more efficient algorithm, so you can at least get some points for the problem.
 
 To pass, you must know:
-*   Trees and basic graphs. (TREES ALMOST ALWAYS SHOW UP ON AT LEAST ONE PROBLEM IN SILVER!).
-*   Prefix Sum (this is fairly common and often used in a greedy algorithm)
-*   Data structures, such as maps, sets, and trees.
-    *   Hash (HashMap, HashSet, etc.) is EXTREMELY helpful here to optimize your code.
-*   How to come up with and implement efficient, optimal solutions for problems.
+* Trees and basic graphs. (TREES ALMOST ALWAYS SHOW UP ON AT LEAST ONE PROBLEM IN SILVER!).
+* Prefix Sum (this is fairly common and often used in a greedy algorithm)
+* Data structures, such as maps, sets, and trees.
+    * Hash (HashMap, HashSet, etc.) is EXTREMELY helpful here to optimize your code.
+* Efficient algorithms for sorting/searching
+* How to come up with and implement efficient, optimal solutions for problems.
 
 ## Gold
 
@@ -174,6 +177,16 @@ Many of these tricks involve knowing a certain algorithm - oftentimes, problems 
 * This is a very common algorithm in USACO as it is used to not make questions too repetitive.
 * A greedy algorithm, as stated in the name, finds the fastest solutions **at the moment**. 
 * A greedy algorithm never goes back on its work and constructs a direct solution.
+
+A basic example would be:
+
+"Given a list of houses and their prices, determine the maximum amount of houses you can buy within a certain budget."
+
+We would want to use the greedy algorithm here because we know that in order to maximize the number of houses we buy, we must select the cheapest
+ones possible. Using the greedy algorithm, we would select the cheapest house every time until we run out of budget.
+
+Of course, 99.9% of all programming problems will not be this simple. However, the fundamental concept is the same: selecting the best
+option **at the moment**.
 
 ## Prefix Sums
 The simplest way to explain prefix sums is to show a basic example: finding the sum of part of an array. In this case, we want to find the sum of `$[1, 3]$`.
