@@ -5,7 +5,9 @@
 - <a>Contests</a>
   - [USACO](/resources/usaco)
   - [ACSL](/resources/acsl)
+  - [Problem Examples](/resources/pastproblems)
 - <a>General Resources</a>
+  - [Beginner's Guide](/resources/guide)
   - [Input / Output](/resources/io)
   - [Writing Efficient Code](/resources/efficiency)
   - [Tips](/resources/tips)
@@ -26,7 +28,7 @@ and accepted if they're good.**
 
 This page contains general information and useful links, if that's what you're looking for.
 
-Otherwise, click one of the above links you're interested in to get started!
+Otherwise, click one of the links to the left you're interested in to get started!
 
 # Useful Links
 ### <a href="https://github.com/NVComputing/nvcomputingsite" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
