@@ -1,8 +1,15 @@
 # Past USACO Problems
 
 ## Contents
-- [Bronze](#bronzeproblems)
-- [Silver](#silverproblems)
+#### [Bronze](#bronzeproblems)
+  - [Promotion Counting](#january2016problem1)
+  - [Hoof, Paper, Scissors](#january2017problem2)
+  - [Daisy Chains](#december2020problem2)
+  - [Uddered but not Herd](#january2021problem1)
+  - [Even More Odd Photos](#january2021problem2)
+  - [Just Stalling](#january2021problem3)
+
+#### [Silver](#silverproblems)
 
 ## Bronze Problems
 
@@ -169,6 +176,120 @@ What this code does:
 Efficiency:
 This code runs in `$O(n)$` time.
 
+### January 2021, Problem 2
+Link: [Even More Odd Photos](http://www.usaco.org/index.php?page=viewproblem2&cpid=1084)
 
+Solution (in Java):
+```java
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class OddPhotos {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        ArrayList<String> evenOdd = new ArrayList<String>();
+        
+        for(int i = 0; i < N; i++){
+            if(sc.nextInt() % 2 == 0){
+                evenOdd.add("E");
+            }else{
+                evenOdd.add("O");
+            }
+        }
+
+        int groups = 0;
+        //singles only
+        for(int i = 0; i < N; i++){
+            if(i % 2 == 0){
+                if(evenOdd.contains("E")){
+                    groups++;
+                    evenOdd.remove(evenOdd.indexOf("E"));
+                }else{
+                    break;
+                }
+            }
+            if(i % 2 == 1){
+                if(evenOdd.contains("O")){
+                    groups++;
+                    evenOdd.remove(evenOdd.indexOf("O"));
+                }else{
+                    break;
+                }
+            }
+        }
+
+        //pairs
+        for(int i = 0; i < evenOdd.size(); i++){
+            if((groups + i + 1) % 2 == 0){
+                if(evenOdd.contains("O")){
+                    evenOdd.remove(evenOdd.indexOf("O"));
+                    if(evenOdd.contains("O")){
+                        evenOdd.remove(evenOdd.indexOf("O"));
+                        groups++;
+                    }else{
+                        evenOdd.add("O");
+                    }
+                }else{
+                    break;
+                }
+            }
+        }
+        groups++;
+        System.out.println(groups);
+    }
+}
+```
+
+What this code does:
+(to be added)
+
+Efficiency:
+This code runs in `$O(n)$` time.
+
+### January 2021, Problem 3
+Link: [Just Stalling](http://www.usaco.org/index.php?page=viewproblem2&cpid=1085)
+
+Solution (in Java):
+```java
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Stalling {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        int[] a = new int[N];
+        int[] b = new int[N];
+        for(int i = 0; i < N; i++){
+            a[i] = sc.nextInt();
+        }
+        for(int i = 0; i < N; i++){
+            b[i] = sc.nextInt();
+        }
+        int[] possible = new int[N];
+        for(int i = 0; i < a.length; i++){
+            for(int j = 0; j < b.length; j++){
+                if(a[i] <= b[j]){
+                    possible[i]++;
+                }
+            }
+        }
+        Arrays.sort(possible);
+        int ways = 1;
+        for(int i = 0; i < possible.length; i++){
+            ways = ways * (possible[i] - i);
+        }
+        System.out.println(ways);
+    }
+}
+
+```
+
+What this code does:
+(to be added)
+
+Efficiency:
+This code runs in `$O(n^2)$` time. Again, not the most efficient code, but since it's bronze it gets the job done.
 
 ## Silver Problems
