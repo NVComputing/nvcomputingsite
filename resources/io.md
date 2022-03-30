@@ -167,11 +167,24 @@ Coolio
 ```
 Again, it is good practice to close your BufferedReader at the end of the code. Also note that the main disadvantage with BufferedReader is that you need to know how many lines of input you are going to be given.
 ## Which one should I use?
-For beginners, Scanner will probably be better. It's easier to use, easier to understand and provides the same result. Although it is a bit
-slower, in most projects and/or problems it should have no problem with the time limit. Only in certain complex problems will the speed
-of the input system be an issue. In those cases, BufferedReader will work better. It's faster, but a bit more complex to use since it reads
-everything as a String (which is why we need to use ParseInt() to convert numbers to integers). Overall, it is completely up to the user's
-preference.
+
+This is gone over in more detail [here](https://stackoverflow.com/questions/2231369/scanner-vs-bufferedreader) and [here](https://javahungry.blogspot.com/2018/12/difference-between-bufferedreader-and-scanner-in-java-examples.html)
+, but essentially there are 4 major distinguishing features that decide which one you should use.
+
+####1. Scanners can parse input,while BufferedReaders can only read it
+If you want to read in a primitive data type then Scanners can do it directly using their `.nexDT`, however you will need to use StringTokenizers to parse BufferedReader input
+into the desired data type.
+
+####2. BufferedReaders have a buffer of 8kb, while Scanners have a buffer of 1kb
+This means that BufferedReaders can read a lot more data at a time, so if you are trying to read large amounts of data (i.e. a large file),
+then you should probably use a BufferedReader
+
+####3. BufferedReaders are faster
+If you care that much about speed (*cough cough competitive programing*), then just use a BufferedReader
+
+####4 BufferedReaders are synchronized, Scanners are not
+If you are threading and reading input in those threads, then you can use a single BufferedReader for all of them, but you would need
+separate Scanners for each one
 
 ## Advanced I/O / Input Processing
 
