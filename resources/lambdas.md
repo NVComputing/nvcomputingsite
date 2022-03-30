@@ -80,7 +80,11 @@ most of functional programming is streams and lambdas.
 
 ## What is Functional Programming
 
-The main idea behind functional programming is that it's programming without any side effects. In other words, it's programming where no variables are being altered or affected. So for example:
+Functional programming is a programming paradigm where functions are "treated as first class citizens". Essentially, functions are treated as objects and can do
+anything that an object can (be passed as a parameter, returned, etc).
+The main idea behind functional programming is that it's programming without any or with minimal [side effects](https://en.wikipedia.org/wiki/Side_effect_(computer_science)). 
+In other words, it's programming where only local variables that are created inside the function can be modified. This means that no global variables, variables passed by reference, or parameterized variables can be
+modified for it to count as functional programming. An example would be:
 ```java
 int[] things = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 int[] otherThings = Arrays.stream(things).filter(i->i>5).toArray();
@@ -88,5 +92,8 @@ int[] otherThings = Arrays.stream(things).filter(i->i>5).toArray();
 This program created a new array that only contained the integers that were greater than 5 from `things[]`. The important detail is that `things[]` was never altered; there were no side effects. 
 As a result, streams are an example of functional programing (but not the only one) since they never alter the original collection, and lambdas are too (as long as the input never gets altered). If you like to think of it mathematically, f(x) 
 must always return the same number (let's say a); but if you change the value of x it won't return a. If x never gets changed, then we have functional
-programming; but if it doesn't then we don't. 
+programming; but if it doesn't then we don't.
+
+Functional programming is really useful for a lot of things. A big example is with javascript's `something().then(thing())` which causes `thing()` to run after `something()` runs. If you want to try it out, try experimenting with functions as arguments
+since there's a lot of cool stuff you can do with that.
 
