@@ -505,7 +505,6 @@ import java.util.Scanner;
 public class MooBuzz {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner sc = new Scanner(new File("moobuzz.in"));
-        //Scanner sc = new Scanner(System.in);
         long N = sc.nextInt();
         long pos = N % 8;
         if(pos == 0){
@@ -516,7 +515,6 @@ public class MooBuzz {
         PrintWriter pw = new PrintWriter(new File("moobuzz.out"));
         pw.println(nums[(int) (pos - 1)] + add * 15);
         pw.close();
-        //System.out.println(nums[pos - 1] + add * 15);
     }
 }
 
