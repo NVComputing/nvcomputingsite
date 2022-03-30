@@ -68,7 +68,7 @@ Although Duolingo offers a variety of languages, some which aren't even spoken i
 languages.
 
 ## 4. Practice!
-Using our [Practice Page](/practice) page, you can find different sites to practice competitve programming, solve problems ranging from simple to insanely
+Using our [Resource Page](/resources), you can find different sites to practice competitve programming, solve problems ranging from simple to insanely
 difficult. Practice also takes time, but the more you practice, the better you will get.
 
 Good luck on your journey, and we hope to see you at our next meeting!
