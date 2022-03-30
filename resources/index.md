@@ -5,7 +5,7 @@
 - <a>Contests</a>
   - [USACO](/resources/usaco)
   - [ACSL](/resources/acsl)
-  - [Problem Examples](/resources/pastproblems)
+  - [Problem Examples](/resources/past-problems)
 - <a>General Resources</a>
   - [Beginner's Guide](/resources/guide)
   - [Input / Output](/resources/io)
