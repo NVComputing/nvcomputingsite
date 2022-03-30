@@ -7,7 +7,7 @@ you would like to add a solution that is missing, feel free to do so, but contac
 | | |
 | --- | --- |
  | **[Google Kickstart Problems](/practice/problems/kickstart)**| **[USACO Problems](/practice/problems/usacoproblems)** |
- | **[Codeforces Problems](/practice/problems/codeforces)** | **[LeetCode Problems](/practice/problems/leetcode)** |
+
 
 
 ## Example
