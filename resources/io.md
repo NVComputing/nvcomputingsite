@@ -22,8 +22,15 @@ of input/output.*
 # Introduction
 
 ## Basics
+Input/Output is very important for coding. It allows a user to interact with their code, and the code will act accordingly based on what the 
+user inputs. Output is similar; it allows the user to read what the code has stored and calculated. Input/Output has many uses besides simple
+communication between the code and the user. It can be used for debugging, since a string of simple `println()` statements at various points
+can show the user exactly what may be wrong with the code.
 
 ## What is stdin/stdout?
+Stdin/stdout, as you can guess, stands for standard input/output. It is the most basic way of reading something or printing something in the code,
+using the terminal as a way of communication. For debugging purposes, stdin/stdout is probably the most efficient way to do so, although
+printing using files and other external sources is possible (but why would you do that?).
 
 # Java
 
@@ -91,8 +98,9 @@ Note the empty line below hello, this is because the previous next() methods rea
 
 It is also a good practice to close your scanner with the close() method after you are done using it.
 
-
-
+This is all you know if you want to get started with using Scanner, however if you would like to go further, here is the 
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html" target="_blank" rel="noopener noreferrer"> Javadoc</a>, and here is a 
+<a href="https://www.javatpoint.com/Scanner-class" target="_blank" rel="noopener noreferrer"> list</a> of other methods you can use.
  
 ## BufferedReader
 BufferedReader is more efficient at reading inputs than Scanner, although at the level most of us are at, it doesn't make a significant difference. It is less straightforward to use, but it something you should try and learn once you are comfortable with taking input and output.
