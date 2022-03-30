@@ -36,7 +36,6 @@ Otherwise, click one of the above links you're interested in to get started!
 
 If you would like to contribute, please work on one (or more) of the following pages. Please let a captain know if you plan on doing this so that we may check your changes afterwards.
 
-* Lambdas and Functional Programming (Unstarted)
 * Input / Output (Started)
 * Efficient Code (Started)
 * Tips (Started)

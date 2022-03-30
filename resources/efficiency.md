@@ -1,7 +1,9 @@
 # Efficiency
 ## Contents
 - [General Tips](#generaltips)
-- [How to Write Efficient Code] (#writeefficientcode)
+- [Writing Efficient Code](#writingefficientcode)
+- ["Big O" Notation](#bigonotation)
+- [Example Problems](#exampleproblems)
 
 # General Tips
 * Try to limit your usage of for loops. For loops can take especially long, and are the main reason why your code is not passing time constraints.
@@ -14,7 +16,7 @@ When coding at a higher level, there are typically two different types of soluti
 
 This can work for earlier test cases in USACO, but as the values and parameters get larger, they take longer and longer to run.
 
-##"Big O" Notation
+# "Big O" Notation
 A common way to measure the efficiency of code is to use "Big O" notation. They are formatted using a capital O, followed by a mathematical
 formula in parentheses (e.g. O(log N)). Here's a list of the common "Big O"'s, in order of fastest to slowest:
 
@@ -32,9 +34,10 @@ Generally, you want to avoid doing anything above `$O(N)$`. In smaller cases, `$
 when doing so. Also, Big O Notation disregards the constant value, so if your `$N$` is like `$9 * 10^{17}$`, obviously `$O(N)$` will be
 extremely slow.
 
-An example of naive versus efficient code can be seen here.
+Examples of naive versus efficient code can be seen here.
 
-### Problem
+# Example Problems
+## Problem 1
 Given an array of n integers, find the subarray of size 2 with the largest sum. (members of subarrays do not have to be adjacent).
 i.e. given the array [1, 2, 6, 5, 11], the largest subarray is [6, 11].
 
@@ -64,18 +67,30 @@ try to mask what they're actually asking by using wordy descriptions or weird si
 
 Make sure you're able to distill problems down to their roots.
 
-### Problem
+## Problem 2
 Given a sorted array of integers R, return the index of integer K in the array or
 return -1 if the value isn’t contained in the array. (This is a problem you should have
 already seen.)
 
 ### Naive Solution
-Do a linear search through the array, which runs in O(n). This is something that you are probably familiar with and seems fairly efficient, but is impractical as n gets larger.
+Do a linear search through the array, which runs in `$O(n)$`. This is something that you are probably familiar with and seems fairly efficient, but is impractical as n gets larger.
 
 ### Efficient Solution
-Do a binary search through the array, which runs in O(log(n)).
+Do a binary search through the array, which runs in `$O(log(n))$`.
 Those of you who took AP Computer Science A probably learned this later in the year, and it runs much faster as time goes on.
 
+## Problem 3
+Given an array of size `$N$`, find the sum of the values from index `$A$` to index `$B$`.
+
+### Naive Solution
+Input the entire array, loop through the given indices to find the sum. This runs in `$O(qN)$`, where `$q$` will be the number of indices
+between `$A$` and `$B$`. Unless your problem specifically states that the `$q$` will be less than a certain number, we can assume that it will
+go up to extreme values. Therefore, `$O(qN)$` will be too slow.
+
+### Efficient Solution
+Use [prefix sums](https://usaco.guide/silver/prefix-sums?lang=java) (also explained in our USACO page). Instead of inputting the array,
+input a prefix sum array that will show the sum at that specific index instead of the value. To find the sum between the two indices, take
+`$P[B] - P[A - 1]$`. This runs in `$(N)$` time, which is much faster.
 
 ---
 *Authors: Raymond Zhao, Nishikar Paruchuri, Nihal Shivannagari, Daniel Li*
