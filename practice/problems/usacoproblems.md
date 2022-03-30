@@ -10,6 +10,11 @@
   - [Just Stalling](#january2021problem3)
 
 #### [Silver](#silverproblems)
+  - [Breed Counting](#december2015problem3)
+  - [Counting Haybales](#december2016problem1)
+  - [Cities and States](#december2016problem2)
+  - [Grass Planting](#january2019problem1)
+  - [MooBuzz](#december2019problem1)
 
 ## Bronze Problems
 
@@ -293,3 +298,233 @@ Efficiency:
 This code runs in `$O(n^2)$` time. Again, not the most efficient code, but since it's bronze it gets the job done.
 
 ## Silver Problems
+
+### December 2015, Problem 3
+Link: [Breed Counting](http://www.usaco.org/index.php?page=viewproblem2&cpid=572)
+
+Solution (in Java):
+```java
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class BreedCounting {
+    public static void main(String[] args) throws FileNotFoundException{
+        Scanner sc = new Scanner(new File("bcount.in"));
+        int N = sc.nextInt();
+        int Q = sc.nextInt();
+        int H = 0;
+        int G = 0;
+        int J = 0;
+        int[] Hfix = new int[N + 1];
+        int[] Gfix = new int[N + 1];
+        int[] Jfix = new int[N + 1];
+        Hfix[0] = 0;
+        Gfix[0] = 0;
+        Jfix[0] = 0;
+        // H1 G2 J3
+        for(int i = 1; i < N + 1; i++){
+            int breed = sc.nextInt();
+            if(breed == 1){
+                H++;
+            }else if(breed == 2){
+                G++;
+            }else{
+                J++;
+            }
+            Hfix[i] = H;
+            Gfix[i] = G;
+            Jfix[i] = J;
+        }
+        PrintWriter pw = new PrintWriter(new File("bcount.out"));
+        for(int i = 0; i < Q; i++){
+            int first = sc.nextInt();
+            int last = sc.nextInt();
+            int Hout = Hfix[last] - Hfix[first - 1];
+            int Gout = Gfix[last] - Gfix[first - 1];
+            int Jout = Jfix[last] - Jfix[first - 1];
+            pw.println(Hout + " " + Gout + " " + Jout);
+        }
+        pw.close();
+    }
+}
+
+```
+
+What this code does:
+(to be added)
+
+Efficiency:
+This code runs in `$O(n)$` time.
+
+### December 2016, Problem 1
+Link: [Counting Haybales](http://www.usaco.org/index.php?page=viewproblem2&cpid=666)
+
+Solution (in Java):
+```java
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Haybales {
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner sc = new Scanner(new File("haybales.in"));
+        int N = sc.nextInt();
+        int Q = sc.nextInt();
+        int[] Array = new int[N];
+        for(int i = 0; i < N; i++){
+            Array[i] = sc.nextInt();
+        }
+        Arrays.sort(Array);
+        PrintWriter out = new PrintWriter(new File("haybales.out"));
+        for(int i = 0; i < Q; i++){
+            int count = 0;
+            int first = sc.nextInt();
+            int last = sc.nextInt();
+            int lowSearch = Arrays.binarySearch(Array, first);
+            if(lowSearch < 0){
+                lowSearch = Math.abs(lowSearch + 1);
+            }
+            int highSearch = Arrays.binarySearch(Array, last);
+            if(highSearch < 0){
+                highSearch = Math.abs(highSearch + 2);
+            }
+
+            out.println(highSearch - lowSearch + 1);
+        }
+        out.close();
+    }
+}
+
+```
+
+What this code does:
+(to be added)
+
+Efficiency:
+This code runs in `$O(n)$` time.
+
+### December 2016, Problem 2
+Link: [Cities and States](http://www.usaco.org/index.php?page=viewproblem2&cpid=667)
+
+Solution (in Java):
+```java
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Citystate {
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner sc = new Scanner(new File("citystate.in"));
+        int N = sc.nextInt();
+        HashMap<String, Long> map = new HashMap<String, Long>();
+        int dupes = 0;
+        for(int i = 0; i < N; i++){
+            String[] Array = new String[2];
+            Array[0] = sc.next().substring(0, 2);
+            Array[1] = sc.next();
+            Arrays.sort(Array);
+            String key = Array[0] + "" + Array[1];
+            if(map.containsKey(key)){
+                map.put(key, map.get(key) + 1);
+                dupes++;
+            }else{
+                map.put(key, 1);
+            }
+        }
+        dupes = dupes / 2;
+        PrintWriter out = new PrintWriter(new File("citystate.out"));
+        out.println(dupes);
+        out.close();
+    }
+}
+
+```
+
+What this code does:
+(to be added)
+
+Efficiency:
+This code runs in `$O(n)$` time.
+
+### January 2019, Problem 1
+Link: [Grass Planting](http://www.usaco.org/index.php?page=viewproblem2&cpid=894)
+
+Solution (in Java):
+```java
+import java.util.*;
+import java.io.*;
+
+public class Grass {
+    public static void main(String[] args) throws IOException{
+        Scanner sc = new Scanner(new File("planting.in"));
+        int N = sc.nextInt();
+        int[] d = new int[100000];
+        for(int i = 1; i < N; i++){
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            d[a-1]++; 
+            d[b-1]++;
+        }
+        int D = 0;
+        for(int i = 0; i < N; i++){
+            if(d[i] > D){
+                D = d[i];
+            }
+        }
+        PrintWriter pw = new PrintWriter(new File("planting.out"));
+        pw.println(D+1);
+        pw.close();
+    }
+}
+```
+
+What this code does:
+(to be added)
+
+Efficiency:
+This code runs in `$O(n)$` time.
+
+### December 2019, Problem 1
+Link: [MooBuzz](http://www.usaco.org/index.php?page=viewproblem2&cpid=966)
+
+Solution (in Java):
+```java
+//This code only passes 12/13 test cases.
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class MooBuzz {
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner sc = new Scanner(new File("moobuzz.in"));
+        //Scanner sc = new Scanner(System.in);
+        long N = sc.nextInt();
+        long pos = N % 8;
+        if(pos == 0){
+            pos = 8;
+        }
+        long add = N / 8;
+        long[] nums = {1, 2, 4, 7, 8, 11, 13, 14};
+        PrintWriter pw = new PrintWriter(new File("moobuzz.out"));
+        pw.println(nums[(int) (pos - 1)] + add * 15);
+        pw.close();
+        //System.out.println(nums[pos - 1] + add * 15);
+    }
+}
+
+```
+
+What this code does:
+(to be added)
+
+Efficiency:
+This code runs in `$O(n)$` time.
+
