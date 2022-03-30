@@ -229,7 +229,7 @@ The general form of taking the prefix sum of an array from index `$[X, Y]$` woul
 For example problems, please check the [USACO website.](http://usaco.org/index.php?page=contests)
 
 If you would like to see a walkthrough of problems and how we solved them in the past, you can check our
-[past problems page here.](/practice/past-problems)
+[past problems page here.](/resources/past-problems)
 
 ---
 *Authors: Raymond Zhao, Nishikar Paruchuri, Nihal Shivannagari*
