@@ -72,3 +72,6 @@ Using our [Resource Page](/resources), you can find different sites to practice 
 difficult. Practice also takes time, but the more you practice, the better you will get.
 
 Good luck on your journey, and we hope to see you at our next meeting!
+
+---
+*Authors: Daniel Li*
