@@ -118,7 +118,7 @@ in Terminal, which should start the server (`Express server started on port 8080
 Then, simply open the page http://localhost:8080 to browse your own version of the website. Make any changes you would like (you don't have to rerun `node .`) in the IDE, and reload the page you are editing to see the changes. This means you can ensure you won't have any wacky formatting issues when you do a pull request - everything works exactly like it would on the actual, live website.
 
 ### Setup on Linux Terminal
-Before starting it's important to install dependencies, the following uses `pacman` but a distribution-specific package manager should be supplemented.
+Before starting it's important to install dependencies, the following uses `pacman` but a distribution-specific package manager (like `apt`, `dnf`, or `rpm`) should be supplemented.
 (Or just build from source if you're up for it, more power to ya.)
 
 ```
