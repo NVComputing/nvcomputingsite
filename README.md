@@ -117,6 +117,46 @@ in Terminal, which should start the server (`Express server started on port 8080
 
 Then, simply open the page http://localhost:8080 to browse your own version of the website. Make any changes you would like (you don't have to rerun `node .`) in the IDE, and reload the page you are editing to see the changes. This means you can ensure you won't have any wacky formatting issues when you do a pull request - everything works exactly like it would on the actual, live website.
 
+### Setup on Linux Terminal
+Before starting it's important to install dependencies, the following uses `pacman` but a distribution-specific package manager should be supplemented.
+(Or just build from source if you're up for it, more power to ya.)
+
+```
+root# pacman -Syu
+root# pacman -S npm git
+```
+
+After creating a fork of the repo on the github, first thing's first is to clone it into a local working directory.
+```
+git clone https://github.com/YOUR_GITHUB_USERNAME/nvcomputingsite
+cd nvcomputingsite
+```
+
+Then track the repository's upstream:
+```
+git branch --set-upstream-to=origin/master master
+git remote add upstream https://github.com/NVComputing/nvcomputingsite
+```
+
+And finally, pull and install node:
+```
+git pull upstream master
+npm install
+```
+
+After changes are committed, they can be viewed through http://localhost:8080 after running:
+
+```
+node .
+```
+
+And pushed to the forked repository through the command:
+```
+git push origin master
+```
+
+And from there the changes can be submitted to a PR, congratulations!
+
 # Page Requirements / Markdown Styling
 
 In your pull request, provide me a brief description of what you've edited/added and why. It doesn't need to be long, just a couple words.
