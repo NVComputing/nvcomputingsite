@@ -87,7 +87,7 @@ In other words, it's programming where only local variables that are created ins
 modified for it to count as functional programming. An example would be:
 ```java
 int[] things = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-int[] otherThings = Arrays.stream(things).filter(i->i>5).toArray();
+int[] otherThings = Arrays.stream(things).filter(i-> i>5).toArray();
 ```
 This program created a new array that only contained the integers that were greater than 5 from `things[]`. The important detail is that `things[]` was never altered; there were no side effects. 
 As a result, streams are an example of functional programing (but not the only one) since they never alter the original collection, and lambdas are too (as long as the input never gets altered). If you like to think of it mathematically, f(x) 

@@ -188,6 +188,51 @@ separate Scanners for each one
 
 ## Advanced I/O / Input Processing
 
+Despite the fancy title, this is just more stream stuff so if you have no idea what that is then read [this](/resources/streams) and then maybe [this](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html).  
+
+####Input with Streams
+Okay so let's say we want to read a single line of integers and toss it in an array. We could do something like this:
+```java
+BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
+int[] arr = Arrays.stream(buf.readLine().split(" ")).mapToInt(s-> Integer.parseInt(s)).toArray();
+```
+This would take the inputted line from our `BufferedReader` (which is a string), turn it into an array (`.split(" ")`), convert that into a stream (`Arrays.stream()`),
+turn that into a stream of integers with `mapToInt(s-> Integer.parseInt(s)` and then turn that back into an integer array with `toArray()`. It's really a lot of type conversions.
+
+That was considerably less lines of code and relatively faster than writing a for loop with Scanners or a BufferedReader. The best part is you don't even need the number of integers, it just does it.  
+
+Now let's say we want to take multiple lines of input and turn it into an integer 2d-array. We could do something like this:
+
+```java
+BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
+int[][] arr = buf.lines().map(s->s.split(" ")).map(s->Arrays.stream(s).mapToInt(s->Integer.parseInt(s)).toArray()).toArray(Collectors.toCollection(int[][]::new));
+```
+This will take a bunch of lines of input, turn those lines into `Stream<String>` with `.lines()`, split those Strings into `String[]` so that we now have a `Stream<String[]>`,
+then turn that into a `Stream<Stream<String>>` with `.map(s->Arrays.stream(s))`. This is when it gets a bit weird so pay close attention to the inner `Stream<String>` and just remember that that is part of a larger Stream. We take the inner `Stream<String>` and turn it into a `Stream<Integer>`
+with `.mapToInt(s -> Integer.parseInt(s))` (so in reality we have a `Stream<Stream<Integer>>`), then we turn this inner Stream into an `int[]` with `.toArray()` so that we have (in total) a `Stream<int[]>`. We finally turn this `Stream<int[]>` into a `int[][]` by running `.toArray(int[][]::new)`.
+
+Although this seems really complicated, you will eventually get a hang of it.
+
+####Output with Streams
+
+This is really just getting fancy with `.forEach`
+
+```java
+ArrayList<String> list = new ArrayList<String>();
+list.add("pain1");
+list.add("agony1");
+list.add("despair1");
+list.stream().forEach(s->System.out.println(s)); 
+
+String[] arr = {"pain2", "agony2", "despair2"};
+Arrays.stream(arr).forEach(s->System.out.println(s));
+
+String[][] arr2d = {{"please", "help", "me"},{"I'm", "stuck", "in", "here"}};
+Arrays.stream(arr2d).forEach(s->Arrays.stream(s).forEach(t->System.out.println(t))); 
+//String[][] -> Stream<String[]> ->Stream<Stream<String>> -> prints out all of the Strings
+```
+An important detail is that `.forEach` is unordered so it might not print the Strings in order. If you want them in order then use
+`.forEachOrdered()`
 ## Input Reading Examples
 Assume we’re reading input for a problem.
 
