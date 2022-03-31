@@ -78,23 +78,64 @@ For more on lambda expressions, refer to the
 This will be a basic introduction into functional programming, I recommend first reading the earlier section on lambdas and our section on [streams](/resources/streams) as it will help a lot and since 
 most of functional programming is streams and lambdas.
 
-## What is Functional Programming
+## What is a Functional Programming Language?
 
-Functional programming is a programming paradigm where functions are "treated as first class citizens". Essentially, functions are treated as objects and can do
-anything that an object can (be passed as a parameter, returned, etc).
-The main idea behind functional programming is that it's programming without any or with minimal [side effects](https://en.wikipedia.org/wiki/Side_effect_(computer_science)). 
-In other words, it's programming where only local variables that are created inside the function can be modified. This means that no global variables, variables passed by reference, or parameterized variables can be
-modified for it to count as functional programming. An example would be:
+In general programming theory, there exists two main types of languages:
+
+- [Imperative programming](https://en.wikipedia.org/wiki/Imperative_programming)
+- [Functional programming](https://en.wikipedia.org/wiki/Functional_programming)
+
+While these two will turn out to seem super different, they are [proven](https://en.wikipedia.org/wiki/Church%E2%80%93Turing_thesis) to be identical.
+
+In a nutshell, functional programming languages treat EVERYTHING as a function, including the basic definitions of `true` and `false`!
+
+From there, every series of actions is not defined as **what something should do**, but rather **what something is** as a recursive set of functions, then asking for a thing.
+While this may seem useless, it is powerful to define incredibly complex processes, and only commit processing power when it is needed (lazy evaluation).
+
+
+```text
+f(x) = y
+
+-- snip --
+
+f(x) -> [what happens in f(x) stays in f(x)...] -> y
+```
+
+From these implementations, two things are realized; namely:
+- Working with sets becomes very useful
+- Functions can't *do anything* besides define more things. (A lot like mathematical functions)
+
+What does that last bit mean? Basically, a function cannot contain [side effects](https://en.wikipedia.org/wiki/Side_effect_(computer_science)). In other words, it must follow a
+"black box" model, where all the function/caller can see is the value passed in and the value returned, nothing outside edited, no prints, no outside variables, nada.
+
+Functional programming languages are still widely used, particularly in data science for large processing operations. The YouTube channel Computerphile has a ton of 
+really neat videos on them if you're interested.
+
+## What does this have to do with what I'M working with?
+
+Great question. Well, since around 1993, a lot of imperative language developers started to realize how powerful functional programming can be.
+As you'd expect, Java is one of these functional-capable languages, and you may have even seen some of its functional features already. The most commonly used ones are:
+
+- Anonymous functions (lambdas): functions with no name
+- `map` function: applies a given function to every element in a collection
+- `fold` function: collapses a collection into a single value according to a passed function
+- `filter` function: returns a collection with elements kept/removed according to a boolean function passed
+- Closures: while java does not have support for closures, these can be emulated with anonymous classes
+
+A typical usecase of functional programming in Java might be:
 ```java
 int[] things = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 int[] otherThings = Arrays.stream(things).filter(i->i>5).toArray();
 ```
+
+There is a lot to note here about the aforementioned "side effects" as well.
+
 This program created a new array that only contained the integers that were greater than 5 from `things[]`. The important detail is that `things[]` was never altered; there were no side effects. 
 As a result, streams are an example of functional programing (but not the only one) since they never alter the original collection, and lambdas are too (as long as the input never gets altered). If you like to think of it mathematically, f(x) 
 must always return the same number (let's say a); but if you change the value of x it won't return a. If x never gets changed, then we have functional
-programming; but if it doesn't then we don't.
+programming; but if it doesn't, it must be pulling from an outside source, no bueno.
 
-Functional programming is really useful for a lot of things. A big example is with javascript's `something().then(thing())` which causes `thing()` to run after `something()` runs. If you want to try it out, try experimenting with functions as arguments
-since there's a lot of cool stuff you can do with that.
+Once you start looking, you'll find many cases where using functional programming is just faster. And while it may just seem like a bunch of shorthand, the ability to combine
+and mix functions as you please becomes far, far greater than anything you could accomplish with just a couple `for` loops.
 
-*Authors: Daniel Li, Anmol Shah, Raymond Zhao*
+*Authors: Daniel Li, Anmol Shah, Raymond Zhao, Andrew Fargo*
