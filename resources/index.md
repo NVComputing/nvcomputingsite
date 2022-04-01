@@ -11,6 +11,7 @@
   - [Input / Output](/resources/io)
   - [Writing Efficient Code](/resources/efficiency)
   - [Tips](/resources/tips)
+  - [Language Basics](/resources/languages)
 - <a>Advanced</a>
   - [Stream API](/resources/streams)
   - [Lambdas and Functional Programming](/resources/lambdas)
