@@ -104,7 +104,7 @@ stream2.map(str -> str.toUpperCase())
 item in the stream individually) and return 1 value. `map()` essentially replaces every argument inside the array
 with the result of the method called ON the array.
 
-(Note that this can be shortened to `stream2.map(String::toUpperCase)`. Read the part about method references
+(Note that this can be shortened to `stream2.map(String::toUpperCase)`. Read the [part](/resources/lambdas#methodreferences) about method references
 in anonymous functions.)
 
 This example specifically calls the toUpperCase method on every string.

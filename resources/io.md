@@ -208,8 +208,12 @@ BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
 int[][] arr = buf.lines().map(s->s.split(" ")).map(s->Arrays.stream(s).mapToInt(s->Integer.parseInt(s)).toArray()).toArray(Collectors.toCollection(int[][]::new));
 ```
 This will take a bunch of lines of input, turn those lines into `Stream<String>` with `.lines()`, split those Strings into `String[]` so that we now have a `Stream<String[]>`,
-then turn that into a `Stream<Stream<String>>` with `.map(s->Arrays.stream(s))`. This is when it gets a bit weird so pay close attention to the inner `Stream<String>` and just remember that that is part of a larger Stream. We take the inner `Stream<String>` and turn it into a `Stream<Integer>`
-with `.mapToInt(s -> Integer.parseInt(s))` (so in reality we have a `Stream<Stream<Integer>>`), then we turn this inner Stream into an `int[]` with `.toArray()` so that we have (in total) a `Stream<int[]>`. We finally turn this `Stream<int[]>` into a `int[][]` by running `.toArray(int[][]::new)`.
+then turn that into a `Stream<Stream<String>>` with `.map(s->Arrays.stream(s))`. This is when it gets a bit weird so pay close attention to the inner `Stream<String>` 
+and just remember that that is part of a larger Stream. We take the inner `Stream<String>` and turn it into a `IntStream`
+with `.mapToInt(s -> Integer.parseInt(s))` so in reality we have a `Stream<IntStream>` (don't worry about the IntStream if you want think about it as a specified stream that only has ints the only benefit is that it removes a couple words later on, I just wanted to show that
+there are more than just Stream<Class>), then we turn this inner Stream (the `IntStream`) into an `int[]` with `.toArray()` so that we have (in total) a `Stream<int[]>`. We finally turn this `Stream<int[]>` into a `int[][]` by running `.toArray(int[][]::new)`.  
+TLDR:  `Stream<String>` -> `Stream<String[]>` -> `Stream<Stream<String>>` -> `Stream<IntStream>` -> `Stream<int[]>` -> `int[][]`  
+TLDRTLDR: We just converted types until we got what we wanted  
 
 Although this seems really complicated, you will eventually get a hang of it.
 
@@ -231,7 +235,7 @@ String[][] arr2d = {{"please", "help", "me"},{"I'm", "stuck", "in", "here"}};
 Arrays.stream(arr2d).forEach(s->Arrays.stream(s).forEach(t->System.out.println(t))); 
 //String[][] -> Stream<String[]> ->Stream<Stream<String>> -> prints out all of the Strings
 ```
-An important detail is that `.forEach` is unordered so it might not print the Strings in order. If you want them in order then use
+An important detail is that `.forEach` is **unordered** so it might not print the Strings in order. If you want them in order then use
 `.forEachOrdered()`
 ## Input Reading Examples
 Assume we’re reading input for a problem.

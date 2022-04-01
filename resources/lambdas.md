@@ -4,6 +4,7 @@
 - [Lambdas](#lambdas)
   - [What is a lambda?](#whatisalambda)
   - [How do I use it?](#howdoiuseit)
+  - [Method References](#methodreferences)
 - [Functional Programming](#functionalprogramming)
   - [What is functional programming?](#whatisfunctionalprogramming)
 
@@ -73,6 +74,69 @@ For more on lambda expressions, refer to the
 <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html" target="_blank" rel="noopener noreferrer"> Javadoc</a>, and the
 <a href="https://www.programiz.com/java-programming/lambda-expression" target="_blank" rel="noopener noreferrer"> source.</a>
 
+##Method References
+One uses lambdas to create anonymous functions, but sometimes all you do in that anonymous function is call another method. Method references allow you to easily and clearly call
+that existing method by name. In other words (taken from the java docs), they are "compact, easy-to-read lambda expressions for methods that already have a name". This in particular is very useful in 
+[streams](/resources/streams). However, there are limitations to this as there are only 4 types of method references.
+
+###1. Reference to a static method
+####Syntax: `ClassName::staticMethodName`
+####Original Lambda: `(args) -> ClassName.staticMethodName(args)`
+```java
+char[] thing = {'1', '2', '3', '4', '5'}
+
+//convert thing to an array with Strings
+String[] thingButWithStrings = Arrays.stream(thing).map(String::valueOf).toArray()
+
+//convert thingButWithStrings to an array with integers
+int[] thingButWithStringsButWithInts = Arrays.stream(thingButWithStrings).map(Integer::parseInt).toArray();
+```
+This is pretty self-explanatory, we just use most of the same syntax used in calling these methods `ClassName.methodNames(args)` and just 
+use it without the `(args)`
+###2. Reference to an instance method of a particular object
+####Syntax: `Object::instanceMethodName`
+####Original Lambda: `(args) -> object.instanceMethodName(args)`
+```java
+class ComparisonProvider {
+    public int compareByName(Person a, Person b) {
+        return a.getName().compareTo(b.getName());
+    }
+        
+    public int compareByAge(Person a, Person b) {
+        return a.getBirthday().compareTo(b.getBirthday());
+    }
+}
+ComparisonProvider myComparisonProvider = new ComparisonProvider();
+Arrays.sort(rosterAsArray, myComparisonProvider::compareByName);
+//instead of Arrays.sort(rosterAsArray, (a,b) -> myComparisonProvider.compareByName(a,b))
+```
+This is also pretty self-explanatory, we just use the object name and the method name (`object.function(args)`) and once again skip the `(args)`.
+###3. Reference to an instance method of an arbitrary object of a particular type
+####Syntax: `Type::methodName`
+####Original Lambda: `(arg,rest) -> arg.instanceMethodName(rest)`, note that arg is of type `Type`
+```java
+String[] stringArray = { "Barbara", "James", "Mary", "John", "Patricia", "Robert", "Michael", "Linda" };
+Arrays.sort(stringArray, String::compareToIgnoreCase);
+//instead of Arrays.sort(stringArray, (a,b) -> a.compareToIgnoreCase(b))
+```
+This is the most confusing of the four but it really allows us to use a method reference whenever we have a function call that
+is like `object1.function(object2)` by instead using `typeOfObject1::function`. Some notable examples would be many String functions (i.e. `object.substring(int)` would turn into `String::substring` and
+most of the `BigInteger`/`BigDecimal`calls (so instead of `bigInt1.add(bigInt2)` we use `BigInteger::add` ) but who in their right mind would ever willingly use those?
+
+####4. Reference to a Constructor
+#####Syntax: `ClassName::new`
+#####Original Lambda: `(args) -> new ClassName(args)`
+```java
+int[] stuff = {1, 2, 3, 4, 5, 61}
+ArrayList<String> ffuts = Arrays.stream(stuff).map(String::valueOf).collect(Collectors.toCollection(ArrayList::new));
+//or alternatively without the .collect
+String[] stuff = Arrays.stream(stuff).map(String::new).toArray(String[]::new);
+```
+This is extremely useful for creating objects or collections, it basically gives you no reason to ever write a for loop creating arrays
+or arraylists and filling them ever again (but you do you).
+
+For more resources on Method References in Anonymous Functions read the [java documentation](https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html)
+or [this](https://dzone.com/articles/java-lambda-method-reference)
 # Functional Programming
 
 This will be a basic introduction into functional programming, I recommend first reading the earlier section on lambdas and our section on [streams](/resources/streams) as it will help a lot and since 
