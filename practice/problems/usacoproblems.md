@@ -4,7 +4,10 @@
 #### [Bronze](#bronzeproblems)
   - [Promotion Counting](#january2016problem1)
   - [Hoof, Paper, Scissors](#january2017problem2)
+  - [Word Processor](#january2020problem1)
+  - [Do You Know Your ABC's](#december2020problem1)
   - [Daisy Chains](#december2020problem2)
+  - [Stuck in a Rut](#december2020problem3)
   - [Uddered but not Herd](#january2021problem1)
   - [Even More Odd Photos](#january2021problem2)
   - [Just Stalling](#january2021problem3)
@@ -97,6 +100,87 @@ What this code does:
 Efficiency:
 Since there's only one for loop, this code runs in `$O(n)$` time.
 
+### January 2020, Problem 1
+Link: [Word Processor](http://www.usaco.org/index.php?page=viewproblem2&cpid=987)
+
+Solution (in Java):
+```java
+import java.util.*;
+import java.io.*;
+
+public class WordProcessor {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader("word.in"));
+        PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("word.out")));
+
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int numWords = Integer.parseInt(st.nextToken());
+        int maxChars = Integer.parseInt(st.nextToken());
+
+        st = new StringTokenizer(br.readLine());
+        br.close();
+
+        int numChars = 0;
+        String res = "";
+        while(st.hasMoreTokens()) {
+            String word = st.nextToken();
+            if(numChars + word.length() <= maxChars) {
+                res += word + " ";
+                //pw.print(word + " ");
+                numChars += word.length();
+            } else {
+                pw.println(res.substring(0,res.length()-1));
+                //pw.print(word + " ");
+                res = word + " ";
+                numChars = word.length();
+            }
+        }
+        pw.print(res.substring(0,res.length()-1));
+
+        pw.close();
+    }
+}
+
+```
+What this code does:
+(to be added)
+
+Efficiency:
+This code runs in `$O(n)$` time.
+
+### December 2020, Problem 1
+Link: [Do You Know Your ABC's?](http://www.usaco.org/index.php?page=viewproblem2&cpid=1059)
+
+Solution (in Java):
+```java
+import java.util.*;
+import java.io.*;
+
+public class DecBronze1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] nums = new int[7];
+        for(int i = 0; i < 7; i++) {
+            nums[i] = sc.nextInt();
+        }
+
+        Arrays.sort(nums);
+
+        int a = nums[0];
+        int b = nums[1];
+        int c = nums[6] - a - b;
+
+        System.out.println(a + " " + b + " " + c);
+    }
+}
+```
+What this code does:
+(to be added)
+
+Efficiency:
+This code runs in `$O(1)$` time, since the for loop is guaranteed to have 7 runs every time.
+
 ### December 2020, Problem 2
 Link: [Daisy Chains](http://www.usaco.org/index.php?page=viewproblem2&cpid=1060)
 
@@ -141,6 +225,85 @@ What this code does:
 
 Efficiency:
 This is terribly, terribly inefficient code, in `$O(n^3)$` time. If it wasn't in Bronze, it definitely would not have passed.
+
+### December 2020, Problem 3
+Link: [Stuck in a Rut](http://www.usaco.org/index.php?page=viewproblem2&cpid=1061)
+
+Solution (in Java):
+```java
+import java.util.*;
+import java.io.*;
+
+public class DecBronze3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList<int[]> cows = new ArrayList<int[]>();
+        ArrayList<int[]> easts = new ArrayList<int[]>();
+        ArrayList<int[]> activeNorths = new ArrayList<int[]>();
+
+        HashMap<int[], String> res = new HashMap<int[], String>();
+        int numCows = sc.nextInt();
+        for(int i = 0; i < numCows; i++) {
+            String dir = sc.next();
+            int[] coords = {sc.nextInt(), sc.nextInt()};
+            res.put(coords, "Infinity");
+            if(dir.equals("E")) {
+                easts.add(coords);
+                cows.add(coords);
+            } else {
+                activeNorths.add(coords);
+                cows.add(coords);
+            }
+        }
+
+        Collections.sort(easts, Comparator.comparing(c -> c[1]));
+
+        for(int i = 0; i < easts.size(); i++) {
+            int[] currentEast = easts.get(i);
+            ArrayList<int[]> conflictNorths = getActiveNorths(currentEast, activeNorths);
+            Collections.sort(conflictNorths, Comparator.comparing(c -> c[0]));
+
+            for(int j = 0; j < conflictNorths.size(); j++) {
+                int[] conflictNorth = conflictNorths.get(j);
+                int eastDistance = conflictNorth[0] - currentEast[0];
+                int northDistance = currentEast[1] - conflictNorth[1];
+
+                if(eastDistance == northDistance) {
+                    continue;
+                } else if(eastDistance < northDistance) {
+                    res.put(conflictNorth, "" + northDistance);
+                    activeNorths.remove(conflictNorth);
+                } else {
+                    res.put(currentEast, "" + eastDistance);
+                    break;
+                }
+            }
+        }
+
+        for(int[] cow: cows) {
+            System.out.println(res.get(cow));
+        }
+
+    }
+
+    public static ArrayList<int[]> getActiveNorths(int[] east, ArrayList<int[]> activeNorths) {
+        ArrayList<int[]> norths = new ArrayList<int[]>();
+        for(int i = 0; i < activeNorths.size(); i++) {
+            int[] northCoord = activeNorths.get(i);
+            if(east[0] < northCoord[0] && east[1] >= northCoord[1]) {
+                norths.add(northCoord);
+            }
+        }
+        return norths;
+    }
+}
+```
+What this code does:
+(to be added)
+
+Efficiency:
+This code runs in `$O(n^2)$` time.
 
 ### January 2021, Problem 1
 Link: [Uddered but not Herd](http://www.usaco.org/index.php?page=viewproblem2&cpid=1083)
