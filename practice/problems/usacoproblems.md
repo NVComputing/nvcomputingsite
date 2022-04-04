@@ -16,8 +16,8 @@
   - [Breed Counting](#december2015problem3)
   - [Counting Haybales](#december2016problem1)
   - [Cities and States](#december2016problem2)
-  - [Grass Planting](#january2019problem1)
   - [MooBuzz](#december2019problem1)
+  - [Stuck in a Rut](#december2020problem1silver)
 
 ## Bronze Problems
 
@@ -27,6 +27,7 @@ Link: [Promotion Counting](http://www.usaco.org/index.php?page=viewproblem2&cpid
 
 Solution (in Java):
 ```java
+//Code written by Daniel
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -67,6 +68,7 @@ Link: [Hoof, Paper, Scissors](http://www.usaco.org/index.php?page=viewproblem2&c
 
 Solution (in Java):
 ```java
+//Code written by Daniel
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -105,6 +107,7 @@ Link: [Word Processor](http://www.usaco.org/index.php?page=viewproblem2&cpid=987
 
 Solution (in Java):
 ```java
+//Code written by Kelly
 import java.util.*;
 import java.io.*;
 
@@ -153,6 +156,7 @@ Link: [Do You Know Your ABC's?](http://www.usaco.org/index.php?page=viewproblem2
 
 Solution (in Java):
 ```java
+//Code written by Kelly
 import java.util.*;
 import java.io.*;
 
@@ -186,6 +190,7 @@ Link: [Daisy Chains](http://www.usaco.org/index.php?page=viewproblem2&cpid=1060)
 
 Solution (in Java):
 ```java
+//Code written by Daniel
 import java.util.Scanner;
 
 public class DaisyChains{
@@ -231,6 +236,7 @@ Link: [Stuck in a Rut](http://www.usaco.org/index.php?page=viewproblem2&cpid=106
 
 Solution (in Java):
 ```java
+//Code written by Kelly
 import java.util.*;
 import java.io.*;
 
@@ -310,6 +316,7 @@ Link: [Uddered but not Herd](http://www.usaco.org/index.php?page=viewproblem2&cp
 
 Solution (in Java):
 ```java
+//Code written by Daniel
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -349,6 +356,7 @@ Link: [Even More Odd Photos](http://www.usaco.org/index.php?page=viewproblem2&cp
 
 Solution (in Java):
 ```java
+//Code written by Daniel
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -420,6 +428,7 @@ Link: [Just Stalling](http://www.usaco.org/index.php?page=viewproblem2&cpid=1085
 
 Solution (in Java):
 ```java
+//Code written by Daniel
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -467,6 +476,7 @@ Link: [Breed Counting](http://www.usaco.org/index.php?page=viewproblem2&cpid=572
 
 Solution (in Java):
 ```java
+//Code written by Daniel
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -526,6 +536,7 @@ Link: [Counting Haybales](http://www.usaco.org/index.php?page=viewproblem2&cpid=
 
 Solution (in Java):
 ```java
+//Code written by Daniel
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -575,6 +586,7 @@ Link: [Cities and States](http://www.usaco.org/index.php?page=viewproblem2&cpid=
 
 Solution (in Java):
 ```java
+//Code written by Daniel
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -616,50 +628,12 @@ What this code does:
 Efficiency:
 This code runs in `$O(n)$` time.
 
-### January 2019, Problem 1
-Link: [Grass Planting](http://www.usaco.org/index.php?page=viewproblem2&cpid=894)
-
-Solution (in Java):
-```java
-import java.util.*;
-import java.io.*;
-
-public class Grass {
-    public static void main(String[] args) throws IOException{
-        Scanner sc = new Scanner(new File("planting.in"));
-        int N = sc.nextInt();
-        int[] d = new int[100000];
-        for(int i = 1; i < N; i++){
-            int a = sc.nextInt();
-            int b = sc.nextInt();
-            d[a-1]++; 
-            d[b-1]++;
-        }
-        int D = 0;
-        for(int i = 0; i < N; i++){
-            if(d[i] > D){
-                D = d[i];
-            }
-        }
-        PrintWriter pw = new PrintWriter(new File("planting.out"));
-        pw.println(D+1);
-        pw.close();
-    }
-}
-```
-
-What this code does:
-(to be added)
-
-Efficiency:
-This code runs in `$O(n)$` time.
-
 ### December 2019, Problem 1
 Link: [MooBuzz](http://www.usaco.org/index.php?page=viewproblem2&cpid=966)
 
 Solution (in Java):
 ```java
-//This code only passes 12/13 test cases.
+//This code only passes 12/13 test cases. Code written by Daniel.
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -688,4 +662,106 @@ What this code does:
 
 Efficiency:
 This code runs in `$O(n)$` time.
+
+### December 2020, Problem 1 (Silver)
+Link: [Stuck in a Rut](http://www.usaco.org/index.php?page=viewproblem2&cpid=1064)
+
+Solution (in Java):
+```java
+//Code written by Kelly
+import java.util.*;
+import java.io.*;
+
+public class DecSilver3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList<int[]> cows = new ArrayList<int[]>();
+        ArrayList<int[]> easts = new ArrayList<int[]>();
+        ArrayList<int[]> activeNorths = new ArrayList<int[]>();
+
+        HashMap<int[], ArrayList<Integer>> res = new HashMap<int[], ArrayList<Integer>>();
+        int numCows = sc.nextInt();
+        for(int i = 0; i < numCows; i++) {
+            String dir = sc.next();
+            int[] coords = {sc.nextInt(), sc.nextInt()};
+            ArrayList<Integer> temp = new ArrayList<Integer>();
+            res.put(coords, temp);
+            if(dir.equals("E")) {
+                easts.add(coords);
+                cows.add(coords);
+            } else {
+                activeNorths.add(coords);
+                cows.add(coords);
+            }
+        }
+
+        Collections.sort(easts, Comparator.comparing(c -> c[1]));
+
+        for(int i = 0; i < easts.size(); i++) {
+            int[] currentEast = easts.get(i);
+            ArrayList<int[]> conflictNorths = getActiveNorths(currentEast, activeNorths);
+            Collections.sort(conflictNorths, Comparator.comparing(c -> c[0]));
+
+            for(int j = 0; j < conflictNorths.size(); j++) {
+                int[] conflictNorth = conflictNorths.get(j);
+                int eastDistance = conflictNorth[0] - currentEast[0];
+                int northDistance = currentEast[1] - conflictNorth[1];
+
+                if(eastDistance == northDistance) {
+                    continue;
+                } else if(eastDistance < northDistance) { //east moving stops north
+                    ArrayList<Integer> temporary = res.get(currentEast);
+                    temporary.add(cows.indexOf(conflictNorth));
+
+                    ArrayList<Integer> northStops = res.get(conflictNorth);
+                    if(!northStops.isEmpty()) {
+                        for(int z = 0; z < northStops.size(); z++) {
+                            temporary.add(northStops.get(z));
+                        }
+                    }
+
+                    res.put(currentEast, temporary);
+                    activeNorths.remove(conflictNorth);
+                } else { //north moving stops east
+                    ArrayList<Integer> temporary = res.get(conflictNorth);
+                    temporary.add(cows.indexOf(currentEast));
+
+                    ArrayList<Integer> eastStops = res.get(currentEast);
+                    if(!eastStops.isEmpty()) {
+                        for(int z = 0; z < eastStops.size(); z++) {
+                            temporary.add(eastStops.get(z));
+                        }
+                    }
+
+                    res.put(conflictNorth, temporary);
+                    break;
+                }
+            }
+        }
+
+        for(int[] cow: cows) {
+            System.out.println(res.get(cow).size());
+        }
+
+    }
+
+    public static ArrayList<int[]> getActiveNorths(int[] east, ArrayList<int[]> activeNorths) {
+        ArrayList<int[]> norths = new ArrayList<int[]>();
+        for(int i = 0; i < activeNorths.size(); i++) {
+            int[] northCoord = activeNorths.get(i);
+            if(east[0] < northCoord[0] && east[1] >= northCoord[1]) {
+                norths.add(northCoord);
+            }
+        }
+        return norths;
+    }
+}
+```
+
+What this code does:
+(to be added)
+
+Efficiency:
+This code runs in `$O(n^2)$` time.
 
