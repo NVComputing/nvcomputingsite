@@ -43,6 +43,6 @@ If you would like to contribute, please work on one (or more) of the following p
 
 * Input / Output (Started)
 * Tips (Started)
-* USACO (Started)
+* Language Basics (More languages needed)
 
 You can also suggest a new page to the captains. We'll consider adding it.
