@@ -305,4 +305,22 @@ int[][] nums = buf.lines().map(s -> s.split(" "))
 
 ## cin / cout and freopen
 
+cin and cout represent stream objects, which are used to perform input and output operations.
+By default, these streams direct to standard input/output (the terminal), and can be redirected to read/write
+from files using freopen.
+
+cout is used with the insertion operator, ```<<```, to insert data into the output stream.
+For example, the following code:
+```c++
+int x = 13;
+cout << "text " << " and other text\n";
+cout << 12 << " happens to be one less than " << x;
+```
+would print
+```text
+text and other text
+12 happens to be one less than 13
+```
+into the terminal.
+
 ## Optimization Tricks
