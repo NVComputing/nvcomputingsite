@@ -305,4 +305,65 @@ int[][] nums = buf.lines().map(s -> s.split(" "))
 
 ## cin / cout and freopen
 
+cin and cout represent stream objects, which are used to perform input and output operations.
+By default, these streams direct to standard input/output, and can be redirected to read/write
+from files using freopen.
+
+cout is used with the insertion operator, ```<<```, to insert data into the output stream.
+For example, the following code:
+```c++
+int x = 13;
+cout << "text" << " and other text\n";
+cout << 12 << " happens to be one less than " << x;
+```
+would print:
+```text
+text and other text
+12 happens to be one less than 13
+```
+
+Similarly, cin is used with the extraction operator, ```>>```, to extract data from the input stream into variables.
+Given the input
+```text
+69 420
+evil spooky
+numbers
+```
+```c++
+int a, b;
+string words[3];
+cin >> a >> b;
+for (int i = 0; i < 3; i++) {
+    cin >> words[i];
+}
+```
+a and b would recieve the values ```69``` and ```420``` respectively, and words would be equal to ```{"evil", "spooky", "numbers"}```.
+cin doesn't check for the type of the data inputted, so make sure you input into the right type of variable.
+Note that cin only reads up until the next space or line break; to read entire lines of input, use ```getline()``` instead.
+```c++
+string str;
+getline(cin, str); //this puts the next line of input from cin into str
+```
+### freopen
+```freopen()``` is used to redirect a stream to a file, which allows you to use cin/cout to read and write to files instead of stdin/stdout.
+```freopen()``` takes three parameters: the file name, the file access mode, and the stream to redirect to the file.
+Below is a list of modes that files can be opened in.
+
+| Mode    | Function                                                                                                    | 
+|---------|-------------------------------------------------------------------------------------------------------------|
+| ```r``` | read: the file is opened to read input from                                                                 |
+| ```w``` | write: creates an empty file to output to, or deletes any existing content in the file if it already exists |
+| ```a``` | append: opens a file or creates a new file if one doesn't exist and appends output to the end of the file   |
+
+Example code:
+```c++
+// opens file "input.txt" in read mode, allowing it to be used as input
+// and redirects the contents of that file to stdin so that it can be read from cin
+freopen("input.txt", "r", stdin); 
+
+// creates file "output.txt" in write mode, allowing it to be used for output operations
+// redirects output from stdout into this file so it can written to using cout
+freopen("output.txt", "w", stdout);
+```
+
 ## Optimization Tricks
