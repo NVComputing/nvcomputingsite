@@ -1,0 +1,19 @@
+.custom__calendar {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -15px;
+    margin-bottom: 25px;
+}
+
+.custom__calendar iframe {
+    height: 500px;
+}
+
+@media only screen and (max-width: 575px) {
+    .custom__calendar{
+        display: none;
+    }
+
+}
