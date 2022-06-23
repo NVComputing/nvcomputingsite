@@ -53,8 +53,6 @@ None, good luck on ACSL!
 A submission form will be included with each homework assignment. On this submission form, you will be submitting both your answers for the short answer
 problems and also a picture of your accepted code submission. The latter should look something like this:
 
-
-<!-->Work in progress. Need to make it look better on mobile<-->
 <img class="hwexample" style="width: 57vw;" src="../res/HWExample.jpg">
 
 We will not check your code unless you specifically ask us to.
