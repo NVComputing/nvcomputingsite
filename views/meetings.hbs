@@ -3,6 +3,7 @@
 
 <head>
 	{{> head }}
+	<link rel="stylesheet" href="/css/animate.css">
 </head>
 
 <body class="line-numbers">
@@ -15,7 +16,8 @@
 					<h2 class="font-weight-light">Meetings</h2>
 					<p class="font-weight-thin lead text-white mb-0">Past Agenda Slides From Meetings.</p>
 				</div>
-				<div class="col-lg-6 d-none d-lg-block"><img src="/res/nvabout.png" alt="nvclublogo" class="img-fluid rounded"></div>
+				<div class="col-lg-6 d-none d-lg-block animate__animated animate__jackInTheBox"><img
+						src="/res/nvabout.png" alt="nvclublogo" class="img-fluid rounded"></div>
 			</div>
 		</div>
 	</div>
@@ -23,24 +25,26 @@
 	<div class="container text-white">
 		<div class="row my-0">
 			{{#each agenda}}
-				<div class="col-md-6 col-lg-4 d-flex align-items-stretch my-2">
-					<div class="card border-0">
-						<a href="{{ this.link }}" target="__blank" rel="noopener noreferrer">
-							<img class="card-img-top" src="{{ this.img }}" alt="{{ this.title }}">
-						</a>
-						<div class="card-body">
-							<h5 class="border-bottom pb-3 mb-2">{{ this.title }}</h5>
-							<p class="card-text-custom">{{ this.description }}</p>
-						</div>
-						<div class="card-footer">
-							<a href="{{ this.link }}" class="btn btn-md float-right mt-auto" target="__blank" rel="noopener noreferrer">View Slides</a>
-						</div>
+			<div class="col-md-6 col-lg-4 d-flex align-items-stretch my-2">
+				<div class="card border-0">
+					<a href="{{ this.link }}" target="__blank" rel="noopener noreferrer">
+						<img class="card-img-top" src="{{ this.img }}" alt="{{ this.title }}">
+					</a>
+					<div class="card-body">
+						<h5 class="border-bottom pb-3 mb-2">{{ this.title }}</h5>
+						<p class="card-text-custom">{{ this.description }}</p>
+					</div>
+					<div class="card-footer">
+						<a href="{{ this.link }}" class="btn btn-md float-right mt-auto" target="__blank"
+							rel="noopener noreferrer">View Slides</a>
 					</div>
 				</div>
+			</div>
 			{{/each}}
 		</div>
 	</div>
-	<div id="back-to-top" href="#" class="btn btn-sm btn-light back-to-top" role="button"><i class="fas fa-arrow-up"></i></div>
+	<div id="back-to-top" href="#" class="btn btn-sm btn-light back-to-top" role="button"><i
+			class="fas fa-arrow-up"></i></div>
 	{{> footer }}
 </body>
 
