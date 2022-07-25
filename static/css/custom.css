@@ -13,6 +13,10 @@
     border-radius: 20px;
 }
 
+.custom__add__bottom__margin {
+    margin-bottom: 100px;
+}
+
 @media only screen and (max-width: 575px) {
     .custom__calendar{
         display: none;
