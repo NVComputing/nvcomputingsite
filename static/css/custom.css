@@ -17,6 +17,10 @@
     margin-bottom: 100px;
 }
 
+.custom__gold {
+    color: rgb(255,198,109);
+}
+
 @media only screen and (max-width: 575px) {
     .custom__calendar{
         display: none;
