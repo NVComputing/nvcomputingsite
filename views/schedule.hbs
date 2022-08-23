@@ -23,81 +23,27 @@
 		</div>
 	</div>
 	<div class="container text-white my-4">
-		<div class="custom__calendar container">
-			<iframe
-				src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234285F4&ctz=America%2FChicago&mode=MONTH&showTabs=1&showPrint=0&showCalendars=0&showTz=1&showDate=1&showNav=1&showTitle=0&src=cTEyajd0ZjMxcmoxdjN0czA0ZjI4MDhpamtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23616161"
-				style="border-width:0" width="900" height="500" frameborder="0" scrolling="no"></iframe>
+		<div class="row my-0">
+			{{#each competitions}}
+			<div class="col-md-6 col-lg-4 d-flex align-items-stretch my-2">
+				<div class="card border-0">
+					<a href="{{ this.link }}" target="__blank" rel="noopener noreferrer">
+						<img class="card-img-top" src="{{ this.img }}" alt="{{ this.title }}">
+					</a>
+					<div class="card-body">
+						<h5 class="border-bottom pb-3 mb-2">{{ this.title }}</h5>
+						<p class="card-text-custom">{{ this.description }}</p>
+					</div>
+					<div class="card-footer">
+						<a href="{{ this.link }}" class="btn btn-md float-right mt-auto" target="__blank"
+							rel="noopener noreferrer">Learn More</a>
+					</div>
+				</div>
+			</div>
+			{{/each}}
 		</div>
-		<h1>Deadlines</h1>
-		{{#if deadlines}}
-		{{#each deadlines}}
-		<div class="py-4 border-bottom border-top">
-			{{#if this.link}}
-			<a href="{{this.link}}" target="_blank" rel="noopener noreferrer">
-				<h3 class="fc-blue">{{this.name}}</h3>
-			</a>
-			{{else}}
-			<h3 class="fc-blue">{{this.name}}</h3>
-			{{/if}}
-			{{#if this.desc}}
-			<p>{{this.desc}}</p>
-			{{/if}}
-			<div><b>Date:</b> {{this.time}}<sup class="font-weight-thin pl-1">CDT</sup></div>
-			{{#if hard}}
-			<div class="text-danger">Note: This is a hard deadline. Please finish on time.</div>
-			{{else}}
-			<div class="text-success">Note: This is a soft deadline. Try to get it done as soon as possible, but it's a
-				bit more flexible.</div>
-			{{/if}}
-		</div>
-		{{/each}}
-		{{else}}
-		<h3>Looks like there aren't any deadlines currently scheduled.</h3>
-		{{/if}}
 	</div>
-	<div class="container text-white pb-4">
-		<h1>Upcoming Events</h1>
-		<div class="pb-4"><i>Check back regularly; new events are often added to this page.</i></div>
-		{{#if upcomingEvents}}
-		{{#each upcomingEvents}}
-		{{#if notPastDue}}
-		{{#if this.link}}
-		<h3><a href="{{this.link}}" target="_blank" rel="noopener noreferrer">{{this.name}}</a></h3>
-		{{else}}
-		<h3>{{this.name}}</h3>
-		{{/if}}
-		<p>{{{this.desc}}}</p>
-		<p class="date-text"><b>Date:</b> {{this.time}}<sup class="font-weight-thin pl-1">CDT</sup></p>
-		{{#if tentative}}
-		<p class="text-success">Note: This date is tentative and may change in the future.</p>
-		{{/if}}
-		{{/if}}
-		{{/each}}
-		{{else}}
-		<h3>Looks like there aren't any events currently scheduled.</h3>
-		{{/if}}
-	</div>
-	<div class="container text-white pb-4">
-		<h1>Past Events</h1>
-		{{#if upcomingEvents}}
-		{{#each upcomingEvents}}
-		{{#if pastDue}}
-		{{#if this.link}}
-		<h3><a href="{{this.link}}" target="_blank" rel="noopener noreferrer">{{this.name}}</a></h3>
-		{{else}}
-		<h3>{{this.name}}</h3>
-		{{/if}}
-		<p>{{{this.desc}}}</p>
-		<p class="date-text text-danger"><b>Date:</b> {{this.time}}<sup class="font-weight-thin pl-1">CDT</sup></p>
-		{{#if tentative}}
-		<p class="text-success">Note: This date is tentative and may change in the future.</p>
-		{{/if}}
-		{{/if}}
-		{{/each}}
-		{{else}}
-		<h3>Looks like there aren't any events currently scheduled.</h3>
-		{{/if}}
-	</div>
+
 	<div id="back-to-top" href="#" class="btn btn-sm btn-light back-to-top" role="button"><i
 			class="fas fa-arrow-up"></i></div>
 	{{> footer }}
