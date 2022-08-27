@@ -5,8 +5,24 @@
             "start": "October 31st",
             "end": "November 5th",
             "description": "This competition will be held in person at the IIT campus. The registration fee is $50. The prizepool for the competition is $5,000. You will need to bring a field trip form beforehand in order to be able to attend. Hope to see everyone there!",
-            "img": "/res/meetingsummaries/1-13.png",
-            "link": "https://dylsub.me"
+            "img": "/res/competitions/iit.jpg",
+            "link": "https://www.iit.edu/"
+        },
+        {
+            "title": "Dummy Competition",
+            "start": "March 3rd",
+            "end": "September 6th",
+            "description": "Test test test test test test test test test test test",
+            "img": "/res/competitions/iit.jpg",
+            "link": ""
+        },
+        {
+            "title": "Dummy Competition",
+            "start": "March 3rd",
+            "end": "September 6th",
+            "description": "Test test test test test test test test test test test",
+            "img": "/res/competitions/iit.jpg",
+            "link": ""
         }
     ]
 }
