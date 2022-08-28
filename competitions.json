@@ -2,26 +2,34 @@
     "competitions": [
         {
             "title": "IIT Hackathon",
-            "start": "October 31st",
-            "end": "November 5th",
-            "description": "This competition will be held in person at the IIT campus. The registration fee is $50. The prizepool for the competition is $5,000. You will need to bring a field trip form beforehand in order to be able to attend. Hope to see everyone there!",
+            "start": "N/A",
+            "end": "N/A",
+            "description": "This competition will be held in person at the IIT campus. More information coming soon!",
             "img": "/res/competitions/iit.jpg",
             "link": "https://www.iit.edu/"
         },
         {
-            "title": "Dummy Competition",
-            "start": "March 3rd",
-            "end": "September 6th",
-            "description": "Test test test test test test test test test test test",
-            "img": "/res/competitions/iit.jpg",
-            "link": ""
+            "title": "USACO (USA Computing Olympiad) #1",
+            "start": "N/A",
+            "end": "N/A",
+            "description": "A 3-day prestigious programming competition with 4 divisions. You will have 3-5 hours to complete 3 problems virtually. More information coming soon!",
+            "img": "/res/competitions/usaco.jpg",
+            "link": "http://www.usaco.org/"
+        },
+        {
+            "title": "ACSL Contest (American Computer Science League) #1",
+            "start": "N/A",
+            "end": "N/A",
+            "description": "A national competition consisting of a short answer and programming portion. You will either compete in the Intermediate or Senior division. More information coming soon!",
+            "img": "/res/competitions/acsl.jpg",
+            "link": "https://www.acsl.org/"
         },
         {
             "title": "Dummy Competition",
             "start": "March 3rd",
             "end": "September 6th",
-            "description": "Test test test test test test test test test test test",
-            "img": "/res/competitions/iit.jpg",
+            "description": "One day when he thought another long time, a very long to himself under why he door in gold letters, and lived in the middle of the name' meaning somebody's making honey? Buzz! Buzz! I wonder it.\" \"Winnie-the-Pooh lived under it.\"",
+            "img": "/res/competitions/baby.jpg",
             "link": ""
         }
     ]
