@@ -1,8 +1,14 @@
 [
     {
+        "title": "Info Meeting!",
+        "description": "The slides from the informational meeting.",
+        "img": "info.jpg",
+        "link": "https://docs.google.com/presentation/d/153TDgIKAyHxDOabEAOGGLflpGlDoHhaMlYofLzgBqs4/edit?usp=sharing"
+    },
+    {
         "title": "Team Google Folder",
         "description": "Google Drive folder for all future agendas.",
-        "img": "1-13.png",
+        "img": "drive.jpg",
         "link": "https://drive.google.com/drive/folders/1KdPmhEbS5-Vgd-hbyGbASOW11t7QvUho?usp=sharing"
     }
 ]
