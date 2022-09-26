@@ -1,12 +1,28 @@
 {
     "competitions": [
         {
-            "title": "Codeforces Round (Div. 1 + Div. 2)",
-            "start": "September 25th - 9:35 am",
-            "end": "September 25th - 12:05 pm",
-            "description": "This Codeforces competition is a 2:30 hour event that consists of numerous programming problems. This is a great competition for all levels, because the problems increase in difficulty over time which allows you to gage your current skill level.",
+            "title": "KYOCERA Programming Contest 2022 (AtCoder Beginner Contest 271)",
+            "start": "October 1st - 7:00 am",
+            "end": "October 1st - 8:40 am",
+            "description": "This AtCoder competition is a 100 minute event involving solving problems of increasing difficulties. This competition is targeted at beginners, so the problems will be easier overall.",
+            "img": "/res/competitions/atcoder.jpg",
+            "link": "https://atcoder.jp/contests/abc271"
+        },
+        {
+            "title": "Codeforces Round #823 (Div. 2)",
+            "start": "October 2nd - 9:35 am",
+            "end": "October 2nd - 11:35 am",
+            "description": "This Codeforces competition is a 2:00 hour event that consists of numerous programming problems. This is a great competition for all levels, because the problems increase in difficulty over time which allows you to gage your current skill level.",
             "img": "/res/competitions/codeforces.jpg",
-            "link": "https://codeforces.com/contests/1730"
+            "link": "https://codeforces.com/contests/1735"
+        },
+        {
+            "title": "AtCoder Regular Contest 149",
+            "start": "October 2nd - 7:00 am",
+            "end": "October 2nd - 9:00 am",
+            "description": "This competition is a 2 hour event hosted on AtCoder.",
+            "img": "/res/competitions/atcoder.jpg",
+            "link": "https://atcoder.jp/contests/arc149"
         }
     ]
 }
