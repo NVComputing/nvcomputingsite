@@ -13,15 +13,16 @@ some topics really work during the contest itself isn't fun. Figure it out befor
 
 ## Contents
 
-Practice will usually consist of a few short-answer problems relating to our short-answer topic. You should not use any calculators or any websites to help you,
-as you won't have these resources during the actual contest.
+Practice will usually consist of a few programming problems of relating to the topic. Read through and attempt all the problems to get an idea of what the problems are about. Submit your attempts at the problems, even if they don't work!
 
-Solutions will be posted the week after; please ask questions
-via Discord, Remind, or email if you do not understand a problem, as we want to make sure you are as successful as you can be!
+Solutions will be posted and discussed the week after; please ask questions via Discord, Remind, or email if you do not understand a problem, as we want to make sure you are as successful as you can be!
 
 
 ## This Week's Homework
-<p>Enjoy your summer break!</p>
+[September 29 - Strings](https://docs.google.com/presentation/d/1IqEjdG5gNGRCyYfUGExjPID-9rTj16KwLDy4OlL3_Xs/edit#slide=id.gff343f7e5c_0_108)
+
+
+[Submit here](https://forms.gle/Xi8bX68KzF9ZhjfD8)
 
 ## Past Homework
 <!-- <a href="https://docs.google.com/document/d/1XAslqYWbEBvU_9ekrBwuPo6vHQiBYQUOiXNs5Qbt7kU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">February 24- LISP</a> -
@@ -32,9 +33,6 @@ via Discord, Remind, or email if you do not understand a problem, as we want to 
 
 ## Submission
 
-A submission form will be included with each homework assignment. On this submission form, you will be submitting both your answers for the short answer
-problems and also a picture of your accepted code submission. The latter should look something like this:
+A submission form will be included with each homework assignment. On this submission form, you will be submitting links to your submission for each problem.
 
-<img class="hwexample" style="width: 57vw;" src="../res/HWExample.jpg">
-
-We will not check your code unless you specifically ask us to.
+Unlike last year, we **will** check your code (or at least Canchen will).
