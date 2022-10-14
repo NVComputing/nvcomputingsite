@@ -1,8 +1,14 @@
 [
     {
+        "title": "10/13 Meeting",
+        "description": "Data Structures and Homework Solutions",
+        "img": "10132022.jpg",
+        "link": "https://docs.google.com/presentation/d/1O9u0Tg48hWwdXOxpcGr3RCdiDVUhLGT6dIdHoOWOtgI/edit?usp=sharing"
+    },
+    {
         "title": "10/6 Meeting",
         "description": "Time Complexity and Weekly competition for candy!",
-        "img": "9292022.jpg",
+        "img": "1062022.jpg",
         "link": "https://docs.google.com/presentation/d/1xK_t3ZglcF-0eqYWPBD4o3vBcU8rKlVsdjUK3zLj7aM/edit?usp=sharing"
     },
     {
