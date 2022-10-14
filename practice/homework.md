@@ -19,15 +19,14 @@ Solutions will be posted and discussed the week after; please ask questions via 
 
 
 ## This Week's Homework
-[October 6](https://docs.google.com/presentation/d/1xK_t3ZglcF-0eqYWPBD4o3vBcU8rKlVsdjUK3zLj7aM/edit#slide=id.g15beac4b060_0_381)
 
-[Submit here](https://forms.gle/nRQ3QRMgWaUHTc417)
+[October 13 - Data Structures](https://forms.gle/L2PcDQeLEx34rQxGA)
 
 ## Past Homework
-[September 29 - Strings](https://docs.google.com/presentation/d/1IqEjdG5gNGRCyYfUGExjPID-9rTj16KwLDy4OlL3_Xs/edit#slide=id.gff343f7e5c_0_108)
 
+[October 6](https://forms.gle/nRQ3QRMgWaUHTc417)
+[September 29 - Strings](https://forms.gle/Xi8bX68KzF9ZhjfD8)
 
-[Submit here](https://forms.gle/Xi8bX68KzF9ZhjfD8)
 <!-- <a href="https://docs.google.com/document/d/1XAslqYWbEBvU_9ekrBwuPo6vHQiBYQUOiXNs5Qbt7kU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">February 24- LISP</a> -
 <a href="https://forms.gle/WqmvnCBwP5eT19a6A" target="_blank" rel="noopener noreferrer">Submit here</a> -
 <a href="https://docs.google.com/document/d/1FpZOCPOEGTrg7tKz-hrH1UwNL4BAGFmUbrsVZsnOA8c/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Solutions</a> -->

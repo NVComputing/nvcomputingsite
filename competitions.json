@@ -1,12 +1,3 @@
 {
-    "competitions": [
-        {
-            "title": "KYOCERA Programming Contest 2022 (AtCoder Beginner Contest 271)",
-            "start": "October 1st - 7:00 am",
-            "end": "October 1st - 8:40 am",
-            "description": "This AtCoder competition is a 100 minute event involving solving problems of increasing difficulties. This competition is targeted at beginners, so the problems will be easier overall.",
-            "img": "/res/competitions/atcoder.jpg",
-            "link": "https://atcoder.jp/contests/abc271"
-        }
-    ]
+   
 }
