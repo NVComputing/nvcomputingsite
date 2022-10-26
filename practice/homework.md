@@ -17,12 +17,13 @@ Practice will usually consist of a few programming problems of relating to the t
 
 Solutions will be posted and discussed the week after; please ask questions via Discord, Remind, or email if you do not understand a problem, as we want to make sure you are as successful as you can be!
 
-
 ## This Week's Homework
 
 [October 13 - Data Structures](https://forms.gle/L2PcDQeLEx34rQxGA)
 
 ## Past Homework
+
+All solutions to past homework can be found [here](https://github.com/NVComputing/ComputingSolutions).
 
 [October 6](https://forms.gle/nRQ3QRMgWaUHTc417)
 
