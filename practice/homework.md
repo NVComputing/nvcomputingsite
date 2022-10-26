@@ -19,11 +19,13 @@ Solutions will be posted and discussed the week after; please ask questions via 
 
 ## This Week's Homework
 
-[October 13 - Data Structures](https://forms.gle/L2PcDQeLEx34rQxGA)
+[October 20 - Sorting and Searching](https://forms.gle/Vjm53LSbdyu5U1cb8)
 
 ## Past Homework
 
-All solutions to past homework can be found [here](https://github.com/NVComputing/ComputingSolutions).
+All solutions for past homework can be found [here](https://github.com/NVComputing/ComputingSolutions).
+
+[October 13 - Data Structures](https://forms.gle/L2PcDQeLEx34rQxGA)
 
 [October 6](https://forms.gle/nRQ3QRMgWaUHTc417)
 
