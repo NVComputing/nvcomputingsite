@@ -19,17 +19,20 @@ Solutions will be posted and discussed the week after; please ask questions via 
 
 ## This Week's Homework
 
-[October 20 - Sorting and Searching](https://forms.gle/Vjm53LSbdyu5U1cb8)
+
+<a href="https://forms.gle/Vjm53LSbdyu5U1cb8" target="_blank">October 20 - Sorting and Searching</a>
+
 
 ## Past Homework
 
 All solutions for past homework can be found [here](https://github.com/NVComputing/ComputingSolutions).
 
-[October 13 - Data Structures](https://forms.gle/L2PcDQeLEx34rQxGA)
+<a href="https://forms.gle/L2PcDQeLEx34rQxGA" target="_blank">October 13 - Data Structures</a>
 
-[October 6](https://forms.gle/nRQ3QRMgWaUHTc417)
+<a href="https://forms.gle/nRQ3QRMgWaUHTc417" target="_blank">October 6</a>
 
-[September 29 - Strings](https://forms.gle/Xi8bX68KzF9ZhjfD8)
+<a href="https://forms.gle/Xi8bX68KzF9ZhjfD8" target="_blank">September 29 - Strings</a>
+
 
 <!-- <a href="https://docs.google.com/document/d/1XAslqYWbEBvU_9ekrBwuPo6vHQiBYQUOiXNs5Qbt7kU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">February 24- LISP</a> -
 <a href="https://forms.gle/WqmvnCBwP5eT19a6A" target="_blank" rel="noopener noreferrer">Submit here</a> -
