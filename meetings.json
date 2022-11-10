@@ -1,6 +1,12 @@
 [
     {
-        "title": "11/2 Meeting",
+        "title": "11/10 Meeting",
+        "description": "ACSL Introduction and Applied Math",
+        "img": "11102022.jpg",
+        "link": "https://docs.google.com/presentation/d/11JcSsxN-jXMtPjRiJYF8NDRPiq4H2UqDDk4sd7kEdl8/edit?usp=sharing"
+    },
+    {
+        "title": "11/3 Meeting",
         "description": "Neural Networks",
         "img": "11222022.jpg",
         "link": "https://docs.google.com/presentation/d/1cLdA8zOCFNzDRG-620_DXSb2cewcEyrjkz1DxHH-138/edit?usp=sharing"

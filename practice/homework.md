@@ -20,18 +20,23 @@ Solutions will be posted and discussed the week after; please ask questions via 
 ## This Week's Homework
 
 
-<a href="https://forms.gle/Vjm53LSbdyu5U1cb8" target="_blank" rel="noopener noreferrer">October 20 - Sorting and Searching</a>
+<a href="https://forms.gle/kC75LyCQ1TEGbn1DA" target="_blank" rel="noopener noreferrer">November 10 - More Review</a>
 
 
 ## Past Homework
 
 All solutions for past homework can be found <a href="https://github.com/NVComputing/ComputingSolutions" target="_blank" rel="noopener noreferrer">here</a>
 
+<a href="https://forms.gle/icYX8nxvy88eCpCG8" target="_blank" rel="noopener noreferrer">November 3 - Review</a>
+
+<a href="https://forms.gle/Vjm53LSbdyu5U1cb8" target="_blank" rel="noopener noreferrer">October 20 - Sorting and Searching</a>
+
 <a href="https://forms.gle/L2PcDQeLEx34rQxGA" target="_blank" rel="noopener noreferrer">October 13 - Data Structures</a>
 
 <a href="https://forms.gle/nRQ3QRMgWaUHTc417" target="_blank" rel="noopener noreferrer">October 6</a>
 
 <a href="https://forms.gle/Xi8bX68KzF9ZhjfD8" target="_blank" rel="noopener noreferrer">September 29 - Strings</a>
+
 
 
 <!-- <a href="https://docs.google.com/document/d/1XAslqYWbEBvU_9ekrBwuPo6vHQiBYQUOiXNs5Qbt7kU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">February 24- LISP</a> -
