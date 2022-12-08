@@ -1,12 +1,12 @@
 {
     "competitions": [
         {
-            "title": "Codeforces 11/12",
-            "start": "8:35 am",
-            "end": "10:35 am",
-            "description": "This competition will be held in person at the IIT campus. More information coming soon!",
-            "img": "/res/competitions/codeforces.jpg",
-            "link": "https://codeforces.com/contests/1748"
+            "title": "USACO #1",
+            "start": "12/16",
+            "end": "12/19",
+            "description": "Three hour virtual competition. Visit link below to register.",
+            "img": "/res/competitions/usaco.jpg",
+            "link": "http://www.usaco.org/"
         }
     ]
 }
