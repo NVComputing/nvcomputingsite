@@ -1,9 +1,9 @@
 {
     "competitions": [
         {
-            "title": "USACO #1",
-            "start": "12/16",
-            "end": "12/19",
+            "title": "USACO #2",
+            "start": "1/27",
+            "end": "1/30",
             "description": "Three hour virtual competition. Visit link below to register.",
             "img": "/res/competitions/usaco.jpg",
             "link": "http://www.usaco.org/"
