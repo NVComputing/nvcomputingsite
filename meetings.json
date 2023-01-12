@@ -1,5 +1,11 @@
 [
     {
+        "title": "1/12 Meeting",
+        "description": "USACO Advice and Group Competition",
+        "img": "011223.png",
+        "link": "https://docs.google.com/presentation/d/1qIAuC9kBVyI4nWMS7Ew6KMPIoZPlrP_I4TAp8kpdNu8/edit?usp=sharing"
+    },
+    {
         "title": "12/8 Meeting",
         "description": "Dynamic Programming and Advent of Code",
         "img": "12082022.jpg",
