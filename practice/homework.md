@@ -19,7 +19,7 @@ Solutions will be posted and discussed the week after; please ask questions via 
 
 ## This Week's Homework
 
-<a href="docs.google.com/presentation/d/1qIAuC9kBVyI4nWMS7Ew6KMPIoZPlrP_I4TAp8kpdNu8/present?slide=id.p12" target="_blank" rel="noopener noreferrer">January 12th - USACO Practice</a>
+<a href="https://docs.google.com/presentation/d/1qIAuC9kBVyI4nWMS7Ew6KMPIoZPlrP_I4TAp8kpdNu8/present?slide=id.g18232edca14_0_0" target="_blank" rel="noopener noreferrer">January 12th - USACO Practice</a>
 
 ## Past Homework
 
