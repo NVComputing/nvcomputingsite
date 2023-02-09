@@ -1,9 +1,17 @@
 {
     "competitions": [
         {
-            "title": "USACO #2",
-            "start": "1/27",
-            "end": "1/30",
+            "title": "Naperville Central Competition",
+            "start": "2/16 3:15pm",
+            "end": "3/16 5:15pm",
+            "description": "Collaborative competition held at Naperville Central! Completely free and rides can be provided after school if you ask a captain. Free pizza and winners get prizes.",
+            "img": "/res/competitions/napervillecentral.png",
+            "link": ""
+        },
+        {
+            "title": "USACO #3",
+            "start": "2/23",
+            "end": "2/27",
             "description": "Three hour virtual competition. Visit link below to register.",
             "img": "/res/competitions/usaco.jpg",
             "link": "http://www.usaco.org/"
