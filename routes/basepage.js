@@ -5,7 +5,7 @@ let code =
 `\`\`\`java
 public class ComputingTeam {
 	public static void main(String[] args) {
-		School Neuqua = new School("NEUQUA VALLEY HIGH SCHOOL");
+		School neuqua = new School("NEUQUA VALLEY HIGH SCHOOL");
 		ArrayList<String> people = new ArrayList<>(neuqua.getPeople());
 
 		// Find the cool people
@@ -14,7 +14,7 @@ public class ComputingTeam {
 		    .filter(person -> neuqua.getClass("AP Computer Science A").getPeople().contains(person))
 		    .collect(Collectors.toList(ArrayList::new));
 
-		System.out.println(computingTeamMembers.contains(neuqua.getPersonByIp(connection.getIPv4()));
+		System.out.println(computingTeamMembers.contains(neuqua.getPersonByIp(InetAddress.getByName(person.name));
 
 		System.out.println("If you understood even " +
 		"a tiny bit of this, you should consider " +
