@@ -25,6 +25,8 @@ Solutions will be posted and discussed the week after; please ask questions via 
 
 All solutions for past homework can be found <a href="https://github.com/NVComputing/ComputingSolutions" target="_blank" rel="noopener noreferrer">here</a>
 
+<a href="https://forms.gle/kC75LyCQ1TEGbn1DA" target="_blank" rel="noopener noreferrer">Test Homework</a>
+
 <a href="https://forms.gle/kC75LyCQ1TEGbn1DA" target="_blank" rel="noopener noreferrer">November 10 - More Review</a>
 
 <a href="https://forms.gle/icYX8nxvy88eCpCG8" target="_blank" rel="noopener noreferrer">November 3 - Review</a>
