@@ -19,25 +19,13 @@ Solutions will be posted and discussed the week after; please ask questions via 
 
 ## This Week's Homework
 
-<a href="https://docs.google.com/presentation/d/1qIAuC9kBVyI4nWMS7Ew6KMPIoZPlrP_I4TAp8kpdNu8/present?slide=id.g18232edca14_0_0" target="_blank" rel="noopener noreferrer">January 12th - USACO Practice</a>
+<a href="" target="_blank" rel="noopener noreferrer">None! Have a good summer! </a>
 
 ## Past Homework
 
 All solutions for past homework can be found <a href="https://github.com/NVComputing/ComputingSolutions" target="_blank" rel="noopener noreferrer">here</a>
 
-<a href="https://forms.gle/kC75LyCQ1TEGbn1DA" target="_blank" rel="noopener noreferrer">Test Homework</a>
-
-<a href="https://forms.gle/kC75LyCQ1TEGbn1DA" target="_blank" rel="noopener noreferrer">November 10 - More Review</a>
-
-<a href="https://forms.gle/icYX8nxvy88eCpCG8" target="_blank" rel="noopener noreferrer">November 3 - Review</a>
-
-<a href="https://forms.gle/Vjm53LSbdyu5U1cb8" target="_blank" rel="noopener noreferrer">October 20 - Sorting and Searching</a>
-
-<a href="https://forms.gle/L2PcDQeLEx34rQxGA" target="_blank" rel="noopener noreferrer">October 13 - Data Structures</a>
-
-<a href="https://forms.gle/nRQ3QRMgWaUHTc417" target="_blank" rel="noopener noreferrer">October 6</a>
-
-<a href="https://forms.gle/Xi8bX68KzF9ZhjfD8" target="_blank" rel="noopener noreferrer">September 29 - Strings</a>
+<a href="" target="_blank" rel="noopener noreferrer">Placeholder Homework Form</a>
 
 
 
@@ -49,4 +37,4 @@ All solutions for past homework can be found <a href="https://github.com/NVCompu
 
 A submission form will be included with each homework assignment. On this submission form, you will be submitting links to your submission for each problem.
 
-Unlike last year, we **will** check your code (or at least Canchen will).
+We **will** check your code (or at least Canchen will).
