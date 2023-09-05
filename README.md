@@ -11,6 +11,8 @@ Please contribute to the resources folder!
 - Kenneth Zhao - Heavy Contributor to Resources / Practice
 - Nihal Shivannagari - Contributor to Resources / Practice
 - Nishikar Paruchuri - Contributor to Resources / Practice
+- Haroldas Diska - Contributor to Resources / Practice, Website Maintenance
+- Canchen Li - Contributor to Resources / Practice
 
 # Guide to Contributing to Resources
 To contribute to resources, simply add your Markdown (`.md`) files to the `markdown` folder. 
