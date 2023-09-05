@@ -1,116 +1,14 @@
 [
     {
-        "title": "6/30 Meeting",
-        "description": "Test meeting",
-        "img": "031623.png",
-        "link": "https://docs.google.com/presentation/d/1kfa2wXuysFTUr_kIRyiQ7_l_205OpvqIqFpiRXkfKno/edit?usp=sharing"
-    },
-    {
-        "title": "3/23 Meeting",
-        "description": "Capstone Project and NNHS Hackathon",
-        "img": "031623.png",
-        "link": "https://docs.google.com/presentation/d/1kfa2wXuysFTUr_kIRyiQ7_l_205OpvqIqFpiRXkfKno/edit?usp=sharing"
-    },
-    {
-        "title": "3/16 Meeting",
-        "description": "Capstone Project and Captain Applications",
-        "img": "031623.png",
-        "link": "https://docs.google.com/presentation/d/1EdL69tqxxxFXuVLkI6NQzuL4NfEg8ajSq933YiPCzoo/edit?usp=sharing"
-    },
-    {
-        "title": "2/9 Meeting",
-        "description": "USACO Review + T-shirt Design Voting",
-        "img": "020923.png",
-        "link": "https://docs.google.com/presentation/d/13wSIDJmqBcX9YqgXJrWuOBYyxCCXiLg9acPqKqhacnI/edit?usp=sharing"
-    },
-    {
-        "title": "2/2 Meeting",
-        "description": "Practice Competition",
-        "img": "011223.png",
-        "link": "https://docs.google.com/presentation/d/1WZcpGBrZEI6xSCKY5eYa2pW2pepUEzmQ7MLEEt-8D5Q/edit?usp=share_link"
-    },
-    {
-        "title": "1/19 Meeting",
-        "description": "Special Guest and ChatGTP Competition",
-        "img": "011223.png",
-        "link": "https://docs.google.com/presentation/d/1ngB0fNHkduAaiGnw6odt2IL28TQtZ8l5yyTicz0O9IA/edit?usp=sharing"
-    },
-    {
-        "title": "1/12 Meeting",
-        "description": "USACO Advice and Group Competition",
-        "img": "011223.png",
-        "link": "https://docs.google.com/presentation/d/1qIAuC9kBVyI4nWMS7Ew6KMPIoZPlrP_I4TAp8kpdNu8/edit?usp=sharing"
-    },
-    {
-        "title": "12/8 Meeting",
-        "description": "Dynamic Programming and Advent of Code",
-        "img": "12082022.jpg",
-        "link": "https://docs.google.com/presentation/d/1IeRgIqzo9SvhjdkjsOzWryg3tPcmxs3IWYDicYjysIM/edit?usp=sharing"
-    },
-    {
-        "title": "12/1 Meeting",
-        "description": "IIT Introduction and Cryptography",
-        "img": "12012022.jpg",
-        "link": "https://docs.google.com/presentation/d/1bufm_LVuGQB8sFMtrwUCgVVFOwhJy6thtIwVAcacfv4/edit?usp=sharing"
-    },
-    {
-        "title": "11/10 Meeting",
-        "description": "ACSL Introduction and Applied Math",
-        "img": "11102022.jpg",
-        "link": "https://docs.google.com/presentation/d/11JcSsxN-jXMtPjRiJYF8NDRPiq4H2UqDDk4sd7kEdl8/edit?usp=sharing"
-    },
-    {
-        "title": "11/3 Meeting",
-        "description": "Neural Networks",
-        "img": "11222022.jpg",
-        "link": "https://docs.google.com/presentation/d/1cLdA8zOCFNzDRG-620_DXSb2cewcEyrjkz1DxHH-138/edit?usp=sharing"
-    },
-    {
-        "title": "10/27 Meeting",
-        "description": "Debugging and Competition",
-        "img": "10132022.jpg",
-        "link": "https://docs.google.com/presentation/d/1W9DFIqHrC-xuO-8nCq5FEomoo6x3fm930xOys2Qcrbs/edit?usp=sharing"
-    },
-    {
-        "title": "10/20 Meeting",
-        "description": "Searching, Sorting, Strings",
-        "img": "10132022.jpg",
-        "link": "https://docs.google.com/presentation/d/1rCjKoNKMq9sO9_g09OT5iBaZvkfiXHgjig9Mlg-g5is/edit?usp=sharing"
-    },
-    {
-        "title": "10/13 Meeting",
-        "description": "Data Structures and Homework Solutions",
-        "img": "10132022.jpg",
-        "link": "https://docs.google.com/presentation/d/1O9u0Tg48hWwdXOxpcGr3RCdiDVUhLGT6dIdHoOWOtgI/edit?usp=sharing"
-    },
-    {
-        "title": "10/6 Meeting",
-        "description": "Time Complexity and Weekly competition for candy!",
-        "img": "1062022.jpg",
-        "link": "https://docs.google.com/presentation/d/1xK_t3ZglcF-0eqYWPBD4o3vBcU8rKlVsdjUK3zLj7aM/edit?usp=sharing"
-    },
-    {
-        "title": "9/29 Meeting",
-        "description": "New Competitions, Weekly homework intro, and Codewars reminder",
-        "img": "9292022.jpg",
-        "link": "https://docs.google.com/presentation/d/1IqEjdG5gNGRCyYfUGExjPID-9rTj16KwLDy4OlL3_Xs/edit?usp=sharing"
-    },
-    {
-        "title": "9/22 Meeting",
-        "description": "Joining Codewars, Competition info, and Practice",
-        "img": "9222022.jpg",
-        "link": "https://docs.google.com/presentation/d/19mYCRMqLqRaARkM53QFyu94jPu2-9tov-zzUOU9ojtU/edit?usp=sharing"
-    },
-    {
-        "title": "Info Meeting!",
-        "description": "The slides from the informational meeting.",
+        "title": "Supplementary Meeting",
+        "description": "These slides are the details we shared with those visiting the Frosh Fest. Great for extra information!",
         "img": "info.jpg",
-        "link": "https://docs.google.com/presentation/d/153TDgIKAyHxDOabEAOGGLflpGlDoHhaMlYofLzgBqs4/edit?usp=sharing"
+        "link": "https://docs.google.com/presentation/d/13ylJCBP6du8RP3nlfy3FagGYJITk_jA2-yhy0tCzkOg/edit?usp=sharing"
     },
     {
         "title": "Team Google Folder",
         "description": "Google Drive folder for all future agendas.",
         "img": "drive.jpg",
-        "link": "https://drive.google.com/drive/folders/1KdPmhEbS5-Vgd-hbyGbASOW11t7QvUho?usp=sharing"
+        "link": "https://drive.google.com/drive/folders/1w7fySV9SQWWlFU2V4_DcotnEjqBd54fI?usp=sharing"
     }
 ]
