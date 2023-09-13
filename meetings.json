@@ -1,5 +1,11 @@
 [
     {
+        "title": "Informational Meeting",
+        "description": "The first day of the club. These are the informational slides we used to pitch the team to everyone!",
+        "img": "info.PNG",
+        "link": "https://docs.google.com/presentation/d/1q77ipHZsbdggf8W2aqqAXR7YgErvi8K72ztLTYJmn8I/edit?usp=sharing"
+    },
+    {
         "title": "Supplementary Meeting",
         "description": "These slides are the details we shared with those visiting the Frosh Fest. Great for extra information!",
         "img": "info.PNG",
