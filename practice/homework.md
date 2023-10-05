@@ -21,11 +21,13 @@ Solutions will be posted and discussed the week after; please ask questions via 
 
 <a href="https://docs.google.com/document/d/1-1CUlW2r9vFW68Sw7tAxNhUfi2XzfVJSM8YsVgzN6GQ/edit?usp=sharing" target="_blank" rel="noopener noreferrer">October 5 - Computer Number Systems</a>
 
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSfZ-Pgg88F4-UMNFUYxwqJPruFFxBIAXkbbQqpDuRPpAvn2rA/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">Submit Your Homework Here!</a>
+
 ## Past Homework
 
 All solutions for past homework can be found <a href="https://github.com/NVComputing/ComputingSolutions" target="_blank" rel="noopener noreferrer">here</a>
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSfZ-Pgg88F4-UMNFUYxwqJPruFFxBIAXkbbQqpDuRPpAvn2rA/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">Submit Your Homework Here!</a>
+
 
 
 
