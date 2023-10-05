@@ -19,7 +19,7 @@ Solutions will be posted and discussed the week after; please ask questions via 
 
 ## This Week's Homework
 
-<a href="" target="_blank" rel="noopener noreferrer">None! Have a good summer! </a>
+<a href="https://docs.google.com/document/d/1XAslqYWbEBvU_9ekrBwuPo6vHQiBYQUOiXNs5Qbt7kU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">October 5 - Computer Number Systems</a> -
 
 ## Past Homework
 
