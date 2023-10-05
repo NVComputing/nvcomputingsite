@@ -25,7 +25,7 @@ Solutions will be posted and discussed the week after; please ask questions via 
 
 All solutions for past homework can be found <a href="https://github.com/NVComputing/ComputingSolutions" target="_blank" rel="noopener noreferrer">here</a>
 
-<a href="" target="_blank" rel="noopener noreferrer">Placeholder Homework Form</a>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSfZ-Pgg88F4-UMNFUYxwqJPruFFxBIAXkbbQqpDuRPpAvn2rA/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">Submit Your Homework Here!</a>
 
 
 
