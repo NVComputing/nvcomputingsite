@@ -102,9 +102,9 @@ fill that slot with a `1`.
 
 Number: 1  ___ ___ ___
 
-I will then subtract `$1 * 2^3$` from `12` to get `3`. Now, I will repeat the process with
-the remaining slots. `$2^2$` fits into `3` one time, so that slot will be filled in with a 1.
-`$1 * 2^2$` will be subtracted from `3` to get us `0`. `$2^1$` and `$2^0$` both fit into `0`
+I will then subtract `$1 * 2^3$` from `12` to get `4`. Now, I will repeat the process with
+the remaining slots. `$2^2$` fits into `4` one time, so that slot will be filled in with a 1.
+`$1 * 2^2$` will be subtracted from `4` to get us `0`. `$2^1$` and `$2^0$` both fit into `0`
 `$0$` times, so those slots are filled in with `$0$`. Hence our final answer is `$1100_2$`.
 
 While converting to base 2 only leaves two options for each slot (`$0$` or `$1$`), the process is very similar to converting from base 10 to base 8 and 16 (and any other base for that matter). You find the highest power of the base less than the base 10 number, subtract it as many times as possible, fill in that corresponding slot, and repeat.
@@ -313,4 +313,4 @@ We will use this concept to our advantage.
 We won't delve into negative bases, so you can just stick with `8` as your final answer.
 
 ---
-Author: Kelly Hong
+Author: Kelly Hong, Haroldas Diska (Edits)
