@@ -5,7 +5,7 @@
             "start": "11/1",
             "end": "11/1",
             "description": "The first competition for ACSL, covering Computer Number Systems, Recursive Functions, and What Does This Program Do?",
-            "img": "//res/competitions/acsl.jpg",
+            "img": "/res/competitions/acsl.jpg",
             "link": "https://www.acsl.org/about"
         },
         {
