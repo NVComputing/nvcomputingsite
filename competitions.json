@@ -3,7 +3,7 @@
         {
             "title": "ACSL Competition #1",
             "start": "11/1",
-            "end": "11/1",
+            "end": "1/14 @ 11:59 EST",
             "description": "The first competition for ACSL, covering Computer Number Systems, Recursive Functions, and What Does This Program Do?",
             "img": "/res/competitions/acsl.jpg",
             "link": "https://www.acsl.org/about"
@@ -15,6 +15,14 @@
             "description": "First Competition for the CodeBytes group!",
             "img": "/res/CodeBytesLogo.png",
             "link": "https://codebytes-two.vercel.app/"
+        },
+        {
+            "title": "MSOE Opportunity Conference Computer Competition",
+            "start": "11/17 @ 7:30 AM",
+            "end": "11/17 @ 12:00",
+            "description": "A one-of-a-kind competition for high school students to show off their skills in computer science!",
+            "img": "/res/competitions/MSOE.jpg",
+            "link": "https://www.msoe.edu/about-msoe/k-12-stem-at-msoe/k-12-programs/programs-for-schools-and-educators/opportunity-conference-at-msoe/"
         }
     ]
 }
