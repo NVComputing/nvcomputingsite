@@ -1,6 +1,12 @@
 [
      {
-        "title": "10/12 Meeting: ACSL:Recursive Functions",
+        "title": "10/19 Meeting: ACSL: What Does This Program Do?",
+        "description": "Probably the most annoying topic relating to ACSL ever. Literally. All the captains hate this.",
+        "img": "info.PNG",
+        "link": "https://docs.google.com/presentation/d/1d69kPWlXGnn9nHQ1VXtFollGphdA11St8X0rFLr0F0g/edit?usp=sharing"
+    },
+     {
+        "title": "10/12 Meeting: ACSL: Recursive Functions",
         "description": "You ever wonder why Trees show up so much in ACSL? Come today to find out nothing relating to that!",
         "img": "info.PNG",
         "link": "https://docs.google.com/presentation/d/1EsaJX0JCrVkBcSQXZc2x86vh3aA8IW_2za5o62YO5TE/edit?usp=sharing"
