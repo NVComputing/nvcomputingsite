@@ -19,11 +19,13 @@ Solutions will be posted and discussed the week after; please ask questions via 
 
 ## This Week's Homework
 
-<a href="https://docs.google.com/document/d/1po1I9ZgXg_P6PW5k_I-iTcn0AW3fknTeNd4EYt8O3hs/edit?usp=sharing" target="_blank" rel="noopener noreferrer">October 19 - What Does This Program Do?</a>
+REVIEW REVIEW REVIEW FOR ACSL CONTEST 1!!!!!!
 
 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZ-Pgg88F4-UMNFUYxwqJPruFFxBIAXkbbQqpDuRPpAvn2rA/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">Submit Your Homework Here!</a>
 
 ## Past Homework
+
+<a href="https://docs.google.com/document/d/1po1I9ZgXg_P6PW5k_I-iTcn0AW3fknTeNd4EYt8O3hs/edit?usp=sharing" target="_blank" rel="noopener noreferrer">October 19 - What Does This Program Do?</a>
 
 <a href="https://docs.google.com/document/d/1iZTt1O4CyV9jd4IAdGSJfOECuTHz4rfC0kABVeTLzrc/edit?usp=sharing" target="_blank" rel="noopener noreferrer">October 12 - Recursive Functions</a>
 
