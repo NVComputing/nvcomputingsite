@@ -10,19 +10,11 @@
         },
         {
             "title": "CodeBytes Initial Contest",
-            "start": "11/11 UNKNOWN START",
-            "end": "11/11 UNKNOWN END",
+            "start": "11/17 3:30 PM",
+            "end": "11/17 6:00 PM",
             "description": "First Competition for the CodeBytes group!",
             "img": "/res/CodeBytesLogo.png",
             "link": "https://codebytes-two.vercel.app/"
-        },
-        {
-            "title": "MSOE Opportunity Conference Computer Competition",
-            "start": "11/17 @ 7:30 AM",
-            "end": "11/17 @ 12:00",
-            "description": "A one-of-a-kind competition for high school students to show off their skills in computer science!",
-            "img": "/res/competitions/MSOE.jpg",
-            "link": "https://www.msoe.edu/about-msoe/k-12-stem-at-msoe/k-12-programs/programs-for-schools-and-educators/opportunity-conference-at-msoe/"
         }
     ]
 }
