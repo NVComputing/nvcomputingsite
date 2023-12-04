@@ -361,9 +361,10 @@ I'm saying that you're probably never going to use this. It's not nearly as usef
 Here comes the fun part!
 
 You might be wondering how to use a regular expression to parse input. (Our previous captain, Raymond, believed that nobody would read this far into this resource.
-In his words, "You're probably not, but whatever. I doubt anyone is reading this far anyway". As per tradition, (9/14/2024), if anyone is reading this, tell HaroldasD on Discord and I'll
+In his words, "You're probably not, but whatever. I doubt anyone is reading this far anyway". As per tradition, (9/14/2023), if anyone is reading this, tell HaroldasD on Discord and I'll
 get the captains to do something for you.
--- You forgot to close the parentheses. Also, how did you set the date as 2024 when 2023 isn't even over yet? -Former captain Raymond who still has push access to the repository)
+-- You forgot to close the parentheses. Also, how did you set the date as 2024 when 2023 isn't even over yet? - Former captain Raymond who still has push access to the repository
+-- You're so mean to me Raymond D:   )
 
 Say hello to the most basic of group constructs: the *capturing group*.
 
