@@ -363,6 +363,7 @@ Here comes the fun part!
 You might be wondering how to use a regular expression to parse input. (Our previous captain, Raymond, believed that nobody would read this far into this resource.
 In his words, "You're probably not, but whatever. I doubt anyone is reading this far anyway". As per tradition, (9/14/2024), if anyone is reading this, tell HaroldasD on Discord and I'll
 get the captains to do something for you.
+-- You forgot to close the parentheses. Also, how did you set the date as 2024 when 2023 isn't even over yet? -Former captain Raymond who still has push access to the repository)
 
 Say hello to the most basic of group constructs: the *capturing group*.
 
@@ -370,7 +371,7 @@ Say hello to the most basic of group constructs: the *capturing group*.
 
 ***Wait, isn't that just parenthesis?***
 
-Aha, you feeble-minded ASCL simp who is only here for the college credit. You fool. You moron.
+Aha, you feeble-minded ACSL simp who is only here for the college credit. You fool. You moron.
 
 Unbeknownst to both you and ACSL, the parenthesis were serving a sinister function. They were *capturing*
 whatever was in them.
@@ -393,7 +394,7 @@ they literally just group. There's a bunch of other constructs that I won't go i
 If you would like to do a deep dive into regular expressions, you will begin finding incredibly alien terms, such as:
 
 - Catastrophic Backtracking
-- Negative/Postiive Lookaround Assertions
+- Negative/Positive Lookaround Assertions
 - Backreferences and Relative Backreferences
 - Atomic Grouping
 - Regular Expression Recursion (note: I still don't understand why this is a thing. It will make your brain hurt.)
