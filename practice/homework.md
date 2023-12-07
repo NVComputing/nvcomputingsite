@@ -19,7 +19,7 @@ Solutions will be posted and discussed the week after; please ask questions via 
 
 ## This Week's Homework
 
-REVIEW REVIEW REVIEW FOR ACSL CONTEST 1!!!!!!
+<a href="https://docs.google.com/document/d/1CiDjezFYWCNennEfUVmPQn_H6m8qwPcErHBrhajgp_s/edit?usp=sharing" target="_blank" rel="noopener noreferrer">December 7 - Prefix, Infix, Postfix + Bit-String Flicking</a>
 
 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZ-Pgg88F4-UMNFUYxwqJPruFFxBIAXkbbQqpDuRPpAvn2rA/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">Submit Your Homework Here!</a>
 
