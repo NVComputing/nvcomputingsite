@@ -9,12 +9,20 @@
             "link": "https://www.acsl.org/about"
         },
         {
-            "title": "CodeBytes Initial Contest",
-            "start": "11/17 3:30 PM",
-            "end": "11/17 6:00 PM",
-            "description": "First Competition for the CodeBytes group!",
-            "img": "/res/CodeBytesLogo.png",
-            "link": "https://www.codebytes.codes/"
+            "title": "USACO Contest #1",
+            "start": "12/15",
+            "end": "12/18",
+            "description": "The first competition for USACO, for all leagues.",
+            "img": "/res/competitions/usaco.jpg",
+            "link": "https://www.acsl.org/about"
+         },
+         {
+            "title": "ACSL Competition #2",
+            "start": "1/2",
+            "end": "3/3 @ 11:59 EST",
+            "description": "The second competition for ACSL, covering Prefix, Infix, and Postfix, Bit-String Flicking, LISP.",
+            "img": "/res/competitions/acsl.jpg",
+            "link": "https://www.acsl.org/about"
         }
     ]
 }
