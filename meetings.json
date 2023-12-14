@@ -1,5 +1,11 @@
 [
-     {
+    {
+        "title": "12/14 Meeting: USACO, Lisp, Game .-.",
+        "description": "USACO, Lisp, Game .-.",
+        "img": "info.PNG",
+        "link": "https://docs.google.com/presentation/d/1V6h2m_lLf2KDj6kO820LycqtVTjyEJO4tZzr6kV9X8A/edit?usp=sharing"
+    },
+    {
         "title": "12/7 Meeting: ACSL Contest #2 Prep: PIP, BSF",
         "description": "PIP: Prefix, Infix, Postfix, alongside Bit String Flicking!",
         "img": "info.PNG",
