@@ -35,7 +35,7 @@ module.exports.set = (app) => {
 			title: 'Neuqua Valley Computing Team',
 
 			homePage: true,
-			prism: false,
+			prism: true,
 
 			titleCode: convertedCode
 		});

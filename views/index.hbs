@@ -1,123 +1,161 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-	{{> head }}
-	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-	<link rel="stylesheet" href="/css/custom.css">
-	<link rel="stylesheet" href="/css/animate.css">
-</head>
+	<head>
+		{{> head }}
+		<script type="module"
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+		<link rel="stylesheet" href="/css/custom.css">
+		<link rel="stylesheet" href="/css/animate.css">
+	</head>
 
-<body>
-	<div class="background-page">
-		<div class="navbar-wrapper pt-3"> {{> navbar }} </div>
-		<div class="container">
-			<div class="row align-items-center pb-5 header-offset">
-				<div class="col-lg-6 text-white">
-					<h1 class="font-weight-bold">NVHS Computing Team</h1>
-					<p class="font-weight-thin lead text-white mb-0">Main Building D200 | Thursdays 2:30-3:30</p>
-				</div>
-				<div class="col-lg-6 d-none d-lg-block animate__animated animate__jackInTheBox">
-					<img src="/res/nvabout.png" alt="nvclublogo" class="img-fluid rounded">
+	<body>
+		<div class="background-page">
+			<div class="navbar-wrapper pt-3"> {{> navbar }} </div>
+			<div class="container">
+				<div
+					class="row align-items-center pb-5 header-offset d-flex justify-content-between w-110">
+					<div class="col-lg-6 text-white">
+						<h1 class="font-weight-bold">NVHS Computing Team</h1>
+						<p class="font-weight-thin lead text-white mb-0">Main Building D200 |
+							Thursdays 2:30-3:30</p>
+
+					</div>
+					<div
+						class="col-lg-6 d-lg-block animate__animated animate__jackInTheBox rounded w-20 "
+						style="height: 330px">
+						<img src="/res/nvabout.png" alt="nvclublogo"
+							class="img-fluid rounded border-secondary border w-100 h-100 shadow-sm">
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="d-none d-lg-block py-5">
-		<div class="container">
-			<div class="rounded shadow-sm title-code line-numbers"> {{{titleCode}}} </div>
-		</div>
-	</div>
-	<div class="container">
-		<div class="row py-4">
-			<div class="col-md-8 text-white border-md-right pb-4 pr-4">
-				<h2 class="text-center text-md-left mb-4">What is <span class="custom__gold">Computing Team?</span></h2>
-				<p>The Neuqua Valley Computing Team focuses on providing a space for people passionate about computer
-					science! We explore diverse programming topics and participate in competitions like hackathons,
-					USACO, and ACSL.</p>
-				<p>If you love Computer Science as we do, then this club is the place for you.</p>
-				<p class="custom__add__bottom__margin">We look forward to seeing you at our first informational session
-					on September 14th!
-				</p>
-
-				<h2 class="text-center text-md-left mb-4">Contacts / Communication</h2>
-				<p>Any questions or concerns? Feel free to contact anyone of us about it! We respond the fastest on
-					Discord through either dms or the team server. Our emails are open as well!</p>
-				<ul>
-					<li><b>Our Official Email - nvhscomputing@gmail.com</b></li>
-					<li>
-						{{!-- <ion-icon class="custom__discord" name="logo-discord"></ion-icon> --}}
-						Canchen Li - canchenl6294@k12.ipsd.org
-					</li>
-					<li>
-						{{!-- <ion-icon class="custom__discord" name="logo-discord"></ion-icon> --}}
-						Haroldas Diska - haroldasdis1362@k12.ipsd.org
-					</li>
-					<li>
-						{{!-- <ion-icon class="custom__discord" name="logo-discord"></ion-icon> --}}
-						Jack Zhou - jackzho3380@k12.ipsd.org
-					</li>
-					<li>
-						{{!-- <ion-icon class="custom__discord" name="logo-discord"></ion-icon> --}}
-						Arthur Cai - arthurca3607@k12.ipsd.org
-					</li>
-					<li>
-						{{!-- <ion-icon class="custom__discord" name="logo-discord"></ion-icon> --}}
-						Andy Ye - andyy2906@k12.ipsd.org
-					</li>
-				</ul>
-				<p> Please join our Discord and Remind as well, where we post meeting reminders and other important
-					announcements:</p>
-				<ul>
-					<li>Discord: <a href="https://discord.gg/ygvpXsP8Tb">Click here.</a></li>
-					<li>Remind: @nvcomp2024</li>
-				</ul>
-
-			</div>
-			<div class="col-md-4 text-white pl-4">
-				<div class="pb-4">
-					<h2 class="text-center text-md-left">Club Info</h2>
-					<div class="my-4">
-						<h4 class="font-weight-light">Club Sponsor</h4>
-						<p>Mr. Koos - joe_koos@ipsd.org</p>
-					</div>
-					<div class="my-4">
-						<h4 class="font-weight-light">Meeting Times</h4>
-						<p>Thursdays 2:30 -3:30 PM</p>
-					</div>
-					<div class="my-4">
-						<h4 class="font-weight-light">Meeting Location</h4>
-						<p>Room D200 (Main Building)</p>
-					</div>
+		<div class="d-none d-lg-block py-5">
+			<div class="container">
+				<div class="rounded shadow-sm title-code line-numbers"> {{{titleCode}}}
 				</div>
-				<div class="pb-4">
-					<h2 class="text-center text-md-left">FAQ</h2>
-					<div class="my-4">
-						<h5>Q: Do you cut people from the club?</h5>
-						<div class="font-weight-light">No. Although there may be a few contests
-							that prove more challenging to beginner members, don't let that scare you from joining.
+			</div>
+		</div>
+		<div class="container">
+			<div class="row py-4">
+				<div class="col-md-8 text-white border-md-right pb-4 pr-4">
+					<h2 class="text-center text-md-left mb-4">What is <span
+							class="custom__gold">Computing Team?</span></h2>
+					<p>The Neuqua Valley Computing Team focuses on providing a space for people
+						passionate about computer
+						science! We explore diverse programming topics and participate in
+						competitions like hackathons,
+						USACO, and ACSL.</p>
+					<p>If you love Computer Science as we do, then this club is the place for
+						you.</p>
+					<p class="custom__add__bottom__margin">We look forward to seeing you at our
+						first informational session
+						on September 14th!
+					</p>
+
+					<h2 class="text-center text-md-left mb-4">Contacts / Communication</h2>
+					<p>Any questions or concerns? Feel free to contact anyone of us about it!
+						We respond the fastest on
+						Discord through either dms or the team server. Our emails are open as
+						well!</p>
+					<ul>
+						<li>
+							<b>
+								Our Official Email</b> - <a href="mailto: nvhscomputing@gmail.com">
+
+								nvhscomputing@gmail.com &#x2197;</a>
+						</li>
+						<li>
+
+							{{!-- <ion-icon class="custom__discord" name="logo-discord"></ion-icon>
+							--}}
+							Canchen Li - <a href="mailto: canchenl6294@k12.ipsd.org">canchenl6294@k12.ipsd.org
+								&#x2197;</a>
+						</li>
+						<li>
+							{{!-- <ion-icon class="custom__discord" name="logo-discord"></ion-icon>
+							--}}
+							Haroldas Diska - <a href="mailto: haroldasdis1362@k12.ipsd.org">haroldasdis1362@k12.ipsd.org
+								&#x2197;</a>
+						</li>
+						<li>
+							{{!-- <ion-icon class="custom__discord" name="logo-discord"></ion-icon>
+							--}}
+							Jack Zhou - <a href="mailto: jackzho3380@k12.ipsd.org">jackzho3380@k12.ipsd.org
+								&#x2197;</a>
+						</li>
+						<li>
+							{{!-- <ion-icon class="custom__discord" name="logo-discord"></ion-icon>
+							--}}
+							Arthur Cai - <a href="mailto: arthurca3607@k12.ipsd.org">arthurca3607@k12.ipsd.org
+								&#x2197;</a>
+						</li>
+						<li>
+							{{!-- <ion-icon class="custom__discord" name="logo-discord"></ion-icon>
+							--}}
+							Andy Ye - <a href="mailto: andyy2906@k12.ipsd.org">andyy2906@k12.ipsd.org
+								&#x2197;</a>
+						</li>
+					</ul>
+					<p> Please join our Discord and Remind as well, where we post meeting
+						reminders and other important
+						announcements:</p>
+					<ul>
+						<li>Discord: <a href="https://discord.gg/ygvpXsP8Tb">Click here.</a></li>
+						<li>Remind: @nvcomp2024</li>
+					</ul>
+
+				</div>
+				<div class="col-md-4 text-white pl-4">
+					<div class="pb-4">
+						<h2 class="text-center text-md-left">Club Info</h2>
+						<div class="my-4">
+							<h4 class="font-weight-light">Club Sponsor</h4>
+							<p>Mr. Koos - <a href="mailto: abc@example.com"> joe_koos@ipsd.org
+									&#x2197;</a></p>
+						</div>
+						<div class="my-4">
+							<h4 class="font-weight-light">Meeting Times</h4>
+							<p>Thursdays 2:30 -3:30 PM</p>
+						</div>
+						<div class="my-4">
+							<h4 class="font-weight-light">Meeting Location</h4>
+							<p>Room D200 (Main Building)</p>
 						</div>
 					</div>
-					<div class="my-4">
-						<h5>Q: Can I join halfway through the year?</h5>
-						<div class="font-weight-light">Sure, but you might not be able to compete in some of the
-							contests.</div>
-					</div>
-					<div class="mt-4">
-						<h5>Q: What are the prerequisites to join?</h5>
-						<div class="font-weight-light">There are no prerequisites to join, however we strongly recommend
-							having prior knowledge of a programming language,
-							whether it is self-studied or from AP Computer Science A.
+					<div class="pb-4">
+						<h2 class="text-center text-md-left">FAQ</h2>
+						<div class="my-4">
+							<h5>Q: Do you cut people from the club?</h5>
+							<div class="font-weight-light">No. Although there may be a few contests
+								that prove more challenging to beginner members, don't let that scare
+								you from joining.
+							</div>
+						</div>
+						<div class="my-4">
+							<h5>Q: Can I join halfway through the year?</h5>
+							<div class="font-weight-light">Sure, but you might not be able to compete
+								in some of the
+								contests.</div>
+						</div>
+						<div class="mt-4">
+							<h5>Q: What are the prerequisites to join?</h5>
+							<div class="font-weight-light">There are no prerequisites to join,
+								however we strongly recommend
+								having prior knowledge of a programming language,
+								whether it is self-studied or from AP Computer Science A.
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div id="back-to-top" href="#" class="btn btn-sm btn-light back-to-top" role="button"><i
-			class="fas fa-arrow-up"></i></div>
-	{{> footer }}
-</body>
+		<div id="back-to-top" href="#" class="btn btn-sm btn-light back-to-top"
+			role="button"><i
+				class="fas fa-arrow-up"></i></div>
+		{{> footer }}
+	</body>
 
 </html>

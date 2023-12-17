@@ -1,54 +1,53 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-	{{> head }}
-	<link rel="stylesheet" href="/css/custom.css">
-	<link rel="stylesheet" href="/css/animate.css">
-</head>
+	<head>
+		{{> head }}
+		<link rel="stylesheet" href="/css/custom.css">
+		<link rel="stylesheet" href="/css/animate.css">
+	</head>
 
-<body>
-	<div class="background-page">
-		<div class="navbar-wrapper pt-3"> {{> navbar }} </div>
-		<div class="container">
-			<div class="row align-items-center pb-5 header-offset">
-				<div class="col-lg-6 text-white">
-					<h1 class="font-weight-bold">NVHS Computing Team</h1>
-					<h2 class="font-weight-light">Schedule</h2>
-					<p class="font-weight-thin lead text-white mb-0">Deadlines, Event Dates, and More.</p>
-				</div>
-				<div class="col-lg-6 d-none d-lg-block heroimgdiv animate__animated animate__jackInTheBox"><img
-						src="/res/nvabout.png" alt="nvclublogo" class="img-fluid rounded"></div>
-			</div>
-		</div>
-	</div>
-	<div class="container text-white my-4">
-		<div class="row my-0">
-			{{#each competitions}}
-			<div class="col-md-6 col-lg-6 d-flex align-items-stretch my-2">
-				<div class="card border-0">
-					<a href="{{ this.link }}" target="__blank" rel="noopener noreferrer">
-						<img class="card-img-top custom__image__height" src="{{ this.img }}" alt="{{ this.title }}">
-					</a>
-					<div class="card-body">
-						<h3 class="border-bottom pb-3 mb-2">{{ this.title }}</h3>
-						<h5 class="pb-0 mb-2"><b>Start:</b> {{this.start }}</h5>
-						<h5 class="pb-3 mb-2"><b>End:</b> {{this.end }}</h5>
-						<p class="card-text-custom">{{ this.description }}</p>
-					</div>
-					<div class="card-footer">
-						<a href="{{ this.link }}" class="btn btn-md float-right mt-auto" target="__blank"
-							rel="noopener noreferrer">Learn More</a>
+	<body>
+		<div class="background-page">
+			<div class="navbar-wrapper pt-3"> {{> navbar }} </div>
+			<div class="container">
+				<div class="row align-items-center pb-5 header-offset">
+					<div class="col-lg-6 text-white">
+						<h1>Schedule</h1>
+						<p class="font-weight-thin lead text-white mb-0">Deadlines, Event Dates,
+							and More.</p>
 					</div>
 				</div>
 			</div>
-			{{/each}}
 		</div>
-	</div>
+		<div class="container text-white my-4 d-flex w-100 justify-content-center">
+			<div class="row my-0 w-100">
+				{{#each competitions}}
+				<div class="col-4 d-flex align-items my-2">
+					<div class="card border-0">
+						<img class="card-img-top custom__image__height" src="{{ this.img }}"
+							alt="{{ this.title }}">
+						<div class="card-body">
+							<h5 class="border-bottom pb-3 mb-2 font-weight-bold">{{ this.title }}</h5>
+							<p class="pb-0 mb-0"><b>Start:</b> {{this.start }}</p>
+							<p class="pb-3"><b>End:</b> {{this.end }}</p>
+							<p class="card-text-custom">{{ this.description }}</p>
+						</div>
+						<div class="card-footer">
+							<a href="{{ this.link }}" class="btn btn-md float-right mt-auto"
+								target="__blank"
+								rel="noopener noreferrer">Learn More</a>
+						</div>
+					</div>
+				</div>
+				{{/each}}
+			</div>
+		</div>
 
-	<div id="back-to-top" href="#" class="btn btn-sm btn-light back-to-top" role="button"><i
-			class="fas fa-arrow-up"></i></div>
-	{{> footer }}
-</body>
+		<div id="back-to-top" href="#" class="btn btn-sm btn-light back-to-top"
+			role="button"><i
+				class="fas fa-arrow-up"></i></div>
+		{{> footer }}
+	</body>
 
 </html>

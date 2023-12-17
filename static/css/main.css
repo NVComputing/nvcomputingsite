@@ -11,6 +11,10 @@ a {
 	color: #7bff;
 }
 
+h1, h2 {
+	font-weight: bold;
+}
+
 footer {
 	position: absolute;
 	font-size: 0.8rem;
@@ -171,6 +175,14 @@ footer {
 	background-color: #1a212c !important;
 }
 
+.card-footer .btn:hover {
+	background-color: #ffffff;
+}
+
+.btn:hover {
+	background-color: #e3e3e3ff;
+}
+
 .card-footer a {
 	color: #ffff !important;
 }
@@ -205,6 +217,10 @@ body.side-menu-visible #side-menu {
 
 #side-menu .contents {
 	margin-top: 15px
+}
+
+.nav-link{
+	color: #ffffff;
 }
 
 #side-menu .nav-link {

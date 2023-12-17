@@ -12,7 +12,7 @@ function navScroll() {
 	// Get the offset position of the navbar
 	let sticky = navbar.offsetTop;
 	if (window.innerWidth > 991) {
-		if (window.pageYOffset > sticky) {
+		if (window.scrollY > sticky) {
 			navbar.classList.add('sticky');
 			$('#back-to-top').fadeIn();
 		} else {

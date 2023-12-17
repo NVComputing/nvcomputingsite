@@ -16,10 +16,10 @@ USACO is a multi-level online programming competition primarily focused on algor
 
 USACO is a programming competition that occurs **4 times** during the year.
 
-*   Dec 17-20: First Contest
-*   Jan 28-31: Second Contest
-*   Feb 25-28: Third Contest
-*   Mar 25-28: US Open
+*   Dec 15-18: First Contest
+*   Jan 26-29: Second Contest
+*   Feb 16-19: Third Contest
+*   Mar 15-18: US Open
 
 The first three contests are **identical in format**.
 
@@ -148,7 +148,7 @@ To be successful in this level, you need to:
 
 **As of December 2020, the input/output method for USACO has been changed.**
 
-USACO now uses the standard input/output (i.e. System.in/System.out in java).
+USACO now uses the standard input/output (i.e. System.in/System.out in Java, input()/print() in Python).
 
 **For contests before December 2020, read below:**
 

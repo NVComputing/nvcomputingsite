@@ -32,11 +32,11 @@ This page contains general information and useful links, if that's what you're l
 Otherwise, click one of the links to the left you're interested in to get started!
 
 # Useful Links
-### <a href="https://github.com/NVComputing/nvcomputingsite" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
-### <a href="https://drive.google.com/drive/folders/1Vu8W5AWiaXUuiwSX951f2yHpAhB0lw_8?usp=sharing" target="_blank" rel="noopener noreferrer">Google Drive Folder</a>
-### <a href="https://github.com/Vannagar/DataStructures" target="_blank" rel="noopener noreferrer">Useful Coding Classes</a>
-### <a href="https://codeforces.com/" target="_blank" rel="noopener noreferrer">Codeforces (Practice)</a>
-### <a href="https://leetcode.com/" target="_blank" rel="noopener noreferrer">LeetCode (Practice)</a>
+##### <a href="https://github.com/NVComputing/nvcomputingsite" target="_blank" rel="noopener noreferrer">GitHub Repository &#x2197;</a>
+##### <a href="https://drive.google.com/drive/folders/1Vu8W5AWiaXUuiwSX951f2yHpAhB0lw_8?usp=sharing" target="_blank" rel="noopener noreferrer">Google Drive Folder &#x2197;</a>
+##### <a href="https://github.com/Vannagar/DataStructures" target="_blank" rel="noopener noreferrer">Useful Coding Classes &#x2197;</a>
+##### <a href="https://codeforces.com/" target="_blank" rel="noopener noreferrer">Codeforces (Practice) &#x2197;</a>
+##### <a href="https://leetcode.com/" target="_blank" rel="noopener noreferrer">LeetCode (Practice) &#x2197;</a>
 # Page Progress Tracker
 
 If you would like to contribute, please work on one (or more) of the following pages. Please let a captain know if you plan on doing this so that we may check your changes afterwards.
