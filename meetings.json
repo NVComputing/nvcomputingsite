@@ -1,5 +1,11 @@
 [
     {
+        "title": "2/8 Meeting: Algorithms",
+        "description": "Some useful programming algorithms!",
+        "img": "info.PNG",
+        "link": "https://docs.google.com/presentation/d/1kI6pN7oUk0j6fIe5AsXUQnXhTQtJM_ofGWnkP3iFkPM/edit?usp=sharing"
+    },
+    {
         "title": "2/1 Meeting: ACSL Contest #3 Review & Fun",
         "description": "A bunch of questions and a game for the upcoming contest(s)!",
         "img": "info.PNG",
