@@ -1,5 +1,17 @@
 [
     {
+        "title": "2/22 Meeting: ACSL Contest #4: Assembly",
+        "description": "Probably the easiest topic all year?",
+        "img": "info.PNG",
+        "link": "https://docs.google.com/presentation/d/11ogDBL3NVbmYABXACu2-7brXPuUio75rStbbWwKPOU0/edit?usp=sharing"
+    },
+    {
+        "title": "2/15 Meeting: ACSL Contest #4: Graph Theory",
+        "description": "Look at this graph!",
+        "img": "info.PNG",
+        "link": "https://docs.google.com/presentation/d/1JkaC2GPrMSq6ukX9h1NWYpYsweIwCH10jHkB890vE7s/edit?usp=sharing"
+    },
+    {
         "title": "2/8 Meeting: Algorithms",
         "description": "Some useful programming algorithms!",
         "img": "info.PNG",
