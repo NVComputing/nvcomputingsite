@@ -1,7 +1,21 @@
 let fs = require('fs');
 
 let showdown = require('showdown');
-let converter = new showdown.Converter();
+
+const classMap = {
+	a: 'link',
+};
+
+const bindings = Object.keys(classMap).map((key) => ({
+	type: 'output',
+	regex: new RegExp(`<${key}(.*)>`, 'g'),
+	replace: `<${key} class="${classMap[key]}" $1>`,
+}));
+
+const converter = new showdown.Converter({
+	extensions: [...bindings],
+});
+
 let path = require('path');
 
 converter.setOption('tables', true);
@@ -14,7 +28,7 @@ module.exports.set = (app) => {
 			let renderedMarkdown = converter.makeHtml(data);
 			res.render('resources', {
 				resource: renderedMarkdown,
-				title: "Resources | NV Computing Team",
+				title: 'Resources | NV Computing Team',
 
 				markdown: true,
 				prism: true,
@@ -22,7 +36,7 @@ module.exports.set = (app) => {
 				lightbox: true,
 
 				resourcePage: true,
-				noBreadCrumb: false
+				noBreadCrumb: false,
 			});
 		});
 	});
@@ -31,12 +45,12 @@ module.exports.set = (app) => {
 		let resourceName = req.params.resourceName;
 		let subPath = req.params['0'];
 
-		let previousPage = "";
+		let previousPage = '';
 		let mainResources = true;
 
 		let filepath = path.join(__dirname, `../resources/${resourceName}${subPath}.md`);
 
-		if(subPath != ""){
+		if (subPath != '') {
 			mainResources = false;
 			previousPage = resourceName;
 		}
@@ -53,7 +67,7 @@ module.exports.set = (app) => {
 				res.render('resources', {
 					resource: converter.makeHtml(data),
 					resourceName: title[1],
-					title: title[1] + " | NV Computing Team",
+					title: title[1] + ' | NV Computing Team',
 
 					markdown: true,
 					prism: true,
@@ -63,9 +77,9 @@ module.exports.set = (app) => {
 					resourcePage: true,
 					noBreadCrumb: true,
 					mainResources: mainResources,
-					previousPage: previousPage
+					previousPage: previousPage,
 				});
 			}
 		});
 	});
-}
+};

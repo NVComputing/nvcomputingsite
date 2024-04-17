@@ -21,6 +21,22 @@
     color: rgb(255,198,109);
 }
 
+.custom__btn {
+    background-color: rgb(26, 33, 44);
+    color: black;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.custom__btn:hover {
+    background-color: rgb(15, 20, 27);
+    transition-duration: 200ms;
+    text-decoration: none;
+}
+
 @media only screen and (max-width: 575px) {
     .custom__calendar{
         display: none;
