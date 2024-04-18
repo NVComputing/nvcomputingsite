@@ -29,10 +29,13 @@
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     cursor: pointer;
+
+    background-position: center;
+    transition: background 0.8s;
 }
 
 .custom__btn:hover {
-    background-color: rgb(15, 20, 27);
+    background-color: rgb(20, 24, 29);
     transition-duration: 200ms;
     text-decoration: none;
 }

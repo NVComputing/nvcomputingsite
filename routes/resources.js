@@ -3,7 +3,7 @@ let fs = require('fs');
 let showdown = require('showdown');
 
 const classMap = {
-	a: 'link',
+	a: '',
 };
 
 const bindings = Object.keys(classMap).map((key) => ({
@@ -12,9 +12,7 @@ const bindings = Object.keys(classMap).map((key) => ({
 	replace: `<${key} class="${classMap[key]}" $1>`,
 }));
 
-const converter = new showdown.Converter({
-	extensions: [...bindings],
-});
+const converter = new showdown.Converter();
 
 let path = require('path');
 

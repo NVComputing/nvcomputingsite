@@ -15,8 +15,8 @@ a:hover {
 	color: rgb(47, 151, 255);
 }
 
-.link {
-	color: inherit;
+/* .link {
+	color: rgb(47, 151, 255);
 	position: relative;
 	z-index: 1;
 }
@@ -28,20 +28,21 @@ a:hover {
 
 .link:hover::after {
 	transition-duration: 200ms;
-	transform: scaleY(6);
-	transform-origin: bottom center;
+	transform: scaleX(1);
+	transform-origin: left;
 }
 
 .link::after {
 	content: '';
 	width: 100%;
-	height: 2.5px;
-	background: rgb(62, 147, 205) ;
+	height: 100%;
+	background: rgb(47, 151, 255) ;
 	position: absolute;
 	bottom: 0;
 	left: 0;
+	transform: scaleX(0);
 	z-index: -1;
-}
+} */
 
 h1, h2 {
 	font-weight: bold;
@@ -238,8 +239,8 @@ body.overflow-hidden {
 	right: -300px;
 	overflow-y: auto;
 	z-index: 1035;
-	background: #fff;
-	padding: 20px 30px;
+	background: #e9e9e9;
+	padding: 20px 0px;
 	color: #333;
 	transition: .4s
 }
@@ -249,7 +250,7 @@ body.side-menu-visible #side-menu {
 }
 
 #side-menu .contents {
-	margin-top: 15px
+	margin-top: 40px
 }
 
 .nav-link{
@@ -260,16 +261,22 @@ body.side-menu-visible #side-menu {
 	color: #333;
 	font-size: 16px;
 	font-weight: 600;
-	padding: 12px 0
+	padding: 12px 0;
+	position: relative;
+	z-index: 1;
+	padding-left: 30px;
 }
 
-#side-menu .nav-link:hover {
-	opacity: .8;
+#side-menu .nav-link:hover{
+	background-color: #DCDCDC;
+	transition-duration: 0.2s;
+
 }
 
 #side-menu .close {
 	font-size: 36px;
-	font-weight: 400
+	font-weight: 400;
+	padding-right: 30px;
 }
 
 .side-menu-overlay {
