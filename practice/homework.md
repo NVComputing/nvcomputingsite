@@ -33,6 +33,8 @@ Solutions will be posted and discussed the week after; please ask questions via 
 
 All solutions for past homework can be found <a href="https://github.com/NVComputing/ComputingSolutions" target="_blank" rel="noopener noreferrer">here</a>
 
+hi this is part of your training!
+
 
 
 
