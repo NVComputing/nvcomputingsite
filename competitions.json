@@ -1,28 +1,12 @@
 {
     "competitions": [
         {
-            "title": "ACSL Competition #1",
-            "start": "11/1",
-            "end": "1/14 @ 11:59 EST",
-            "description": "The first competition for ACSL, covering Computer Number Systems, Recursive Functions, and What Does This Program Do?",
-            "img": "/res/competitions/acsl.jpg",
-            "link": "https://www.acsl.org/about"
-        },
-        {
-            "title": "USACO Contest #1",
-            "start": "12/15",
-            "end": "12/18",
-            "description": "The first competition for USACO, for all leagues.",
-            "img": "/res/competitions/usaco.jpg",
-            "link": "https://www.acsl.org/about"
-         },
-         {
-            "title": "ACSL Competition #2",
-            "start": "1/2",
-            "end": "3/3 @ 11:59 EST",
-            "description": "The second competition for ACSL, covering Prefix, Infix, and Postfix, Bit-String Flicking, LISP.",
-            "img": "/res/competitions/acsl.jpg",
-            "link": "https://www.acsl.org/about"
+            "title": "Placeholder",
+            "start": "N/A",
+            "end": "N/A",
+            "description": "This is where competitions will be displayed.",
+            "img": "/res/competitions/iit.jpg",
+            "link": "https://nvcomputing.com/schedule"
         }
     ]
 }

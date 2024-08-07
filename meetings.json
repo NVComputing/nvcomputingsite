@@ -1,134 +1,14 @@
 [
-     {
-        "title": "4/25 Meeting: Farewell",
-        "description": "goodbye",
-        "img": "info.PNG",
-        "link": "https://youtu.be/QXqBAIZ6UuU?si=CNFNI9nZg7hoFAbT"
-    },
-     {
-        "title": "3/14 Meeting: 3D Coding YAY",
-        "description": "...",
-        "img": "info.PNG",
-        "link": "https://docs.google.com/presentation/d/1qeYoqraddGh5H3AycwrFQXiTHdM9hBQEKs_uhaq3t6Y/edit?usp=sharing"
-    },
-     {
-        "title": "3/7 Meeting: ACSL Review & Capstone",
-        "description": "...",
-        "img": "info.PNG",
-        "link": "https://docs.google.com/presentation/d/1DOO1zztKaUutsxZi_D12UthiqGAuM6Mlmw5n-vfTdEs/edit?usp=sharing"
-    },
-    {
-        "title": "2/22 Meeting: ACSL Contest #4: Assembly",
-        "description": "Probably the easiest topic all year?",
-        "img": "info.PNG",
-        "link": "https://docs.google.com/presentation/d/11ogDBL3NVbmYABXACu2-7brXPuUio75rStbbWwKPOU0/edit?usp=sharing"
-    },
-    {
-        "title": "2/15 Meeting: ACSL Contest #4: Graph Theory",
-        "description": "Look at this graph!",
-        "img": "info.PNG",
-        "link": "https://docs.google.com/presentation/d/1JkaC2GPrMSq6ukX9h1NWYpYsweIwCH10jHkB890vE7s/edit?usp=sharing"
-    },
-    {
-        "title": "2/8 Meeting: Algorithms",
-        "description": "Some useful programming algorithms!",
-        "img": "info.PNG",
-        "link": "https://docs.google.com/presentation/d/1kI6pN7oUk0j6fIe5AsXUQnXhTQtJM_ofGWnkP3iFkPM/edit?usp=sharing"
-    },
-    {
-        "title": "2/1 Meeting: ACSL Contest #3 Review & Fun",
-        "description": "A bunch of questions and a game for the upcoming contest(s)!",
-        "img": "info.PNG",
-        "link": "https://docs.google.com/presentation/d/1khoe3lP-Ma6qu6-aBk5vVaoanxcP55Slf8zsuWPejWE/edit?usp=sharing"
-    },
-    {
-        "title": "1/25 Meeting: CodeBytes, FSA, and Regex",
-        "description": "Codebytes, FSA, and Regex",
-        "img": "info.PNG",
-        "link": "https://docs.google.com/presentation/d/1TI54aPFpNB9x19ItV-BuG8s4S1E8MyxCbWxJ87-q2UI/edit?usp=sharing"
-    },
-    {
-        "title": "1/18 Meeting: ACSL Contest #3 Prep",
-        "description": "Data structures and Time complexity",
-        "img": "info.PNG",
-        "link": "https://docs.google.com/presentation/d/1DHgrMMYunHlmHN6b3g8Z0zcpiK-iA_ZIJ93B5H8-b6M/edit?usp=sharing"
-    },
-    {
-        "title": "1/11 Meeting: ACSL Contest #3/4 Prep: BE,DE",
-        "description": "Boolean Algebra & Digital Electronics! Also, some important announcements!",
-        "img": "info.PNG",
-        "link": "https://docs.google.com/presentation/d/1zANB0xJcEnV_FV34T_opl08cE8WznTrJ6qZYI7bdzg4/edit?usp=sharing"
-    },
-    {
-        "title": "12/14 Meeting: USACO, Lisp, Game .-.",
-        "description": "USACO, Lisp, Game .-.",
-        "img": "info.PNG",
-        "link": "https://docs.google.com/presentation/d/1V6h2m_lLf2KDj6kO820LycqtVTjyEJO4tZzr6kV9X8A/edit?usp=sharing"
-    },
-    {
-        "title": "12/7 Meeting: ACSL Contest #2 Prep: PIP, BSF",
-        "description": "PIP: Prefix, Infix, Postfix, alongside Bit String Flicking!",
-        "img": "info.PNG",
-        "link": "https://docs.google.com/presentation/d/1So5qRXX8birQe4IOr3v0kfLXRDgr3SjUFeDVXvOxYkg/edit?usp=sharing"
-    },
-     {
-        "title": "11/9 Meeting: Improvisation & Clarifications",
-        "description": "You ready?",
-        "img": "info.PNG",
-        "link": "https://docs.google.com/presentation/d/1xnn5-H3zThyIpBlyPn2P8ALonBXTxUwU3Ty8PyWdcl8/edit?usp=sharing"
-    },
-     {
-        "title": "11/2 Meeting: Mr. Koos Jr.'s Escape Room!",
-        "description": "Hope you're ready to start running around...",
-        "img": "info.PNG",
-        "link": "https://docs.google.com/presentation/d/17pgaqFG_ZNvt1ByLvhfwT7WIexBbOwpW52_Qpe0m6bU/edit?usp=sharing"
-    },
-     {
-        "title": "10/26 Meeting: ACSL Contest 1 Review!",
-        "description": "Are you ready? Roster is up!",
-        "img": "info.PNG",
-        "link": "https://docs.google.com/presentation/d/1nyEiZAbwFI5pfwDOFpxDbDMgmO4c-7fLDaKPRwVx79k/edit?usp=sharing"
-    },
-     {
-        "title": "10/19 Meeting: ACSL: What Does This Program Do?",
-        "description": "Probably the most annoying topic relating to ACSL ever. Literally. All the captains hate this.",
-        "img": "info.PNG",
-        "link": "https://docs.google.com/presentation/d/1d69kPWlXGnn9nHQ1VXtFollGphdA11St8X0rFLr0F0g/edit?usp=sharing"
-    },
-     {
-        "title": "10/12 Meeting: ACSL: Recursive Functions",
-        "description": "You ever wonder why Trees show up so much in ACSL? Come today to find out nothing relating to that!",
-        "img": "info.PNG",
-        "link": "https://docs.google.com/presentation/d/1EsaJX0JCrVkBcSQXZc2x86vh3aA8IW_2za5o62YO5TE/edit?usp=sharing"
-    },
-    {
-        "title": "10/5 Meeting: ACSL: Computer Number Systems",
-        "description": "Today we're going to be teaching you some ACSL topics to help you for the first competition. (FOR REAL)",
-        "img": "info.PNG",
-        "link": "https://docs.google.com/presentation/d/1K_t15cuStG0vg4UDMMrNqk0mnxSe7lWQnF_4fhq3wfY/edit?usp=sharing"
-    },
-    {
-        "title": "9/21 Meeting: ACSL: Pain",
-        "description": "Today we're going to be teaching you some ACSL topics to help you for the first competition. (MAYBE)",
-        "img": "info.PNG",
-        "link": "https://docs.google.com/presentation/d/1A8rXqJh0Tk_xrnpLrm7G8ij5YjFnL5ltu-jp77ey0mY/edit?usp=sharing"
-    },
-    {
-        "title": "Informational Meeting",
-        "description": "The first day of the club. These are the informational slides we used to pitch the team to everyone!",
-        "img": "info.PNG",
-        "link": "https://docs.google.com/presentation/d/1q77ipHZsbdggf8W2aqqAXR7YgErvi8K72ztLTYJmn8I/edit?usp=sharing"
-    },
-    {
-        "title": "Supplementary Meeting",
-        "description": "These slides are the details we shared with those visiting the Frosh Fest. Great for extra information!",
-        "img": "info.PNG",
-        "link": "https://docs.google.com/presentation/d/13ylJCBP6du8RP3nlfy3FagGYJITk_jA2-yhy0tCzkOg/edit?usp=sharing"
-    },
-    {
-        "title": "Team Google Folder",
-        "description": "Google Drive folder for all future agendas.",
-        "img": "drive.jpg",
-        "link": "https://drive.google.com/drive/folders/1w7fySV9SQWWlFU2V4_DcotnEjqBd54fI?usp=sharing"
-    }
-]
+	{
+		title: 'Supplementary Meeting',
+		description: 'These slides are the details we shared with those visiting the Frosh Fest. Great for extra information!',
+		img: 'info.PNG',
+		link: 'https://docs.google.com/presentation/d/13ylJCBP6du8RP3nlfy3FagGYJITk_jA2-yhy0tCzkOg/edit?usp=sharing',
+	},
+	{
+		title: 'Team Google Folder',
+		description: 'Google Drive folder for all future agendas.',
+		img: 'drive.jpg',
+		link: 'https://drive.google.com/drive/folders/1JHPHj0diYNN9tKVoUHzogn6vcNPwIeUb?usp=sharing',
+	},
+];
