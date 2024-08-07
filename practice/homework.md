@@ -38,4 +38,4 @@ All solutions for past homework can be found <a href="https://github.com/NVCompu
 
 A submission form will be included with each homework assignment. On this submission form, you will be submitting links to your submission for each problem.
 
-We **will** check your code (or at least Canchen will).
+We **will** check your code.
