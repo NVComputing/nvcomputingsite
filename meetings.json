@@ -1,14 +1,14 @@
 [
-	{
-		title: 'Supplementary Meeting',
-		description: 'These slides are the details we shared with those visiting the Frosh Fest. Great for extra information!',
-		img: 'info.PNG',
-		link: 'https://docs.google.com/presentation/d/13ylJCBP6du8RP3nlfy3FagGYJITk_jA2-yhy0tCzkOg/edit?usp=sharing',
-	},
-	{
-		title: 'Team Google Folder',
-		description: 'Google Drive folder for all future agendas.',
-		img: 'drive.jpg',
-		link: 'https://drive.google.com/drive/folders/1JHPHj0diYNN9tKVoUHzogn6vcNPwIeUb?usp=sharing',
-	},
-];
+    {
+        "title": "Supplementary Meeting",
+        "description": "These slides are the details we shared with those visiting the Frosh Fest. Great for extra information!",
+        "img": "info.PNG",
+        "link": "https://docs.google.com/presentation/d/13ylJCBP6du8RP3nlfy3FagGYJITk_jA2-yhy0tCzkOg/edit?usp=sharing"
+    },
+    {
+        "title": "Team Google Folder",
+        "description": "Google Drive folder for all future agendas.",
+        "img": "drive.jpg",
+        "link": "https://drive.google.com/drive/folders/1JHPHj0diYNN9tKVoUHzogn6vcNPwIeUb?usp=sharing"
+    }
+]
