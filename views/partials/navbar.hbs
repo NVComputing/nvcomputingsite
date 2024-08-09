@@ -1,4 +1,19 @@
-<nav class="navbar navbar-expand-lg navbar-expand-lg navbar-dark bg-dark top-navbar navbar-custom" id="navbar">
+<style>
+.dropdown-menu-dark {
+    background-color: #1E1E1E; 
+    color: #8A8A8A;
+}
+
+.dropdown-menu-dark .dropdown-item {
+    color: #8A8A8A;
+}
+
+.dropdown-menu-dark .dropdown-item:hover {
+    background-color: #1E1E1E;
+    color: #C6C6C6; 
+}	
+</style>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark top-navbar navbar-custom" id="navbar">
 	<div class="container">
 		<a href="/" class="navbar-brand d-block d-sm-none" id="navimgref-sm">
 			<img src="/res/nvct-logo.svg" alt="Neuqua Logo" id="navimg" class="img-fluid">
@@ -17,7 +32,7 @@
 					<a class="nav-link{{#if homePage}} active{{/if}}" href="/">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link{{#if resourcePage}} active{{/if}}" href="/resources">Resources</a>
+					<a class="nav-link	 {{#if resourcePage}} active{{/if}}" href="/resources">Resources</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link{{#if meetingsPage}} active{{/if}}" href="/meetings">Meetings</a>
@@ -26,7 +41,17 @@
 					<a class="nav-link{{#if practicePage}} active{{/if}}" href="/practice/homework">Homework</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link{{#if schedulePage}} active{{/if}}" href="/schedule">Schedule</a>
+					<a class="nav-link{{#if potwPage}} active{{/if}}" href="/potw">POTW</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						More
+					</a>
+					<div class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item{{#if schedulePage}} text-light{{/if}}" href="/schedule">Schedule</a>
+						<a class="dropdown-item{{#if leaderboardsPage}} text-light{{/if}}" href="/leaderboards">Leaderboards</a>
+						<a class="dropdown-item{{#if autojudgerPage}} text-light	{{/if}}" href="/autojudger">Auto Judger</a>
+					</div>
 				</li>
 			</ul>
 		</div>

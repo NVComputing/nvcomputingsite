@@ -1,10 +1,10 @@
 {
     "competitions": [
         {
-            "title": "Placeholder",
-            "start": "N/A",
-            "end": "N/A",
-            "description": "This is where competitions will be displayed.",
+            "title": "First meeting",
+            "start": "2:30 PM, 9/12/2024",
+            "end": "3:30, 9/12/2024",
+            "description": "See you at our first meeting!",
             "img": "/res/competitions/iit.jpg",
             "link": "https://nvcomputing.com/schedule"
         }

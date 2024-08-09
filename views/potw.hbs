@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		{{> head }}
+		<link rel="stylesheet" href="/css/animate.css">
+	</head>
+
+	<body class="line-numbers">
+		<div class="background-page">
+			<div class="navbar-wrapper pt-3"> {{> navbar }} </div>
+			<div class="container">
+				<div class="row align-items-center py-5 header-offset">
+					<div class="col-lg-6 text-white py-4">
+						<h1>Problem of the Week</h1>
+						<p class="font-weight-thin lead text-white mb-0">
+                            This is where you get to see the current Problem of the Week and submit your solution!
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="resources container text-white"> {{{resource}}} </div>
+		<div id="back-to-top" href="#" class="btn btn-sm btn-light back-to-top"
+			role="button"><i
+				class="fas fa-arrow-up"></i></div>
+		{{> footer }}
+	</body>
