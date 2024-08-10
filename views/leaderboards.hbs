@@ -1,31 +1,229 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		{{> head }}
-		<link rel="stylesheet" href="/css/animate.css">
-	</head>
+<head>
+	{{> head }}
+	<style>
+		html, body {
+			height: 100%; /* Ensure the body takes up the full height of the viewport */
+			margin: 0; /* Remove default margins */
+		}
+		.card {
+			background-color: #282c35 !important;
+			border-radius: 10px;
+			padding: 20px;
+			width: 100%; /* Make the cards wider */
+			margin: 0 auto; /* Center the cards */
+		}
+		.center {
+			width: 90%; /* Or adjust as needed */
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center; /* Center items horizontally */
+			align-items: center; /* Center items vertically */
+			gap: 20px; /* Space between cards */
+			margin: 0 auto; /* Center the container horizontally */
+		}
 
-	<body class="line-numbers">
-		<div class="background-page">
-			<div class="navbar-wrapper pt-3"> {{> navbar }} </div>
-			<div class="container">
-				<div class="row align-items-center py-5 header-offset">
-					<div class="col-lg-6 text-white py-4">
-						<h1>Leaderboardss</h1>
-						<p class="font-weight-thin lead text-white mb-0">
-							How do you match up compared to your friends?	
-						</p>
-					</div>
+		.card-container {
+			flex: 1 1 calc(25% - 20px); /* Four columns with gap */
+			box-sizing: border-box;
+		}
 
+
+		.card-title {
+			text-align: center;
+		}
+
+		.list-group-item {
+			border-top: 1px solid #444;
+			border-bottom: 1px solid #444;
+			font-weight: bold;
+			margin-bottom: -1px; /* Prevent double borders */
+		}
+
+		.first-place {
+			background-color: gold;
+			color: #1E1E1E;
+		}
+
+		.second-place {
+			background-color: silver;
+			color: #1E1E1E;
+		}
+
+		.third-place {
+			background-color: #cd7f32; /* Bronze */
+			color: #1E1E1E;
+		}
+	</style>
+</head>
+
+<body class="line-numbers">
+	<div class="background-page">
+		<div class="navbar-wrapper pt-3"> {{> navbar }} </div>
+		<div class="container">
+			<div class="row align-items-center py-5 header-offset">
+				<div class="col-lg-6 text-white py-4">
+					<h1>Leaderboards</h1>
+					<p class="font-weight-thin lead text-white mb-0">
+						How do you match up compared to your friends?
+					</p>
 				</div>
 			</div>
 		</div>
-		<div class="resources container text-white"> {{{resource}}} </div>
-		<div id="back-to-top" href="#" class="btn btn-sm btn-light back-to-top"
-			role="button"><i
-				class="fas fa-arrow-up"></i></div>
-		{{> footer }}
-	</body>
+	</div>
+	<br><br>
+	<div class="center text-white">
+		<!-- First Row of Leaderboards -->
+		<div class="card-container">
+			<div class="card text-white">
+				<div class="card-body">
+					<h5 class="card-title">POTW</h5>
+					<ul id="potw-leaderboard" class="list-group list-group-flush"></ul>
+				</div>
+			</div>
+		</div>
+		<div class="card-container">
+			<div class="card text-white">
+				<div class="card-body">
+					<h5 class="card-title">In Class Questions</h5>
+					<ul id="class-questions-leaderboard" class="list-group list-group-flush"></ul>
+				</div>
+			</div>
+		</div>
+		<div class="card-container">
+			<div class="card text-white">
+				<div class="card-body">
+					<h5 class="card-title">ACSL Programming</h5>
+					<ul id="acsl-programming-leaderboard" class="list-group list-group-flush"></ul>
+				</div>
+			</div>
+		</div>
+		<div class="card-container">
+			<div class="card text-white">
+				<div class="card-body">
+					<h5 class="card-title">ACSL Theory</h5>
+					<ul id="acsl-theory-leaderboard" class="list-group list-group-flush"></ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Second Row of Leaderboards -->
+		<div class="card-container">
+			<div class="card text-white">
+				<div class="card-body">
+					<h5 class="card-title">ACSL Overall</h5>
+					<ul id="acsl-overall-leaderboard" class="list-group list-group-flush"></ul>
+				</div>
+			</div>
+		</div>
+		<div class="card-container">
+			<div class="card text-white">
+				<div class="card-body">
+					<h5 class="card-title">Attendance</h5>
+					<ul id="attendance-leaderboard" class="list-group list-group-flush"></ul>
+				</div>
+			</div>
+		</div>
+		<div class="card-container">
+			<div class="card text-white">
+				<div class="card-body">
+					<h5 class="card-title">Codebytes</h5>
+					<ul id="codebytes-leaderboard" class="list-group list-group-flush"></ul>
+				</div>
+			</div>
+		</div>
+		<div class="card-container">
+			<div class="card text-white">
+				<div class="card-body">
+					<h5 class="card-title">USACO</h5>
+					<ul id="usaco-leaderboard" class="list-group list-group-flush"></ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br><br>
+	<div id="back-to-top" href="#" class="btn btn-sm btn-light back-to-top" role="button">
+		<i class="fas fa-arrow-up"></i>
+	</div>
+	{{> footer }}
+
+	<script>
+// Fetch leaderboard data from server and populate leaderboards
+fetch('/stats', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ /* any necessary data can be sent here */ })
+})
+.then(response => response.json())
+.then(data => {
+    // Example of populating each leaderboard with fetched data
+    const users = data.users;
+
+    // Populate each leaderboard
+    populateLeaderboard(users, 'potw-leaderboard', 'potw');
+    populateLeaderboard(users, 'class-questions-leaderboard', 'classQuestions');
+    populateLeaderboard(users, 'acsl-programming-leaderboard', 'acslP');
+    populateLeaderboard(users, 'acsl-theory-leaderboard', 'acslT');
+    populateLeaderboard(users, 'acsl-overall-leaderboard', 'acslOverall');
+    populateLeaderboard(users, 'attendance-leaderboard', 'attendance');
+    populateLeaderboard(users, 'codebytes-leaderboard', 'codebytes');
+    populateLeaderboard(users, 'usaco-leaderboard', 'usaco');
+})
+.catch(error => console.error('Error fetching leaderboard data:', error));
+
+// Define a mapping for USACO levels
+const usacoRanking = {
+    'Platinum': 4,
+    'Gold': 3,
+    'Silver': 2,
+    'Bronze': 1,
+};
+
+// Function to populate leaderboard
+function populateLeaderboard(users, elementId, field) {
+    const leaderboardElement = document.getElementById(elementId);
+
+    // Sort users based on field
+    if (field === 'usaco') {
+        users.sort((a, b) => usacoRanking[b[field]] - usacoRanking[a[field]]);
+    } else {
+        users.sort((a, b) => b[field] - a[field]);
+    }
+
+    // Clear existing leaderboard
+    leaderboardElement.innerHTML = '';
+
+    users.forEach((user, index) => {
+        const listItem = document.createElement('li');
+        listItem.className = 'list-group-item text-center';
+
+        // Assign place-specific classes for first, second, and third
+        if (index === 0) {
+            listItem.classList.add('first-place');
+        } else if (index === 1) {
+            listItem.classList.add('second-place');
+        } else if (index === 2) {
+            listItem.classList.add('third-place');
+        } else {
+            listItem.classList.add('bg-dark', 'text-white');
+        }
+
+        // Display USACO level with proper formatting
+        if (field === 'usaco') {
+            listItem.textContent = `${user.name} - ${user[field].charAt(0).toUpperCase() + user[field].slice(1)}`;
+        } else {
+            listItem.textContent = `${user.name} - ${user[field]}`;
+        }
+
+        leaderboardElement.appendChild(listItem);
+    });
+}
+
+	</script>
+</body>
 
 </html>

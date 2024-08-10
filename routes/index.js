@@ -6,6 +6,7 @@ let basepage = require('./basepage'),
 	potw = require('./potw'),
 	autojudger = require('./autojudger'),
 	leaderboards = require('./leaderboards');
+	stats = require('./stats');
 
 // Load in all endpoints
 module.exports.set = (app) => {
@@ -17,5 +18,6 @@ module.exports.set = (app) => {
 	potw.set(app);
 	autojudger.set(app);
 	leaderboards.set(app);
+	stats.set(app);
 	console.log("Router endpoints registered.");
 }

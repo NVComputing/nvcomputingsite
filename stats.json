@@ -1,0 +1,102 @@
+{
+    "users": [
+      {
+        "id": "2012969",
+        "name": "Kundan Baliga",
+        "potw": 10,
+        "classQuestions": 8,
+        "acslP": 5,
+        "acslT": 3,
+        "acslOverall": 8,
+        "attendance": 15,
+        "codebytes": 7,
+        "usaco": "Silver"
+      },
+      {
+        "id": "2012970",
+        "name": "Aisha Kumar",
+        "potw": 12,
+        "classQuestions": 9,
+        "acslP": 4,
+        "acslT": 5,
+        "acslOverall": 9,
+        "attendance": 14,
+        "codebytes": 9,
+        "usaco": "Gold"
+      },
+      {
+        "id": "2012971",
+        "name": "Liam Johnson",
+        "potw": 9,
+        "classQuestions": 7,
+        "acslP": 6,
+        "acslT": 4,
+        "acslOverall": 10,
+        "attendance": 13,
+        "codebytes": 5,
+        "usaco": "Bronze"
+      },
+      {
+        "id": "2012972",
+        "name": "Sophia Lee",
+        "potw": 11,
+        "classQuestions": 10,
+        "acslP": 7,
+        "acslT": 4,
+        "acslOverall": 11,
+        "attendance": 16,
+        "codebytes": 6,
+        "usaco": "Bronze"
+      },
+      {
+        "id": "2012973",
+        "name": "Ethan Smith",
+        "potw": 14,
+        "classQuestions": 9,
+        "acslP": 8,
+        "acslT": 6,
+        "acslOverall": 14,
+        "attendance": 18,
+        "codebytes": 10,
+        "usaco": "Silver"
+        
+      },
+      {
+        "id": "2012974",
+        "name": "Olivia Brown",
+        "potw": 13,
+        "classQuestions": 8,
+        "acslP": 9,
+        "acslT": 7,
+        "acslOverall": 13,
+        "attendance": 17,
+        "codebytes": 8,
+        "usaco": "Platinum"
+      },
+      {
+        "id": "2012975",
+        "name": "Noah Davis",
+        "potw": 8,
+        "classQuestions": 7,
+        "acslP": 6,
+        "acslT": 5,
+        "acslOverall": 9,
+        "attendance": 12,
+        "codebytes": 4,
+        "usaco": "Silver"
+      },
+      {
+        "id": "2012976",
+        "name": "Emma Wilson",
+        "potw": 10,
+        "classQuestions": 9,
+        "acslP": 5,
+        "acslT": 6,
+        "acslOverall": 11,
+        "attendance": 14,
+        "codebytes": 7,
+        "usaco": "Bronze"
+      }
+    ]
+  }
+  

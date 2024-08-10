@@ -17,9 +17,8 @@
   - [Pre-fix, In-fix, and Post-fix Notation](/resources/acsl/notation)
   - [Recursive Functions](/resources/acsl/recursion)
   - [What Does This Program Do?](/resources/acsl/wdtpd)
-- [Programming](#programming)
+  - [Programming](#programming)
   - [What to Keep In Mind](#whattokeepinmind)
-
 # Introduction
 
 Formally known as the American Computer Science League, ACSL is a computer science competition consisting of 4 contests and a final All-Star contest (if our cumulative scores are high enough).
@@ -53,6 +52,32 @@ Please click on any of the following links below to learn about the short answer
 - [Pre-fix, In-fix, and Post-fix Notation](/resources/acsl/notation)
 - [Recursive Functions](/resources/acsl/recursion)
 - [What Does This Program Do?](/resources/acsl/wdtpd)
+
+## Here are some useful videos: 
+### Contest 1
+
+- [Number Systems](https://www.youtube.com/watch?v=06ZQjWNFNMk)
+- [Recursive Functions](https://www.youtube.com/watch?v=bgeYJFKMxoE)
+- [What Does This Program Do?](https://www.youtube.com/watch?v=IBlXLEWeHjc)
+
+### Contest 2
+
+- [Prefix/Infix/Postfix Notation](https://www.youtube.com/watch?v=ut3jqc3zGY4)
+- [Bit-String Flicking](https://www.youtube.com/watch?v=NwE066kjeFw)
+- [LISP](https://www.youtube.com/watch?v=_vuFRpNRSco)
+
+### Contest 3
+
+- [Boolean Algebra](https://www.youtube.com/watch?v=8QgOB5-VpRY)
+- [Data Structures](https://www.youtube.com/watch?v=lHvs0w2rEB8)
+- [FSAs and Regular Expressions](https://www.youtube.com/watch?v=S3f7Wtn6I5U)
+
+### Contest 4
+
+- [Graph Theory](https://www.youtube.com/watch?v=JM4y49ldc34)
+- [Digital Electronics](https://www.youtube.com/watch?v=CgpbfIoE8XY)
+- [Assembly Language](https://www.youtube.com/watch?v=p4C2qm3wfjk)
+
 
 # Programming
 
@@ -88,5 +113,4 @@ free to challenge yourself a bit.
 ```
 - Oftentimes, ACSL's problems (more often in programming than short answer) are vague and confusing. Sometimes, you might find yourself
 needing to deduce the exact function of the program from the sample test cases. In this case, just try to figure the problem out.
-
 
