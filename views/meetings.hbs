@@ -1,52 +1,48 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		{{> head }}
-		<link rel="stylesheet" href="/css/animate.css">
-		<link rel="stylesheet" href="/css/custom.css">
-	</head>
+<head>
+    {{> head }}
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/custom.css">
+</head>
 
-	<body class="line-numbers">
-		<div class="background-page">
-			<div class="navbar-wrapper pt-3"> {{> navbar }} </div>
-			<div class="container">
-				<div class="row align-items-center py-5 header-offset">
-					<div class="col-lg-6 text-white py-4">
-						<h1>Meetings</h1>
-						<p class="font-weight-thin lead text-white mb-0">Past Agenda Slides From
-							Meetings.</p>
-					</div>
-
-				</div>
-			</div>
-		</div>
-		<div class="d-none d-lg-block py-3"></div>
-		<div class="container text-white">
-			<div class="row my-0">
-				{{#each agenda}}
-				<div class="col-md-6 col-lg-4 d-flex align-items-stretch my-2">
-					<div class="card border-0 shadow-lg">
-						<img class="card-img-top" src="{{ this.img }}" alt="{{ this.title }}">
-						<div class="card-body">
-							<h5 class="border-bottom pb-3 mb-2 font-weight-bold">{{ this.title }}</h5>
-							<p class="card-text-custom">{{ this.description }}</p>
-						</div>
-						<div class="card-footer">
-							<a href="{{ this.link }}" class="custom__btn float-right mt-auto custom__no__text__decoration"
-								target="__blank"
-								rel="noopener noreferrer">View Slides</a>
-						</div>
-					</div>
-				</div>
-				{{/each}}
-			</div>
-		</div>
-		<div class="custom__add__bottom__margin "></div>
-		<div id="back-to-top" href="#" class="btn btn-sm btn-light back-to-top"
-			role="button"><i
-				class="fas fa-arrow-up"></i></div>
-		{{> footer }}
-	</body>
+<body class="line-numbers">
+    <div class="background-page">
+        <div class="navbar-wrapper pt-3"> {{> navbar }} </div>
+        <div class="container">
+            <div class="row align-items-center py-5 header-offset">
+                <div class="col-lg-6 text-white py-4">
+                    <h1>Meetings</h1>
+                    <p class="fw-light lead text-light mb-0">Past Agenda Slides From Meetings.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-none d-lg-block py-3"></div>
+    <div class="container text-white">
+        <div class="row my-0">
+            {{#each agenda}}
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch my-2">
+                <div class="card border-0 shadow-lg">
+                    <img class="card-img-top" src="{{ this.img }}" alt="{{ this.title }}">
+                    <div class="card-body text-light">
+                        <h5 class="border-bottom pb-3 mb-2 fw-bold">{{ this.title }}</h5>
+                        <p class="card-text-custom">{{ this.description }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{ this.link }}" class="custom__btn float-end mt-auto text-decoration-none text-light"
+                            target="_blank" rel="noopener noreferrer">View Slides</a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <div class="custom__add__bottom__margin"></div>
+    <div id="back-to-top" href="#" class="btn btn-sm btn-light back-to-top" role="button"><i
+            class="fas fa-arrow-up"></i></div>
+    {{> footer }}
+</body>
 
 </html>
