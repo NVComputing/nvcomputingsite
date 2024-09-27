@@ -1,5 +1,11 @@
 [
     {
+        "title": "Informational Meeting",
+        "description": "Some stuff we covered on the first day!!!",
+        "img": "info.PNG",
+        "link": "https://docs.google.com/presentation/d/1dHpE7u64duEI0cLv2oeF6HrQw074LA-zuUY3SXCmzjY/edit?usp=sharing"
+    },
+    {
         "title": "Supplementary Meeting",
         "description": "These slides are the details we shared with those visiting the Frosh Fest. Great for extra information!",
         "img": "info.PNG",
