@@ -197,7 +197,7 @@ function populateLeaderboard(users, elementId, field) {
     // Clear existing leaderboard
     leaderboardElement.innerHTML = '';
 
-    users.forEach((user, index) => {
+    users.slice(0,8).forEach((user, index) => {
         const listItem = document.createElement('li');
         listItem.className = 'list-group-item text-center';
 
