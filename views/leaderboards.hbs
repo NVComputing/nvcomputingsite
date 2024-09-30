@@ -183,17 +183,31 @@ const usacoRanking = {
     'Bronze': 1,
 };
 
-// Function to populate leaderboard
 function populateLeaderboard(users, elementId, field) {
     const leaderboardElement = document.getElementById(elementId);
-
-    // Sort users based on field
     if (field === 'usaco') {
         users.sort((a, b) => usacoRanking[b[field]] - usacoRanking[a[field]]);
     } else {
         users.sort((a, b) => b[field] - a[field]);
     }
+    let i = 0;
+    while (i < users.length) {
+        let j = i + 1;
+        while (j < users.length && users[i][field] === users[j][field]) {
+            j++;
+        }
 
+        if (j - i > 1) {
+            const tiedUsers = users.slice(i, j);
+            for (let k = tiedUsers.length - 1; k > 0; k--) {
+                const randomIndex = Math.floor(Math.random() * (k + 1));
+                [tiedUsers[k], tiedUsers[randomIndex]] = [tiedUsers[randomIndex], tiedUsers[k]];
+            }
+            users.splice(i, tiedUsers.length, ...tiedUsers);
+        }
+
+        i = j;
+    }
     // Clear existing leaderboard
     leaderboardElement.innerHTML = '';
 
