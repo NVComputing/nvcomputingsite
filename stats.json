@@ -299,6 +299,18 @@
             "attendance": 1,
             "codebytes": 0,
             "usaco": "Bronze"
+        },
+                {
+            "id": "2010167",
+            "name": "Atharva Vaze",
+            "potw": 0,
+            "classQuestions": 0,
+            "acslP": 0,
+            "acslT": 0,
+            "acslOverall": 0,
+            "attendance": 1,
+            "codebytes": 0,
+            "usaco": "Bronze"
         }
     ]
 }
