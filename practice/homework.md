@@ -13,13 +13,13 @@ some topics really work during the contest itself isn't fun. Figure it out befor
 
 ## Contents
 
-Practice will usually consist of a few programming problems of relating to the topic. Read through and attempt all the problems to get an idea of what the problems are about. Submit your attempts at the problems, even if they don't work!
+Practice will usually consist of a few computer science problems relating to the topic being taught in the lecture. Read through and attempt all the problems to get an idea of what the problems are about. Submit your attempts at the problems, even if they don't work!
 
 Solutions will be posted and discussed the week after; please ask questions via Discord, Remind, or email if you do not understand a problem, as we want to make sure you are as successful as you can be!
 
 ## This Week's Homework
-
-<a href="https://nvcomputing.com/practice/homework" target="_blank" rel="noopener noreferrer">Submit Your Homework Here!</a>
+Currently no active HW problems
+<!--<a href="https://nvcomputing.com/practice/homework" target="_blank" rel="noopener noreferrer">Submit Your Homework Here!</a>)-->
 
 ## Past Homework
 
