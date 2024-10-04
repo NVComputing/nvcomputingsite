@@ -1,5 +1,11 @@
 [
     {
+        "title": "Day 2 - Programming 101",
+        "description": "Basic programming skills!!!",
+        "img": "info.PNG",
+        "link": "https://docs.google.com/presentation/d/1GqGSfyKclopBwVIoihyrcEktb1NOivZWPD7i0FAo-R4/edit?usp=sharing"
+    },
+    {
         "title": "Informational Meeting",
         "description": "Some stuff we covered on the first day!!!",
         "img": "info.PNG",
@@ -16,5 +22,6 @@
         "description": "Google Drive folder for all future agendas.",
         "img": "drive.jpg",
         "link": "https://drive.google.com/drive/folders/1JHPHj0diYNN9tKVoUHzogn6vcNPwIeUb?usp=sharing"
-    }
+    },
+
 ]
