@@ -63,7 +63,7 @@
   {
     "id": "2046197",
     "name": "Sandilya Bhagavatula",
-    "potw": 0,
+    "potw": 1,
     "classQuestions": 0,
     "acslP": 0,
     "acslT": 0,
@@ -147,7 +147,7 @@
   {
     "id": "2015787",
     "name": "Ian Shi",
-    "potw": 0,
+    "potw": 1,
     "classQuestions": 0,
     "acslP": 0,
     "acslT": 0,
@@ -183,7 +183,7 @@
   {
     "id": "2051303",
     "name": "Mykyta Sushko",
-    "potw": 0,
+    "potw": 1,
     "classQuestions": 0,
     "acslP": 0,
     "acslT": 0,
@@ -327,7 +327,7 @@
   {
     "id": "2010167",
     "name": "Atharva Vaze",
-    "potw": 0,
+    "potw": 1,
     "classQuestions": 0,
     "acslP": 0,
     "acslT": 0,
@@ -339,7 +339,7 @@
   {
     "id": "2015722",
     "name": "Ishika Vakharia",
-    "potw": 0,
+    "potw": 1,
     "classQuestions": 0,
     "acslP": 0,
     "acslT": 0,
@@ -436,6 +436,18 @@
     "id": "2011141",
     "name": "Srihith Alla",
     "potw": 0,
+    "classQuestions": 0,
+    "acslP": 0,
+    "acslT": 0,
+    "acslOverall": 0,
+    "attendance": 0,
+    "codebytes": 0,
+    "usaco": "Bronze"
+  },
+  {
+    "id": "2016148",
+    "name": "Shiven Patel",
+    "potw": 1,
     "classQuestions": 0,
     "acslP": 0,
     "acslT": 0,
