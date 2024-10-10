@@ -18,8 +18,9 @@ Practice will usually consist of a few computer science problems relating to the
 Solutions will be posted and discussed the week after; please ask questions via Discord, Remind, or email if you do not understand a problem, as we want to make sure you are as successful as you can be!
 
 ## This Week's Homework
-Currently no active HW problems
-<!--<a href="https://nvcomputing.com/practice/homework" target="_blank" rel="noopener noreferrer">Submit Your Homework Here!</a>)-->
+
+* <b>NOW OPEN: </b><a href="https://docs.google.com/document/d/1JAVdSBaGu4RhWUbUwuzANAzY8XISLwQ7wrqGTKJPFu0/edit?usp=sharing">10/10 HW (Due 10/17)</a>
+* <a href="https://forms.gle/4i87R73VP4UFeesaA" target="_blank" rel="noopener noreferrer">Submit Your Homework Here!</a>
 
 ## Past Homework
 
