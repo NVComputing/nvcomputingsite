@@ -1,4 +1,4 @@
-<!doctype html>
+    <!doctype html>
 <html lang="en">
 
 <head>
@@ -75,7 +75,7 @@
             event.preventDefault(); // Prevent default form submission
 
             const formData = new FormData(this);
-            fetch('https://autojudgerserver.vercel.app/submit', {
+            fetch('https://autojudger.nvchess.org/submit', {
                 method: 'POST',
                 body: new URLSearchParams(formData)
             })
