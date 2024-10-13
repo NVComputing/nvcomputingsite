@@ -75,7 +75,7 @@
             event.preventDefault(); // Prevent default form submission
 
             const formData = new FormData(this);
-            fetch('http://autojudger.nvchess.org/submit', {
+            fetch('https://autojudger.nvchess.org/submit', {
                 method: 'POST',
                 body: new URLSearchParams(formData)
             })
