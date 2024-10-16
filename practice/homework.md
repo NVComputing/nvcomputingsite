@@ -19,7 +19,8 @@ Solutions will be posted and discussed the week after; please ask questions via 
 
 ## This Week's Homework
 
-* <b>NOW OPEN: </b><a href="https://docs.google.com/document/d/1JAVdSBaGu4RhWUbUwuzANAzY8XISLwQ7wrqGTKJPFu0/edit?usp=sharing">10/10 HW (Due 10/17)</a>
+* <b>NOW OPEN: </b><a href="https://docs.google.com/document/d/1U9MV-tQB-vR4eFZzUX0LutQ2RWibOSXUxPOpohmsEuQ/edit?usp=sharing">10/17 HW (Due 10/23)</a>
+* <b>CLOSED: </b><a href="https://docs.google.com/document/d/1JAVdSBaGu4RhWUbUwuzANAzY8XISLwQ7wrqGTKJPFu0/edit?usp=sharing">10/10 HW (Due 10/16)</a>
 * <a href="https://forms.gle/4i87R73VP4UFeesaA" target="_blank" rel="noopener noreferrer">Submit Your Homework Here!</a>
 
 ## Past Homework
