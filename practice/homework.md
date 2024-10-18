@@ -19,25 +19,10 @@ Solutions will be posted and discussed the week after; please ask questions via 
 
 ## This Week's Homework
 
-* <b>NOW OPEN: </b><a href="https://docs.google.com/document/d/1U9MV-tQB-vR4eFZzUX0LutQ2RWibOSXUxPOpohmsEuQ/edit?usp=sharing">10/17 HW (Due 10/23)</a>
-* <b>CLOSED: </b><a href="https://docs.google.com/document/d/1JAVdSBaGu4RhWUbUwuzANAzY8XISLwQ7wrqGTKJPFu0/edit?usp=sharing">10/10 HW (Due 10/16)</a>
+* <b>NOW OPEN: </b><a href="https://docs.google.com/document/d/1U9MV-tQB-vR4eFZzUX0LutQ2RWibOSXUxPOpohmsEuQ/edit?usp=sharing">10/17 HW (Due 10/24)</a>
+* <b>CLOSED: </b><a href="https://docs.google.com/document/d/1JAVdSBaGu4RhWUbUwuzANAzY8XISLwQ7wrqGTKJPFu0/edit?usp=sharing">10/10 HW (Due 10/17)</a>
 * <a href="https://forms.gle/4i87R73VP4UFeesaA" target="_blank" rel="noopener noreferrer">Submit Your Homework Here!</a>
 
 ## Past Homework
 
 All solutions for past homework can be found <a href="https://github.com/NVComputing/ComputingSolutions" target="_blank" rel="noopener noreferrer">here</a>
-
-
-
-
-
-
-<!-- <a href="https://docs.google.com/document/d/1XAslqYWbEBvU_9ekrBwuPo6vHQiBYQUOiXNs5Qbt7kU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">February 24- LISP</a> -
-<a href="https://forms.gle/WqmvnCBwP5eT19a6A" target="_blank" rel="noopener noreferrer">Submit here</a> -
-<a href="https://docs.google.com/document/d/1FpZOCPOEGTrg7tKz-hrH1UwNL4BAGFmUbrsVZsnOA8c/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Solutions</a> -->
-
-## Submission
-
-A submission form will be included with each homework assignment. On this submission form, you will be submitting links to your submission for each problem.
-
-We **will** check your code.
