@@ -8,13 +8,15 @@ Welcome to POTW! We will be posting a new algorithmic, competitive programming p
 POTW is optional - however, we highly recommend it if you want to climb the leaderboards, gain a spot in the ACSL Senior division or catch the attention of the captains.
  
 ## Rules
-* Submissions are due 3:00 PM on Wednesdays, before the next meeting. 
+* Submissions are due 2:25 PM on Thursdays, before the next meeting. 
 
 * Original submissions that produce the correct output earn 4 points
 
 * Original submissions that produce an incorrect output but demonstrate effort earn 2 points.
 
 * Late submissions, if the code is original and produces the correct output, earn 2 points.
+
+* We will try to notify you if you submitted a problem with an incorrect output - if you’d like, you can send in a corrected submission for 4 points if on time or 2 points if late. 
 
 * Any other submissions earn nothing.
 
