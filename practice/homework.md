@@ -18,8 +18,8 @@ Practice will usually consist of a few computer science problems relating to the
 Solutions will be posted and discussed the week after; please ask questions via Discord, Remind, or email if you do not understand a problem, as we want to make sure you are as successful as you can be!
 
 ## This Week's Homework
-
-* <b>NOW OPEN: </b><a href="https://docs.google.com/document/d/1U9MV-tQB-vR4eFZzUX0LutQ2RWibOSXUxPOpohmsEuQ/edit?usp=sharing">10/17 HW (Due 10/24)</a>
+* <b>NOW OPEN: </b><a href="https://docs.google.com/document/d/1JNt6Q27Iiub0rqPgVGmDF7aEOQMUDA8TCbEKrqtrR5M/edit?usp=sharing">10/24 HW (Due 10/31)</a>
+* <b>NOW CLOSED: </b><a href="https://docs.google.com/document/d/1U9MV-tQB-vR4eFZzUX0LutQ2RWibOSXUxPOpohmsEuQ/edit?usp=sharing">10/17 HW (Due 10/24)</a>
 * <b>CLOSED: </b><a href="https://docs.google.com/document/d/1JAVdSBaGu4RhWUbUwuzANAzY8XISLwQ7wrqGTKJPFu0/edit?usp=sharing">10/10 HW (Due 10/17)</a>
 * <a href="https://forms.gle/4i87R73VP4UFeesaA" target="_blank" rel="noopener noreferrer">Submit Your Homework Here!</a>
 
