@@ -267,7 +267,8 @@ When it comes to recursion, it's actually incredibly inefficient in a lot of cas
 would completely break down if you tried to find `fibonacci(50)` because of how many recursive calls it would have to make.
 
 In general, in your actual coding, you should try to avoid recursion if you can. However, understanding recursion is still
-a fundamental part of a greater understanding of programming.
+a fundamental part of a greater understanding of programming - and there are a select few problems where recursion is the
+best (or even only) way to solve it.
 
 The technique mainly used to avoid recursion is the very poorly named (in my opinion) *dynamic programming*. This often involves
 "memoization", which is the act of saving the results of previous calls ("memo"-izing them, like writing a memo) so that you don't
