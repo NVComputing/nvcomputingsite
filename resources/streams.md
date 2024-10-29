@@ -15,9 +15,8 @@
 Java 8 introduced the Streams API.
 This is a high-level API that can more or less replace looping by just chaining method calls instead.
 
-This is a relatively advanced feature, so don't feel bad if you don't get it.
-
-Code for the streams API can be found in <a href="https://github.com/NVHSComputing/code-snippets/blob/master/src/advanced/StreamAPI.java" target="_blank" rel="noopener noreferrer">StreamAPI.java in our code snippets repository</a>.
+This is a relatively advanced feature, so don't feel bad if you don't get it. It's not necessary for most competitive programming problems,
+but it can be useful for input processing.
 
 ## What is a stream?
 Streams represent a flow of data (imagine a stream of strings being basically a pipeline with all the strings from the array flowing through it), be it from an array, ArrayList, or any collection. You can manipulate this data using the Streams
@@ -35,7 +34,7 @@ Whenever you need access to a more powerful tool to manipulate arrays, as you wi
 coding problems. Streams will not make up the body of your code; they are mostly useful for input processing
 and basic operations.
 
-Also, streams do not let you access each element in the list's index. If you need access to the index, use a classic for loop.
+Also, streams do not let you access the index of each element in the list. If you need access to the index, use a classic for loop.
 
 # How to Use Streams
 There are 3 operations you do on a stream:
@@ -209,6 +208,8 @@ And now you know the basics of how to use the Streams API!
 
 There are a few finer details I've glossed over here, like how streams of primitives work (they require a bit more caution. If you're
 interested, check out the IntStream class and similar classes, and the mapToInt() and toArray() functions. Or you can always just ask me in person. Over Discord. I'm probably gone by the time you read this.)
+
+(2024 update: I am so incredibly gone. You can still message me on Discord though.)
 
 ---
 *Author: Raymond Zhao*

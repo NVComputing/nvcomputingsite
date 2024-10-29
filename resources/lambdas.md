@@ -21,7 +21,7 @@ of declaring methods. (Since I only know Java, I will be writing all the code an
 A lambda expression is a way of declaring methods without actually declaring them. Thus, they are usually referred to as anonymous functions.
 To start, take a look at the following code:
 ```java
-int getSchool(){
+int getSchool() {
   return "NVHS";
 }
 ```
@@ -37,7 +37,7 @@ The usual syntax of a lambda method is
 Since the lambda expression we wrote before only required one line of code, we were able to neglect the curly braces. However, if your code
 will be more than one line long, then the curly braces are required:
 ```java
-int getSchool(int x, int y){
+int getSchool(int x, int y) {
   int sum = x + y; //so we can see how to use parameters
   System.out.println("Neuqua Valley High School");
   return "NVHS";
@@ -55,11 +55,11 @@ would become
 Remember, lambda expressions cannot be used on their own. They must be declared with the use of **functional interfaces**.
 Functional interfaces are interfaces with only one abstract method. Here is an example of what it would look like in a class:
 ```java
-interface NVComputingInfo{
+interface NVComputingInfo {
   int getSchool(int x, int y);
 }
-public class NVComputing{
-  public static void main(String[] args){
+public class NVComputing {
+  public static void main(String[] args) {
     NVComputingInfo school = (int x, int y) -> {
       int sum = x + y;
       return "NVHS";
@@ -79,9 +79,10 @@ One uses lambdas to create anonymous functions, but sometimes all you do in that
 that existing method by name. In other words (taken from the java docs), they are "compact, easy-to-read lambda expressions for methods that already have a name". This in particular is very useful in 
 [streams](/resources/streams). However, there are limitations to this as there are only 4 types of method references.
 
-###1. Reference to a static method
-####Syntax: `ClassName::staticMethodName`
-####Original Lambda: `(args) -> ClassName.staticMethodName(args)`
+### 1. Reference to a static method
+#### Syntax: `ClassName::staticMethodName`
+#### Original Lambda: `(args) -> ClassName.staticMethodName(args)`
+
 ```java
 char[] thing = {'1', '2', '3', '4', '5'}
 
@@ -91,11 +92,14 @@ String[] thingButWithStrings = Arrays.stream(thing).map(String::valueOf).toArray
 //convert thingButWithStrings to an array with integers
 int[] thingButWithStringsButWithInts = Arrays.stream(thingButWithStrings).map(Integer::parseInt).toArray();
 ```
+
 This is pretty self-explanatory, we just use most of the same syntax used in calling these methods `ClassName.methodNames(args)` and just 
 use it without the `(args)`
-###2. Reference to an instance method of a particular object
-####Syntax: `Object::instanceMethodName`
-####Original Lambda: `(args) -> object.instanceMethodName(args)`
+
+### 2. Reference to an instance method of a particular object
+#### Syntax: `Object::instanceMethodName`
+#### Original Lambda: `(args) -> object.instanceMethodName(args)`
+
 ```java
 class ComparisonProvider {
     public int compareByName(Person a, Person b) {
@@ -111,9 +115,11 @@ Arrays.sort(rosterAsArray, myComparisonProvider::compareByName);
 //instead of Arrays.sort(rosterAsArray, (a,b) -> myComparisonProvider.compareByName(a,b))
 ```
 This is also pretty self-explanatory, we just use the object name and the method name (`object.function(args)`) and once again skip the `(args)`.
-###3. Reference to an instance method of an arbitrary object of a particular type
-####Syntax: `Type::methodName`
-####Original Lambda: `(arg,rest) -> arg.instanceMethodName(rest)`, note that arg is of type `Type`
+
+### 3. Reference to an instance method of an arbitrary object of a particular type
+#### Syntax: `Type::methodName`
+#### Original Lambda: `(arg,rest) -> arg.instanceMethodName(rest)`, note that arg is of type `Type`
+
 ```java
 String[] stringArray = { "Barbara", "James", "Mary", "John", "Patricia", "Robert", "Michael", "Linda" };
 Arrays.sort(stringArray, String::compareToIgnoreCase);
@@ -123,9 +129,10 @@ This is the most confusing of the four but it really allows us to use a method r
 is like `object1.function(object2)` by instead using `typeOfObject1::function`. Some notable examples would be many String functions (i.e. `object.substring(int)` would turn into `String::substring` and
 most of the `BigInteger`/`BigDecimal`calls (so instead of `bigInt1.add(bigInt2)` we use `BigInteger::add` ) but who in their right mind would ever willingly use those?
 
-####4. Reference to a Constructor
-#####Syntax: `ClassName::new`
-#####Original Lambda: `(args) -> new ClassName(args)`
+### 4. Reference to a Constructor
+#### Syntax: `ClassName::new`
+#### Original Lambda: `(args) -> new ClassName(args)`
+
 ```java
 int[] stuff = {1, 2, 3, 4, 5, 61}
 ArrayList<String> ffuts = Arrays.stream(stuff).map(String::valueOf).collect(Collectors.toCollection(ArrayList::new));
@@ -137,6 +144,7 @@ or arraylists and filling them ever again (but you do you).
 
 For more resources on Method References in Anonymous Functions read the [java documentation](https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html)
 or [this](https://dzone.com/articles/java-lambda-method-reference)
+
 # Functional Programming
 
 This will be a basic introduction into functional programming, I recommend first reading the earlier section on lambdas and our section on [streams](/resources/streams) as it will help a lot and since 

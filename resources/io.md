@@ -3,8 +3,6 @@
 *Input and output are essential parts of any program. Every programming problem in competitive programming will involve some kind
 of input/output.*
 
-**This page is under construction.**
-
 ## Contents
 - [Introduction](#introduction)
   - [Basics](#basics)
@@ -73,7 +71,7 @@ hi hihi hi hi
 ```
 
 ```java
-Scanner sc= new Scanner(System.in);
+Scanner sc = new Scanner(System.in);
 System.out.println(sc.next());
 System.out.println(sc.next());
 System.out.println(sc.nextLine());
@@ -94,7 +92,7 @@ hi hihi hi hi
 true
 ```
 
-Note the empty line below hello, this is because the previous next() methods read the hello but did not advance to the next line, so the nextLine() method printed out the rest of the current line and moved the Scanners "cursor" to the next line(similar to the println method).
+Note the empty line below hello - this is because the previous next() methods read the hello, but did not advance to the next line, so the nextLine() method printed out the rest of the current line and moved the Scanner's "cursor" to the next line(similar to the println method).
 
 It is also a good practice to close your scanner with the close() method after you are done using it.
 
@@ -107,17 +105,17 @@ BufferedReader is more efficient at reading inputs than Scanner, although at the
 
 Like Scanner, BufferedReader will take a console input
 ```java
-BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 ```
 and a file input.
 ```java
-BufferedReader br= new BufferedReader(new FileReader("FileName.in"));
+BufferedReader br = new BufferedReader(new FileReader("FileName.in"));
 ```
 The main difference between Scanner and BufferedReader is that Scanner uses a delimiters to separate inputs into tokens by default, but BufferedReader does not. Therefore, BufferedReader requires a StringTokenizer class to take multiple space separated inputs from the same line. The only method you have to learn with BufferedReader is the .readLine() method which will return the current line as a String, and then move to the next line. Simply pass this input to a StringTokenizer constructor like shown below.
 ```java
-BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
-StringTokenizer st= new StringTokenizer(br.readLine());
-StringTokenizer st2= new StringTokenizer(br.readLine());
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+StringTokenizer st = new StringTokenizer(br.readLine());
+StringTokenizer st2 = new StringTokenizer(br.readLine());
 ```
 With the following input:
 ```text
@@ -165,33 +163,42 @@ My name is Bob. false
 
 Coolio
 ```
-Again, it is good practice to close your BufferedReader at the end of the code. Also note that the main disadvantage with BufferedReader is that you need to know how many lines of input you are going to be given.
+Again, it is good practice to close your BufferedReader at the end of the code. Also note that the main disadvantage with BufferedReader is that you need to know how many lines of input you are going to be given. (Alternatively, you can use the .lines() method to stream the entire input at once, then work with the lines as a stream. This is discussed in more detail below in the Advanced I/O section.)
+
 ## Which one should I use?
 
 This is gone over in more detail [here](https://stackoverflow.com/questions/2231369/scanner-vs-bufferedreader) and [here](https://javahungry.blogspot.com/2018/12/difference-between-bufferedreader-and-scanner-in-java-examples.html)
 , but essentially there are 4 major distinguishing features that decide which one you should use.
 
-####1. Scanners can parse input,while BufferedReaders can only read it
-If you want to read in a primitive data type then Scanners can do it directly using their `.nexDT`, however you will need to use StringTokenizers to parse BufferedReader input
+#### 1. Scanners can parse input, while BufferedReaders can only read it
+
+If you want to read in a primitive data type, Scanners can do it directly using their `.next(datatype)`, however you will need to use StringTokenizers to parse BufferedReader input
 into the desired data type.
 
-####2. BufferedReaders have a buffer of 8kb, while Scanners have a buffer of 1kb
+#### 2. BufferedReaders have a buffer of 8kb, while Scanners have a buffer of 1kb
+
 This means that BufferedReaders can read a lot more data at a time, so if you are trying to read large amounts of data (i.e. a large file),
 then you should probably use a BufferedReader
 
-####3. BufferedReaders are faster
-If you care that much about speed (*cough cough competitive programing*), then just use a BufferedReader
+#### 3. BufferedReaders are faster
 
-####4 BufferedReaders are synchronized, Scanners are not
-If you are threading and reading input in those threads, then you can use a single BufferedReader for all of them, but you would need
-separate Scanners for each one
+If you care about speed a lot (*cough cough competitive programming*), then just use a BufferedReader.
+
+#### 4. BufferedReaders are synchronized, Scanners are not
+
+If you are multithreading and reading input in multiple threads, then you can use a single BufferedReader for all of them, but you would need
+separate Scanners for each one.
+
+(You probably shouldn't do that anyway. Multithreading is hard.)
 
 ## Advanced I/O / Input Processing
 
-Despite the fancy title, this is just more stream stuff so if you have no idea what that is then read [this](/resources/streams) and then maybe [this](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html).  
+Despite the fancy title, this is just more stream stuff, so if you have no idea what that is then read [this](/resources/streams) and then maybe [this](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html).  
 
-####Input with Streams
-Okay so let's say we want to read a single line of integers and toss it in an array. We could do something like this:
+#### Input with Streams
+
+Let's say we want to read a single line of integers and toss it in an array. We could do something like this:
+
 ```java
 BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
 int[] arr = Arrays.stream(buf.readLine().split(" ")).mapToInt(s-> Integer.parseInt(s)).toArray();
@@ -205,19 +212,29 @@ Now let's say we want to take multiple lines of input and turn it into an intege
 
 ```java
 BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
-int[][] arr = buf.lines().map(s->s.split(" ")).map(s->Arrays.stream(s).mapToInt(s->Integer.parseInt(s)).toArray()).toArray(Collectors.toCollection(int[][]::new));
+int[][] arr = buf.lines().map(s->s.split(" "))
+                         .map(s->Arrays.stream(s).mapToInt(
+                                  s->Integer.parseInt(s)
+                             ).toArray())
+                         .toArray(Collectors.toCollection(int[][]::new));
 ```
+
 This will take a bunch of lines of input, turn those lines into `Stream<String>` with `.lines()`, split those Strings into `String[]` so that we now have a `Stream<String[]>`,
 then turn that into a `Stream<Stream<String>>` with `.map(s->Arrays.stream(s))`. This is when it gets a bit weird so pay close attention to the inner `Stream<String>` 
-and just remember that that is part of a larger Stream. We take the inner `Stream<String>` and turn it into a `IntStream`
+and just remember that that is part of a larger Stream.
+
+We take the inner `Stream<String>` and turn it into a `IntStream`
 with `.mapToInt(s -> Integer.parseInt(s))` so in reality we have a `Stream<IntStream>` (don't worry about the IntStream if you want think about it as a specified stream that only has ints the only benefit is that it removes a couple words later on, I just wanted to show that
-there are more than just Stream<Class>), then we turn this inner Stream (the `IntStream`) into an `int[]` with `.toArray()` so that we have (in total) a `Stream<int[]>`. We finally turn this `Stream<int[]>` into a `int[][]` by running `.toArray(int[][]::new)`.  
+there are more than just Stream<Class>), then we turn this inner Stream (the `IntStream`) into an `int[]` with `.toArray()` so that we have (in total) a `Stream<int[]>`.
+
+We finally turn this `Stream<int[]>` into a `int[][]` by running `.toArray(int[][]::new)`.  
+
 TLDR:  `Stream<String>` -> `Stream<String[]>` -> `Stream<Stream<String>>` -> `Stream<IntStream>` -> `Stream<int[]>` -> `int[][]`  
-TLDRTLDR: We just converted types until we got what we wanted  
+TLDR was TL, DR: We just converted types until we got what we wanted  
 
-Although this seems really complicated, you will eventually get a hang of it.
+Although this seems really complicated, you will eventually get the hang of it.
 
-####Output with Streams
+#### Output with Streams
 
 This is really just getting fancy with `.forEach`
 
@@ -235,13 +252,16 @@ String[][] arr2d = {{"please", "help", "me"},{"I'm", "stuck", "in", "here"}};
 Arrays.stream(arr2d).forEach(s->Arrays.stream(s).forEach(t->System.out.println(t))); 
 //String[][] -> Stream<String[]> ->Stream<Stream<String>> -> prints out all of the Strings
 ```
-An important detail is that `.forEach` is **unordered** so it might not print the Strings in order. If you want them in order then use
+
+An important detail is that `.forEach` is **unordered**, so it might not print the strings in order. If you want them in order, use
 `.forEachOrdered()`
+
 ## Input Reading Examples
 Assume we’re reading input for a problem.
 
 The input starts with an integer n that denotes the number of integers per line, and an integer m that denotes the number of lines that follow.
 The m lines after that first line all contain n integers. We want to put all these lines into a 2D array.
+
 Example:
 ```text
 5 3
@@ -367,3 +387,18 @@ freopen("output.txt", "w", stdout);
 ```
 
 ## Optimization Tricks
+
+In C++, there are a few competitive programming-specific optimizations that can be used to speed up input/output operations.
+These optimizations are not necessary for most problems, but can be useful for problems with large input/output sizes.
+
+```c++
+ios_base::sync_with_stdio(false);
+cin.tie(NULL);
+```
+
+These optimizations speed up input/output operations by disabling synchronization between C and C++ standard streams,
+and untying cin from cout - meaning that if one is flushed, the other doesn't need to be.
+For more details, you can read [this post](https://stackoverflow.com/questions/31162367/significance-of-ios-basesync-with-stdiofalse-cin-tienull).
+
+---
+*Authors: Raymond Zhao, Nishikar Paruchuri, Daniel Li, Anmol Shah, Canchen Li*

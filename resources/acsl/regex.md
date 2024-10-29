@@ -414,7 +414,7 @@ One last thing before you go: Some example code.
 
 public class WhyAmIHere {
     public static void main(String[] args) {
-        Pattern pattern = Pattern.compile("(\\d{3})-\\d{3}-\\d{4}";
+        Pattern pattern = Pattern.compile("(\\d{3})-\\d{3}-\\d{4}");
         Matcher matcher = pattern.matcher("123-456-7890");
         
         // you must call this in order for the regex search to be performed

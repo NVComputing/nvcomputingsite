@@ -10,6 +10,7 @@
   - [Stacks](#stacks)
   - [Trees](#trees)
   - [Writing Equations](#writingequations)
+- [A Note on Efficiency](#anoteonefficiency)
 - [Sample Problems](#sampleproblems)
 
 # Introduction
@@ -259,6 +260,21 @@ Now that we have reached the base condition, we can work back up the equations:
 `$g(-1) = 3 \bullet -1 = -3$`
 
 So `$g(11) = 1$`.
+
+## A Note on Efficiency
+
+When it comes to recursion, it's actually incredibly inefficient in a lot of cases. For example, the Fibonacci recursion
+would completely break down if you tried to find `fibonacci(50)` because of how many recursive calls it would have to make.
+
+In general, in your actual coding, you should try to avoid recursion if you can. However, understanding recursion is still
+a fundamental part of a greater understanding of programming.
+
+The technique mainly used to avoid recursion is the very poorly named (in my opinion) *dynamic programming*. This often involves
+"memoization", which is the act of saving the results of previous calls ("memo"-izing them, like writing a memo) so that you don't
+have to recalculate them. This topic is honestly very complex and confusing, though it is one of the most important
+techniques in competitive programming - you will need it for USACO Gold contests and up, for example.
+
+If you wish to learn more, that is well beyond the scope of this page, but there are many resources online that can help you.
 
 # Sample Problems
 

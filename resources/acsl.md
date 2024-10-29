@@ -53,6 +53,8 @@ Please click on any of the following links below to learn about the short answer
 - [Recursive Functions](/resources/acsl/recursion)
 - [What Does This Program Do?](/resources/acsl/wdtpd)
 
+All of these pages also include sample problems (and solutions) to help you understand the concepts better.
+
 ## Here are some useful videos: 
 ### Contest 1
 

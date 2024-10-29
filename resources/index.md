@@ -41,7 +41,6 @@ Otherwise, click one of the links to the left you're interested in to get starte
 
 If you would like to contribute, please work on one (or more) of the following pages. Please let a captain know if you plan on doing this so that we may check your changes afterwards.
 
-* Input / Output (Started)
 * Tips (Started)
 * Language Basics (More languages needed)
 

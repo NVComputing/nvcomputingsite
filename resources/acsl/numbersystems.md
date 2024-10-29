@@ -122,14 +122,14 @@ Let's use an example, `$1111011_2$`, to prove this. So, we would make the groups
 and `011` first. These would evaluate to `1`, `7`, and `3`. So, our octal number is `$173_8$`.
 
 If we were to do the reverse, then we would write the 3-bit code for each individual digit in
-the octal number and remove any leading zeros. So, `$173_8$` would get us `$001111011$`, which
+the octal number and remove any leading zeros. So, `$173_8$` would get us `$001{|}111{|}011$`, which
 would be reduced to `$1111011_2$`.
 
-The same idea applies for if you want to convert from binary to hex and vice versa except that
+The same idea applies for if you want to convert from binary to hex and vice versa, except that
 you work with groups of 4 bits instead of 3. Also, you will have to work with the letters A-E,
-which again, represent 10-15. 
+which again, represent 10-15.
 
-When converting between hex to octal or vice versa, you can use this trick to go to binary first and then to the desired base. This trick is very helpful as the numbers you deal with are much smaller, leave you much less prone to computing errors, and could save you a lot of time.
+When converting between hex and octal or vice versa, you can use this trick to go to binary first and then to the desired base. This trick is very helpful as the numbers you deal with are much smaller, leave you much less prone to computing errors, and could save you a lot of time.
 
 ## Fractions
 

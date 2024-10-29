@@ -13,6 +13,7 @@
     - [Searching for Nodes](#searchingfornodes)
   - [Classifying Trees Further](#classifyingtreesfurther)
     - [Balanced Trees](#balancedtrees)
+      - [An Aside on Tree Balancing](#anasideontreebalancing)
     - [Full vs Complete Trees](#fullvscompletetrees)
 - [Path Lengths](#pathlengths)
 - [Priority Queues](#priorityqueues)
@@ -28,10 +29,11 @@ manage everything properly; knowing the right data structure to use will ensure 
 when running your program.
 
 ACSL specifically focuses on stacks, queues, binary search trees, and priority
-queues. The general idea behind each is covered but not the actual details
+queues. The general idea behind each is covered, but not the actual details
 regarding how to implement them in programs.
 
-For programming, there is a much more useful section on data structures (to come).
+These are just the most rudimentary and essential data structures. For programming,
+there is a much more useful section on data structures (to come. Maybe.)
 
 # Stacks and Queues
 
@@ -159,6 +161,22 @@ There is some leeway given to balanced trees; as long as the left and right bran
 <img src="/res/acsl/datastructures/balancedleeway.png" class="img-fluid" alt="balanced leeway"/>
 
 Although the tree leans more to the left subbranch, which has 4 elements compared to 2 in the right subbranch, this is still considered balanced as they only differ in 1 node layer overall.
+
+#### An Aside on Tree Balancing
+
+Doing a lookup in a binary search tree, if unbalanced, can take up to `$O(N)$` time.
+
+Obviously, there's not much point in using a binary search tree if it's unbalanced. With `$O(N)$` time, it's literally just
+a linked list.
+
+So, how do we balance it? Luckily (or not so luckily), there are special types of trees that can take a bit longer to insert
+nodes into but are guaranteed to be balanced. These trees are called **AVL trees** and **Red-Black trees**. They are both
+trees that make use of some extra math and "tree rotations" (a way to shift the nodes around so that the tree becomes more balanced
+while not changing the order of the nodes) to ensure that the tree is balanced at all times.
+
+To be honest, the implementation of these data structures is quite complex, because they need to handle a lot of different cases
+for both insertion and deletion, so you should definitely not memorize how they work (at least not now),
+but it's good to be aware of them and why they exist.
 
 ### Full vs Complete Trees
 

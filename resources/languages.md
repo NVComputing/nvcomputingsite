@@ -5,7 +5,7 @@ the basics of each language, how it works, and some simple methods. However, rem
 about every language.** If there is a language you don't see here and you would like to add it, please contact the captains.
 
 ## Java
-Java, not to be confused with *Javascript*, is probably one of, if not the most widely known language in our computing team, thanks to
+Java, not to be confused with *JavaScript*, is probably one of, if not the most widely known language in our computing team, thanks to
 AP Computer Science A. One notable use of Java (of the many, of course) is the mildly popular video game *Minecraft: Java Edition*. Java is
 an **object-oriented** programming language, because 90% of what we do in Java is create objects and use them to create other objects.
 
@@ -41,9 +41,17 @@ import java.util.Scanner; //Since there is no built-in input function, we must i
 public class NVComputing{ //this creates our object, NVComputing.
     public static void main(String[] args){ //this is our main method, which is the primary function of NVComputing.
         Scanner input = new Scanner(System.in); //allows the compiler to interact with the code. Note that we had to import this object.
+        
         int year = input.nextInt(); //integer variable, set its value using the "nextInt()" method of our scanner object.
         String name = input.next(); //String (text) variable, set its value using the "next()" method of our scanner object.
+        
         System.out.println(name + " is the MVP of the " + year + " NV Computing Team."); //
+        
+        input.close(); // closes the scanner object now that we're done with it.
+                       // Bad Daniel! You didn't clean up your resources! -Raymond
     }
 }
 ```
+
+---
+*Authors: Daniel Li*
