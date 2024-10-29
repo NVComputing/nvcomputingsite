@@ -122,7 +122,7 @@ With the following input:
 1 2 hello
 23 4844566 hi
 ```
-st1 would recieve the input of "1 2 hello" and st2 would recieve the input of "23 4844566 hi".
+st1 would receive the input of "1 2 hello" and st2 would receive the input of "23 4844566 hi".
 The StringTokenizer class will take a string input and create tokens out of it, using the space character as a delimiter, just like Scanner does. There are two methods you should know with StringTokenizer. The first one is the .nextToken() method. This method will return the next token as a String, and works very similar to the Scanner .next() method.
 
 The other method is the .hasMoreTokens(). This method returns a boolean value, depending on whether the inputted String has more tokens in it.
