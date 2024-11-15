@@ -1,5 +1,23 @@
 [
      {
+        "title": "Day 7 - Bit String Flicking and LISP intro",
+        "description": "Bit strings are fun! Parentheses are fun!",
+        "img": "info.PNG",
+        "link": "https://docs.google.com/presentation/d/121GpoD80342T3OJtwBMMGNARMNCZ2bJyKhvQLv3hQbc/edit?usp=sharing"
+    },
+     {
+        "title": "Day 6 - Infix, Postfix, Prefix",
+        "description": "The way computers evaluate expressions!",
+        "img": "info.PNG",
+        "link": "https://docs.google.com/presentation/d/1jDI9dnKeL9XL83UacQdTBgbiFdf9rOKhf2jXwVCY4Cc/edit?usp=drive_link"
+    },
+     {
+        "title": "Day 5 - ACSL Contest 1 Review and Infix/Postfix/Prefix",
+        "description": "Wrapping up contest 1 loose ends!",
+        "img": "info.PNG",
+        "link": "https://docs.google.com/presentation/d/1brttqi6Qsi67BbWuC-F9BuVDtGV0OO_qKoXyM_epu14/edit?usp=drive_link"
+    },
+     {
         "title": "Day 4 - What does this program do?",
         "description": "Final ACSL Contest 1 lecture + scavenger hunt",
         "img": "info.PNG",
