@@ -18,7 +18,10 @@ Practice will usually consist of a few computer science problems relating to the
 Solutions will be posted and discussed the week after; please ask questions via Discord, Remind, or email if you do not understand a problem, as we want to make sure you are as successful as you can be!
 
 ## This Week's Homework
-* <b>NOW OPEN: </b><a href="https://docs.google.com/document/d/1JehNm836OV0TgL91Cc47Y122Nu1LZgVk0tqAHABQekA/edit?usp=sharing">12/12 HW (Due 2025)</a>
+* <b>NOW OPEN: </b><a href="https://docs.google.com/document/d/1mwioFj3vgovJcq_3SekpC5nZtdmEGIv3hyTF8MlfvUs/edit?usp=sharing">1/9 HW (Due 1/16)</a>
+
+* <b>Late credit: </b><a href="https://docs.google.com/document/d/1JehNm836OV0TgL91Cc47Y122Nu1LZgVk0tqAHABQekA/edit?usp=sharing">12/12 HW (Due 1/9)</a>
+
 * <b>Late credit: </b><a href="https://docs.google.com/document/d/1I8wlOh1Zlkxj8n_HLHZh3yoEdOHt1RntlaBH893l3EI/edit?usp=sharing">12/5 HW (Due 12/12)</a>
 * <b>Late Credit: </b><a href="https://docs.google.com/document/d/1hYdEfx0d0jIAO_SNnTpHOZjoahROkJy99ysSPES4QsY/edit?usp=sharing">11/14 HW (Due 11/21)</a>
 * <b>Late Credit: </b><a href="https://docs.google.com/document/d/1JNt6Q27Iiub0rqPgVGmDF7aEOQMUDA8TCbEKrqtrR5M/edit?usp=sharing">10/24 HW (Due 11/14)</a>
