@@ -18,7 +18,9 @@ Practice will usually consist of a few computer science problems relating to the
 Solutions will be posted and discussed the week after; please ask questions via Discord, Remind, or email if you do not understand a problem, as we want to make sure you are as successful as you can be!
 
 ## This Week's Homework
-* <b>NOW OPEN: </b><a href="https://docs.google.com/document/d/1hjyFAMP6lBYPlpIPtVPR0FpVYoutgVdchuDL4uFfOFY/edit?usp=sharing">2/5 HW (Due 2/12)</a>
+* <b>NOW OPEN: </b><a href="https://docs.google.com/document/d/1I6KqHwcIttjWgzWU1dcTwqZzpsxtQX7ThN27Mszs-Ns/edit?usp=sharing">2/12 HW (Due 2/19)</a>
+
+* <b>Late credit: </b><a href="https://docs.google.com/document/d/1hjyFAMP6lBYPlpIPtVPR0FpVYoutgVdchuDL4uFfOFY/edit?usp=sharing">2/5 HW (Due 2/12)</a>
 
 * <b>Late credit: </b><a href="https://docs.google.com/document/d/1PQxHAm3nrMiK_7uA_bAB-3P7V1BOfweOc9d7K9VnTVo/edit?usp=sharing">1/23 HW (Due 1/30)</a>
 
