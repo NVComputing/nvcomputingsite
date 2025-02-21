@@ -56,7 +56,7 @@
 			"acslP": 6,
 			"acslT": 6,
 			"hw": 22,
-			"attendance": 12,
+			"attendance": 13,
 			"codebytes": 0,
 			"usaco": "Silver"
 		},
@@ -68,7 +68,7 @@
 			"acslP": 6,
 			"acslT": 6,
 			"hw": 0,
-			"attendance": 11,
+			"attendance": 12,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -104,7 +104,7 @@
 			"acslP": 0,
 			"acslT": 6,
 			"hw": 30,
-			"attendance": 11,
+			"attendance": 12,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -147,12 +147,12 @@
 		{
 			"id": "2015787",
 			"name": "Ian Shi",
-			"potw": 44,
+			"potw": 48,
 			"classQuestions": 14,
 			"acslP": 6,
 			"acslT": 6,
 			"hw": 47,
-			"attendance": 11,
+			"attendance": 12,
 			"codebytes": 0,
 			"usaco": "Silver"
 		},
@@ -164,7 +164,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 0,
-			"attendance": 9,
+			"attendance": 10,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -296,7 +296,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 5,
-			"attendance": 7,
+			"attendance": 8,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -331,8 +331,8 @@
 			"classQuestions": 16,
 			"acslP": 6,
 			"acslT": 6,
-			"hw": 61,
-			"attendance": 9,
+			"hw": 81,
+			"attendance": 10,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -344,7 +344,7 @@
 			"acslP": 6,
 			"acslT": 6,
 			"hw": 19,
-			"attendance": 7,
+			"attendance": 8,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -447,12 +447,12 @@
 		{
 			"id": "2016148",
 			"name": "Shiven Patel",
-			"potw": 50,
+			"potw": 54,
 			"classQuestions": 13,
 			"acslP": 6,
 			"acslT": 5,
 			"hw": 49,
-			"attendance": 8,
+			"attendance": 9,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -464,7 +464,7 @@
 			"acslP": 6,
 			"acslT": 6,
 			"hw": 60,
-			"attendance": 11,
+			"attendance": 12,
 			"codebytes": 0,
 			"usaco": "Silver"
 		},
@@ -596,7 +596,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 0,
-			"attendance": 8,
+			"attendance": 9,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -632,7 +632,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 0,
-			"attendance": 5,
+			"attendance": 6,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
