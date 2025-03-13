@@ -33,7 +33,7 @@
 			"acslT": 12,
 			"hw": 39,
 			"attendance": 9,
-			"codebytes": 0,
+			"codebytes": 10,
 			"usaco": "Bronze"
 		},
 		{
@@ -57,7 +57,7 @@
 			"acslT": 12,
 			"hw": 22,
 			"attendance": 14,
-			"codebytes": 0,
+			"codebytes": 10,
 			"usaco": "Silver"
 		},
 		{
@@ -225,7 +225,7 @@
 			"acslT": 0,
 			"hw": 0,
 			"attendance": 4,
-			"codebytes": 0,
+			"codebytes": 5,
 			"usaco": "Bronze"
 		},
 		{
@@ -453,7 +453,7 @@
 			"acslT": 11,
 			"hw": 49,
 			"attendance": 10,
-			"codebytes": 0,
+			"codebytes": 10,
 			"usaco": "Bronze"
 		},
 		{
@@ -633,7 +633,7 @@
 			"acslT": 0,
 			"hw": 0,
 			"attendance": 7,
-			"codebytes": 0,
+			"codebytes": 10,
 			"usaco": "Bronze"
 		},
 		{
@@ -645,7 +645,7 @@
 			"acslT": 0,
 			"hw": 0,
 			"attendance": 1,
-			"codebytes": 0,
+			"codebytes": 5,
 			"usaco": "Bronze"
 		},
 		{
