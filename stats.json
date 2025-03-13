@@ -56,7 +56,7 @@
 			"acslP": 11,
 			"acslT": 12,
 			"hw": 22,
-			"attendance": 13,
+			"attendance": 14,
 			"codebytes": 0,
 			"usaco": "Silver"
 		},
@@ -68,7 +68,7 @@
 			"acslP": 10,
 			"acslT": 12,
 			"hw": 0,
-			"attendance": 12,
+			"attendance": 13,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -104,7 +104,7 @@
 			"acslP": 4,
 			"acslT": 12,
 			"hw": 30,
-			"attendance": 12,
+			"attendance": 13,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -152,7 +152,7 @@
 			"acslP": 10,
 			"acslT": 12,
 			"hw": 47,
-			"attendance": 12,
+			"attendance": 13,
 			"codebytes": 0,
 			"usaco": "Silver"
 		},
@@ -176,7 +176,7 @@
 			"acslP": 0,
 			"acslT": 5,
 			"hw": 11,
-			"attendance": 6,
+			"attendance": 7,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -296,7 +296,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 5,
-			"attendance": 8,
+			"attendance": 9,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -327,12 +327,12 @@
 		{
 			"id": "2010167",
 			"name": "Atharva Vaze",
-			"potw": 57,
+			"potw": 61,
 			"classQuestions": 16,
 			"acslP": 12,
 			"acslT": 12,
 			"hw": 81,
-			"attendance": 10,
+			"attendance": 11,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -416,7 +416,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 0,
-			"attendance": 4,
+			"attendance": 5,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -447,12 +447,12 @@
 		{
 			"id": "2016148",
 			"name": "Shiven Patel",
-			"potw": 57,
+			"potw": 61,
 			"classQuestions": 13,
 			"acslP": 12,
 			"acslT": 11,
 			"hw": 49,
-			"attendance": 9,
+			"attendance": 10,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -596,7 +596,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 0,
-			"attendance": 9,
+			"attendance": 10,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -632,7 +632,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 0,
-			"attendance": 6,
+			"attendance": 7,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -711,6 +711,18 @@
 		{
 			"id": "2021532",
 			"name": "Yuanjie",
+			"potw": 0,
+			"classQuestions": 0,
+			"acslP": 0,
+			"acslT": 0,
+			"hw": 0,
+			"attendance": 1,
+			"codebytes": 0,
+			"usaco": "Bronze"
+		},
+		{
+			"id": "2043033",
+			"name": "Ediz Guzey",
 			"potw": 0,
 			"classQuestions": 0,
 			"acslP": 0,
