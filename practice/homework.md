@@ -16,8 +16,11 @@ some topics really work during the contest itself isn't fun. Figure it out befor
 Practice will usually consist of a few computer science problems relating to the topic being taught in the lecture. Read through and attempt all the problems to get an idea of what the problems are about. Submit your attempts at the problems, even if they don't work!
 
 Solutions will be posted and discussed the week after; please ask questions via Discord, Remind, or email if you do not understand a problem, as we want to make sure you are as successful as you can be!
+
 ## This Week's Homework
-* <b>NOW OPEN: </b><a href="https://docs.google.com/document/d/1CYzUUnY5eaPaqMUTAxoRmIK0kdb1QH6awpPBU98KD9w/edit?usp=sharing">4/10 HW (Due 4/17)</a>
+* <b>NOW OPEN: </b><a href="https://docs.google.com/document/d/1XhTzEqJo_guStr_GXmszA6fmXTV4QJOOZY0tVKJDAXc/edit?usp=sharing">4/24 HW (Due 5/1)</a>
+
+* <b>Late credit: </b><a href="https://docs.google.com/document/d/1CYzUUnY5eaPaqMUTAxoRmIK0kdb1QH6awpPBU98KD9w/edit?usp=sharing">4/10 HW (Due 4/17)</a>
 
 * <b>Late credit: </b><a href="https://docs.google.com/document/d/1TvtGwYS0t0QpGX-7rkTO5OEuMwc9PpzgwVBNYvfy3Dk/edit?usp=sharing">3/20 HW (Due 3/27)</a>
 
