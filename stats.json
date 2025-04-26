@@ -32,7 +32,7 @@
 			"acslP": 17,
 			"acslT": 18,
 			"hw": 39,
-			"attendance": 9,
+			"attendance": 10,
 			"codebytes": 10,
 			"usaco": "Bronze"
 		},
@@ -56,7 +56,7 @@
 			"acslP": 17,
 			"acslT": 18,
 			"hw": 22,
-			"attendance": 16,
+			"attendance": 17,
 			"codebytes": 10,
 			"usaco": "Silver"
 		},
@@ -68,7 +68,7 @@
 			"acslP": 16,
 			"acslT": 17,
 			"hw": 0,
-			"attendance": 14,
+			"attendance": 15,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -147,12 +147,12 @@
 		{
 			"id": "2015787",
 			"name": "Ian Shi",
-			"potw": 56,
+			"potw": 60,
 			"classQuestions": 14,
 			"acslP": 16,
 			"acslT": 16,
 			"hw": 47,
-			"attendance": 15,
+			"attendance": 16,
 			"codebytes": 0,
 			"usaco": "Silver"
 		},
@@ -164,7 +164,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 0,
-			"attendance": 11,
+			"attendance": 12,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -296,7 +296,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 5,
-			"attendance": 11,
+			"attendance": 12,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -416,7 +416,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 0,
-			"attendance": 7,
+			"attendance": 8,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -447,24 +447,24 @@
 		{
 			"id": "2016148",
 			"name": "Shiven Patel",
-			"potw": 73,
+			"potw": 81,
 			"classQuestions": 13,
 			"acslP": 18,
 			"acslT": 14,
 			"hw": 65,
-			"attendance": 12,
+			"attendance": 13,
 			"codebytes": 10,
 			"usaco": "Bronze"
 		},
 		{
 			"id": "2023320",
 			"name": "April Zhan",
-			"potw": 31,
+			"potw": 35,
 			"classQuestions": 16,
 			"acslP": 16,
 			"acslT": 17,
 			"hw": 60,
-			"attendance": 14,
+			"attendance": 15,
 			"codebytes": 0,
 			"usaco": "Silver"
 		},
@@ -596,7 +596,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 0,
-			"attendance": 12,
+			"attendance": 13,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -704,7 +704,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 0,
-			"attendance": 2,
+			"attendance": 3,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -728,7 +728,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 0,
-			"attendance": 3,
+			"attendance": 4,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
