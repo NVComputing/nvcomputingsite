@@ -18,7 +18,13 @@ Practice will usually consist of a few computer science problems relating to the
 Solutions will be posted and discussed the week after; please ask questions via Discord, Remind, or email if you do not understand a problem, as we want to make sure you are as successful as you can be!
 
 ## This Week's Homework
-* <b>NOW OPEN: </b><a href="https://docs.google.com/document/d/1ND80Jd_qoD4JjM7nn0-PuGCaLcZsYNHFBeMlbkHq0A4/edit?usp=sharing">5/1 HW (Due 5/8)</a>
+* <b>NOW OPEN: </b><a href="https://docs.google.com/document/d/1ND80Jd_qoD4JjM7nn0-PuGCaLcZsYNHFBeMlbkHq0A4/edit?usp=sharing">5/1 HW p1 (Due 5/8)</a>
+
+* <b>NOW OPEN: </b><a href="https://docs.google.com/document/d/1JHdxm2hT_eJuTTMBDAjCKocDSUbQO34lAJM87eoqm9w/edit?usp=sharing">5/1 HW p2 (Due 5/8)</a>
+
+* <b>NOW OPEN: </b><a href="https://docs.google.com/document/d/1cWuCmKhH1irKFKX2yIFsRcmQ1h-X1ZuTIvrZi4ayrZo/edit?usp=sharing">5/1 HW p3 (Due 5/8)</a>
+
+* <b>NOW OPEN: </b><a href="https://docs.google.com/document/d/14OdT_9ppu-CXAxW5-ExoEwcejlhuyg2_SsrOQcCvYOc/edit?usp=sharing">5/1 HW p4 (Due 5/8)</a>
 
 * <b>Late credit: </b><a href="https://docs.google.com/document/d/1XhTzEqJo_guStr_GXmszA6fmXTV4QJOOZY0tVKJDAXc/edit?usp=sharing">4/24 HW (Due 5/1)</a>
 
