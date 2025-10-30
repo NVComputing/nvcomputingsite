@@ -3,11 +3,11 @@
 		{
 			"id": "2043033",
 			"name": "Ediz Guzey",
-			"potw": 0,
+			"potw": 6,
 			"classQuestions": 0,
 			"acslP": 0,
 			"acslT": 0,
-			"hw": 6,
+			"hw": 28,
 			"attendance": 1,
 			"codebytes": 0,
 			"usaco": "Bronze"
@@ -15,11 +15,11 @@
 		{
 			"id": "2015787",
 			"name": "Ian Shi",
-			"potw": 3,
+			"potw": 9,
 			"classQuestions": 0,
 			"acslP": 0,
 			"acslT": 0,
-			"hw": 6,
+			"hw": 21,
 			"attendance": 1,
 			"codebytes": 0,
 			"usaco": "Bronze"
@@ -27,11 +27,11 @@
 		{
 			"id": "2052587",
 			"name": "Shreyash Gupta",
-			"potw": 3,
+			"potw": 9,
 			"classQuestions": 0,
 			"acslP": 0,
 			"acslT": 0,
-			"hw": 8,
+			"hw": 28,
 			"attendance": 1,
 			"codebytes": 0,
 			"usaco": "Bronze"
@@ -51,11 +51,11 @@
 		{
 			"id": "2042467",
 			"name": "Michelle Battumur",
-			"potw": 0,
+			"potw": 3,
 			"classQuestions": 0,
 			"acslP": 0,
 			"acslT": 0,
-			"hw": 6,
+			"hw": 14,
 			"attendance": 1,
 			"codebytes": 0,
 			"usaco": "Bronze"
@@ -91,7 +91,7 @@
 			"classQuestions": 0,
 			"acslP": 0,
 			"acslT": 0,
-			"hw": 0,
+			"hw": 15,
 			"attendance": 1,
 			"codebytes": 0,
 			"usaco": "Bronze"
@@ -219,11 +219,11 @@
 		{
 			"id": "2023319",
 			"name": "Alan Zhan",
-			"potw": 3,
+			"potw": 9,
 			"classQuestions": 0,
 			"acslP": 0,
 			"acslT": 0,
-			"hw": 7,
+			"hw": 13,
 			"attendance": 1,
 			"codebytes": 0,
 			"usaco": "Bronze"
@@ -236,6 +236,30 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 8,
+			"attendance": 0,
+			"codebytes": 0,
+			"usaco": "Bronze"
+		},
+		{
+			"id": "2016148",
+			"name": "Eric Hu",
+			"potw": 2,
+			"classQuestions": 0,
+			"acslP": 0,
+			"acslT": 0,
+			"hw": 8,
+			"attendance": 0,
+			"codebytes": 0,
+			"usaco": "Bronze"
+		},
+		{
+			"id": "2016148",
+			"name": "Leo Sekhri",
+			"potw": 0,
+			"classQuestions": 0,
+			"acslP": 0,
+			"acslT": 0,
+			"hw": 7,
 			"attendance": 0,
 			"codebytes": 0,
 			"usaco": "Bronze"
