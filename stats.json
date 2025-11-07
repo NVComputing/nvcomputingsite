@@ -8,7 +8,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 28,
-			"attendance": 1,
+			"attendance": 3,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -20,7 +20,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 21,
-			"attendance": 1,
+			"attendance": 3,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -32,7 +32,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 28,
-			"attendance": 1,
+			"attendance": 2,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -56,7 +56,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 14,
-			"attendance": 1,
+			"attendance": 2,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -80,7 +80,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 8,
-			"attendance": 1,
+			"attendance": 3,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -92,7 +92,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 15,
-			"attendance": 1,
+			"attendance": 3,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -104,7 +104,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 0,
-			"attendance": 1,
+			"attendance": 2,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -140,7 +140,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 0,
-			"attendance": 1,
+			"attendance": 3,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -164,7 +164,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 0,
-			"attendance": 1,
+			"attendance": 2,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -206,13 +206,13 @@
 		},
 		{
 			"id": "2007490",
-			"name": "Robert",
+			"name": "Robert Yang",
 			"potw": 0,
 			"classQuestions": 0,
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 0,
-			"attendance": 1,
+			"attendance": 3,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -236,7 +236,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 8,
-			"attendance": 0,
+			"attendance": 1,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -248,7 +248,79 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 8,
-			"attendance": 0,
+			"attendance": 1,
+			"codebytes": 0,
+			"usaco": "Bronze"
+		},
+		{
+			"id": "2048733",
+			"name": "Shreya Mahajan",
+			"potw": 0,
+			"classQuestions": 0,
+			"acslP": 0,
+			"acslT": 0,
+			"hw": 0,
+			"attendance": 1,
+			"codebytes": 0,
+			"usaco": "Bronze"
+		},
+		{
+			"id": "2011254",
+			"name": "Yusuf Abdullah",
+			"potw": 0,
+			"classQuestions": 0,
+			"acslP": 0,
+			"acslT": 0,
+			"hw": 0,
+			"attendance": 1,
+			"codebytes": 0,
+			"usaco": "Bronze"
+		},
+		{
+			"id": "1053575",
+			"name": "Rohit Fuldeore",
+			"potw": 0,
+			"classQuestions": 0,
+			"acslP": 0,
+			"acslT": 0,
+			"hw": 0,
+			"attendance": 2,
+			"codebytes": 0,
+			"usaco": "Bronze"
+		},
+		{
+			"id": "2004383",
+			"name": "Andres Montijo",
+			"potw": 0,
+			"classQuestions": 0,
+			"acslP": 0,
+			"acslT": 0,
+			"hw": 0,
+			"attendance": 1,
+			"codebytes": 0,
+			"usaco": "Bronze"
+		},
+		{
+			"id": "2015064",
+			"name": "Alex Ye",
+			"potw": 0,
+			"classQuestions": 0,
+			"acslP": 0,
+			"acslT": 0,
+			"hw": 0,
+			"attendance": 2,
+			"codebytes": 0,
+			"usaco": "Bronze"
+		},
+		{
+			"id": "2015183",
+			"name": "Yashvin",
+			"potw": 0,
+			"classQuestions": 0,
+			"acslP": 0,
+			"acslT": 0,
+			"hw": 0,
+			"attendance": 2,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
