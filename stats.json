@@ -3,11 +3,11 @@
 		{
 			"id": "2043033",
 			"name": "Ediz Guzey",
-			"potw": 6,
+			"potw": 27,
 			"classQuestions": 0,
 			"acslP": 6,
 			"acslT": 12,
-			"hw": 54,
+			"hw": 64,
 			"attendance": 4,
 			"codebytes": 0,
 			"usaco": "Bronze"
@@ -15,11 +15,11 @@
 		{
 			"id": "2015787",
 			"name": "Ian Shi",
-			"potw": 9,
+			"potw": 30,
 			"classQuestions": 0,
 			"acslP": 6,
 			"acslT": 6,
-			"hw": 47,
+			"hw": 57,
 			"attendance": 5,
 			"codebytes": 0,
 			"usaco": "Bronze"
@@ -27,7 +27,7 @@
 		{
 			"id": "2052587",
 			"name": "Shreyash Gupta",
-			"potw": 9,
+			"potw": 42,
 			"classQuestions": 0,
 			"acslP": 12,
 			"acslT": 12,
@@ -75,7 +75,7 @@
 		{
 			"id": "2046197",
 			"name": "Sandilya Bhagavatula",
-			"potw": 6,
+			"potw": 12,
 			"classQuestions": 0,
 			"acslP": 12,
 			"acslT": 12,
@@ -99,7 +99,7 @@
 		{
 			"id": "2040238",
 			"name": "Umar Kadirov",
-			"potw": 6,
+			"potw": 9,
 			"classQuestions": 0,
 			"acslP": 0,
 			"acslT": 0,
@@ -207,7 +207,7 @@
 		{
 			"id": "2023319",
 			"name": "Alan Zhan",
-			"potw": 9,
+			"potw": 21,
 			"classQuestions": 0,
 			"acslP": 6,
 			"acslT": 5,
@@ -219,7 +219,7 @@
 		{
 			"id": "2016148",
 			"name": "Shiven Patel",
-			"potw": 6,
+			"potw": 18,
 			"classQuestions": 0,
 			"acslP": 6,
 			"acslT": 6,
