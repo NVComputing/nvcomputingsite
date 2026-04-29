@@ -8,7 +8,7 @@
 			"acslP": 6,
 			"acslT": 12,
 			"hw": 64,
-			"attendance": 4,
+			"attendance": 9,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -20,7 +20,7 @@
 			"acslP": 6,
 			"acslT": 6,
 			"hw": 57,
-			"attendance": 5,
+			"attendance": 8,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -32,7 +32,7 @@
 			"acslP": 12,
 			"acslT": 12,
 			"hw": 50,
-			"attendance": 6,
+			"attendance": 10,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -44,7 +44,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 2,
-			"attendance": 0,
+			"attendance": 1,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -68,7 +68,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 14,
-			"attendance": 4,
+			"attendance": 6,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -80,7 +80,7 @@
 			"acslP": 12,
 			"acslT": 12,
 			"hw": 5,
-			"attendance": 1,
+			"attendance": 4,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -92,7 +92,7 @@
 			"acslP": 0,
 			"acslT": 11,
 			"hw": 12,
-			"attendance": 5,
+			"attendance": 9,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -140,7 +140,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 0,
-			"attendance": 5,
+			"attendance": 9,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -152,7 +152,7 @@
 			"acslP": 0,
 			"acslT": 4,
 			"hw": 0,
-			"attendance": 4,
+			"attendance": 8,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -200,7 +200,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 0,
-			"attendance": 6,
+			"attendance": 9,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -224,7 +224,7 @@
 			"acslP": 6,
 			"acslT": 6,
 			"hw": 8,
-			"attendance": 3,
+			"attendance": 7,
 			"codebytes": 0,
 			"usaco": "Gold"
 		},
@@ -272,7 +272,7 @@
 			"acslP": 6,
 			"acslT": 6,
 			"hw": 0,
-			"attendance": 6,
+			"attendance": 11,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
@@ -296,7 +296,7 @@
 			"acslP": 0,
 			"acslT": 0,
 			"hw": 0,
-			"attendance": 4,
+			"attendance": 9,
 			"codebytes": 0,
 			"usaco": "Bronze"
 		},
