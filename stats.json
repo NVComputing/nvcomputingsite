@@ -8,7 +8,7 @@
       "acslP": 0,
       "acslT": 0,
       "hw": 12,
-      "attendance": 1,
+      "attendance": 2,
       "codebytes": 0,
       "usaco": "Bronze"
     },
@@ -20,7 +20,7 @@
       "acslP": 0,
       "acslT": 0,
       "hw": 34,
-      "attendance": 3,
+      "attendance": 5,
       "codebytes": 0,
       "usaco": "Bronze"
     },
@@ -92,7 +92,7 @@
       "acslP": 0,
       "acslT": 0,
       "hw": 20,
-      "attendance": 3,
+      "attendance": 4,
       "codebytes": 0,
       "usaco": "Bronze"
     },
@@ -200,7 +200,7 @@
       "acslP": 0,
       "acslT": 0,
       "hw": 0,
-      "attendance": 1,
+      "attendance": 3,
       "codebytes": 0,
       "usaco": "Silver"
     },
@@ -284,7 +284,7 @@
       "acslP": 0,
       "acslT": 0,
       "hw": 0,
-      "attendance": 3,
+      "attendance": 4,
       "codebytes": 0,
       "usaco": "Bronze"
     },
@@ -308,7 +308,7 @@
       "acslP": 0,
       "acslT": 0,
       "hw": 28,
-      "attendance": 3,
+      "attendance": 5,
       "codebytes": 0,
       "usaco": "Bronze"
     },
@@ -344,7 +344,7 @@
       "acslP": 0,
       "acslT": 0,
       "hw": 10,
-      "attendance": 3,
+      "attendance": 5,
       "codebytes": 0,
       "usaco": "Bronze"
     },
@@ -356,7 +356,7 @@
       "acslP": 0,
       "acslT": 0,
       "hw": 0,
-      "attendance": 3,
+      "attendance": 5,
       "codebytes": 0,
       "usaco": "Bronze"
     },
@@ -368,7 +368,7 @@
       "acslP": 0,
       "acslT": 0,
       "hw": 6,
-      "attendance": 2,
+      "attendance": 3,
       "codebytes": 0,
       "usaco": "Bronze"
     },
@@ -380,7 +380,7 @@
       "acslP": 0,
       "acslT": 0,
       "hw": 0,
-      "attendance": 1,
+      "attendance": 2,
       "codebytes": 0,
       "usaco": "Bronze"
     },
@@ -404,7 +404,7 @@
       "acslP": 0,
       "acslT": 0,
       "hw": 6,
-      "attendance": 2,
+      "attendance": 3,
       "codebytes": 0,
       "usaco": "Bronze"
     },
@@ -452,7 +452,7 @@
       "acslP": 0,
       "acslT": 0,
       "hw": 0,
-      "attendance": 1,
+      "attendance": 2,
       "codebytes": 0,
       "usaco": "Bronze"
     },
@@ -464,7 +464,7 @@
       "acslP": 0,
       "acslT": 0,
       "hw": 0,
-      "attendance": 3,
+      "attendance": 5,
       "codebytes": 0,
       "usaco": "Bronze"
     },
@@ -476,7 +476,7 @@
       "acslP": 0,
       "acslT": 0,
       "hw": 0,
-      "attendance": 1,
+      "attendance": 3,
       "codebytes": 0,
       "usaco": "Bronze"
     },
@@ -488,7 +488,7 @@
       "acslP": 0,
       "acslT": 0,
       "hw": 0,
-      "attendance": 3,
+      "attendance": 5,
       "codebytes": 0,
       "usaco": "Bronze"
     },
@@ -512,7 +512,7 @@
       "acslP": 0,
       "acslT": 0,
       "hw": 12,
-      "attendance": 2,
+      "attendance": 3,
       "codebytes": 0,
       "usaco": "Bronze"
     },
@@ -548,7 +548,7 @@
       "acslP": 0,
       "acslT": 0,
       "hw": 0,
-      "attendance": 2,
+      "attendance": 4,
       "codebytes": 0,
       "usaco": "Bronze"
     },
@@ -560,13 +560,25 @@
       "acslP": 0,
       "acslT": 0,
       "hw": 0,
-      "attendance": 1,
+      "attendance": 2,
       "codebytes": 0,
       "usaco": "Bronze"
     },
     {
       "id": "2019459",
       "name": "Rohan Vijaianand",
+      "potw": 0,
+      "classQuestions": 0,
+      "acslP": 0,
+      "acslT": 0,
+      "hw": 0,
+      "attendance": 3,
+      "codebytes": 0,
+      "usaco": "Bronze"
+    },
+    {
+      "id": "2051641",
+      "name": "Aiden wu",
       "potw": 0,
       "classQuestions": 0,
       "acslP": 0,
